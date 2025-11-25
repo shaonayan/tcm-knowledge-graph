@@ -2,6 +2,20 @@
 const API_BASE_URL = import.meta.env.VITE_API_URL || 
   (import.meta.env.PROD ? '/api' : 'http://localhost:3001/api')
 
+// 调试信息：在控制台输出API地址（仅在开发环境）
+if (import.meta.env.DEV) {
+  console.log('🔍 API调试信息:')
+  console.log('VITE_API_URL:', import.meta.env.VITE_API_URL)
+  console.log('PROD:', import.meta.env.PROD)
+  console.log('最终API地址:', API_BASE_URL)
+}
+
+// 在生产环境也输出一次（帮助调试）
+if (import.meta.env.PROD && typeof window !== 'undefined') {
+  console.log('🌐 生产环境API地址:', API_BASE_URL)
+  console.log('环境变量VITE_API_URL:', import.meta.env.VITE_API_URL || '未设置')
+}
+
 export interface StatsData {
   totalNodes: number
   totalRelationships: number

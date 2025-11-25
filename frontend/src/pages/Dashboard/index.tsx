@@ -25,8 +25,15 @@ const Dashboard: React.FC = () => {
         const data = await getStats()
         setStats(data)
       } catch (err) {
-        setError(err instanceof Error ? err.message : '获取数据失败')
-        console.error('获取统计数据失败:', err)
+        const errorMessage = err instanceof Error ? err.message : '获取数据失败'
+        setError(errorMessage)
+        console.error('❌ 获取统计数据失败:', err)
+        console.error('错误详情:', {
+          message: errorMessage,
+          stack: err instanceof Error ? err.stack : undefined
+        })
+        // 输出API地址帮助调试
+        console.error('当前API地址:', import.meta.env.VITE_API_URL || '使用默认值')
       } finally {
         setLoading(false)
       }

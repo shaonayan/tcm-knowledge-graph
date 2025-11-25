@@ -30,13 +30,43 @@ app.use(helmet()) // 安全头
 app.use(compression()) // 压缩响应
 app.use(morgan('combined', { stream: { write: (message) => logger.info(message.trim()) } })) // 日志
 
-// CORS配置
-app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+// CORS配置 - 允许所有Vercel域名和本地开发
+const allowedOrigins = process.env.CORS_ORIGIN 
+  ? process.env.CORS_ORIGIN.split(',').map(origin => origin.trim())
+  : ['http://localhost:3000']
+
+// 添加所有 vercel.app 子域名支持
+const corsOptions = {
+  origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
+    // 允许无origin的请求（如移动应用、Postman等）
+    if (!origin) {
+      return callback(null, true)
+    }
+    
+    // 检查是否在允许列表中
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true)
+    }
+    
+    // 允许所有 *.vercel.app 域名（包括预览部署）
+    if (origin.endsWith('.vercel.app')) {
+      return callback(null, true)
+    }
+    
+    // 允许 localhost（开发环境）
+    if (origin.startsWith('http://localhost:') || origin.startsWith('https://localhost:')) {
+      return callback(null, true)
+    }
+    
+    // 其他情况拒绝
+    callback(new Error('Not allowed by CORS'))
+  },
   credentials: process.env.CORS_CREDENTIALS === 'true',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
-}))
+}
+
+app.use(cors(corsOptions))
 
 // 请求解析
 app.use(express.json({ limit: '10mb' }))
