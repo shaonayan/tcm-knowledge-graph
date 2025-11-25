@@ -4,6 +4,7 @@ import { SearchOutlined, DownloadOutlined, FileExcelOutlined, FileTextOutlined, 
 import { Link, useNavigate } from 'react-router-dom'
 import { searchNodes, type SearchResult } from '@/services/api'
 import { LoadingSpinner } from '@/components/common/Loading'
+import { PageHeader } from '@/components/common/PageHeader'
 
 const { Search: InputSearch } = Input
 const { Option } = Select
@@ -333,25 +334,13 @@ const Search: React.FC = () => {
 
   return (
     <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
-      <div className="mb-8">
-        <div className="flex items-center justify-between">
-          <div className="flex-1 min-w-0">
-            <div className="flex items-start gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-red-500 via-orange-500 to-amber-500 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
-                <span className="text-white font-bold text-xl">搜</span>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2 leading-tight">
-                  智能搜索
-                </h1>
-                <p className="text-sm text-gray-500 mb-3 leading-tight">少纳言中医知识图谱</p>
-                <p className="text-gray-600 leading-relaxed">
-                  快速查找中医术语，支持模糊搜索和高级筛选
-                </p>
-              </div>
-            </div>
-          </div>
-          {searchResults.length > 0 && (
+      <PageHeader
+        iconText="搜"
+        title="智能搜索"
+        subtitle="少纳言中医知识图谱"
+        description="快速查找中医术语，支持模糊搜索和高级筛选"
+        extra={
+          searchResults.length > 0 && (
             <Dropdown 
               menu={{ 
                 items: [
@@ -375,14 +364,14 @@ const Search: React.FC = () => {
                 导出结果
               </Button>
             </Dropdown>
-          )}
-        </div>
-      </div>
+          )
+        }
+      />
 
-      <Card className="mb-6">
+      <Card className="mb-6 glass-panel">
         <Space direction="vertical" className="w-full" size="large">
-          <div className="flex gap-4 items-start">
-            <div className="flex-1">
+          <div className="flex gap-4 items-start flex-wrap">
+            <div className="flex-1" style={{ minWidth: '300px' }}>
               <InputSearch
                 placeholder="输入术语名称、代码或同义词"
                 allowClear
@@ -394,6 +383,7 @@ const Search: React.FC = () => {
                 onSearch={handleSearch}
                 onClear={handleClear}
                 loading={loading}
+                style={{ borderRadius: '8px' }}
               />
               {/* 搜索历史 */}
               {searchHistory.length > 0 && !searchQuery && (
@@ -532,10 +522,11 @@ const Search: React.FC = () => {
 
       <Card 
         title="搜索结果" 
+        className="glass-panel"
         extra={
           total > 0 && (
             <span className="text-gray-600 font-medium">
-              共找到 <span className="text-primary-500 font-bold">{total}</span> 条结果
+              共找到 <span style={{ color: 'var(--primary-color)', fontWeight: 600 }}>{total}</span> 条结果
             </span>
           )
         }

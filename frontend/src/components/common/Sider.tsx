@@ -108,7 +108,7 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
       {/* 触发按钮 - 当收起时显示在左侧边缘 */}
       {collapsed && (
         <div
-          className="fixed bg-gradient-to-br from-red-500 via-orange-500 to-amber-500 rounded-r-lg shadow-lg cursor-pointer transition-all duration-300 hover:shadow-xl"
+          className="fixed bg-gradient-to-br from-red-500 via-orange-500 to-amber-500 rounded-r-2xl shadow-lg cursor-pointer transition-all duration-300 hover:shadow-2xl"
           style={{
             left: 0,
             top: '50%',
@@ -129,7 +129,7 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
         </div>
       )}
 
-      <Sider 
+      <Sider
         ref={siderRef}
         width={260}
         collapsed={collapsed}
@@ -148,9 +148,11 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
           zIndex: 999,
           overflow: 'hidden',
           overflowY: 'auto',
-          background: 'linear-gradient(180deg, #ffffff 0%, #fef7f0 100%)',
-          borderRight: collapsed ? 'none' : '2px solid rgba(220, 38, 38, 0.1)',
-          boxShadow: collapsed ? 'none' : '2px 0 8px rgba(220, 38, 38, 0.05)',
+          background: 'linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(254,247,240,0.92) 100%)',
+          borderRight: collapsed ? 'none' : '1px solid rgba(220, 38, 38, 0.08)',
+          boxShadow: collapsed ? 'none' : '0 20px 45px rgba(220, 38, 38, 0.08)',
+          backdropFilter: collapsed ? 'none' : 'blur(16px)',
+          WebkitBackdropFilter: collapsed ? 'none' : 'blur(16px)',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
           transform: collapsed ? 'translateX(-100%)' : 'translateX(0)',
           opacity: collapsed ? 0 : 1,
@@ -161,7 +163,7 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
           {/* 标题区域 */}
           {!collapsed && (
             <div className="text-center mb-6 flex-shrink-0">
-              <h2 className="text-sm font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent m-0">
+              <h2 className="text-sm font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent m-0 tracking-wide">
                 少纳言中医知识图谱
               </h2>
               <p className="text-xs text-gray-400 mt-1 m-0">Shonaoyan TCM</p>

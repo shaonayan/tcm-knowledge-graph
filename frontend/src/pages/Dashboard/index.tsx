@@ -9,6 +9,7 @@ import {
 import { useNavigate } from 'react-router-dom'
 import { getStats, type StatsData } from '@/services/api'
 import { LoadingSpinner } from '@/components/common/Loading'
+import { PageHeader } from '@/components/common/PageHeader'
 
 const Dashboard: React.FC = () => {
   const navigate = useNavigate()
@@ -65,62 +66,52 @@ const Dashboard: React.FC = () => {
   return (
     <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
       {/* 页面标题 */}
-      <div className="mb-8">
-        <div className="flex items-start gap-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-red-500 via-orange-500 to-amber-500 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
-            <span className="text-white font-bold text-xl">少</span>
-          </div>
-          <div className="flex-1 min-w-0">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2 leading-tight">
-              少纳言中医知识图谱
-            </h1>
-            <p className="text-sm text-gray-500 mb-3 leading-tight">Shonaoyan TCM Knowledge Graph</p>
-            <p className="text-gray-600 leading-relaxed">
-              欢迎使用少纳言中医知识图谱系统，探索传统中医的智慧宝库
-            </p>
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        iconText="少"
+        title="少纳言中医知识图谱"
+        subtitle="Shonaoyan TCM Knowledge Graph"
+        description="欢迎使用少纳言中医知识图谱系统，探索传统中医的智慧宝库"
+      />
 
       {/* 统计卡片 */}
       <Row gutter={[16, 16]} className="mb-8">
         <Col xs={24} sm={12} lg={6}>
-          <Card className="text-center hover:shadow-md transition-shadow">
+          <Card className="text-center glass-panel">
             <Statistic
               title="总节点数"
               value={stats?.totalNodes || 0}
-              prefix={<NodeIndexOutlined className="text-primary-500" />}
-              valueStyle={{ color: '#52c41a' }}
+              prefix={<NodeIndexOutlined style={{ color: '#52c41a' }} />}
+              valueStyle={{ color: '#52c41a', fontSize: '24px', fontWeight: 600 }}
             />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
-          <Card className="text-center hover:shadow-md transition-shadow">
+          <Card className="text-center glass-panel">
             <Statistic
               title="关系数量"
               value={stats?.totalRelationships || 0}
-              prefix={<BranchesOutlined className="text-blue-500" />}
-              valueStyle={{ color: '#1890ff' }}
+              prefix={<BranchesOutlined style={{ color: '#1890ff' }} />}
+              valueStyle={{ color: '#1890ff', fontSize: '24px', fontWeight: 600 }}
             />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
-          <Card className="text-center hover:shadow-md transition-shadow">
+          <Card className="text-center glass-panel">
             <Statistic
               title="疾病类术语"
               value={diseaseCount}
-              prefix={<SearchOutlined className="text-orange-500" />}
-              valueStyle={{ color: '#fa8c16' }}
+              prefix={<SearchOutlined style={{ color: '#fa8c16' }} />}
+              valueStyle={{ color: '#fa8c16', fontSize: '24px', fontWeight: 600 }}
             />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
-          <Card className="text-center hover:shadow-md transition-shadow">
+          <Card className="text-center glass-panel">
             <Statistic
               title="证候类术语"
               value={syndromeCount}
-              prefix={<BarChartOutlined className="text-purple-500" />}
-              valueStyle={{ color: '#722ed1' }}
+              prefix={<BarChartOutlined style={{ color: '#722ed1' }} />}
+              valueStyle={{ color: '#722ed1', fontSize: '24px', fontWeight: 600 }}
             />
           </Card>
         </Col>
@@ -131,32 +122,41 @@ const Dashboard: React.FC = () => {
         <Col xs={24} lg={12}>
           <Card 
             title="数据概览" 
-            className="h-full"
-            extra={<a href="/analytics">查看详情</a>}
+            className="h-full glass-panel"
+            extra={<a href="/analytics" style={{ color: 'var(--primary-color)' }}>查看详情 →</a>}
           >
             <div className="space-y-4">
               <div>
                 <div className="flex justify-between mb-2">
-                  <span>疾病类术语</span>
-                  <span>{diseaseCount.toLocaleString()} 条</span>
+                  <span style={{ fontWeight: 500 }}>疾病类术语</span>
+                  <span style={{ color: '#52c41a', fontWeight: 600 }}>{diseaseCount.toLocaleString()} 条</span>
                 </div>
-                <Progress percent={Number(diseasePercent.toFixed(1))} strokeColor="#52c41a" />
+                <Progress 
+                  percent={Number(diseasePercent.toFixed(1))} 
+                  strokeColor="#52c41a"
+                  showInfo={false}
+                />
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span>证候类术语</span>
-                  <span>{syndromeCount.toLocaleString()} 条</span>
+                  <span style={{ fontWeight: 500 }}>证候类术语</span>
+                  <span style={{ color: '#1890ff', fontWeight: 600 }}>{syndromeCount.toLocaleString()} 条</span>
                 </div>
-                <Progress percent={Number(syndromePercent.toFixed(1))} strokeColor="#1890ff" />
+                <Progress 
+                  percent={Number(syndromePercent.toFixed(1))} 
+                  strokeColor="#1890ff"
+                  showInfo={false}
+                />
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span>数据完整性</span>
-                  <span>{stats?.dataCompleteness.toFixed(1) || 0}%</span>
+                  <span style={{ fontWeight: 500 }}>数据完整性</span>
+                  <span style={{ color: '#fa8c16', fontWeight: 600 }}>{stats?.dataCompleteness.toFixed(1) || 0}%</span>
                 </div>
                 <Progress 
                   percent={Number((stats?.dataCompleteness || 0).toFixed(1))} 
-                  strokeColor="#fa8c16" 
+                  strokeColor="#fa8c16"
+                  showInfo={false}
                 />
               </div>
             </div>
@@ -166,35 +166,82 @@ const Dashboard: React.FC = () => {
         <Col xs={24} lg={12}>
           <Card 
             title="快速操作" 
-            className="h-full"
+            className="h-full glass-panel"
           >
             <div className="grid grid-cols-2 gap-4">
               <div 
-                className="p-4 bg-primary-50 rounded-lg cursor-pointer hover:bg-primary-100 transition-colors" 
+                className="p-4 rounded-lg cursor-pointer transition-all hover:shadow-md"
+                style={{ 
+                  background: 'linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, rgba(220, 38, 38, 0.04) 100%)',
+                }}
                 onClick={() => navigate('/explorer')}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(220, 38, 38, 0.12) 0%, rgba(220, 38, 38, 0.06) 100%)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, rgba(220, 38, 38, 0.04) 100%)'
+                }}
               >
-                <NodeIndexOutlined className="text-2xl text-primary-500 mb-2" />
+                <NodeIndexOutlined className="text-2xl mb-2" style={{ color: '#dc2626' }} />
                 <h3 className="font-medium text-gray-800 mb-1">图谱探索</h3>
                 <p className="text-sm text-gray-600">可视化浏览知识图谱</p>
               </div>
               <div 
-                className="p-4 bg-blue-50 rounded-lg cursor-pointer hover:bg-blue-100 transition-colors"
+                className="p-4 rounded-lg cursor-pointer transition-all hover:shadow-md"
+                style={{ 
+                  background: 'linear-gradient(135deg, rgba(24, 144, 255, 0.08) 0%, rgba(24, 144, 255, 0.04) 100%)',
+                }}
                 onClick={() => navigate('/search')}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(24, 144, 255, 0.12) 0%, rgba(24, 144, 255, 0.06) 100%)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(24, 144, 255, 0.08) 0%, rgba(24, 144, 255, 0.04) 100%)'
+                }}
               >
-                <SearchOutlined className="text-2xl text-blue-500 mb-2" />
+                <SearchOutlined className="text-2xl mb-2" style={{ color: '#1890ff' }} />
                 <h3 className="font-medium text-gray-800 mb-1">智能搜索</h3>
                 <p className="text-sm text-gray-600">快速查找相关术语</p>
               </div>
               <div 
-                className="p-4 bg-orange-50 rounded-lg cursor-pointer hover:bg-orange-100 transition-colors"
+                className="p-4 rounded-lg cursor-pointer transition-all hover:shadow-md"
+                style={{ 
+                  background: 'linear-gradient(135deg, rgba(250, 140, 22, 0.08) 0%, rgba(250, 140, 22, 0.04) 100%)',
+                }}
                 onClick={() => navigate('/analytics')}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(250, 140, 22, 0.12) 0%, rgba(250, 140, 22, 0.06) 100%)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(250, 140, 22, 0.08) 0%, rgba(250, 140, 22, 0.04) 100%)'
+                }}
               >
-                <BarChartOutlined className="text-2xl text-orange-500 mb-2" />
+                <BarChartOutlined className="text-2xl mb-2" style={{ color: '#fa8c16' }} />
                 <h3 className="font-medium text-gray-800 mb-1">数据分析</h3>
                 <p className="text-sm text-gray-600">深入分析数据结构</p>
               </div>
-              <div className="p-4 bg-purple-50 rounded-lg cursor-pointer hover:bg-purple-100 transition-colors" onClick={() => navigate('/visualizations')}>
-                <BarChartOutlined className="text-2xl text-purple-500 mb-2" />
+              <div 
+                className="p-4 rounded-lg cursor-pointer transition-all hover:shadow-md"
+                style={{ 
+                  background: 'linear-gradient(135deg, rgba(114, 46, 209, 0.08) 0%, rgba(114, 46, 209, 0.04) 100%)',
+                }}
+                onClick={() => navigate('/visualizations')}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-2px)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(114, 46, 209, 0.12) 0%, rgba(114, 46, 209, 0.06) 100%)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(114, 46, 209, 0.08) 0%, rgba(114, 46, 209, 0.04) 100%)'
+                }}
+              >
+                <BarChartOutlined className="text-2xl mb-2" style={{ color: '#722ed1' }} />
                 <h3 className="font-medium text-gray-800 mb-1">高级可视化</h3>
                 <p className="text-sm text-gray-600">3D视图、时间线、演化展示</p>
               </div>

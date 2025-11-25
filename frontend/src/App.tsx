@@ -1,10 +1,11 @@
-import React, { Suspense, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { Layout } from 'antd'
 import { ErrorBoundary } from './components/common/ErrorBoundary'
 import { AppHeader } from './components/common/Header'
 import { AppSider } from './components/common/Sider'
 import { LoadingSpinner } from './components/common/Loading'
+import { StartupScreen } from './components/common/StartupScreen'
 
 // 懒加载页面组件
 const Dashboard = React.lazy(() => import('./pages/Dashboard'))
@@ -18,10 +19,17 @@ const { Content } = Layout
 
 const App: React.FC = () => {
   const [collapsed, setCollapsed] = useState(true) // 默认收起
+  const [showStartup, setShowStartup] = useState(true)
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowStartup(false), 1600)
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
     <ErrorBoundary>
-      <Layout className="min-h-screen">
+      <StartupScreen visible={showStartup} />
+      <Layout className="min-h-screen app-shell">
         {/* 顶部导航栏 */}
         <AppHeader />
         
@@ -30,41 +38,44 @@ const App: React.FC = () => {
           <AppSider collapsed={collapsed} onCollapse={setCollapsed} />
           
           {/* 主内容区域 */}
-          <Content 
-            className="transition-all duration-300 ease-in-out" 
-            style={{ 
+          <Content
+            className="transition-all duration-300 ease-in-out app-content-surface"
+            style={{
               minHeight: 'calc(100vh - 72px)',
               marginLeft: collapsed ? 0 : '260px',
               width: collapsed ? '100%' : 'calc(100% - 260px)',
               maxWidth: collapsed ? '100%' : 'calc(100% - 260px)',
-              background: 'linear-gradient(135deg, #fef7f0 0%, #fef3e2 50%, #fff7ed 100%)',
-              backgroundAttachment: 'fixed',
-              position: 'relative',
-              zIndex: 1,
-              overflowX: 'hidden',
-              overflowY: 'auto',
-              boxSizing: 'border-box'
             }}
           >
-            <Suspense fallback={<LoadingSpinner />}>
-              <Routes>
-                <Route path="/" element={<Dashboard />} />
-                <Route path="/explorer" element={<Explorer />} />
-                <Route path="/search" element={<Search />} />
-                <Route path="/analytics" element={<Analytics />} />
-                <Route path="/visualizations" element={<Visualizations />} />
-                <Route path="/nodes/:code" element={<NodeDetail />} />
-                {/* 404页面 */}
-                <Route path="*" element={
-                  <div className="flex items-center justify-center h-96">
-                    <div className="text-center">
-                      <h1 className="text-4xl font-bold text-gray-400 mb-4">404</h1>
-                      <p className="text-gray-500">页面未找到</p>
-                    </div>
-                  </div>
-                } />
-              </Routes>
-            </Suspense>
+            <div className="app-ambient">
+              <span className="ambient ambient-one" />
+              <span className="ambient ambient-two" />
+              <span className="ambient ambient-three" />
+            </div>
+            <div className="app-content-inner">
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
+                  <Route path="/" element={<Dashboard />} />
+                  <Route path="/explorer" element={<Explorer />} />
+                  <Route path="/search" element={<Search />} />
+                  <Route path="/analytics" element={<Analytics />} />
+                  <Route path="/visualizations" element={<Visualizations />} />
+                  <Route path="/nodes/:code" element={<NodeDetail />} />
+                  {/* 404页面 */}
+                  <Route
+                    path="*"
+                    element={
+                      <div className="flex items-center justify-center h-96">
+                        <div className="text-center">
+                          <h1 className="text-4xl font-bold text-gray-400 mb-4">404</h1>
+                          <p className="text-gray-500">页面未找到</p>
+                        </div>
+                      </div>
+                    }
+                  />
+                </Routes>
+              </Suspense>
+            </div>
           </Content>
         </Layout>
       </Layout>

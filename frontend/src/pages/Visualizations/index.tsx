@@ -12,6 +12,7 @@ import { TimelineGraph } from './components/TimelineGraph'
 import { EvolutionGraph } from './components/EvolutionGraph'
 import { getGraphData, getRootNodes, searchNodes, RootNode } from '@/services/api'
 import { LoadingSpinner } from '@/components/common/Loading'
+import { PageHeader } from '@/components/common/PageHeader'
 
 const { Option } = Select
 
@@ -121,26 +122,15 @@ export default function Visualizations() {
 
   return (
     <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
-      {/* 页面标题 */}
-      <div className="mb-8">
-        <div className="flex items-start gap-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-red-500 via-orange-500 to-amber-500 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
-            <span className="text-white font-bold text-xl">视</span>
-          </div>
-          <div className="flex-1 min-w-0">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2 leading-tight">
-              高级可视化
-            </h1>
-            <p className="text-sm text-gray-500 mb-3 leading-tight">少纳言中医知识图谱</p>
-            <p className="text-gray-600 leading-relaxed">
-              探索知识图谱的多种可视化方式：3D视图、时间线图谱、动态演化展示
-            </p>
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        iconText="视"
+        title="高级可视化"
+        subtitle="少纳言中医知识图谱"
+        description="探索知识图谱的多种可视化方式：3D视图、时间线图谱、动态演化展示"
+      />
 
       {/* 控制面板 */}
-      <Card className="mb-4">
+      <Card className="mb-4 glass-panel">
         <Space direction="vertical" size="middle" style={{ width: '100%' }}>
           {/* 根节点选择 */}
           <Space size="large" wrap>
