@@ -22,7 +22,7 @@ const App: React.FC = () => {
   const [showStartup, setShowStartup] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowStartup(false), 1600)
+    const timer = setTimeout(() => setShowStartup(false), 2500) // 延长显示时间，让用户能看到完整的动画
     return () => clearTimeout(timer)
   }, [])
 
