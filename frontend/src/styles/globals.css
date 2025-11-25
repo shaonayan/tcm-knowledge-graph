@@ -14,13 +14,13 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #fef7f0 0%, #fef3e2 50%, #fff7ed 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
   background-attachment: fixed;
-  color: #1f2937;
+  color: var(--text-primary);
 }
 
 .app-shell {
-  background: linear-gradient(135deg, #fef7f0 0%, #fef3e2 50%, #fff7ed 100%);
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
   position: relative;
   overflow: hidden;
 }
@@ -36,17 +36,17 @@ body {
 }
 
 .app-shell::before {
-  width: 380px;
-  height: 380px;
-  background: rgba(252, 165, 165, 0.4);
+  width: 400px;
+  height: 400px;
+  background: rgba(99, 102, 241, 0.15);
   top: -120px;
   right: -60px;
 }
 
 .app-shell::after {
-  width: 420px;
-  height: 420px;
-  background: rgba(251, 191, 36, 0.35);
+  width: 450px;
+  height: 450px;
+  background: rgba(139, 92, 246, 0.12);
   bottom: -160px;
   left: -80px;
 }
@@ -119,30 +119,36 @@ body {
   }
 }
 
-/* 专业配色方案 - 中医传统风格 */
+/* 专业配色方案 - 现代优雅风格 */
 :root {
-  --primary-color: #dc2626;
-  --primary-hover: #ef4444;
-  --primary-light: #fee2e2;
-  --secondary-color: #ea580c;
-  --secondary-hover: #f97316;
-  --accent-color: #f59e0b;
+  --primary-color: #6366f1;
+  --primary-hover: #818cf8;
+  --primary-light: #eef2ff;
+  --secondary-color: #8b5cf6;
+  --secondary-hover: #a78bfa;
+  --accent-color: #ec4899;
   --success-color: #10b981;
   --warning-color: #f59e0b;
   --error-color: #ef4444;
-  --text-primary: #1f2937;
+  --info-color: #3b82f6;
+  --text-primary: #111827;
   --text-secondary: #6b7280;
   --text-tertiary: #9ca3af;
   --border-color: #e5e7eb;
   --bg-primary: #ffffff;
-  --bg-secondary: #fef7f0;
-  --bg-tertiary: #fef3e2;
-  --gradient-primary: linear-gradient(135deg, #dc2626 0%, #ea580c 50%, #f59e0b 100%);
-  --gradient-soft: linear-gradient(135deg, #fee2e2 0%, #fed7aa 100%);
-  --shadow-sm: 0 1px 2px 0 rgba(220, 38, 38, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(220, 38, 38, 0.1), 0 2px 4px -1px rgba(220, 38, 38, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(220, 38, 38, 0.1), 0 4px 6px -2px rgba(220, 38, 38, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(220, 38, 38, 0.1), 0 10px 10px -5px rgba(220, 38, 38, 0.04);
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  --gradient-soft: linear-gradient(135deg, #eef2ff 0%, #f3e8ff 100%);
+  --gradient-card-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-card-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-card-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-card-4: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 /* 自定义滚动条样式 */
@@ -165,16 +171,16 @@ body {
   background: #a8a8a8;
 }
 
-/* Ant Design样式覆盖 - 优雅设计 */
+/* Ant Design样式覆盖 - 现代优雅设计 */
 .ant-layout-header {
   padding: 0 clamp(24px, 3vw, 56px) !important;
   height: 72px !important;
   line-height: 72px !important;
-  background: rgba(255, 255, 255, 0.85) !important;
-  border-bottom: 1px solid rgba(220, 38, 38, 0.08) !important;
-  box-shadow: 0 12px 30px rgba(220, 38, 38, 0.08) !important;
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   position: sticky !important;
   top: 0 !important;
   z-index: 1000 !important;
@@ -197,15 +203,21 @@ body {
 .app-header__logo {
   width: 46px;
   height: 46px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+  border-radius: 12px;
+  background: var(--gradient-primary);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 22px;
   font-weight: 600;
-  box-shadow: 0 10px 30px rgba(220, 38, 38, 0.35);
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+}
+
+.app-header__logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.5);
 }
 
 .app-header__title {
@@ -235,22 +247,29 @@ body {
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(220, 38, 38, 0.12);
-  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.08);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   font-size: 12px;
-  color: #9ca3af;
+  color: var(--text-secondary);
   font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.app-header__chip:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
 }
 
 .app-header__chip-value {
-  color: #dc2626;
+  color: var(--primary-color);
   font-weight: 600;
 }
 
 .app-header__chip-icon {
-  color: #f97316;
+  color: var(--secondary-color);
   display: flex;
   align-items: center;
 }
@@ -299,12 +318,18 @@ body {
 }
 
 .glass-panel {
-  background: rgba(255, 255, 255, 0.78) !important;
-  border-radius: 20px !important;
-  border: 1px solid rgba(220, 38, 38, 0.08) !important;
-  box-shadow: 0 20px 45px rgba(220, 38, 38, 0.08) !important;
-  backdrop-filter: blur(24px) !important;
-  -webkit-backdrop-filter: blur(24px) !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(99, 102, 241, 0.1) !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.glass-panel:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+  transform: translateY(-2px);
 }
 
 .app-section-title {
@@ -368,17 +393,38 @@ body {
 }
 
 .ant-card {
-  border-radius: 12px;
-  border: 1px solid rgba(220, 38, 38, 0.1);
-  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   background: #ffffff;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
 }
 
 .ant-card:hover {
-  box-shadow: 0 4px 16px rgba(220, 38, 38, 0.12);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
+}
+
+.stat-card-modern {
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card-modern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.stat-card-modern:hover::before {
+  opacity: 1;
 }
 
 .ant-card-head {
@@ -452,19 +498,25 @@ body {
 .page-header-icon {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, #dc2626 0%, #ea580c 50%, #f59e0b 100%);
+  background: var(--gradient-primary);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.2);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
   flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.page-header-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
 }
 
 .page-header-title {
   font-size: 28px;
   font-weight: 700;
-  background: linear-gradient(135deg, #dc2626 0%, #ea580c 100%);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

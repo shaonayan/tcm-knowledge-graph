@@ -74,56 +74,82 @@ const Dashboard: React.FC = () => {
       />
 
       {/* 统计卡片 */}
-      <Row gutter={[16, 16]} className="mb-8">
+      <Row gutter={[20, 20]} className="mb-8">
         <Col xs={24} sm={12} lg={6}>
-          <Card className="text-center glass-panel">
+          <Card 
+            className="text-center glass-panel stat-card-modern"
+            style={{
+              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%)',
+              borderColor: 'rgba(99, 102, 241, 0.2)'
+            }}
+          >
             <Statistic
-              title="总节点数"
+              title={<span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: 500 }}>总节点数</span>}
               value={stats?.totalNodes || 0}
-              prefix={<NodeIndexOutlined style={{ color: '#52c41a' }} />}
-              valueStyle={{ color: '#52c41a', fontSize: '24px', fontWeight: 600 }}
+              prefix={<NodeIndexOutlined style={{ color: '#6366f1', fontSize: '28px' }} />}
+              valueStyle={{ color: '#6366f1', fontSize: '28px', fontWeight: 700 }}
             />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
-          <Card className="text-center glass-panel">
+          <Card 
+            className="text-center glass-panel stat-card-modern"
+            style={{
+              background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(245, 87, 108, 0.05) 100%)',
+              borderColor: 'rgba(236, 72, 153, 0.2)'
+            }}
+          >
             <Statistic
-              title="关系数量"
+              title={<span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: 500 }}>关系数量</span>}
               value={stats?.totalRelationships || 0}
-              prefix={<BranchesOutlined style={{ color: '#1890ff' }} />}
-              valueStyle={{ color: '#1890ff', fontSize: '24px', fontWeight: 600 }}
+              prefix={<BranchesOutlined style={{ color: '#ec4899', fontSize: '28px' }} />}
+              valueStyle={{ color: '#ec4899', fontSize: '28px', fontWeight: 700 }}
             />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
-          <Card className="text-center glass-panel">
+          <Card 
+            className="text-center glass-panel stat-card-modern"
+            style={{
+              background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(0, 242, 254, 0.05) 100%)',
+              borderColor: 'rgba(59, 130, 246, 0.2)'
+            }}
+          >
             <Statistic
-              title="疾病类术语"
+              title={<span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: 500 }}>疾病类术语</span>}
               value={diseaseCount}
-              prefix={<SearchOutlined style={{ color: '#fa8c16' }} />}
-              valueStyle={{ color: '#fa8c16', fontSize: '24px', fontWeight: 600 }}
+              prefix={<SearchOutlined style={{ color: '#3b82f6', fontSize: '28px' }} />}
+              valueStyle={{ color: '#3b82f6', fontSize: '28px', fontWeight: 700 }}
             />
           </Card>
         </Col>
         <Col xs={24} sm={12} lg={6}>
-          <Card className="text-center glass-panel">
+          <Card 
+            className="text-center glass-panel stat-card-modern"
+            style={{
+              background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(56, 249, 215, 0.05) 100%)',
+              borderColor: 'rgba(16, 185, 129, 0.2)'
+            }}
+          >
             <Statistic
-              title="证候类术语"
+              title={<span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: 500 }}>证候类术语</span>}
               value={syndromeCount}
-              prefix={<BarChartOutlined style={{ color: '#722ed1' }} />}
-              valueStyle={{ color: '#722ed1', fontSize: '24px', fontWeight: 600 }}
+              prefix={<BarChartOutlined style={{ color: '#10b981', fontSize: '28px' }} />}
+              valueStyle={{ color: '#10b981', fontSize: '28px', fontWeight: 700 }}
             />
           </Card>
         </Col>
       </Row>
 
       {/* 功能卡片 */}
-      <Row gutter={[16, 16]} className="mt-0">
+      <Row gutter={[20, 20]} className="mt-0">
         <Col xs={24} lg={12}>
           <Card 
-            title="数据概览" 
+            title={<span style={{ fontSize: '18px', fontWeight: 600, color: 'var(--text-primary)' }}>数据概览</span>}
             className="h-full glass-panel"
-            extra={<a href="/analytics" style={{ color: 'var(--primary-color)' }}>查看详情 →</a>}
+            extra={<a href="/analytics" style={{ color: 'var(--primary-color)', fontWeight: 500, textDecoration: 'none' }}>查看详情 →</a>}
+            headStyle={{ borderBottom: '1px solid rgba(99, 102, 241, 0.1)', padding: '20px 24px' }}
+            bodyStyle={{ padding: '24px' }}
           >
             <div className="space-y-4">
               <div>
@@ -165,85 +191,99 @@ const Dashboard: React.FC = () => {
 
         <Col xs={24} lg={12}>
           <Card 
-            title="快速操作" 
+            title={<span style={{ fontSize: '18px', fontWeight: 600, color: 'var(--text-primary)' }}>快速操作</span>}
             className="h-full glass-panel"
+            headStyle={{ borderBottom: '1px solid rgba(99, 102, 241, 0.1)', padding: '20px 24px' }}
+            bodyStyle={{ padding: '24px' }}
           >
             <div className="grid grid-cols-2 gap-4">
               <div 
-                className="p-4 rounded-lg cursor-pointer transition-all hover:shadow-md"
+                className="p-5 rounded-xl cursor-pointer transition-all"
                 style={{ 
-                  background: 'linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, rgba(220, 38, 38, 0.04) 100%)',
+                  background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.05) 100%)',
+                  border: '1px solid rgba(99, 102, 241, 0.15)',
                 }}
                 onClick={() => navigate('/explorer')}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(220, 38, 38, 0.12) 0%, rgba(220, 38, 38, 0.06) 100%)'
+                  e.currentTarget.style.transform = 'translateY(-4px)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%)'
+                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(99, 102, 241, 0.2)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, rgba(220, 38, 38, 0.04) 100%)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.05) 100%)'
+                  e.currentTarget.style.boxShadow = 'none'
                 }}
               >
-                <NodeIndexOutlined className="text-2xl mb-2" style={{ color: '#dc2626' }} />
-                <h3 className="font-medium text-gray-800 mb-1">图谱探索</h3>
-                <p className="text-sm text-gray-600">可视化浏览知识图谱</p>
+                <NodeIndexOutlined className="text-3xl mb-3" style={{ color: '#6366f1' }} />
+                <h3 className="font-semibold text-gray-800 mb-1" style={{ fontSize: '16px' }}>图谱探索</h3>
+                <p className="text-sm text-gray-600" style={{ fontSize: '13px' }}>可视化浏览知识图谱</p>
               </div>
               <div 
-                className="p-4 rounded-lg cursor-pointer transition-all hover:shadow-md"
+                className="p-5 rounded-xl cursor-pointer transition-all"
                 style={{ 
-                  background: 'linear-gradient(135deg, rgba(24, 144, 255, 0.08) 0%, rgba(24, 144, 255, 0.04) 100%)',
+                  background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(245, 87, 108, 0.05) 100%)',
+                  border: '1px solid rgba(236, 72, 153, 0.15)',
                 }}
                 onClick={() => navigate('/search')}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(24, 144, 255, 0.12) 0%, rgba(24, 144, 255, 0.06) 100%)'
+                  e.currentTarget.style.transform = 'translateY(-4px)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(236, 72, 153, 0.12) 0%, rgba(245, 87, 108, 0.08) 100%)'
+                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(236, 72, 153, 0.2)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(24, 144, 255, 0.08) 0%, rgba(24, 144, 255, 0.04) 100%)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(245, 87, 108, 0.05) 100%)'
+                  e.currentTarget.style.boxShadow = 'none'
                 }}
               >
-                <SearchOutlined className="text-2xl mb-2" style={{ color: '#1890ff' }} />
-                <h3 className="font-medium text-gray-800 mb-1">智能搜索</h3>
-                <p className="text-sm text-gray-600">快速查找相关术语</p>
+                <SearchOutlined className="text-3xl mb-3" style={{ color: '#ec4899' }} />
+                <h3 className="font-semibold text-gray-800 mb-1" style={{ fontSize: '16px' }}>智能搜索</h3>
+                <p className="text-sm text-gray-600" style={{ fontSize: '13px' }}>快速查找相关术语</p>
               </div>
               <div 
-                className="p-4 rounded-lg cursor-pointer transition-all hover:shadow-md"
+                className="p-5 rounded-xl cursor-pointer transition-all"
                 style={{ 
-                  background: 'linear-gradient(135deg, rgba(250, 140, 22, 0.08) 0%, rgba(250, 140, 22, 0.04) 100%)',
+                  background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(0, 242, 254, 0.05) 100%)',
+                  border: '1px solid rgba(59, 130, 246, 0.15)',
                 }}
                 onClick={() => navigate('/analytics')}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(250, 140, 22, 0.12) 0%, rgba(250, 140, 22, 0.06) 100%)'
+                  e.currentTarget.style.transform = 'translateY(-4px)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(0, 242, 254, 0.08) 100%)'
+                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(59, 130, 246, 0.2)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(250, 140, 22, 0.08) 0%, rgba(250, 140, 22, 0.04) 100%)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(0, 242, 254, 0.05) 100%)'
+                  e.currentTarget.style.boxShadow = 'none'
                 }}
               >
-                <BarChartOutlined className="text-2xl mb-2" style={{ color: '#fa8c16' }} />
-                <h3 className="font-medium text-gray-800 mb-1">数据分析</h3>
-                <p className="text-sm text-gray-600">深入分析数据结构</p>
+                <BarChartOutlined className="text-3xl mb-3" style={{ color: '#3b82f6' }} />
+                <h3 className="font-semibold text-gray-800 mb-1" style={{ fontSize: '16px' }}>数据分析</h3>
+                <p className="text-sm text-gray-600" style={{ fontSize: '13px' }}>深入分析数据结构</p>
               </div>
               <div 
-                className="p-4 rounded-lg cursor-pointer transition-all hover:shadow-md"
+                className="p-5 rounded-xl cursor-pointer transition-all"
                 style={{ 
-                  background: 'linear-gradient(135deg, rgba(114, 46, 209, 0.08) 0%, rgba(114, 46, 209, 0.04) 100%)',
+                  background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(56, 249, 215, 0.05) 100%)',
+                  border: '1px solid rgba(16, 185, 129, 0.15)',
                 }}
                 onClick={() => navigate('/visualizations')}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-2px)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(114, 46, 209, 0.12) 0%, rgba(114, 46, 209, 0.06) 100%)'
+                  e.currentTarget.style.transform = 'translateY(-4px)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(56, 249, 215, 0.08) 100%)'
+                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(16, 185, 129, 0.2)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(114, 46, 209, 0.08) 0%, rgba(114, 46, 209, 0.04) 100%)'
+                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(56, 249, 215, 0.05) 100%)'
+                  e.currentTarget.style.boxShadow = 'none'
                 }}
               >
-                <BarChartOutlined className="text-2xl mb-2" style={{ color: '#722ed1' }} />
-                <h3 className="font-medium text-gray-800 mb-1">高级可视化</h3>
-                <p className="text-sm text-gray-600">3D视图、时间线、演化展示</p>
+                <BarChartOutlined className="text-3xl mb-3" style={{ color: '#10b981' }} />
+                <h3 className="font-semibold text-gray-800 mb-1" style={{ fontSize: '16px' }}>高级可视化</h3>
+                <p className="text-sm text-gray-600" style={{ fontSize: '13px' }}>3D视图、时间线、演化展示</p>
               </div>
             </div>
           </Card>
