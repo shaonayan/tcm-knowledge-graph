@@ -1,0 +1,65 @@
+═══════════════════════════════════════════════════════════
+  Node.js 安装路径查找结果
+═══════════════════════════════════════════════════════════
+
+根据系统检查，您的 Node.js 可能安装在：
+
+📍 可能的安装路径：
+   D:\nodejs\  （从注册表检测到）
+
+📋 常见安装位置：
+   1. C:\Program Files\nodejs\
+   2. C:\Program Files (x86)\nodejs\
+   3. D:\nodejs\  （您的可能位置）
+   4. %LOCALAPPDATA%\Programs\nodejs\
+   5. %USERPROFILE%\AppData\Local\Programs\nodejs\
+
+🔍 如何确认完整路径：
+
+方法1：使用查找脚本（推荐）
+─────────────────────────────
+双击运行：查找Node.js路径.bat
+脚本会自动检查所有常见位置并显示完整路径
+
+方法2：手动查找
+─────────────────────────────
+1. 打开文件资源管理器
+2. 导航到以下位置之一：
+   - D:\nodejs\
+   - C:\Program Files\nodejs\
+   - C:\Program Files (x86)\nodejs\
+3. 查找 node.exe 文件
+4. 该文件夹就是 Node.js 的安装路径
+
+方法3：使用 PowerShell
+─────────────────────────────
+在 PowerShell 中运行：
+  Get-ChildItem -Path "D:\" -Filter "node.exe" -Recurse -ErrorAction SilentlyContinue
+
+方法4：检查注册表
+─────────────────────────────
+注册表显示安装路径可能在：D:\
+
+═══════════════════════════════════════════════════════════
+  下一步操作
+═══════════════════════════════════════════════════════════
+
+✅ 如果找到 Node.js 路径（例如：D:\nodejs\）：
+
+1. 添加到系统 PATH（推荐）
+   - 按 Win + R，输入 sysdm.cpl
+   - 环境变量 → 系统变量 → Path → 编辑
+   - 新建 → 输入：D:\nodejs
+   - 确定保存
+
+2. 或直接使用完整路径
+   - 在批处理脚本中使用：D:\nodejs\node.exe
+   - 在 PowerShell 中使用：& "D:\nodejs\node.exe"
+
+3. 验证安装
+   - 打开新的 PowerShell/CMD
+   - 运行：node --version
+   - 运行：npm --version
+
+═══════════════════════════════════════════════════════════
+
