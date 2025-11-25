@@ -68,9 +68,10 @@ body {
 .app-content-inner {
   position: relative;
   z-index: 2;
-  padding: clamp(24px, 2vw, 40px);
+  padding: 0;
   width: 100%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .ambient {
@@ -173,7 +174,7 @@ body {
 
 /* Ant Design样式覆盖 - 现代优雅设计 */
 .ant-layout-header {
-  padding: 0 clamp(24px, 3vw, 56px) !important;
+  padding: 0 clamp(16px, 2vw, 32px) !important;
   height: 72px !important;
   line-height: 72px !important;
   background: rgba(255, 255, 255, 0.9) !important;
@@ -185,19 +186,27 @@ body {
   top: 0 !important;
   z-index: 1000 !important;
   width: 100% !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
 }
 
 .app-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 16px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  width: 100%;
 }
 
 .app-header__brand {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  flex-shrink: 0;
+  min-width: 0;
+  flex: 0 0 auto;
 }
 
 .app-header__logo {
@@ -221,40 +230,54 @@ body {
 }
 
 .app-header__title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   margin: 0;
-  color: #1f2937;
+  color: var(--text-primary);
   letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
 }
 
 .app-header__subtitle {
-  font-size: 12px;
+  font-size: 11px;
   margin: 2px 0 0;
-  color: #9ca3af;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 280px;
 }
 
 .app-header__meta {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 8px;
+  flex-wrap: nowrap;
   justify-content: flex-end;
+  flex-shrink: 0;
+  min-width: 0;
+  overflow: visible;
 }
 
 .app-header__chip {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
+  gap: 5px;
+  padding: 5px 10px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.95);
   border: 1px solid rgba(99, 102, 241, 0.15);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  font-size: 12px;
+  font-size: 11px;
   color: var(--text-secondary);
   font-weight: 500;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+  overflow: visible;
 }
 
 .app-header__chip:hover {
@@ -263,15 +286,24 @@ body {
   transform: translateY(-1px);
 }
 
+.app-header__chip-label {
+  white-space: nowrap;
+  overflow: visible;
+}
+
 .app-header__chip-value {
   color: var(--primary-color);
   font-weight: 600;
+  white-space: nowrap;
+  overflow: visible;
 }
 
 .app-header__chip-icon {
   color: var(--secondary-color);
   display: flex;
   align-items: center;
+  flex-shrink: 0;
+  font-size: 12px;
 }
 
 .ant-layout-sider {
@@ -301,7 +333,7 @@ body {
 
 /* 页面容器统一样式 - 合并定义 */
 .page-wrapper {
-  padding: 24px;
+  padding: clamp(20px, 2vw, 32px);
   min-height: calc(100vh - 72px);
   position: relative;
   z-index: 1;
@@ -310,6 +342,7 @@ body {
   background: transparent;
   overflow-x: hidden;
   width: 100%;
+  margin: 0;
 }
 
 /* 确保卡片间距统一 */
@@ -876,6 +909,28 @@ body {
 /* 页面容器统一样式 - 已在前面定义，此处删除重复 */
 
 /* 优化响应式 */
+@media (max-width: 1200px) {
+  .app-header__title {
+    max-width: 200px;
+    font-size: 15px;
+  }
+  
+  .app-header__subtitle {
+    max-width: 200px;
+    font-size: 10px;
+  }
+  
+  .app-header__chip {
+    padding: 4px 8px;
+    font-size: 10px;
+    gap: 4px;
+  }
+  
+  .app-header__chip-icon {
+    font-size: 11px;
+  }
+}
+
 @media (max-width: 768px) {
   .page-wrapper {
     padding: 16px;
@@ -896,7 +951,8 @@ body {
   }
 
   .app-header__title {
-    font-size: 16px !important;
+    font-size: 14px !important;
+    max-width: 180px !important;
   }
 
   .app-header__subtitle {
@@ -905,6 +961,16 @@ body {
 
   .page-header-title {
     font-size: 24px !important;
+  }
+  
+  .app-header__brand {
+    gap: 8px;
+  }
+  
+  .app-header__logo {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 18px !important;
   }
 }
 

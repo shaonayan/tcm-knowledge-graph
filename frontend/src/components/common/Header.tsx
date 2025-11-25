@@ -19,9 +19,9 @@ export const AppHeader: React.FC = () => {
     <Header className="app-header">
       <div className="app-header__brand">
         <div className="app-header__logo">少</div>
-        <div>
+        <div style={{ minWidth: 0, flex: '0 1 auto' }}>
           <div className="app-header__title">少纳言中医知识图谱</div>
-          <div className="app-header__subtitle">Shonaoyan Traditional Chinese Medicine Graph</div>
+          <div className="app-header__subtitle">Shonaoyan TCM Graph</div>
         </div>
       </div>
       <div className="app-header__meta">
