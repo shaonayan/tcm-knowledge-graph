@@ -1,217 +1,148 @@
-import express from 'express'
-import cors from 'cors'
-import helmet from 'helmet'
-import morgan from 'morgan'
-import compression from 'compression'
-import rateLimit from 'express-rate-limit'
-import swaggerJsdoc from 'swagger-jsdoc'
-import swaggerUi from 'swagger-ui-express'
-import dotenv from 'dotenv'
+﻿import express from "express"
+import cors, { CorsOptions } from "cors"
+import helmet from "helmet"
+import morgan from "morgan"
+import compression from "compression"
+import rateLimit from "express-rate-limit"
+import swaggerJsdoc from "swagger-jsdoc"
+import swaggerUi from "swagger-ui-express"
+import dotenv from "dotenv"
 
-import { errorHandler } from '@middleware/errorHandler.js'
-import { notFoundHandler } from '@middleware/notFoundHandler.js'
-import { logger } from '@utils/logger.js'
+import { errorHandler } from "@middleware/errorHandler.js"
+import { notFoundHandler } from "@middleware/notFoundHandler.js"
+import { logger } from "@utils/logger.js"
 
-// 路由导入
-import graphRoutes from '@routes/graph.js'
-import searchRoutes from '@routes/search.js'
-import analyticsRoutes from '@routes/analytics.js'
-import userRoutes from '@routes/users.js'
-import { neo4jService } from '@services/neo4j.js'
+import graphRoutes from "@routes/graph.js"
+import searchRoutes from "@routes/search.js"
+import analyticsRoutes from "@routes/analytics.js"
+import userRoutes from "@routes/users.js"
+import { neo4jService } from "@services/neo4j.js"
 
-// 加载环境变量
 dotenv.config()
 
 const app = express()
-const PORT = process.env.PORT || 3001
-const API_PREFIX = process.env.API_PREFIX || '/api'
+const PORT = Number(process.env.PORT) || 3001
+const API_PREFIX = process.env.API_PREFIX || "/api"
 
-// 基础中间�?app.use(helmet()) // 安全�?app.use(compression()) // 压缩响应
-app.use(morgan('combined', { stream: { write: (message) => logger.info(message.trim()) } })) // 日志
+app.use(helmet())
+app.use(compression())
+app.use(morgan("combined", { stream: { write: (message) => logger.info(message.trim()) } }))
 
-// CORS配置 - 允许所有Vercel域名和本地开�?const allowedOrigins = process.env.CORS_ORIGIN 
-  ? process.env.CORS_ORIGIN.split(',').map(origin => origin.trim())
-  : ['http://localhost:3000']
+const configuredOrigins = (process.env.CORS_ORIGIN || "")
+  .split(",")
+  .map(origin => origin.trim())
+  .filter(Boolean)
 
-// 添加所�?vercel.app 子域名支�?const corsOptions = {
-  origin: (origin: string | undefined, callback: (err: Error | null, allow?: boolean) => void) => {
-    // 允许无origin的请求（如移动应用、Postman等）
+const corsOptions: CorsOptions = {
+  origin: (origin, callback) => {
     if (!origin) {
       return callback(null, true)
     }
-    
-    // 检查是否在允许列表�?    if (allowedOrigins.includes(origin)) {
+
+    if (configuredOrigins.includes(origin)) {
       return callback(null, true)
     }
-    
-    // 允许所�?*.vercel.app 域名（包括预览部署）
-    if (origin.endsWith('.vercel.app') || origin.endsWith('.netlify.app')) {
+
+    if (origin.endsWith(".vercel.app") || origin.endsWith(".netlify.app")) {
       return callback(null, true)
     }
-    
-    // 允许 localhost（开发环境）
-    if (origin.startsWith('http://localhost:') || origin.startsWith('https://localhost:')) {
+
+    if (origin.startsWith("http://localhost:") || origin.startsWith("https://localhost:")) {
       return callback(null, true)
     }
-    
-    // 其他情况拒绝
-    callback(new Error('Not allowed by CORS'))
+
+    callback(new Error("Not allowed by CORS"))
   },
-  credentials: process.env.CORS_CREDENTIALS === 'true',
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+  credentials: process.env.CORS_CREDENTIALS === "true",
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"]
 }
 
 app.use(cors(corsOptions))
+app.use(express.json({ limit: "10mb" }))
+app.use(express.urlencoded({ extended: true, limit: "10mb" }))
 
-// 请求解析
-app.use(express.json({ limit: '10mb' }))
-app.use(express.urlencoded({ extended: true, limit: '10mb' }))
-
-// 限流配置
 const limiter = rateLimit({
-  windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || '900000'), // 15分钟
-  max: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || '100'), // 限制每个IP 100次请�?  message: {
-    error: 'Too many requests from this IP, please try again later.',
-    code: 'RATE_LIMIT_EXCEEDED'
-  },
+  windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS || "900000"),
+  max: parseInt(process.env.RATE_LIMIT_MAX_REQUESTS || "100"),
   standardHeaders: true,
-  legacyHeaders: false,
+  legacyHeaders: false
 })
 
 app.use(limiter)
 
-// Swagger文档配置
 const swaggerOptions = {
   definition: {
-    openapi: '3.0.0',
+    openapi: "3.0.0",
     info: {
-      title: '中医知识图谱API',
-      version: '1.0.0',
-      description: '中医知识图谱后端API文档',
-      contact: {
-        name: 'TCM Knowledge Graph Team',
-        email: 'support@tcm-knowledge-graph.com'
-      }
+      title: "TCM Knowledge Graph API",
+      version: "1.0.0",
+      description: "REST APIs for the TCM Knowledge Graph backend"
     },
     servers: [
       {
         url: `http://localhost:${PORT}${API_PREFIX}`,
-        description: '开发环�?
+        description: "Development"
       }
-    ],
-    components: {
-      securitySchemes: {
-        bearerAuth: {
-          type: 'http',
-          scheme: 'bearer',
-          bearerFormat: 'JWT'
-        }
-      }
-    }
+    ]
   },
-  apis: ['./src/routes/*.ts', './src/controllers/*.ts']
+  apis: ["./src/routes/*.ts", "./src/controllers/*.ts"]
 }
 
 const swaggerSpec = swaggerJsdoc(swaggerOptions)
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec))
 
-// API文档路由
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
-  customCss: '.swagger-ui .topbar { display: none }',
-  customSiteTitle: '中医知识图谱API文档'
-}))
-
-// 健康检查端�?app.get('/health', (_req, res) => {
+app.get("/health", (_req, res) => {
   res.json({
-    status: 'ok',
+    status: "ok",
     timestamp: new Date().toISOString(),
-    uptime: process.uptime(),
     environment: process.env.NODE_ENV,
-    version: process.env.npm_package_version || '1.0.0',
-    database: neo4jService.isConnected() ? 'connected' : 'disconnected'
+    version: process.env.npm_package_version,
+    database: neo4jService.isConnected() ? "connected" : "disconnected"
   })
 })
 
-// API路由
-// 统计数据（兼容旧API路径�?app.get(`${API_PREFIX}/stats`, async (_req, res) => {
+app.get(`${API_PREFIX}/stats`, async (_req, res) => {
   try {
     if (!neo4jService.isConnected()) {
-      return res.status(503).json({
-        success: false,
-        error: '数据库未连接'
-      })
+      return res.status(503).json({ success: false, error: "Database not connected" })
     }
+
     const stats = await neo4jService.getStats()
-    return res.json({
-      success: true,
-      data: stats
-    })
+    res.json({ success: true, data: stats })
   } catch (error) {
-    logger.error('获取统计数据失败:', error)
-    return res.status(500).json({
-      success: false,
-      error: '获取统计数据失败'
-    })
+    logger.error("Failed to load stats", error)
+    res.status(500).json({ success: false, error: "Failed to load stats" })
   }
 })
 
-// 根节点（兼容旧API路径�? 必须�?/nodes/:code 之前
 app.get(`${API_PREFIX}/nodes/roots`, async (req, res) => {
   try {
     if (!neo4jService.isConnected()) {
-      return res.status(503).json({
-        success: false,
-        error: '数据库未连接'
-      })
+      return res.status(503).json({ success: false, error: "Database not connected" })
     }
-    const { limit = '20' } = req.query
-    const roots = await neo4jService.getRootNodes(parseInt(limit as string))
-    return res.json({
-      success: true,
-      data: roots
-    })
+
+    const limit = Number(req.query.limit) || 20
+    const roots = await neo4jService.getRootNodes(limit)
+    res.json({ success: true, data: roots })
   } catch (error) {
-    logger.error('获取根节点失�?', error)
-    return res.status(500).json({
-      success: false,
-      error: '获取根节点失�?
-    })
+    logger.error("Failed to load root nodes", error)
+    res.status(500).json({ success: false, error: "Failed to load root nodes" })
   }
 })
 
-// 节点详情（兼容旧API路径�? 必须�?/nodes/roots 之后
 app.get(`${API_PREFIX}/nodes/:code`, async (req, res) => {
   try {
     if (!neo4jService.isConnected()) {
-      return res.status(503).json({
-        success: false,
-        error: '数据库未连接'
-      })
+      return res.status(503).json({ success: false, error: "Database not connected" })
     }
 
-    const { code } = req.params
-    
-    // URL解码，处理特殊字�?    const decodedCode = decodeURIComponent(code)
-    const node = await neo4jService.getNodeDetails(decodedCode)
-
-    if (!node) {
-      return res.status(404).json({
-        success: false,
-        error: '节点未找�?
-      })
-    }
-
-    return res.json({
-      success: true,
-      data: node
-    })
+    const code = decodeURIComponent(req.params.code)
+    const data = await neo4jService.getNodeDetails(code)
+    res.json({ success: true, data })
   } catch (error) {
-    logger.error('获取节点详情失败:', error)
-    return res.status(500).json({
-      success: false,
-      error: '获取节点详情失败',
-      message: error instanceof Error ? error.message : 'Unknown error'
-    })
+    logger.error("Failed to load node detail", error)
+    res.status(500).json({ success: false, error: "Failed to load node detail" })
   }
 })
 
@@ -220,53 +151,27 @@ app.use(`${API_PREFIX}/search`, searchRoutes)
 app.use(`${API_PREFIX}/analytics`, analyticsRoutes)
 app.use(`${API_PREFIX}/users`, userRoutes)
 
-// 根路�?app.get('/', (_req, res) => {
-  res.json({
-    name: '中医知识图谱API',
-    version: '1.0.0',
-    description: '中医病证分类知识图谱后端服务',
-    documentation: '/api-docs',
-    health: '/health'
-  })
-})
-
-// 错误处理中间�?app.use(notFoundHandler)
+app.use(notFoundHandler)
 app.use(errorHandler)
 
-// 初始化Neo4j连接
-neo4jService.connect().catch((error) => {
-  logger.error('Neo4j连接初始化失�?', error)
-})
-
-// 启动服务�?const server = app.listen(PORT, () => {
-  logger.info(`🚀 服务器启动成功`)
-  logger.info(`📍 端口: ${PORT}`)
-  logger.info(`🌐 环境: ${process.env.NODE_ENV || 'development'}`)
-  logger.info(`📚 API文档: http://localhost:${PORT}/api-docs`)
-  logger.info(`💚 健康检�? http://localhost:${PORT}/health`)
-})
-
-// 优雅关闭
-const gracefulShutdown = (signal: string) => {
-  logger.info(`收到 ${signal} 信号，开始优雅关�?..`)
-  
-  server.close(async () => {
-    logger.info('HTTP服务器已关闭')
-    
-    // 关闭数据库连�?    await neo4jService.close()
-    
-    logger.info('应用程序已安全退�?)
-    process.exit(0)
-  })
-  
-  // 如果10秒内没有完成关闭，强制退�?  setTimeout(() => {
-    logger.error('强制关闭应用程序')
+const start = async () => {
+  const connected = await neo4jService.connect()
+  if (!connected) {
+    logger.error("Unable to connect to Neo4j, exiting...")
     process.exit(1)
-  }, 10000)
+  }
+
+  app.listen(PORT, () => {
+    logger.info(`Server listening on port ${PORT}`)
+  })
 }
 
-process.on('SIGTERM', () => gracefulShutdown('SIGTERM'))
-process.on('SIGINT', () => gracefulShutdown('SIGINT'))
+if (process.env.NODE_ENV !== "test") {
+  start().catch((error) => {
+    logger.error("Server failed to start", error)
+    process.exit(1)
+  })
+}
 
+export { app }
 export default app
-
