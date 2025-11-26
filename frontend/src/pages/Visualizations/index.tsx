@@ -95,7 +95,7 @@ export default function Visualizations() {
 
   const loadGraphData = async () => {
     if (!rootCode || rootCode.trim() === '') {
-      message.warning('Please select or enter a root node code')
+      message.warning('请选择或输入根节点代码')
       return
     }
 
@@ -103,16 +103,16 @@ export default function Visualizations() {
     try {
       const data = await getGraphData(rootCode.trim(), depth, limit)
       if (!data || !data.nodes || data.nodes.length === 0) {
-        message.warning('No data found, try another root node or adjust the parameters')
+        message.warning('未找到数据，请尝试其他根节点或调整参数')
         setGraphData(null)
         return
       }
       setGraphData(data)
-      message.success(`Graph data loaded: ${data.nodeCount || data.nodes.length} nodes, ${data.edgeCount || data.edges.length} edges`)
+      message.success(`图谱数据加载成功：${data.nodeCount || data.nodes.length} 个节点，${data.edgeCount || data.edges.length} 条边`)
     } catch (error: any) {
       console.error('Failed to load graph data:', error)
-      const errorMsg = error.message || 'Unknown error'
-      message.error(`Failed to load graph data: ${errorMsg}`)
+      const errorMsg = error.message || '未知错误'
+      message.error(`加载图谱数据失败: ${errorMsg}`)
       setGraphData(null)
     } finally {
       setLoading(false)
@@ -120,49 +120,52 @@ export default function Visualizations() {
   }
 
   const quickSelectNodes = [
-    { code: 'A01', name: 'A01 - External syndrome' },
-    { code: 'B04', name: 'B04 - Qi & blood syndrome' },
-    { code: 'B04.03.01.03.', name: 'B04.03.01.03. - Spleen deficiency' }
+    { code: 'A01', name: 'A01 - 外感病证' },
+    { code: 'B04', name: 'B04 - 气血津液病证' },
+    { code: 'B04.03.01.03.', name: 'B04.03.01.03. - 脾虚' }
   ]
 
   return (
     <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
       <PageHeader
-        title="Advanced Visualizations"
-        subtitle="Shaonaoyan TCM Knowledge Graph"
-        description="Explore multiple visualization forms of the knowledge graph: 3D graph, timeline, and dynamic evolution"
+        title="高级可视化"
+        subtitle="少纳言中医知识图谱"
+        description="探索知识图谱的多种可视化方式：3D视图、时间线图谱、动态演化展示"
       />
 
       <Card className="mb-4 glass-panel">
         <Space direction="vertical" size="middle" style={{ width: '100%' }}>
           <Space size="large" wrap>
             <div style={{ flex: 1, minWidth: 300 }}>
-              <label className="mr-2">Root node:</label>
+              <label className="mr-2">根节点:</label>
               <AutoComplete
                 style={{ width: '100%' }}
                 value={rootCode}
                 onChange={setRootCode}
                 onSearch={handleSearch}
                 options={searchOptions}
-                placeholder="Search node code or name"
-                loading={searchLoading}
-                notFoundContent={searchLoading ? 'Searching...' : 'No results, try another keyword'}
+                placeholder="搜索节点代码或名称"
+                notFoundContent={searchLoading ? '搜索中…' : '未找到节点，请尝试其他关键词'}
                 filterOption={false}
                 allowClear
               />
             </div>
             <div style={{ minWidth: 200 }}>
-              <label className="mr-2">Or select from list:</label>
+              <label className="mr-2">或从列表选择:</label>
               <Select
                 showSearch
                 allowClear
                 loading={loadingRoots}
-                placeholder="Choose a root node"
+                placeholder="选择根节点"
                 value={rootCode}
                 onChange={setRootCode}
                 style={{ width: '100%' }}
                 optionFilterProp="children"
-                filterOption={(input, option) => (option?.children as string)?.toLowerCase().includes(input.toLowerCase())}
+                filterOption={(input, option) =>
+                  String(option?.children ?? '')
+                    .toLowerCase()
+                    .includes(input.toLowerCase())
+                }
               >
                 {rootNodes.map(node => (
                   <Option key={node.code} value={node.code}>
@@ -175,20 +178,20 @@ export default function Visualizations() {
               </Select>
             </div>
             <div>
-              <label className="mr-2">Depth:</label>
+              <label className="mr-2">深度:</label>
               <InputNumber min={1} max={5} value={depth} onChange={val => setDepth(val || 3)} />
             </div>
             <div>
-              <label className="mr-2">Node limit:</label>
+              <label className="mr-2">节点限制:</label>
               <InputNumber min={10} max={500} value={limit} onChange={val => setLimit(val || 100)} />
             </div>
             <Button type="primary" icon={<ReloadOutlined />} onClick={loadGraphData} loading={loading}>
-              Load graph
+              加载图谱
             </Button>
           </Space>
 
           <div>
-            <label className="mr-2">Quick pick:</label>
+            <label className="mr-2">快速选择:</label>
             <Space wrap>
               {quickSelectNodes.map(node => (
                 <Button
@@ -197,7 +200,7 @@ export default function Visualizations() {
                   type={rootCode === node.code ? 'primary' : 'default'}
                   onClick={() => {
                     setRootCode(node.code)
-                    message.info(`Selected: ${node.name}`)
+                    message.info(`已选择: ${node.name}`)
                   }}
                 >
                   {node.name}
@@ -213,18 +216,18 @@ export default function Visualizations() {
           <Row gutter={[16, 16]}>
             <Col xs={24} sm={12} lg={6}>
               <div className="visualization-stat">
-                <Statistic title="Nodes" value={graphData.nodeCount || graphData.nodes?.length || 0} prefix={<DatabaseOutlined />} valueStyle={{ color: '#ffffff' }} />
+                <Statistic title="节点总数" value={graphData.nodeCount || graphData.nodes?.length || 0} prefix={<DatabaseOutlined />} valueStyle={{ color: '#ffffff' }} />
               </div>
             </Col>
             <Col xs={24} sm={12} lg={6}>
               <div className="visualization-stat">
-                <Statistic title="Edges" value={graphData.edgeCount || graphData.edges?.length || 0} prefix={<DatabaseOutlined />} valueStyle={{ color: '#ffffff' }} />
+                <Statistic title="边总数" value={graphData.edgeCount || graphData.edges?.length || 0} prefix={<DatabaseOutlined />} valueStyle={{ color: '#ffffff' }} />
               </div>
             </Col>
             <Col xs={24} sm={12} lg={6}>
               <div className="visualization-stat">
                 <Statistic
-                  title="Disease category"
+                  title="疾病类节点"
                   value={graphData.nodes?.filter((n: any) => n.category === DISEASE_CATEGORY).length || 0}
                   valueStyle={{ color: '#ffffff' }}
                 />
@@ -233,7 +236,7 @@ export default function Visualizations() {
             <Col xs={24} sm={12} lg={6}>
               <div className="visualization-stat">
                 <Statistic
-                  title="Syndrome category"
+                  title="证候类节点"
                   value={graphData.nodes?.filter((n: any) => n.category === SYNDROME_CATEGORY).length || 0}
                   valueStyle={{ color: '#ffffff' }}
                 />
@@ -253,7 +256,7 @@ export default function Visualizations() {
               key: '3d',
               label: (
                 <span>
-                  <ExperimentOutlined /> 3D graph view
+                  <ExperimentOutlined /> 3D 图谱视图
                 </span>
               ),
               children: (
@@ -267,9 +270,9 @@ export default function Visualizations() {
                   ) : (
                     <div className="flex items-center justify-center h-full">
                       <div className="text-center">
-                        <p className="text-gray-500 mb-4">Please load the graph first</p>
+                        <p className="text-gray-500 mb-4">请先加载图谱数据</p>
                         <Button type="primary" onClick={loadGraphData} disabled={!rootCode}>
-                          Load graph
+                          加载图谱
                         </Button>
                       </div>
                     </div>
@@ -281,7 +284,7 @@ export default function Visualizations() {
               key: 'timeline',
               label: (
                 <span>
-                  <ClockCircleOutlined /> Timeline view
+                  <ClockCircleOutlined /> 时间线图谱
                 </span>
               ),
               children: (
@@ -295,9 +298,9 @@ export default function Visualizations() {
                   ) : (
                     <div className="flex items-center justify-center h-full">
                       <div className="text-center">
-                        <p className="text-gray-500 mb-4">Please load the graph first</p>
+                        <p className="text-gray-500 mb-4">请先加载图谱数据</p>
                         <Button type="primary" onClick={loadGraphData} disabled={!rootCode}>
-                          Load graph
+                          加载图谱
                         </Button>
                       </div>
                     </div>
@@ -309,7 +312,7 @@ export default function Visualizations() {
               key: 'evolution',
               label: (
                 <span>
-                  <RocketOutlined /> Dynamic evolution
+                  <RocketOutlined /> 动态演化展示
                 </span>
               ),
               children: (
@@ -323,9 +326,9 @@ export default function Visualizations() {
                   ) : (
                     <div className="flex items-center justify-center h-full">
                       <div className="text-center">
-                        <p className="text-gray-500 mb-4">Please load the graph first</p>
+                        <p className="text-gray-500 mb-4">请先加载图谱数据</p>
                         <Button type="primary" onClick={loadGraphData} disabled={!rootCode}>
-                          Load graph
+                          加载图谱
                         </Button>
                       </div>
                     </div>
