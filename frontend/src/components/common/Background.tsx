@@ -76,7 +76,6 @@ export const Background: React.FC = () => {
             pointerEvents: 'none',
             opacity: 1,
             transition: 'opacity 0.8s ease-in-out',
-            filter: 'brightness(1.15) contrast(1.1) saturate(1.1)',
             willChange: 'opacity'
           }}
         />

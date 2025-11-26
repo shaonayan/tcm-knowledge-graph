@@ -121,8 +121,8 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
             zIndex: 1001,
             marginTop: '36px',
             background: 'rgba(255, 255, 255, 0.15)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
+            backdropFilter: 'blur(3px)',
+            WebkitBackdropFilter: 'blur(3px)',
             border: '1px solid rgba(255, 255, 255, 0.2)',
             borderLeft: 'none'
           }}
@@ -165,16 +165,6 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
         }}
       >
         <div className="p-4 h-full flex flex-col">
-          {/* 标题区域 */}
-          {!collapsed && (
-            <div className="text-center mb-6 flex-shrink-0">
-              <h2 className="text-sm font-bold text-white m-0 tracking-wide" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>
-                少纳言中医知识图谱
-              </h2>
-              <p className="text-xs mt-1 m-0" style={{ color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>Shonaoyan TCM</p>
-            </div>
-          )}
-
           {/* 折叠按钮 */}
           {!collapsed && (
             <div className="mb-4 flex justify-end">
@@ -183,8 +173,8 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
                 style={{
                   background: 'rgba(255, 255, 255, 0.1)',
                   border: '1px solid rgba(255, 255, 255, 0.2)',
-                  backdropFilter: 'blur(10px)',
-                  WebkitBackdropFilter: 'blur(10px)'
+                  backdropFilter: 'blur(3px)',
+                  WebkitBackdropFilter: 'blur(3px)'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)'

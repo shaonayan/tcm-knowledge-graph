@@ -263,8 +263,8 @@ body {
   border: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
   position: sticky !important;
   top: 0 !important;
   z-index: 1000 !important;
@@ -395,8 +395,8 @@ body {
   padding: 8px 16px;
   border-radius: 12px;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px) saturate(180%);
-  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: 
     0 4px 16px rgba(0, 0, 0, 0.2),
@@ -508,8 +508,8 @@ body {
     0 8px 32px rgba(0, 0, 0, 0.06),
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
     0 -1px 0 rgba(0, 0, 0, 0.02) inset !important;
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(4px);
+  -webkit-backdrop-filter: saturate(180%) blur(4px);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   position: relative;
   overflow: hidden;
@@ -542,8 +542,8 @@ body {
 /* 轻量级玻璃效果（用于小元素） */
 .glass-light {
   background: rgba(255, 255, 255, 0.5) !important;
-  backdrop-filter: saturate(180%) blur(10px);
-  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(3px);
+  -webkit-backdrop-filter: saturate(180%) blur(3px);
   border: 1px solid rgba(255, 255, 255, 0.6) !important;
   box-shadow: 
     0 4px 16px rgba(0, 0, 0, 0.04),
@@ -553,8 +553,8 @@ body {
 /* 强化玻璃效果（用于重要元素） */
 .glass-strong {
   background: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: saturate(200%) blur(30px);
-  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  backdrop-filter: saturate(200%) blur(5px);
+  -webkit-backdrop-filter: saturate(200%) blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.9) !important;
   box-shadow: 
     0 16px 48px rgba(0, 0, 0, 0.1),
@@ -653,8 +653,8 @@ body {
     0 8px 32px rgba(0, 0, 0, 0.5),
     0 1px 0 rgba(255, 255, 255, 0.15) inset !important;
   background: rgba(0, 0, 0, 0.25) !important;
-  backdrop-filter: blur(24px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+  backdrop-filter: blur(4px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(4px) saturate(180%) !important;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   overflow: hidden;
   position: relative;
@@ -730,8 +730,8 @@ body {
   border-radius: 12px !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   background: rgba(0, 0, 0, 0.3) !important;
-  backdrop-filter: blur(12px) saturate(180%) !important;
-  -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+  backdrop-filter: blur(3px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(3px) saturate(180%) !important;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   box-shadow: 
     0 4px 16px rgba(0, 0, 0, 0.3),
@@ -771,8 +771,8 @@ body {
   font-weight: 500;
   letter-spacing: -0.01em;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
-  backdrop-filter: blur(10px) saturate(180%);
-  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
 }
 
 .ant-btn-primary {
@@ -803,8 +803,8 @@ body {
 .ant-btn-default {
   background: rgba(0, 0, 0, 0.3) !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
   box-shadow: 
     0 4px 16px rgba(0, 0, 0, 0.3),
     0 1px 0 rgba(255, 255, 255, 0.1) inset !important;
@@ -854,8 +854,8 @@ body {
   width: 48px;
   height: 48px;
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 14px;
   display: flex;
@@ -1067,8 +1067,8 @@ body {
   box-shadow: 
     0 20px 60px rgba(0, 0, 0, 0.6),
     0 1px 0 rgba(255, 255, 255, 0.1) inset;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(4px) saturate(180%);
+  -webkit-backdrop-filter: blur(4px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   overflow: hidden;
@@ -1356,8 +1356,8 @@ body {
   border-radius: 12px;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.3) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .ant-table-thead > tr > th {
@@ -1550,14 +1550,14 @@ html {
 .ant-tabs-tab:hover {
   color: #ffffff !important;
   background: rgba(0, 0, 0, 0.3) !important;
-  backdrop-filter: blur(8px) saturate(180%);
-  -webkit-backdrop-filter: blur(8px) saturate(180%);
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
 }
 
 .ant-tabs-tab-active {
   background: rgba(0, 0, 0, 0.4) !important;
-  backdrop-filter: blur(10px) saturate(180%);
-  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  backdrop-filter: blur(3px) saturate(180%);
+  -webkit-backdrop-filter: blur(3px) saturate(180%);
 }
 
 .ant-tabs-tab-active .ant-tabs-tab-btn {
