@@ -187,6 +187,40 @@ app.get(`${API_PREFIX}/nodes/roots`, async (req, res) => {
   }
 })
 
+// 节点详情（兼容旧API路径）
+app.get(`${API_PREFIX}/nodes/:code`, async (req, res) => {
+  try {
+    if (!neo4jService.isConnected()) {
+      return res.status(503).json({
+        success: false,
+        error: '数据库未连接'
+      })
+    }
+
+    const { code } = req.params
+    const node = await neo4jService.getNodeDetails(code)
+
+    if (!node) {
+      return res.status(404).json({
+        success: false,
+        error: '节点未找到'
+      })
+    }
+
+    return res.json({
+      success: true,
+      data: node
+    })
+  } catch (error) {
+    logger.error('获取节点详情失败:', error)
+    return res.status(500).json({
+      success: false,
+      error: '获取节点详情失败',
+      message: error instanceof Error ? error.message : 'Unknown error'
+    })
+  }
+})
+
 app.use(`${API_PREFIX}/graph`, graphRoutes)
 app.use(`${API_PREFIX}/search`, searchRoutes)
 app.use(`${API_PREFIX}/analytics`, analyticsRoutes)
