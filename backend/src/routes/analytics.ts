@@ -68,11 +68,32 @@ router.get('/overview', async (_req: Request, res: Response) => {
         count: record.get('count').toNumber()
       }))
 
+      // 层级分类分布统计
+      const levelCategoryResult = await session.run(`
+        MATCH (n)
+        WHERE n.classificationLevel IS NOT NULL AND n.category IS NOT NULL
+        RETURN n.classificationLevel as level, n.category as category, count(n) as count
+        ORDER BY level ASC, count DESC
+      `)
+      
+      const levelCategoryStats: Record<number, Record<string, number>> = {}
+      levelCategoryResult.records.forEach(record => {
+        const level = record.get('level').toNumber()
+        const category = record.get('category')
+        const count = record.get('count').toNumber()
+        
+        if (!levelCategoryStats[level]) {
+          levelCategoryStats[level] = {}
+        }
+        levelCategoryStats[level][category] = count
+      })
+
       return res.json({
         success: true,
         data: {
           categoryStats,
-          levelStats
+          levelStats,
+          levelCategoryStats
         }
       })
     } finally {
