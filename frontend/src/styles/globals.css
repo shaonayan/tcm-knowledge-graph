@@ -300,46 +300,62 @@ body {
 }
 
 .app-header__logo {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.9), transparent 60%),
+    linear-gradient(135deg, #ff91c1 0%, #f473b9 35%, #f15d8f 70%, #f4795c 100%);
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 
-    0 4px 16px rgba(99, 102, 241, 0.25),
-    0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  box-shadow:
+    0 20px 35px rgba(244, 115, 185, 0.35),
+    0 2px 0 rgba(255, 255, 255, 0.6) inset,
+    0 -3px 12px rgba(255, 255, 255, 0.15) inset;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-.app-header__logo-text {
-  font-size: 24px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1;
+.app-header__logo::before,
+.app-header__logo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 .app-header__logo::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent);
-  pointer-events: none;
+  background: radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.95), transparent 50%);
+  opacity: 0.8;
+}
+
+.app-header__logo::after {
+  background: radial-gradient(circle at 50% 110%, rgba(255, 255, 255, 0.4), transparent 40%);
+  mix-blend-mode: screen;
+}
+
+.app-header__logo-text {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+  text-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.35),
+    0 0 18px rgba(255, 255, 255, 0.6);
 }
 
 .app-header__logo:hover {
-  transform: scale(1.05);
-  box-shadow: 
-    0 6px 24px rgba(99, 102, 241, 0.35),
-    0 1px 0 rgba(255, 255, 255, 0.4) inset;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow:
+    0 25px 45px rgba(244, 115, 185, 0.4),
+    0 2px 0 rgba(255, 255, 255, 0.6) inset,
+    0 -3px 12px rgba(255, 255, 255, 0.2) inset;
 }
 
 .app-header__brand-text {
@@ -2114,4 +2130,55 @@ html {
 
 .transition-slow {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 楂樼骇鍙鍖?- 鎸囨爣鍗℃牱寮?*/
+.stats-card {
+  background: rgba(0, 0, 0, 0.25) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35) !important;
+  border-radius: 28px !important;
+}
+
+.stats-card .ant-card-body {
+  padding: clamp(16px, 2vw, 28px) !important;
+}
+
+.visualization-stat {
+  border-radius: 24px;
+  padding: 20px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04));
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.35),
+    0 1px 0 rgba(255, 255, 255, 0.3) inset;
+  backdrop-filter: blur(8px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.visualization-stat:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 25px 50px rgba(0, 0, 0, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.4) inset;
+}
+
+.visualization-stat .ant-statistic-title {
+  color: rgba(255, 255, 255, 0.85) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.visualization-stat .ant-statistic-content-value {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  text-shadow: 0 10px 24px rgba(0, 0, 0, 0.6);
+}
+
+.visualization-stat .ant-statistic-content-prefix {
+  color: rgba(255, 255, 255, 0.85);
+  margin-right: 8px;
+  font-size: 18px;
 }

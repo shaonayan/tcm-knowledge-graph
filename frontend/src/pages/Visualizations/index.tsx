@@ -123,7 +123,6 @@ export default function Visualizations() {
   return (
     <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
       <PageHeader
-        iconText="视"
         title="高级可视化"
         subtitle="少纳言中医知识图谱"
         description="探索知识图谱的多种可视化方式：3D视图、时间线图谱、动态演化展示"
@@ -226,37 +225,45 @@ export default function Visualizations() {
 
       {/* 数据统计卡片 */}
       {graphData && (
-        <Card className="mb-4">
-          <Row gutter={16}>
-            <Col span={6}>
-              <Statistic
-                title="节点总数"
-                value={graphData.nodeCount || graphData.nodes?.length || 0}
-                prefix={<DatabaseOutlined />}
-                valueStyle={{ color: '#1890ff' }}
-              />
+        <Card className="mb-4 stats-card">
+          <Row gutter={[16, 16]}>
+            <Col xs={24} sm={12} lg={6}>
+              <div className="visualization-stat">
+                <Statistic
+                  title="鑺傜偣鎬绘暟"
+                  value={graphData.nodeCount || graphData.nodes?.length || 0}
+                  prefix={<DatabaseOutlined />}
+                  valueStyle={{ color: '#ffffff' }}
+                />
+              </div>
             </Col>
-            <Col span={6}>
-              <Statistic
-                title="边总数"
-                value={graphData.edgeCount || graphData.edges?.length || 0}
-                prefix={<DatabaseOutlined />}
-                valueStyle={{ color: '#52c41a' }}
-              />
+            <Col xs={24} sm={12} lg={6}>
+              <div className="visualization-stat">
+                <Statistic
+                  title="杈规€绘暟"
+                  value={graphData.edgeCount || graphData.edges?.length || 0}
+                  prefix={<DatabaseOutlined />}
+                  valueStyle={{ color: '#ffffff' }}
+                />
+              </div>
             </Col>
-            <Col span={6}>
-              <Statistic
-                title="疾病类节点"
-                value={graphData.nodes?.filter((n: any) => n.category === '疾病类').length || 0}
-                valueStyle={{ color: '#2196F3' }}
-              />
+            <Col xs={24} sm={12} lg={6}>
+              <div className="visualization-stat">
+                <Statistic
+                  title="鐤剧梾绫昏妭鐐?
+                  value={graphData.nodes?.filter((n: any) => n.category === '鐤剧梾绫?).length || 0}
+                  valueStyle={{ color: '#ffffff' }}
+                />
+              </div>
             </Col>
-            <Col span={6}>
-              <Statistic
-                title="证候类节点"
-                value={graphData.nodes?.filter((n: any) => n.category === '证候类').length || 0}
-                valueStyle={{ color: '#4CAF50' }}
-              />
+            <Col xs={24} sm={12} lg={6}>
+              <div className="visualization-stat">
+                <Statistic
+                  title="璇佸€欑被鑺傜偣"
+                  value={graphData.nodes?.filter((n: any) => n.category === '璇佸€欑被').length || 0}
+                  valueStyle={{ color: '#ffffff' }}
+                />
+              </div>
             </Col>
           </Row>
         </Card>
