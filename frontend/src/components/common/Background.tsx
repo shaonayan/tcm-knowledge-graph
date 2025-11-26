@@ -37,13 +37,19 @@ export const Background: React.FC = () => {
           setBgLoaded(true)
           setBgError(false)
           console.log(`✅ 背景图片加载成功: ${bgUrl}`)
-          // 强制刷新背景显示
-          setTimeout(() => {
-            const bgElement = document.querySelector('[data-background-image]') as HTMLElement
-            if (bgElement) {
-              bgElement.style.backgroundImage = `url(${bgUrl})`
-            }
-          }, 100)
+          // 立即设置背景图片
+          const bgElement = document.getElementById('main-background') as HTMLElement
+          if (bgElement) {
+            bgElement.style.backgroundImage = `url(${bgUrl})`
+          } else {
+            // 如果元素还不存在，延迟设置
+            setTimeout(() => {
+              const bgEl = document.getElementById('main-background') as HTMLElement
+              if (bgEl) {
+                bgEl.style.backgroundImage = `url(${bgUrl})`
+              }
+            }, 100)
+          }
         }
       }
       
@@ -84,10 +90,10 @@ export const Background: React.FC = () => {
       {bgLoaded && (
         <div
           data-background-image
+          id="main-background"
           style={{
             position: 'fixed',
             inset: 0,
-            backgroundImage: 'url(/background.png), url(/background.jpg), url(/background.gif)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
