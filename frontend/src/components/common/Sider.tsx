@@ -110,13 +110,6 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
         <div
           className="fixed rounded-r-2xl shadow-lg cursor-pointer transition-all duration-300 hover:shadow-2xl"
           style={{
-            background: 'rgba(255, 255, 255, 0.15)',
-            backdropFilter: 'blur(10px)',
-            WebkitBackdropFilter: 'blur(10px)',
-            border: '1px solid rgba(255, 255, 255, 0.2)',
-            borderLeft: 'none'
-          }}
-          style={{
             left: 0,
             top: '50%',
             transform: 'translateY(-50%)',
@@ -126,7 +119,12 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
             alignItems: 'center',
             justifyContent: 'center',
             zIndex: 1001,
-            marginTop: '36px'
+            marginTop: '36px',
+            background: 'rgba(255, 255, 255, 0.15)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            borderLeft: 'none'
           }}
           onMouseEnter={handleMouseEnter}
           onClick={handleToggle}
