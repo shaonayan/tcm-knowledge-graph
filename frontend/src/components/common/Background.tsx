@@ -63,8 +63,9 @@ export const Background: React.FC = () => {
             backgroundRepeat: 'no-repeat',
             zIndex: -3,
             pointerEvents: 'none',
-            opacity: 1,
-            transition: 'opacity 0.8s ease-in-out'
+            opacity: 0.9,
+            transition: 'opacity 0.8s ease-in-out',
+            filter: 'brightness(1.1) contrast(1.05)'
           }}
         />
       )}
