@@ -1,6 +1,6 @@
 // 根据环境变量自动选择API地址
 const API_BASE_URL = import.meta.env.VITE_API_URL || 
-  (import.meta.env.PROD ? '/api' : 'http://localhost:3001/api')
+  (import.meta.env.PROD ? 'https://tcm-knowledge-graph.onrender.com/api' : 'http://localhost:3001/api')
 
 // 调试信息：在控制台输出API地址（仅在开发环境）
 if (import.meta.env.DEV) {
