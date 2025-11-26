@@ -14,11 +14,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #000;
-  /* 备用渐变背景 */
-  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  background-size: 200% 200%;
-  background-attachment: fixed;
+  background: transparent !important;
   color: var(--text-primary);
   letter-spacing: -0.01em;
   overflow-x: hidden;
@@ -92,12 +88,12 @@ body {
   min-height: 100vh;
 }
 
-/* 背景遮罩层，增强可读性（降低透明度，让背景更明显） */
+/* 背景遮罩层，增强可读性（几乎透明，让背景清晰可见） */
 .app-shell::before {
   content: '';
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.05);
   z-index: -1;
   pointer-events: none;
 }
@@ -106,11 +102,13 @@ body {
 .app-content-surface {
   position: relative;
   z-index: 1;
+  background: transparent !important;
 }
 
 .app-content-inner {
   position: relative;
   z-index: 2;
+  background: transparent !important;
 }
 
 /* 移除旧的装饰性元素，使用背景图片 */
@@ -246,11 +244,22 @@ body {
 }
 
 /* Ant Design样式覆盖 - 全新透明设计 */
+/* 确保所有Layout组件都是透明的 */
+.ant-layout,
+.ant-layout-content,
+.ant-layout-sider,
+.ant-layout-sider-children,
+.app-shell,
+.app-content-surface,
+.app-content-inner {
+  background: transparent !important;
+}
+
 .ant-layout-header {
   padding: 0 clamp(20px, 3vw, 40px) !important;
   height: 80px !important;
   line-height: 80px !important;
-  background: rgba(0, 0, 0, 0.2) !important;
+  background: rgba(0, 0, 0, 0.15) !important;
   border: none !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
@@ -441,6 +450,7 @@ body {
 
 .ant-layout-sider {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: transparent !important;
 }
 
 .ant-layout-sider-collapsed {

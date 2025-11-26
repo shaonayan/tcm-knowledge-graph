@@ -31,11 +31,11 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <StartupScreen visible={showStartup} />
       <Background />
-      <Layout className="min-h-screen app-shell">
+      <Layout className="min-h-screen app-shell" style={{ background: 'transparent' }}>
         {/* 顶部导航栏 */}
         <AppHeader />
         
-        <Layout style={{ position: 'relative', minHeight: 'calc(100vh - 80px)' }}>
+        <Layout style={{ position: 'relative', minHeight: 'calc(100vh - 80px)', background: 'transparent' }}>
           {/* 侧边导航栏 */}
           <AppSider collapsed={collapsed} onCollapse={setCollapsed} />
           

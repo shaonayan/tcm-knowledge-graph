@@ -23,6 +23,16 @@ export const Background: React.FC = () => {
       setBgLoaded(true)
       setBgError(false)
       console.log('✅ 背景GIF加载成功')
+      // 强制刷新背景显示
+      setTimeout(() => {
+        const bgElement = document.querySelector('[data-background-gif]') as HTMLElement
+        if (bgElement) {
+          bgElement.style.display = 'none'
+          setTimeout(() => {
+            bgElement.style.display = 'block'
+          }, 10)
+        }
+      }, 100)
     }
     
     img.onerror = () => {
@@ -45,7 +55,7 @@ export const Background: React.FC = () => {
           background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
           backgroundSize: '200% 200%',
           animation: 'gradientShift 15s ease infinite',
-          zIndex: -4,
+          zIndex: -1000,
           pointerEvents: 'none'
         }}
       />
@@ -53,6 +63,7 @@ export const Background: React.FC = () => {
       {/* 主要背景层 - GIF（如果加载成功） */}
       {bgLoaded && (
         <div
+          data-background-gif
           style={{
             position: 'fixed',
             inset: 0,
@@ -61,11 +72,12 @@ export const Background: React.FC = () => {
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
             backgroundRepeat: 'no-repeat',
-            zIndex: -3,
+            zIndex: -999,
             pointerEvents: 'none',
-            opacity: 0.9,
+            opacity: 1,
             transition: 'opacity 0.8s ease-in-out',
-            filter: 'brightness(1.1) contrast(1.05)'
+            filter: 'brightness(1.15) contrast(1.1) saturate(1.1)',
+            willChange: 'opacity'
           }}
         />
       )}
