@@ -73,24 +73,90 @@ export interface NodeDetail {
   childrenCount: number
 }
 
+// 通用请求函数，带重试机制
+const fetchWithRetry = async (
+  url: string,
+  options: RequestInit = {},
+  retries = 2,
+  delay = 2000
+): Promise<Response> => {
+  try {
+    const response = await fetch(url, {
+      ...options,
+      headers: {
+        'Content-Type': 'application/json',
+        ...options.headers,
+      },
+    })
+    
+    if (!response.ok && response.status >= 500 && retries > 0) {
+      // 服务器错误，重试
+      await new Promise(resolve => setTimeout(resolve, delay))
+      return fetchWithRetry(url, options, retries - 1, delay * 1.5)
+    }
+    
+    return response
+  } catch (error) {
+    if (retries > 0) {
+      // 网络错误，重试
+      console.warn(`请求失败，${delay}ms后重试... (剩余${retries}次)`)
+      await new Promise(resolve => setTimeout(resolve, delay))
+      return fetchWithRetry(url, options, retries - 1, delay * 1.5)
+    }
+    throw error
+  }
+}
+
 // 获取统计数据
 export const getStats = async (): Promise<StatsData> => {
-  const response = await fetch(`${API_BASE_URL}/stats`)
-  if (!response.ok) {
-    throw new Error('获取统计数据失败')
+  try {
+    const response = await fetchWithRetry(`${API_BASE_URL}/stats`, {
+      method: 'GET',
+      signal: AbortSignal.timeout(30000), // 30秒超时
+    })
+    
+    if (!response.ok) {
+      throw new Error(`获取统计数据失败: ${response.status} ${response.statusText}`)
+    }
+    
+    const result = await response.json()
+    return result.data
+  } catch (error) {
+    if (error instanceof Error) {
+      // 提供更友好的错误信息
+      if (error.message.includes('Failed to fetch') || error.message.includes('ERR_CONNECTION_CLOSED')) {
+        throw new Error('无法连接到服务器。Render服务可能正在休眠，请稍候再试。首次访问需要30-60秒唤醒服务。')
+      }
+      if (error.message.includes('timeout')) {
+        throw new Error('请求超时。服务器响应时间过长，请稍候再试。')
+      }
+    }
+    throw error
   }
-  const result = await response.json()
-  return result.data
 }
 
 // 获取根节点
 export const getRootNodes = async (): Promise<RootNode[]> => {
-  const response = await fetch(`${API_BASE_URL}/nodes/roots`)
-  if (!response.ok) {
-    throw new Error('获取根节点失败')
+  try {
+    const response = await fetchWithRetry(`${API_BASE_URL}/nodes/roots`, {
+      method: 'GET',
+      signal: AbortSignal.timeout(30000),
+    })
+    
+    if (!response.ok) {
+      throw new Error(`获取根节点失败: ${response.status} ${response.statusText}`)
+    }
+    
+    const result = await response.json()
+    return result.data
+  } catch (error) {
+    if (error instanceof Error) {
+      if (error.message.includes('Failed to fetch') || error.message.includes('ERR_CONNECTION_CLOSED')) {
+        throw new Error('无法连接到服务器。Render服务可能正在休眠，请稍候再试。')
+      }
+    }
+    throw error
   }
-  const result = await response.json()
-  return result.data
 }
 
 // 搜索节点
@@ -99,38 +165,63 @@ export const searchNodes = async (
   category?: string,
   limit: number = 10
 ): Promise<{ data: SearchResult[]; total: number }> => {
-  const params = new URLSearchParams({
-    q: query,
-    limit: limit.toString()
-  })
-  if (category) {
-    params.append('category', category)
+  try {
+    const params = new URLSearchParams({
+      q: query,
+      limit: limit.toString()
+    })
+    if (category) {
+      params.append('category', category)
+    }
+    
+    const response = await fetchWithRetry(`${API_BASE_URL}/search?${params}`, {
+      method: 'GET',
+      signal: AbortSignal.timeout(30000),
+    })
+    
+    if (!response.ok) {
+      throw new Error(`搜索失败: ${response.status} ${response.statusText}`)
+    }
+    
+    const result = await response.json()
+    return result
+  } catch (error) {
+    if (error instanceof Error) {
+      if (error.message.includes('Failed to fetch') || error.message.includes('ERR_CONNECTION_CLOSED')) {
+        throw new Error('无法连接到服务器。请稍候再试。')
+      }
+    }
+    throw error
   }
-  
-  const response = await fetch(`${API_BASE_URL}/search?${params}`)
-  if (!response.ok) {
-    throw new Error('搜索失败')
-  }
-  const result = await response.json()
-  return result
 }
 
 // 获取节点详情
 export const getNodeDetails = async (code: string): Promise<NodeDetail> => {
-  // URL编码处理，确保特殊字符正确传递
-  const encodedCode = encodeURIComponent(code)
-  const response = await fetch(`${API_BASE_URL}/nodes/${encodedCode}`)
-  
-  if (!response.ok) {
-    const errorData = await response.json().catch(() => ({}))
-    throw new Error(errorData.error || `获取节点详情失败: ${response.status} ${response.statusText}`)
+  try {
+    const encodedCode = encodeURIComponent(code)
+    const response = await fetchWithRetry(`${API_BASE_URL}/nodes/${encodedCode}`, {
+      method: 'GET',
+      signal: AbortSignal.timeout(30000),
+    })
+    
+    if (!response.ok) {
+      const errorData = await response.json().catch(() => ({}))
+      throw new Error(errorData.error || `获取节点详情失败: ${response.status} ${response.statusText}`)
+    }
+    
+    const result = await response.json()
+    if (!result.success) {
+      throw new Error(result.error || '获取节点详情失败')
+    }
+    return result.data
+  } catch (error) {
+    if (error instanceof Error) {
+      if (error.message.includes('Failed to fetch') || error.message.includes('ERR_CONNECTION_CLOSED')) {
+        throw new Error('无法连接到服务器。请稍候再试。')
+      }
+    }
+    throw error
   }
-  
-  const result = await response.json()
-  if (!result.success) {
-    throw new Error(result.error || '获取节点详情失败')
-  }
-  return result.data
 }
 
 export interface GraphNode {
@@ -162,23 +253,37 @@ export const getGraphData = async (
   depth: number = 2,
   limit: number = 100
 ): Promise<GraphData> => {
-  const params = new URLSearchParams({
-    depth: depth.toString(),
-    limit: limit.toString()
-  })
-  if (rootCode) {
-    params.append('rootCode', rootCode)
+  try {
+    const params = new URLSearchParams({
+      depth: depth.toString(),
+      limit: limit.toString()
+    })
+    if (rootCode) {
+      params.append('rootCode', rootCode)
+    }
+    
+    const response = await fetchWithRetry(`${API_BASE_URL}/graph?${params}`, {
+      method: 'GET',
+      signal: AbortSignal.timeout(30000),
+    })
+    
+    if (!response.ok) {
+      throw new Error(`获取图谱数据失败: ${response.status} ${response.statusText}`)
+    }
+    
+    const result = await response.json()
+    if (!result.success) {
+      throw new Error(result.error || '获取图谱数据失败')
+    }
+    return result.data
+  } catch (error) {
+    if (error instanceof Error) {
+      if (error.message.includes('Failed to fetch') || error.message.includes('ERR_CONNECTION_CLOSED')) {
+        throw new Error('无法连接到服务器。Render服务可能正在休眠，请稍候再试。')
+      }
+    }
+    throw error
   }
-  
-  const response = await fetch(`${API_BASE_URL}/graph?${params}`)
-  if (!response.ok) {
-    throw new Error('获取图谱数据失败')
-  }
-  const result = await response.json()
-  if (!result.success) {
-    throw new Error(result.error || '获取图谱数据失败')
-  }
-  return result.data
 }
 
 // 展开节点（获取子图）
@@ -187,20 +292,34 @@ export const expandNode = async (
   depth: number = 1,
   limit: number = 50
 ): Promise<GraphData> => {
-  const params = new URLSearchParams({
-    depth: depth.toString(),
-    limit: limit.toString()
-  })
-  
-  const response = await fetch(`${API_BASE_URL}/graph/expand/${code}?${params}`)
-  if (!response.ok) {
-    throw new Error('展开节点失败')
+  try {
+    const params = new URLSearchParams({
+      depth: depth.toString(),
+      limit: limit.toString()
+    })
+    
+    const response = await fetchWithRetry(`${API_BASE_URL}/graph/expand/${code}?${params}`, {
+      method: 'GET',
+      signal: AbortSignal.timeout(30000),
+    })
+    
+    if (!response.ok) {
+      throw new Error(`展开节点失败: ${response.status} ${response.statusText}`)
+    }
+    
+    const result = await response.json()
+    if (!result.success) {
+      throw new Error(result.error || '展开节点失败')
+    }
+    return result.data
+  } catch (error) {
+    if (error instanceof Error) {
+      if (error.message.includes('Failed to fetch') || error.message.includes('ERR_CONNECTION_CLOSED')) {
+        throw new Error('无法连接到服务器。请稍候再试。')
+      }
+    }
+    throw error
   }
-  const result = await response.json()
-  if (!result.success) {
-    throw new Error(result.error || '展开节点失败')
-  }
-  return result.data
 }
 
 // 分析数据接口
@@ -228,28 +347,56 @@ export interface TopLevelNode {
 
 // 获取详细分析数据
 export const getAnalyticsOverview = async (): Promise<AnalyticsOverview> => {
-  const response = await fetch(`${API_BASE_URL}/analytics/overview`)
-  if (!response.ok) {
-    throw new Error('获取分析数据失败')
+  try {
+    const response = await fetchWithRetry(`${API_BASE_URL}/analytics/overview`, {
+      method: 'GET',
+      signal: AbortSignal.timeout(30000),
+    })
+    
+    if (!response.ok) {
+      throw new Error(`获取分析数据失败: ${response.status} ${response.statusText}`)
+    }
+    
+    const result = await response.json()
+    if (!result.success) {
+      throw new Error(result.error || '获取分析数据失败')
+    }
+    return result.data
+  } catch (error) {
+    if (error instanceof Error) {
+      if (error.message.includes('Failed to fetch') || error.message.includes('ERR_CONNECTION_CLOSED')) {
+        throw new Error('无法连接到服务器。请稍候再试。')
+      }
+    }
+    throw error
   }
-  const result = await response.json()
-  if (!result.success) {
-    throw new Error(result.error || '获取分析数据失败')
-  }
-  return result.data
 }
 
 // 获取顶层分类统计
 export const getTopLevelStats = async (): Promise<TopLevelNode[]> => {
-  const response = await fetch(`${API_BASE_URL}/analytics/top-level`)
-  if (!response.ok) {
-    throw new Error('获取顶层分类统计失败')
+  try {
+    const response = await fetchWithRetry(`${API_BASE_URL}/analytics/top-level`, {
+      method: 'GET',
+      signal: AbortSignal.timeout(30000),
+    })
+    
+    if (!response.ok) {
+      throw new Error(`获取顶层分类统计失败: ${response.status} ${response.statusText}`)
+    }
+    
+    const result = await response.json()
+    if (!result.success) {
+      throw new Error(result.error || '获取顶层分类统计失败')
+    }
+    return result.data
+  } catch (error) {
+    if (error instanceof Error) {
+      if (error.message.includes('Failed to fetch') || error.message.includes('ERR_CONNECTION_CLOSED')) {
+        throw new Error('无法连接到服务器。请稍候再试。')
+      }
+    }
+    throw error
   }
-  const result = await response.json()
-  if (!result.success) {
-    throw new Error(result.error || '获取顶层分类统计失败')
-  }
-  return result.data
 }
 
 // 图谱分析接口
