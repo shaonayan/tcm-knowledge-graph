@@ -16,13 +16,13 @@ router.get('/stats', async (req: Request, res: Response) => {
 
     const stats = await neo4jService.getStats()
 
-    res.json({
+    return res.json({
       success: true,
       data: stats
     })
   } catch (error) {
     logger.error('获取统计数据失败:', error)
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       error: '获取统计数据失败',
       message: error instanceof Error ? error.message : 'Unknown error'
@@ -68,7 +68,7 @@ router.get('/overview', async (req: Request, res: Response) => {
         count: record.get('count').toNumber()
       }))
 
-      res.json({
+      return res.json({
         success: true,
         data: {
           categoryStats,
@@ -80,7 +80,7 @@ router.get('/overview', async (req: Request, res: Response) => {
     }
   } catch (error) {
     logger.error('获取分析数据失败:', error)
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       error: '获取分析数据失败',
       message: error instanceof Error ? error.message : 'Unknown error'

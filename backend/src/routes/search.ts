@@ -29,14 +29,14 @@ router.get('/', async (req: Request, res: Response) => {
       parseInt(limit as string)
     )
 
-    res.json({
+    return res.json({
       success: true,
       data: results,
       total: results.length
     })
   } catch (error) {
     logger.error('搜索失败:', error)
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       error: '搜索失败',
       message: error instanceof Error ? error.message : 'Unknown error'
@@ -64,13 +64,13 @@ router.get('/nodes/:code', async (req: Request, res: Response) => {
       })
     }
 
-    res.json({
+    return res.json({
       success: true,
       data: node
     })
   } catch (error) {
     logger.error('获取节点详情失败:', error)
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       error: '获取节点详情失败',
       message: error instanceof Error ? error.message : 'Unknown error'
@@ -91,13 +91,13 @@ router.get('/roots', async (req: Request, res: Response) => {
     const { limit = '20' } = req.query
     const roots = await neo4jService.getRootNodes(parseInt(limit as string))
 
-    res.json({
+    return res.json({
       success: true,
       data: roots
     })
   } catch (error) {
     logger.error('获取根节点失败:', error)
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       error: '获取根节点失败',
       message: error instanceof Error ? error.message : 'Unknown error'

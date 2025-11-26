@@ -141,7 +141,7 @@ app.get('/health', (_req, res) => {
 
 // API路由
 // 统计数据（兼容旧API路径）
-app.get(`${API_PREFIX}/stats`, async (req, res) => {
+app.get(`${API_PREFIX}/stats`, async (_req, res) => {
   try {
     if (!neo4jService.isConnected()) {
       return res.status(503).json({
@@ -150,13 +150,13 @@ app.get(`${API_PREFIX}/stats`, async (req, res) => {
       })
     }
     const stats = await neo4jService.getStats()
-    res.json({
+    return res.json({
       success: true,
       data: stats
     })
   } catch (error) {
     logger.error('获取统计数据失败:', error)
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       error: '获取统计数据失败'
     })
@@ -174,13 +174,13 @@ app.get(`${API_PREFIX}/nodes/roots`, async (req, res) => {
     }
     const { limit = '20' } = req.query
     const roots = await neo4jService.getRootNodes(parseInt(limit as string))
-    res.json({
+    return res.json({
       success: true,
       data: roots
     })
   } catch (error) {
     logger.error('获取根节点失败:', error)
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       error: '获取根节点失败'
     })

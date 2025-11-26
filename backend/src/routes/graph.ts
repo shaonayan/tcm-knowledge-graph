@@ -22,13 +22,13 @@ router.get('/', async (req: Request, res: Response) => {
       parseInt(limit as string)
     )
 
-    res.json({
+    return res.json({
       success: true,
       data: graphData
     })
   } catch (error) {
     logger.error('获取图谱数据失败:', error)
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
       error: '获取图谱数据失败',
       message: error instanceof Error ? error.message : 'Unknown error'
