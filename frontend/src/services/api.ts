@@ -106,10 +106,15 @@ export const searchNodes = async (
 
 // 获取节点详情
 export const getNodeDetails = async (code: string): Promise<NodeDetail> => {
-  const response = await fetch(`${API_BASE_URL}/nodes/${code}`)
+  // URL编码处理，确保特殊字符正确传递
+  const encodedCode = encodeURIComponent(code)
+  const response = await fetch(`${API_BASE_URL}/nodes/${encodedCode}`)
+  
   if (!response.ok) {
-    throw new Error('获取节点详情失败')
+    const errorData = await response.json().catch(() => ({}))
+    throw new Error(errorData.error || `获取节点详情失败: ${response.status} ${response.statusText}`)
   }
+  
   const result = await response.json()
   if (!result.success) {
     throw new Error(result.error || '获取节点详情失败')

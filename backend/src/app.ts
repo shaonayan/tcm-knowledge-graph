@@ -163,7 +163,7 @@ app.get(`${API_PREFIX}/stats`, async (_req, res) => {
   }
 })
 
-// 根节点（兼容旧API路径）
+// 根节点（兼容旧API路径）- 必须在 /nodes/:code 之前
 app.get(`${API_PREFIX}/nodes/roots`, async (req, res) => {
   try {
     if (!neo4jService.isConnected()) {
@@ -187,7 +187,7 @@ app.get(`${API_PREFIX}/nodes/roots`, async (req, res) => {
   }
 })
 
-// 节点详情（兼容旧API路径）
+// 节点详情（兼容旧API路径）- 必须在 /nodes/roots 之后
 app.get(`${API_PREFIX}/nodes/:code`, async (req, res) => {
   try {
     if (!neo4jService.isConnected()) {
@@ -198,7 +198,10 @@ app.get(`${API_PREFIX}/nodes/:code`, async (req, res) => {
     }
 
     const { code } = req.params
-    const node = await neo4jService.getNodeDetails(code)
+    
+    // URL解码，处理特殊字符
+    const decodedCode = decodeURIComponent(code)
+    const node = await neo4jService.getNodeDetails(decodedCode)
 
     if (!node) {
       return res.status(404).json({
