@@ -5,7 +5,7 @@ import { logger } from '@utils/logger'
 const router = Router()
 
 // 获取统计数据
-router.get('/stats', async (req: Request, res: Response) => {
+router.get('/stats', async (_req: Request, res: Response) => {
   try {
     if (!neo4jService.isConnected()) {
       return res.status(503).json({
@@ -31,7 +31,7 @@ router.get('/stats', async (req: Request, res: Response) => {
 })
 
 // 获取概览数据
-router.get('/overview', async (req: Request, res: Response) => {
+router.get('/overview', async (_req: Request, res: Response) => {
   try {
     if (!neo4jService.isConnected()) {
       return res.status(503).json({
