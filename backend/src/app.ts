@@ -109,10 +109,10 @@ app.get(`${API_PREFIX}/stats`, async (_req, res) => {
     }
 
     const stats = await neo4jService.getStats()
-    res.json({ success: true, data: stats })
+    return res.json({ success: true, data: stats })
   } catch (error) {
     logger.error("Failed to load stats", error)
-    res.status(500).json({ success: false, error: "Failed to load stats" })
+    return res.status(500).json({ success: false, error: "Failed to load stats" })
   }
 })
 
@@ -124,10 +124,10 @@ app.get(`${API_PREFIX}/nodes/roots`, async (req, res) => {
 
     const limit = Number(req.query.limit) || 20
     const roots = await neo4jService.getRootNodes(limit)
-    res.json({ success: true, data: roots })
+    return res.json({ success: true, data: roots })
   } catch (error) {
     logger.error("Failed to load root nodes", error)
-    res.status(500).json({ success: false, error: "Failed to load root nodes" })
+    return res.status(500).json({ success: false, error: "Failed to load root nodes" })
   }
 })
 
@@ -139,10 +139,10 @@ app.get(`${API_PREFIX}/nodes/:code`, async (req, res) => {
 
     const code = decodeURIComponent(req.params.code)
     const data = await neo4jService.getNodeDetails(code)
-    res.json({ success: true, data })
+    return res.json({ success: true, data })
   } catch (error) {
     logger.error("Failed to load node detail", error)
-    res.status(500).json({ success: false, error: "Failed to load node detail" })
+    return res.status(500).json({ success: false, error: "Failed to load node detail" })
   }
 })
 
@@ -175,4 +175,3 @@ if (process.env.NODE_ENV !== "test") {
 
 export { app }
 export default app
-
