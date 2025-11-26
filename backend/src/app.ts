@@ -17,6 +17,7 @@ import graphRoutes from '@routes/graph'
 import searchRoutes from '@routes/search'
 import analyticsRoutes from '@routes/analytics'
 import userRoutes from '@routes/users'
+import { neo4jService } from '@services/neo4j'
 
 // 加载环境变量
 dotenv.config()
@@ -127,24 +128,72 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
 }))
 
 // 健康检查端点
-app.get('/health', (req, res) => {
+app.get('/health', (_req, res) => {
   res.json({
     status: 'ok',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
     environment: process.env.NODE_ENV,
-    version: process.env.npm_package_version || '1.0.0'
+    version: process.env.npm_package_version || '1.0.0',
+    database: neo4jService.isConnected() ? 'connected' : 'disconnected'
   })
 })
 
 // API路由
+// 统计数据（兼容旧API路径）
+app.get(`${API_PREFIX}/stats`, async (req, res) => {
+  try {
+    if (!neo4jService.isConnected()) {
+      return res.status(503).json({
+        success: false,
+        error: '数据库未连接'
+      })
+    }
+    const stats = await neo4jService.getStats()
+    res.json({
+      success: true,
+      data: stats
+    })
+  } catch (error) {
+    logger.error('获取统计数据失败:', error)
+    res.status(500).json({
+      success: false,
+      error: '获取统计数据失败'
+    })
+  }
+})
+
+// 根节点（兼容旧API路径）
+app.get(`${API_PREFIX}/nodes/roots`, async (req, res) => {
+  try {
+    if (!neo4jService.isConnected()) {
+      return res.status(503).json({
+        success: false,
+        error: '数据库未连接'
+      })
+    }
+    const { limit = '20' } = req.query
+    const roots = await neo4jService.getRootNodes(parseInt(limit as string))
+    res.json({
+      success: true,
+      data: roots
+    })
+  } catch (error) {
+    logger.error('获取根节点失败:', error)
+    res.status(500).json({
+      success: false,
+      error: '获取根节点失败'
+    })
+  }
+})
+
 app.use(`${API_PREFIX}/graph`, graphRoutes)
 app.use(`${API_PREFIX}/search`, searchRoutes)
 app.use(`${API_PREFIX}/analytics`, analyticsRoutes)
 app.use(`${API_PREFIX}/users`, userRoutes)
 
 // 根路径
-app.get('/', (req, res) => {
+app.get('/', (_req, res) => {
   res.json({
     name: '中医知识图谱API',
     version: '1.0.0',
@@ -157,6 +206,11 @@ app.get('/', (req, res) => {
 // 错误处理中间件
 app.use(notFoundHandler)
 app.use(errorHandler)
+
+// 初始化Neo4j连接
+neo4jService.connect().catch((error) => {
+  logger.error('Neo4j连接初始化失败:', error)
+})
 
 // 启动服务器
 const server = app.listen(PORT, () => {
@@ -171,12 +225,11 @@ const server = app.listen(PORT, () => {
 const gracefulShutdown = (signal: string) => {
   logger.info(`收到 ${signal} 信号，开始优雅关闭...`)
   
-  server.close(() => {
+  server.close(async () => {
     logger.info('HTTP服务器已关闭')
     
-    // 关闭数据库连接等
-    // neo4jDriver.close()
-    // redisClient.disconnect()
+    // 关闭数据库连接
+    await neo4jService.close()
     
     logger.info('应用程序已安全退出')
     process.exit(0)

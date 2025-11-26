@@ -12,7 +12,7 @@ const app = express()
 const PORT = process.env.PORT || 3001
 const NODE_ENV = process.env.NODE_ENV || 'development'
 
-// 中间件
+// 中间�?
 const corsOrigin = process.env.FRONTEND_URL || (NODE_ENV === 'production' ? '*' : 'http://localhost:3000')
 app.use(cors({
   origin: corsOrigin,
@@ -20,7 +20,7 @@ app.use(cors({
 }))
 app.use(express.json())
 
-// 静态文件服务（生产环境）- 必须在API路由之前
+// 静态文件服务（生产环境�? 必须在API路由之前
 if (NODE_ENV === 'production') {
   const frontendDistPath = path.join(__dirname, '../frontend/dist')
   app.use(express.static(frontendDistPath))
@@ -43,19 +43,19 @@ async function testConnection() {
   try {
     await driver.verifyConnectivity()
     dbConnected = true
-    console.log('✅ Neo4j连接成功！')
+    console.log('�?Neo4j连接成功�?)
   } catch (error) {
-    console.error('❌ Neo4j连接失败:', error.message)
+    console.error('�?Neo4j连接失败:', error.message)
     dbConnected = false
   }
 }
 
-// 启动时测试连接
+// 启动时测试连�?
 testConnection()
 
 // API路由
 
-// 健康检查
+// 健康检�?
 app.get('/health', (req, res) => {
   res.json({
     status: 'ok',
@@ -109,7 +109,7 @@ app.get('/api/stats', async (req, res) => {
   }
 })
 
-// 获取根节点
+// 获取根节�?
 app.get('/api/nodes/roots', async (req, res) => {
   if (!dbConnected) {
     return res.status(503).json({ error: '数据库未连接' })
@@ -141,8 +141,8 @@ app.get('/api/nodes/roots', async (req, res) => {
     })
 
   } catch (error) {
-    console.error('获取根节点失败:', error)
-    res.status(500).json({ error: '获取根节点失败' })
+    console.error('获取根节点失�?', error)
+    res.status(500).json({ error: '获取根节点失�? })
   } finally {
     await session.close()
   }
@@ -157,7 +157,7 @@ app.get('/api/search', async (req, res) => {
   const { q, category, limit = 10 } = req.query
   
   if (!q) {
-    return res.status(400).json({ error: '搜索关键词不能为空' })
+    return res.status(400).json({ error: '搜索关键词不能为�? })
   }
 
   const session = driver.session()
@@ -185,7 +185,7 @@ app.get('/api/search', async (req, res) => {
     
     const result = await session.run(cypher, params)
     
-    // 去重处理（基于code）并计算相关性排序
+    // 去重处理（基于code）并计算相关性排�?
     const seenCodes = new Map()
     const lowerQuery = q.toLowerCase()
     
@@ -195,9 +195,9 @@ app.get('/api/search', async (req, res) => {
       
       // 如果这个code还没出现过，计算相关性并存储
       if (!seenCodes.has(code)) {
-        let relevance = 50 // 默认相关性
+        let relevance = 50 // 默认相关�?
         
-        // 计算相关性分数
+        // 计算相关性分�?
         const codeLower = (code || '').toLowerCase()
         const nameLower = (name || '').toLowerCase()
         
@@ -223,10 +223,10 @@ app.get('/api/search', async (req, res) => {
       }
     }
     
-    // 转换为数组并按相关性排序
+    // 转换为数组并按相关性排�?
     let results = Array.from(seenCodes.values())
     
-    // 按相关性降序，然后按代码升序排序
+    // 按相关性降序，然后按代码升序排�?
     results.sort((a, b) => {
       if (a.relevance !== b.relevance) {
         return b.relevance - a.relevance
@@ -279,19 +279,19 @@ app.get('/api/nodes/:code', async (req, res) => {
     if (nodeResult.records.length === 0) {
       return res.status(404).json({ 
         success: false,
-        error: '节点未找到' 
+        error: '节点未找�? 
       })
     }
     
     const record = nodeResult.records[0]
     const node = record.get('n').properties
     
-    // 获取父节点 - 基于代码的层次关系
-    // 例如：A01.01.01 的父节点是 A01.01.
+    // 获取父节�?- 基于代码的层次关�?
+    // 例如：A01.01.01 的父节点�?A01.01.
     const codeParts = code.split('.')
     let parentCodes = []
     
-    // 构建所有可能的父节点代码
+    // 构建所有可能的父节点代�?
     for (let i = codeParts.length - 1; i > 0; i--) {
       const parentCode = codeParts.slice(0, i).join('.')
       parentCodes.push(parentCode)
@@ -314,8 +314,8 @@ app.get('/api/nodes/:code', async (req, res) => {
       parentResult = { records: [] }
     }
     
-    // 获取子节点 - 基于代码前缀匹配
-    // 例如：A01.01.01 的子节点是 A01.01.01.01, A01.01.01.02 等
+    // 获取子节�?- 基于代码前缀匹配
+    // 例如：A01.01.01 的子节点�?A01.01.01.01, A01.01.01.02 �?
     const childrenResult = await session.run(`
       MATCH (child)
       WHERE child.code STARTS WITH $code + '.' 
@@ -365,7 +365,7 @@ app.get('/api/nodes/:code', async (req, res) => {
   }
 })
 
-// 获取图谱数据（用于可视化）
+// 获取图谱数据（用于可视化�?
 app.get('/api/graph', async (req, res) => {
   if (!dbConnected) {
     return res.status(503).json({ error: '数据库未连接' })
@@ -428,7 +428,7 @@ app.get('/api/graph', async (req, res) => {
 
     const result = await session.run(cypher, params)
     
-    // 构建节点和边的数据结构
+    // 构建节点和边的数据结�?
     const nodes = new Map()
     const edges = []
 
@@ -444,31 +444,31 @@ app.get('/api/graph', async (req, res) => {
         const startCode = record.get('startCode')
         const endCode = record.get('endCode')
 
-        // 添加根节点
+        // 添加根节�?
         if (rootCode && !nodes.has(rootCode)) {
           nodes.set(rootCode, {
             id: rootCode,
             label: rootName || rootCode,
             code: rootCode,
             name: rootName || rootCode,
-            category: '疾病类',
+            category: '疾病�?,
             level: 1
           })
         }
 
-        // 添加子节点
+        // 添加子节�?
         if (childCode && !nodes.has(childCode)) {
           nodes.set(childCode, {
             id: childCode,
             label: childName || childCode,
             code: childCode,
             name: childName || childCode,
-            category: childCategory || '疾病类',
+            category: childCategory || '疾病�?,
             level: childLevel
           })
         }
 
-        // 添加边
+        // 添加�?
         if (startCode && endCode && startCode !== endCode) {
           const edgeId = `${startCode}-${endCode}`
           if (!edges.find(e => e.id === edgeId)) {
@@ -482,7 +482,7 @@ app.get('/api/graph', async (req, res) => {
         }
       })
     } else {
-      // 处理根节点查询结果
+      // 处理根节点查询结�?
       result.records.forEach(record => {
         const rootCode = record.get('rootCode')
         const rootName = record.get('rootName')
@@ -490,19 +490,19 @@ app.get('/api/graph', async (req, res) => {
         const rootLevel = record.get('rootLevel')?.toNumber() || 1
         const children = record.get('children') || []
 
-        // 添加根节点
+        // 添加根节�?
         if (rootCode && !nodes.has(rootCode)) {
           nodes.set(rootCode, {
             id: rootCode,
             label: rootName || rootCode,
             code: rootCode,
             name: rootName || rootCode,
-            category: rootCategory || '疾病类',
+            category: rootCategory || '疾病�?,
             level: rootLevel
           })
         }
 
-        // 添加子节点
+        // 添加子节�?
         children.forEach((child) => {
           if (child.code && !nodes.has(child.code)) {
             nodes.set(child.code, {
@@ -510,11 +510,11 @@ app.get('/api/graph', async (req, res) => {
               label: child.name || child.code,
               code: child.code,
               name: child.name || child.code,
-              category: child.category || '疾病类',
+              category: child.category || '疾病�?,
               level: child.level || 0
             })
 
-            // 添加边
+            // 添加�?
             const edgeId = `${rootCode}-${child.code}`
             if (!edges.find((e) => e.id === edgeId)) {
               edges.push({
@@ -558,7 +558,7 @@ app.get('/api/graph/expand/:code', async (req, res) => {
 
   const session = driver.session()
   try {
-    // 获取节点及其子节点
+    // 获取节点及其子节�?
     const result = await session.run(`
       MATCH (n {code: $code})
       OPTIONAL MATCH path = (n)-[*1..${depth}]->(child)
@@ -585,7 +585,7 @@ app.get('/api/graph/expand/:code', async (req, res) => {
     `, { code, limit: neo4j.int(parseInt(limit)) })
 
     if (result.records.length === 0) {
-      return res.status(404).json({ error: '节点未找到' })
+      return res.status(404).json({ error: '节点未找�? })
     }
 
     const record = result.records[0]
@@ -603,11 +603,11 @@ app.get('/api/graph/expand/:code', async (req, res) => {
       label: nodeName || nodeCode,
       code: nodeCode,
       name: nodeName || nodeCode,
-      category: nodeCategory || '疾病类',
+      category: nodeCategory || '疾病�?,
       level: nodeLevel
     })
 
-    // 添加子节点和边
+    // 添加子节点和�?
     const children = record.get('children') || []
     children.forEach((child) => {
       if (child.code && !nodes.has(child.code)) {
@@ -616,7 +616,7 @@ app.get('/api/graph/expand/:code', async (req, res) => {
           label: child.name || child.code,
           code: child.code,
           name: child.name || child.code,
-          category: child.category || '疾病类',
+          category: child.category || '疾病�?,
           level: child.level || 0
         })
 
@@ -655,7 +655,7 @@ app.get('/api/analytics/overview', async (req, res) => {
 
   const session = driver.session()
   try {
-    // 按分类统计
+    // 按分类统�?
     const categoryResult = await session.run(`
       MATCH (n)
       WHERE n.category IS NOT NULL
@@ -668,7 +668,7 @@ app.get('/api/analytics/overview', async (req, res) => {
       count: record.get('count').toNumber()
     }))
 
-    // 按层级统计
+    // 按层级统�?
     const levelResult = await session.run(`
       MATCH (n)
       WHERE n.classificationLevel IS NOT NULL
@@ -681,7 +681,7 @@ app.get('/api/analytics/overview', async (req, res) => {
       count: record.get('count').toNumber()
     }))
 
-    // 每个层级的分类分布
+    // 每个层级的分类分�?
     const levelCategoryResult = await session.run(`
       MATCH (n)
       WHERE n.classificationLevel IS NOT NULL AND n.category IS NOT NULL
@@ -701,7 +701,7 @@ app.get('/api/analytics/overview', async (req, res) => {
       levelCategoryStats[level][category] = count
     })
 
-    // 根节点统计
+    // 根节点统�?
     const rootResult = await session.run(`
       MATCH (n)
       WHERE COUNT { (n)<-[:包含]-() } = 0
@@ -796,8 +796,8 @@ app.get('/api/analytics/top-level', async (req, res) => {
   }
 })
 
-// 根路径
-// 路径分析 - 查找两个节点之间的最短路径
+// 根路�?
+// 路径分析 - 查找两个节点之间的最短路�?
 app.get('/api/analysis/path', async (req, res) => {
   if (!dbConnected) {
     return res.status(503).json({ error: '数据库未连接' })
@@ -811,7 +811,7 @@ app.get('/api/analysis/path', async (req, res) => {
 
   const session = driver.session()
   try {
-    // 查找最短路径 - 使用标准shortestPath
+    // 查找最短路�?- 使用标准shortestPath
     const maxDepthNum = parseInt(maxDepth) || 5
     const result = await session.run(`
       MATCH (start {code: $from}), (end {code: $to})
@@ -852,7 +852,7 @@ app.get('/api/analysis/path', async (req, res) => {
   }
 })
 
-// 中心度分析 - 计算节点的度中心度、接近中心度、介数中心度
+// 中心度分�?- 计算节点的度中心度、接近中心度、介数中心度
 app.get('/api/analysis/centrality', async (req, res) => {
   if (!dbConnected) {
     return res.status(503).json({ error: '数据库未连接' })
@@ -866,7 +866,7 @@ app.get('/api/analysis/centrality', async (req, res) => {
       // 单个节点的中心度
       let query = ''
       if (type === 'degree') {
-        // 度中心度：节点的连接数 - 简化查询
+        // 度中心度：节点的连接�?- 简化查�?
         query = `
           MATCH (n {code: $code})
           OPTIONAL MATCH (n)-[r]-()
@@ -876,7 +876,7 @@ app.get('/api/analysis/centrality', async (req, res) => {
                  COUNT(DISTINCT r) as degree
         `
       } else if (type === 'betweenness') {
-        // 介数中心度：节点在最短路径中出现的频率
+        // 介数中心度：节点在最短路径中出现的频�?
         query = `
           MATCH (n {code: $code})
           OPTIONAL MATCH path = shortestPath((start)-[*..5]-(end))
@@ -907,7 +907,7 @@ app.get('/api/analysis/centrality', async (req, res) => {
       const result = await session.run(query, { code })
       
       if (result.records.length === 0) {
-        return res.status(404).json({ error: '节点未找到' })
+        return res.status(404).json({ error: '节点未找�? })
       }
 
       res.json({
@@ -915,7 +915,7 @@ app.get('/api/analysis/centrality', async (req, res) => {
         data: result.records[0].toObject()
       })
     } else {
-      // Top N 中心度节点
+      // Top N 中心度节�?
       let query = ''
       if (type === 'degree') {
         query = `
@@ -931,7 +931,7 @@ app.get('/api/analysis/centrality', async (req, res) => {
           LIMIT 50
         `
       } else {
-        // 简化版本：只返回度中心度
+        // 简化版本：只返回度中心�?
         query = `
           MATCH (n)
           OPTIONAL MATCH (n)-[r]-()
@@ -956,14 +956,14 @@ app.get('/api/analysis/centrality', async (req, res) => {
       })
     }
   } catch (error) {
-    console.error('中心度分析失败:', error)
-    res.status(500).json({ error: '中心度分析失败: ' + error.message })
+    console.error('中心度分析失�?', error)
+    res.status(500).json({ error: '中心度分析失�? ' + error.message })
   } finally {
     await session.close()
   }
 })
 
-// 节点关系分析 - 分析节点的邻居节点统计
+// 节点关系分析 - 分析节点的邻居节点统�?
 app.get('/api/analysis/neighbors', async (req, res) => {
   if (!dbConnected) {
     return res.status(503).json({ error: '数据库未连接' })
@@ -972,12 +972,12 @@ app.get('/api/analysis/neighbors', async (req, res) => {
   const { code, depth = 1 } = req.query
 
   if (!code) {
-    return res.status(400).json({ error: '请提供节点代码' })
+    return res.status(400).json({ error: '请提供节点代�? })
   }
 
   const session = driver.session()
   try {
-    // 使用参数化查询，修复字符串插值问题
+    // 使用参数化查询，修复字符串插值问�?
     const depthNum = parseInt(depth) || 1
     const result = await session.run(`
       MATCH (start {code: $code})-[*1..${depthNum}]-(neighbor)
@@ -1026,12 +1026,12 @@ app.get('/api/info', (req, res) => {
       health: '/health',
       stats: '/api/stats',
       roots: '/api/nodes/roots',
-      search: '/api/search?q=关键词'
+      search: '/api/search?q=关键�?
     }
   })
 })
 
-// 根路径 - 生产环境返回前端页面，开发环境返回API信息
+// 根路�?- 生产环境返回前端页面，开发环境返回API信息
 app.get('/', (req, res) => {
   if (NODE_ENV === 'production') {
     const frontendDistPath = path.join(__dirname, '../frontend/dist')
@@ -1043,12 +1043,12 @@ app.get('/', (req, res) => {
       status: 'running',
       environment: NODE_ENV,
       database: dbConnected ? 'connected' : 'disconnected',
-      message: '开发环境：前端运行在 http://localhost:3000',
+      message: '开发环境：前端运行�?http://localhost:3000',
       endpoints: {
         health: '/health',
         stats: '/api/stats',
         roots: '/api/nodes/roots',
-        search: '/api/search?q=关键词'
+        search: '/api/search?q=关键�?
       }
     })
   }
@@ -1066,12 +1066,12 @@ if (NODE_ENV === 'production') {
   })
 }
 
-// 启动服务器
+// 启动服务�?
 app.listen(PORT, () => {
   console.log(`🚀 少纳言中医知识图谱服务启动成功！`)
   console.log(`📍 端口: ${PORT}`)
   console.log(`🌐 环境: ${NODE_ENV}`)
-  console.log(`💚 健康检查: http://localhost:${PORT}/health`)
+  console.log(`💚 健康检�? http://localhost:${PORT}/health`)
   console.log(`📊 统计数据: http://localhost:${PORT}/api/stats`)
   if (NODE_ENV === 'production') {
     console.log(`📱 前端应用: http://localhost:${PORT}`)
@@ -1082,7 +1082,9 @@ app.listen(PORT, () => {
 
 // 优雅关闭
 process.on('SIGINT', async () => {
-  console.log('\n🛑 正在关闭服务器...')
+  console.log('\n🛑 正在关闭服务�?..')
   await driver.close()
   process.exit(0)
 })
+
+
