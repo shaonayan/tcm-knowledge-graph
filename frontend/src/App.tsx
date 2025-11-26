@@ -67,8 +67,8 @@ const App: React.FC = () => {
                     element={
                       <div className="flex items-center justify-center h-96">
                         <div className="text-center">
-                          <h1 className="text-4xl font-bold text-gray-400 mb-4">404</h1>
-                          <p className="text-gray-500">页面未找到</p>
+                          <h1 className="text-4xl font-bold mb-4" style={{ color: '#ffffff', textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>404</h1>
+                          <p style={{ color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>页面未找到</p>
                         </div>
                       </div>
                     }
