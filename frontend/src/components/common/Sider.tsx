@@ -108,7 +108,14 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
       {/* 触发按钮 - 当收起时显示在左侧边缘 */}
       {collapsed && (
         <div
-          className="fixed bg-gradient-to-br from-red-500 via-orange-500 to-amber-500 rounded-r-2xl shadow-lg cursor-pointer transition-all duration-300 hover:shadow-2xl"
+          className="fixed rounded-r-2xl shadow-lg cursor-pointer transition-all duration-300 hover:shadow-2xl"
+          style={{
+            background: 'rgba(255, 255, 255, 0.15)',
+            backdropFilter: 'blur(10px)',
+            WebkitBackdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255, 255, 255, 0.2)',
+            borderLeft: 'none'
+          }}
           style={{
             left: 0,
             top: '50%',
@@ -143,16 +150,16 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
         style={{
           position: 'fixed',
           left: 0,
-          top: 72,
-          height: 'calc(100vh - 72px)',
+          top: 80,
+          height: 'calc(100vh - 80px)',
           zIndex: 999,
           overflow: 'hidden',
           overflowY: 'auto',
-          background: 'linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(254,247,240,0.92) 100%)',
-          borderRight: collapsed ? 'none' : '1px solid rgba(220, 38, 38, 0.08)',
-          boxShadow: collapsed ? 'none' : '0 20px 45px rgba(220, 38, 38, 0.08)',
-          backdropFilter: collapsed ? 'none' : 'blur(16px)',
-          WebkitBackdropFilter: collapsed ? 'none' : 'blur(16px)',
+          background: collapsed ? 'transparent' : 'rgba(0, 0, 0, 0.3)',
+          borderRight: collapsed ? 'none' : '1px solid rgba(255, 255, 255, 0.1)',
+          boxShadow: collapsed ? 'none' : '0 8px 32px rgba(0, 0, 0, 0.4)',
+          backdropFilter: collapsed ? 'none' : 'blur(20px) saturate(180%)',
+          WebkitBackdropFilter: collapsed ? 'none' : 'blur(20px) saturate(180%)',
           transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
           transform: collapsed ? 'translateX(-100%)' : 'translateX(0)',
           opacity: collapsed ? 0 : 1,
@@ -163,10 +170,10 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
           {/* 标题区域 */}
           {!collapsed && (
             <div className="text-center mb-6 flex-shrink-0">
-              <h2 className="text-sm font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent m-0 tracking-wide">
+              <h2 className="text-sm font-bold text-white m-0 tracking-wide" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>
                 少纳言中医知识图谱
               </h2>
-              <p className="text-xs text-gray-400 mt-1 m-0">Shonaoyan TCM</p>
+              <p className="text-xs mt-1 m-0" style={{ color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>Shonaoyan TCM</p>
             </div>
           )}
 
@@ -174,11 +181,23 @@ export const AppSider: React.FC<AppSiderProps> = ({ collapsed, onCollapse }) => 
           {!collapsed && (
             <div className="mb-4 flex justify-end">
               <div
-                className="w-8 h-8 flex items-center justify-center rounded-lg bg-gray-100 hover:bg-gray-200 cursor-pointer transition-colors"
+                className="w-8 h-8 flex items-center justify-center rounded-lg cursor-pointer transition-colors"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'
+                }}
                 onClick={handleToggle}
                 title="收起侧边栏"
               >
-                <MenuFoldOutlined className="text-gray-600" />
+                <MenuFoldOutlined style={{ color: '#ffffff' }} />
               </div>
             </div>
           )}

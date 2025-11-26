@@ -33,7 +33,7 @@ const App: React.FC = () => {
         {/* 顶部导航栏 */}
         <AppHeader />
         
-        <Layout style={{ position: 'relative', minHeight: 'calc(100vh - 72px)' }}>
+        <Layout style={{ position: 'relative', minHeight: 'calc(100vh - 80px)' }}>
           {/* 侧边导航栏 */}
           <AppSider collapsed={collapsed} onCollapse={setCollapsed} />
           
@@ -41,7 +41,7 @@ const App: React.FC = () => {
           <Content
             className="transition-all duration-300 ease-in-out app-content-surface"
             style={{
-              minHeight: 'calc(100vh - 72px)',
+              minHeight: 'calc(100vh - 80px)',
               marginLeft: collapsed ? 0 : '260px',
               width: collapsed ? '100%' : 'calc(100% - 260px)',
               maxWidth: collapsed ? '100%' : 'calc(100% - 260px)',

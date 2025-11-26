@@ -71,7 +71,7 @@ const Dashboard: React.FC = () => {
   const syndromePercent = totalCount > 0 ? (syndromeCount / totalCount) * 100 : 0
 
   return (
-    <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
+    <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 80px)' }}>
       {/* 页面标题 */}
       <PageHeader
         iconText="少"
@@ -86,15 +86,15 @@ const Dashboard: React.FC = () => {
           <Card 
             className="text-center glass-panel stat-card-modern"
             style={{
-              background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%)',
-              borderColor: 'rgba(99, 102, 241, 0.2)'
+              background: 'rgba(0, 0, 0, 0.3)',
+              borderColor: 'rgba(255, 255, 255, 0.15)'
             }}
           >
             <Statistic
-              title={<span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: 500 }}>总节点数</span>}
+              title={<span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', fontWeight: 500 }}>总节点数</span>}
               value={stats?.totalNodes || 0}
-              prefix={<NodeIndexOutlined style={{ color: '#6366f1', fontSize: '28px' }} />}
-              valueStyle={{ color: '#6366f1', fontSize: '28px', fontWeight: 700 }}
+              prefix={<NodeIndexOutlined style={{ color: '#ffffff', fontSize: '28px', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />}
+              valueStyle={{ color: '#ffffff', fontSize: '28px', fontWeight: 700, textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
             />
           </Card>
         </Col>
@@ -102,15 +102,15 @@ const Dashboard: React.FC = () => {
           <Card 
             className="text-center glass-panel stat-card-modern"
             style={{
-              background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.05) 0%, rgba(245, 87, 108, 0.05) 100%)',
-              borderColor: 'rgba(236, 72, 153, 0.2)'
+              background: 'rgba(0, 0, 0, 0.3)',
+              borderColor: 'rgba(255, 255, 255, 0.15)'
             }}
           >
             <Statistic
-              title={<span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: 500 }}>关系数量</span>}
+              title={<span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', fontWeight: 500 }}>关系数量</span>}
               value={stats?.totalRelationships || 0}
-              prefix={<BranchesOutlined style={{ color: '#ec4899', fontSize: '28px' }} />}
-              valueStyle={{ color: '#ec4899', fontSize: '28px', fontWeight: 700 }}
+              prefix={<BranchesOutlined style={{ color: '#ffffff', fontSize: '28px', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />}
+              valueStyle={{ color: '#ffffff', fontSize: '28px', fontWeight: 700, textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
             />
           </Card>
         </Col>
@@ -118,15 +118,15 @@ const Dashboard: React.FC = () => {
           <Card 
             className="text-center glass-panel stat-card-modern"
             style={{
-              background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(0, 242, 254, 0.05) 100%)',
-              borderColor: 'rgba(59, 130, 246, 0.2)'
+              background: 'rgba(0, 0, 0, 0.3)',
+              borderColor: 'rgba(255, 255, 255, 0.15)'
             }}
           >
             <Statistic
-              title={<span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: 500 }}>疾病类术语</span>}
+              title={<span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', fontWeight: 500 }}>疾病类术语</span>}
               value={diseaseCount}
-              prefix={<SearchOutlined style={{ color: '#3b82f6', fontSize: '28px' }} />}
-              valueStyle={{ color: '#3b82f6', fontSize: '28px', fontWeight: 700 }}
+              prefix={<SearchOutlined style={{ color: '#ffffff', fontSize: '28px', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />}
+              valueStyle={{ color: '#ffffff', fontSize: '28px', fontWeight: 700, textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
             />
           </Card>
         </Col>
@@ -134,15 +134,15 @@ const Dashboard: React.FC = () => {
           <Card 
             className="text-center glass-panel stat-card-modern"
             style={{
-              background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(56, 249, 215, 0.05) 100%)',
-              borderColor: 'rgba(16, 185, 129, 0.2)'
+              background: 'rgba(0, 0, 0, 0.3)',
+              borderColor: 'rgba(255, 255, 255, 0.15)'
             }}
           >
             <Statistic
-              title={<span style={{ color: 'var(--text-secondary)', fontSize: '14px', fontWeight: 500 }}>证候类术语</span>}
+              title={<span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', fontWeight: 500 }}>证候类术语</span>}
               value={syndromeCount}
-              prefix={<BarChartOutlined style={{ color: '#10b981', fontSize: '28px' }} />}
-              valueStyle={{ color: '#10b981', fontSize: '28px', fontWeight: 700 }}
+              prefix={<BarChartOutlined style={{ color: '#ffffff', fontSize: '28px', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />}
+              valueStyle={{ color: '#ffffff', fontSize: '28px', fontWeight: 700, textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
             />
           </Card>
         </Col>
@@ -152,17 +152,17 @@ const Dashboard: React.FC = () => {
       <Row gutter={[20, 20]} className="mt-0">
         <Col xs={24} lg={12}>
           <Card 
-            title={<span style={{ fontSize: '18px', fontWeight: 600, color: 'var(--text-primary)' }}>数据概览</span>}
+            title={<span style={{ fontSize: '18px', fontWeight: 600, color: '#ffffff', textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>数据概览</span>}
             className="h-full glass-panel"
-            extra={<a href="/analytics" style={{ color: 'var(--primary-color)', fontWeight: 500, textDecoration: 'none' }}>查看详情 →</a>}
-            headStyle={{ borderBottom: '1px solid rgba(99, 102, 241, 0.1)', padding: '20px 24px' }}
+            extra={<a href="/analytics" style={{ color: 'rgba(255, 255, 255, 0.9)', fontWeight: 500, textDecoration: 'none', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>查看详情 →</a>}
+            headStyle={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)', padding: '20px 24px' }}
             bodyStyle={{ padding: '24px' }}
           >
             <div className="space-y-4">
               <div>
                 <div className="flex justify-between mb-2">
-                  <span style={{ fontWeight: 500 }}>疾病类术语</span>
-                  <span style={{ color: '#52c41a', fontWeight: 600 }}>{diseaseCount.toLocaleString()} 条</span>
+                  <span style={{ fontWeight: 500, color: 'rgba(255, 255, 255, 0.9)' }}>疾病类术语</span>
+                  <span style={{ color: '#ffffff', fontWeight: 600, textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>{diseaseCount.toLocaleString()} 条</span>
                 </div>
                 <Progress 
                   percent={Number(diseasePercent.toFixed(1))} 
@@ -172,8 +172,8 @@ const Dashboard: React.FC = () => {
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span style={{ fontWeight: 500 }}>证候类术语</span>
-                  <span style={{ color: '#1890ff', fontWeight: 600 }}>{syndromeCount.toLocaleString()} 条</span>
+                  <span style={{ fontWeight: 500, color: 'rgba(255, 255, 255, 0.9)' }}>证候类术语</span>
+                  <span style={{ color: '#ffffff', fontWeight: 600, textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>{syndromeCount.toLocaleString()} 条</span>
                 </div>
                 <Progress 
                   percent={Number(syndromePercent.toFixed(1))} 
@@ -183,8 +183,8 @@ const Dashboard: React.FC = () => {
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span style={{ fontWeight: 500 }}>数据完整性</span>
-                  <span style={{ color: '#fa8c16', fontWeight: 600 }}>{stats?.dataCompleteness.toFixed(1) || 0}%</span>
+                  <span style={{ fontWeight: 500, color: 'rgba(255, 255, 255, 0.9)' }}>数据完整性</span>
+                  <span style={{ color: '#ffffff', fontWeight: 600, textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>{stats?.dataCompleteness.toFixed(1) || 0}%</span>
                 </div>
                 <Progress 
                   percent={Number((stats?.dataCompleteness || 0).toFixed(1))} 
@@ -198,99 +198,115 @@ const Dashboard: React.FC = () => {
 
         <Col xs={24} lg={12}>
           <Card 
-            title={<span style={{ fontSize: '18px', fontWeight: 600, color: 'var(--text-primary)' }}>快速操作</span>}
+            title={<span style={{ fontSize: '18px', fontWeight: 600, color: '#ffffff', textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>快速操作</span>}
             className="h-full glass-panel"
-            headStyle={{ borderBottom: '1px solid rgba(99, 102, 241, 0.1)', padding: '20px 24px' }}
+            headStyle={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)', padding: '20px 24px' }}
             bodyStyle={{ padding: '24px' }}
           >
             <div className="grid grid-cols-2 gap-4">
               <div 
                 className="p-5 rounded-xl cursor-pointer transition-all"
                 style={{ 
-                  background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.05) 100%)',
-                  border: '1px solid rgba(99, 102, 241, 0.15)',
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)'
                 }}
                 onClick={() => navigate('/explorer')}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.12) 0%, rgba(139, 92, 246, 0.08) 100%)'
-                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(99, 102, 241, 0.2)'
+                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.4)'
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.5)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(139, 92, 246, 0.05) 100%)'
+                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)'
                   e.currentTarget.style.boxShadow = 'none'
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
                 }}
               >
-                <NodeIndexOutlined className="text-3xl mb-3" style={{ color: '#6366f1' }} />
-                <h3 className="font-semibold text-gray-800 mb-1" style={{ fontSize: '16px' }}>图谱探索</h3>
-                <p className="text-sm text-gray-600" style={{ fontSize: '13px' }}>可视化浏览知识图谱</p>
+                <NodeIndexOutlined className="text-3xl mb-3" style={{ color: '#ffffff', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />
+                <h3 className="font-semibold mb-1" style={{ fontSize: '16px', color: '#ffffff', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>图谱探索</h3>
+                <p className="text-sm" style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 2px rgba(0, 0, 0, 0.8)' }}>可视化浏览知识图谱</p>
               </div>
               <div 
                 className="p-5 rounded-xl cursor-pointer transition-all"
                 style={{ 
-                  background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(245, 87, 108, 0.05) 100%)',
-                  border: '1px solid rgba(236, 72, 153, 0.15)',
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)'
                 }}
                 onClick={() => navigate('/search')}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(236, 72, 153, 0.12) 0%, rgba(245, 87, 108, 0.08) 100%)'
-                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(236, 72, 153, 0.2)'
+                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.4)'
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.5)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(236, 72, 153, 0.08) 0%, rgba(245, 87, 108, 0.05) 100%)'
+                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)'
                   e.currentTarget.style.boxShadow = 'none'
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
                 }}
               >
-                <SearchOutlined className="text-3xl mb-3" style={{ color: '#ec4899' }} />
-                <h3 className="font-semibold text-gray-800 mb-1" style={{ fontSize: '16px' }}>智能搜索</h3>
-                <p className="text-sm text-gray-600" style={{ fontSize: '13px' }}>快速查找相关术语</p>
+                <SearchOutlined className="text-3xl mb-3" style={{ color: '#ffffff', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />
+                <h3 className="font-semibold mb-1" style={{ fontSize: '16px', color: '#ffffff', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>智能搜索</h3>
+                <p className="text-sm" style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 2px rgba(0, 0, 0, 0.8)' }}>快速查找相关术语</p>
               </div>
               <div 
                 className="p-5 rounded-xl cursor-pointer transition-all"
                 style={{ 
-                  background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(0, 242, 254, 0.05) 100%)',
-                  border: '1px solid rgba(59, 130, 246, 0.15)',
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)'
                 }}
                 onClick={() => navigate('/analytics')}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.12) 0%, rgba(0, 242, 254, 0.08) 100%)'
-                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(59, 130, 246, 0.2)'
+                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.4)'
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.5)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(59, 130, 246, 0.08) 0%, rgba(0, 242, 254, 0.05) 100%)'
+                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)'
                   e.currentTarget.style.boxShadow = 'none'
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
                 }}
               >
-                <BarChartOutlined className="text-3xl mb-3" style={{ color: '#3b82f6' }} />
-                <h3 className="font-semibold text-gray-800 mb-1" style={{ fontSize: '16px' }}>数据分析</h3>
-                <p className="text-sm text-gray-600" style={{ fontSize: '13px' }}>深入分析数据结构</p>
+                <BarChartOutlined className="text-3xl mb-3" style={{ color: '#ffffff', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />
+                <h3 className="font-semibold mb-1" style={{ fontSize: '16px', color: '#ffffff', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>数据分析</h3>
+                <p className="text-sm" style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 2px rgba(0, 0, 0, 0.8)' }}>深入分析数据结构</p>
               </div>
               <div 
                 className="p-5 rounded-xl cursor-pointer transition-all"
                 style={{ 
-                  background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(56, 249, 215, 0.05) 100%)',
-                  border: '1px solid rgba(16, 185, 129, 0.15)',
+                  background: 'rgba(0, 0, 0, 0.3)',
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  backdropFilter: 'blur(10px)',
+                  WebkitBackdropFilter: 'blur(10px)'
                 }}
                 onClick={() => navigate('/visualizations')}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(56, 249, 215, 0.08) 100%)'
-                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(16, 185, 129, 0.2)'
+                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.4)'
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.5)'
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(56, 249, 215, 0.05) 100%)'
+                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)'
                   e.currentTarget.style.boxShadow = 'none'
+                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
                 }}
               >
-                <BarChartOutlined className="text-3xl mb-3" style={{ color: '#10b981' }} />
-                <h3 className="font-semibold text-gray-800 mb-1" style={{ fontSize: '16px' }}>高级可视化</h3>
-                <p className="text-sm text-gray-600" style={{ fontSize: '13px' }}>3D视图、时间线、演化展示</p>
+                <BarChartOutlined className="text-3xl mb-3" style={{ color: '#ffffff', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />
+                <h3 className="font-semibold mb-1" style={{ fontSize: '16px', color: '#ffffff', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>高级可视化</h3>
+                <p className="text-sm" style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 2px rgba(0, 0, 0, 0.8)' }}>3D视图、时间线、演化展示</p>
               </div>
             </div>
           </Card>

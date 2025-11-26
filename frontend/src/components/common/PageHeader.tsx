@@ -25,29 +25,39 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
       <div className="flex items-start justify-between gap-6">
         <div className="flex items-start gap-5 flex-1 min-w-0">
           {(icon || iconText) && (
-            <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all hover:scale-105" style={{
-              boxShadow: '0 4px 16px rgba(99, 102, 241, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset'
+            <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all hover:scale-105" style={{
+              background: 'rgba(255, 255, 255, 0.15)',
+              backdropFilter: 'blur(10px)',
+              WebkitBackdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              boxShadow: '0 4px 16px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.2) inset'
             }}>
               {icon || (
-                <span className="text-white font-bold text-2xl">{iconText}</span>
+                <span className="text-white font-bold text-2xl" style={{ textShadow: '0 2px 8px rgba(0, 0, 0, 0.5)' }}>{iconText}</span>
               )}
             </div>
           )}
           <div className="flex-1 min-w-0">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2 leading-tight" style={{
+            <h1 className="text-4xl font-bold mb-2 leading-tight" style={{
               letterSpacing: '-0.02em',
-              fontWeight: 700
+              fontWeight: 700,
+              color: '#ffffff',
+              textShadow: '0 2px 12px rgba(0, 0, 0, 0.8)'
             }}>
               {title}
             </h1>
             {subtitle && (
-              <p className="text-sm text-gray-500 mb-2 leading-tight" style={{
-                letterSpacing: '-0.01em'
+              <p className="text-sm mb-2 leading-tight" style={{
+                letterSpacing: '-0.01em',
+                color: 'rgba(255, 255, 255, 0.7)',
+                textShadow: '0 1px 6px rgba(0, 0, 0, 0.8)'
               }}>{subtitle}</p>
             )}
             {description && (
-              <p className="text-gray-600 leading-relaxed text-base" style={{
-                letterSpacing: '-0.01em'
+              <p className="leading-relaxed text-base" style={{
+                letterSpacing: '-0.01em',
+                color: 'rgba(255, 255, 255, 0.8)',
+                textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)'
               }}>{description}</p>
             )}
           </div>
