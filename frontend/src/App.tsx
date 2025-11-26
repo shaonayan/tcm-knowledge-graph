@@ -29,6 +29,17 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <StartupScreen visible={showStartup} />
+      <div style={{
+        position: 'fixed',
+        inset: 0,
+        backgroundImage: 'url(/background.gif)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+        backgroundRepeat: 'no-repeat',
+        zIndex: -2,
+        pointerEvents: 'none'
+      }} />
       <Layout className="min-h-screen app-shell">
         {/* 顶部导航栏 */}
         <AppHeader />
