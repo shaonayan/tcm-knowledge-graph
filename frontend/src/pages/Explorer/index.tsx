@@ -240,185 +240,204 @@ const Explorer: React.FC = () => {
   }, [loadGraph])
 
   return (
-    <div className="page-wrapper flex flex-col" style={{ minHeight: 'calc(100vh - 72px)' }}>
-      <div className="mb-8">
+    <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
+      {/* 页面标题 */}
+      <div className="mb-6">
         <div className="flex items-start gap-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-red-500 via-orange-500 to-amber-500 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
+          <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
             <span className="text-white font-bold text-xl">探</span>
           </div>
           <div className="flex-1 min-w-0">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2 leading-tight">
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-2">
               知识图谱探索器
             </h1>
-            <p className="text-sm text-gray-500 mb-3 leading-tight">少纳言中医知识图谱</p>
-            <p className="text-gray-600 leading-relaxed">
-              从 Neo4j 数据库直接映射知识图谱，支持交互式探索和可视化
-              <span className="ml-2 text-xs text-gray-500">
-                （快捷键：Ctrl/Cmd + +/- 缩放，Ctrl/Cmd + 0 重置，Ctrl/Cmd + F 适应窗口）
-              </span>
+            <p className="text-sm text-gray-500 mb-1">少纳言中医知识图谱</p>
+            <p className="text-xs text-gray-400">
+              快捷键：Ctrl/Cmd + +/- 缩放，Ctrl/Cmd + 0 重置，Ctrl/Cmd + F 适应窗口
             </p>
           </div>
         </div>
       </div>
 
-      {/* 快速搜索 */}
-      <Card className="mb-4">
-        <Space.Compact style={{ width: '100%' }}>
-          <Input
-            placeholder="快速搜索（例如：脾虚）"
-            prefix={<SearchOutlined />}
-            value={quickSearchTerm}
-            onChange={(e) => setQuickSearchTerm(e.target.value)}
-            onPressEnter={() => handleQuickSearch(quickSearchTerm)}
-            allowClear
-          />
+      {/* 快速搜索区域 */}
+      <Card className="mb-4 glass-panel">
+        <div className="flex gap-3 items-center flex-wrap">
+          <div className="flex-1 min-w-[300px]">
+            <Input
+              placeholder="快速搜索（例如：脾虚）"
+              prefix={<SearchOutlined />}
+              value={quickSearchTerm}
+              onChange={(e) => setQuickSearchTerm(e.target.value)}
+              onPressEnter={() => handleQuickSearch(quickSearchTerm)}
+              allowClear
+              size="large"
+            />
+          </div>
           <Button
             type="primary"
+            size="large"
             onClick={() => handleQuickSearch(quickSearchTerm)}
             loading={loading}
+            icon={<SearchOutlined />}
           >
-            搜索并加载图谱
+            搜索并加载
           </Button>
-          <Button onClick={() => handleQuickSearch('脾虚')}>
-            脾虚知识图谱
+          <Button 
+            size="large"
+            onClick={() => handleQuickSearch('脾虚')}
+          >
+            示例：脾虚
           </Button>
-        </Space.Compact>
+        </div>
       </Card>
 
-      {/* 控制面板 */}
-      <Card className="mb-4">
-        <Row gutter={16} align="middle">
-          <Col span={5}>
-            <Select
-              placeholder="选择根节点"
-              style={{ width: '100%' }}
-              value={rootCode}
-              onChange={(value) => {
-                setRootCode(value)
-                if (value) {
-                  loadGraph(value)
-                }
-              }}
-              showSearch
-              filterOption={(input, option) => {
-                const label = String(option?.label ?? '')
-                return label.toLowerCase().includes(input.toLowerCase())
-              }}
-            >
-              {rootNodes.map(node => (
-                <Option key={node.code} value={node.code} label={node.name}>
-                  {node.code} - {node.name}
-                </Option>
-              ))}
-            </Select>
-          </Col>
-
-          <Col span={3}>
-            <Select
-              value={layout}
-              onChange={(value) => {
-                setLayout(value)
-                saveModulePreferences('explorer', { layout: value })
-              }}
-              style={{ width: '100%' }}
-            >
-              <Option value="dagre">层次布局</Option>
-              <Option value="breadthfirst">广度优先</Option>
-              <Option value="grid">网格布局</Option>
-              <Option value="circle">圆形布局</Option>
-            </Select>
-          </Col>
-
-          <Col span={2}>
-            <Input
-              type="number"
-              placeholder="深度"
-              value={depth}
-              onChange={(e) => {
-                const newDepth = parseInt(e.target.value) || 2
-                setDepth(newDepth)
-                saveModulePreferences('explorer', { depth: newDepth })
-              }}
-              min={1}
-              max={5}
-            />
-          </Col>
-
-          <Col span={2}>
-            <Input
-              type="number"
-              placeholder="限制"
-              value={limit}
-              onChange={(e) => setLimit(parseInt(e.target.value) || 100)}
-              min={10}
-              max={500}
-            />
-          </Col>
-
-          <Col span={3}>
-            <Select
-              placeholder="类别筛选"
-              style={{ width: '100%' }}
-              value={categoryFilter}
-              onChange={setCategoryFilter}
-              allowClear
-            >
-              <Option value="疾病类">疾病类</Option>
-              <Option value="证候类">证候类</Option>
-            </Select>
-          </Col>
-
-          <Col span={2}>
-            <Select
-              placeholder="层级"
-              style={{ width: '100%' }}
-              value={levelFilter}
-              onChange={setLevelFilter}
-              allowClear
-            >
-              <Option value={1}>L1</Option>
-              <Option value={2}>L2</Option>
-              <Option value={3}>L3</Option>
-              <Option value={4}>L4</Option>
-              <Option value={5}>L5</Option>
-            </Select>
-          </Col>
-
-          <Col span={3}>
-            <Input
-              placeholder="代码前缀"
-              value={codePrefixFilter}
-              onChange={(e) => setCodePrefixFilter(e.target.value)}
-              allowClear
-            />
-          </Col>
-
-          <Col span={8}>
-            <Space>
-              <Button
-                type="primary"
-                icon={<NodeIndexOutlined />}
-                onClick={() => loadGraph(rootCode)}
-                loading={loading}
+      {/* 主控制面板 */}
+      <Card className="mb-4 glass-panel">
+        <div className="space-y-4">
+          {/* 第一行：根节点选择和主要操作 */}
+          <div className="flex gap-3 items-center flex-wrap">
+            <div className="flex-1 min-w-[250px]">
+              <Select
+                placeholder="选择根节点"
+                style={{ width: '100%' }}
+                size="large"
+                value={rootCode}
+                onChange={(value) => {
+                  setRootCode(value)
+                  if (value) {
+                    loadGraph(value)
+                  }
+                }}
+                showSearch
+                filterOption={(input, option) => {
+                  const label = String(option?.label ?? '')
+                  return label.toLowerCase().includes(input.toLowerCase())
+                }}
               >
-                加载图谱
-              </Button>
+                {rootNodes.map(node => (
+                  <Option key={node.code} value={node.code} label={node.name}>
+                    {node.code} - {node.name}
+                  </Option>
+                ))}
+              </Select>
+            </div>
+            <Button
+              type="primary"
+              size="large"
+              icon={<NodeIndexOutlined />}
+              onClick={() => loadGraph(rootCode)}
+              loading={loading}
+            >
+              加载图谱
+            </Button>
+            <Button
+              size="large"
+              icon={<ReloadOutlined />}
+              onClick={() => loadGraph(rootCode)}
+              loading={loading}
+            >
+              刷新
+            </Button>
+            <Button
+              size="large"
+              icon={<HomeOutlined />}
+              onClick={resetView}
+            >
+              重置
+            </Button>
+          </div>
 
-              <Button
-                icon={<ReloadOutlined />}
-                onClick={() => loadGraph(rootCode)}
-                loading={loading}
+          {/* 第二行：布局和参数设置 */}
+          <div className="flex gap-3 items-center flex-wrap">
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600 whitespace-nowrap">布局：</span>
+              <Select
+                value={layout}
+                onChange={(value) => {
+                  setLayout(value)
+                  saveModulePreferences('explorer', { layout: value })
+                }}
+                style={{ width: 120 }}
               >
-                刷新
-              </Button>
-
-              <Button
-                icon={<HomeOutlined />}
-                onClick={resetView}
+                <Option value="dagre">层次布局</Option>
+                <Option value="breadthfirst">广度优先</Option>
+                <Option value="grid">网格布局</Option>
+                <Option value="circle">圆形布局</Option>
+              </Select>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600 whitespace-nowrap">深度：</span>
+              <Input
+                type="number"
+                placeholder="深度"
+                value={depth}
+                onChange={(e) => {
+                  const newDepth = parseInt(e.target.value) || 2
+                  setDepth(newDepth)
+                  saveModulePreferences('explorer', { depth: newDepth })
+                }}
+                min={1}
+                max={5}
+                style={{ width: 80 }}
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600 whitespace-nowrap">限制：</span>
+              <Input
+                type="number"
+                placeholder="限制"
+                value={limit}
+                onChange={(e) => setLimit(parseInt(e.target.value) || 100)}
+                min={10}
+                max={500}
+                style={{ width: 100 }}
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600 whitespace-nowrap">类别：</span>
+              <Select
+                placeholder="全部"
+                style={{ width: 120 }}
+                value={categoryFilter}
+                onChange={setCategoryFilter}
+                allowClear
               >
-                重置
-              </Button>
+                <Option value="疾病类">疾病类</Option>
+                <Option value="证候类">证候类</Option>
+              </Select>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600 whitespace-nowrap">层级：</span>
+              <Select
+                placeholder="全部"
+                style={{ width: 100 }}
+                value={levelFilter}
+                onChange={setLevelFilter}
+                allowClear
+              >
+                <Option value={1}>L1</Option>
+                <Option value={2}>L2</Option>
+                <Option value={3}>L3</Option>
+                <Option value={4}>L4</Option>
+                <Option value={5}>L5</Option>
+              </Select>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600 whitespace-nowrap">代码前缀：</span>
+              <Input
+                placeholder="如：A01"
+                value={codePrefixFilter}
+                onChange={(e) => setCodePrefixFilter(e.target.value)}
+                allowClear
+                style={{ width: 120 }}
+              />
+            </div>
+          </div>
 
+          {/* 第三行：视图控制和导出 */}
+          <div className="flex gap-3 items-center flex-wrap">
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600 whitespace-nowrap">视图控制：</span>
               <Button.Group>
                 <Tooltip title="放大 (Ctrl/Cmd + +)">
                   <Button
@@ -449,7 +468,9 @@ const Explorer: React.FC = () => {
                   />
                 </Tooltip>
               </Button.Group>
-
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600 whitespace-nowrap">导出：</span>
               <Button.Group>
                 <Button
                   icon={<DownloadOutlined />}
@@ -459,7 +480,6 @@ const Explorer: React.FC = () => {
                       return
                     }
                     
-                    // 导出为JSON
                     const exportData = {
                       nodes: graphData.nodes.map(node => ({
                         id: node.id,
@@ -495,7 +515,7 @@ const Explorer: React.FC = () => {
                   }}
                   disabled={!graphData}
                 >
-                  导出JSON
+                  JSON
                 </Button>
                 <Button
                   icon={<DownloadOutlined />}
@@ -509,18 +529,19 @@ const Explorer: React.FC = () => {
                   }}
                   disabled={!graphData}
                 >
-                  导出PNG
+                  PNG
                 </Button>
               </Button.Group>
-            </Space>
-          </Col>
-        </Row>
+            </div>
+          </div>
+        </div>
       </Card>
 
-      {/* 节点搜索和图谱分析 */}
-      <Card className="mb-4">
+      {/* 搜索和分析面板 */}
+      <Card className="mb-4 glass-panel">
         <Tabs
           defaultActiveKey="search"
+          size="small"
           items={[
             {
               key: 'search',
@@ -536,7 +557,7 @@ const Explorer: React.FC = () => {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   allowClear
-                  style={{ width: '100%' }}
+                  size="large"
                 />
               )
             },
@@ -568,63 +589,62 @@ const Explorer: React.FC = () => {
         />
       )}
 
-      {/* 图谱可视化 - 支持多种可视化方式 */}
-      <Card style={{ height: 'calc(100vh - 300px)', minHeight: '700px' }}>
+      {/* 图谱可视化区域 */}
+      <Card className="glass-panel" style={{ height: 'calc(100vh - 500px)', minHeight: '600px' }}>
         {loading ? (
-          <LoadingSpinner />
+          <div className="flex items-center justify-center h-full">
+            <LoadingSpinner />
+          </div>
         ) : !graphData ? (
-          <Empty
-            description='请选择根节点并点击"加载图谱"按钮开始可视化'
-            image={Empty.PRESENTED_IMAGE_SIMPLE}
-          >
-            <Button
-              type="primary"
-              icon={<NodeIndexOutlined />}
-              onClick={() => loadGraph()}
-              loading={loading}
+          <div className="flex items-center justify-center h-full">
+            <Empty
+              description='请选择根节点并点击"加载图谱"按钮开始可视化'
+              image={Empty.PRESENTED_IMAGE_SIMPLE}
             >
-              加载根节点图谱
-            </Button>
-          </Empty>
+              <Button
+                type="primary"
+                size="large"
+                icon={<NodeIndexOutlined />}
+                onClick={() => loadGraph()}
+                loading={loading}
+              >
+                加载根节点图谱
+              </Button>
+            </Empty>
+          </div>
         ) : (
-          <>
-            {/* 统计信息 */}
-            <Row gutter={16} className="mb-4">
-              <Col span={6}>
-                <Statistic 
-                  title="节点数量" 
-                  value={graphData.nodeCount} 
-                  prefix={<NodeIndexOutlined />}
-                  valueStyle={{ color: '#1890ff' }}
-                />
-              </Col>
-              <Col span={6}>
-                <Statistic 
-                  title="关系数量" 
-                  value={graphData.edgeCount} 
-                  prefix={<NodeIndexOutlined />}
-                  valueStyle={{ color: '#52c41a' }}
-                />
-              </Col>
-              <Col span={6}>
-                <Statistic 
-                  title="当前布局" 
-                  value={layout === 'dagre' ? '层次' : layout === 'breadthfirst' ? '广度优先' : layout === 'grid' ? '网格' : '圆形'}
-                />
-              </Col>
+          <div className="h-full flex flex-col">
+            {/* 统计信息栏 */}
+            <div className="flex gap-6 items-center mb-4 pb-3 border-b border-gray-200">
+              <Statistic 
+                title="节点数量" 
+                value={graphData.nodeCount} 
+                prefix={<NodeIndexOutlined />}
+                valueStyle={{ color: '#1890ff', fontSize: '18px' }}
+              />
+              <Statistic 
+                title="关系数量" 
+                value={graphData.edgeCount} 
+                prefix={<NodeIndexOutlined />}
+                valueStyle={{ color: '#52c41a', fontSize: '18px' }}
+              />
+              <Statistic 
+                title="当前布局" 
+                value={layout === 'dagre' ? '层次' : layout === 'breadthfirst' ? '广度优先' : layout === 'grid' ? '网格' : '圆形'}
+                valueStyle={{ fontSize: '18px' }}
+              />
               {selectedNode && (
-                <Col span={6}>
-                  <Statistic 
-                    title="选中节点" 
-                    value={selectedNode.name || selectedNode.code}
-                    valueStyle={{ fontSize: 14 }}
-                  />
-                </Col>
+                <div className="ml-auto">
+                  <div className="text-sm text-gray-500 mb-1">选中节点</div>
+                  <div className="text-base font-semibold text-gray-800">
+                    {selectedNode.name || selectedNode.code}
+                  </div>
+                </div>
               )}
-            </Row>
+            </div>
 
-            {/* 图谱可视化 */}
-            <div style={{ width: '100%', height: 'calc(100vh - 400px)', minHeight: '650px', position: 'relative' }}>
+            {/* 图谱可视化容器 */}
+            <div style={{ flex: 1, position: 'relative', minHeight: '500px' }}>
               {/* 根据节点数量自动选择使用虚拟渲染或普通渲染 */}
               {graphData.nodes.length > 200 ? (
                 <VirtualizedCytoscapeGraph
@@ -637,7 +657,7 @@ const Explorer: React.FC = () => {
                   categoryFilter={categoryFilter}
                   levelFilter={levelFilter}
                   codePrefixFilter={codePrefixFilter}
-                  style={{ width: '100%', height: '100%', minHeight: '650px' }}
+                  style={{ width: '100%', height: '100%' }}
                   virtualRenderThreshold={200}
                   visibleRange={150}
                 />
@@ -653,23 +673,27 @@ const Explorer: React.FC = () => {
                   categoryFilter={categoryFilter}
                   levelFilter={levelFilter}
                   codePrefixFilter={codePrefixFilter}
-                  style={{ width: '100%', height: '100%', minHeight: '650px' }}
+                  style={{ width: '100%', height: '100%' }}
                 />
               )}
               
-              {/* 操作提示 */}
+              {/* 选中节点信息卡片 */}
               {selectedNode && (
-                <div className="absolute top-4 right-4 bg-white p-3 rounded-lg shadow-lg border border-gray-200 z-10">
+                <div className="absolute top-4 right-4 bg-white p-4 rounded-lg shadow-lg border border-gray-200 z-10 max-w-xs">
                   <div className="text-sm">
-                    <div className="font-bold mb-2">选中节点</div>
-                    <div>代码: {selectedNode.code}</div>
-                    <div>名称: {selectedNode.name}</div>
-                    <div>类别: {selectedNode.category}</div>
-                    <div className="mt-2">
+                    <div className="font-bold text-base mb-3 text-gray-800">选中节点信息</div>
+                    <div className="space-y-1.5 mb-3">
+                      <div><span className="text-gray-500">代码：</span><span className="font-mono text-gray-800">{selectedNode.code}</span></div>
+                      <div><span className="text-gray-500">名称：</span><span className="text-gray-800">{selectedNode.name}</span></div>
+                      <div><span className="text-gray-500">类别：</span><span className="text-gray-800">{selectedNode.category}</span></div>
+                      <div><span className="text-gray-500">层级：</span><span className="text-gray-800">L{selectedNode.level}</span></div>
+                    </div>
+                    <div className="flex gap-2">
                       <Button
                         size="small"
+                        type="primary"
                         onClick={() => navigate(`/nodes/${selectedNode.code}`)}
-                        className="mr-2"
+                        block
                       >
                         查看详情
                       </Button>
@@ -677,6 +701,7 @@ const Explorer: React.FC = () => {
                         size="small"
                         onClick={() => expandNodeData(selectedNode)}
                         loading={loading}
+                        block
                       >
                         展开节点
                       </Button>
@@ -685,7 +710,7 @@ const Explorer: React.FC = () => {
                 </div>
               )}
             </div>
-          </>
+          </div>
         )}
       </Card>
     </div>
