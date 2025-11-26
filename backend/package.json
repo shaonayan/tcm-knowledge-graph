@@ -6,7 +6,7 @@
   "main": "dist/app.js",
   "scripts": {
     "dev": "nodemon src/app.ts",
-    "build": "tsc && tsc-alias",
+    "build": "tsc && tsc-alias -p tsconfig.json",
     "start": "node dist/app.js",
     "test": "jest",
     "test:watch": "jest --watch",

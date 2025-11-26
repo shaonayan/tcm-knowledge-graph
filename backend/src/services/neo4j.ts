@@ -1,5 +1,5 @@
 import neo4j, { Driver, Session } from 'neo4j-driver'
-import { logger } from '@utils/logger'
+import { logger } from '@utils/logger.js'
 
 class Neo4jService {
   private driver: Driver | null = null

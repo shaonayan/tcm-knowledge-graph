@@ -8,16 +8,16 @@ import swaggerJsdoc from 'swagger-jsdoc'
 import swaggerUi from 'swagger-ui-express'
 import dotenv from 'dotenv'
 
-import { errorHandler } from '@middleware/errorHandler'
-import { notFoundHandler } from '@middleware/notFoundHandler'
-import { logger } from '@utils/logger'
+import { errorHandler } from '@middleware/errorHandler.js'
+import { notFoundHandler } from '@middleware/notFoundHandler.js'
+import { logger } from '@utils/logger.js'
 
 // 路由导入
-import graphRoutes from '@routes/graph'
-import searchRoutes from '@routes/search'
-import analyticsRoutes from '@routes/analytics'
-import userRoutes from '@routes/users'
-import { neo4jService } from '@services/neo4j'
+import graphRoutes from '@routes/graph.js'
+import searchRoutes from '@routes/search.js'
+import analyticsRoutes from '@routes/analytics.js'
+import userRoutes from '@routes/users.js'
+import { neo4jService } from '@services/neo4j.js'
 
 // 加载环境变量
 dotenv.config()

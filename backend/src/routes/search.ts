@@ -1,6 +1,6 @@
 import { Router, Request, Response } from 'express'
-import { neo4jService } from '@services/neo4j'
-import { logger } from '@utils/logger'
+import { neo4jService } from '@services/neo4j.js'
+import { logger } from '@utils/logger.js'
 
 const router = Router()
 
