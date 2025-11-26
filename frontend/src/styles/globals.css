@@ -411,7 +411,13 @@ body {
   margin-bottom: 16px;
 }
 
-.glass-panel {
+/* ============================================
+   全局液态玻璃效果 - Apple风格
+   ============================================ */
+
+/* 液态玻璃基础类 */
+.glass-panel,
+.glass-effect {
   background: rgba(255, 255, 255, 0.65) !important;
   border-radius: 20px !important;
   border: 1px solid rgba(255, 255, 255, 0.8) !important;
@@ -426,7 +432,8 @@ body {
   overflow: hidden;
 }
 
-.glass-panel::before {
+.glass-panel::before,
+.glass-effect::before {
   content: '';
   position: absolute;
   top: 0;
@@ -435,9 +442,11 @@ body {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
   pointer-events: none;
+  z-index: 1;
 }
 
-.glass-panel:hover {
+.glass-panel:hover,
+.glass-effect:hover {
   background: rgba(255, 255, 255, 0.75) !important;
   box-shadow: 
     0 12px 40px rgba(0, 0, 0, 0.08),
@@ -445,6 +454,29 @@ body {
     0 -1px 0 rgba(0, 0, 0, 0.02) inset !important;
   transform: translateY(-1px);
   border-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* 轻量级玻璃效果（用于小元素） */
+.glass-light {
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.04),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset !important;
+}
+
+/* 强化玻璃效果（用于重要元素） */
+.glass-strong {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: saturate(200%) blur(30px);
+  -webkit-backdrop-filter: saturate(200%) blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 
+    0 16px 48px rgba(0, 0, 0, 0.1),
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.03) inset !important;
 }
 
 .app-section-title {
@@ -507,17 +539,18 @@ body {
   border-right: none;
 }
 
+/* 所有卡片应用液态玻璃效果 */
 .ant-card {
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
   box-shadow: 
     0 8px 32px rgba(0, 0, 0, 0.06),
     0 1px 0 rgba(255, 255, 255, 0.8) inset,
-    0 -1px 0 rgba(0, 0, 0, 0.02) inset;
-  background: rgba(255, 255, 255, 0.65);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    0 -1px 0 rgba(0, 0, 0, 0.02) inset !important;
+  background: rgba(255, 255, 255, 0.65) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
   overflow: hidden;
   position: relative;
 }
@@ -531,16 +564,17 @@ body {
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
   pointer-events: none;
+  z-index: 1;
 }
 
 .ant-card:hover {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.75) !important;
   box-shadow: 
     0 12px 40px rgba(0, 0, 0, 0.08),
     0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 -1px 0 rgba(0, 0, 0, 0.02) inset;
+    0 -1px 0 rgba(0, 0, 0, 0.02) inset !important;
   transform: translateY(-1px);
-  border-color: rgba(255, 255, 255, 0.9);
+  border-color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .stat-card-modern {
@@ -565,59 +599,84 @@ body {
 }
 
 .ant-card-head {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
   padding: 0 24px;
   min-height: 56px;
+  background: transparent !important;
 }
 
 .ant-card-head-title {
   font-weight: 600;
   font-size: 16px;
+  color: #1a1a1a;
+  letter-spacing: -0.01em;
 }
 
 .ant-card-body {
   padding: 24px;
+  background: transparent !important;
 }
 
-.ant-input, .ant-select-selector {
-  border-radius: 12px;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+/* 输入框和选择器应用液态玻璃效果 */
+.ant-input, 
+.ant-select-selector,
+.ant-input-affix-wrapper {
+  border-radius: 12px !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: saturate(180%) blur(12px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(12px) !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset !important;
 }
 
-.ant-input:hover, .ant-select:hover .ant-select-selector {
-  border-color: rgba(99, 102, 241, 0.3);
-  background: rgba(255, 255, 255, 0.9);
+.ant-input:hover, 
+.ant-select:hover .ant-select-selector,
+.ant-input-affix-wrapper:hover {
+  border-color: rgba(99, 102, 241, 0.4) !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 1px 0 rgba(255, 255, 255, 0.7) inset !important;
 }
 
-.ant-input:focus, .ant-select-focused .ant-select-selector {
-  border-color: #6366f1;
-  background: rgba(255, 255, 255, 0.95);
+.ant-input:focus, 
+.ant-select-focused .ant-select-selector,
+.ant-input-affix-wrapper-focused {
+  border-color: #6366f1 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
   box-shadow: 
     0 0 0 4px rgba(99, 102, 241, 0.1),
-    0 2px 8px rgba(0, 0, 0, 0.06);
+    0 4px 16px rgba(0, 0, 0, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.8) inset !important;
+}
+
+/* 按钮应用液态玻璃效果 */
+.ant-btn {
+  border-radius: 12px !important;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
 }
 
 .ant-btn-primary {
-  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-  border: none;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+  border: none !important;
   box-shadow: 
     0 4px 14px rgba(99, 102, 241, 0.25),
-    0 1px 0 rgba(255, 255, 255, 0.3) inset;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  font-weight: 500;
-  letter-spacing: -0.01em;
+    0 1px 0 rgba(255, 255, 255, 0.3) inset !important;
+  color: #fff !important;
 }
 
 .ant-btn-primary:hover {
-  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
+  background: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%) !important;
   box-shadow: 
     0 6px 20px rgba(99, 102, 241, 0.35),
-    0 1px 0 rgba(255, 255, 255, 0.4) inset;
+    0 1px 0 rgba(255, 255, 255, 0.4) inset !important;
   transform: translateY(-1px);
 }
 
@@ -625,7 +684,26 @@ body {
   transform: translateY(0);
   box-shadow: 
     0 2px 8px rgba(99, 102, 241, 0.3),
-    0 1px 0 rgba(255, 255, 255, 0.2) inset;
+    0 1px 0 rgba(255, 255, 255, 0.2) inset !important;
+}
+
+.ant-btn-default {
+  background: rgba(255, 255, 255, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.04),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset !important;
+}
+
+.ant-btn-default:hover {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.06),
+    0 1px 0 rgba(255, 255, 255, 0.7) inset !important;
+  transform: translateY(-1px);
 }
 
 .ant-menu-item-selected {
@@ -721,15 +799,22 @@ body {
   font-weight: 400;
 }
 
+/* Statistic应用液态玻璃效果 */
+.ant-statistic {
+  background: transparent !important;
+}
+
 .ant-statistic-title {
-  color: var(--text-secondary);
+  color: #8e8e93;
   font-size: 14px;
   font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 .ant-statistic-content {
-  color: var(--text-primary);
+  color: #1a1a1a;
   font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 /* 图谱可视化容器样式 */
@@ -1293,16 +1378,32 @@ html {
 }
 
 /* 优化标签页样式 */
+/* Tabs应用液态玻璃效果 */
+.ant-tabs {
+  background: transparent !important;
+}
+
 .ant-tabs-tab {
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 10px !important;
+  transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  background: transparent !important;
 }
 
 .ant-tabs-tab:hover {
-  color: var(--primary-color) !important;
+  color: #6366f1 !important;
+  background: rgba(255, 255, 255, 0.5) !important;
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+}
+
+.ant-tabs-tab-active {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
 }
 
 .ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: var(--primary-color) !important;
+  color: #6366f1 !important;
   font-weight: 600;
 }
 
@@ -1337,13 +1438,16 @@ html {
 }
 
 /* 优化空状态 */
+/* Empty应用液态玻璃效果 */
 .ant-empty {
   padding: 40px 0;
+  background: transparent !important;
 }
 
 .ant-empty-description {
-  color: var(--text-secondary);
+  color: #8e8e93;
   font-size: 14px;
+  letter-spacing: -0.01em;
 }
 
 /* 优化消息提示 */
@@ -1351,15 +1455,39 @@ html {
   z-index: 9999;
 }
 
+/* Message应用液态玻璃效果 */
 .ant-message-notice-content {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.8) inset !important;
 }
 
 /* 优化模态框 */
-.ant-modal {
-  border-radius: 12px;
+/* Modal应用液态玻璃效果 */
+.ant-modal-content {
+  border-radius: 24px !important;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: saturate(180%) blur(24px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(24px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.15),
+    0 1px 0 rgba(255, 255, 255, 0.9) inset !important;
   overflow: hidden;
+}
+
+.ant-modal-header {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.ant-modal-body {
+  background: transparent !important;
 }
 
 .ant-modal-header {
@@ -1372,10 +1500,17 @@ html {
 }
 
 /* 优化下拉菜单 */
+/* Dropdown应用液态玻璃效果 */
 .ant-dropdown-menu {
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  padding: 4px 0;
+  border-radius: 16px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.8) inset !important;
+  padding: 8px 0 !important;
 }
 
 .ant-dropdown-menu-item {
@@ -1421,16 +1556,28 @@ html {
 }
 
 /* 优化工具提示 */
+/* Tooltip应用液态玻璃效果 */
 .ant-tooltip-inner {
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 12px !important;
+  background: rgba(0, 0, 0, 0.85) !important;
+  backdrop-filter: saturate(180%) blur(16px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(16px) !important;
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.2),
+    0 1px 0 rgba(255, 255, 255, 0.1) inset !important;
 }
 
 /* 优化警告提示 */
+/* Alert应用液态玻璃效果 */
 .ant-alert {
-  border-radius: 8px;
-  border: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 16px !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: saturate(180%) blur(16px) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(16px) !important;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.06),
+    0 1px 0 rgba(255, 255, 255, 0.7) inset !important;
 }
 
 /* 优化时间选择器 */

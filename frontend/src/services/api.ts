@@ -1,19 +1,30 @@
 // 根据环境变量自动选择API地址
-const API_BASE_URL = import.meta.env.VITE_API_URL || 
-  (import.meta.env.PROD ? 'https://tcm-knowledge-graph.onrender.com/api' : 'http://localhost:3001/api')
+// 优先使用环境变量，如果没有则根据环境自动选择
+let API_BASE_URL = import.meta.env.VITE_API_URL
 
-// 调试信息：在控制台输出API地址（仅在开发环境）
-if (import.meta.env.DEV) {
-  console.log('🔍 API调试信息:')
-  console.log('VITE_API_URL:', import.meta.env.VITE_API_URL)
-  console.log('PROD:', import.meta.env.PROD)
-  console.log('最终API地址:', API_BASE_URL)
+if (!API_BASE_URL) {
+  if (import.meta.env.PROD) {
+    // 生产环境默认使用Render后端
+    API_BASE_URL = 'https://tcm-knowledge-graph.onrender.com/api'
+  } else {
+    // 开发环境使用本地后端
+    API_BASE_URL = 'http://localhost:3001/api'
+  }
 }
 
-// 在生产环境也输出一次（帮助调试）
-if (import.meta.env.PROD && typeof window !== 'undefined') {
-  console.log('🌐 生产环境API地址:', API_BASE_URL)
+// 确保API地址以/api结尾
+if (!API_BASE_URL.endsWith('/api')) {
+  API_BASE_URL = API_BASE_URL.endsWith('/') 
+    ? API_BASE_URL + 'api' 
+    : API_BASE_URL + '/api'
+}
+
+// 调试信息：始终输出API地址（帮助调试）
+if (typeof window !== 'undefined') {
+  console.log('🌐 API配置信息:')
   console.log('环境变量VITE_API_URL:', import.meta.env.VITE_API_URL || '未设置')
+  console.log('当前环境:', import.meta.env.PROD ? '生产环境' : '开发环境')
+  console.log('最终API地址:', API_BASE_URL)
 }
 
 export interface StatsData {
