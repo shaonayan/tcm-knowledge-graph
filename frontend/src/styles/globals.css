@@ -1,8 +1,8 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 全局样式 */
+/* 鍏ㄥ眬鏍峰紡 */
 * {
   box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '寰蒋闆呴粦', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: transparent !important;
@@ -21,7 +21,7 @@ body {
   min-height: 100vh;
 }
 
-/* 渐变背景动画（备用方案） */
+/* 娓愬彉鑳屾櫙鍔ㄧ敾锛堝鐢ㄦ柟妗堬級 */
 @keyframes gradientShift {
   0% {
     background-position: 0% 50%;
@@ -40,7 +40,7 @@ body {
   animation: gradientShift 15s ease infinite;
 }
 
-/* 粒子动画背景（备用方案） */
+/* 绮掑瓙鍔ㄧ敾鑳屾櫙锛堝鐢ㄦ柟妗堬級 */
 @keyframes float {
   0%, 100% {
     transform: translate(0, 0) scale(1);
@@ -88,7 +88,7 @@ body {
   min-height: 100vh;
 }
 
-/* 背景遮罩层，增强可读性（几乎透明，让背景清晰可见） */
+/* 鑳屾櫙閬僵灞傦紝澧炲己鍙鎬э紙鍑犱箮閫忔槑锛岃鑳屾櫙娓呮櫚鍙锛?*/
 .app-shell::before {
   content: '';
   position: fixed;
@@ -98,7 +98,7 @@ body {
   pointer-events: none;
 }
 
-/* 确保内容在遮罩层之上 */
+/* 纭繚鍐呭鍦ㄩ伄缃╁眰涔嬩笂 */
 .app-content-surface {
   position: relative;
   z-index: 1;
@@ -111,7 +111,7 @@ body {
   background: transparent !important;
 }
 
-/* 移除旧的装饰性元素，使用背景图片 */
+/* 绉婚櫎鏃х殑瑁呴グ鎬у厓绱狅紝浣跨敤鑳屾櫙鍥剧墖 */
 
 @keyframes float {
   0%, 100% {
@@ -191,7 +191,7 @@ body {
   }
 }
 
-/* 专业配色方案 - 现代优雅风格 */
+/* 涓撲笟閰嶈壊鏂规 - 鐜颁唬浼橀泤椋庢牸 */
 :root {
   --primary-color: #6366f1;
   --primary-hover: #818cf8;
@@ -223,7 +223,7 @@ body {
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
-/* 自定义滚动条样式 */
+/* 鑷畾涔夋粴鍔ㄦ潯鏍峰紡 */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -243,8 +243,8 @@ body {
   background: #a8a8a8;
 }
 
-/* Ant Design样式覆盖 - 全新透明设计 */
-/* 确保所有Layout组件都是透明的 */
+/* Ant Design鏍峰紡瑕嗙洊 - 鍏ㄦ柊閫忔槑璁捐 */
+/* 纭繚鎵€鏈塋ayout缁勪欢閮芥槸閫忔槑鐨?*/
 .ant-layout,
 .ant-layout-content,
 .ant-layout-sider,
@@ -491,7 +491,7 @@ body {
   background: transparent !important;
 }
 
-/* 页面容器统一样式 - 合并定义 */
+/* 椤甸潰瀹瑰櫒缁熶竴鏍峰紡 - 鍚堝苟瀹氫箟 */
 .page-wrapper {
   padding: clamp(20px, 2vw, 32px);
   min-height: calc(100vh - 80px);
@@ -505,16 +505,16 @@ body {
   margin: 0;
 }
 
-/* 确保卡片间距统一 */
+/* 纭繚鍗＄墖闂磋窛缁熶竴 */
 .ant-card {
   margin-bottom: 16px;
 }
 
 /* ============================================
-   全局液态玻璃效果 - Apple风格
+   鍏ㄥ眬娑叉€佺幓鐠冩晥鏋?- Apple椋庢牸
    ============================================ */
 
-/* 液态玻璃基础类 */
+/* 娑叉€佺幓鐠冨熀纭€绫?*/
 .glass-panel,
 .glass-effect {
   background: rgba(255, 255, 255, 0.65) !important;
@@ -555,7 +555,7 @@ body {
   border-color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* 轻量级玻璃效果（用于小元素） */
+/* 杞婚噺绾х幓鐠冩晥鏋滐紙鐢ㄤ簬灏忓厓绱狅級 */
 .glass-light {
   background: rgba(255, 255, 255, 0.5) !important;
   backdrop-filter: saturate(180%) blur(3px);
@@ -566,7 +566,7 @@ body {
     0 1px 0 rgba(255, 255, 255, 0.6) inset !important;
 }
 
-/* 强化玻璃效果（用于重要元素） */
+/* 寮哄寲鐜荤拑鏁堟灉锛堢敤浜庨噸瑕佸厓绱狅級 */
 .glass-strong {
   background: rgba(255, 255, 255, 0.8) !important;
   backdrop-filter: saturate(200%) blur(5px);
@@ -595,12 +595,12 @@ body {
   margin-bottom: 0;
 }
 
-/* 统一间距 */
+/* 缁熶竴闂磋窛 */
 .mb-8 {
   margin-bottom: 32px !important;
 }
 
-/* 优化Row和Col间距 */
+/* 浼樺寲Row鍜孋ol闂磋窛 */
 .ant-row {
   margin-left: -8px !important;
   margin-right: -8px !important;
@@ -611,7 +611,7 @@ body {
   padding-right: 8px !important;
 }
 
-/* 侧边栏触发按钮样式 */
+/* 渚ц竟鏍忚Е鍙戞寜閽牱寮?*/
 .sider-trigger {
   position: fixed;
   left: 0;
@@ -661,7 +661,7 @@ body {
   display: none !important;
 }
 
-/* 所有卡片应用透明玻璃效果 */
+/* 鎵€鏈夊崱鐗囧簲鐢ㄩ€忔槑鐜荤拑鏁堟灉 */
 .ant-card {
   border-radius: 24px !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -739,7 +739,7 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
-/* 输入框和选择器应用透明玻璃效果 */
+/* 杈撳叆妗嗗拰閫夋嫨鍣ㄥ簲鐢ㄩ€忔槑鐜荤拑鏁堟灉 */
 .ant-input, 
 .ant-select-selector,
 .ant-input-affix-wrapper {
@@ -781,7 +781,7 @@ body {
     0 1px 0 rgba(255, 255, 255, 0.2) inset !important;
 }
 
-/* 按钮应用透明玻璃效果 */
+/* 鎸夐挳搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-btn {
   border-radius: 12px !important;
   font-weight: 500;
@@ -848,7 +848,7 @@ body {
   color: var(--primary-color) !important;
 }
 
-/* 页面容器统一样式 */
+/* 椤甸潰瀹瑰櫒缁熶竴鏍峰紡 */
 .page-wrapper {
   padding: 24px;
   min-height: calc(100vh - 72px);
@@ -861,7 +861,7 @@ body {
   width: 100%;
 }
 
-/* 标题区域统一样式 */
+/* 鏍囬鍖哄煙缁熶竴鏍峰紡 */
 .page-header {
   margin-bottom: 24px;
 }
@@ -934,7 +934,7 @@ body {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* Statistic应用透明玻璃效果 */
+/* Statistic搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-statistic {
   background: transparent !important;
 }
@@ -954,7 +954,7 @@ body {
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
-/* 图谱可视化容器样式 */
+/* 鍥捐氨鍙鍖栧鍣ㄦ牱寮?*/
 .graph-container {
   width: 100%;
   height: 100%;
@@ -970,7 +970,7 @@ body {
   height: 100%;
 }
 
-/* 节点样式 */
+/* 鑺傜偣鏍峰紡 */
 .graph-node {
   cursor: pointer;
   transition: all 0.3s ease;
@@ -986,7 +986,7 @@ body {
   stroke-width: 3px;
 }
 
-/* 边样式 */
+/* 杈规牱寮?*/
 .graph-edge {
   stroke: #d9d9d9;
   stroke-width: 1px;
@@ -998,7 +998,7 @@ body {
   stroke-width: 2px;
 }
 
-/* 启动画面 */
+/* 鍚姩鐢婚潰 */
 .startup-overlay {
   position: fixed;
   inset: 0;
@@ -1015,7 +1015,7 @@ body {
   visibility: visible;
 }
 
-/* 启动画面尝试加载GIF背景 */
+/* 鍚姩鐢婚潰灏濊瘯鍔犺浇GIF鑳屾櫙 */
 .startup-overlay::before {
   content: '';
   position: absolute;
@@ -1202,7 +1202,7 @@ body {
   }
 }
 
-/* 搜索高亮样式 */
+/* 鎼滅储楂樹寒鏍峰紡 */
 .search-highlight {
   background-color: #fff566;
   padding: 2px 4px;
@@ -1210,7 +1210,7 @@ body {
   font-weight: 500;
 }
 
-/* 统计卡片样式 */
+/* 缁熻鍗＄墖鏍峰紡 */
 .stat-card {
   background: #ffffff;
   border: 1px solid #e5e7eb;
@@ -1236,7 +1236,7 @@ body {
   color: #595959;
 }
 
-/* 加载动画 */
+/* 鍔犺浇鍔ㄧ敾 */
 .loading-spinner {
   display: flex;
   justify-content: center;
@@ -1244,7 +1244,7 @@ body {
   height: 200px;
 }
 
-/* 响应式样式 */
+/* 鍝嶅簲寮忔牱寮?*/
 @media (max-width: 768px) {
   .ant-layout-header {
     padding: 0 16px;
@@ -1263,7 +1263,7 @@ body {
   }
 }
 
-/* 动画效果 */
+/* 鍔ㄧ敾鏁堟灉 */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -1292,7 +1292,7 @@ body {
   animation: pulse 2s infinite;
 }
 
-/* 工具提示样式 */
+/* 宸ュ叿鎻愮ず鏍峰紡 */
 .custom-tooltip {
   background: rgba(0, 0, 0, 0.85);
   color: white;
@@ -1306,7 +1306,7 @@ body {
   backdrop-filter: blur(10px);
 }
 
-/* 页面标题样式 */
+/* 椤甸潰鏍囬鏍峰紡 */
 .page-title {
   font-size: 28px;
   font-weight: 700;
@@ -1323,13 +1323,13 @@ body {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* 卡片组样式 */
+/* 鍗＄墖缁勬牱寮?*/
 .card-group {
   display: grid;
   gap: 16px;
 }
 
-/* 渐变背景 */
+/* 娓愬彉鑳屾櫙 */
 .gradient-bg-primary {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
@@ -1342,7 +1342,7 @@ body {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
 
-/* 专业按钮样式 */
+/* 涓撲笟鎸夐挳鏍峰紡 */
 .btn-gradient {
   background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
   border: none;
@@ -1358,7 +1358,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* 标签样式增强 */
+/* 鏍囩鏍峰紡澧炲己 */
 .ant-tag {
   border-radius: 6px;
   padding: 2px 10px;
@@ -1366,8 +1366,8 @@ body {
   border: none;
 }
 
-/* 表格样式 */
-/* Table应用透明玻璃效果 */
+/* 琛ㄦ牸鏍峰紡 */
+/* Table搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-table {
   border-radius: 12px;
   overflow: hidden;
@@ -1390,7 +1390,7 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
 }
 
-/* 输入框增强 */
+/* 杈撳叆妗嗗寮?*/
 .ant-input-affix-wrapper {
   border-radius: 8px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1405,9 +1405,9 @@ body {
   box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.1);
 }
 
-/* 页面容器统一样式 - 已在前面定义，此处删除重复 */
+/* 椤甸潰瀹瑰櫒缁熶竴鏍峰紡 - 宸插湪鍓嶉潰瀹氫箟锛屾澶勫垹闄ら噸澶?*/
 
-/* 优化响应式 - Apple风格适配 */
+/* 浼樺寲鍝嶅簲寮?- Apple椋庢牸閫傞厤 */
 @media (max-width: 1400px) {
   .app-header__chip-label {
     display: none;
@@ -1510,19 +1510,19 @@ body {
   }
 }
 
-/* 平滑滚动 */
+/* 骞虫粦婊氬姩 */
 html {
   scroll-behavior: smooth;
 }
 
-/* 优化焦点样式 */
+/* 浼樺寲鐒︾偣鏍峰紡 */
 *:focus-visible {
   outline: 2px solid var(--primary-color);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* 优化按钮组样式 */
+/* 浼樺寲鎸夐挳缁勬牱寮?*/
 .ant-btn-group .ant-btn {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1532,16 +1532,16 @@ html {
   transform: translateY(-1px);
 }
 
-/* 优化卡片悬停效果 */
+/* 浼樺寲鍗＄墖鎮仠鏁堟灉 */
 .ant-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 此样式已在上面定义，删除重复 */
+/* 姝ゆ牱寮忓凡鍦ㄤ笂闈㈠畾涔夛紝鍒犻櫎閲嶅 */
 
-/* 输入框样式已在上面定义，删除重复 */
+/* 杈撳叆妗嗘牱寮忓凡鍦ㄤ笂闈㈠畾涔夛紝鍒犻櫎閲嶅 */
 
-/* 优化表格样式 */
+/* 浼樺寲琛ㄦ牸鏍峰紡 */
 .ant-table-tbody > tr:hover > td {
   background: rgba(255, 255, 255, 0.05) !important;
 }
@@ -1550,8 +1550,8 @@ html {
   background: rgba(255, 255, 255, 0.1) !important;
 }
 
-/* 优化标签页样式 */
-/* Tabs应用透明玻璃效果 */
+/* 浼樺寲鏍囩椤垫牱寮?*/
+/* Tabs搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-tabs {
   background: transparent !important;
 }
@@ -1582,7 +1582,7 @@ html {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* 优化统计卡片 */
+/* 浼樺寲缁熻鍗＄墖 */
 .ant-statistic-content {
   transition: all 0.3s ease;
 }
@@ -1591,7 +1591,7 @@ html {
   transform: scale(1.05);
 }
 
-/* 优化加载动画 */
+/* 浼樺寲鍔犺浇鍔ㄧ敾 */
 @keyframes shimmer {
   0% {
     background-position: -1000px 0;
@@ -1612,8 +1612,8 @@ html {
   animation: shimmer 2s infinite;
 }
 
-/* 优化空状态 */
-/* Empty应用透明玻璃效果 */
+/* 浼樺寲绌虹姸鎬?*/
+/* Empty搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-empty {
   padding: 40px 0;
   background: transparent !important;
@@ -1626,12 +1626,12 @@ html {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* 优化消息提示 */
+/* 浼樺寲娑堟伅鎻愮ず */
 .ant-message {
   z-index: 9999;
 }
 
-/* Message应用透明玻璃效果 */
+/* Message搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-message-notice-content {
   border-radius: 16px !important;
   background: rgba(0, 0, 0, 0.7) !important;
@@ -1644,8 +1644,8 @@ html {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* 优化模态框 */
-/* Modal应用透明玻璃效果 */
+/* 浼樺寲妯℃€佹 */
+/* Modal搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-modal-content {
   border-radius: 24px !important;
   background: rgba(0, 0, 0, 0.6) !important;
@@ -1683,8 +1683,8 @@ html {
   padding: 24px;
 }
 
-/* 优化下拉菜单 */
-/* Dropdown应用透明玻璃效果 */
+/* 浼樺寲涓嬫媺鑿滃崟 */
+/* Dropdown搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-dropdown-menu {
   border-radius: 16px !important;
   background: rgba(0, 0, 0, 0.6) !important;
@@ -1714,8 +1714,8 @@ html {
   background: rgba(220, 38, 38, 0.08);
 }
 
-/* 优化进度条 */
-/* Progress应用透明玻璃效果 */
+/* 浼樺寲杩涘害鏉?*/
+/* Progress搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-progress {
   background: rgba(0, 0, 0, 0.2) !important;
   border-radius: 8px !important;
@@ -1731,7 +1731,7 @@ html {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8) !important;
 }
 
-/* Select下拉菜单透明效果 */
+/* Select涓嬫媺鑿滃崟閫忔槑鏁堟灉 */
 .ant-select-dropdown {
   background: rgba(0, 0, 0, 0.6) !important;
   backdrop-filter: blur(20px) saturate(180%) !important;
@@ -1758,8 +1758,8 @@ html {
   font-weight: 500;
 }
 
-/* 优化分页器 */
-/* Pagination应用透明玻璃效果 */
+/* 浼樺寲鍒嗛〉鍣?*/
+/* Pagination搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-pagination {
   color: rgba(255, 255, 255, 0.9) !important;
 }
@@ -1790,7 +1790,7 @@ html {
   font-weight: 600;
 }
 
-/* 优化选择器 */
+/* 浼樺寲閫夋嫨鍣?*/
 .ant-select-item-option-selected {
   background: rgba(255, 255, 255, 0.15) !important;
   color: #ffffff !important;
@@ -1802,8 +1802,8 @@ html {
   color: #ffffff !important;
 }
 
-/* 优化工具提示 */
-/* Tooltip应用透明玻璃效果 */
+/* 浼樺寲宸ュ叿鎻愮ず */
+/* Tooltip搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-tooltip-inner {
   border-radius: 12px !important;
   background: rgba(0, 0, 0, 0.8) !important;
@@ -1816,8 +1816,8 @@ html {
   color: #ffffff !important;
 }
 
-/* 优化警告提示 */
-/* Alert应用透明玻璃效果 */
+/* 浼樺寲璀﹀憡鎻愮ず */
+/* Alert搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-alert {
   border-radius: 16px !important;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -1830,7 +1830,7 @@ html {
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
-/* 优化时间选择器 */
+/* 浼樺寲鏃堕棿閫夋嫨鍣?*/
 .ant-picker {
   border-radius: 8px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1840,12 +1840,12 @@ html {
   border-color: var(--primary-color);
 }
 
-/* 优化开关 */
+/* 浼樺寲寮€鍏?*/
 .ant-switch-checked {
   background-color: var(--primary-color);
 }
 
-/* 优化滑块 */
+/* 浼樺寲婊戝潡 */
 .ant-slider-track {
   background-color: var(--primary-color);
 }
@@ -1858,7 +1858,7 @@ html {
   border-color: var(--primary-hover);
 }
 
-/* 优化步骤条 */
+/* 浼樺寲姝ラ鏉?*/
 .ant-steps-item-process .ant-steps-item-icon {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
@@ -1868,13 +1868,13 @@ html {
   border-color: var(--primary-color);
 }
 
-/* 优化时间轴 */
+/* 浼樺寲鏃堕棿杞?*/
 .ant-timeline-item-head {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
 
-/* 优化骨架屏 */
+/* 浼樺寲楠ㄦ灦灞?*/
 .ant-skeleton-title {
   background: linear-gradient(
     90deg,
@@ -1897,12 +1897,12 @@ html {
   animation: shimmer 1.5s infinite;
 }
 
-/* 优化徽标 */
+/* 浼樺寲寰芥爣 */
 .ant-badge-count {
   box-shadow: 0 0 0 1px #fff;
 }
 
-/* 优化描述列表 */
+/* 浼樺寲鎻忚堪鍒楄〃 */
 .ant-descriptions-item-label {
   font-weight: 500;
   color: var(--text-primary);
@@ -1912,7 +1912,7 @@ html {
   color: var(--text-secondary);
 }
 
-/* 优化结果页 */
+/* 浼樺寲缁撴灉椤?*/
 .ant-result-title {
   color: var(--text-primary);
   font-weight: 600;
@@ -1922,7 +1922,7 @@ html {
   color: var(--text-secondary);
 }
 
-/* 优化锚点 */
+/* 浼樺寲閿氱偣 */
 .ant-anchor-link-title {
   color: var(--text-secondary);
   transition: all 0.2s ease;
@@ -1933,7 +1933,7 @@ html {
   font-weight: 500;
 }
 
-/* 优化折叠面板 */
+/* 浼樺寲鎶樺彔闈㈡澘 */
 .ant-collapse-header {
   font-weight: 500;
 }
@@ -1942,7 +1942,7 @@ html {
   color: var(--primary-color);
 }
 
-/* 优化评分 */
+/* 浼樺寲璇勫垎 */
 .ant-rate-star {
   transition: all 0.2s ease;
 }
@@ -1951,7 +1951,7 @@ html {
   transform: scale(1.1);
 }
 
-/* 优化上传 */
+/* 浼樺寲涓婁紶 */
 .ant-upload-drag {
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -1961,7 +1961,7 @@ html {
   border-color: var(--primary-color);
 }
 
-/* 优化树形控件 */
+/* 浼樺寲鏍戝舰鎺т欢 */
 .ant-tree-node-selected {
   background-color: rgba(220, 38, 38, 0.08) !important;
 }
@@ -1970,13 +1970,13 @@ html {
   background-color: rgba(220, 38, 38, 0.05) !important;
 }
 
-/* 优化穿梭框 */
+/* 浼樺寲绌挎妗?*/
 .ant-transfer-list-header {
   background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
   border-bottom: 1px solid var(--border-color);
 }
 
-/* 优化日历 */
+/* 浼樺寲鏃ュ巻 */
 .ant-picker-calendar-date-selected .ant-picker-calendar-date-value {
   background-color: var(--primary-color);
   color: #fff;
@@ -1986,19 +1986,19 @@ html {
   background-color: rgba(220, 38, 38, 0.1);
 }
 
-/* 优化图片 */
+/* 浼樺寲鍥剧墖 */
 .ant-image {
   border-radius: 8px;
   overflow: hidden;
 }
 
-/* 优化评论 */
+/* 浼樺寲璇勮 */
 .ant-comment-content-author-name {
   color: var(--text-primary);
   font-weight: 500;
 }
 
-/* 优化列表 */
+/* 浼樺寲鍒楄〃 */
 .ant-list-item-meta-title {
   color: var(--text-primary);
   font-weight: 500;
@@ -2008,7 +2008,7 @@ html {
   color: var(--text-secondary);
 }
 
-/* 优化头像 */
+/* 浼樺寲澶村儚 */
 .ant-avatar {
   transition: all 0.2s ease;
 }
@@ -2018,7 +2018,7 @@ html {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* 优化徽章 */
+/* 浼樺寲寰界珷 */
 .ant-badge {
   transition: all 0.2s ease;
 }
@@ -2027,8 +2027,8 @@ html {
   transform: scale(1.1);
 }
 
-/* 优化标签 */
-/* Tag应用透明玻璃效果 */
+/* 浼樺寲鏍囩 */
+/* Tag搴旂敤閫忔槑鐜荤拑鏁堟灉 */
 .ant-tag {
   transition: all 0.2s ease;
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
@@ -2045,7 +2045,7 @@ html {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
-/* 优化面包屑 */
+/* 浼樺寲闈㈠寘灞?*/
 .ant-breadcrumb-link {
   transition: all 0.2s ease;
 }
@@ -2054,7 +2054,7 @@ html {
   color: var(--primary-color);
 }
 
-/* 优化回到顶部 */
+/* 浼樺寲鍥炲埌椤堕儴 */
 .ant-back-top {
   right: 24px;
   bottom: 24px;
@@ -2071,17 +2071,17 @@ html {
   box-shadow: 0 6px 16px rgba(220, 38, 38, 0.4);
 }
 
-/* 优化水印 */
+/* 浼樺寲姘村嵃 */
 .ant-watermark {
   opacity: 0.15;
 }
 
-/* 优化分割线 */
+/* 浼樺寲鍒嗗壊绾?*/
 .ant-divider {
   border-color: var(--border-color);
 }
 
-/* 优化间距工具类 */
+/* 浼樺寲闂磋窛宸ュ叿绫?*/
 .mt-auto {
   margin-top: auto;
 }
@@ -2098,7 +2098,7 @@ html {
   margin-right: auto;
 }
 
-/* 优化文本工具类 */
+/* 浼樺寲鏂囨湰宸ュ叿绫?*/
 .text-gradient {
   background: var(--gradient-primary);
   -webkit-background-clip: text;
@@ -2106,7 +2106,7 @@ html {
   background-clip: text;
 }
 
-/* 优化阴影工具类 */
+/* 浼樺寲闃村奖宸ュ叿绫?*/
 .shadow-soft {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -2119,7 +2119,7 @@ html {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
 }
 
-/* 优化过渡动画 */
+/* 浼樺寲杩囨浮鍔ㄧ敾 */
 .transition-all {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -2132,7 +2132,7 @@ html {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* 楂樼骇鍙鍖?- 鎸囨爣鍗℃牱寮?*/
+/* 妤傛楠囬崣顖濐潒閸?- 閹稿洦鐖ｉ崡鈩冪壉瀵?*/
 .stats-card {
   background: rgba(0, 0, 0, 0.25) !important;
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
@@ -2182,3 +2182,4 @@ html {
   margin-right: 8px;
   font-size: 18px;
 }
+
