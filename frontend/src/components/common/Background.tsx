@@ -5,45 +5,65 @@ export const Background: React.FC = () => {
   const [bgError, setBgError] = useState(false)
 
   useEffect(() => {
-    // 尝试加载背景GIF
-    const img = new Image()
-    const bgUrl = '/background.gif'
-    img.src = bgUrl
-    
-    // 设置超时，如果5秒内未加载则使用备用方案
-    const timeout = setTimeout(() => {
-      if (!bgLoaded) {
-        setBgError(true)
-        console.warn('⏱️ 背景GIF加载超时，使用备用方案')
-      }
-    }, 5000)
-    
-    img.onload = () => {
-      clearTimeout(timeout)
-      setBgLoaded(true)
-      setBgError(false)
-      console.log('✅ 背景GIF加载成功')
-      // 强制刷新背景显示
-      setTimeout(() => {
-        const bgElement = document.querySelector('[data-background-gif]') as HTMLElement
-        if (bgElement) {
-          bgElement.style.display = 'none'
-          setTimeout(() => {
-            bgElement.style.display = 'block'
-          }, 10)
+    let isMounted = true
+    let timeoutId: NodeJS.Timeout | null = null
+
+    // 尝试加载背景图片（按优先级：PNG -> JPG -> GIF）
+    const tryLoadBackground = (urls: string[], index: number = 0) => {
+      if (index >= urls.length) {
+        if (isMounted) {
+          setBgError(true)
+          setBgLoaded(false)
+          console.warn('❌ 所有背景图片加载失败，使用CSS渐变')
         }
-      }, 100)
+        return
+      }
+
+      const img = new Image()
+      const bgUrl = urls[index]
+      img.src = bgUrl
+      
+      // 设置超时，如果5秒内未加载则尝试下一个
+      timeoutId = setTimeout(() => {
+        if (isMounted) {
+          console.warn(`⏱️ ${bgUrl} 加载超时，尝试下一个`)
+          tryLoadBackground(urls, index + 1)
+        }
+      }, 5000)
+      
+      img.onload = () => {
+        if (timeoutId) clearTimeout(timeoutId)
+        if (isMounted) {
+          setBgLoaded(true)
+          setBgError(false)
+          console.log(`✅ 背景图片加载成功: ${bgUrl}`)
+          // 强制刷新背景显示
+          setTimeout(() => {
+            const bgElement = document.querySelector('[data-background-image]') as HTMLElement
+            if (bgElement) {
+              bgElement.style.backgroundImage = `url(${bgUrl})`
+            }
+          }, 100)
+        }
+      }
+      
+      img.onerror = () => {
+        if (timeoutId) clearTimeout(timeoutId)
+        if (isMounted) {
+          console.warn(`❌ ${bgUrl} 加载失败，尝试下一个`)
+          tryLoadBackground(urls, index + 1)
+        }
+      }
     }
-    
-    img.onerror = () => {
-      clearTimeout(timeout)
-      setBgError(true)
-      setBgLoaded(false)
-      console.warn('❌ 背景GIF加载失败，使用备用方案')
+
+    // 按优先级尝试加载
+    tryLoadBackground(['/background.png', '/background.jpg', '/background.gif'])
+
+    return () => {
+      isMounted = false
+      if (timeoutId) clearTimeout(timeoutId)
     }
-    
-    return () => clearTimeout(timeout)
-  }, [bgLoaded])
+  }, [])
 
   return (
     <>
@@ -60,14 +80,14 @@ export const Background: React.FC = () => {
         }}
       />
       
-      {/* 主要背景层 - GIF（如果加载成功） */}
+      {/* 主要背景层 - 图片（如果加载成功） */}
       {bgLoaded && (
         <div
-          data-background-gif
+          data-background-image
           style={{
             position: 'fixed',
             inset: 0,
-            backgroundImage: 'url(/background.gif)',
+            backgroundImage: 'url(/background.png), url(/background.jpg), url(/background.gif)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundAttachment: 'fixed',
