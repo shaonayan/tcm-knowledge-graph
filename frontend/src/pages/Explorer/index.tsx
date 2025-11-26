@@ -242,17 +242,26 @@ const Explorer: React.FC = () => {
   return (
     <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
       {/* 页面标题 */}
-      <div className="mb-6">
-        <div className="flex items-start gap-4">
-          <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg flex-shrink-0">
-            <span className="text-white font-bold text-xl">探</span>
+      <div className="mb-8">
+        <div className="flex items-start gap-5">
+          <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all hover:scale-105" style={{
+            boxShadow: '0 4px 16px rgba(99, 102, 241, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset'
+          }}>
+            <span className="text-white font-bold text-2xl">探</span>
           </div>
           <div className="flex-1 min-w-0">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold text-gray-900 mb-2" style={{
+              letterSpacing: '-0.02em',
+              fontWeight: 700
+            }}>
               知识图谱探索器
             </h1>
-            <p className="text-sm text-gray-500 mb-1">少纳言中医知识图谱</p>
-            <p className="text-xs text-gray-400">
+            <p className="text-sm text-gray-500 mb-2" style={{
+              letterSpacing: '-0.01em'
+            }}>少纳言中医知识图谱</p>
+            <p className="text-xs text-gray-400" style={{
+              letterSpacing: '-0.01em'
+            }}>
               快捷键：Ctrl/Cmd + +/- 缩放，Ctrl/Cmd + 0 重置，Ctrl/Cmd + F 适应窗口
             </p>
           </div>
@@ -260,7 +269,7 @@ const Explorer: React.FC = () => {
       </div>
 
       {/* 快速搜索区域 */}
-      <Card className="mb-4 glass-panel">
+      <Card className="mb-5 glass-panel" style={{ padding: '20px' }}>
         <div className="flex gap-3 items-center flex-wrap">
           <div className="flex-1 min-w-[300px]">
             <Input
@@ -271,6 +280,10 @@ const Explorer: React.FC = () => {
               onPressEnter={() => handleQuickSearch(quickSearchTerm)}
               allowClear
               size="large"
+              style={{
+                borderRadius: '12px',
+                fontSize: '15px'
+              }}
             />
           </div>
           <Button
@@ -279,12 +292,22 @@ const Explorer: React.FC = () => {
             onClick={() => handleQuickSearch(quickSearchTerm)}
             loading={loading}
             icon={<SearchOutlined />}
+            style={{
+              borderRadius: '12px',
+              fontWeight: 500,
+              letterSpacing: '-0.01em'
+            }}
           >
             搜索并加载
           </Button>
           <Button 
             size="large"
             onClick={() => handleQuickSearch('脾虚')}
+            style={{
+              borderRadius: '12px',
+              fontWeight: 500,
+              letterSpacing: '-0.01em'
+            }}
           >
             示例：脾虚
           </Button>
@@ -292,8 +315,8 @@ const Explorer: React.FC = () => {
       </Card>
 
       {/* 主控制面板 */}
-      <Card className="mb-4 glass-panel">
-        <div className="space-y-4">
+      <Card className="mb-5 glass-panel" style={{ padding: '24px' }}>
+        <div className="space-y-5">
           {/* 第一行：根节点选择和主要操作 */}
           <div className="flex gap-3 items-center flex-wrap">
             <div className="flex-1 min-w-[250px]">
@@ -538,10 +561,10 @@ const Explorer: React.FC = () => {
       </Card>
 
       {/* 搜索和分析面板 */}
-      <Card className="mb-4 glass-panel">
+      <Card className="mb-5 glass-panel" style={{ padding: '20px' }}>
         <Tabs
           defaultActiveKey="search"
-          size="small"
+          size="default"
           items={[
             {
               key: 'search',
@@ -590,7 +613,11 @@ const Explorer: React.FC = () => {
       )}
 
       {/* 图谱可视化区域 */}
-      <Card className="glass-panel" style={{ height: 'calc(100vh - 500px)', minHeight: '600px' }}>
+      <Card className="glass-panel" style={{ 
+        height: 'calc(100vh - 500px)', 
+        minHeight: '600px',
+        padding: '24px'
+      }}>
         {loading ? (
           <div className="flex items-center justify-center h-full">
             <LoadingSpinner />
@@ -615,7 +642,9 @@ const Explorer: React.FC = () => {
         ) : (
           <div className="h-full flex flex-col">
             {/* 统计信息栏 */}
-            <div className="flex gap-6 items-center mb-4 pb-3 border-b border-gray-200">
+            <div className="flex gap-8 items-center mb-5 pb-4 border-b" style={{
+              borderColor: 'rgba(0, 0, 0, 0.06)'
+            }}>
               <Statistic 
                 title="节点数量" 
                 value={graphData.nodeCount} 
@@ -679,14 +708,24 @@ const Explorer: React.FC = () => {
               
               {/* 选中节点信息卡片 */}
               {selectedNode && (
-                <div className="absolute top-4 right-4 bg-white p-4 rounded-lg shadow-lg border border-gray-200 z-10 max-w-xs">
+                <div className="absolute top-6 right-6 z-10 max-w-xs" style={{
+                  background: 'rgba(255, 255, 255, 0.8)',
+                  backdropFilter: 'saturate(180%) blur(20px)',
+                  WebkitBackdropFilter: 'saturate(180%) blur(20px)',
+                  padding: '20px',
+                  borderRadius: '20px',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12), 0 1px 0 rgba(255, 255, 255, 0.8) inset',
+                  border: '1px solid rgba(255, 255, 255, 0.8)'
+                }}>
                   <div className="text-sm">
-                    <div className="font-bold text-base mb-3 text-gray-800">选中节点信息</div>
-                    <div className="space-y-1.5 mb-3">
-                      <div><span className="text-gray-500">代码：</span><span className="font-mono text-gray-800">{selectedNode.code}</span></div>
-                      <div><span className="text-gray-500">名称：</span><span className="text-gray-800">{selectedNode.name}</span></div>
-                      <div><span className="text-gray-500">类别：</span><span className="text-gray-800">{selectedNode.category}</span></div>
-                      <div><span className="text-gray-500">层级：</span><span className="text-gray-800">L{selectedNode.level}</span></div>
+                    <div className="font-bold text-base mb-4 text-gray-900" style={{
+                      letterSpacing: '-0.01em'
+                    }}>选中节点信息</div>
+                    <div className="space-y-2 mb-4">
+                      <div><span className="text-gray-500 text-xs">代码：</span><span className="font-mono text-gray-900 ml-2">{selectedNode.code}</span></div>
+                      <div><span className="text-gray-500 text-xs">名称：</span><span className="text-gray-900 ml-2">{selectedNode.name}</span></div>
+                      <div><span className="text-gray-500 text-xs">类别：</span><span className="text-gray-900 ml-2">{selectedNode.category}</span></div>
+                      <div><span className="text-gray-500 text-xs">层级：</span><span className="text-gray-900 ml-2">L{selectedNode.level}</span></div>
                     </div>
                     <div className="flex gap-2">
                       <Button
@@ -694,6 +733,10 @@ const Explorer: React.FC = () => {
                         type="primary"
                         onClick={() => navigate(`/nodes/${selectedNode.code}`)}
                         block
+                        style={{
+                          borderRadius: '10px',
+                          fontWeight: 500
+                        }}
                       >
                         查看详情
                       </Button>
@@ -702,6 +745,10 @@ const Explorer: React.FC = () => {
                         onClick={() => expandNodeData(selectedNode)}
                         loading={loading}
                         block
+                        style={{
+                          borderRadius: '10px',
+                          fontWeight: 500
+                        }}
                       >
                         展开节点
                       </Button>
