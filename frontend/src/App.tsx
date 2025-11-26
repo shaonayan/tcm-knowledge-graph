@@ -6,6 +6,7 @@ import { AppHeader } from './components/common/Header'
 import { AppSider } from './components/common/Sider'
 import { LoadingSpinner } from './components/common/Loading'
 import { StartupScreen } from './components/common/StartupScreen'
+import { Background } from './components/common/Background'
 
 // 懒加载页面组件
 const Dashboard = React.lazy(() => import('./pages/Dashboard'))
@@ -29,17 +30,7 @@ const App: React.FC = () => {
   return (
     <ErrorBoundary>
       <StartupScreen visible={showStartup} />
-      <div style={{
-        position: 'fixed',
-        inset: 0,
-        backgroundImage: 'url(/background.gif)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
-        backgroundRepeat: 'no-repeat',
-        zIndex: -2,
-        pointerEvents: 'none'
-      }} />
+      <Background />
       <Layout className="min-h-screen app-shell">
         {/* 顶部导航栏 */}
         <AppHeader />

@@ -81,7 +81,8 @@ dist
 
 # Gatsby文件
 .cache/
-public
+# public 目录不应该被忽略，因为包含静态资源
+# public
 
 # Storybook构建输出
 .out

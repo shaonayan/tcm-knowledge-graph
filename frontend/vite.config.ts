@@ -39,6 +39,10 @@ export default defineConfig({
           visualization: ['d3', 'cytoscape', 'echarts']
         }
       }
-    }
-  }
+    },
+    // 确保public目录中的文件被复制
+    copyPublicDir: true
+  },
+  // 确保静态资源正确加载
+  publicDir: 'public'
 })
