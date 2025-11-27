@@ -246,9 +246,7 @@ const Explorer: React.FC = () => {
         <div className="flex items-start gap-5">
           <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all hover:scale-105" style={{
             boxShadow: '0 4px 16px rgba(99, 102, 241, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset'
-          }}>
-            <span className="text-white font-bold text-2xl">探</span>
-          </div>
+          }} />
           <div className="flex-1 min-w-0">
             <h1 className="text-4xl font-bold text-gray-900 mb-2" style={{
               letterSpacing: '-0.02em',
@@ -564,7 +562,7 @@ const Explorer: React.FC = () => {
       <Card className="mb-5 glass-panel" style={{ padding: '20px' }}>
         <Tabs
           defaultActiveKey="search"
-          size="default"
+          size="large"
           items={[
             {
               key: 'search',
