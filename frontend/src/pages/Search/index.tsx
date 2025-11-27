@@ -356,17 +356,17 @@ const Search: React.FC = () => {
         <span>命中节点 {total > 0 ? total : '--'}</span>
       </div>
 
-      <section className="search-grid">
-        <div className="linear-panel search-panel search-panel--primary">
-          <div className="search-panel__header">
+      <section className="linear-panels-grid">
+        <div className="linear-panel">
+          <header>
             <div>
               <p className="eyebrow">关键词</p>
-              <h3>语义匹配</h3>
+              <h4>语义匹配</h4>
             </div>
             <Button size="small" onClick={handleClear}>
               清空
             </Button>
-          </div>
+          </header>
           <InputSearch
             placeholder="输入术语名称、代码或同义词"
             allowClear
@@ -379,13 +379,14 @@ const Search: React.FC = () => {
             onClear={handleClear}
             loading={loading}
           />
-          <div className="search-controls-row">
+          <div className="linear-form-row">
             <Select
               placeholder="选择类别"
               size="large"
               value={category || 'all'}
               onChange={handleCategoryChange}
               allowClear
+              style={{ flex: 1 }}
             >
               <Option value="all">全部类别</Option>
               <Option value="疾病类">疾病类</Option>
@@ -408,13 +409,13 @@ const Search: React.FC = () => {
                   ]
                 }}
               >
-                <Button icon={<DownloadOutlined />} />
+                <Button icon={<DownloadOutlined />} size="large" />
               </Dropdown>
             )}
           </div>
 
           {showAdvanced && (
-            <div className="advanced-panel">
+            <div className="advanced-panel" style={{ marginTop: '20px' }}>
               <div className="advanced-panel__row">
                 <span>层级筛选</span>
                 <Select
@@ -427,6 +428,7 @@ const Search: React.FC = () => {
                     }
                   }}
                   allowClear
+                  style={{ flex: 1 }}
                 >
                   <Option value={1}>L1 - 一级</Option>
                   <Option value={2}>L2 - 二级</Option>
@@ -447,26 +449,29 @@ const Search: React.FC = () => {
                     }
                   }}
                   allowClear
+                  style={{ flex: 1 }}
                 />
-                <small>用于锁定更具体的分支</small>
+                <small style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.5)', marginLeft: '8px' }}>用于锁定更具体的分支</small>
               </div>
-              <Button
-                size="small"
-                onClick={() => {
-                  setLevelFilter(undefined)
-                  setCodePrefixFilter('')
-                  if (searchQuery.trim()) {
-                    performSearch(searchQuery, category)
-                  }
-                }}
-              >
-                重置筛选
-              </Button>
+              <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '12px' }}>
+                <Button
+                  size="small"
+                  onClick={() => {
+                    setLevelFilter(undefined)
+                    setCodePrefixFilter('')
+                    if (searchQuery.trim()) {
+                      performSearch(searchQuery, category)
+                    }
+                  }}
+                >
+                  重置筛选
+                </Button>
+              </div>
             </div>
           )}
 
           {searchQuery && (
-            <div className="search-hint">
+            <div className="search-hint" style={{ marginTop: '16px' }}>
               {loading ? (
                 <span>正在搜索...</span>
               ) : debouncedSearchQuery !== searchQuery ? (
@@ -478,15 +483,15 @@ const Search: React.FC = () => {
           )}
         </div>
 
-        <div className="linear-panel search-panel search-panel--secondary">
-          <div className="search-panel__header">
+        <div className="linear-panel">
+          <header>
             <div>
               <p className="eyebrow">历史</p>
-              <h3>最近查找</h3>
+              <h4>最近查找</h4>
             </div>
             {searchHistory.length > 0 && (
               <Button
-                type="link"
+                type="text"
                 size="small"
                 icon={<ClearOutlined />}
                 onClick={() => {
@@ -498,10 +503,10 @@ const Search: React.FC = () => {
                 清除
               </Button>
             )}
-          </div>
-          <div className="history-tags">
+          </header>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginBottom: '20px' }}>
             {searchHistory.length === 0 ? (
-              <p className="text-muted">暂无历史记录</p>
+              <p style={{ color: 'rgba(255, 255, 255, 0.5)', fontSize: '13px', margin: 0 }}>暂无历史记录</p>
             ) : (
               searchHistory.slice(0, 10).map((item, index) => (
                 <button
@@ -511,15 +516,33 @@ const Search: React.FC = () => {
                     setSearchQuery(item)
                     handleSearch(item)
                   }}
+                  style={{
+                    padding: '6px 12px',
+                    borderRadius: '6px',
+                    border: '1px solid rgba(255, 255, 255, 0.15)',
+                    background: 'rgba(0, 0, 0, 0.2)',
+                    color: 'rgba(255, 255, 255, 0.8)',
+                    fontSize: '13px',
+                    cursor: 'pointer',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)'
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'rgba(0, 0, 0, 0.2)'
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
+                  }}
                 >
                   {item}
                 </button>
               ))
             )}
           </div>
-          <div className="search-panel__notes">
-            <p>提示</p>
-            <ul>
+          <div style={{ paddingTop: '16px', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
+            <p style={{ fontSize: '12px', fontWeight: 600, color: 'rgba(255, 255, 255, 0.7)', margin: '0 0 8px' }}>提示</p>
+            <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', color: 'rgba(255, 255, 255, 0.6)', lineHeight: '1.6' }}>
               <li>支持模糊匹配、拼音与中英文混输</li>
               <li>输入编码可快速跳转节点详情</li>
               <li>建议先唤醒 Render 后端，避免冷启动</li>
@@ -528,14 +551,14 @@ const Search: React.FC = () => {
         </div>
       </section>
 
-      <div className="linear-panel search-result-panel">
-        <div className="search-result-panel__header">
+      <div className="linear-panel">
+        <header>
           <div>
             <p className="eyebrow">结果列表</p>
             <h4>找到 {total} 条可能的关联节点</h4>
           </div>
-          <span>点击行可跳转至节点详情</span>
-        </div>
+          <span style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.6)' }}>点击行可跳转至节点详情</span>
+        </header>
 
         {error && (
           <Alert
@@ -570,8 +593,7 @@ const Search: React.FC = () => {
               onClick: () => {
                 navigate(`/nodes/${record.code}`)
               },
-              style: { cursor: 'pointer' },
-              className: 'hover:bg-gray-50'
+              style: { cursor: 'pointer' }
             })}
             pagination={{
               total,

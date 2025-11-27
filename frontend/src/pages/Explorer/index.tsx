@@ -240,31 +240,39 @@ const Explorer: React.FC = () => {
   }, [loadGraph])
 
   return (
-    <div className="linear-page explorer-linear-page" style={{ minHeight: 'calc(100vh - 72px)' }}>
-      {/* 页面标题 */}
-      <div className="explorer-hero-card">
-        <div className="flex items-start gap-5">
-          <div className="explorer-hero-card__icon" />
-          <div className="flex-1 min-w-0">
-            <h1 className="explorer-hero-card__title">知识图谱探索器</h1>
-            <p className="explorer-hero-card__subtitle">少纳言中医知识图谱 · Neo4j 实时驱动</p>
-            <p className="explorer-hero-card__meta">
-              快捷键：Ctrl/Cmd + +/- 缩放 · Ctrl/Cmd + 0 重置 · Ctrl/Cmd + F 适应窗口
-            </p>
-          </div>
+    <div className="linear-page explorer-linear-page">
+      <div className="linear-page-hero">
+        <div>
+          <p className="eyebrow">Graph Explorer</p>
+          <h1>知识图谱探索器</h1>
+          <p>少纳言中医知识图谱 · Neo4j 实时驱动</p>
+          <p style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.6)', marginTop: '8px' }}>
+            快捷键：Ctrl/Cmd + +/- 缩放 · Ctrl/Cmd + 0 重置 · Ctrl/Cmd + F 适应窗口
+          </p>
         </div>
-        <div className="explorer-meta-row">
-          <span>当前根节点：{rootCode || '未选择'}</span>
-          <span>深度：{depth}</span>
-          <span>节点限制：{limit}</span>
-          <span>已加载节点：{graphData?.nodeCount ?? '-'}</span>
+        <div className="linear-page-hero__actions">
+          <Button icon={<ReloadOutlined />} onClick={() => loadGraph(rootCode)} loading={loading}>
+            刷新图谱
+          </Button>
         </div>
       </div>
 
-      {/* 快速搜索区域 */}
-      <Card className="linear-panel explorer-panel" style={{ padding: '20px' }}>
-        <div className="flex gap-3 items-center flex-wrap">
-          <div className="flex-1 min-w-[300px]">
+      <div className="linear-pill-row">
+        <span>当前根节点：{rootCode || '未选择'}</span>
+        <span>深度：{depth}</span>
+        <span>节点限制：{limit}</span>
+        <span>已加载节点：{graphData?.nodeCount ?? '-'}</span>
+      </div>
+
+      <section className="explorer-panels-grid">
+        <div className="linear-panel explorer-panel explorer-panel--controls">
+          <header>
+            <div>
+              <p className="eyebrow">快速搜索</p>
+              <h4>节点定位</h4>
+            </div>
+          </header>
+          <div className="linear-form-group">
             <Input
               placeholder="快速搜索（例如：脾虚）"
               prefix={<SearchOutlined />}
@@ -273,73 +281,66 @@ const Explorer: React.FC = () => {
               onPressEnter={() => handleQuickSearch(quickSearchTerm)}
               allowClear
               size="large"
-              style={{
-                borderRadius: '12px',
-                fontSize: '15px'
-              }}
             />
-          </div>
-          <Button
-            type="primary"
-            size="large"
-            onClick={() => handleQuickSearch(quickSearchTerm)}
-            loading={loading}
-            icon={<SearchOutlined />}
-            style={{
-              borderRadius: '12px',
-              fontWeight: 500,
-              letterSpacing: '-0.01em'
-            }}
-          >
-            搜索并加载
-          </Button>
-          <Button 
-            size="large"
-            onClick={() => handleQuickSearch('脾虚')}
-            style={{
-              borderRadius: '12px',
-              fontWeight: 500,
-              letterSpacing: '-0.01em'
-            }}
-          >
-            示例：脾虚
-          </Button>
-        </div>
-      </Card>
-
-      {/* 主控制面板 */}
-      <Card className="linear-panel explorer-panel" style={{ padding: '24px' }}>
-        <div className="space-y-5">
-          {/* 第一行：根节点选择和主要操作 */}
-          <div className="flex gap-3 items-center flex-wrap">
-            <div className="flex-1 min-w-[250px]">
-              <Select
-                placeholder="选择根节点"
-                style={{ width: '100%' }}
+            <div className="linear-form-actions">
+              <Button
+                type="primary"
                 size="large"
-                value={rootCode}
-                onChange={(value) => {
-                  setRootCode(value)
-                  if (value) {
-                    loadGraph(value)
-                  }
-                }}
-                showSearch
-                filterOption={(input, option) => {
-                  const label = String(option?.label ?? '')
-                  return label.toLowerCase().includes(input.toLowerCase())
-                }}
+                onClick={() => handleQuickSearch(quickSearchTerm)}
+                loading={loading}
+                icon={<SearchOutlined />}
               >
-                {rootNodes.map(node => (
-                  <Option key={node.code} value={node.code} label={node.name}>
-                    {node.code} - {node.name}
-                  </Option>
-                ))}
-              </Select>
+                搜索并加载
+              </Button>
+              <Button 
+                size="large"
+                onClick={() => handleQuickSearch('脾虚')}
+              >
+                示例：脾虚
+              </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="linear-panel explorer-panel explorer-panel--controls">
+        <header>
+          <div>
+            <p className="eyebrow">图谱控制台</p>
+            <h4>参数配置</h4>
+          </div>
+          <Tooltip title="重置所有参数并清空图谱">
+            <Button icon={<ClearOutlined />} onClick={resetAll} type="text" size="small" />
+          </Tooltip>
+        </header>
+        <div className="linear-form-group">
+          <label>根节点选择</label>
+          <Select
+            placeholder="选择根节点"
+            style={{ width: '100%' }}
+            size="large"
+            value={rootCode}
+            onChange={(value) => {
+              setRootCode(value)
+              if (value) {
+                loadGraph(value)
+              }
+            }}
+            showSearch
+            filterOption={(input, option) => {
+              const label = String(option?.label ?? '')
+              return label.toLowerCase().includes(input.toLowerCase())
+            }}
+          >
+            {rootNodes.map(node => (
+              <Option key={node.code} value={node.code} label={node.name}>
+                {node.code} - {node.name}
+              </Option>
+            ))}
+          </Select>
+          <div className="linear-form-actions">
             <Button
               type="primary"
-              size="large"
               icon={<NodeIndexOutlined />}
               onClick={() => loadGraph(rootCode)}
               loading={loading}
@@ -347,21 +348,14 @@ const Explorer: React.FC = () => {
               加载图谱
             </Button>
             <Button
-              size="large"
-              icon={<ReloadOutlined />}
-              onClick={() => loadGraph(rootCode)}
+              icon={<SearchOutlined />}
+              onClick={() => handleQuickSearch(quickSearchTerm)}
               loading={loading}
             >
-              刷新
-            </Button>
-            <Button
-              size="large"
-              icon={<HomeOutlined />}
-              onClick={resetView}
-            >
-              重置
+              快速搜索
             </Button>
           </div>
+        </div>
 
           {/* 第二行：布局和参数设置 */}
           <div className="flex gap-3 items-center flex-wrap">
