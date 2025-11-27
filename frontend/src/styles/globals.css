@@ -1032,6 +1032,109 @@ body::after {
   margin-top: 30px !important;
 }
 
+/* ---------------------------------------------
+   Visualizations artisan blocks
+---------------------------------------------- */
+.visualizations-human-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.visualizations-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.visualizations-meta-row span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(12, 14, 23, 0.45);
+}
+
+.visualizations-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 3fr) minmax(240px, 2fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .visualizations-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.visualizations-panel {
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(8, 11, 22, 0.75);
+  box-shadow: 0 25px 50px rgba(3, 7, 18, 0.45);
+}
+
+.visualizations-panel__controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+  align-items: end;
+}
+
+.visualizations-field label,
+.visualizations-field--compact label {
+  display: block;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.visualizations-field--compact {
+  min-width: 140px;
+}
+
+.visualizations-quick-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.visualizations-panel--stats h3 {
+  margin: 4px 0 18px;
+  color: #fff;
+}
+
+.visualizations-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.visualizations-stat-card {
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.visualizations-stat-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+}
+
+.visualizations-stat-card h4 {
+  margin: 6px 0 0;
+  font-size: 24px;
+  color: #fff;
+}
+
+.visualizations-tabs-card {
+  border-radius: 30px;
+}
+
 .app-header__chip-icon {
   color: rgba(255, 255, 255, 0.9);
   display: flex;

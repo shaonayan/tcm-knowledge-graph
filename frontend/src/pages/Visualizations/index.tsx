@@ -126,127 +126,125 @@ export default function Visualizations() {
   ]
 
   return (
-    <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
+    <div className="page-wrapper visualizations-human-shell" style={{ minHeight: 'calc(100vh - 72px)' }}>
       <PageHeader
+        icon={<ExperimentOutlined />}
         title="高级可视化"
-        subtitle="少纳言中医知识图谱"
-        description="探索知识图谱的多种可视化方式：3D视图、时间线图谱、动态演化展示"
+        subtitle="图谱实验室 · 3D / Timeline / Evolution"
+        description="在一个舞台上切换多种视角：3D 图谱漫游、时间线剖面、节点演化推演。"
       />
 
-      <Card className="mb-4 glass-panel">
-        <Space direction="vertical" size="middle" style={{ width: '100%' }}>
-          <Space size="large" wrap>
-            <div style={{ flex: 1, minWidth: 300 }}>
-              <label className="mr-2">根节点:</label>
-              <AutoComplete
-                style={{ width: '100%' }}
-                value={rootCode}
-                onChange={setRootCode}
-                onSearch={handleSearch}
-                options={searchOptions}
-                placeholder="搜索节点代码或名称"
-                notFoundContent={searchLoading ? '搜索中…' : '未找到节点，请尝试其他关键词'}
-                filterOption={false}
-                allowClear
-              />
-            </div>
-            <div style={{ minWidth: 200 }}>
-              <label className="mr-2">或从列表选择:</label>
-              <Select
-                showSearch
-                allowClear
-                loading={loadingRoots}
-                placeholder="选择根节点"
-                value={rootCode}
-                onChange={setRootCode}
-                style={{ width: '100%' }}
-                optionFilterProp="children"
-                filterOption={(input, option) =>
-                  String(option?.children ?? '')
-                    .toLowerCase()
-                    .includes(input.toLowerCase())
-                }
-              >
-                {rootNodes.map(node => (
-                  <Option key={node.code} value={node.code}>
-                    {node.name || node.code}
-                    <Tag color={node.category === DISEASE_CATEGORY ? 'blue' : 'green'} style={{ marginLeft: 8 }}>
-                      {node.category}
-                    </Tag>
-                  </Option>
-                ))}
-              </Select>
-            </div>
-            <div>
-              <label className="mr-2">深度:</label>
-              <InputNumber min={1} max={5} value={depth} onChange={val => setDepth(val || 3)} />
-            </div>
-            <div>
-              <label className="mr-2">节点限制:</label>
-              <InputNumber min={10} max={500} value={limit} onChange={val => setLimit(val || 100)} />
-            </div>
-            <Button type="primary" icon={<ReloadOutlined />} onClick={loadGraphData} loading={loading}>
-              加载图谱
-            </Button>
-          </Space>
+      <div className="visualizations-meta-row">
+        <span>根节点：{rootCode || '未选择'}</span>
+        <span>深度 {depth}</span>
+        <span>节点限制 {limit}</span>
+        <span>加载状态：{loading ? '运行中' : '就绪'}</span>
+      </div>
 
-          <div>
-            <label className="mr-2">快速选择:</label>
-            <Space wrap>
-              {quickSelectNodes.map(node => (
-                <Button
-                  key={node.code}
-                  size="small"
-                  type={rootCode === node.code ? 'primary' : 'default'}
-                  onClick={() => {
-                    setRootCode(node.code)
-                    message.info(`已选择: ${node.name}`)
-                  }}
+      <section className="visualizations-grid">
+        <Card className="visualizations-panel" bodyStyle={{ padding: 24 }}>
+          <Space direction="vertical" size="middle" style={{ width: '100%' }}>
+            <div className="visualizations-panel__controls">
+              <div className="visualizations-field">
+                <label>根节点</label>
+                <AutoComplete
+                  style={{ width: '100%' }}
+                  value={rootCode}
+                  onChange={setRootCode}
+                  onSearch={handleSearch}
+                  options={searchOptions}
+                  placeholder="搜索节点代码或名称"
+                  notFoundContent={searchLoading ? '搜索中…' : '未找到节点，请尝试其他关键词'}
+                  filterOption={false}
+                  allowClear
+                />
+              </div>
+              <div className="visualizations-field">
+                <label>或从列表选择</label>
+                <Select
+                  showSearch
+                  allowClear
+                  loading={loadingRoots}
+                  placeholder="选择根节点"
+                  value={rootCode}
+                  onChange={setRootCode}
+                  optionFilterProp="children"
+                  filterOption={(input, option) =>
+                    String(option?.children ?? '')
+                      .toLowerCase()
+                      .includes(input.toLowerCase())
+                  }
                 >
-                  {node.name}
-                </Button>
-              ))}
-            </Space>
-          </div>
-        </Space>
-      </Card>
+                  {rootNodes.map(node => (
+                    <Option key={node.code} value={node.code}>
+                      {node.name || node.code}
+                      <Tag color={node.category === DISEASE_CATEGORY ? 'blue' : 'green'} style={{ marginLeft: 8 }}>
+                        {node.category}
+                      </Tag>
+                    </Option>
+                  ))}
+                </Select>
+              </div>
+              <div className="visualizations-field--compact">
+                <label>深度</label>
+                <InputNumber min={1} max={5} value={depth} onChange={val => setDepth(val || 3)} />
+              </div>
+              <div className="visualizations-field--compact">
+                <label>节点限制</label>
+                <InputNumber min={10} max={500} value={limit} onChange={val => setLimit(val || 100)} />
+              </div>
+              <Button type="primary" icon={<ReloadOutlined />} onClick={loadGraphData} loading={loading}>
+                加载图谱
+              </Button>
+            </div>
 
-      {graphData && (
-        <Card className="mb-4 stats-card">
-          <Row gutter={[16, 16]}>
-            <Col xs={24} sm={12} lg={6}>
-              <div className="visualization-stat">
-                <Statistic title="节点总数" value={graphData.nodeCount || graphData.nodes?.length || 0} prefix={<DatabaseOutlined />} valueStyle={{ color: '#ffffff' }} />
-              </div>
-            </Col>
-            <Col xs={24} sm={12} lg={6}>
-              <div className="visualization-stat">
-                <Statistic title="边总数" value={graphData.edgeCount || graphData.edges?.length || 0} prefix={<DatabaseOutlined />} valueStyle={{ color: '#ffffff' }} />
-              </div>
-            </Col>
-            <Col xs={24} sm={12} lg={6}>
-              <div className="visualization-stat">
-                <Statistic
-                  title="疾病类节点"
-                  value={graphData.nodes?.filter((n: any) => n.category === DISEASE_CATEGORY).length || 0}
-                  valueStyle={{ color: '#ffffff' }}
-                />
-              </div>
-            </Col>
-            <Col xs={24} sm={12} lg={6}>
-              <div className="visualization-stat">
-                <Statistic
-                  title="证候类节点"
-                  value={graphData.nodes?.filter((n: any) => n.category === SYNDROME_CATEGORY).length || 0}
-                  valueStyle={{ color: '#ffffff' }}
-                />
-              </div>
-            </Col>
-          </Row>
+            <div className="visualizations-quick-row">
+              <label>快速选择</label>
+              <Space wrap>
+                {quickSelectNodes.map(node => (
+                  <Button
+                    key={node.code}
+                    size="small"
+                    type={rootCode === node.code ? 'primary' : 'default'}
+                    onClick={() => {
+                      setRootCode(node.code)
+                      message.info(`已选择: ${node.name}`)
+                    }}
+                  >
+                    {node.name}
+                  </Button>
+                ))}
+              </Space>
+            </div>
+          </Space>
         </Card>
-      )}
 
-      <Card>
+        <Card className="visualizations-panel visualizations-panel--stats" bodyStyle={{ padding: 24 }}>
+          <p className="eyebrow">数值脉络</p>
+          <h3>图谱规模</h3>
+          <div className="visualizations-stat-grid">
+            {[
+              { label: '节点总数', value: graphData?.nodeCount || graphData?.nodes?.length || 0 },
+              { label: '边总数', value: graphData?.edgeCount || graphData?.edges?.length || 0 },
+              {
+                label: '疾病类节点',
+                value: graphData?.nodes?.filter((n: any) => n.category === DISEASE_CATEGORY).length || 0
+              },
+              {
+                label: '证候类节点',
+                value: graphData?.nodes?.filter((n: any) => n.category === SYNDROME_CATEGORY).length || 0
+              }
+            ].map(item => (
+              <div key={item.label} className="visualizations-stat-card">
+                <p>{item.label}</p>
+                <h4>{item.value.toLocaleString()}</h4>
+              </div>
+            ))}
+          </div>
+        </Card>
+      </section>
+
+      <Card className="visualizations-panel visualizations-tabs-card">
         <Tabs
           activeKey={activeTab}
           onChange={setActiveTab}
