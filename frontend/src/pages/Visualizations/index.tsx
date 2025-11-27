@@ -25,7 +25,6 @@ import { TimelineGraph } from './components/TimelineGraph'
 import { EvolutionGraph } from './components/EvolutionGraph'
 import { getGraphData, getRootNodes, searchNodes, RootNode } from '@/services/api'
 import { LoadingSpinner } from '@/components/common/Loading'
-import { PageHeader } from '@/components/common/PageHeader'
 
 const { Option } = Select
 
@@ -126,102 +125,112 @@ export default function Visualizations() {
   ]
 
   return (
-    <div className="page-wrapper visualizations-human-shell" style={{ minHeight: 'calc(100vh - 72px)' }}>
-      <PageHeader
-        icon={<ExperimentOutlined />}
-        title="高级可视化"
-        subtitle="图谱实验室 · 3D / Timeline / Evolution"
-        description="在一个舞台上切换多种视角：3D 图谱漫游、时间线剖面、节点演化推演。"
-      />
+    <div className="linear-page visualizations-linear-page">
+      <div className="linear-page-hero">
+        <div>
+          <p className="eyebrow">Visualization Lab</p>
+          <h1>高级可视化</h1>
+          <p>在一个舞台上切换多种视角：3D 图谱漫游、时间线剖面、节点演化推演。</p>
+        </div>
+        <div className="linear-page-hero__actions">
+          <Button type="primary" icon={<ReloadOutlined />} onClick={loadGraphData} loading={loading}>
+            加载图谱
+          </Button>
+        </div>
+      </div>
 
-      <div className="visualizations-meta-row">
+      <div className="linear-pill-row">
         <span>根节点：{rootCode || '未选择'}</span>
         <span>深度 {depth}</span>
         <span>节点限制 {limit}</span>
         <span>加载状态：{loading ? '运行中' : '就绪'}</span>
       </div>
 
-      <section className="visualizations-grid">
-        <Card className="visualizations-panel" bodyStyle={{ padding: 24 }}>
-          <Space direction="vertical" size="middle" style={{ width: '100%' }}>
-            <div className="visualizations-panel__controls">
-              <div className="visualizations-field">
-                <label>根节点</label>
-                <AutoComplete
-                  style={{ width: '100%' }}
-                  value={rootCode}
-                  onChange={setRootCode}
-                  onSearch={handleSearch}
-                  options={searchOptions}
-                  placeholder="搜索节点代码或名称"
-                  notFoundContent={searchLoading ? '搜索中…' : '未找到节点，请尝试其他关键词'}
-                  filterOption={false}
-                  allowClear
-                />
-              </div>
-              <div className="visualizations-field">
-                <label>或从列表选择</label>
-                <Select
-                  showSearch
-                  allowClear
-                  loading={loadingRoots}
-                  placeholder="选择根节点"
-                  value={rootCode}
-                  onChange={setRootCode}
-                  optionFilterProp="children"
-                  filterOption={(input, option) =>
-                    String(option?.children ?? '')
-                      .toLowerCase()
-                      .includes(input.toLowerCase())
-                  }
+      <section className="visualizations-panels-grid">
+        <div className="linear-panel visualizations-panel">
+          <header>
+            <div>
+              <p className="eyebrow">图谱控制</p>
+              <h4>参数配置</h4>
+            </div>
+          </header>
+          <div className="linear-form-group">
+            <label>根节点</label>
+            <AutoComplete
+              style={{ width: '100%' }}
+              value={rootCode}
+              onChange={setRootCode}
+              onSearch={handleSearch}
+              options={searchOptions}
+              placeholder="搜索节点代码或名称"
+              notFoundContent={searchLoading ? '搜索中…' : '未找到节点，请尝试其他关键词'}
+              filterOption={false}
+              allowClear
+            />
+          </div>
+          <div className="linear-form-group">
+            <label>或从列表选择</label>
+            <Select
+              showSearch
+              allowClear
+              loading={loadingRoots}
+              placeholder="选择根节点"
+              value={rootCode}
+              onChange={setRootCode}
+              optionFilterProp="children"
+              filterOption={(input, option) =>
+                String(option?.children ?? '')
+                  .toLowerCase()
+                  .includes(input.toLowerCase())
+              }
+            >
+              {rootNodes.map(node => (
+                <Option key={node.code} value={node.code}>
+                  {node.name || node.code}
+                  <Tag color={node.category === DISEASE_CATEGORY ? 'blue' : 'green'} style={{ marginLeft: 8 }}>
+                    {node.category}
+                  </Tag>
+                </Option>
+              ))}
+            </Select>
+          </div>
+          <div className="linear-form-row">
+            <div className="linear-form-group" style={{ flex: 1, marginBottom: 0 }}>
+              <label>深度</label>
+              <InputNumber min={1} max={5} value={depth} onChange={val => setDepth(val || 3)} style={{ width: '100%' }} />
+            </div>
+            <div className="linear-form-group" style={{ flex: 1, marginBottom: 0 }}>
+              <label>节点限制</label>
+              <InputNumber min={10} max={500} value={limit} onChange={val => setLimit(val || 100)} style={{ width: '100%' }} />
+            </div>
+          </div>
+          <div className="linear-form-group">
+            <label>快速选择</label>
+            <Space wrap>
+              {quickSelectNodes.map(node => (
+                <Button
+                  key={node.code}
+                  size="small"
+                  type={rootCode === node.code ? 'primary' : 'default'}
+                  onClick={() => {
+                    setRootCode(node.code)
+                    message.info(`已选择: ${node.name}`)
+                  }}
                 >
-                  {rootNodes.map(node => (
-                    <Option key={node.code} value={node.code}>
-                      {node.name || node.code}
-                      <Tag color={node.category === DISEASE_CATEGORY ? 'blue' : 'green'} style={{ marginLeft: 8 }}>
-                        {node.category}
-                      </Tag>
-                    </Option>
-                  ))}
-                </Select>
-              </div>
-              <div className="visualizations-field--compact">
-                <label>深度</label>
-                <InputNumber min={1} max={5} value={depth} onChange={val => setDepth(val || 3)} />
-              </div>
-              <div className="visualizations-field--compact">
-                <label>节点限制</label>
-                <InputNumber min={10} max={500} value={limit} onChange={val => setLimit(val || 100)} />
-              </div>
-              <Button type="primary" icon={<ReloadOutlined />} onClick={loadGraphData} loading={loading}>
-                加载图谱
-              </Button>
-            </div>
+                  {node.name}
+                </Button>
+              ))}
+            </Space>
+          </div>
+        </div>
 
-            <div className="visualizations-quick-row">
-              <label>快速选择</label>
-              <Space wrap>
-                {quickSelectNodes.map(node => (
-                  <Button
-                    key={node.code}
-                    size="small"
-                    type={rootCode === node.code ? 'primary' : 'default'}
-                    onClick={() => {
-                      setRootCode(node.code)
-                      message.info(`已选择: ${node.name}`)
-                    }}
-                  >
-                    {node.name}
-                  </Button>
-                ))}
-              </Space>
+        <div className="linear-panel visualizations-panel visualizations-panel--stats">
+          <header>
+            <div>
+              <p className="eyebrow">数值脉络</p>
+              <h4>图谱规模</h4>
             </div>
-          </Space>
-        </Card>
-
-        <Card className="visualizations-panel visualizations-panel--stats" bodyStyle={{ padding: 24 }}>
-          <p className="eyebrow">数值脉络</p>
-          <h3>图谱规模</h3>
+          </header>
           <div className="visualizations-stat-grid">
             {[
               { label: '节点总数', value: graphData?.nodeCount || graphData?.nodes?.length || 0 },
@@ -241,10 +250,10 @@ export default function Visualizations() {
               </div>
             ))}
           </div>
-        </Card>
+        </div>
       </section>
 
-      <Card className="visualizations-panel visualizations-tabs-card">
+      <div className="linear-panel visualizations-tabs-card">
         <Tabs
           activeKey={activeTab}
           onChange={setActiveTab}
@@ -336,7 +345,7 @@ export default function Visualizations() {
             }
           ]}
         />
-      </Card>
+      </div>
     </div>
   )
 }
