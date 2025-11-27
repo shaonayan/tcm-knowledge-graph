@@ -822,6 +822,216 @@ body::after {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* ---------------------------------------------
+   Search page artisan layout
+---------------------------------------------- */
+.search-human-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.search-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.search-meta-row span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(12, 15, 25, 0.65);
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 2fr) minmax(240px, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 992px) {
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.search-panel {
+  border-radius: 26px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(9, 11, 20, 0.75);
+  box-shadow: 0 20px 45px rgba(3, 7, 18, 0.45);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.search-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-panel__header h3 {
+  margin: 2px 0 0;
+  color: #fff;
+}
+
+.search-controls-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.advanced-panel {
+  border-radius: 20px;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.advanced-panel__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.advanced-panel__row span {
+  min-width: 80px;
+  font-size: 13px;
+}
+
+.advanced-panel__row small {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-hint {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.history-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.history-tags button {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.search-panel__notes {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 12px;
+}
+
+.search-panel__notes p {
+  margin: 0 0 6px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.search-panel__notes ul {
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.search-result-panel {
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.search-result-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+/* ---------------------------------------------
+   Explorer artisan tweaks
+---------------------------------------------- */
+.explorer-human-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.explorer-hero-card {
+  border-radius: 34px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(10, 12, 22, 0.8);
+  box-shadow: 0 30px 60px rgba(2, 6, 23, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.explorer-hero-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f472b6, #fb7185);
+  box-shadow: 0 20px 40px rgba(251, 113, 133, 0.35);
+}
+
+.explorer-hero-card__title {
+  margin: 0 0 6px;
+  font-size: clamp(28px, 5vw, 40px);
+  font-weight: 700;
+  color: #fff;
+}
+
+.explorer-hero-card__subtitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.explorer-hero-card__meta {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.explorer-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.explorer-meta-row span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.explorer-panel {
+  border-radius: 28px !important;
+}
+
+.explorer-utilities-row {
+  margin-top: 30px !important;
+}
+
 .app-header__chip-icon {
   color: rgba(255, 255, 255, 0.9);
   display: flex;

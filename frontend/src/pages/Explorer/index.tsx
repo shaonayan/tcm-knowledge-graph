@@ -240,29 +240,24 @@ const Explorer: React.FC = () => {
   }, [loadGraph])
 
   return (
-    <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
+    <div className="page-wrapper explorer-human-shell" style={{ minHeight: 'calc(100vh - 72px)' }}>
       {/* 页面标题 */}
-      <div className="mb-8">
+      <div className="explorer-hero-card">
         <div className="flex items-start gap-5">
-          <div className="w-14 h-14 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all hover:scale-105" style={{
-            boxShadow: '0 4px 16px rgba(99, 102, 241, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset'
-          }} />
+          <div className="explorer-hero-card__icon" />
           <div className="flex-1 min-w-0">
-            <h1 className="text-4xl font-bold text-gray-900 mb-2" style={{
-              letterSpacing: '-0.02em',
-              fontWeight: 700
-            }}>
-              知识图谱探索器
-            </h1>
-            <p className="text-sm text-gray-500 mb-2" style={{
-              letterSpacing: '-0.01em'
-            }}>少纳言中医知识图谱</p>
-            <p className="text-xs text-gray-400" style={{
-              letterSpacing: '-0.01em'
-            }}>
-              快捷键：Ctrl/Cmd + +/- 缩放，Ctrl/Cmd + 0 重置，Ctrl/Cmd + F 适应窗口
+            <h1 className="explorer-hero-card__title">知识图谱探索器</h1>
+            <p className="explorer-hero-card__subtitle">少纳言中医知识图谱 · Neo4j 实时驱动</p>
+            <p className="explorer-hero-card__meta">
+              快捷键：Ctrl/Cmd + +/- 缩放 · Ctrl/Cmd + 0 重置 · Ctrl/Cmd + F 适应窗口
             </p>
           </div>
+        </div>
+        <div className="explorer-meta-row">
+          <span>当前根节点：{rootCode || '未选择'}</span>
+          <span>深度：{depth}</span>
+          <span>节点限制：{limit}</span>
+          <span>已加载节点：{graphData?.nodeCount ?? '-'}</span>
         </div>
       </div>
 

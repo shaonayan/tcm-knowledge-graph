@@ -333,30 +333,31 @@ const Search: React.FC = () => {
   }
 
   return (
-    <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
+    <div className="page-wrapper search-human-shell" style={{ minHeight: 'calc(100vh - 72px)' }}>
       <PageHeader
+        icon={<SearchOutlined />}
         title="智能搜索"
-        subtitle="少纳言中医知识图谱"
-        description="快速查找中医术语，支持模糊搜索和高级筛选"
+        subtitle="少纳言知识检索工作室"
+        description="键入任意术语或编码，系统自动穿梭 Neo4j 语义网格，可叠加类目/层级筛选。"
         extra={
           searchResults.length > 0 && (
-            <Dropdown 
-              menu={{ 
+            <Dropdown
+              menu={{
                 items: [
                   {
                     key: 'json',
-                    label: '导出为JSON',
+                    label: '导出 JSON',
                     icon: <FileTextOutlined />,
                     onClick: () => handleExport('json')
                   },
                   {
                     key: 'csv',
-                    label: '导出为CSV',
+                    label: '导出 CSV',
                     icon: <FileExcelOutlined />,
                     onClick: () => handleExport('csv')
                   }
                 ]
-              }} 
+              }}
               placement="bottomRight"
             >
               <Button icon={<DownloadOutlined />} type="primary">
@@ -367,65 +368,41 @@ const Search: React.FC = () => {
         }
       />
 
-      <Card className="mb-6 glass-panel">
-        <Space direction="vertical" className="w-full" size="large">
-          <div className="flex gap-4 items-start flex-wrap">
-            <div className="flex-1" style={{ minWidth: '300px' }}>
-              <InputSearch
-                placeholder="输入术语名称、代码或同义词"
-                allowClear
-                enterButton={<SearchOutlined />}
-                size="large"
-                className="w-full"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onSearch={handleSearch}
-                onClear={handleClear}
-                loading={loading}
-                style={{ borderRadius: '8px' }}
-              />
-              {/* 搜索历史 */}
-              {searchHistory.length > 0 && !searchQuery && (
-                <div className="mt-2">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-gray-500">
-                      <HistoryOutlined /> 搜索历史
-                    </span>
-                    <Button 
-                      type="link" 
-                      size="small" 
-                      icon={<ClearOutlined />}
-                      onClick={() => {
-                        clearSearchHistory()
-                        setSearchHistory([])
-                        message.success('搜索历史已清除')
-                      }}
-                    >
-                      清除
-                    </Button>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {searchHistory.slice(0, 10).map((item, index) => (
-                      <Button
-                        key={index}
-                        size="small"
-                        type="dashed"
-                        onClick={() => {
-                          setSearchQuery(item)
-                          handleSearch(item)
-                        }}
-                      >
-                        {item}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-              )}
+      <div className="search-meta-row">
+        <span>即时响应 · {loading ? '同步中' : '就绪'}</span>
+        <span>历史关键词 {searchHistory.length}</span>
+        <span>当前筛选：{category || '全部'}</span>
+        <span>命中节点 {total > 0 ? total : '--'}</span>
+      </div>
+
+      <section className="search-grid">
+        <div className="search-panel search-panel--primary">
+          <div className="search-panel__header">
+            <div>
+              <p className="eyebrow">关键词</p>
+              <h3>语义匹配</h3>
             </div>
+            <Button size="small" onClick={handleClear}>
+              清空
+            </Button>
+          </div>
+          <InputSearch
+            placeholder="输入术语名称、代码或同义词"
+            allowClear
+            enterButton={<SearchOutlined />}
+            size="large"
+            className="w-full"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onSearch={handleSearch}
+            onClear={handleClear}
+            loading={loading}
+            style={{ borderRadius: '10px' }}
+          />
+          <div className="search-controls-row">
             <Select
-              placeholder="筛选类别"
+              placeholder="选择类别"
               size="large"
-              style={{ width: 150 }}
               value={category || 'all'}
               onChange={handleCategoryChange}
               allowClear
@@ -443,70 +420,61 @@ const Search: React.FC = () => {
               高级筛选
             </Button>
           </div>
-          
-          {/* 高级搜索面板 */}
+
           {showAdvanced && (
-            <Card size="small" style={{ background: '#fafafa' }}>
-              <Space direction="vertical" className="w-full" size="middle">
-                <div className="flex gap-4 items-center">
-                  <span className="text-sm font-medium" style={{ width: 80 }}>层级筛选:</span>
-                  <Select
-                    placeholder="选择层级"
-                    style={{ width: 150 }}
-                    value={levelFilter}
-                    onChange={(value) => {
-                      setLevelFilter(value)
-                      if (searchQuery.trim()) {
-                        performSearch(searchQuery, category)
-                      }
-                    }}
-                    allowClear
-                  >
-                    <Option value={1}>L1 - 一级</Option>
-                    <Option value={2}>L2 - 二级</Option>
-                    <Option value={3}>L3 - 三级</Option>
-                    <Option value={4}>L4 - 四级</Option>
-                    <Option value={5}>L5 - 五级</Option>
-                  </Select>
-                </div>
-                <div className="flex gap-4 items-center">
-                  <span className="text-sm font-medium" style={{ width: 80 }}>代码前缀:</span>
-                  <Input
-                    placeholder="例如: A01, B02"
-                    style={{ width: 200 }}
-                    value={codePrefixFilter}
-                    onChange={(e) => {
-                      setCodePrefixFilter(e.target.value)
-                      if (searchQuery.trim()) {
-                        performSearch(searchQuery, category)
-                      }
-                    }}
-                    allowClear
-                  />
-                  <span className="text-xs text-gray-500">
-                    输入代码前缀进行精确筛选
-                  </span>
-                </div>
-                <div className="flex gap-2">
-                  <Button
-                    size="small"
-                    onClick={() => {
-                      setLevelFilter(undefined)
-                      setCodePrefixFilter('')
-                      if (searchQuery.trim()) {
-                        performSearch(searchQuery, category)
-                      }
-                    }}
-                  >
-                    重置筛选
-                  </Button>
-                </div>
-              </Space>
-            </Card>
+            <div className="advanced-panel">
+              <div className="advanced-panel__row">
+                <span>层级筛选</span>
+                <Select
+                  placeholder="选择层级"
+                  value={levelFilter}
+                  onChange={(value) => {
+                    setLevelFilter(value)
+                    if (searchQuery.trim()) {
+                      performSearch(searchQuery, category)
+                    }
+                  }}
+                  allowClear
+                >
+                  <Option value={1}>L1 - 一级</Option>
+                  <Option value={2}>L2 - 二级</Option>
+                  <Option value={3}>L3 - 三级</Option>
+                  <Option value={4}>L4 - 四级</Option>
+                  <Option value={5}>L5 - 五级</Option>
+                </Select>
+              </div>
+              <div className="advanced-panel__row">
+                <span>代码前缀</span>
+                <Input
+                  placeholder="例如: A01, B02"
+                  value={codePrefixFilter}
+                  onChange={(e) => {
+                    setCodePrefixFilter(e.target.value)
+                    if (searchQuery.trim()) {
+                      performSearch(searchQuery, category)
+                    }
+                  }}
+                  allowClear
+                />
+                <small>用于锁定更具体的分支</small>
+              </div>
+              <Button
+                size="small"
+                onClick={() => {
+                  setLevelFilter(undefined)
+                  setCodePrefixFilter('')
+                  if (searchQuery.trim()) {
+                    performSearch(searchQuery, category)
+                  }
+                }}
+              >
+                重置筛选
+              </Button>
+            </div>
           )}
-          
+
           {searchQuery && (
-            <div className="text-sm text-gray-500">
+            <div className="search-hint">
               {loading ? (
                 <span>正在搜索...</span>
               ) : debouncedSearchQuery !== searchQuery ? (
@@ -516,20 +484,67 @@ const Search: React.FC = () => {
               )}
             </div>
           )}
-        </Space>
-      </Card>
+        </div>
 
-      <Card 
-        title="搜索结果" 
-        className="glass-panel"
-        extra={
-          total > 0 && (
-            <span className="text-gray-600 font-medium">
-              共找到 <span style={{ color: 'var(--primary-color)', fontWeight: 600 }}>{total}</span> 条结果
-            </span>
-          )
-        }
-      >
+        <div className="search-panel search-panel--secondary">
+          <div className="search-panel__header">
+            <div>
+              <p className="eyebrow">历史</p>
+              <h3>最近查找</h3>
+            </div>
+            {searchHistory.length > 0 && (
+              <Button
+                type="link"
+                size="small"
+                icon={<ClearOutlined />}
+                onClick={() => {
+                  clearSearchHistory()
+                  setSearchHistory([])
+                  message.success('搜索历史已清除')
+                }}
+              >
+                清除
+              </Button>
+            )}
+          </div>
+          <div className="history-tags">
+            {searchHistory.length === 0 ? (
+              <p className="text-muted">暂无历史记录</p>
+            ) : (
+              searchHistory.slice(0, 10).map((item, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => {
+                    setSearchQuery(item)
+                    handleSearch(item)
+                  }}
+                >
+                  {item}
+                </button>
+              ))
+            )}
+          </div>
+          <div className="search-panel__notes">
+            <p>提示</p>
+            <ul>
+              <li>支持模糊匹配、拼音与中英文混输</li>
+              <li>输入编码可快速跳转节点详情</li>
+              <li>建议先唤醒 Render 后端，避免冷启动</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div className="search-result-panel glass-panel">
+        <div className="search-result-panel__header">
+          <div>
+            <p className="eyebrow">结果列表</p>
+            <h4>找到 {total} 条可能的关联节点</h4>
+          </div>
+          <span>点击行可跳转至节点详情</span>
+        </div>
+
         {error && (
           <Alert
             message="搜索失败"
@@ -567,7 +582,7 @@ const Search: React.FC = () => {
               className: 'hover:bg-gray-50'
             })}
             pagination={{
-              total: total,
+              total,
               pageSize: 20,
               showSizeChanger: true,
               showQuickJumper: true,
@@ -578,7 +593,7 @@ const Search: React.FC = () => {
             scroll={{ x: 'max-content' }}
           />
         )}
-      </Card>
+      </div>
     </div>
   )
 }
