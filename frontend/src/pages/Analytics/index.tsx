@@ -252,29 +252,25 @@ const Analytics: React.FC = () => {
   }
 
   return (
-    <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
-      <div className="mb-8">
-        <div className="flex items-center justify-between">
-          <div className="flex-1 min-w-0">
-            <div className="flex items-start gap-4">
-              <div className="flex-1 min-w-0">
-                <h1 className="text-3xl font-bold bg-gradient-to-r from-red-600 to-orange-600 bg-clip-text text-transparent mb-2 leading-tight">
-                  数据分析
-                </h1>
-                <p className="text-sm text-gray-500 mb-3 leading-tight">少纳言中医知识图谱</p>
-                <p className="text-gray-600 leading-relaxed">
-                  深入分析中医知识图谱的数据结构和统计信息
-                </p>
-              </div>
-            </div>
+    <div className="page-wrapper analytics-human-shell" style={{ minHeight: 'calc(100vh - 72px)' }}>
+      <div className="analytics-hero-card">
+        <div className="analytics-hero-card__content">
+          <div>
+            <p className="eyebrow">Insight Studio</p>
+            <h1>数据分析</h1>
+            <p>少纳言中医知识图谱 · 结构体温监控面板</p>
           </div>
-          <Button 
-            icon={<ReloadOutlined />} 
-            onClick={loadData}
-            loading={loading}
-          >
-            刷新数据
-          </Button>
+          <div className="analytics-hero-card__actions">
+            <Button icon={<ReloadOutlined />} onClick={loadData} loading={loading}>
+              刷新数据
+            </Button>
+          </div>
+        </div>
+        <div className="analytics-meta-row">
+          <span>节点 {stats?.totalNodes?.toLocaleString() ?? '--'}</span>
+          <span>关系 {stats?.totalRelationships?.toLocaleString() ?? '--'}</span>
+          <span>根节点 {overview?.rootCount ?? '--'}</span>
+          <span>更新 {new Date().toLocaleDateString('zh-CN')}</span>
         </div>
       </div>
 

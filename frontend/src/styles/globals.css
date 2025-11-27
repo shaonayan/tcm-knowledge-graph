@@ -1135,6 +1135,57 @@ body::after {
   border-radius: 30px;
 }
 
+/* ---------------------------------------------
+   Analytics artisan layout
+---------------------------------------------- */
+.analytics-human-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.analytics-hero-card {
+  border-radius: 34px;
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(10, 12, 24, 0.78);
+  box-shadow: 0 28px 60px rgba(3, 7, 18, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.analytics-hero-card__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.analytics-hero-card__content h1 {
+  margin: 4px 0;
+  font-size: clamp(28px, 5vw, 42px);
+  color: #fff;
+}
+
+.analytics-hero-card__content p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.analytics-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.analytics-meta-row span {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .app-header__chip-icon {
   color: rgba(255, 255, 255, 0.9);
   display: flex;
