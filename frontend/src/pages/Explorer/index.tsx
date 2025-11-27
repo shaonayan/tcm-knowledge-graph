@@ -240,7 +240,7 @@ const Explorer: React.FC = () => {
   }, [loadGraph])
 
   return (
-    <div className="page-wrapper explorer-human-shell" style={{ minHeight: 'calc(100vh - 72px)' }}>
+    <div className="linear-page explorer-linear-page" style={{ minHeight: 'calc(100vh - 72px)' }}>
       {/* 页面标题 */}
       <div className="explorer-hero-card">
         <div className="flex items-start gap-5">
@@ -262,7 +262,7 @@ const Explorer: React.FC = () => {
       </div>
 
       {/* 快速搜索区域 */}
-      <Card className="mb-5 glass-panel" style={{ padding: '20px' }}>
+      <Card className="linear-panel explorer-panel" style={{ padding: '20px' }}>
         <div className="flex gap-3 items-center flex-wrap">
           <div className="flex-1 min-w-[300px]">
             <Input
@@ -308,7 +308,7 @@ const Explorer: React.FC = () => {
       </Card>
 
       {/* 主控制面板 */}
-      <Card className="mb-5 glass-panel" style={{ padding: '24px' }}>
+      <Card className="linear-panel explorer-panel" style={{ padding: '24px' }}>
         <div className="space-y-5">
           {/* 第一行：根节点选择和主要操作 */}
           <div className="flex gap-3 items-center flex-wrap">

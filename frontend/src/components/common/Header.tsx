@@ -1,40 +1,40 @@
 import React from 'react'
-import { Layout } from 'antd'
-import {
-  ThunderboltOutlined,
-  CloudOutlined,
-  DotChartOutlined
-} from '@ant-design/icons'
-
-const { Header } = Layout
+import { SearchOutlined, ThunderboltOutlined } from '@ant-design/icons'
 
 export const AppHeader: React.FC = () => {
-  const metaItems = [
-    { icon: <CloudOutlined />, label: 'Neo4j Aura', value: '实时在线' },
-    { icon: <DotChartOutlined />, label: '知识节点', value: '6,820+' },
-    { icon: <ThunderboltOutlined />, label: '探索模式', value: '灵境视觉' }
-  ]
-
   return (
-    <Header className="app-header">
-      <div className="app-header__brand">
-        <div className="app-header__logo">
-          <span className="app-header__logo-text">少</span>
-        </div>
-        <div className="app-header__brand-text">
-          <div className="app-header__title">少纳言</div>
-          <div className="app-header__subtitle">TCM Graph</div>
+    <header className="linear-topbar">
+      <div className="linear-topbar__trail">
+        <span>少纳言 · 图谱控制台</span>
+        <div className="linear-topbar__status">
+          <span className="dot dot--active" />
+          Neo4j Aura 实时在线
         </div>
       </div>
-      <div className="app-header__meta">
-        {metaItems.map(item => (
-          <div key={item.label} className="app-header__chip" aria-label={item.label}>
-            <span className="app-header__chip-icon">{item.icon}</span>
-            <span className="app-header__chip-label">{item.label}</span>
-            <span className="app-header__chip-value">{item.value}</span>
+      <div className="linear-topbar__actions">
+        <button className="linear-cmd-button" type="button">
+          <SearchOutlined />
+          <span>搜索 / 快捷命令</span>
+          <kbd>⌘K</kbd>
+        </button>
+        <div className="linear-topbar__meta">
+          <div>
+            <span>节点</span>
+            <strong>6,820+</strong>
           </div>
-        ))}
+          <div>
+            <span>关系</span>
+            <strong>43,542</strong>
+          </div>
+          <div>
+            <ThunderboltOutlined />
+            <span>灵境视觉模式</span>
+          </div>
+        </div>
+        <div className="linear-topbar__avatar" aria-label="Shonaoyan">
+          SN
+        </div>
       </div>
-    </Header>
+    </header>
   )
 }

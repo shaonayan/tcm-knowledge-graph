@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useCallback } from 'react'
-import { Card, Input, Space, Table, Tag, Select, Alert, Empty, message, Button, Dropdown } from 'antd'
+import { Input, Table, Tag, Select, Alert, Empty, message, Button, Dropdown } from 'antd'
 import { SearchOutlined, DownloadOutlined, FileExcelOutlined, FileTextOutlined, HistoryOutlined, FilterOutlined, ClearOutlined } from '@ant-design/icons'
 import { Link, useNavigate } from 'react-router-dom'
 import { searchNodes, type SearchResult } from '@/services/api'
 import { LoadingSpinner } from '@/components/common/Loading'
-import { PageHeader } from '@/components/common/PageHeader'
 
 const { Search: InputSearch } = Input
 const { Option } = Select
@@ -333,42 +332,24 @@ const Search: React.FC = () => {
   }
 
   return (
-    <div className="page-wrapper search-human-shell" style={{ minHeight: 'calc(100vh - 72px)' }}>
-      <PageHeader
-        icon={<SearchOutlined />}
-        title="智能搜索"
-        subtitle="少纳言知识检索工作室"
-        description="键入任意术语或编码，系统自动穿梭 Neo4j 语义网格，可叠加类目/层级筛选。"
-        extra={
-          searchResults.length > 0 && (
-            <Dropdown
-              menu={{
-                items: [
-                  {
-                    key: 'json',
-                    label: '导出 JSON',
-                    icon: <FileTextOutlined />,
-                    onClick: () => handleExport('json')
-                  },
-                  {
-                    key: 'csv',
-                    label: '导出 CSV',
-                    icon: <FileExcelOutlined />,
-                    onClick: () => handleExport('csv')
-                  }
-                ]
-              }}
-              placement="bottomRight"
-            >
-              <Button icon={<DownloadOutlined />} type="primary">
-                导出结果
-              </Button>
-            </Dropdown>
-          )
-        }
-      />
+    <div className="linear-page" style={{ minHeight: 'calc(100vh - 72px)' }}>
+      <section className="linear-page-hero">
+        <div>
+          <p className="eyebrow">检索工作室</p>
+          <h1>智能搜索</h1>
+          <p>键入术语或编码，Linear 风格的命令面板会即时返回相邻节点，并可叠加类别/层级筛选。</p>
+        </div>
+        <div className="hero-actions">
+          <button type="button" className="hero-actions__primary" onClick={() => navigate('/explorer')}>
+            前往图谱
+          </button>
+          <button type="button" className="hero-actions__ghost" onClick={() => navigate('/analytics')}>
+            数据分析
+          </button>
+        </div>
+      </section>
 
-      <div className="search-meta-row">
+      <div className="linear-pill-row">
         <span>即时响应 · {loading ? '同步中' : '就绪'}</span>
         <span>历史关键词 {searchHistory.length}</span>
         <span>当前筛选：{category || '全部'}</span>
@@ -376,7 +357,7 @@ const Search: React.FC = () => {
       </div>
 
       <section className="search-grid">
-        <div className="search-panel search-panel--primary">
+        <div className="linear-panel search-panel search-panel--primary">
           <div className="search-panel__header">
             <div>
               <p className="eyebrow">关键词</p>
@@ -397,7 +378,6 @@ const Search: React.FC = () => {
             onSearch={handleSearch}
             onClear={handleClear}
             loading={loading}
-            style={{ borderRadius: '10px' }}
           />
           <div className="search-controls-row">
             <Select
@@ -419,6 +399,18 @@ const Search: React.FC = () => {
             >
               高级筛选
             </Button>
+            {searchResults.length > 0 && (
+              <Dropdown
+                menu={{
+                  items: [
+                    { key: 'json', label: '导出 JSON', icon: <FileTextOutlined />, onClick: () => handleExport('json') },
+                    { key: 'csv', label: '导出 CSV', icon: <FileExcelOutlined />, onClick: () => handleExport('csv') }
+                  ]
+                }}
+              >
+                <Button icon={<DownloadOutlined />} />
+              </Dropdown>
+            )}
           </div>
 
           {showAdvanced && (
@@ -486,7 +478,7 @@ const Search: React.FC = () => {
           )}
         </div>
 
-        <div className="search-panel search-panel--secondary">
+        <div className="linear-panel search-panel search-panel--secondary">
           <div className="search-panel__header">
             <div>
               <p className="eyebrow">历史</p>
@@ -536,7 +528,7 @@ const Search: React.FC = () => {
         </div>
       </section>
 
-      <div className="search-result-panel glass-panel">
+      <div className="linear-panel search-result-panel">
         <div className="search-result-panel__header">
           <div>
             <p className="eyebrow">结果列表</p>
@@ -586,7 +578,7 @@ const Search: React.FC = () => {
               pageSize: 20,
               showSizeChanger: true,
               showQuickJumper: true,
-              showTotal: (total, range) => 
+              showTotal: (total, range) =>
                 `第 ${range[0]}-${range[1]} 条，共 ${total} 条`,
               pageSizeOptions: ['10', '20', '50', '100']
             }}

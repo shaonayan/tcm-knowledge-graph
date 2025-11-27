@@ -71,75 +71,70 @@ const Dashboard: React.FC = () => {
   const syndromePercent = totalCount > 0 ? (syndromeCount / totalCount) * 100 : 0
 
   return (
-    <div className="page-wrapper dashboard-human-shell" style={{ minHeight: 'calc(100vh - 80px)' }}>
-      <PageHeader
-        icon={<BranchesOutlined />}
-        title="少纳言中医知识图谱"
-        subtitle="Shonaoyan Lab · 2025"
-        description="一个持续迭代的数字草本实验室，实时同步 Neo4j Aura 数据，再现 6,000+ 节点与 4 万余条联系。"
-        extra={
-          <div className="hero-actions">
-            <button type="button" className="hero-actions__primary" onClick={() => navigate('/explorer')}>
-              立即探索
-            </button>
-            <button type="button" className="hero-actions__ghost" onClick={() => navigate('/visualizations')}>
-              高级可视化
-            </button>
-          </div>
-        }
-      />
+    <div className="linear-page">
+      <section className="linear-page-hero">
+        <div>
+          <p className="eyebrow">今日概览</p>
+          <h1>少纳言知识图谱</h1>
+          <p>Neo4j 实时驱动，自动同步 6,800+ 节点与 4.3 万关系，构建苹果式液态玻璃体验。</p>
+        </div>
+        <div className="hero-actions">
+          <button type="button" className="hero-actions__primary" onClick={() => navigate('/explorer')}>
+            进入图谱
+          </button>
+          <button type="button" className="hero-actions__ghost" onClick={() => navigate('/visualizations')}>
+            3D 可视化
+          </button>
+        </div>
+      </section>
 
-      <div className="hero-pill-row">
+      <div className="linear-pill-row">
         <span>Neo4j Aura 实时在线</span>
         <span>节点 {stats?.totalNodes?.toLocaleString() ?? '--'}</span>
         <span>关系 {stats?.totalRelationships?.toLocaleString() ?? '--'}</span>
-        <span>更新 {new Date().toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' })}</span>
+        <span>更新于 {new Date().toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' })}</span>
       </div>
 
-      <section className="human-stat-cluster">
+      <section className="linear-stat-row">
         {[
           {
             title: '总节点',
             value: stats?.totalNodes || 0,
             icon: <NodeIndexOutlined />,
-            annotation: '标准化术语',
-            accent: 'indigo'
+            desc: '标准化术语'
           },
           {
-            title: '关系数量',
+            title: '总关系',
             value: stats?.totalRelationships || 0,
             icon: <BranchesOutlined />,
-            annotation: '语义边',
-            accent: 'purple'
+            desc: '语义连接'
           },
           {
             title: '疾病类术语',
             value: diseaseCount,
             icon: <SearchOutlined />,
-            annotation: `${diseasePercent.toFixed(1)}% 占比`,
-            accent: 'cyan'
+            desc: `${diseasePercent.toFixed(1)}% 占比`
           },
           {
             title: '证候类术语',
             value: syndromeCount,
             icon: <BarChartOutlined />,
-            annotation: `${syndromePercent.toFixed(1)}% 占比`,
-            accent: 'pink'
+            desc: `${syndromePercent.toFixed(1)}% 占比`
           }
         ].map(card => (
-          <article key={card.title} className={`stat-human-card stat-human-card--${card.accent}`}>
-            <div className="stat-human-card__icon">{card.icon}</div>
+          <article key={card.title} className="linear-stat-card">
+            <div className="linear-stat-card__icon">{card.icon}</div>
             <div>
               <p>{card.title}</p>
               <h3>{card.value.toLocaleString()}</h3>
-              <span>{card.annotation}</span>
+              <span>{card.desc}</span>
             </div>
           </article>
         ))}
       </section>
 
-      <section className="human-panels-grid">
-        <article className="human-panel">
+      <section className="linear-panels-grid">
+        <article className="linear-panel">
           <header>
             <div>
               <p className="eyebrow">数据体温</p>
@@ -149,24 +144,24 @@ const Dashboard: React.FC = () => {
               查看分析
             </button>
           </header>
-          <div className="human-panel__progress">
+          <div className="linear-panel__progress">
             <label>疾病类术语</label>
             <Progress percent={Number(diseasePercent.toFixed(1))} strokeColor="#52c41a" showInfo={false} />
             <span>{diseaseCount.toLocaleString()} 条</span>
           </div>
-          <div className="human-panel__progress">
+          <div className="linear-panel__progress">
             <label>证候类术语</label>
             <Progress percent={Number(syndromePercent.toFixed(1))} strokeColor="#38bdf8" showInfo={false} />
             <span>{syndromeCount.toLocaleString()} 条</span>
           </div>
-          <div className="human-panel__progress">
+          <div className="linear-panel__progress">
             <label>数据完整性</label>
             <Progress percent={Number((stats?.dataCompleteness || 0).toFixed(1))} strokeColor="#fb7185" showInfo={false} />
             <span>{stats?.dataCompleteness?.toFixed(1) ?? 0}%</span>
           </div>
         </article>
 
-        <article className="human-panel human-panel--actions">
+        <article className="linear-panel linear-panel--actions">
           <header>
             <div>
               <p className="eyebrow">工作流</p>

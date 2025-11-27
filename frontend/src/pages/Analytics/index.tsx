@@ -252,7 +252,7 @@ const Analytics: React.FC = () => {
   }
 
   return (
-    <div className="page-wrapper analytics-human-shell" style={{ minHeight: 'calc(100vh - 72px)' }}>
+    <div className="linear-page analytics-linear-page" style={{ minHeight: 'calc(100vh - 72px)' }}>
       <div className="analytics-hero-card">
         <div className="analytics-hero-card__content">
           <div>
@@ -275,49 +275,27 @@ const Analytics: React.FC = () => {
       </div>
 
       {/* 关键指标卡片 */}
-      <Row gutter={[16, 16]} className="mb-6">
-        <Col xs={24} sm={12} lg={6}>
-          <Card>
-            <Statistic
-              title="总节点数"
-              value={stats?.totalNodes || 0}
-              prefix={<NodeIndexOutlined />}
-              valueStyle={{ color: '#3f8600' }}
-            />
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} lg={6}>
-          <Card>
-            <Statistic
-              title="总关系数"
-              value={stats?.totalRelationships || 0}
-              prefix={<BranchesOutlined />}
-              valueStyle={{ color: '#1890ff' }}
-            />
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} lg={6}>
-          <Card>
-            <Statistic
-              title="根节点数"
-              value={overview?.rootCount || 0}
-              prefix={<RiseOutlined />}
-              valueStyle={{ color: '#cf1322' }}
-            />
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} lg={6}>
-          <Card>
-            <Statistic
-              title="平均子节点数"
-              value={overview?.avgChildren || 0}
-              precision={2}
-              prefix={<BarChartOutlined />}
-              valueStyle={{ color: '#722ed1' }}
-            />
-          </Card>
-        </Col>
-      </Row>
+      <section className="linear-stat-row">
+        {[
+          { title: '总节点数', value: stats?.totalNodes || 0, icon: <NodeIndexOutlined />, desc: '标准化术语' },
+          { title: '总关系数', value: stats?.totalRelationships || 0, icon: <BranchesOutlined />, desc: '语义边' },
+          { title: '根节点数', value: overview?.rootCount || 0, icon: <RiseOutlined />, desc: '入口节点' },
+          { title: '平均子节点数', value: overview?.avgChildren || 0, icon: <BarChartOutlined />, desc: '拓扑密度', precision: 2 }
+        ].map(item => (
+          <article key={item.title} className="linear-stat-card">
+            <div className="linear-stat-card__icon">{item.icon}</div>
+            <div>
+              <p>{item.title}</p>
+              <h3>
+                {item.precision !== undefined
+                  ? Number(item.value ?? 0).toFixed(item.precision)
+                  : Number(item.value ?? 0).toLocaleString()}
+              </h3>
+              <span>{item.desc}</span>
+            </div>
+          </article>
+        ))}
+      </section>
 
       {/* 图表区域 */}
       <Row gutter={[16, 16]}>
@@ -335,7 +313,7 @@ const Analytics: React.FC = () => {
                 />
               </Space>
             }
-            className="h-96"
+            className="linear-panel h-96"
           >
             <ReactECharts
               ref={categoryChartRef}
@@ -360,7 +338,7 @@ const Analytics: React.FC = () => {
                 />
               </Space>
             }
-            className="h-96"
+            className="linear-panel h-96"
           >
             <ReactECharts
               ref={levelChartRef}
@@ -385,7 +363,7 @@ const Analytics: React.FC = () => {
                 />
               </Space>
             }
-            className="h-96"
+            className="linear-panel h-96"
           >
             <ReactECharts
               ref={levelCategoryChartRef}

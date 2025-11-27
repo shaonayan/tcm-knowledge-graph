@@ -1,6 +1,5 @@
 import React, { Suspense, useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { Layout } from 'antd'
 import { ErrorBoundary } from './components/common/ErrorBoundary'
 import { AppHeader } from './components/common/Header'
 import { AppSider } from './components/common/Sider'
@@ -16,10 +15,7 @@ const Analytics = React.lazy(() => import('./pages/Analytics'))
 const Visualizations = React.lazy(() => import('./pages/Visualizations'))
 const NodeDetail = React.lazy(() => import('./pages/NodeDetail'))
 
-const { Content } = Layout
-
 const App: React.FC = () => {
-  const [collapsed, setCollapsed] = useState(true) // 默认收起
   const [showStartup, setShowStartup] = useState(true)
 
   useEffect(() => {
@@ -31,30 +27,17 @@ const App: React.FC = () => {
     <ErrorBoundary>
       <StartupScreen visible={showStartup} />
       <Background />
-      <Layout className="min-h-screen app-shell" style={{ background: 'transparent' }}>
-        {/* 顶部导航栏 */}
-        <AppHeader />
-        
-        <Layout style={{ position: 'relative', minHeight: 'calc(100vh - 80px)', background: 'transparent' }}>
-          {/* 侧边导航栏 */}
-          <AppSider collapsed={collapsed} onCollapse={setCollapsed} />
-          
-          {/* 主内容区域 */}
-          <Content
-            className="transition-all duration-300 ease-in-out app-content-surface"
-            style={{
-              minHeight: 'calc(100vh - 80px)',
-              marginLeft: collapsed ? 0 : '260px',
-              width: collapsed ? '100%' : 'calc(100% - 260px)',
-              maxWidth: collapsed ? '100%' : 'calc(100% - 260px)',
-            }}
-          >
+      <div className="linear-shell">
+        <AppSider />
+        <div className="linear-main">
+          <AppHeader />
+          <div className="linear-content-shell">
             <div className="app-ambient">
               <span className="ambient ambient-one" />
               <span className="ambient ambient-two" />
               <span className="ambient ambient-three" />
             </div>
-            <div className="app-content-inner">
+            <div className="linear-content-inner">
               <Suspense fallback={<LoadingSpinner />}>
                 <Routes>
                   <Route path="/" element={<Dashboard />} />
@@ -78,9 +61,9 @@ const App: React.FC = () => {
                 </Routes>
               </Suspense>
             </div>
-          </Content>
-        </Layout>
-      </Layout>
+          </div>
+        </div>
+      </div>
     </ErrorBoundary>
   )
 }
