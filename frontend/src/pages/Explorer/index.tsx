@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { 
-  Card, 
   Button, 
-  Space, 
   Select, 
   Input, 
   Alert, 
@@ -11,9 +9,7 @@ import {
   message,
   Tooltip,
   Statistic,
-  Row,
-  Col,
-  Tabs
+  Dropdown
 } from 'antd'
 import { 
   NodeIndexOutlined, 
@@ -24,6 +20,9 @@ import {
   HomeOutlined,
   SearchOutlined,
   DownloadOutlined,
+  FileTextOutlined,
+  FileImageOutlined,
+  ClearOutlined
 } from '@ant-design/icons'
 import { getGraphData, expandNode, getRootNodes, searchNodes, type GraphData, type RootNode, type GraphNode } from '@/services/api'
 import { LoadingSpinner } from '@/components/common/Loading'
@@ -149,11 +148,21 @@ const Explorer: React.FC = () => {
 
   // 重置视图
   const resetView = () => {
+    graphRef.current?.resetZoom()
+  }
+
+  // 重置所有参数
+  const resetAll = () => {
     setGraphData(null)
     setRootCode(undefined)
     setSelectedNode(null)
     setSearchQuery('')
     setQuickSearchTerm('')
+    setCategoryFilter(undefined)
+    setLevelFilter(undefined)
+    setCodePrefixFilter('')
+    graphRef.current?.resetZoom()
+    message.success('已重置所有参数')
   }
 
   // 快捷键支持（只在图谱加载时生效）
@@ -357,236 +366,162 @@ const Explorer: React.FC = () => {
           </div>
         </div>
 
-          {/* 第二行：布局和参数设置 */}
-          <div className="flex gap-3 items-center flex-wrap">
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600 whitespace-nowrap">布局：</span>
-              <Select
-                value={layout}
-                onChange={(value) => {
-                  setLayout(value)
-                  saveModulePreferences('explorer', { layout: value })
-                }}
-                style={{ width: 120 }}
-              >
-                <Option value="dagre">层次布局</Option>
-                <Option value="breadthfirst">广度优先</Option>
-                <Option value="grid">网格布局</Option>
-                <Option value="circle">圆形布局</Option>
-              </Select>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600 whitespace-nowrap">深度：</span>
-              <Input
-                type="number"
-                placeholder="深度"
-                value={depth}
-                onChange={(e) => {
-                  const newDepth = parseInt(e.target.value) || 2
-                  setDepth(newDepth)
-                  saveModulePreferences('explorer', { depth: newDepth })
-                }}
-                min={1}
-                max={5}
-                style={{ width: 80 }}
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600 whitespace-nowrap">限制：</span>
-              <Input
-                type="number"
-                placeholder="限制"
-                value={limit}
-                onChange={(e) => setLimit(parseInt(e.target.value) || 100)}
-                min={10}
-                max={500}
-                style={{ width: 100 }}
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600 whitespace-nowrap">类别：</span>
-              <Select
-                placeholder="全部"
-                style={{ width: 120 }}
-                value={categoryFilter}
-                onChange={setCategoryFilter}
-                allowClear
-              >
-                <Option value="疾病类">疾病类</Option>
-                <Option value="证候类">证候类</Option>
-              </Select>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600 whitespace-nowrap">层级：</span>
-              <Select
-                placeholder="全部"
-                style={{ width: 100 }}
-                value={levelFilter}
-                onChange={setLevelFilter}
-                allowClear
-              >
-                <Option value={1}>L1</Option>
-                <Option value={2}>L2</Option>
-                <Option value={3}>L3</Option>
-                <Option value={4}>L4</Option>
-                <Option value={5}>L5</Option>
-              </Select>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600 whitespace-nowrap">代码前缀：</span>
-              <Input
-                placeholder="如：A01"
-                value={codePrefixFilter}
-                onChange={(e) => setCodePrefixFilter(e.target.value)}
-                allowClear
-                style={{ width: 120 }}
-              />
-            </div>
+        <div className="linear-form-group">
+          <label>布局与参数</label>
+          <div className="linear-form-row">
+            <Select
+              value={layout}
+              onChange={(value) => {
+                setLayout(value)
+                saveModulePreferences('explorer', { layout: value })
+              }}
+              style={{ flex: 1 }}
+            >
+              <Option value="dagre">层次布局</Option>
+              <Option value="breadthfirst">广度优先</Option>
+              <Option value="grid">网格布局</Option>
+              <Option value="circle">圆形布局</Option>
+            </Select>
+            <Input
+              type="number"
+              placeholder="深度"
+              value={depth}
+              onChange={(e) => {
+                const newDepth = parseInt(e.target.value) || 2
+                setDepth(newDepth)
+                saveModulePreferences('explorer', { depth: newDepth })
+              }}
+              min={1}
+              max={5}
+              style={{ width: 80 }}
+            />
+            <Input
+              type="number"
+              placeholder="限制"
+              value={limit}
+              onChange={(e) => setLimit(parseInt(e.target.value) || 100)}
+              min={10}
+              max={500}
+              style={{ width: 100 }}
+            />
           </div>
-
-          {/* 第三行：视图控制和导出 */}
-          <div className="flex gap-3 items-center flex-wrap">
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600 whitespace-nowrap">视图控制：</span>
-              <Button.Group>
-                <Tooltip title="放大 (Ctrl/Cmd + +)">
-                  <Button
-                    icon={<ZoomInOutlined />}
-                    onClick={() => graphRef.current?.zoomIn()}
-                    disabled={!graphData}
-                  />
-                </Tooltip>
-                <Tooltip title="缩小 (Ctrl/Cmd + -)">
-                  <Button
-                    icon={<ZoomOutOutlined />}
-                    onClick={() => graphRef.current?.zoomOut()}
-                    disabled={!graphData}
-                  />
-                </Tooltip>
-                <Tooltip title="重置缩放 (Ctrl/Cmd + 0)">
-                  <Button
-                    icon={<HomeOutlined />}
-                    onClick={() => graphRef.current?.resetZoom()}
-                    disabled={!graphData}
-                  />
-                </Tooltip>
-                <Tooltip title="适应窗口 (Ctrl/Cmd + F)">
-                  <Button
-                    icon={<FullscreenOutlined />}
-                    onClick={() => graphRef.current?.fit()}
-                    disabled={!graphData}
-                  />
-                </Tooltip>
-              </Button.Group>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600 whitespace-nowrap">导出：</span>
-              <Button.Group>
-                <Button
-                  icon={<DownloadOutlined />}
-                  onClick={() => {
-                    if (!graphData) {
-                      message.warning('请先加载图谱数据')
-                      return
-                    }
-                    
-                    const exportData = {
-                      nodes: graphData.nodes.map(node => ({
-                        id: node.id,
-                        code: node.code,
-                        name: node.name || node.label,
-                        category: node.category,
-                        level: node.level
-                      })),
-                      edges: graphData.edges.map(edge => ({
-                        id: edge.id,
-                        source: edge.source,
-                        target: edge.target,
-                        type: edge.type
-                      })),
-                      metadata: {
-                        nodeCount: graphData.nodeCount,
-                        edgeCount: graphData.edgeCount,
-                        rootCode: rootCode,
-                        depth: depth,
-                        limit: limit,
-                        exportTime: new Date().toISOString()
-                      }
-                    }
-                    
-                    const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' })
-                    const url = URL.createObjectURL(blob)
-                    const link = document.createElement('a')
-                    link.download = `graph-export-${rootCode || 'all'}-${Date.now()}.json`
-                    link.href = url
-                    link.click()
-                    URL.revokeObjectURL(url)
-                    message.success('图谱数据导出成功')
-                  }}
-                  disabled={!graphData}
-                >
-                  JSON
-                </Button>
-                <Button
-                  icon={<DownloadOutlined />}
-                  onClick={() => {
-                    if (!graphData) {
-                      message.warning('请先加载图谱数据')
-                      return
-                    }
-                    graphRef.current?.exportPNG(`graph-${rootCode || 'all'}-${Date.now()}.png`)
-                    message.success('图谱图片导出成功')
-                  }}
-                  disabled={!graphData}
-                >
-                  PNG
-                </Button>
-              </Button.Group>
-            </div>
+          <div className="linear-form-row">
+            <Select
+              placeholder="类别筛选"
+              style={{ flex: 1 }}
+              value={categoryFilter}
+              onChange={setCategoryFilter}
+              allowClear
+            >
+              <Option value="疾病类">疾病类</Option>
+              <Option value="证候类">证候类</Option>
+            </Select>
+            <Select
+              placeholder="层级筛选"
+              style={{ flex: 1 }}
+              value={levelFilter}
+              onChange={setLevelFilter}
+              allowClear
+            >
+              <Option value={1}>L1</Option>
+              <Option value={2}>L2</Option>
+              <Option value={3}>L3</Option>
+              <Option value={4}>L4</Option>
+              <Option value={5}>L5</Option>
+            </Select>
+            <Input
+              placeholder="代码前缀"
+              value={codePrefixFilter}
+              onChange={(e) => setCodePrefixFilter(e.target.value)}
+              style={{ flex: 1 }}
+              allowClear
+            />
           </div>
         </div>
-      </Card>
 
-      {/* 搜索和分析面板 */}
-      <Card className="mb-5 glass-panel" style={{ padding: '20px' }}>
-        <Tabs
-          defaultActiveKey="search"
-          size="large"
-          items={[
-            {
-              key: 'search',
-              label: (
-                <span>
-                  <SearchOutlined /> 节点搜索
-                </span>
-              ),
-              children: (
-                <Input
-                  placeholder="搜索节点（按名称或代码）..."
-                  prefix={<SearchOutlined />}
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  allowClear
-                  size="large"
-                />
-              )
-            },
-            {
-              key: 'analysis',
-              label: (
-                <span>
-                  <NodeIndexOutlined /> 图谱分析
-                </span>
-              ),
-              children: (
-                <GraphAnalysis selectedNodeCode={selectedNode?.code} />
-              )
-            }
-          ]}
-        />
-      </Card>
+        <div className="linear-form-group">
+          <label>视图操作</label>
+          <div className="linear-form-actions">
+            <Button icon={<ZoomInOutlined />} onClick={() => graphRef.current?.zoomIn()}>
+              放大
+            </Button>
+            <Button icon={<ZoomOutOutlined />} onClick={() => graphRef.current?.zoomOut()}>
+              缩小
+            </Button>
+            <Button icon={<HomeOutlined />} onClick={() => graphRef.current?.resetZoom()}>
+              重置
+            </Button>
+            <Button icon={<FullscreenOutlined />} onClick={() => graphRef.current?.fit()}>
+              适应
+            </Button>
+            <Dropdown
+              menu={{
+                items: [
+                  {
+                    key: 'json',
+                    label: '导出为JSON',
+                    icon: <FileTextOutlined />,
+                    onClick: () => {
+                      if (!graphData) {
+                        message.warning('请先加载图谱数据')
+                        return
+                      }
+                      const exportData = {
+                        nodes: graphData.nodes.map((node: any) => ({
+                          id: node.id,
+                          code: node.code,
+                          name: node.name || node.label,
+                          category: node.category,
+                          level: node.level
+                        })),
+                        edges: graphData.edges.map((edge: any) => ({
+                          id: edge.id,
+                          source: edge.source,
+                          target: edge.target,
+                          type: edge.type
+                        })),
+                        metadata: {
+                          nodeCount: graphData.nodeCount,
+                          edgeCount: graphData.edgeCount,
+                          rootCode: rootCode,
+                          depth: depth,
+                          limit: limit,
+                          exportTime: new Date().toISOString()
+                        }
+                      }
+                      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' })
+                      const url = URL.createObjectURL(blob)
+                      const link = document.createElement('a')
+                      link.download = `graph-export-${rootCode || 'all'}-${Date.now()}.json`
+                      link.href = url
+                      link.click()
+                      URL.revokeObjectURL(url)
+                      message.success('图谱数据导出成功')
+                    }
+                  },
+                  {
+                    key: 'png',
+                    label: '导出为PNG',
+                    icon: <FileImageOutlined />,
+                    onClick: () => {
+                      if (!graphData) {
+                        message.warning('请先加载图谱数据')
+                        return
+                      }
+                      graphRef.current?.exportPNG(`graph-${rootCode || 'all'}-${Date.now()}.png`)
+                      message.success('图谱图片导出成功')
+                    }
+                  }
+                ]
+              }}
+              placement="bottomRight"
+            >
+              <Button icon={<DownloadOutlined />}>导出</Button>
+            </Dropdown>
+          </div>
+        </div>
+      </div>
 
-      {/* 错误提示 */}
       {error && (
         <Alert
           message="错误"
@@ -595,17 +530,24 @@ const Explorer: React.FC = () => {
           showIcon
           closable
           onClose={() => setError(null)}
-          className="mb-4"
+          style={{ marginBottom: '24px' }}
         />
       )}
 
-      {/* 图谱可视化区域 */}
-      <Card className="glass-panel" style={{ 
-        height: 'calc(100vh - 500px)', 
-        minHeight: '600px',
-        padding: '24px'
-      }}>
-        {loading ? (
+      <div className="linear-panel explorer-panel explorer-panel--graph">
+        <header>
+          <div>
+            <p className="eyebrow">图谱视图</p>
+            <h4>可视化展示</h4>
+          </div>
+          {selectedNode && (
+            <div style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.7)' }}>
+              选中：{selectedNode.name || selectedNode.code}
+            </div>
+          )}
+        </header>
+        <div className="explorer-graph-container">
+          {loading ? (
           <div className="flex items-center justify-center h-full">
             <LoadingSpinner />
           </div>
@@ -619,7 +561,7 @@ const Explorer: React.FC = () => {
                 type="primary"
                 size="large"
                 icon={<NodeIndexOutlined />}
-                onClick={() => loadGraph()}
+                onClick={() => loadGraph(rootCode)}
                 loading={loading}
               >
                 加载根节点图谱
@@ -745,8 +687,9 @@ const Explorer: React.FC = () => {
               )}
             </div>
           </div>
-        )}
-      </Card>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
