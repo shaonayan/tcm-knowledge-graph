@@ -74,7 +74,6 @@ const Dashboard: React.FC = () => {
     <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 80px)' }}>
       {/* 页面标题 */}
       <PageHeader
-        iconText="少"
         title="少纳言中医知识图谱"
         subtitle="Shonaoyan TCM Knowledge Graph"
         description="欢迎使用少纳言中医知识图谱系统，探索传统中医的智慧宝库"

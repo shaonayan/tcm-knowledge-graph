@@ -18,7 +18,9 @@ export const AppHeader: React.FC = () => {
   return (
     <Header className="app-header">
       <div className="app-header__brand">
-        <div className="app-header__logo" />
+        <div className="app-header__logo">
+          <span className="app-header__logo-text">少</span>
+        </div>
         <div className="app-header__brand-text">
           <div className="app-header__title">少纳言</div>
           <div className="app-header__subtitle">TCM Graph</div>
