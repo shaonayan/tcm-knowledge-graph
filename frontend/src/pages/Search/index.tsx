@@ -335,7 +335,6 @@ const Search: React.FC = () => {
   return (
     <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 72px)' }}>
       <PageHeader
-        iconText="搜"
         title="智能搜索"
         subtitle="少纳言中医知识图谱"
         description="快速查找中医术语，支持模糊搜索和高级筛选"
