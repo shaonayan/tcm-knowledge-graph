@@ -71,246 +71,141 @@ const Dashboard: React.FC = () => {
   const syndromePercent = totalCount > 0 ? (syndromeCount / totalCount) * 100 : 0
 
   return (
-    <div className="page-wrapper" style={{ minHeight: 'calc(100vh - 80px)' }}>
-      {/* 页面标题 */}
+    <div className="page-wrapper dashboard-human-shell" style={{ minHeight: 'calc(100vh - 80px)' }}>
       <PageHeader
+        icon={<BranchesOutlined />}
         title="少纳言中医知识图谱"
-        subtitle="Shonaoyan TCM Knowledge Graph"
-        description="欢迎使用少纳言中医知识图谱系统，探索传统中医的智慧宝库"
+        subtitle="Shonaoyan Lab · 2025"
+        description="一个持续迭代的数字草本实验室，实时同步 Neo4j Aura 数据，再现 6,000+ 节点与 4 万余条联系。"
+        extra={
+          <div className="hero-actions">
+            <button type="button" className="hero-actions__primary" onClick={() => navigate('/explorer')}>
+              立即探索
+            </button>
+            <button type="button" className="hero-actions__ghost" onClick={() => navigate('/visualizations')}>
+              高级可视化
+            </button>
+          </div>
+        }
       />
 
-      {/* 统计卡片 */}
-      <Row gutter={[20, 20]} className="mb-8">
-        <Col xs={24} sm={12} lg={6}>
-          <Card 
-            className="text-center glass-panel stat-card-modern"
-            style={{
-              background: 'rgba(0, 0, 0, 0.3)',
-              borderColor: 'rgba(255, 255, 255, 0.15)'
-            }}
-          >
-            <Statistic
-              title={<span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', fontWeight: 500 }}>总节点数</span>}
-              value={stats?.totalNodes || 0}
-              prefix={<NodeIndexOutlined style={{ color: '#ffffff', fontSize: '28px', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />}
-              valueStyle={{ color: '#ffffff', fontSize: '28px', fontWeight: 700, textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
-            />
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} lg={6}>
-          <Card 
-            className="text-center glass-panel stat-card-modern"
-            style={{
-              background: 'rgba(0, 0, 0, 0.3)',
-              borderColor: 'rgba(255, 255, 255, 0.15)'
-            }}
-          >
-            <Statistic
-              title={<span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', fontWeight: 500 }}>关系数量</span>}
-              value={stats?.totalRelationships || 0}
-              prefix={<BranchesOutlined style={{ color: '#ffffff', fontSize: '28px', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />}
-              valueStyle={{ color: '#ffffff', fontSize: '28px', fontWeight: 700, textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
-            />
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} lg={6}>
-          <Card 
-            className="text-center glass-panel stat-card-modern"
-            style={{
-              background: 'rgba(0, 0, 0, 0.3)',
-              borderColor: 'rgba(255, 255, 255, 0.15)'
-            }}
-          >
-            <Statistic
-              title={<span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', fontWeight: 500 }}>疾病类术语</span>}
-              value={diseaseCount}
-              prefix={<SearchOutlined style={{ color: '#ffffff', fontSize: '28px', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />}
-              valueStyle={{ color: '#ffffff', fontSize: '28px', fontWeight: 700, textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
-            />
-          </Card>
-        </Col>
-        <Col xs={24} sm={12} lg={6}>
-          <Card 
-            className="text-center glass-panel stat-card-modern"
-            style={{
-              background: 'rgba(0, 0, 0, 0.3)',
-              borderColor: 'rgba(255, 255, 255, 0.15)'
-            }}
-          >
-            <Statistic
-              title={<span style={{ color: 'rgba(255, 255, 255, 0.7)', fontSize: '14px', fontWeight: 500 }}>证候类术语</span>}
-              value={syndromeCount}
-              prefix={<BarChartOutlined style={{ color: '#ffffff', fontSize: '28px', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />}
-              valueStyle={{ color: '#ffffff', fontSize: '28px', fontWeight: 700, textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}
-            />
-          </Card>
-        </Col>
-      </Row>
+      <div className="hero-pill-row">
+        <span>Neo4j Aura 实时在线</span>
+        <span>节点 {stats?.totalNodes?.toLocaleString() ?? '--'}</span>
+        <span>关系 {stats?.totalRelationships?.toLocaleString() ?? '--'}</span>
+        <span>更新 {new Date().toLocaleDateString('zh-CN', { month: 'short', day: 'numeric' })}</span>
+      </div>
 
-      {/* 功能卡片 */}
-      <Row gutter={[20, 20]} className="mt-0">
-        <Col xs={24} lg={12}>
-          <Card 
-            title={<span style={{ fontSize: '18px', fontWeight: 600, color: '#ffffff', textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>数据概览</span>}
-            className="h-full glass-panel"
-            extra={<a href="/analytics" style={{ color: 'rgba(255, 255, 255, 0.9)', fontWeight: 500, textDecoration: 'none', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>查看详情 →</a>}
-            headStyle={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)', padding: '20px 24px' }}
-            bodyStyle={{ padding: '24px' }}
-          >
-            <div className="space-y-4">
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span style={{ fontWeight: 500, color: 'rgba(255, 255, 255, 0.9)' }}>疾病类术语</span>
-                  <span style={{ color: '#ffffff', fontWeight: 600, textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>{diseaseCount.toLocaleString()} 条</span>
-                </div>
-                <Progress 
-                  percent={Number(diseasePercent.toFixed(1))} 
-                  strokeColor="#52c41a"
-                  showInfo={false}
-                />
-              </div>
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span style={{ fontWeight: 500, color: 'rgba(255, 255, 255, 0.9)' }}>证候类术语</span>
-                  <span style={{ color: '#ffffff', fontWeight: 600, textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>{syndromeCount.toLocaleString()} 条</span>
-                </div>
-                <Progress 
-                  percent={Number(syndromePercent.toFixed(1))} 
-                  strokeColor="#1890ff"
-                  showInfo={false}
-                />
-              </div>
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span style={{ fontWeight: 500, color: 'rgba(255, 255, 255, 0.9)' }}>数据完整性</span>
-                  <span style={{ color: '#ffffff', fontWeight: 600, textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>{stats?.dataCompleteness.toFixed(1) || 0}%</span>
-                </div>
-                <Progress 
-                  percent={Number((stats?.dataCompleteness || 0).toFixed(1))} 
-                  strokeColor="#fa8c16"
-                  showInfo={false}
-                />
-              </div>
+      <section className="human-stat-cluster">
+        {[
+          {
+            title: '总节点',
+            value: stats?.totalNodes || 0,
+            icon: <NodeIndexOutlined />,
+            annotation: '标准化术语',
+            accent: 'indigo'
+          },
+          {
+            title: '关系数量',
+            value: stats?.totalRelationships || 0,
+            icon: <BranchesOutlined />,
+            annotation: '语义边',
+            accent: 'purple'
+          },
+          {
+            title: '疾病类术语',
+            value: diseaseCount,
+            icon: <SearchOutlined />,
+            annotation: `${diseasePercent.toFixed(1)}% 占比`,
+            accent: 'cyan'
+          },
+          {
+            title: '证候类术语',
+            value: syndromeCount,
+            icon: <BarChartOutlined />,
+            annotation: `${syndromePercent.toFixed(1)}% 占比`,
+            accent: 'pink'
+          }
+        ].map(card => (
+          <article key={card.title} className={`stat-human-card stat-human-card--${card.accent}`}>
+            <div className="stat-human-card__icon">{card.icon}</div>
+            <div>
+              <p>{card.title}</p>
+              <h3>{card.value.toLocaleString()}</h3>
+              <span>{card.annotation}</span>
             </div>
-          </Card>
-        </Col>
+          </article>
+        ))}
+      </section>
 
-        <Col xs={24} lg={12}>
-          <Card 
-            title={<span style={{ fontSize: '18px', fontWeight: 600, color: '#ffffff', textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>快速操作</span>}
-            className="h-full glass-panel"
-            headStyle={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)', padding: '20px 24px' }}
-            bodyStyle={{ padding: '24px' }}
-          >
-            <div className="grid grid-cols-2 gap-4">
-              <div 
-                className="p-5 rounded-xl cursor-pointer transition-all"
-                style={{ 
-                  background: 'rgba(0, 0, 0, 0.3)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
-                  backdropFilter: 'blur(10px)',
-                  WebkitBackdropFilter: 'blur(10px)'
-                }}
-                onClick={() => navigate('/explorer')}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.4)'
-                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.5)'
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)'
-                  e.currentTarget.style.boxShadow = 'none'
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
-                }}
-              >
-                <NodeIndexOutlined className="text-3xl mb-3" style={{ color: '#ffffff', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />
-                <h3 className="font-semibold mb-1" style={{ fontSize: '16px', color: '#ffffff', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>图谱探索</h3>
-                <p className="text-sm" style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 2px rgba(0, 0, 0, 0.8)' }}>可视化浏览知识图谱</p>
-              </div>
-              <div 
-                className="p-5 rounded-xl cursor-pointer transition-all"
-                style={{ 
-                  background: 'rgba(0, 0, 0, 0.3)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
-                  backdropFilter: 'blur(10px)',
-                  WebkitBackdropFilter: 'blur(10px)'
-                }}
-                onClick={() => navigate('/search')}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.4)'
-                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.5)'
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)'
-                  e.currentTarget.style.boxShadow = 'none'
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
-                }}
-              >
-                <SearchOutlined className="text-3xl mb-3" style={{ color: '#ffffff', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />
-                <h3 className="font-semibold mb-1" style={{ fontSize: '16px', color: '#ffffff', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>智能搜索</h3>
-                <p className="text-sm" style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 2px rgba(0, 0, 0, 0.8)' }}>快速查找相关术语</p>
-              </div>
-              <div 
-                className="p-5 rounded-xl cursor-pointer transition-all"
-                style={{ 
-                  background: 'rgba(0, 0, 0, 0.3)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
-                  backdropFilter: 'blur(10px)',
-                  WebkitBackdropFilter: 'blur(10px)'
-                }}
-                onClick={() => navigate('/analytics')}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.4)'
-                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.5)'
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)'
-                  e.currentTarget.style.boxShadow = 'none'
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
-                }}
-              >
-                <BarChartOutlined className="text-3xl mb-3" style={{ color: '#ffffff', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />
-                <h3 className="font-semibold mb-1" style={{ fontSize: '16px', color: '#ffffff', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>数据分析</h3>
-                <p className="text-sm" style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 2px rgba(0, 0, 0, 0.8)' }}>深入分析数据结构</p>
-              </div>
-              <div 
-                className="p-5 rounded-xl cursor-pointer transition-all"
-                style={{ 
-                  background: 'rgba(0, 0, 0, 0.3)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
-                  backdropFilter: 'blur(10px)',
-                  WebkitBackdropFilter: 'blur(10px)'
-                }}
-                onClick={() => navigate('/visualizations')}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-4px)'
-                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.4)'
-                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.5)'
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translateY(0)'
-                  e.currentTarget.style.background = 'rgba(0, 0, 0, 0.3)'
-                  e.currentTarget.style.boxShadow = 'none'
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.15)'
-                }}
-              >
-                <BarChartOutlined className="text-3xl mb-3" style={{ color: '#ffffff', filter: 'drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5))' }} />
-                <h3 className="font-semibold mb-1" style={{ fontSize: '16px', color: '#ffffff', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>高级可视化</h3>
-                <p className="text-sm" style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 2px rgba(0, 0, 0, 0.8)' }}>3D视图、时间线、演化展示</p>
-              </div>
+      <section className="human-panels-grid">
+        <article className="human-panel">
+          <header>
+            <div>
+              <p className="eyebrow">数据体温</p>
+              <h4>知识结构健康度</h4>
             </div>
-          </Card>
-        </Col>
-      </Row>
+            <button type="button" onClick={() => navigate('/analytics')}>
+              查看分析
+            </button>
+          </header>
+          <div className="human-panel__progress">
+            <label>疾病类术语</label>
+            <Progress percent={Number(diseasePercent.toFixed(1))} strokeColor="#52c41a" showInfo={false} />
+            <span>{diseaseCount.toLocaleString()} 条</span>
+          </div>
+          <div className="human-panel__progress">
+            <label>证候类术语</label>
+            <Progress percent={Number(syndromePercent.toFixed(1))} strokeColor="#38bdf8" showInfo={false} />
+            <span>{syndromeCount.toLocaleString()} 条</span>
+          </div>
+          <div className="human-panel__progress">
+            <label>数据完整性</label>
+            <Progress percent={Number((stats?.dataCompleteness || 0).toFixed(1))} strokeColor="#fb7185" showInfo={false} />
+            <span>{stats?.dataCompleteness?.toFixed(1) ?? 0}%</span>
+          </div>
+        </article>
+
+        <article className="human-panel human-panel--actions">
+          <header>
+            <div>
+              <p className="eyebrow">工作流</p>
+              <h4>本周推荐入口</h4>
+            </div>
+          </header>
+          <div className="actions-list">
+            {[
+              {
+                title: '图谱探索',
+                desc: '以 3D 方式漫游节点与连接',
+                icon: <NodeIndexOutlined />,
+                action: () => navigate('/explorer')
+              },
+              {
+                title: '智能搜索',
+                desc: '输入关键字，定位语义上下文',
+                icon: <SearchOutlined />,
+                action: () => navigate('/search')
+              },
+              {
+                title: '高级可视化',
+                desc: '切换 3D / Timeline / Evolution 模式',
+                icon: <BarChartOutlined />,
+                action: () => navigate('/visualizations')
+              }
+            ].map(item => (
+              <button key={item.title} className="actions-list__item" type="button" onClick={item.action}>
+                <span className="actions-list__icon">{item.icon}</span>
+                <span>
+                  <strong>{item.title}</strong>
+                  <small>{item.desc}</small>
+                </span>
+                <span className="actions-list__chevron">→</span>
+              </button>
+            ))}
+          </div>
+        </article>
+      </section>
     </div>
   )
 }
