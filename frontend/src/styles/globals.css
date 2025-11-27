@@ -21,6 +21,21 @@ body {
   min-height: 100vh;
 }
 
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1.2px),
+    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1.5px);
+  background-size: 140px 140px, 90px 90px;
+  background-position: 0 0, 40px 60px;
+  opacity: 0.25;
+  mix-blend-mode: soft-light;
+  z-index: -2;
+}
+
 /* 娓愬彉鑳屾櫙鍔ㄧ敾锛堝鐢ㄦ柟妗堬級 */
 @keyframes gradientShift {
   0% {
@@ -448,6 +463,134 @@ body {
   overflow: visible;
   letter-spacing: -0.01em;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------------------------------------------
+   Page header surface – more handcrafted feel
+---------------------------------------------- */
+.page-header-shell {
+  position: relative;
+  padding: clamp(24px, 3vw, 48px);
+  margin-bottom: clamp(28px, 4vw, 48px);
+  border-radius: 34px;
+  background: rgba(4, 8, 20, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 25px 60px rgba(3, 7, 18, 0.45),
+    inset 0 0 0 0.5px rgba(255, 255, 255, 0.25);
+  overflow: hidden;
+}
+
+.page-header-shell::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.22), rgba(236, 72, 153, 0.18));
+  filter: blur(40px);
+  opacity: 0.85;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.page-header-shell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(120deg, rgba(255, 255, 255, 0.05), transparent 45%);
+  mix-blend-mode: screen;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.page-header-shell__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: clamp(18px, 3vw, 40px);
+  flex-wrap: wrap;
+}
+
+.page-header-shell__icon {
+  width: clamp(56px, 4vw, 68px);
+  height: clamp(56px, 4vw, 68px);
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0)),
+    linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 12px 30px rgba(142, 197, 252, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.4) inset,
+    0 -1px 6px rgba(0, 0, 0, 0.25) inset;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.page-header-shell__icon span {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.02em;
+  text-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.page-header-shell__icon :is(svg, i) {
+  font-size: clamp(26px, 3vw, 32px);
+  color: #fff;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.45));
+}
+
+.page-header-shell__copy {
+  flex: 1;
+  min-width: 240px;
+  color: #f9fafc;
+}
+
+.page-header-shell__eyebrow {
+  margin: 0 0 8px;
+  font-size: 13px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.page-header-shell__title {
+  margin: 0 0 14px;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 18px 32px rgba(0, 0, 0, 0.45);
+}
+
+.page-header-shell__description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 720px;
+}
+
+.page-header-shell__extra {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .page-header-shell__content {
+    flex-direction: column;
+  }
+
+  .page-header-shell__extra {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 
 .app-header__chip-icon {
