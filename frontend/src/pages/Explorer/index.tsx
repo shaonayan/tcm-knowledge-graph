@@ -55,7 +55,6 @@ const Explorer: React.FC = () => {
   const [levelFilter, setLevelFilter] = useState<number | undefined>(undefined)
   const [codePrefixFilter, setCodePrefixFilter] = useState<string>('')
   const [quickSearchTerm, setQuickSearchTerm] = useState<string>('')
-  const [viewMode, setViewMode] = useState<'cytoscape' | 'force' | '3d'>('cytoscape')
   const [hoveredNode, setHoveredNode] = useState<GraphNode | null>(null)
   const [highlightedPath, setHighlightedPath] = useState<string[]>([])
   const graphRef = useRef<CytoscapeGraphRef>(null)

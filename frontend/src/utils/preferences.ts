@@ -4,6 +4,7 @@ export interface UserPreferences {
   // 图谱探索器设置
   explorer: {
     layout: 'dagre' | 'breadthfirst' | 'grid' | 'circle'
+    viewMode: 'cytoscape' | 'force' | '3d'
     depth: number
     limit: number
     defaultRootCode?: string
@@ -33,6 +34,7 @@ export interface UserPreferences {
 const DEFAULT_PREFERENCES: UserPreferences = {
   explorer: {
     layout: 'dagre',
+    viewMode: 'cytoscape',
     depth: 2,
     limit: 100,
     defaultRootCode: undefined
