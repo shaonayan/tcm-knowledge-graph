@@ -247,6 +247,89 @@ export interface GraphData {
   edgeCount: number
 }
 
+/**
+ * 获取一元知识图谱（仅实体）
+ */
+export async function getUnaryGraph(limit: number = 1000): Promise<GraphNode[]> {
+  try {
+    const response = await fetchWithRetry(`${API_BASE_URL}/graph/unary?limit=${limit}`)
+    const data = await response.json()
+    if (data.success) {
+      return data.nodes || []
+    }
+    throw new Error(data.error || '获取一元图谱失败')
+  } catch (error) {
+    console.error('获取一元图谱失败:', error)
+    throw error
+  }
+}
+
+/**
+ * 获取二元知识图谱（实体+关系）
+ */
+export async function getBinaryGraph(rootCode?: string, depth: number = 2, limit: number = 100): Promise<GraphData> {
+  try {
+    let url = `${API_BASE_URL}/graph/binary?depth=${depth}&limit=${limit}`
+    if (rootCode) {
+      url += `&rootCode=${encodeURIComponent(rootCode)}`
+    }
+    const response = await fetchWithRetry(url)
+    const data = await response.json()
+    if (data.success) {
+      return {
+        nodes: data.nodes || [],
+        edges: data.edges || [],
+        nodeCount: data.nodeCount || 0,
+        edgeCount: data.edgeCount || 0
+      }
+    }
+    throw new Error(data.error || '获取二元图谱失败')
+  } catch (error) {
+    console.error('获取二元图谱失败:', error)
+    throw error
+  }
+}
+
+/**
+ * 获取三元知识图谱（实体+关系+属性）
+ */
+export interface Triple {
+  id: string
+  source: string
+  target: string
+  predicate: string
+  type: string
+  confidence?: number
+  source?: string
+  properties?: Record<string, any>
+}
+
+export interface TernaryGraphData {
+  nodes: GraphNode[]
+  triples: Triple[]
+  nodeCount: number
+  tripleCount: number
+}
+
+export async function getTernaryGraph(limit: number = 1000): Promise<TernaryGraphData> {
+  try {
+    const response = await fetchWithRetry(`${API_BASE_URL}/graph/ternary?limit=${limit}`)
+    const data = await response.json()
+    if (data.success) {
+      return {
+        nodes: data.nodes || [],
+        triples: data.triples || [],
+        nodeCount: data.nodeCount || 0,
+        tripleCount: data.tripleCount || 0
+      }
+    }
+    throw new Error(data.error || '获取三元图谱失败')
+  } catch (error) {
+    console.error('获取三元图谱失败:', error)
+    throw error
+  }
+}
+
 // 获取图谱数据
 export const getGraphData = async (
   rootCode?: string,

@@ -24,13 +24,15 @@ import {
   FileImageOutlined,
   ClearOutlined
 } from '@ant-design/icons'
-import { getGraphData, expandNode, getRootNodes, searchNodes, type GraphData, type RootNode, type GraphNode } from '@/services/api'
+import { getGraphData, expandNode, getRootNodes, searchNodes, getUnaryGraph, getBinaryGraph, getTernaryGraph, type GraphData, type RootNode, type GraphNode, type TernaryGraphData } from '@/services/api'
 import { LoadingSpinner } from '@/components/common/Loading'
 import CytoscapeGraph, { type CytoscapeGraphRef } from '@/components/graph/CytoscapeGraph'
 import VirtualizedCytoscapeGraph from '@/components/graph/VirtualizedCytoscapeGraph'
 import ForceGraph, { type ForceGraphRef } from '@/components/graph/ForceGraph'
 import Graph3D from '@/components/graph/Graph3D'
 import PathFinder from '@/components/graph/PathFinder'
+import UnaryGraph from '@/components/graph/UnaryGraph'
+import TernaryGraph from '@/components/graph/TernaryGraph'
 import RelationshipAnalyzer from '@/components/graph/RelationshipAnalyzer'
 import DimensionAnalyzer from '@/components/graph/DimensionAnalyzer'
 import ChatInterface from '@/components/agent/ChatInterface'
@@ -48,6 +50,9 @@ const Explorer: React.FC = () => {
   const explorerPrefs = getModulePreferences('explorer')
   const [layout, setLayout] = useState<'dagre' | 'breadthfirst' | 'grid' | 'circle'>(explorerPrefs.layout || 'dagre')
   const [viewMode, setViewMode] = useState<'cytoscape' | 'force' | '3d'>(explorerPrefs.viewMode || 'cytoscape')
+  const [graphType, setGraphType] = useState<'unary' | 'binary' | 'ternary'>('binary')
+  const [unaryNodes, setUnaryNodes] = useState<GraphNode[]>([])
+  const [ternaryData, setTernaryData] = useState<TernaryGraphData | null>(null)
   const [rootCode, setRootCode] = useState<string | undefined>(explorerPrefs.defaultRootCode)
   const [depth, setDepth] = useState<number>(explorerPrefs.depth || 2)
   const [limit, setLimit] = useState<number>(explorerPrefs.limit || 100)
@@ -105,7 +110,7 @@ const Explorer: React.FC = () => {
     } finally {
       setLoading(false)
     }
-  }, [depth, limit])
+  }, [depth, limit, graphType])
 
   // 展开节点
   const expandNodeData = useCallback(async (node: GraphNode) => {
@@ -277,10 +282,36 @@ const Explorer: React.FC = () => {
       </div>
 
       <div className="linear-pill-row">
-        <span>当前根节点：{rootCode || '未选择'}</span>
-        <span>深度：{depth}</span>
-        <span>节点限制：{limit}</span>
-        <span>已加载节点：{graphData?.nodeCount ?? '-'}</span>
+        <span>图谱类型：</span>
+        <Select
+          value={graphType}
+          onChange={(value) => {
+            setGraphType(value)
+            loadGraph(rootCode)
+          }}
+          style={{ width: 120, marginRight: 12 }}
+        >
+          <Option value="unary">一元图谱</Option>
+          <Option value="binary">二元图谱</Option>
+          <Option value="ternary">三元图谱</Option>
+        </Select>
+        {graphType === 'binary' && (
+          <>
+            <span>当前根节点：{rootCode || '未选择'}</span>
+            <span>深度：{depth}</span>
+            <span>节点限制：{limit}</span>
+            <span>已加载节点：{graphData?.nodeCount ?? '-'}</span>
+          </>
+        )}
+        {graphType === 'unary' && (
+          <span>实体总数：{unaryNodes.length}</span>
+        )}
+        {graphType === 'ternary' && (
+          <>
+            <span>节点数：{ternaryData?.nodeCount ?? '-'}</span>
+            <span>三元组数：{ternaryData?.tripleCount ?? '-'}</span>
+          </>
+        )}
       </div>
 
       <section className="explorer-panels-grid">
@@ -362,31 +393,34 @@ const Explorer: React.FC = () => {
             <Button icon={<ClearOutlined />} onClick={resetAll} type="text" size="small" />
           </Tooltip>
         </header>
-        <div className="linear-form-group">
-          <label>根节点选择</label>
-          <Select
-            placeholder="选择根节点"
-            style={{ width: '100%' }}
-            size="large"
-            value={rootCode}
-            onChange={(value) => {
-              setRootCode(value)
-              if (value) {
-                loadGraph(value)
-              }
-            }}
-            showSearch
-            filterOption={(input, option) => {
-              const label = String(option?.label ?? '')
-              return label.toLowerCase().includes(input.toLowerCase())
-            }}
-          >
-            {rootNodes.map(node => (
-              <Option key={node.code} value={node.code} label={node.name}>
-                {node.code} - {node.name}
-              </Option>
-            ))}
-          </Select>
+        {graphType === 'binary' && (
+          <div className="linear-form-group">
+            <label>根节点选择</label>
+            <Select
+              placeholder="选择根节点"
+              style={{ width: '100%' }}
+              size="large"
+              value={rootCode}
+              onChange={(value) => {
+                setRootCode(value)
+                if (value) {
+                  loadGraph(value)
+                }
+              }}
+              showSearch
+              filterOption={(input, option) => {
+                const label = String(option?.label ?? '')
+                return label.toLowerCase().includes(input.toLowerCase())
+              }}
+            >
+              {rootNodes.map(node => (
+                <Option key={node.code} value={node.code} label={node.name}>
+                  {node.code} - {node.name}
+                </Option>
+              ))}
+            </Select>
+          </div>
+        )}
           <div className="linear-form-actions">
             <Button
               type="primary"
@@ -630,6 +664,59 @@ const Explorer: React.FC = () => {
           <div className="flex items-center justify-center h-full">
             <LoadingSpinner />
           </div>
+        ) : graphType === 'unary' ? (
+          unaryNodes.length > 0 ? (
+            <UnaryGraph
+              nodes={unaryNodes}
+              onNodeClick={handleNodeClick}
+              style={{ width: '100%', height: '100%', minHeight: '600px' }}
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full">
+              <Empty
+                description='点击"加载图谱"按钮加载实体数据'
+                image={Empty.PRESENTED_IMAGE_SIMPLE}
+              >
+                <Button
+                  type="primary"
+                  size="large"
+                  icon={<NodeIndexOutlined />}
+                  onClick={() => loadGraph()}
+                  loading={loading}
+                >
+                  加载一元图谱
+                </Button>
+              </Empty>
+            </div>
+          )
+        ) : graphType === 'ternary' ? (
+          ternaryData ? (
+            <TernaryGraph
+              data={ternaryData}
+              onNodeClick={(nodeId) => {
+                const node = ternaryData.nodes.find(n => n.id === nodeId)
+                if (node) handleNodeClick(node)
+              }}
+              style={{ width: '100%', height: '100%', minHeight: '600px' }}
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full">
+              <Empty
+                description='点击"加载图谱"按钮加载三元组数据'
+                image={Empty.PRESENTED_IMAGE_SIMPLE}
+              >
+                <Button
+                  type="primary"
+                  size="large"
+                  icon={<NodeIndexOutlined />}
+                  onClick={() => loadGraph()}
+                  loading={loading}
+                >
+                  加载三元图谱
+                </Button>
+              </Empty>
+            </div>
+          )
         ) : !graphData ? (
           <div className="flex items-center justify-center h-full">
             <Empty
@@ -834,10 +921,6 @@ const Explorer: React.FC = () => {
                 setLevelFilter(parseInt(value))
               }
             }}
-          />
-          <DataMetrics
-            nodes={graphData.nodes}
-            edges={graphData.edges}
           />
         </section>
       )}

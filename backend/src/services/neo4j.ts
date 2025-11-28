@@ -436,6 +436,177 @@ class Neo4jService {
     }
   }
 
+  /**
+   * 获取一元知识图谱（仅实体）
+   */
+  async getUnaryGraph(limit: number = 1000) {
+    const session = this.getSession()
+    try {
+      const result = await session.run(`
+        MATCH (n)
+        RETURN n.code as code,
+               COALESCE(n.name, n.mainTerm, n.节点名称, n.显示名称) as name,
+               n.category as category,
+               COALESCE(n.classificationLevel, n.level, 1) as level
+        ORDER BY n.code
+        LIMIT $limit
+      `, { limit: neo4j.int(limit) })
+      
+      return result.records.map(record => ({
+        id: record.get('code'),
+        code: record.get('code'),
+        name: record.get('name'),
+        category: record.get('category'),
+        level: record.get('level')?.toNumber() || 1
+      }))
+    } catch (error) {
+      logger.error('获取一元图谱失败:', error)
+      throw error
+    } finally {
+      await session.close()
+    }
+  }
+
+  /**
+   * 获取二元知识图谱（实体+关系）
+   */
+  async getBinaryGraph(rootCode?: string, depth: number = 2, limit: number = 100) {
+    const session = this.getSession()
+    try {
+      let query = ''
+      let params: any = { depth: neo4j.int(depth), limit: neo4j.int(limit) }
+      
+      if (rootCode) {
+        query = `
+          MATCH path = (root {code: $rootCode})-[*1..${depth}]-(connected)
+          WITH DISTINCT nodes(path) as nodes, relationships(path) as rels
+          UNWIND nodes as n
+          UNWIND rels as r
+          WITH DISTINCT n, r
+          RETURN 
+            collect(DISTINCT {
+              id: n.code,
+              code: n.code,
+              name: COALESCE(n.name, n.mainTerm, n.节点名称, n.显示名称),
+              category: n.category,
+              level: COALESCE(n.classificationLevel, n.level, 1)
+            }) as nodes,
+            collect(DISTINCT {
+              id: id(r),
+              source: startNode(r).code,
+              target: endNode(r).code,
+              type: type(r)
+            }) as edges
+          LIMIT $limit
+        `
+        params.rootCode = rootCode
+      } else {
+        query = `
+          MATCH (n)-[r]->(m)
+          RETURN 
+            collect(DISTINCT {
+              id: n.code,
+              code: n.code,
+              name: COALESCE(n.name, n.mainTerm, n.节点名称, n.显示名称),
+              category: n.category,
+              level: COALESCE(n.classificationLevel, n.level, 1)
+            }) + collect(DISTINCT {
+              id: m.code,
+              code: m.code,
+              name: COALESCE(m.name, m.mainTerm, m.节点名称, m.显示名称),
+              category: m.category,
+              level: COALESCE(m.classificationLevel, m.level, 1)
+            }) as nodes,
+            collect(DISTINCT {
+              id: id(r),
+              source: n.code,
+              target: m.code,
+              type: type(r)
+            }) as edges
+          LIMIT $limit
+        `
+      }
+      
+      const result = await session.run(query, params)
+      const record = result.records[0]
+      
+      // 去重节点
+      const nodesMap = new Map()
+      record.get('nodes').forEach((node: any) => {
+        if (!nodesMap.has(node.id)) {
+          nodesMap.set(node.id, node)
+        }
+      })
+      
+      return {
+        nodes: Array.from(nodesMap.values()),
+        edges: record.get('edges')
+      }
+    } catch (error) {
+      logger.error('获取二元图谱失败:', error)
+      throw error
+    } finally {
+      await session.close()
+    }
+  }
+
+  /**
+   * 获取三元知识图谱（实体+关系+属性）
+   */
+  async getTernaryGraph(limit: number = 1000) {
+    const session = this.getSession()
+    try {
+      const result = await session.run(`
+        MATCH (subject)-[r]->(object)
+        RETURN 
+          collect(DISTINCT {
+            id: subject.code,
+            code: subject.code,
+            name: COALESCE(subject.name, subject.mainTerm, subject.节点名称, subject.显示名称),
+            category: subject.category,
+            level: COALESCE(subject.classificationLevel, subject.level, 1)
+          }) + collect(DISTINCT {
+            id: object.code,
+            code: object.code,
+            name: COALESCE(object.name, object.mainTerm, object.节点名称, object.显示名称),
+            category: object.category,
+            level: COALESCE(object.classificationLevel, object.level, 1)
+          }) as nodes,
+          collect(DISTINCT {
+            id: id(r),
+            source: subject.code,
+            target: object.code,
+            predicate: COALESCE(r.predicate, type(r)),
+            type: type(r),
+            confidence: COALESCE(r.confidence, 1.0),
+            source: r.source,
+            properties: properties(r)
+          }) as triples
+        LIMIT $limit
+      `, { limit: neo4j.int(limit) })
+      
+      const record = result.records[0]
+      
+      // 去重节点
+      const nodesMap = new Map()
+      record.get('nodes').forEach((node: any) => {
+        if (!nodesMap.has(node.id)) {
+          nodesMap.set(node.id, node)
+        }
+      })
+      
+      return {
+        nodes: Array.from(nodesMap.values()),
+        triples: record.get('triples')
+      }
+    } catch (error) {
+      logger.error('获取三元图谱失败:', error)
+      throw error
+    } finally {
+      await session.close()
+    }
+  }
+
   async close(): Promise<void> {
     if (this.driver) {
       await this.driver.close()
