@@ -222,7 +222,7 @@ async function generateResponse(
   query: string,
   intent: { type: string; entities: string[] },
   relatedNodes: any[],
-  history: any[]
+  _history: any[]
 ): Promise<any> {
   let content = ''
   const metadata: any = {
