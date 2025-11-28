@@ -12,7 +12,8 @@
     "test:watch": "jest --watch",
     "lint": "eslint src --ext .ts",
     "lint:fix": "eslint src --ext .ts --fix",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "import:tcm": "node --loader ts-node/esm src/scripts/importTCMDatasets.ts"
   },
   "keywords": [
     "tcm",

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback, useRef } from 'react'
+import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { 
   Button, 
@@ -11,6 +11,7 @@ import {
   Statistic,
   Dropdown
 } from 'antd'
+import type { MenuProps } from 'antd'
 import { 
   NodeIndexOutlined, 
   FullscreenOutlined,
@@ -22,9 +23,10 @@ import {
   DownloadOutlined,
   FileTextOutlined,
   FileImageOutlined,
-  ClearOutlined
+  ClearOutlined,
+  DownOutlined
 } from '@ant-design/icons'
-import { getGraphData, expandNode, getRootNodes, searchNodes, getUnaryGraph, getBinaryGraph, getTernaryGraph, type GraphData, type RootNode, type GraphNode, type TernaryGraphData } from '@/services/api'
+import { expandNode, getRootNodes, searchNodes, getUnaryGraph, getBinaryGraph, getTernaryGraph, type GraphData, type RootNode, type GraphNode, type TernaryGraphData } from '@/services/api'
 import { LoadingSpinner } from '@/components/common/Loading'
 import CytoscapeGraph, { type CytoscapeGraphRef } from '@/components/graph/CytoscapeGraph'
 import VirtualizedCytoscapeGraph from '@/components/graph/VirtualizedCytoscapeGraph'
@@ -41,16 +43,30 @@ import { getModulePreferences, saveModulePreferences } from '@/utils/preferences
 
 const { Option } = Select
 
+type GraphType = 'unary' | 'binary' | 'ternary'
+
+const GRAPH_TYPE_OPTIONS: Array<{ key: GraphType; label: string; hint: string }> = [
+  { key: 'unary', label: '一元图谱', hint: '实体集合速览' },
+  { key: 'binary', label: '二元图谱', hint: '实体 + 关系' },
+  { key: 'ternary', label: '三元图谱', hint: '实体 + 关系 + 属性' }
+]
+
+const GRAPH_TYPE_LABELS: Record<GraphType, string> = {
+  unary: '一元图谱',
+  binary: '二元图谱',
+  ternary: '三元图谱'
+}
+
 const Explorer: React.FC = () => {
   const navigate = useNavigate()
   const [graphData, setGraphData] = useState<GraphData | null>(null)
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   // 从用户偏好设置加载初始值
-  const explorerPrefs = getModulePreferences('explorer')
+  const explorerPrefs = useMemo(() => getModulePreferences('explorer'), [])
   const [layout, setLayout] = useState<'dagre' | 'breadthfirst' | 'grid' | 'circle'>(explorerPrefs.layout || 'dagre')
   const [viewMode, setViewMode] = useState<'cytoscape' | 'force' | '3d'>(explorerPrefs.viewMode || 'cytoscape')
-  const [graphType, setGraphType] = useState<'unary' | 'binary' | 'ternary'>('binary')
+  const [graphType, setGraphType] = useState<GraphType>('binary')
   const [unaryNodes, setUnaryNodes] = useState<GraphNode[]>([])
   const [ternaryData, setTernaryData] = useState<TernaryGraphData | null>(null)
   const [rootCode, setRootCode] = useState<string | undefined>(explorerPrefs.defaultRootCode)
@@ -81,27 +97,62 @@ const Explorer: React.FC = () => {
     fetchRootNodes()
   }, [])
 
+  const handleGraphTypeChange = useCallback((nextType: GraphType) => {
+    if (nextType === graphType) return
+    setGraphType(nextType)
+    setSelectedNode(null)
+  }, [graphType])
+
+  const graphTypeMenu: MenuProps = useMemo(() => ({
+    items: GRAPH_TYPE_OPTIONS.map(option => ({
+      key: option.key,
+      label: (
+        <div className={`graph-type-menu-item${option.key === graphType ? ' graph-type-menu-item--active' : ''}`}>
+          <div className="graph-type-menu-item__title">{option.label}</div>
+          <div className="graph-type-menu-item__hint">{option.hint}</div>
+        </div>
+      )
+    })),
+    onClick: ({ key }) => handleGraphTypeChange(key as GraphType)
+  }), [graphType, handleGraphTypeChange])
+
+  useEffect(() => {
+    if (graphType === 'binary' && !rootCode && rootNodes.length > 0) {
+      const preferred = explorerPrefs.defaultRootCode
+        ? rootNodes.find(node => node.code === explorerPrefs.defaultRootCode)
+        : undefined
+      const initialRoot = preferred?.code || rootNodes[0].code
+      setRootCode(initialRoot)
+    }
+  }, [graphType, rootNodes, rootCode, explorerPrefs])
+
   // 加载图谱数据
   const loadGraph = useCallback(async (code?: string) => {
-    console.log('📥 开始加载图谱数据')
-    console.log('参数:', { code, depth, limit })
+    console.log('📥 开始加载图谱数据', { graphType, code, depth, limit })
     setLoading(true)
     setError(null)
     setSelectedNode(null)
 
     try {
-      const data = await getGraphData(code, depth, limit)
-      console.log('✅ 图谱数据加载成功')
-      console.log('数据详情:', {
-        节点数: data.nodeCount,
-        边数: data.edgeCount,
-        实际节点数组长度: data.nodes?.length || 0,
-        实际边数组长度: data.edges?.length || 0,
-        前3个节点: data.nodes?.slice(0, 3),
-        前3条边: data.edges?.slice(0, 3)
-      })
-      setGraphData(data)
-      message.success(`加载成功：${data.nodeCount} 个节点，${data.edgeCount} 条边`)
+      if (graphType === 'unary') {
+        const nodes = await getUnaryGraph(limit * 10)
+        setUnaryNodes(nodes)
+        setGraphData(null)
+        setTernaryData(null)
+        message.success(`加载成功：${nodes.length} 个实体`)
+      } else if (graphType === 'ternary') {
+        const data = await getTernaryGraph(limit * 10)
+        setTernaryData(data)
+        setGraphData(null)
+        setUnaryNodes([])
+        message.success(`加载成功：${data.nodeCount} 个节点，${data.tripleCount} 个三元组`)
+      } else {
+        const data = await getBinaryGraph(code, depth, limit)
+        setGraphData(data)
+        setUnaryNodes([])
+        setTernaryData(null)
+        message.success(`加载成功：${data.nodeCount} 个节点，${data.edgeCount} 条边`)
+      }
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : '加载图谱数据失败'
       console.error('❌ 图谱数据加载失败:', err)
@@ -111,6 +162,16 @@ const Explorer: React.FC = () => {
       setLoading(false)
     }
   }, [depth, limit, graphType])
+
+  useEffect(() => {
+    if (graphType === 'binary') {
+      if (rootCode) {
+        loadGraph(rootCode)
+      }
+    } else {
+      loadGraph(rootCode)
+    }
+  }, [graphType, rootCode, loadGraph])
 
   // 展开节点
   const expandNodeData = useCallback(async (node: GraphNode) => {
@@ -250,7 +311,9 @@ const Explorer: React.FC = () => {
         if (result.data.length > 0) {
           const firstNode = result.data[0]
           setRootCode(firstNode.code)
-          await loadGraph(firstNode.code)
+          if (graphType !== 'binary') {
+            setGraphType('binary')
+          }
         }
       }
     } catch (err) {
@@ -261,7 +324,7 @@ const Explorer: React.FC = () => {
     } finally {
       setLoading(false)
     }
-  }, [loadGraph])
+  }, [graphType])
 
   return (
     <div className="linear-page explorer-linear-page">
@@ -283,18 +346,17 @@ const Explorer: React.FC = () => {
 
       <div className="linear-pill-row">
         <span>图谱类型：</span>
-        <Select
-          value={graphType}
-          onChange={(value) => {
-            setGraphType(value)
-            loadGraph(rootCode)
-          }}
-          style={{ width: 120, marginRight: 12 }}
+        <Dropdown
+          menu={graphTypeMenu}
+          trigger={['click']}
+          overlayClassName="graph-type-dropdown"
+          placement="bottomCenter"
         >
-          <Option value="unary">一元图谱</Option>
-          <Option value="binary">二元图谱</Option>
-          <Option value="ternary">三元图谱</Option>
-        </Select>
+          <button type="button" className="graph-type-toggle">
+            <span>{GRAPH_TYPE_LABELS[graphType]}</span>
+            <DownOutlined />
+          </button>
+        </Dropdown>
         {graphType === 'binary' && (
           <>
             <span>当前根节点：{rootCode || '未选择'}</span>
@@ -403,9 +465,6 @@ const Explorer: React.FC = () => {
               value={rootCode}
               onChange={(value) => {
                 setRootCode(value)
-                if (value) {
-                  loadGraph(value)
-                }
               }}
               showSearch
               filterOption={(input, option) => {
