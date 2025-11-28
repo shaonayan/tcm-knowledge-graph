@@ -11,6 +11,18 @@ export interface ChatMessage {
     nodes?: GraphNode[]
     highlightNodes?: string[]
     highlightPath?: string[]
+    relationships?: Array<{
+      source: string
+      target: string
+      type: string
+      sourceName: string
+      targetName: string
+    }>
+    dimensions?: {
+      byCategory: Record<string, number>
+      byLevel: Record<number, number>
+      total: number
+    }
     suggestions?: string[]
   }
   error?: boolean
@@ -22,6 +34,18 @@ export interface AgentResponse {
     nodes?: GraphNode[]
     highlightNodes?: string[]
     highlightPath?: string[]
+    relationships?: Array<{
+      source: string
+      target: string
+      type: string
+      sourceName: string
+      targetName: string
+    }>
+    dimensions?: {
+      byCategory: Record<string, number>
+      byLevel: Record<number, number>
+      total: number
+    }
     suggestions?: string[]
     confidence?: number
   }
@@ -32,7 +56,8 @@ export interface AgentResponse {
  */
 export async function chatWithAgent(
   query: string,
-  history: ChatMessage[] = []
+  history: ChatMessage[] = [],
+  sessionId: string = 'default'
 ): Promise<AgentResponse> {
   try {
     const response = await axios.post<AgentResponse>(
@@ -42,7 +67,8 @@ export async function chatWithAgent(
         history: history.map(msg => ({
           role: msg.role,
           content: msg.content
-        }))
+        })),
+        sessionId
       },
       {
         timeout: 30000,
@@ -73,7 +99,7 @@ export async function chatWithAgent(
 /**
  * 本地智能处理（降级方案）
  */
-function handleLocalAgent(query: string, history: ChatMessage[]): AgentResponse {
+function handleLocalAgent(query: string, _history: ChatMessage[]): AgentResponse {
   const lowerQuery = query.toLowerCase()
   
   // 简单的关键词匹配和响应
@@ -135,12 +161,14 @@ function handleLocalAgent(query: string, history: ChatMessage[]): AgentResponse 
  */
 export async function recommendNodes(
   context?: string,
-  limit: number = 10
+  limit: number = 10,
+  nodeId?: string,
+  dimension?: string
 ): Promise<GraphNode[]> {
   try {
     const response = await axios.post<{ nodes: GraphNode[] }>(
       `${API_BASE_URL}/agent/recommend`,
-      { context, limit },
+      { context, limit, nodeId, dimension },
       { timeout: 15000 }
     )
     return response.data.nodes
@@ -154,7 +182,7 @@ export async function recommendNodes(
  * 智能分析图谱
  */
 export async function analyzeGraph(
-  analysisType: 'structure' | 'clusters' | 'centrality' | 'paths'
+  analysisType: 'structure' | 'clusters' | 'centrality' | 'paths' | 'relationships' | 'dimensions'
 ): Promise<any> {
   try {
     const response = await axios.post(
@@ -168,4 +196,3 @@ export async function analyzeGraph(
     throw error
   }
 }
-

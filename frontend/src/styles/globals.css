@@ -3654,6 +3654,17 @@ html {
   height: fit-content;
 }
 
+.explorer-panel--chat {
+  grid-column: span 2;
+  min-height: 500px;
+}
+
+@media (max-width: 1200px) {
+  .explorer-panel--chat {
+    grid-column: span 1;
+  }
+}
+
 .explorer-panel--graph {
   min-height: 600px;
 }

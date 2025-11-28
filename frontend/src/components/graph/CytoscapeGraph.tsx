@@ -73,11 +73,18 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
             'text-halign': 'center',
             'width': (ele: any) => {
               const level = ele.data('level') || 1
-              return level === 1 ? 80 : level === 2 ? 70 : level === 3 ? 60 : 50
+              // 根据节点连接数调整大小（关系强度）
+              const connections = ele.connectedEdges().length
+              const baseSize = level === 1 ? 80 : level === 2 ? 70 : level === 3 ? 60 : 50
+              const connectionBonus = Math.min(connections * 2, 20) // 最多增加20px
+              return baseSize + connectionBonus
             },
             'height': (ele: any) => {
               const level = ele.data('level') || 1
-              return level === 1 ? 80 : level === 2 ? 70 : level === 3 ? 60 : 50
+              const connections = ele.connectedEdges().length
+              const baseSize = level === 1 ? 80 : level === 2 ? 70 : level === 3 ? 60 : 50
+              const connectionBonus = Math.min(connections * 2, 20)
+              return baseSize + connectionBonus
             },
             'font-size': 13,
             'font-weight': '600',
@@ -163,17 +170,45 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
         {
           selector: 'edge',
           style: {
-            'width': 2,
+            'width': (ele: any) => {
+              // 根据关系类型和连接强度调整宽度
+              const edgeType = ele.data('type')
+              const baseWidth = 2
+              // 不同类型的关系有不同的默认宽度
+              const typeWidths: Record<string, number> = {
+                '包含': 3,
+                '属于': 2.5,
+                '相关': 2,
+                '治疗': 3.5,
+                '症状': 2.5
+              }
+              return typeWidths[edgeType] || baseWidth
+            },
             'line-color': (ele: any) => {
               const sourceCategory = ele.source().data('category')
               const targetCategory = ele.target().data('category')
-              // 根据源节点和目标节点的类别决定边的颜色
+              const edgeType = ele.data('type')
+              
+              // 根据关系类型决定颜色
+              const typeColors: Record<string, string> = {
+                '包含': '#68BDF6',
+                '属于': '#6DCE9E',
+                '相关': '#FFD700',
+                '治疗': '#FF756E',
+                '症状': '#C084FC'
+              }
+              
+              if (typeColors[edgeType]) {
+                return typeColors[edgeType]
+              }
+              
+              // 降级到类别判断
               if (sourceCategory === '疾病类' && targetCategory === '疾病类') {
-                return '#68BDF6'  // 疾病-疾病：蓝色
+                return '#68BDF6'
               } else if (sourceCategory === '证候类' && targetCategory === '证候类') {
-                return '#6DCE9E'  // 证候-证候：绿色
+                return '#6DCE9E'
               } else {
-                return '#FFD700'  // 跨类别：金色
+                return '#FFD700'
               }
             },
             'target-arrow-color': (ele: any) => {

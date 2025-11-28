@@ -15,6 +15,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
   onPathHighlight,
   style
 }) => {
+  const [sessionId] = useState(() => `session-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`)
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       role: 'assistant',
@@ -49,7 +50,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
     setLoading(true)
 
     try {
-      const response = await chatWithAgent(userMessage.content, messages)
+      const response = await chatWithAgent(userMessage.content, messages, sessionId)
       
       const assistantMessage: ChatMessage = {
         role: 'assistant',

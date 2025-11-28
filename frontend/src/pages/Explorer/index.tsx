@@ -31,6 +31,8 @@ import VirtualizedCytoscapeGraph from '@/components/graph/VirtualizedCytoscapeGr
 import ForceGraph, { type ForceGraphRef } from '@/components/graph/ForceGraph'
 import Graph3D from '@/components/graph/Graph3D'
 import PathFinder from '@/components/graph/PathFinder'
+import RelationshipAnalyzer from '@/components/graph/RelationshipAnalyzer'
+import DimensionAnalyzer from '@/components/graph/DimensionAnalyzer'
 import ChatInterface from '@/components/agent/ChatInterface'
 import { GraphAnalysis } from '@/components/analysis/GraphAnalysis'
 import { getModulePreferences, saveModulePreferences } from '@/utils/preferences'
@@ -799,6 +801,46 @@ const Explorer: React.FC = () => {
           )}
         </div>
       </div>
+
+      {/* 数据分析面板 */}
+      {graphData && graphData.nodes.length > 0 && (
+        <section className="explorer-panels-grid" style={{ marginTop: '24px' }}>
+          <PathFinder
+            nodes={graphData.nodes}
+            edges={graphData.edges}
+            onPathFound={(path) => {
+              setHighlightedPath(path)
+              if (viewMode === 'force' && forceGraphRef.current) {
+                forceGraphRef.current.highlightPath(path)
+              }
+            }}
+          />
+          <RelationshipAnalyzer
+            nodes={graphData.nodes}
+            edges={graphData.edges}
+            onHighlight={(nodeIds) => {
+              if (viewMode === 'force' && forceGraphRef.current) {
+                forceGraphRef.current.highlightPath(nodeIds)
+              }
+              setHighlightedPath(nodeIds)
+            }}
+          />
+          <DimensionAnalyzer
+            nodes={graphData.nodes}
+            onFilter={(dimension, value) => {
+              if (dimension === 'category') {
+                setCategoryFilter(value)
+              } else if (dimension === 'level') {
+                setLevelFilter(parseInt(value))
+              }
+            }}
+          />
+          <DataMetrics
+            nodes={graphData.nodes}
+            edges={graphData.edges}
+          />
+        </section>
+      )}
     </div>
   )
 }
