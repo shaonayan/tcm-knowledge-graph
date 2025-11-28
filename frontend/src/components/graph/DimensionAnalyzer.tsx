@@ -165,10 +165,7 @@ const DimensionAnalyzer: React.FC<DimensionAnalyzerProps> = ({
           data: data.map((item: any) => item.count),
           type: 'bar',
           itemStyle: {
-            color: new (window as any).echarts.graphic.LinearGradient(0, 0, 0, 1, [
-              { offset: 0, color: '#a855f7' },
-              { offset: 1, color: '#ec4899' }
-            ])
+            color: '#a855f7'
           },
           label: {
             show: true,
