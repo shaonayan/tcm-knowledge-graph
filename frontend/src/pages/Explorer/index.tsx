@@ -31,6 +31,7 @@ import VirtualizedCytoscapeGraph from '@/components/graph/VirtualizedCytoscapeGr
 import ForceGraph, { type ForceGraphRef } from '@/components/graph/ForceGraph'
 import Graph3D from '@/components/graph/Graph3D'
 import PathFinder from '@/components/graph/PathFinder'
+import ChatInterface from '@/components/agent/ChatInterface'
 import { GraphAnalysis } from '@/components/analysis/GraphAnalysis'
 import { getModulePreferences, saveModulePreferences } from '@/utils/preferences'
 
@@ -281,6 +282,36 @@ const Explorer: React.FC = () => {
       </div>
 
       <section className="explorer-panels-grid">
+        <div className="linear-panel explorer-panel explorer-panel--chat" style={{ gridColumn: 'span 2', minHeight: '500px' }}>
+          <header>
+            <div>
+              <p className="eyebrow">智能助手</p>
+              <h4>少纳言AI助手</h4>
+            </div>
+          </header>
+          <ChatInterface
+            onNodeHighlight={(nodeIds) => {
+              if (viewMode === 'force' && forceGraphRef.current) {
+                forceGraphRef.current.highlightPath(nodeIds)
+              }
+              // 也可以更新搜索查询来高亮节点
+              if (nodeIds.length > 0) {
+                const node = graphData?.nodes.find(n => n.id === nodeIds[0])
+                if (node) {
+                  setSearchQuery(node.name || node.code)
+                }
+              }
+            }}
+            onPathHighlight={(path) => {
+              if (viewMode === 'force' && forceGraphRef.current) {
+                forceGraphRef.current.highlightPath(path)
+              }
+              setHighlightedPath(path)
+            }}
+            style={{ height: '100%', minHeight: '450px' }}
+          />
+        </div>
+
         <div className="linear-panel explorer-panel explorer-panel--controls">
           <header>
             <div>

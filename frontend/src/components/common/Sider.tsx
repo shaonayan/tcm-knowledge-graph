@@ -10,7 +10,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 
 const menuItems = [
   { key: '/', icon: <HomeOutlined />, label: '首页' },
-  { key: '/explorer', icon: <NodeIndexOutlined />, label: '图谱探索' },
+  { key: '/explorer', icon: <NodeIndexOutlined />, label: '智能探索' },
   { key: '/analytics', icon: <BarChartOutlined />, label: '数据分析' },
   { key: '/visualizations', icon: <ExperimentOutlined />, label: '3D可视化' }
 ]

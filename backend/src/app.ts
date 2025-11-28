@@ -16,6 +16,7 @@ import graphRoutes from "@routes/graph.js"
 import searchRoutes from "@routes/search.js"
 import analyticsRoutes from "@routes/analytics.js"
 import userRoutes from "@routes/users.js"
+import agentRoutes from "@routes/agent.js"
 import { neo4jService } from "@services/neo4j.js"
 
 dotenv.config()
@@ -150,6 +151,7 @@ app.use(`${API_PREFIX}/graph`, graphRoutes)
 app.use(`${API_PREFIX}/search`, searchRoutes)
 app.use(`${API_PREFIX}/analytics`, analyticsRoutes)
 app.use(`${API_PREFIX}/users`, userRoutes)
+app.use(`${API_PREFIX}/agent`, agentRoutes)
 
 app.use(notFoundHandler)
 app.use(errorHandler)
