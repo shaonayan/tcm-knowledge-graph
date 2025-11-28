@@ -438,7 +438,6 @@ const Explorer: React.FC = () => {
               快速搜索
             </Button>
           </div>
-        </div>
 
         <div className="linear-form-group">
           <label>视图模式</label>
@@ -885,7 +884,7 @@ const Explorer: React.FC = () => {
               )}
             </div>
           </div>
-          )}
+        )}
         </div>
       </div>
 
