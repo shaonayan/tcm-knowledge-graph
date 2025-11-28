@@ -172,19 +172,19 @@ const Dashboard: React.FC = () => {
             {[
               {
                 title: '图谱探索',
-                desc: '以 3D 方式漫游节点与连接',
+                desc: '搜索节点并可视化知识图谱',
                 icon: <NodeIndexOutlined />,
                 action: () => navigate('/explorer')
               },
               {
-                title: '智能搜索',
-                desc: '输入关键字，定位语义上下文',
-                icon: <SearchOutlined />,
-                action: () => navigate('/search')
+                title: '数据分析',
+                desc: '查看统计数据和分类分布',
+                icon: <BarChartOutlined />,
+                action: () => navigate('/analytics')
               },
               {
-                title: '高级可视化',
-                desc: '切换 3D / Timeline / Evolution 模式',
+                title: '3D可视化',
+                desc: '3D / Timeline / Evolution 模式',
                 icon: <BarChartOutlined />,
                 action: () => navigate('/visualizations')
               }

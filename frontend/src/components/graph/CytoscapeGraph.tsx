@@ -73,17 +73,20 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
             'text-halign': 'center',
             'width': (ele: any) => {
               const level = ele.data('level') || 1
-              return level === 1 ? 60 : level === 2 ? 50 : level === 3 ? 45 : 40
+              return level === 1 ? 80 : level === 2 ? 70 : level === 3 ? 60 : 50
             },
             'height': (ele: any) => {
               const level = ele.data('level') || 1
-              return level === 1 ? 60 : level === 2 ? 50 : level === 3 ? 45 : 40
+              return level === 1 ? 80 : level === 2 ? 70 : level === 3 ? 60 : 50
             },
-            'font-size': 12,
-            'font-weight': 'normal',
+            'font-size': 13,
+            'font-weight': '600',
             'color': '#FFFFFF',  // Neo4j使用白色文字
             'text-outline-color': '#000000',
-            'text-outline-width': 1,
+            'text-outline-width': 2,
+            'text-background-color': 'rgba(0, 0, 0, 0.6)',
+            'text-background-opacity': 1,
+            'text-background-padding': 4,
             'text-background-color': 'transparent',
             'text-background-opacity': 0,
             'text-background-padding': 0,
@@ -160,32 +163,56 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
         {
           selector: 'edge',
           style: {
-            'width': 1.5,
-            'line-color': '#A5ABB6',  // Neo4j的淡灰色边
-            'target-arrow-color': '#A5ABB6',
+            'width': 2,
+            'line-color': (ele: any) => {
+              const sourceCategory = ele.source().data('category')
+              const targetCategory = ele.target().data('category')
+              // 根据源节点和目标节点的类别决定边的颜色
+              if (sourceCategory === '疾病类' && targetCategory === '疾病类') {
+                return '#68BDF6'  // 疾病-疾病：蓝色
+              } else if (sourceCategory === '证候类' && targetCategory === '证候类') {
+                return '#6DCE9E'  // 证候-证候：绿色
+              } else {
+                return '#FFD700'  // 跨类别：金色
+              }
+            },
+            'target-arrow-color': (ele: any) => {
+              const sourceCategory = ele.source().data('category')
+              const targetCategory = ele.target().data('category')
+              if (sourceCategory === '疾病类' && targetCategory === '疾病类') {
+                return '#68BDF6'
+              } else if (sourceCategory === '证候类' && targetCategory === '证候类') {
+                return '#6DCE9E'
+              } else {
+                return '#FFD700'
+              }
+            },
             'target-arrow-shape': 'triangle',
-            'target-arrow-size': 4,
+            'target-arrow-size': 6,
             'curve-style': 'bezier',
-            'opacity': 0.6,
-            'arrow-scale': 1
+            'opacity': 0.8,
+            'arrow-scale': 1.2,
+            'line-style': 'solid'
           }
         },
         {
           selector: 'edge:hover',
           style: {
-            'line-color': '#FFD700',
-            'target-arrow-color': '#FFD700',
-            'width': 2,
-            'opacity': 1
+            'line-color': '#FFFFFF',
+            'target-arrow-color': '#FFFFFF',
+            'width': 3,
+            'opacity': 1,
+            'z-index': 999
           }
         },
         {
           selector: 'edge:selected',
           style: {
-            'line-color': '#FFD700',
-            'target-arrow-color': '#FFD700',
-            'width': 2.5,
-            'opacity': 1
+            'line-color': '#FFFFFF',
+            'target-arrow-color': '#FFFFFF',
+            'width': 3.5,
+            'opacity': 1,
+            'z-index': 999
           }
         },
         {

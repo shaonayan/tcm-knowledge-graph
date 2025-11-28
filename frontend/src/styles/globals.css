@@ -3311,19 +3311,24 @@ html {
 .linear-page-hero h1 {
   font-size: clamp(32px, 5vw, 48px);
   font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+  letter-spacing: 0;
   color: #ffffff;
   margin: 0 0 12px;
   text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .linear-page-hero p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.75);
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
   margin: 0;
   max-width: 600px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .linear-page-hero__actions {
@@ -3345,11 +3350,13 @@ html {
   border-radius: 999px;
   font-size: 13px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(8px);
   transition: all 0.2s ease;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .linear-pill-row span:hover {
@@ -3415,22 +3422,29 @@ html {
 
 .linear-stat-card p {
   margin: 0 0 4px;
-  font-size: 13px;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
   font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .linear-stat-card h3 {
   margin: 0 0 4px;
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: #ffffff;
   line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.01em;
 }
 
 .linear-stat-card span {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* Linear Panels Grid */
@@ -3486,6 +3500,9 @@ html {
   font-size: 18px;
   font-weight: 600;
   color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0;
 }
 
 .linear-panel header .eyebrow {
@@ -3532,10 +3549,12 @@ html {
 }
 
 .linear-form-group label {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
   margin-bottom: 8px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .linear-form-row {
@@ -3669,10 +3688,12 @@ html {
 .ant-table-thead > tr > th {
   background: rgba(0, 0, 0, 0.2) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   padding: 16px !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .ant-table-tbody > tr {
@@ -3687,8 +3708,11 @@ html {
 
 .ant-table-tbody > tr > td {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
   padding: 16px !important;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 .ant-table-tbody > tr.ant-table-row-selected > td {

@@ -9,11 +9,10 @@ import {
 import { useNavigate, useLocation } from 'react-router-dom'
 
 const menuItems = [
-  { key: '/', icon: <HomeOutlined />, label: '首页仪表板' },
-  { key: '/explorer', icon: <NodeIndexOutlined />, label: '图谱探索器' },
-  { key: '/search', icon: <SearchOutlined />, label: '智能搜索' },
+  { key: '/', icon: <HomeOutlined />, label: '首页' },
+  { key: '/explorer', icon: <NodeIndexOutlined />, label: '图谱探索' },
   { key: '/analytics', icon: <BarChartOutlined />, label: '数据分析' },
-  { key: '/visualizations', icon: <ExperimentOutlined />, label: '高级可视化' }
+  { key: '/visualizations', icon: <ExperimentOutlined />, label: '3D可视化' }
 ]
 
 export const AppSider: React.FC = () => {

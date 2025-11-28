@@ -10,7 +10,6 @@ import { Background } from './components/common/Background'
 // 懒加载页面组件
 const Dashboard = React.lazy(() => import('./pages/Dashboard'))
 const Explorer = React.lazy(() => import('./pages/Explorer'))
-const Search = React.lazy(() => import('./pages/Search'))
 const Analytics = React.lazy(() => import('./pages/Analytics'))
 const Visualizations = React.lazy(() => import('./pages/Visualizations'))
 const NodeDetail = React.lazy(() => import('./pages/NodeDetail'))
@@ -42,10 +41,11 @@ const App: React.FC = () => {
                 <Routes>
                   <Route path="/" element={<Dashboard />} />
                   <Route path="/explorer" element={<Explorer />} />
-                  <Route path="/search" element={<Search />} />
                   <Route path="/analytics" element={<Analytics />} />
                   <Route path="/visualizations" element={<Visualizations />} />
                   <Route path="/nodes/:code" element={<NodeDetail />} />
+                  {/* 保留search路由以兼容旧链接，重定向到explorer */}
+                  <Route path="/search" element={<Explorer />} />
                   {/* 404页面 */}
                   <Route
                     path="*"
