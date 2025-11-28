@@ -7,7 +7,7 @@ const router = Router()
 /**
  * 导入TCM数据集
  */
-router.post('/tcm-datasets', async (req: Request, res: Response) => {
+router.post('/tcm-datasets', async (_req: Request, res: Response) => {
   try {
     logger.info('开始导入TCM数据集...')
     
@@ -37,7 +37,7 @@ router.post('/tcm-datasets', async (req: Request, res: Response) => {
 /**
  * 查询导入进度
  */
-router.get('/import-status', async (req: Request, res: Response) => {
+router.get('/import-status', async (_req: Request, res: Response) => {
   // TODO: 实现导入进度跟踪
   return res.json({
     success: true,

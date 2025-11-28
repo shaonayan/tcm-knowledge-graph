@@ -331,7 +331,7 @@ function processDirectory(dirPath: string): Array<{ file: string; content: strin
 /**
  * 生成节点代码
  */
-function generateNodeCode(entity: string, category: string, index: number): string {
+function generateNodeCode(_entity: string, category: string, index: number): string {
   const prefix = category === '疾病类' ? 'D' : category === '证候类' ? 'S' : category === '方剂' ? 'F' : category === '中药' ? 'H' : 'X'
   return `${prefix}${String(index).padStart(6, '0')}`
 }
@@ -367,7 +367,7 @@ async function importToNeo4j(
         RETURN count(n) as created
       `
       
-      const result = await session.run(query, {
+      await session.run(query, {
         batch: batch.map(([code, data]) => ({
           code,
           name: data.name,
@@ -383,15 +383,6 @@ async function importToNeo4j(
     // 批量创建关系
     for (let i = 0; i < relations.length; i += batchSize) {
       const batch = relations.slice(i, i + batchSize)
-      
-      const query = `
-        UNWIND $batch AS rel
-        MATCH (source:TCMEntity {code: rel.sourceCode})
-        MATCH (target:TCMEntity {code: rel.targetCode})
-        MERGE (source)-[r:${batch[0]?.type || 'RELATED'}]->(target)
-        SET r.createdAt = datetime()
-        RETURN count(r) as created
-      `
       
       // 按关系类型分组处理
       const relationsByType = new Map<string, typeof batch>()
