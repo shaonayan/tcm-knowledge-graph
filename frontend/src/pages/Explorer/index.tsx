@@ -28,6 +28,9 @@ import { getGraphData, expandNode, getRootNodes, searchNodes, type GraphData, ty
 import { LoadingSpinner } from '@/components/common/Loading'
 import CytoscapeGraph, { type CytoscapeGraphRef } from '@/components/graph/CytoscapeGraph'
 import VirtualizedCytoscapeGraph from '@/components/graph/VirtualizedCytoscapeGraph'
+import ForceGraph, { type ForceGraphRef } from '@/components/graph/ForceGraph'
+import Graph3D from '@/components/graph/Graph3D'
+import PathFinder from '@/components/graph/PathFinder'
 import { GraphAnalysis } from '@/components/analysis/GraphAnalysis'
 import { getModulePreferences, saveModulePreferences } from '@/utils/preferences'
 
@@ -40,10 +43,11 @@ const Explorer: React.FC = () => {
   const [error, setError] = useState<string | null>(null)
   // 从用户偏好设置加载初始值
   const explorerPrefs = getModulePreferences('explorer')
-  const [layout, setLayout] = useState<'dagre' | 'breadthfirst' | 'grid' | 'circle'>(explorerPrefs.layout)
+  const [layout, setLayout] = useState<'dagre' | 'breadthfirst' | 'grid' | 'circle'>(explorerPrefs.layout || 'dagre')
+  const [viewMode, setViewMode] = useState<'cytoscape' | 'force' | '3d'>(explorerPrefs.viewMode || 'cytoscape')
   const [rootCode, setRootCode] = useState<string | undefined>(explorerPrefs.defaultRootCode)
-  const [depth, setDepth] = useState<number>(explorerPrefs.depth)
-  const [limit, setLimit] = useState<number>(explorerPrefs.limit)
+  const [depth, setDepth] = useState<number>(explorerPrefs.depth || 2)
+  const [limit, setLimit] = useState<number>(explorerPrefs.limit || 100)
   const [rootNodes, setRootNodes] = useState<RootNode[]>([])
   const [selectedNode, setSelectedNode] = useState<GraphNode | null>(null)
   const [searchQuery, setSearchQuery] = useState<string>('')
@@ -51,7 +55,11 @@ const Explorer: React.FC = () => {
   const [levelFilter, setLevelFilter] = useState<number | undefined>(undefined)
   const [codePrefixFilter, setCodePrefixFilter] = useState<string>('')
   const [quickSearchTerm, setQuickSearchTerm] = useState<string>('')
+  const [viewMode, setViewMode] = useState<'cytoscape' | 'force' | '3d'>('cytoscape')
+  const [hoveredNode, setHoveredNode] = useState<GraphNode | null>(null)
+  const [highlightedPath, setHighlightedPath] = useState<string[]>([])
   const graphRef = useRef<CytoscapeGraphRef>(null)
+  const forceGraphRef = useRef<ForceGraphRef>(null)
 
   // 加载根节点列表
   useEffect(() => {
@@ -367,21 +375,39 @@ const Explorer: React.FC = () => {
         </div>
 
         <div className="linear-form-group">
-          <label>布局与参数</label>
-          <div className="linear-form-row">
-            <Select
-              value={layout}
-              onChange={(value) => {
-                setLayout(value)
-                saveModulePreferences('explorer', { layout: value })
-              }}
-              style={{ flex: 1 }}
-            >
-              <Option value="dagre">层次布局</Option>
-              <Option value="breadthfirst">广度优先</Option>
-              <Option value="grid">网格布局</Option>
-              <Option value="circle">圆形布局</Option>
-            </Select>
+          <label>视图模式</label>
+          <Select
+            value={viewMode}
+            onChange={(value) => {
+              setViewMode(value)
+              saveModulePreferences('explorer', { viewMode: value })
+            }}
+            style={{ width: '100%' }}
+            size="large"
+          >
+            <Option value="cytoscape">Cytoscape（经典布局）</Option>
+            <Option value="force">力导向图（D3）</Option>
+            <Option value="3d">3D可视化</Option>
+          </Select>
+        </div>
+
+        {viewMode === 'cytoscape' && (
+          <div className="linear-form-group">
+            <label>布局与参数</label>
+            <div className="linear-form-row">
+              <Select
+                value={layout}
+                onChange={(value) => {
+                  setLayout(value)
+                  saveModulePreferences('explorer', { layout: value })
+                }}
+                style={{ flex: 1 }}
+              >
+                <Option value="dagre">层次布局</Option>
+                <Option value="breadthfirst">广度优先</Option>
+                <Option value="grid">网格布局</Option>
+                <Option value="circle">圆形布局</Option>
+              </Select>
             <Input
               type="number"
               placeholder="深度"
@@ -436,24 +462,45 @@ const Explorer: React.FC = () => {
               style={{ flex: 1 }}
               allowClear
             />
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="linear-form-group">
           <label>视图操作</label>
           <div className="linear-form-actions">
-            <Button icon={<ZoomInOutlined />} onClick={() => graphRef.current?.zoomIn()}>
-              放大
-            </Button>
-            <Button icon={<ZoomOutOutlined />} onClick={() => graphRef.current?.zoomOut()}>
-              缩小
-            </Button>
-            <Button icon={<HomeOutlined />} onClick={() => graphRef.current?.resetZoom()}>
-              重置
-            </Button>
-            <Button icon={<FullscreenOutlined />} onClick={() => graphRef.current?.fit()}>
-              适应
-            </Button>
+            {viewMode === 'cytoscape' && (
+              <>
+                <Button icon={<ZoomInOutlined />} onClick={() => graphRef.current?.zoomIn()}>
+                  放大
+                </Button>
+                <Button icon={<ZoomOutOutlined />} onClick={() => graphRef.current?.zoomOut()}>
+                  缩小
+                </Button>
+                <Button icon={<HomeOutlined />} onClick={() => graphRef.current?.resetZoom()}>
+                  重置
+                </Button>
+                <Button icon={<FullscreenOutlined />} onClick={() => graphRef.current?.fit()}>
+                  适应
+                </Button>
+              </>
+            )}
+            {viewMode === 'force' && (
+              <>
+                <Button icon={<ZoomInOutlined />} onClick={() => forceGraphRef.current?.zoomIn()}>
+                  放大
+                </Button>
+                <Button icon={<ZoomOutOutlined />} onClick={() => forceGraphRef.current?.zoomOut()}>
+                  缩小
+                </Button>
+                <Button icon={<HomeOutlined />} onClick={() => forceGraphRef.current?.resetZoom()}>
+                  重置
+                </Button>
+                <Button icon={<FullscreenOutlined />} onClick={() => forceGraphRef.current?.fit()}>
+                  适应
+                </Button>
+              </>
+            )}
             <Dropdown
               menu={{
                 items: [
@@ -587,10 +634,17 @@ const Explorer: React.FC = () => {
                 valueStyle={{ color: '#52c41a', fontSize: '18px' }}
               />
               <Statistic 
-                title="当前布局" 
-                value={layout === 'dagre' ? '层次' : layout === 'breadthfirst' ? '广度优先' : layout === 'grid' ? '网格' : '圆形'}
+                title="视图模式" 
+                value={viewMode === 'cytoscape' ? 'Cytoscape' : viewMode === 'force' ? '力导向图' : '3D可视化'}
                 valueStyle={{ fontSize: '18px' }}
               />
+              {viewMode === 'cytoscape' && (
+                <Statistic 
+                  title="当前布局" 
+                  value={layout === 'dagre' ? '层次' : layout === 'breadthfirst' ? '广度优先' : layout === 'grid' ? '网格' : '圆形'}
+                  valueStyle={{ fontSize: '18px' }}
+                />
+              )}
               {selectedNode && (
                 <div className="ml-auto">
                   <div className="text-sm text-gray-500 mb-1">选中节点</div>
@@ -603,8 +657,33 @@ const Explorer: React.FC = () => {
 
             {/* 图谱可视化容器 */}
             <div style={{ flex: 1, position: 'relative', minHeight: '500px' }}>
-              {/* 根据节点数量自动选择使用虚拟渲染或普通渲染 */}
-              {graphData.nodes.length > 200 ? (
+              {viewMode === '3d' ? (
+                <Graph3D
+                  nodes={graphData.nodes}
+                  edges={graphData.edges}
+                  onNodeClick={handleNodeClick}
+                  onNodeHover={setHoveredNode}
+                  searchQuery={searchQuery}
+                  categoryFilter={categoryFilter}
+                  levelFilter={levelFilter}
+                  codePrefixFilter={codePrefixFilter}
+                  style={{ width: '100%', height: '100%', minHeight: '600px' }}
+                />
+              ) : viewMode === 'force' ? (
+                <ForceGraph
+                  ref={forceGraphRef}
+                  nodes={graphData.nodes}
+                  edges={graphData.edges}
+                  onNodeClick={handleNodeClick}
+                  onNodeDoubleClick={handleNodeDoubleClick}
+                  onNodeHover={setHoveredNode}
+                  searchQuery={searchQuery}
+                  categoryFilter={categoryFilter}
+                  levelFilter={levelFilter}
+                  codePrefixFilter={codePrefixFilter}
+                  style={{ width: '100%', height: '100%', minHeight: '600px' }}
+                />
+              ) : graphData.nodes.length > 200 ? (
                 <VirtualizedCytoscapeGraph
                   nodes={graphData.nodes}
                   edges={graphData.edges}
