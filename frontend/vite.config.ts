@@ -45,6 +45,7 @@ export default defineConfig({
         // 确保 React chunk 最先加载
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
+        // 确保 React chunk 在所有其他 chunk 之前
         manualChunks: (id) => {
           // 将node_modules中的包分离
           if (id.includes('node_modules')) {

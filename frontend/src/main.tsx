@@ -1,16 +1,17 @@
-// 确保 React 最先加载
+// 确保 React 最先加载 - 必须在所有其他导入之前
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// 验证 React 是否正确加载
-if (!React || typeof React.createContext !== 'function') {
+// 立即验证 React 是否正确加载
+if (typeof React === 'undefined' || typeof React.createContext !== 'function') {
   const errorMsg = 'React 未正确加载，请检查依赖安装'
-  console.error(errorMsg, { React })
+  console.error(errorMsg, { React, createContext: React?.createContext })
   document.body.innerHTML = `
     <div style="padding: 40px; text-align: center; font-family: sans-serif;">
       <h1 style="color: #ff4d4f;">React 加载失败</h1>
       <p style="color: #666; margin: 20px 0;">${errorMsg}</p>
-      <button onclick="location.reload()" style="padding: 10px 20px; background: #1890ff; color: white; border: none; border-radius: 4px; cursor: pointer;">
+      <p style="color: #999; font-size: 12px;">React: ${typeof React}, createContext: ${typeof React?.createContext}</p>
+      <button onclick="location.reload()" style="padding: 10px 20px; background: #1890ff; color: white; border: none; border-radius: 4px; cursor: pointer; margin-top: 20px;">
         刷新页面
       </button>
     </div>
@@ -18,8 +19,10 @@ if (!React || typeof React.createContext !== 'function') {
   throw new Error(errorMsg)
 }
 
+// 确保 React 已经加载后再导入其他依赖 React 的库
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+// Ant Design 必须在 React 之后导入
 import { ConfigProvider } from 'antd'
 import zhCN from 'antd/locale/zh_CN'
 import dayjs from 'dayjs'
