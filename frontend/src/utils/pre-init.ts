@@ -49,12 +49,22 @@ if (typeof window !== 'undefined') {
   (window as any)._ = dagreLodash  // dagre/lib/lodash.js 的回退位置
   (window as any).lodash = lodash
   
-  // 创建 require 函数（dagre/lib/lodash.js 会使用）
-  // 这个函数会在 dagre/lib/lodash.js 尝试 require("lodash/constant") 时被调用
+  // 创建 require 函数（dagre/lib/lodash.js 和 dagre/lib/graphlib.js 会使用）
+  // 这个函数会在 dagre 尝试 require("lodash/constant") 或 require("graphlib") 时被调用
+  // 注意：dagre 使用相对路径 require("./graphlib")，我们需要处理这种情况
   if (typeof (window as any).require === 'undefined') {
     (window as any).require = (id: string) => {
+      // 处理绝对路径模块
       if (id === 'graphlib') return graphlib
       if (id === 'lodash') return dagreLodash
+      
+      // 处理相对路径（dagre/lib/graphlib.js 使用 require("./graphlib")）
+      // 相对路径会被 Rollup 转换为绝对路径，但我们需要确保能处理
+      if (id.includes('graphlib')) {
+        return graphlib
+      }
+      
+      // 处理 lodash 子模块
       if (id.startsWith('lodash/')) {
         const method = id.split('/')[1]
         const func = dagreLodash[method as keyof typeof dagreLodash]
@@ -65,6 +75,13 @@ if (typeof window !== 'undefined') {
         console.warn(`lodash method '${method}' not found for require('${id}')`)
         return undefined
       }
+      
+      // 如果无法解析，尝试从 window 对象获取
+      // dagre/lib/graphlib.js 会回退到 window.graphlib
+      if (id.includes('graphlib')) {
+        return (window as any).graphlib || graphlib
+      }
+      
       throw new Error(`Cannot find module '${id}'`)
     }
   }
