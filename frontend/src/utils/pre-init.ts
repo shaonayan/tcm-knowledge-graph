@@ -112,8 +112,8 @@ if (typeof window !== 'undefined') {
   Object.assign(dagreLodashFunc, dagreLodash);
   
   // 使用函数版本，因为它既可以作为对象访问方法，也可以作为函数调用
-  (window as any)._ = dagreLodashFunc
-  (window as any).lodash = lodash
+  (window as any)._ = dagreLodashFunc;
+  (window as any).lodash = lodash;
   
   // 第四步：设置 window.require（必须在 dagre 模块加载之前）
   // 这样 dagre/lib/graphlib.js 和 dagre/lib/lodash.js 中的 require 调用就能正确工作
