@@ -11,7 +11,11 @@ import graphlib from 'graphlib'
 import lodash from 'lodash'
 
 // 立即执行初始化（不等待其他代码）
+// 必须在任何 dagre 模块加载之前执行
 if (typeof window !== 'undefined') {
+  // 立即设置 window.graphlib（必须在任何 require 调用之前）
+  // dagre/lib/graphlib.js 在模块加载时会立即执行，所以必须在此之前设置
+  (window as any).graphlib = graphlib
   // 预构建 dagre 需要的 lodash 对象
   const dagreLodash = {
     cloneDeep: lodash.cloneDeep,
@@ -42,10 +46,7 @@ if (typeof window !== 'undefined') {
     zipObject: lodash.zipObject,
   }
   
-  // 立即设置到 window 对象（必须在 dagre 加载前）
-  // 这是最关键的一步：必须在任何 dagre 模块加载前设置
-  // 注意：dagre/lib/lodash.js 在模块加载时就会执行，所以 window._ 必须在此之前设置
-  (window as any).graphlib = graphlib
+  // 继续设置其他全局变量
   (window as any)._ = dagreLodash  // dagre/lib/lodash.js 的回退位置
   (window as any).lodash = lodash
   

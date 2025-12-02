@@ -1,5 +1,8 @@
 import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react'
 import cytoscape from 'cytoscape'
+// 确保 graphlib 和 lodash 在 dagre 之前初始化
+import '@/utils/pre-init'
+import '@/utils/graphlib-init'
 // graphlib 已在 main.tsx 中初始化
 import dagre from 'cytoscape-dagre'
 import { GraphNode, GraphEdge } from '@/services/api'
