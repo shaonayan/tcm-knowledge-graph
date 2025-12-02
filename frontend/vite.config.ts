@@ -39,6 +39,9 @@ export default defineConfig({
     commonjsOptions: {
       include: [/node_modules/],
       transformMixedEsModules: true,
+      // 确保 dagre 正确转换
+      requireReturnsDefault: 'auto',
+      esmExternals: true,
     },
     rollupOptions: {
       output: {
@@ -92,6 +95,10 @@ export default defineConfig({
               return 'vendor-zustand'
             }
             // 可视化库 - 进一步拆分
+            // dagre 必须在 cytoscape-dagre 之前加载
+            if (id.includes('dagre') && !id.includes('cytoscape')) {
+              return 'vendor-cytoscape'
+            }
             if (id.includes('cytoscape')) {
               return 'vendor-cytoscape'
             }
