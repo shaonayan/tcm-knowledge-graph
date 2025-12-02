@@ -60,6 +60,9 @@ export default defineConfig({
         manualChunks: (id) => {
           // 将node_modules中的包分离
           if (id.includes('node_modules')) {
+            // 关键：graphlib 和 lodash 必须在主入口文件中，确保 pre-init.ts 能立即访问
+            // 这样 pre-init.ts 可以在 vendor-cytoscape 加载前设置 window._ 和 window.require
+            // 注意：不要将 graphlib 和 lodash 分离到 vendor-cytoscape，因为它们需要在主入口文件中
             // React核心库 - 必须最先加载，确保单例
             // 包括 react, react-dom, react-is (rc-util 依赖)
             if (id.includes('react') && !id.includes('react-router') && !id.includes('react-query') && !id.includes('react-refresh')) {
@@ -102,12 +105,9 @@ export default defineConfig({
               return 'vendor-zustand'
             }
             // 可视化库 - 进一步拆分
-            // 确保 graphlib、dagre、cytoscape-dagre 都在同一个 chunk 中
-            // 顺序很重要：graphlib -> dagre -> cytoscape-dagre
-            if (id.includes('graphlib')) {
-              return 'vendor-cytoscape'
-            }
-            if (id.includes('dagre')) {
+            // 注意：graphlib 和 lodash 不在这里分离，它们需要在主入口文件中（pre-init.ts 需要）
+            // 只有 dagre 和 cytoscape 分离到 vendor-cytoscape
+            if (id.includes('dagre') && !id.includes('graphlib')) {
               return 'vendor-cytoscape'
             }
             if (id.includes('cytoscape')) {
@@ -123,7 +123,8 @@ export default defineConfig({
               return 'vendor-three'
             }
             // 其他工具库（不依赖React）
-            if (id.includes('axios') || id.includes('lodash') || id.includes('dayjs') || id.includes('classnames')) {
+            // 注意：lodash 不在这里分离，它需要在主入口文件中（pre-init.ts 需要）
+            if (id.includes('axios') || id.includes('dayjs') || id.includes('classnames')) {
               return 'vendor-utils'
             }
             // 其他第三方库
