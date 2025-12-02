@@ -62,7 +62,7 @@ const NodeDetailPage: React.FC = () => {
       key: 'code',
       width: 140,
       render: (code: string) => (
-        <Link to={`/nodes/${code}`} className="text-blue-600 hover:underline font-mono">
+        <Link to={`/nodes/${code}`} className="text-blue-600 hover:underline font-mono" aria-label={`查看代码为${code}的节点`}>
           {code}
         </Link>
       )
@@ -73,7 +73,7 @@ const NodeDetailPage: React.FC = () => {
       key: 'name',
       width: 200,
       render: (name: string, record: any) => (
-        <Link to={`/nodes/${record.code}`} className="font-medium text-gray-800 hover:text-primary-500">
+        <Link to={`/nodes/${record.code}`} className="font-medium text-gray-800 hover:text-primary-500" aria-label={`查看术语${name}的详情`}>
           {name}
         </Link>
       )
@@ -105,7 +105,7 @@ const NodeDetailPage: React.FC = () => {
       key: 'code',
       width: 140,
       render: (code: string) => (
-        <Link to={`/nodes/${code}`} className="text-blue-600 hover:underline font-mono">
+        <Link to={`/nodes/${code}`} className="text-blue-600 hover:underline font-mono" aria-label={`查看代码为${code}的子节点`}>
           {code}
         </Link>
       )
@@ -116,7 +116,7 @@ const NodeDetailPage: React.FC = () => {
       key: 'name',
       width: 200,
       render: (name: string, record: any) => (
-        <Link to={`/nodes/${record.code}`} className="font-medium text-gray-800 hover:text-primary-500">
+        <Link to={`/nodes/${record.code}`} className="font-medium text-gray-800 hover:text-primary-500" aria-label={`查看子节点术语${name}的详情`}>
           {name}
         </Link>
       )

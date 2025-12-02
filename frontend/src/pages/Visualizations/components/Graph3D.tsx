@@ -359,9 +359,9 @@ export const Graph3D: React.FC<Graph3DProps> = ({ data }) => {
               onChange={setLayoutMode}
               style={{ width: 120 }}
             >
-              <Option value="force">力导向</Option>
-              <Option value="spherical">球形</Option>
-              <Option value="grid">网格</Option>
+              <Option value="force" aria-label="力导向布局">力导向</Option>
+               <Option value="spherical" aria-label="球形布局">球形</Option>
+               <Option value="grid" aria-label="网格布局">网格</Option>
             </Select>
           </Space>
           <Space>

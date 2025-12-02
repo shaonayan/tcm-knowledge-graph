@@ -35,6 +35,26 @@ export default defineConfig({
         changeOrigin: true,
         secure: false
       }
+    },
+    // 添加中间件设置缓存控制头部
+    middlewareMode: true,
+    setupMiddlewares: (middlewares, devServer) => {
+      if (devServer) {
+        middlewares.use((req, res, next) => {
+          // 为HTML文件设置不缓存
+          if (req.url.endsWith('.html')) {
+            res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
+            res.setHeader('Pragma', 'no-cache');
+            res.setHeader('Expires', '0');
+          }
+          // 为静态资源设置合理的缓存时间
+          else if (req.url.match(/\.(js|css|svg|png|jpg|jpeg|gif|ico|woff|woff2|ttf|eot)$/)) {
+            res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+          }
+          next();
+        });
+      }
+      return middlewares;
     }
   },
   build: {

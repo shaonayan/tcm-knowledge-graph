@@ -76,14 +76,18 @@ export const GraphAnalysis: React.FC<GraphAnalysisProps> = ({ selectedNodeCode }
             children: (
               <div className="space-y-4">
                 <Space.Compact style={{ width: '100%' }}>
-                  <Input
-                    placeholder="起始节点代码"
-                    value={pathFrom}
-                    onChange={(e) => setPathFrom(e.target.value)}
-                    style={{ width: '40%' }}
-                  />
-                  <Input
-                    placeholder="结束节点代码"
+                    <Input
+                      id="path-from-input"
+                      name="pathFrom"
+                      placeholder="起始节点代码"
+                      value={pathFrom}
+                      onChange={(e) => setPathFrom(e.target.value)}
+                      style={{ width: '40%' }}
+                    />
+                    <Input
+                      id="path-to-input"
+                      name="pathTo"
+                      placeholder="结束节点代码"
                     value={pathTo}
                     onChange={(e) => setPathTo(e.target.value)}
                     style={{ width: '40%' }}

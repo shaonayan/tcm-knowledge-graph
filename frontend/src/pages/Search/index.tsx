@@ -388,9 +388,9 @@ const Search: React.FC = () => {
               allowClear
               style={{ flex: 1 }}
             >
-              <Option value="all">全部类别</Option>
-              <Option value="疾病类">疾病类</Option>
-              <Option value="证候类">证候类</Option>
+              <Option value="all" aria-label="全部类别">全部类别</Option>
+            <Option value="疾病类" aria-label="疾病类">疾病类</Option>
+            <Option value="证候类" aria-label="证候类">证候类</Option>
             </Select>
             <Button
               icon={<FilterOutlined />}
@@ -430,11 +430,11 @@ const Search: React.FC = () => {
                   allowClear
                   style={{ flex: 1 }}
                 >
-                  <Option value={1}>L1 - 一级</Option>
-                  <Option value={2}>L2 - 二级</Option>
-                  <Option value={3}>L3 - 三级</Option>
-                  <Option value={4}>L4 - 四级</Option>
-                  <Option value={5}>L5 - 五级</Option>
+                  <Option value={1} aria-label="一级节点">L1 - 一级</Option>
+            <Option value={2} aria-label="二级节点">L2 - 二级</Option>
+            <Option value={3} aria-label="三级节点">L3 - 三级</Option>
+            <Option value={4} aria-label="四级节点">L4 - 四级</Option>
+            <Option value={5} aria-label="五级节点">L5 - 五级</Option>
                 </Select>
               </div>
               <div className="advanced-panel__row">
@@ -542,7 +542,7 @@ const Search: React.FC = () => {
           </div>
           <div style={{ paddingTop: '16px', borderTop: '1px solid rgba(255, 255, 255, 0.1)' }}>
             <p style={{ fontSize: '12px', fontWeight: 600, color: 'rgba(255, 255, 255, 0.7)', margin: '0 0 8px' }}>提示</p>
-            <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', color: 'rgba(255, 255, 255, 0.6)', lineHeight: '1.6' }}>
+            <ul role="list" style={{ margin: 0, paddingLeft: '20px', fontSize: '13px', color: 'rgba(255, 255, 255, 0.6)', lineHeight: '1.6' }}>
               <li>支持模糊匹配、拼音与中英文混输</li>
               <li>输入编码可快速跳转节点详情</li>
               <li>建议先唤醒 Render 后端，避免冷启动</li>

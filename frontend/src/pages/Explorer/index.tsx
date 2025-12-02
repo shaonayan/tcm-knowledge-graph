@@ -416,6 +416,8 @@ const Explorer: React.FC = () => {
           </header>
           <div className="linear-form-group">
             <Input
+              id="quick-search-input"
+              name="quickSearch"
               placeholder="快速搜索（例如：脾虚）"
               prefix={<SearchOutlined />}
               value={quickSearchTerm}
@@ -528,12 +530,14 @@ const Explorer: React.FC = () => {
                 }}
                 style={{ flex: 1 }}
               >
-                <Option value="dagre">层次布局</Option>
-                <Option value="breadthfirst">广度优先</Option>
-                <Option value="grid">网格布局</Option>
-                <Option value="circle">圆形布局</Option>
+                <Option value="dagre" aria-label="层次布局">层次布局</Option>
+                 <Option value="breadthfirst" aria-label="广度优先布局">广度优先</Option>
+                 <Option value="grid" aria-label="网格布局">网格布局</Option>
+                 <Option value="circle" aria-label="圆形布局">圆形布局</Option>
               </Select>
             <Input
+              id="depth-input"
+              name="depth"
               type="number"
               placeholder="深度"
               value={depth}
@@ -547,6 +551,8 @@ const Explorer: React.FC = () => {
               style={{ width: 80 }}
             />
             <Input
+              id="limit-input"
+              name="limit"
               type="number"
               placeholder="限制"
               value={limit}
@@ -564,8 +570,8 @@ const Explorer: React.FC = () => {
               onChange={setCategoryFilter}
               allowClear
             >
-              <Option value="疾病类">疾病类</Option>
-              <Option value="证候类">证候类</Option>
+              <Option value="疾病类" aria-label="疾病类">疾病类</Option>
+               <Option value="证候类" aria-label="证候类">证候类</Option>
             </Select>
             <Select
               placeholder="层级筛选"
@@ -574,13 +580,15 @@ const Explorer: React.FC = () => {
               onChange={setLevelFilter}
               allowClear
             >
-              <Option value={1}>L1</Option>
-              <Option value={2}>L2</Option>
-              <Option value={3}>L3</Option>
-              <Option value={4}>L4</Option>
-              <Option value={5}>L5</Option>
+              <Option value={1} aria-label="一级节点">L1</Option>
+               <Option value={2} aria-label="二级节点">L2</Option>
+               <Option value={3} aria-label="三级节点">L3</Option>
+               <Option value={4} aria-label="四级节点">L4</Option>
+               <Option value={5} aria-label="五级节点">L5</Option>
             </Select>
             <Input
+              id="code-prefix-input"
+              name="codePrefix"
               placeholder="代码前缀"
               value={codePrefixFilter}
               onChange={(e) => setCodePrefixFilter(e.target.value)}

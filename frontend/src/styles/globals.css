@@ -1,17 +1,26 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 鍏ㄥ眬鏍峰紡 */
-* {
+/* CSS Reset - 确保一致的基础样式 */
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html,
+/* 重置HTML和body元素 */
+html {
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '寰蒋闆呴粦', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: transparent !important;
@@ -20,6 +29,9 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
+
+html,
+/* 已在CSS Reset部分定义body样式 */
 
 body::after {
   content: '';
@@ -3179,9 +3191,10 @@ html {
 /* 浼樺寲鏂囨湰宸ュ叿绫?*/
 .text-gradient {
   background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 /* 浼樺寲闃村奖宸ュ叿绫?*/
