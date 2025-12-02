@@ -8,7 +8,8 @@
 // 同步导入（必须在文件顶部）
 // @ts-ignore - graphlib 是 CommonJS 模块
 import graphlib from 'graphlib'
-import lodash from 'lodash'
+// @ts-ignore - lodash 是 CommonJS 模块，使用命名空间导入
+import * as lodash from 'lodash'
 
 // 立即执行初始化（不等待其他代码）
 // 必须在任何 dagre 模块加载之前执行
