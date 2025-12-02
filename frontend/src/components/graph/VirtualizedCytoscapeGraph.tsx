@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useMemo } from 'react'
 import cytoscape from 'cytoscape'
 import dagre from 'cytoscape-dagre'
+// 确保 graphlib 被加载（dagre 需要）
+import 'graphlib'
 import { GraphNode, GraphEdge } from '@/services/api'
 
 // 注册dagre布局
