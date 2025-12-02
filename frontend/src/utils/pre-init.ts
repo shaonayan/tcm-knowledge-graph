@@ -102,7 +102,17 @@ if (typeof window !== 'undefined') {
     console.error('[pre-init] dagreLodash 不是有效对象:', dagreLodash)
     throw new Error('dagreLodash 初始化失败')
   }
-  (window as any)._ = dagreLodash
+  
+  // 使 dagreLodash 可以作为函数调用（dagre 可能会调用 _()）
+  // 创建一个函数，并将其属性复制到函数上
+  const dagreLodashFunc = function(value: any) {
+    if (value === undefined) return dagreLodashFunc;
+    return lodash(value);
+  };
+  Object.assign(dagreLodashFunc, dagreLodash);
+  
+  // 使用函数版本，因为它既可以作为对象访问方法，也可以作为函数调用
+  (window as any)._ = dagreLodashFunc
   (window as any).lodash = lodash
   
   // 第四步：设置 window.require（必须在 dagre 模块加载之前）
@@ -111,9 +121,9 @@ if (typeof window !== 'undefined') {
   if (typeof (window as any).require === 'undefined') {
     (window as any).require = (id: string) => {
       try {
-        // 处理绝对路径模块
-        if (id === 'graphlib') return graphlib
-        if (id === 'lodash') return dagreLodash
+      // 处理绝对路径模块
+      if (id === 'graphlib') return graphlib
+      if (id === 'lodash') return dagreLodashFunc
         
         // 处理相对路径（dagre/lib/graphlib.js 使用 require("./graphlib")）
         // 相对路径会被 Rollup 转换为绝对路径，但我们需要确保能处理
