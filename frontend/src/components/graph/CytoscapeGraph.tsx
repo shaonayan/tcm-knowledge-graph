@@ -1,8 +1,12 @@
 import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react'
 import cytoscape from 'cytoscape'
+// 确保 graphlib 在 dagre 之前加载
+import graphlib from 'graphlib'
+// 将 graphlib 挂载到全局，供 dagre 使用
+if (typeof window !== 'undefined') {
+  (window as any).graphlib = graphlib
+}
 import dagre from 'cytoscape-dagre'
-// 确保 graphlib 被加载（dagre 需要）
-import 'graphlib'
 import { GraphNode, GraphEdge } from '@/services/api'
 
 // 注册dagre布局
