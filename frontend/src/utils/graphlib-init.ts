@@ -11,41 +11,8 @@ import graphlib from 'graphlib'
 import lodash from 'lodash'
 
 if (typeof window !== 'undefined') {
-  // 挂载 graphlib 到全局
-  (window as any).graphlib = graphlib
-  
-  // 挂载 lodash 到全局（dagre/lib/lodash.js 需要）
-  // dagre/lib/lodash.js 回退到 window._，所以我们需要挂载到两个位置
-  (window as any).lodash = lodash
-  (window as any)._ = lodash  // dagre 期望的位置
-  
-  // 创建 require 函数供 dagre 使用
-  // dagre/lib/lodash.js 会尝试 require("lodash/constant") 等子模块
-  if (typeof (window as any).require === 'undefined') {
-    (window as any).require = (id: string) => {
-      if (id === 'graphlib') {
-        return graphlib
-      }
-      if (id === 'lodash') {
-        return lodash
-      }
-      // 处理 lodash 的子模块，如 lodash/constant, lodash/cloneDeep 等
-      if (id.startsWith('lodash/')) {
-        const method = id.split('/')[1]
-        const methodFunc = (lodash as any)[method]
-        if (typeof methodFunc === 'function') {
-          return methodFunc
-        }
-        // 如果方法不存在，尝试从 lodash 对象中获取
-        console.warn(`lodash method '${method}' not found directly, checking lodash object`)
-        return undefined
-      }
-      throw new Error(`Cannot find module '${id}'`)
-    }
-  }
-  
   // 预构建 dagre 需要的 lodash 对象（包含所有需要的方法）
-  // 这样即使 require 失败，dagre/lib/lodash.js 也能从 window._ 获取
+  // 必须在所有其他操作之前设置，因为 dagre/lib/lodash.js 在模块加载时就会执行
   const dagreLodash = {
     cloneDeep: lodash.cloneDeep,
     constant: lodash.constant,
@@ -75,8 +42,44 @@ if (typeof window !== 'undefined') {
     zipObject: lodash.zipObject,
   }
   
-  // 确保 window._ 包含所有 dagre 需要的方法
+  // 第一步：立即设置 window._（dagre/lib/lodash.js 的回退位置）
+  // 必须在 require 函数之前设置！
   (window as any)._ = dagreLodash
+  
+  // 第二步：挂载 graphlib 到全局
+  (window as any).graphlib = graphlib
+  
+  // 第三步：挂载 lodash 到全局（作为后备）
+  (window as any).lodash = lodash
+  
+  // 第四步：创建 require 函数供 dagre 使用
+  // dagre/lib/lodash.js 会尝试 require("lodash/constant") 等子模块
+  if (typeof (window as any).require === 'undefined') {
+    (window as any).require = (id: string) => {
+      if (id === 'graphlib') {
+        return graphlib
+      }
+      if (id === 'lodash') {
+        return dagreLodash  // 返回预构建的对象，而不是完整的 lodash
+      }
+      // 处理 lodash 的子模块，如 lodash/constant, lodash/cloneDeep 等
+      if (id.startsWith('lodash/')) {
+        const method = id.split('/')[1]
+        const methodFunc = dagreLodash[method as keyof typeof dagreLodash]
+        if (typeof methodFunc === 'function') {
+          return methodFunc
+        }
+        // 如果方法不存在，尝试从完整 lodash 中获取
+        const fallbackFunc = (lodash as any)[method]
+        if (typeof fallbackFunc === 'function') {
+          return fallbackFunc
+        }
+        console.warn(`lodash method '${method}' not found`)
+        return undefined
+      }
+      throw new Error(`Cannot find module '${id}'`)
+    }
+  }
   
   // 验证初始化
   if (!graphlib || !graphlib.Graph || !graphlib.alg) {
