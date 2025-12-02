@@ -79,10 +79,10 @@ const Dashboard: React.FC = () => {
           <p>Neo4j 实时驱动，自动同步 6,800+ 节点与 4.3 万关系，构建苹果式液态玻璃体验。</p>
         </div>
         <div className="hero-actions">
-          <button type="button" className="hero-actions__primary" onClick={() => navigate('/explorer')}>
+          <button type="button" className="hero-actions__primary" onClick={() => navigate('/explorer')} aria-label="进入知识图谱">
             进入图谱
           </button>
-          <button type="button" className="hero-actions__ghost" onClick={() => navigate('/visualizations')}>
+          <button type="button" className="hero-actions__ghost" onClick={() => navigate('/visualizations')} aria-label="查看3D可视化">
             3D 可视化
           </button>
         </div>

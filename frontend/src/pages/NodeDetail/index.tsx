@@ -167,12 +167,12 @@ const NodeDetailPage: React.FC = () => {
       {/* 面包屑导航 */}
       <Breadcrumb className="mb-4">
         <Breadcrumb.Item>
-          <Link to="/">
+          <Link to="/" aria-label="返回首页">
             <HomeOutlined /> 首页
           </Link>
         </Breadcrumb.Item>
         <Breadcrumb.Item>
-          <Link to="/search">智能搜索</Link>
+          <Link to="/search" aria-label="前往智能搜索页面">智能搜索</Link>
         </Breadcrumb.Item>
         <Breadcrumb.Item>
           {nodeDetail.code} - {nodeDetail.name}

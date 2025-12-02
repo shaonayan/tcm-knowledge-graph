@@ -196,12 +196,12 @@ export default function Visualizations() {
           </div>
           <div className="linear-form-row">
             <div className="linear-form-group" style={{ flex: 1, marginBottom: 0 }}>
-              <label>深度</label>
-              <InputNumber min={1} max={5} value={depth} onChange={val => setDepth(val || 3)} style={{ width: '100%' }} />
+              <label htmlFor="depth-input">深度</label>
+              <InputNumber id="depth-input" min={1} max={5} value={depth} onChange={val => setDepth(val || 3)} style={{ width: '100%' }} />
             </div>
             <div className="linear-form-group" style={{ flex: 1, marginBottom: 0 }}>
-              <label>节点限制</label>
-              <InputNumber min={10} max={500} value={limit} onChange={val => setLimit(val || 100)} style={{ width: '100%' }} />
+              <label htmlFor="limit-input">节点限制</label>
+              <InputNumber id="limit-input" min={10} max={500} value={limit} onChange={val => setLimit(val || 100)} style={{ width: '100%' }} />
             </div>
           </div>
           <div className="linear-form-group">

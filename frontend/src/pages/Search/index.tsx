@@ -340,10 +340,10 @@ const Search: React.FC = () => {
           <p>键入术语或编码，Linear 风格的命令面板会即时返回相邻节点，并可叠加类别/层级筛选。</p>
         </div>
         <div className="hero-actions">
-          <button type="button" className="hero-actions__primary" onClick={() => navigate('/explorer')}>
+          <button type="button" className="hero-actions__primary" onClick={() => navigate('/explorer')} aria-label="前往知识图谱">
             前往图谱
           </button>
-          <button type="button" className="hero-actions__ghost" onClick={() => navigate('/analytics')}>
+          <button type="button" className="hero-actions__ghost" onClick={() => navigate('/analytics')} aria-label="查看数据分析">
             数据分析
           </button>
         </div>

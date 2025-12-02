@@ -452,13 +452,14 @@ const Explorer: React.FC = () => {
             <h4>参数配置</h4>
           </div>
           <Tooltip title="重置所有参数并清空图谱">
-            <Button icon={<ClearOutlined />} onClick={resetAll} type="text" size="small" />
+            <Button icon={<ClearOutlined />} onClick={resetAll} type="text" size="small" aria-label="重置所有参数并清空图谱" />
           </Tooltip>
         </header>
         {graphType === 'binary' && (
           <div className="linear-form-group">
-            <label>根节点选择</label>
+            <label htmlFor="root-node-select">根节点选择</label>
             <Select
+              id="root-node-select"
               placeholder="选择根节点"
               style={{ width: '100%' }}
               size="large"
@@ -595,16 +596,16 @@ const Explorer: React.FC = () => {
           <div className="linear-form-actions">
             {viewMode === 'cytoscape' && (
               <>
-                <Button icon={<ZoomInOutlined />} onClick={() => graphRef.current?.zoomIn()}>
+                <Button icon={<ZoomInOutlined />} onClick={() => graphRef.current?.zoomIn()} aria-label="放大图谱">
                   放大
                 </Button>
-                <Button icon={<ZoomOutOutlined />} onClick={() => graphRef.current?.zoomOut()}>
+                <Button icon={<ZoomOutOutlined />} onClick={() => graphRef.current?.zoomOut()} aria-label="缩小图谱">
                   缩小
                 </Button>
-                <Button icon={<HomeOutlined />} onClick={() => graphRef.current?.resetZoom()}>
+                <Button icon={<HomeOutlined />} onClick={() => graphRef.current?.resetZoom()} aria-label="重置图谱缩放">
                   重置
                 </Button>
-                <Button icon={<FullscreenOutlined />} onClick={() => graphRef.current?.fit()}>
+                <Button icon={<FullscreenOutlined />} onClick={() => graphRef.current?.fit()} aria-label="自适应图谱大小">
                   适应
                 </Button>
               </>
