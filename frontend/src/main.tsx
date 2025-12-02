@@ -2,7 +2,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// 初始化 graphlib 和 lodash（必须在 dagre 之前）
+// 预初始化 graphlib 和 lodash（必须在 dagre 之前，使用立即执行的函数）
+import './utils/pre-init'
+
+// 初始化 graphlib 和 lodash（双重保险）
 import './utils/graphlib-init'
 
 // 立即验证 React 是否正确加载
