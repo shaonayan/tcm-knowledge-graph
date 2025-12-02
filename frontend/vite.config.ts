@@ -111,6 +111,10 @@ export default defineConfig({
             if (id.includes('rc-util')) {
               return 'vendor-react'
             }
+            // rc-collection 必须在 React chunk 中，因为它在模块级别访问 React.createContext
+            if (id.includes('rc-collection')) {
+              return 'vendor-react'
+            }
             // @ant-design/cssinjs 和 cssinjs-utils 必须在 React chunk 中，因为它们在模块级别访问 React.createContext
             // 必须放在 antd 检查之前，确保优先级
             if (id.includes('@ant-design/cssinjs')) {

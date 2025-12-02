@@ -21,6 +21,12 @@
         color: #666;
       }
     </style>
+    <!-- 确保 React 最先加载，必须在 vendor-init 之前 -->
+    <link rel="modulepreload" crossorigin href="/assets/vendor-react-CJ-w9Dgq.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-react-router-D5GwTgLy.js">
+    <link rel="modulepreload" crossorigin href="/assets/vendor-react-query-sS8iHlbd.js">
+    <!-- 然后加载初始化脚本 -->
+    <link rel="modulepreload" crossorigin href="/assets/vendor-init-4Pq1yIoi.js">
   </head>
   <body>
     <div id="root">
