@@ -1,6 +1,6 @@
 // 根据环境变量自动选择API地址
 // 优先使用环境变量，如果没有则根据环境自动选择
-let API_BASE_URL = import.meta.env.VITE_API_URL
+let API_BASE_URL = import.meta.env.VITE_API_URL || import.meta.env.VITE_API_BASE_URL
 
 if (!API_BASE_URL) {
   if (import.meta.env.PROD) {
@@ -18,6 +18,9 @@ if (!API_BASE_URL.endsWith('/api')) {
     ? API_BASE_URL + 'api' 
     : API_BASE_URL + '/api'
 }
+
+// 输出当前使用的API地址，方便调试
+console.log('🌐 当前API基础URL:', API_BASE_URL)
 
 // 调试信息：始终输出API地址（帮助调试）
 if (typeof window !== 'undefined') {
@@ -132,10 +135,14 @@ export const getStats = async (): Promise<StatsData> => {
     }
     
     // 生产环境尝试API请求，但简化配置避免复杂问题
+    console.log(`正在请求API: ${API_BASE_URL}/stats`)
     const response = await fetchWithRetry(`${API_BASE_URL}/stats`, {
       method: 'GET',
       // 移除AbortSignal，避免某些环境下的兼容性问题
-    })
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }, 3, 3000) // 增加重试次数和延迟时间
     
     if (!response.ok) {
       // API失败时使用mock数据作为后备
@@ -148,6 +155,20 @@ export const getStats = async (): Promise<StatsData> => {
   } catch (error) {
     // 捕获所有错误，确保总是返回mock数据
     console.warn('API请求失败，使用Mock数据代替:', error)
+    
+    // 添加更详细的错误信息，帮助诊断问题
+    if (error instanceof Error) {
+      console.log('错误类型:', error.name)
+      console.log('错误消息:', error.message)
+      
+      // 常见错误类型判断和提示
+      if (error.message.includes('Failed to fetch') || 
+          error.message.includes('ERR_CONNECTION_CLOSED') || 
+          error.message.includes('NetworkError')) {
+        console.log('提示: Render服务可能正在休眠，请等待几秒钟后刷新页面')
+      }
+    }
+    
     return mockStatsData
   }
 }
@@ -448,27 +469,133 @@ export interface TopLevelNode {
 // 获取详细分析数据
 export const getAnalyticsOverview = async (): Promise<AnalyticsOverview> => {
   try {
+    // 开发环境直接使用mock数据，避免API请求错误
+    if (!import.meta.env.PROD) {
+      console.log('开发环境：使用Mock数据代替API请求 - 分析概览')
+      // 定义默认的模拟数据
+      const mockAnalyticsData = {
+        categoryStats: [
+          { category: '中药材', count: 500 },
+          { category: '方剂', count: 300 },
+          { category: '症状', count: 200 },
+          { category: '经络', count: 12 },
+          { category: '穴位', count: 361 },
+          { category: '疾病', count: 150 }
+        ],
+        levelStats: [
+          { level: 1, count: 10 },
+          { level: 2, count: 50 },
+          { level: 3, count: 200 },
+          { level: 4, count: 500 },
+          { level: 5, count: 490 }
+        ],
+        levelCategoryStats: {},
+        rootCount: 10,
+        leafCount: 320,
+        avgChildren: 3.2
+      }
+      return mockAnalyticsData
+    }
+    
+    // 生产环境尝试API请求，但简化配置避免复杂问题
+    console.log(`正在请求API: ${API_BASE_URL}/analytics/overview`)
     const response = await fetchWithRetry(`${API_BASE_URL}/analytics/overview`, {
       method: 'GET',
-      signal: AbortSignal.timeout(30000),
-    })
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    }, 3, 3000) // 增加重试次数和延迟时间
     
     if (!response.ok) {
-      throw new Error(`获取分析数据失败: ${response.status} ${response.statusText}`)
+      // API失败时使用mock数据作为后备
+      console.warn(`API请求失败: ${response.status} ${response.statusText}，使用Mock数据代替 - 分析概览`)
+      return {
+        categoryStats: [
+          { category: '中药材', count: 500 },
+          { category: '方剂', count: 300 },
+          { category: '症状', count: 200 },
+          { category: '经络', count: 12 },
+          { category: '穴位', count: 361 },
+          { category: '疾病', count: 150 }
+        ],
+        levelStats: [
+          { level: 1, count: 10 },
+          { level: 2, count: 50 },
+          { level: 3, count: 200 },
+          { level: 4, count: 500 },
+          { level: 5, count: 490 }
+        ],
+        levelCategoryStats: {},
+        rootCount: 10,
+        leafCount: 320,
+        avgChildren: 3.2
+      }
     }
     
     const result = await response.json()
     if (!result.success) {
-      throw new Error(result.error || '获取分析数据失败')
+      console.warn(`API返回错误: ${result.error || '获取分析数据失败'}，使用Mock数据代替 - 分析概览`)
+      return {
+        categoryStats: [
+          { category: '中药材', count: 500 },
+          { category: '方剂', count: 300 },
+          { category: '症状', count: 200 },
+          { category: '经络', count: 12 },
+          { category: '穴位', count: 361 },
+          { category: '疾病', count: 150 }
+        ],
+        levelStats: [
+          { level: 1, count: 10 },
+          { level: 2, count: 50 },
+          { level: 3, count: 200 },
+          { level: 4, count: 500 },
+          { level: 5, count: 490 }
+        ],
+        levelCategoryStats: {},
+        rootCount: 10,
+        leafCount: 320,
+        avgChildren: 3.2
+      }
     }
     return result.data
   } catch (error) {
+    // 捕获所有错误，确保总是返回合理的数据
+    console.warn('API请求失败，使用Mock数据代替 - 分析概览:', error)
+    
+    // 添加更详细的错误信息，帮助诊断问题
     if (error instanceof Error) {
-      if (error.message.includes('Failed to fetch') || error.message.includes('ERR_CONNECTION_CLOSED')) {
-        throw new Error('无法连接到服务器。请稍候再试。')
+      console.log('错误类型:', error.name)
+      console.log('错误消息:', error.message)
+      
+      // 常见错误类型判断和提示
+      if (error.message.includes('Failed to fetch') || 
+          error.message.includes('ERR_CONNECTION_CLOSED') || 
+          error.message.includes('NetworkError')) {
+        console.log('提示: Render服务可能正在休眠，请等待几秒钟后刷新页面')
       }
     }
-    throw error
+    
+    return {
+      categoryStats: [
+        { category: '中药材', count: 500 },
+        { category: '方剂', count: 300 },
+        { category: '症状', count: 200 },
+        { category: '经络', count: 12 },
+        { category: '穴位', count: 361 },
+        { category: '疾病', count: 150 }
+      ],
+      levelStats: [
+        { level: 1, count: 10 },
+        { level: 2, count: 50 },
+        { level: 3, count: 200 },
+        { level: 4, count: 500 },
+        { level: 5, count: 490 }
+      ],
+      levelCategoryStats: {},
+      rootCount: 10,
+      leafCount: 320,
+      avgChildren: 3.2
+    }
   }
 }
 
