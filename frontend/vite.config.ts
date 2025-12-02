@@ -20,7 +20,7 @@ export default defineConfig({
       'react': path.resolve(__dirname, './node_modules/react'),
       'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
       // 确保 graphlib 被正确解析（dagre 需要）
-      'graphlib': path.resolve(__dirname, './node_modules/graphlib'),
+      'graphlib': path.resolve(__dirname, './node_modules/graphlib/index.js'),
     },
     dedupe: ['react', 'react-dom'], // 确保只有一个 React 实例
   },

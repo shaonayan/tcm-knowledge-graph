@@ -3,9 +3,28 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 // 确保 graphlib 在全局可用（dagre 需要）
-import graphlib from 'graphlib'
+// 使用动态导入确保 CommonJS 模块正确加载
+import * as graphlibModule from 'graphlib'
 if (typeof window !== 'undefined') {
+  // 确保 graphlib 的所有属性都被正确导出
+  // graphlib 的导出结构：{ Graph, json, alg, version }
+  const graphlib = (graphlibModule as any).default || graphlibModule
   (window as any).graphlib = graphlib
+  
+  // 验证 graphlib 结构
+  if (!graphlib || !graphlib.Graph || !graphlib.alg) {
+    console.error('graphlib 结构不完整:', graphlib)
+  }
+  
+  // 同时确保 require 函数可用（dagre 内部使用）
+  if (typeof (window as any).require === 'undefined') {
+    (window as any).require = (id: string) => {
+      if (id === 'graphlib') {
+        return graphlib
+      }
+      throw new Error(`Cannot find module '${id}'`)
+    }
+  }
 }
 
 // 立即验证 React 是否正确加载
