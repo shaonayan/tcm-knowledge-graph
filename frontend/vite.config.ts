@@ -45,12 +45,9 @@ export default defineConfig({
         manualChunks: (id) => {
           // 将node_modules中的包分离
           if (id.includes('node_modules')) {
-            // React核心库 - 必须最先加载，确保单例
-            if (id.includes('react') && !id.includes('react-dom') && !id.includes('react-router')) {
+            // React核心库 - React 和 React-DOM 必须在一起，确保单例和正确的加载顺序
+            if (id.includes('react') && !id.includes('react-router') && !id.includes('react-query')) {
               return 'vendor-react'
-            }
-            if (id.includes('react-dom')) {
-              return 'vendor-react-dom'
             }
             if (id.includes('react-router')) {
               return 'vendor-react-router'
