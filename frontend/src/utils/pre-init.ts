@@ -17,7 +17,20 @@ if (typeof window !== 'undefined') {
   // 立即设置 window.graphlib（必须在任何 require 调用之前）
   // dagre/lib/graphlib.js 在模块加载时会立即执行，所以必须在此之前设置
   // 这是最关键的一步：必须在 dagre/lib/graphlib.js 执行之前设置
-  (window as any).graphlib = graphlib
+  // 创建一个包装函数，保留原有属性，使其可以作为函数调用
+  const graphlibWrapper = function(...args: any[]) {
+    // 如果调用时没有参数或第一个参数是对象，可能是在尝试创建新图
+    if (args.length === 0 || typeof args[0] === 'object') {
+      return new (graphlib as any).Graph(...args);
+    }
+    return graphlib;
+  };
+  
+  // 复制所有原始 graphlib 的属性到包装函数
+  Object.assign(graphlibWrapper, graphlib);
+  
+  // 挂载包装后的 graphlib
+  (window as any).graphlib = graphlibWrapper;
   
   // 验证 graphlib 是否正确设置
   if (!(window as any).graphlib || !(window as any).graphlib.Graph) {
@@ -35,7 +48,11 @@ if (typeof window !== 'undefined') {
   
   // 预构建 dagre 需要的 lodash 对象
   // 确保所有方法都存在且是函数
-  const dagreLodash: any = {}
+  // 同时使其可以作为函数调用（因为 dagre 可能会调用 _()）
+  const dagreLodash: any = function(value: any) {
+    if (value === undefined) return dagreLodash;
+    return lodash(value);
+  };
   
   // 安全地获取 lodash 方法
   const getLodashMethod = (name: string) => {

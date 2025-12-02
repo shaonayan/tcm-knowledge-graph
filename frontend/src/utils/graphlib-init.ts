@@ -13,7 +13,14 @@ import lodash from 'lodash'
 if (typeof window !== 'undefined') {
   // 预构建 dagre 需要的 lodash 对象（包含所有需要的方法）
   // 必须在所有其他操作之前设置，因为 dagre/lib/lodash.js 在模块加载时就会执行
-  const dagreLodash = {
+  // 同时使其可以作为函数调用（因为 dagre 会调用 _()）
+  const dagreLodash = function(value: any) {
+    if (value === undefined) return dagreLodash;
+    return lodash(value);
+  };
+  
+  // 添加所有必需的方法到 dagreLodash
+  Object.assign(dagreLodash, {
     cloneDeep: lodash.cloneDeep,
     constant: lodash.constant,
     defaults: lodash.defaults,
@@ -40,14 +47,27 @@ if (typeof window !== 'undefined') {
     uniqueId: lodash.uniqueId,
     values: lodash.values,
     zipObject: lodash.zipObject,
-  }
+  });
   
   // 第一步：立即设置 window._（dagre/lib/lodash.js 的回退位置）
   // 必须在 require 函数之前设置！
   (window as any)._ = dagreLodash
   
-  // 第二步：挂载 graphlib 到全局
-  (window as any).graphlib = graphlib
+  // 第二步：挂载 graphlib 到全局，使其也可以作为函数调用
+  // 创建一个包装函数，保留原有属性
+  const graphlibWrapper = function(...args: any[]) {
+    // 如果调用时没有参数或第一个参数是对象，可能是在尝试创建新图
+    if (args.length === 0 || typeof args[0] === 'object') {
+      return new (graphlib as any).Graph(...args);
+    }
+    return graphlib;
+  };
+  
+  // 复制所有原始 graphlib 的属性到包装函数
+  Object.assign(graphlibWrapper, graphlib);
+  
+  // 挂载包装后的 graphlib
+  (window as any).graphlib = graphlibWrapper;
   
   // 第三步：挂载 lodash 到全局（作为后备）
   (window as any).lodash = lodash
