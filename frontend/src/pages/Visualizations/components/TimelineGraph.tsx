@@ -1,6 +1,9 @@
 ﻿import React, { useState, useEffect, useMemo, useRef } from 'react'
 import { Card, Slider, Button, Space, Statistic, Select, Tooltip, Switch, Modal, Descriptions, Progress, Badge } from 'antd'
 import { PlayCircleOutlined, PauseCircleOutlined, ReloadOutlined, InfoCircleOutlined, DownloadOutlined, StepForwardOutlined, StepBackwardOutlined, ZoomInOutlined, ZoomOutOutlined, CompressOutlined, FullscreenOutlined, FullscreenExitOutlined, ArrowLeftOutlined } from '@ant-design/icons'
+// 确保 graphlib 和 lodash 在 dagre 之前初始化
+import '@/utils/pre-init'
+import '@/utils/graphlib-init'
 import cytoscape from 'cytoscape'
 import dagre from 'cytoscape-dagre'
 import { GraphNode, GraphEdge } from '@/services/api'
