@@ -14,7 +14,7 @@ import lodash from 'lodash'
 // 立即执行初始化（不等待其他代码）
 // 必须在任何 dagre 模块加载之前执行
 if (typeof window !== 'undefined') {
-  // 立即设置 window.graphlib（必须在任何 require 调用之前）
+  // 第一步：立即设置 window.graphlib（必须在任何 require 调用之前）
   // dagre/lib/graphlib.js 在模块加载时会立即执行，所以必须在此之前设置
   // 这是最关键的一步：必须在 dagre/lib/graphlib.js 执行之前设置
   // 创建一个包装函数，保留原有属性，使其可以作为函数调用
@@ -29,8 +29,21 @@ if (typeof window !== 'undefined') {
   // 复制所有原始 graphlib 的属性到包装函数
   Object.assign(graphlibWrapper, graphlib);
   
-  // 挂载包装后的 graphlib
+  // 立即挂载包装后的 graphlib（必须在任何其他操作之前）
   (window as any).graphlib = graphlibWrapper;
+  
+  // 第二步：立即设置 window.require（必须在 dagre 模块加载之前）
+  // 这样 dagre/lib/graphlib.js 和 dagre/lib/lodash.js 中的 require 调用就能正确工作
+  if (typeof (window as any).require === 'undefined') {
+    // 先创建一个占位 require，稍后会填充完整实现
+    (window as any).require = (id: string) => {
+      if (id === 'graphlib' || id.includes('graphlib')) {
+        return graphlib;
+      }
+      // 对于 lodash 子模块，稍后会处理
+      return undefined;
+    };
+  }
   
   // 验证 graphlib 是否正确设置
   if (!(window as any).graphlib || !(window as any).graphlib.Graph) {
@@ -95,45 +108,44 @@ if (typeof window !== 'undefined') {
     console.error('[pre-init] 关键方法 zipObject 缺失！')
   }
   
-  // 继续设置其他全局变量
-  (window as any)._ = dagreLodash  // dagre/lib/lodash.js 的回退位置
+  // 第三步：设置 window._（dagre/lib/lodash.js 的回退位置）
+  // 必须在 require 函数完善之前设置，因为 dagre/lib/lodash.js 会立即访问
+  (window as any)._ = dagreLodash
   (window as any).lodash = lodash
   
-  // 创建 require 函数（dagre/lib/lodash.js 和 dagre/lib/graphlib.js 会使用）
+  // 第四步：完善 require 函数（dagre/lib/lodash.js 和 dagre/lib/graphlib.js 会使用）
   // 这个函数会在 dagre 尝试 require("lodash/constant") 或 require("graphlib") 时被调用
   // 注意：dagre 使用相对路径 require("./graphlib")，我们需要处理这种情况
-  if (typeof (window as any).require === 'undefined') {
-    (window as any).require = (id: string) => {
-      // 处理绝对路径模块
-      if (id === 'graphlib') return graphlib
-      if (id === 'lodash') return dagreLodash
-      
-      // 处理相对路径（dagre/lib/graphlib.js 使用 require("./graphlib")）
-      // 相对路径会被 Rollup 转换为绝对路径，但我们需要确保能处理
-      if (id.includes('graphlib')) {
-        return graphlib
-      }
-      
-      // 处理 lodash 子模块
-      if (id.startsWith('lodash/')) {
-        const method = id.split('/')[1]
-        const func = dagreLodash[method as keyof typeof dagreLodash]
-        if (func) return func
-        // 如果预构建对象中没有，尝试从完整 lodash 中获取
-        const fallback = (lodash as any)[method]
-        if (fallback) return fallback
-        console.warn(`lodash method '${method}' not found for require('${id}')`)
-        return undefined
-      }
-      
-      // 如果无法解析，尝试从 window 对象获取
-      // dagre/lib/graphlib.js 会回退到 window.graphlib
-      if (id.includes('graphlib')) {
-        return (window as any).graphlib || graphlib
-      }
-      
-      throw new Error(`Cannot find module '${id}'`)
+  (window as any).require = (id: string) => {
+    // 处理绝对路径模块
+    if (id === 'graphlib') return graphlib
+    if (id === 'lodash') return dagreLodash
+    
+    // 处理相对路径（dagre/lib/graphlib.js 使用 require("./graphlib")）
+    // 相对路径会被 Rollup 转换为绝对路径，但我们需要确保能处理
+    if (id.includes('graphlib')) {
+      return graphlib
     }
+    
+    // 处理 lodash 子模块（dagre/lib/lodash.js 会 require("lodash/constant") 等）
+    if (id.startsWith('lodash/')) {
+      const method = id.split('/')[1]
+      const func = dagreLodash[method as keyof typeof dagreLodash]
+      if (func) return func
+      // 如果预构建对象中没有，尝试从完整 lodash 中获取
+      const fallback = (lodash as any)[method]
+      if (fallback) return fallback
+      console.warn(`[pre-init] lodash method '${method}' not found for require('${id}')`)
+      return undefined
+    }
+    
+    // 如果无法解析，尝试从 window 对象获取
+    // dagre/lib/graphlib.js 会回退到 window.graphlib
+    if (id.includes('graphlib')) {
+      return (window as any).graphlib || graphlib
+    }
+    
+    throw new Error(`Cannot find module '${id}'`)
   }
   
   // 标记已初始化
