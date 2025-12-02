@@ -15,7 +15,16 @@ import lodash from 'lodash'
 if (typeof window !== 'undefined') {
   // 立即设置 window.graphlib（必须在任何 require 调用之前）
   // dagre/lib/graphlib.js 在模块加载时会立即执行，所以必须在此之前设置
+  // 这是最关键的一步：必须在 dagre/lib/graphlib.js 执行之前设置
   (window as any).graphlib = graphlib
+  
+  // 验证 graphlib 是否正确设置
+  if (!(window as any).graphlib || !(window as any).graphlib.Graph) {
+    console.error('[pre-init] graphlib 设置失败:', {
+      graphlib: !!(window as any).graphlib,
+      hasGraph: !!(window as any).graphlib?.Graph,
+    })
+  }
   // 预构建 dagre 需要的 lodash 对象
   const dagreLodash = {
     cloneDeep: lodash.cloneDeep,
@@ -90,15 +99,16 @@ if (typeof window !== 'undefined') {
   // 标记已初始化
   (window as any).__graphlib_initialized__ = true
   
-  // 调试日志（生产环境可以移除）
-  if (process.env.NODE_ENV === 'development') {
-    console.log('[pre-init] graphlib and lodash initialized for dagre', {
-      graphlib: !!graphlib,
-      lodash: !!lodash,
-      dagreLodash: !!dagreLodash,
-      constant: typeof dagreLodash.constant,
-    })
-  }
+  // 调试日志（始终输出，帮助排查问题）
+  console.log('[pre-init] graphlib and lodash initialized for dagre', {
+    graphlib: !!graphlib,
+    graphlibGraph: !!graphlib?.Graph,
+    lodash: !!lodash,
+    dagreLodash: !!dagreLodash,
+    constant: typeof dagreLodash.constant,
+    windowGraphlib: !!(window as any).graphlib,
+    windowGraphlibGraph: !!(window as any).graphlib?.Graph,
+  })
 }
 
 // 导出空对象，确保这是一个有效的模块
