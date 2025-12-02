@@ -57,12 +57,20 @@ export default defineConfig({
         entryFileNames: 'assets/[name]-[hash].js',
         // 确保模块加载顺序：React 必须最先执行
         // 通过设置优先级确保 vendor-react 在其他 chunk 之前
+        // 关键：pre-init.ts 必须在 vendor-cytoscape 之前执行
         manualChunks: (id) => {
+          // 将 pre-init.ts 和 graphlib-init.ts 以及它们依赖的 graphlib 和 lodash 分离到单独的 chunk
+          // 确保这个 chunk 在 vendor-cytoscape 之前加载和执行
+          if (id.includes('pre-init') || id.includes('graphlib-init')) {
+            return 'vendor-init'  // 创建一个初始化 chunk
+          }
+          // 将 graphlib 和 lodash 也放入 vendor-init chunk，确保它们在 dagre 之前加载
+          if (id.includes('node_modules/graphlib') || id.includes('node_modules/lodash')) {
+            return 'vendor-init'
+          }
           // 将node_modules中的包分离
           if (id.includes('node_modules')) {
-            // 关键：graphlib 和 lodash 必须在主入口文件中，确保 pre-init.ts 能立即访问
-            // 这样 pre-init.ts 可以在 vendor-cytoscape 加载前设置 window._ 和 window.require
-            // 注意：不要将 graphlib 和 lodash 分离到 vendor-cytoscape，因为它们需要在主入口文件中
+            // 注意：graphlib 和 lodash 已经在上面被分离到 vendor-init chunk
             // React核心库 - 必须最先加载，确保单例
             // 包括 react, react-dom, react-is (rc-util 依赖)
             if (id.includes('react') && !id.includes('react-router') && !id.includes('react-query') && !id.includes('react-refresh')) {
