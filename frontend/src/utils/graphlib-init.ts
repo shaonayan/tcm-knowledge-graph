@@ -13,14 +13,8 @@ import lodash from 'lodash'
 if (typeof window !== 'undefined') {
   // 预构建 dagre 需要的 lodash 对象（包含所有需要的方法）
   // 必须在所有其他操作之前设置，因为 dagre/lib/lodash.js 在模块加载时就会执行
-  // 同时使其可以作为函数调用（因为 dagre 会调用 _()）
-  const dagreLodash = function(value: any) {
-    if (value === undefined) return dagreLodash;
-    return lodash(value);
-  };
-  
-  // 添加所有必需的方法到 dagreLodash
-  Object.assign(dagreLodash, {
+  // 创建一个对象，同时使其可以作为函数调用（因为 dagre 可能会调用 _()）
+  const dagreLodash: any = {
     cloneDeep: lodash.cloneDeep,
     constant: lodash.constant,
     defaults: lodash.defaults,
@@ -47,11 +41,20 @@ if (typeof window !== 'undefined') {
     uniqueId: lodash.uniqueId,
     values: lodash.values,
     zipObject: lodash.zipObject,
-  });
+  };
+  
+  // 使 dagreLodash 可以作为函数调用（dagre 可能会调用 _()）
+  // 创建一个函数，并将其属性复制到函数上
+  const dagreLodashFunc = function(value: any) {
+    if (value === undefined) return dagreLodashFunc;
+    return lodash(value);
+  };
+  Object.assign(dagreLodashFunc, dagreLodash);
   
   // 第一步：立即设置 window._（dagre/lib/lodash.js 的回退位置）
   // 必须在 require 函数之前设置！
-  (window as any)._ = dagreLodash
+  // 使用函数版本，因为它既可以作为对象访问方法，也可以作为函数调用
+  (window as any)._ = dagreLodashFunc
   
   // 第二步：挂载 graphlib 到全局，使其也可以作为函数调用
   // 创建一个包装函数，保留原有属性
@@ -79,7 +82,7 @@ if (typeof window !== 'undefined') {
     (window as any).require = (id: string) => {
       // 处理绝对路径模块
       if (id === 'graphlib') return graphlib
-      if (id === 'lodash') return dagreLodash
+      if (id === 'lodash') return dagreLodashFunc
       
       // 处理相对路径（dagre/lib/graphlib.js 使用 require("./graphlib")）
       if (id.includes('graphlib')) {
