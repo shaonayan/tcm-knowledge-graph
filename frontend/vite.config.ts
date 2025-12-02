@@ -42,11 +42,20 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
+        // 确保 React chunk 最先加载
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
         manualChunks: (id) => {
           // 将node_modules中的包分离
           if (id.includes('node_modules')) {
-            // React核心库 - React 和 React-DOM 必须在一起，确保单例和正确的加载顺序
-            if (id.includes('react') && !id.includes('react-router') && !id.includes('react-query')) {
+            // React核心库 - 必须最先加载，确保单例
+            // 包括 react, react-dom, react-is (rc-util 依赖)
+            if (id.includes('react') && !id.includes('react-router') && !id.includes('react-query') && !id.includes('react-refresh')) {
+              // 确保 react-is 也在 React chunk 中，因为 rc-util 需要它
+              return 'vendor-react'
+            }
+            // react-is 必须在 React chunk 中
+            if (id.includes('react-is')) {
               return 'vendor-react'
             }
             if (id.includes('react-router')) {
@@ -56,7 +65,11 @@ export default defineConfig({
             if (id.includes('@tanstack/react-query')) {
               return 'vendor-react-query'
             }
-            // Ant Design - 依赖 React
+            // rc-util 必须在 React chunk 中，因为它在模块级别访问 React.version
+            if (id.includes('rc-util')) {
+              return 'vendor-react'
+            }
+            // Ant Design - 依赖 React 和 rc-util
             if (id.includes('antd') || id.includes('@ant-design')) {
               return 'vendor-antd'
             }
