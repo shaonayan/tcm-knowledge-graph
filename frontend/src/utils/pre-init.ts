@@ -8,8 +8,8 @@
 // 同步导入（必须在文件顶部）
 // @ts-ignore - graphlib 是 CommonJS 模块
 import graphlib from 'graphlib'
-// @ts-ignore - lodash 是 CommonJS 模块，使用命名空间导入
-import * as lodash from 'lodash'
+// @ts-ignore - lodash 是 CommonJS 模块，使用默认导入
+import lodash from 'lodash'
 
 // 立即执行初始化（不等待其他代码）
 // 必须在任何 dagre 模块加载之前执行
@@ -26,34 +26,60 @@ if (typeof window !== 'undefined') {
       hasGraph: !!(window as any).graphlib?.Graph,
     })
   }
+  
+  // 验证 lodash 是否正确导入
+  if (!lodash) {
+    console.error('[pre-init] lodash 未正确导入')
+    throw new Error('lodash 未正确导入')
+  }
+  
   // 预构建 dagre 需要的 lodash 对象
-  const dagreLodash = {
-    cloneDeep: lodash.cloneDeep,
-    constant: lodash.constant,
-    defaults: lodash.defaults,
-    each: lodash.each,
-    filter: lodash.filter,
-    find: lodash.find,
-    flatten: lodash.flatten,
-    forEach: lodash.forEach,
-    forIn: lodash.forIn,
-    has: lodash.has,
-    isUndefined: lodash.isUndefined,
-    last: lodash.last,
-    map: lodash.map,
-    mapValues: lodash.mapValues,
-    max: lodash.max,
-    merge: lodash.merge,
-    min: lodash.min,
-    minBy: lodash.minBy,
-    now: lodash.now,
-    pick: lodash.pick,
-    range: lodash.range,
-    reduce: lodash.reduce,
-    sortBy: lodash.sortBy,
-    uniqueId: lodash.uniqueId,
-    values: lodash.values,
-    zipObject: lodash.zipObject,
+  // 确保所有方法都存在且是函数
+  const dagreLodash: any = {}
+  
+  // 安全地获取 lodash 方法
+  const getLodashMethod = (name: string) => {
+    try {
+      const method = (lodash as any)[name]
+      if (typeof method === 'function') {
+        return method
+      }
+      // 如果直接访问失败，尝试从 default 属性获取
+      if (lodash && typeof (lodash as any).default === 'object') {
+        const defaultMethod = (lodash as any).default[name]
+        if (typeof defaultMethod === 'function') {
+          return defaultMethod
+        }
+      }
+      console.warn(`[pre-init] lodash.${name} 不是函数`)
+      return undefined
+    } catch (e) {
+      console.warn(`[pre-init] 获取 lodash.${name} 时出错:`, e)
+      return undefined
+    }
+  }
+  
+  // 构建 dagre 需要的 lodash 方法集合
+  const methods = [
+    'cloneDeep', 'constant', 'defaults', 'each', 'filter', 'find',
+    'flatten', 'forEach', 'forIn', 'has', 'isUndefined', 'last',
+    'map', 'mapValues', 'max', 'merge', 'min', 'minBy', 'now',
+    'pick', 'range', 'reduce', 'sortBy', 'uniqueId', 'values', 'zipObject'
+  ]
+  
+  methods.forEach(method => {
+    const func = getLodashMethod(method)
+    if (func) {
+      dagreLodash[method] = func
+    }
+  })
+  
+  // 验证关键方法是否存在
+  if (!dagreLodash.constant) {
+    console.error('[pre-init] 关键方法 constant 缺失！')
+  }
+  if (!dagreLodash.zipObject) {
+    console.error('[pre-init] 关键方法 zipObject 缺失！')
   }
   
   // 继续设置其他全局变量
