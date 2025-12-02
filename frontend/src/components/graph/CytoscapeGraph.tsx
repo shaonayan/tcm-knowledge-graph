@@ -1,3 +1,142 @@
+import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react'
+import cytoscape from 'cytoscape'
+import dagre from 'cytoscape-dagre'
+import { GraphNode, GraphEdge } from '@/services/api'
+
+// 注册dagre布局
+cytoscape.use(dagre)
+
+interface CytoscapeGraphProps {
+  nodes: GraphNode[]
+  edges: GraphEdge[]
+  onNodeClick?: (node: GraphNode) => void
+  onNodeDoubleClick?: (node: GraphNode) => void
+  layout?: 'dagre' | 'breadthfirst' | 'grid' | 'circle'
+  style?: React.CSSProperties
+  searchQuery?: string
+  categoryFilter?: string
+  levelFilter?: number
+  codePrefixFilter?: string
+}
+
+export interface CytoscapeGraphRef {
+  zoomIn: () => void
+  zoomOut: () => void
+  resetZoom: () => void
+  fit: () => void
+  exportPNG: (filename?: string) => void
+  highlightPath: (nodeIds: string[]) => void
+  clearHighlight: () => void
+}
+
+const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
+  nodes,
+  edges,
+  onNodeClick,
+  onNodeDoubleClick,
+  layout = 'dagre',
+  style = { width: '100%', height: '600px' },
+  searchQuery = '',
+  categoryFilter,
+  levelFilter,
+  codePrefixFilter = ''
+}, ref) => {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const cyRef = useRef<cytoscape.Core | null>(null)
+  const timeoutIdRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  // 初始化Cytoscape
+  useEffect(() => {
+    if (!containerRef.current) return
+
+    try {
+      cyRef.current = cytoscape({
+        container: containerRef.current,
+        elements: [],
+        style: [
+          {
+            selector: 'node',
+            style: {
+              'label': 'data(label)',
+              'width': 'data(width)',
+              'height': 'data(height)',
+              'background-color': (ele: any) => {
+                const category = ele.data('category')
+                if (category === '疾病类') {
+                  return '#68BDF6'  // Neo4j蓝色
+                } else if (category === '证候类') {
+                  return '#6DCE9E'  // Neo4j绿色
+                } else {
+                  return '#FF756E'  // Neo4j红色
+                }
+              },
+              'border-width': 0,
+              'border-color': 'transparent',
+              'color': '#FFFFFF',  // Neo4j白色文字
+              'text-outline-width': 1,
+              'text-outline-color': '#000000',
+              'font-size': 'data(fontSize)',
+              'text-valign': 'center',
+              'text-halign': 'center',
+              'shape': 'ellipse'
+            }
+          },
+          {
+            selector: 'edge',
+            style: {
+              'width': 1.5,
+              'line-color': '#A5ABB6',  // Neo4j淡灰色边
+              'target-arrow-color': '#A5ABB6',
+              'target-arrow-shape': 'triangle',
+              'target-arrow-size': 4,
+              'curve-style': 'bezier',
+              'opacity': 0.6
+            } as any
+          },
+          {
+            selector: 'edge:hover',
+            style: {
+              'line-color': '#FFD700',
+              'target-arrow-color': '#FFD700',
+              'width': 2,
+              'opacity': 1
+            }
+          },
+          {
+            selector: 'node:selected',
+            style: {
+              'border-width': 3,
+              'border-color': '#FFD700'  // Neo4j选中时的金色边框
+            }
+          },
+          {
+            selector: 'node:hover',
+            style: {
+              'border-width': 2,
+              'border-color': '#FFD700'
+            }
+          }
+        ],
+        minZoom: 0.1,
+        maxZoom: 2,
+        wheelSensitivity: 0.15,
+        userZoomingEnabled: true,
+        userPanningEnabled: true
+      })
+    } catch (err) {
+      console.error('Cytoscape初始化失败:', err)
+      return
+    }
+
+    return () => {
+      if (cyRef.current) {
+        cyRef.current.destroy()
+        cyRef.current = null
+      }
+    }
+  }, [])
+
+  useEffect(() => {
     console.log('Cytoscape实例状态:', cyRef.current ? '已初始化' : '未初始化')
     console.log('传入的节点数:', nodes.length)
     console.log('传入的边数:', edges.length)
@@ -62,30 +201,31 @@
       console.log('筛选条件:', { categoryFilter, levelFilter, codePrefixFilter })
     }
 
-    const elements = [
-      ...filteredNodes.map(node => ({
-        data: {
-          id: node.id,
-          label: node.name || node.code,
-          code: node.code,
-          name: node.name,
-          category: node.category,
-          level: node.level,
-          highlighted: searchQuery && (
-            node.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
-            (node.name && node.name.toLowerCase().includes(searchQuery.toLowerCase()))
-          ) ? true : false
-        }
-      })),
-      ...filteredEdges.map(edge => ({
-        data: {
-          id: edge.id,
-          source: edge.source,
-          target: edge.target,
-          type: edge.type
-        }
-      }))
-    ]
+    const nodeElements = filteredNodes.map(node => ({
+      data: {
+        id: node.id,
+        label: node.name || node.code,
+        code: node.code,
+        name: node.name,
+        category: node.category,
+        level: node.level,
+        highlighted: searchQuery && (
+          node.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          (node.name && node.name.toLowerCase().includes(searchQuery.toLowerCase()))
+        ) ? true : false
+      }
+    }))
+    
+    const edgeElements = filteredEdges.map(edge => ({
+      data: {
+        id: edge.id,
+        source: edge.source,
+        target: edge.target,
+        type: edge.type
+      }
+    }))
+    
+    const elements = [...nodeElements, ...edgeElements]
 
     console.log('构建的元素数组:', elements.length, '个元素')
 
@@ -135,12 +275,12 @@
 
     // 如果是首次加载（没有现有节点），直接替换所有元素
     if (existingNodeIds.size === 0 && existingEdgeIds.size === 0) {
-      console.log('首次加载，直接替换所有元素，节点数:', elements.filter(el => !el.data.source).length, '边数:', elements.filter(el => el.data.source).length)
+      console.log('首次加载，直接替换所有元素，节点数:', nodeElements.length, '边数:', edgeElements.length)
       cyRef.current.elements().remove()
       
       // 添加所有元素
-      const nodes = elements.filter(el => !el.data.source)
-      const edges = elements.filter(el => el.data.source)
+      const nodes = nodeElements
+      const edges = edgeElements
       
       console.log('准备添加节点:', nodes.length, '准备添加边:', edges.length)
       
@@ -173,7 +313,8 @@
         if (pos.x === undefined || pos.y === undefined || 
             (pos.x === 0 && pos.y === 0) || 
             !isFinite(pos.x) || !isFinite(pos.y)) {
-          const index = cyRef.current.nodes().indexOf(node)
+          const allNodes = cyRef.current.nodes().toArray()
+          const index = allNodes.indexOf(node)
           node.position({
             x: (index % 10) * 100 + 300,
             y: Math.floor(index / 10) * 100 + 300
@@ -264,20 +405,18 @@
       }, 200)
     } else {
       // 增量更新：添加新元素并应用动画
-      const newElements = elements.filter(el => {
-        const isNode = !el.data.source
-        const id = el.data.id
-        return isNode ? !existingNodeIds.has(id) : !existingEdgeIds.has(id)
-      })
+      const newNodes = nodeElements.filter(el => !existingNodeIds.has(el.data.id))
+      const newEdges = edgeElements.filter(el => !existingEdgeIds.has(el.data.id))
+      const newElements = [...newNodes, ...newEdges]
 
       if (newElements.length > 0) {
         console.log('添加新元素:', newElements.length)
         // 新节点先设置为透明和小尺寸
-        const nodesToAdd = newElements.filter(el => !el.data.source).map(el => ({
+        const nodesToAdd = newNodes.map(el => ({
           ...el,
           classes: 'new-node'
         }))
-        const edgesToAdd = newElements.filter(el => el.data.source)
+        const edgesToAdd = newEdges
 
         cyRef.current.add([...nodesToAdd, ...edgesToAdd])
 
@@ -301,7 +440,7 @@
 
     // 更新现有元素的样式（带动画）
     cyRef.current.nodes().forEach((node: any) => {
-      const nodeData = elements.find(el => !el.data.source && el.data.id === node.id())?.data
+      const nodeData = nodeElements.find(el => el.data.id === node.id())?.data
       if (nodeData) {
         const opacity = nodeData.highlighted ? 1 : (categoryFilter && nodeData.category !== categoryFilter ? 0.3 : 1)
         node.animate({
@@ -316,16 +455,18 @@
     // 运行布局 - 带动画
     const layoutInstance = cyRef.current.layout({
       name: layout,
-      rankDir: 'TB',
-      nodeSep: 50,
-      edgeSep: 50,
-      rankSep: 100,
-      spacingFactor: 1.2,
+      ...(layout === 'dagre' && {
+        rankDir: 'TB' as any,
+        nodeSep: 50,
+        edgeSep: 50,
+        rankSep: 100,
+        spacingFactor: 1.2
+      }),
       padding: 30,
       animate: true, // 启用布局动画（使用默认缓动）
       animationDuration: 800,
       animationEasing: 'ease-out' // 布局动画使用内置缓动，弹动效果在节点动画中实现
-    })
+    } as any)
 
     // 添加备用显示逻辑：如果布局超时，确保节点能显示
     if (timeoutIdRef.current) {
@@ -347,7 +488,7 @@
             })
             
             // 设置临时位置（网格布局）
-            const allNodes = cyRef.current.nodes()
+            const allNodes = cyRef.current.nodes().toArray()
             const nodeIndex = allNodes.indexOf(node)
             node.position({
               x: (nodeIndex % 10) * 100 + 200,
@@ -515,7 +656,7 @@
             })
             
             // 设置临时位置（网格布局）
-            const allNodes = cyRef.current.nodes()
+            const allNodes = cyRef.current.nodes().toArray()
             const nodeIndex = allNodes.indexOf(node)
             node.position({
               x: (nodeIndex % 10) * 100 + 200,
@@ -623,9 +764,6 @@
             }
           }
         })
-        if (onZoomChange) {
-          onZoomChange(newZoom)
-        }
       }
     },
     zoomOut: () => {
@@ -650,9 +788,6 @@
             }
           }
         })
-        if (onZoomChange) {
-          onZoomChange(newZoom)
-        }
       }
     },
     resetZoom: () => {
@@ -680,9 +815,6 @@
             }
           }
         })
-        if (onZoomChange) {
-          onZoomChange(1)
-        }
       }
     },
     fit: () => {
@@ -707,9 +839,6 @@
             }
           }
         })
-        if (onZoomChange) {
-          onZoomChange(targetZoom)
-        }
       }
     },
     exportPNG: (filename?: string) => {
@@ -751,6 +880,51 @@
         console.error('导出JSON失败:', err)
         return null
       }
+    },
+    highlightPath: (nodeIds: string[]) => {
+      const cy = cyRef.current
+      if (!cy || cy.destroyed()) return
+      
+      // 清除之前的高亮
+      cy.elements().removeClass('highlighted')
+      
+      // 高亮指定节点
+      nodeIds.forEach(nodeId => {
+        const node = cy.getElementById(nodeId)
+        if (node.length > 0) {
+          node.addClass('highlighted')
+          node.style({
+            'border-width': 3,
+            'border-color': '#FFD700'
+          })
+        }
+      })
+      
+      // 高亮连接这些节点的边
+      const highlightedNodes = cy.nodes('.highlighted')
+      highlightedNodes.connectedEdges().addClass('highlighted')
+      highlightedNodes.connectedEdges().style({
+        'line-color': '#FFD700',
+        'target-arrow-color': '#FFD700',
+        'width': 3,
+        'opacity': 1
+      })
+    },
+    clearHighlight: () => {
+      const cy = cyRef.current
+      if (!cy || cy.destroyed()) return
+      
+      cy.elements().removeClass('highlighted')
+      cy.nodes().style({
+        'border-width': 0,
+        'border-color': 'transparent'
+      })
+      cy.edges().style({
+        'line-color': '#A5ABB6',
+        'target-arrow-color': '#A5ABB6',
+        'width': 1.5,
+        'opacity': 0.6
+      })
     }
   }))
 
