@@ -19,7 +19,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false,
     "noImplicitAny": false,
-    "suppressImplicitAnyIndexErrors": true,
     "noFallthroughCasesInSwitch": true,
 
     /* Path mapping */

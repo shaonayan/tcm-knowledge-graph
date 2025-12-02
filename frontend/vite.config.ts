@@ -31,12 +31,36 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
+    chunkSizeWarningLimit: 1000, // 提高警告阈值到1MB
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          antd: ['antd', '@ant-design/icons'],
-          visualization: ['d3', 'cytoscape', 'echarts']
+        manualChunks: (id) => {
+          // 将node_modules中的包分离
+          if (id.includes('node_modules')) {
+            // React核心库
+            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+              return 'vendor-react'
+            }
+            // Ant Design
+            if (id.includes('antd') || id.includes('@ant-design')) {
+              return 'vendor-antd'
+            }
+            // 可视化库 - 进一步拆分
+            if (id.includes('cytoscape')) {
+              return 'vendor-cytoscape'
+            }
+            if (id.includes('d3')) {
+              return 'vendor-d3'
+            }
+            if (id.includes('echarts') || id.includes('echarts-for-react')) {
+              return 'vendor-echarts'
+            }
+            if (id.includes('three') || id.includes('@react-three')) {
+              return 'vendor-three'
+            }
+            // 其他第三方库
+            return 'vendor-other'
+          }
         }
       }
     },
