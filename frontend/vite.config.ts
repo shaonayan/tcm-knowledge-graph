@@ -19,6 +19,8 @@ export default defineConfig({
       // 确保 React 单例
       'react': path.resolve(__dirname, './node_modules/react'),
       'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+      // 确保 graphlib 被正确解析（dagre 需要）
+      'graphlib': path.resolve(__dirname, './node_modules/graphlib'),
     },
     dedupe: ['react', 'react-dom'], // 确保只有一个 React 实例
   },
@@ -42,6 +44,8 @@ export default defineConfig({
       // 确保 dagre 正确转换
       requireReturnsDefault: 'auto',
       esmExternals: true,
+      // 确保 graphlib 被正确解析
+      strictRequires: true,
     },
     rollupOptions: {
       output: {
