@@ -45,8 +45,8 @@ export default defineConfig({
         manualChunks: (id) => {
           // 将node_modules中的包分离
           if (id.includes('node_modules')) {
-            // React核心库 - 必须单独打包，确保单例
-            if (id.includes('react') && !id.includes('react-dom')) {
+            // React核心库 - 必须最先加载，确保单例
+            if (id.includes('react') && !id.includes('react-dom') && !id.includes('react-router')) {
               return 'vendor-react'
             }
             if (id.includes('react-dom')) {
@@ -55,9 +55,17 @@ export default defineConfig({
             if (id.includes('react-router')) {
               return 'vendor-react-router'
             }
-            // Ant Design
+            // React Query - 依赖 React
+            if (id.includes('@tanstack/react-query')) {
+              return 'vendor-react-query'
+            }
+            // Ant Design - 依赖 React
             if (id.includes('antd') || id.includes('@ant-design')) {
               return 'vendor-antd'
+            }
+            // Zustand - 可能依赖 React，放在 React 之后
+            if (id.includes('zustand')) {
+              return 'vendor-zustand'
             }
             // 可视化库 - 进一步拆分
             if (id.includes('cytoscape')) {
@@ -71,6 +79,10 @@ export default defineConfig({
             }
             if (id.includes('three') || id.includes('@react-three')) {
               return 'vendor-three'
+            }
+            // 其他工具库（不依赖React）
+            if (id.includes('axios') || id.includes('lodash') || id.includes('dayjs') || id.includes('classnames')) {
+              return 'vendor-utils'
             }
             // 其他第三方库
             return 'vendor-other'
