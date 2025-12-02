@@ -71,16 +71,21 @@ export default defineConfig({
               return 'vendor-react'
             }
             // @ant-design/cssinjs 和 cssinjs-utils 必须在 React chunk 中，因为它们在模块级别访问 React.createContext
+            // 必须放在 antd 检查之前，确保优先级
             if (id.includes('@ant-design/cssinjs')) {
               return 'vendor-react'
             }
             if (id.includes('@ant-design/cssinjs-utils')) {
               return 'vendor-react'
             }
+            // 所有 @ant-design 包都应该在 React chunk 中，因为它们可能依赖 cssinjs
+            if (id.includes('@ant-design')) {
+              return 'vendor-react'
+            }
             // Ant Design - 依赖 React、rc-util 和 cssinjs
-            // 但 antd 本身不需要在 React chunk 中，因为它会在运行时使用 React
-            if (id.includes('antd') || (id.includes('@ant-design') && !id.includes('cssinjs'))) {
-              return 'vendor-antd'
+            // antd 本身也需要在 React chunk 中，因为它导入 cssinjs
+            if (id.includes('antd')) {
+              return 'vendor-react'
             }
             // Zustand - 可能依赖 React，放在 React 之后
             if (id.includes('zustand')) {
