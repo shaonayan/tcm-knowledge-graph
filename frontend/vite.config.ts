@@ -2,51 +2,12 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 
-// Vite 插件：在 HTML 中注入初始化脚本
-function injectGraphlibInit() {
-  return {
-    name: 'inject-graphlib-init',
-    transformIndexHtml(html: string) {
-      // 在 </head> 之前注入初始化脚本
-      const initScript = `
-    <script type="module">
-      // 立即初始化，确保在 dagre 加载前完成
-      import('graphlib').then(g => {
-        import('lodash').then(l => {
-          const graphlib = g.default || g
-          const lodash = l.default || l
-          const dagreLodash = {
-            cloneDeep: lodash.cloneDeep, constant: lodash.constant, defaults: lodash.defaults,
-            each: lodash.each, filter: lodash.filter, find: lodash.find, flatten: lodash.flatten,
-            forEach: lodash.forEach, forIn: lodash.forIn, has: lodash.has, isUndefined: lodash.isUndefined,
-            last: lodash.last, map: lodash.map, mapValues: lodash.mapValues, max: lodash.max,
-            merge: lodash.merge, min: lodash.min, minBy: lodash.minBy, now: lodash.now,
-            pick: lodash.pick, range: lodash.range, reduce: lodash.reduce, sortBy: lodash.sortBy,
-            uniqueId: lodash.uniqueId, values: lodash.values, zipObject: lodash.zipObject,
-          }
-          window.graphlib = graphlib
-          window._ = dagreLodash
-          window.lodash = lodash
-          window.require = (id) => {
-            if (id === 'graphlib') return graphlib
-            if (id === 'lodash') return dagreLodash
-            if (id.startsWith('lodash/')) {
-              const m = id.split('/')[1]
-              return dagreLodash[m] || lodash[m]
-            }
-            throw new Error('Cannot find module ' + id)
-          }
-        })
-      })
-    </script>`
-      return html.replace('</head>', initScript + '\n  </head>')
-    },
-  }
-}
+// 不再需要 HTML 注入插件，因为浏览器无法解析 node_modules 路径
+// 改为依赖 pre-init.ts 和 graphlib-init.ts 来确保初始化
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), injectGraphlibInit()],
+  plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

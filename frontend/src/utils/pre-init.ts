@@ -44,18 +44,26 @@ if (typeof window !== 'undefined') {
   
   // 立即设置到 window 对象（必须在 dagre 加载前）
   // 这是最关键的一步：必须在任何 dagre 模块加载前设置
+  // 注意：dagre/lib/lodash.js 在模块加载时就会执行，所以 window._ 必须在此之前设置
   (window as any).graphlib = graphlib
   (window as any)._ = dagreLodash  // dagre/lib/lodash.js 的回退位置
   (window as any).lodash = lodash
   
   // 创建 require 函数（dagre/lib/lodash.js 会使用）
+  // 这个函数会在 dagre/lib/lodash.js 尝试 require("lodash/constant") 时被调用
   if (typeof (window as any).require === 'undefined') {
     (window as any).require = (id: string) => {
       if (id === 'graphlib') return graphlib
       if (id === 'lodash') return dagreLodash
       if (id.startsWith('lodash/')) {
         const method = id.split('/')[1]
-        return dagreLodash[method as keyof typeof dagreLodash] || (lodash as any)[method]
+        const func = dagreLodash[method as keyof typeof dagreLodash]
+        if (func) return func
+        // 如果预构建对象中没有，尝试从完整 lodash 中获取
+        const fallback = (lodash as any)[method]
+        if (fallback) return fallback
+        console.warn(`lodash method '${method}' not found for require('${id}')`)
+        return undefined
       }
       throw new Error(`Cannot find module '${id}'`)
     }
@@ -63,6 +71,16 @@ if (typeof window !== 'undefined') {
   
   // 标记已初始化
   (window as any).__graphlib_initialized__ = true
+  
+  // 调试日志（生产环境可以移除）
+  if (process.env.NODE_ENV === 'development') {
+    console.log('[pre-init] graphlib and lodash initialized for dagre', {
+      graphlib: !!graphlib,
+      lodash: !!lodash,
+      dagreLodash: !!dagreLodash,
+      constant: typeof dagreLodash.constant,
+    })
+  }
 }
 
 // 导出空对象，确保这是一个有效的模块

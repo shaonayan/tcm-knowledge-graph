@@ -1,5 +1,6 @@
 // 第一步：预初始化 graphlib 和 lodash（必须在所有其他导入之前）
 // 这是最关键的一步：确保 window._ 在 dagre 加载前就被设置
+// 使用同步导入，确保立即执行
 import './utils/pre-init'
 
 // 第二步：确保 React 最先加载
@@ -7,6 +8,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 
 // 第三步：初始化 graphlib 和 lodash（双重保险）
+// 确保 window._ 和 window.require 都已设置
 import './utils/graphlib-init'
 
 // 立即验证 React 是否正确加载
