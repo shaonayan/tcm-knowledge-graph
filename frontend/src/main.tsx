@@ -2,6 +2,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+// 确保 graphlib 在全局可用（dagre 需要）
+import graphlib from 'graphlib'
+if (typeof window !== 'undefined') {
+  (window as any).graphlib = graphlib
+}
+
 // 立即验证 React 是否正确加载
 if (typeof React === 'undefined' || typeof React.createContext !== 'function') {
   const errorMsg = 'React 未正确加载，请检查依赖安装'
