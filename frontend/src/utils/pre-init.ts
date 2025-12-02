@@ -48,11 +48,7 @@ if (typeof window !== 'undefined') {
   
   // 预构建 dagre 需要的 lodash 对象
   // 确保所有方法都存在且是函数
-  // 同时使其可以作为函数调用（因为 dagre 可能会调用 _()）
-  const dagreLodash: any = function(value: any) {
-    if (value === undefined) return dagreLodash;
-    return lodash(value);
-  };
+  const dagreLodash: any = {}
   
   // 安全地获取 lodash 方法
   const getLodashMethod = (name: string) => {
