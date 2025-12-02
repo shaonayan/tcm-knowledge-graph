@@ -1,5 +1,23 @@
+// 确保 React 最先加载
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+
+// 验证 React 是否正确加载
+if (!React || typeof React.createContext !== 'function') {
+  const errorMsg = 'React 未正确加载，请检查依赖安装'
+  console.error(errorMsg, { React })
+  document.body.innerHTML = `
+    <div style="padding: 40px; text-align: center; font-family: sans-serif;">
+      <h1 style="color: #ff4d4f;">React 加载失败</h1>
+      <p style="color: #666; margin: 20px 0;">${errorMsg}</p>
+      <button onclick="location.reload()" style="padding: 10px 20px; background: #1890ff; color: white; border: none; border-radius: 4px; cursor: pointer;">
+        刷新页面
+      </button>
+    </div>
+  `
+  throw new Error(errorMsg)
+}
+
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ConfigProvider } from 'antd'
@@ -54,7 +72,13 @@ const theme = {
   },
 }
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+// 确保DOM加载完成后再渲染
+const rootElement = document.getElementById('root')
+if (!rootElement) {
+  throw new Error('Root element not found')
+}
+
+ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>

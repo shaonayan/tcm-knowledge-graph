@@ -16,7 +16,11 @@ export default defineConfig({
       '@utils': path.resolve(__dirname, './src/utils'),
       '@styles': path.resolve(__dirname, './src/styles'),
       '@types': path.resolve(__dirname, './src/types'),
-    }
+      // 确保 React 单例
+      'react': path.resolve(__dirname, './node_modules/react'),
+      'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+    },
+    dedupe: ['react', 'react-dom'], // 确保只有一个 React 实例
   },
   server: {
     port: 3000,
@@ -32,14 +36,24 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     chunkSizeWarningLimit: 1000, // 提高警告阈值到1MB
+    commonjsOptions: {
+      include: [/node_modules/],
+      transformMixedEsModules: true,
+    },
     rollupOptions: {
       output: {
         manualChunks: (id) => {
           // 将node_modules中的包分离
           if (id.includes('node_modules')) {
-            // React核心库
-            if (id.includes('react') || id.includes('react-dom') || id.includes('react-router')) {
+            // React核心库 - 必须单独打包，确保单例
+            if (id.includes('react') && !id.includes('react-dom')) {
               return 'vendor-react'
+            }
+            if (id.includes('react-dom')) {
+              return 'vendor-react-dom'
+            }
+            if (id.includes('react-router')) {
+              return 'vendor-react-router'
             }
             // Ant Design
             if (id.includes('antd') || id.includes('@ant-design')) {
