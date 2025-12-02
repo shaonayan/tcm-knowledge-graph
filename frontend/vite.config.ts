@@ -99,11 +99,12 @@ export default defineConfig({
               return 'vendor-zustand'
             }
             // 可视化库 - 进一步拆分
-            // dagre 和 graphlib 必须在 cytoscape-dagre 之前加载
+            // 确保 graphlib、dagre、cytoscape-dagre 都在同一个 chunk 中
+            // 顺序很重要：graphlib -> dagre -> cytoscape-dagre
             if (id.includes('graphlib')) {
               return 'vendor-cytoscape'
             }
-            if (id.includes('dagre') && !id.includes('cytoscape')) {
+            if (id.includes('dagre')) {
               return 'vendor-cytoscape'
             }
             if (id.includes('cytoscape')) {
