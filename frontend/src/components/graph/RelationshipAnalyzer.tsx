@@ -195,11 +195,7 @@ const RelationshipAnalyzer: React.FC<RelationshipAnalyzerProps> = ({
       <Table
         columns={columns}
         dataSource={filteredEdges}
-<<<<<<< HEAD
-        rowKey={(_, index) => `edge-${index}`}
-=======
         rowKey={(record, index) => record.id ? String(record.id) : `edge-${index}-${String(record.source)}-${String(record.target)}`}
->>>>>>> bea0ea5744b991c5f0cc33cf84294f798942fdb5
         pagination={{ pageSize: 10 }}
         size="small"
         style={{ background: 'transparent' }}
