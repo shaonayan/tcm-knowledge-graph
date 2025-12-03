@@ -83,13 +83,23 @@ const Explorer: React.FC = () => {
   const [highlightedPath, setHighlightedPath] = useState<string[]>([])
   const graphRef = useRef<CytoscapeGraphRef>(null)
   const forceGraphRef = useRef<ForceGraphRef>(null)
+  const isMountedRef = useRef(true)
+
+  // 组件卸载时标记
+  useEffect(() => {
+    return () => {
+      isMountedRef.current = false
+    }
+  }, [])
 
   // 加载根节点列表
   useEffect(() => {
     const fetchRootNodes = async () => {
       try {
         const roots = await getRootNodes()
-        setRootNodes(roots)
+        if (isMountedRef.current) {
+          setRootNodes(roots)
+        }
       } catch (err) {
         console.error('加载根节点失败:', err)
       }
@@ -129,6 +139,10 @@ const Explorer: React.FC = () => {
   // 加载图谱数据
   const loadGraph = useCallback(async (code?: string) => {
     console.log('📥 开始加载图谱数据', { graphType, code, depth, limit })
+    
+    // 检查组件是否已卸载
+    if (!isMountedRef.current) return
+    
     setLoading(true)
     setError(null)
     setSelectedNode(null)
@@ -136,30 +150,39 @@ const Explorer: React.FC = () => {
     try {
       if (graphType === 'unary') {
         const nodes = await getUnaryGraph(limit * 10)
-        setUnaryNodes(nodes)
-        setGraphData(null)
-        setTernaryData(null)
-        message.success(`加载成功：${nodes.length} 个实体`)
+        if (isMountedRef.current) {
+          setUnaryNodes(nodes)
+          setGraphData(null)
+          setTernaryData(null)
+          message.success(`加载成功：${nodes.length} 个实体`)
+        }
       } else if (graphType === 'ternary') {
         const data = await getTernaryGraph(limit * 10)
-        setTernaryData(data)
-        setGraphData(null)
-        setUnaryNodes([])
-        message.success(`加载成功：${data.nodeCount} 个节点，${data.tripleCount} 个三元组`)
+        if (isMountedRef.current) {
+          setTernaryData(data)
+          setGraphData(null)
+          setUnaryNodes([])
+          message.success(`加载成功：${data.nodeCount} 个节点，${data.tripleCount} 个三元组`)
+        }
       } else {
         const data = await getBinaryGraph(code, depth, limit)
-        setGraphData(data)
-        setUnaryNodes([])
-        setTernaryData(null)
-        message.success(`加载成功：${data.nodeCount} 个节点，${data.edgeCount} 条边`)
+        if (isMountedRef.current) {
+          setGraphData(data)
+          setUnaryNodes([])
+          setTernaryData(null)
+          message.success(`加载成功：${data.nodeCount} 个节点，${data.edgeCount} 条边`)
+        }
       }
     } catch (err) {
+      if (!isMountedRef.current) return
       const errorMessage = err instanceof Error ? err.message : '加载图谱数据失败'
       console.error('❌ 图谱数据加载失败:', err)
       setError(errorMessage)
       message.error(errorMessage)
     } finally {
-      setLoading(false)
+      if (isMountedRef.current) {
+        setLoading(false)
+      }
     }
   }, [depth, limit, graphType])
 
@@ -175,11 +198,15 @@ const Explorer: React.FC = () => {
 
   // 展开节点
   const expandNodeData = useCallback(async (node: GraphNode) => {
+    if (!isMountedRef.current) return
+    
     setLoading(true)
     setError(null)
 
     try {
       const data = await expandNode(node.code, 1, 50)
+      
+      if (!isMountedRef.current) return
       
       // 合并到现有图谱数据
       if (graphData) {
@@ -202,12 +229,15 @@ const Explorer: React.FC = () => {
         message.success(`加载成功：${data.nodeCount} 个节点`)
       }
     } catch (err) {
+      if (!isMountedRef.current) return
       const errorMessage = err instanceof Error ? err.message : '展开节点失败'
       setError(errorMessage)
       message.error(errorMessage)
       console.error('展开节点失败:', err)
     } finally {
-      setLoading(false)
+      if (isMountedRef.current) {
+        setLoading(false)
+      }
     }
   }, [graphData])
 
@@ -297,11 +327,15 @@ const Explorer: React.FC = () => {
       return
     }
 
+    if (!isMountedRef.current) return
+
     setLoading(true)
     setError(null)
 
     try {
       const result = await searchNodes(term, undefined, 20)
+      
+      if (!isMountedRef.current) return
       
       if (result.data.length === 0) {
         message.info(`未找到与"${term}"相关的节点`)
@@ -317,12 +351,15 @@ const Explorer: React.FC = () => {
         }
       }
     } catch (err) {
+      if (!isMountedRef.current) return
       const errorMessage = err instanceof Error ? err.message : '搜索失败'
       setError(errorMessage)
       message.error(errorMessage)
       console.error('搜索失败:', err)
     } finally {
-      setLoading(false)
+      if (isMountedRef.current) {
+        setLoading(false)
+      }
     }
   }, [graphType])
 
@@ -845,8 +882,8 @@ const Explorer: React.FC = () => {
             <div style={{ flex: 1, position: 'relative', minHeight: '500px' }}>
               {viewMode === '3d' ? (
                 <Graph3D
-                  nodes={graphData.nodes}
-                  edges={graphData.edges}
+                  nodes={graphData.nodes || []}
+                  edges={graphData.edges || []}
                   onNodeClick={handleNodeClick}
                   onNodeHover={setHoveredNode}
                   searchQuery={searchQuery}
@@ -858,8 +895,8 @@ const Explorer: React.FC = () => {
               ) : viewMode === 'force' ? (
                 <ForceGraph
                   ref={forceGraphRef}
-                  nodes={graphData.nodes}
-                  edges={graphData.edges}
+                  nodes={graphData.nodes || []}
+                  edges={graphData.edges || []}
                   onNodeClick={handleNodeClick}
                   onNodeDoubleClick={handleNodeDoubleClick}
                   onNodeHover={setHoveredNode}
@@ -869,10 +906,10 @@ const Explorer: React.FC = () => {
                   codePrefixFilter={codePrefixFilter}
                   style={{ width: '100%', height: '100%', minHeight: '600px' }}
                 />
-              ) : graphData.nodes.length > 200 ? (
+              ) : (graphData.nodes?.length || 0) > 200 ? (
                 <VirtualizedCytoscapeGraph
-                  nodes={graphData.nodes}
-                  edges={graphData.edges}
+                  nodes={graphData.nodes || []}
+                  edges={graphData.edges || []}
                   layout={layout}
                   onNodeClick={handleNodeClick}
                   onNodeDoubleClick={handleNodeDoubleClick}
@@ -887,8 +924,8 @@ const Explorer: React.FC = () => {
               ) : (
                 <CytoscapeGraph
                   ref={graphRef}
-                  nodes={graphData.nodes}
-                  edges={graphData.edges}
+                  nodes={graphData.nodes || []}
+                  edges={graphData.edges || []}
                   layout={layout}
                   onNodeClick={handleNodeClick}
                   onNodeDoubleClick={handleNodeDoubleClick}
