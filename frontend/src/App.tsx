@@ -1,5 +1,6 @@
 import React, { Suspense, useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { App as AntApp } from 'antd'
 import { ErrorBoundary } from './components/common/ErrorBoundary'
 import { AppHeader } from './components/common/Header'
 import { AppSider } from './components/common/Sider'
@@ -18,53 +19,55 @@ const App: React.FC = () => {
   const [showStartup, setShowStartup] = useState(true)
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowStartup(false), 2500) // 延长显示时间，让用户能看到完整的动画
+    const timer = setTimeout(() => setShowStartup(false), 2500)
     return () => clearTimeout(timer)
   }, [])
 
   return (
-    <ErrorBoundary>
-      <StartupScreen visible={showStartup} />
-      <Background />
-      <div className="linear-shell">
-        <AppSider />
-        <div className="linear-main">
-          <AppHeader />
-          <div className="linear-content-shell">
-            <div className="app-ambient">
-              <span className="ambient ambient-one" />
-              <span className="ambient ambient-two" />
-              <span className="ambient ambient-three" />
-            </div>
-            <div className="linear-content-inner">
-              <Suspense fallback={<LoadingSpinner />}>
-                <Routes>
-                  <Route path="/" element={<Dashboard />} />
-                  <Route path="/explorer" element={<Explorer />} />
-                  <Route path="/analytics" element={<Analytics />} />
-                  <Route path="/visualizations" element={<Visualizations />} />
-                  <Route path="/nodes/:code" element={<NodeDetail />} />
-                  {/* 保留search路由以兼容旧链接，重定向到explorer */}
-                  <Route path="/search" element={<Explorer />} />
-                  {/* 404页面 */}
-                  <Route
-                    path="*"
-                    element={
-                      <div className="flex items-center justify-center h-96">
-                        <div className="text-center">
-                          <h1 className="text-4xl font-bold mb-4" style={{ color: '#ffffff', textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>404</h1>
-                          <p style={{ color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>页面未找到</p>
+    <AntApp>
+      <ErrorBoundary>
+        <StartupScreen visible={showStartup} />
+        <Background />
+        <div className="linear-shell">
+          <AppSider />
+          <div className="linear-main">
+            <AppHeader />
+            <div className="linear-content-shell">
+              <div className="app-ambient">
+                <span className="ambient ambient-one" />
+                <span className="ambient ambient-two" />
+                <span className="ambient ambient-three" />
+              </div>
+              <div className="linear-content-inner">
+                <Suspense fallback={<LoadingSpinner />}>
+                  <Routes>
+                    <Route path="/" element={<Dashboard />} />
+                    <Route path="/explorer" element={<Explorer />} />
+                    <Route path="/analytics" element={<Analytics />} />
+                    <Route path="/visualizations" element={<Visualizations />} />
+                    <Route path="/nodes/:code" element={<NodeDetail />} />
+                    {/* 保留search路由以兼容旧链接，重定向到explorer */}
+                    <Route path="/search" element={<Explorer />} />
+                    {/* 404页面 */}
+                    <Route
+                      path="*"
+                      element={
+                        <div className="flex items-center justify-center h-96">
+                          <div className="text-center">
+                            <h1 className="text-4xl font-bold mb-4" style={{ color: '#ffffff', textShadow: '0 2px 8px rgba(0, 0, 0, 0.8)' }}>404</h1>
+                            <p style={{ color: 'rgba(255, 255, 255, 0.7)', textShadow: '0 1px 4px rgba(0, 0, 0, 0.8)' }}>页面未找到</p>
+                          </div>
                         </div>
-                      </div>
-                    }
-                  />
-                </Routes>
-              </Suspense>
+                      }
+                    />
+                  </Routes>
+                </Suspense>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </AntApp>
   )
 }
 

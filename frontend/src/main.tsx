@@ -38,7 +38,8 @@ import dayjs from 'dayjs'
 import 'dayjs/locale/zh-cn'
 
 import App from './App'
-import './styles/globals.css'
+// 使用精简 CSS（修复白屏问题）
+import './styles/minimal.css'
 
 // 配置dayjs中文
 dayjs.locale('zh-cn')
@@ -54,7 +55,7 @@ const queryClient = new QueryClient({
   },
 })
 
-// Ant Design主题配置
+// Ant Design主题配置 - 白色主题
 const theme = {
   token: {
     colorPrimary: '#52c41a', // 中医绿
@@ -64,16 +65,23 @@ const theme = {
     colorInfo: '#1890ff',
     borderRadius: 6,
     fontFamily: 'PingFang SC, Hiragino Sans GB, Microsoft YaHei, 微软雅黑, Arial, sans-serif',
+    // 白色主题配置
+    colorBgContainer: '#ffffff',
+    colorBgElevated: '#ffffff',
+    colorBgLayout: '#f5f5f5',
+    colorText: '#1f2937',
+    colorTextSecondary: '#6b7280',
   },
   components: {
     Layout: {
       headerBg: '#ffffff',
       siderBg: '#ffffff',
+      bodyBg: '#f5f5f5',
     },
     Menu: {
       itemBg: 'transparent',
-      itemSelectedBg: '#f6ffed',
-      itemSelectedColor: '#52c41a',
+      itemSelectedBg: '#ecfdf5',
+      itemSelectedColor: '#059669',
     },
     Card: {
       borderRadiusLG: 8,
@@ -92,9 +100,14 @@ if (!rootElement) {
 
 ReactDOM.createRoot(rootElement).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter
+      future={{
+        v7_startTransition: true,
+        v7_relativeSplatPath: true
+      }}
+    >
       <QueryClientProvider client={queryClient}>
-        <ConfigProvider 
+        <ConfigProvider
           locale={zhCN}
           theme={theme}
         >

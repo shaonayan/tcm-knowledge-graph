@@ -149,8 +149,8 @@ const PathFinder: React.FC<PathFinderProps> = ({ nodes, edges, onPathFound }) =>
         </Button>
       </div>
       {foundPath.length > 0 && (
-        <div style={{ marginTop: '16px', padding: '12px', background: 'rgba(0, 0, 0, 0.2)', borderRadius: '8px' }}>
-          <div style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.7)', marginBottom: '8px' }}>路径：</div>
+        <div style={{ marginTop: '16px', padding: '12px', background: '#f3f4f6', borderRadius: '8px', border: '1px solid #e5e7eb' }}>
+          <div style={{ fontSize: '12px', color: '#6b7280', marginBottom: '8px' }}>路径：</div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
             {foundPath.map((nodeId, index) => {
               const node = nodes.find(n => n.id === nodeId)
@@ -158,7 +158,7 @@ const PathFinder: React.FC<PathFinderProps> = ({ nodes, edges, onPathFound }) =>
                 <React.Fragment key={nodeId}>
                   <span style={{
                     padding: '4px 8px',
-                    background: 'rgba(255, 255, 255, 0.1)',
+                    background: '#667eea',
                     borderRadius: '4px',
                     fontSize: '12px',
                     color: '#ffffff',
@@ -167,13 +167,13 @@ const PathFinder: React.FC<PathFinderProps> = ({ nodes, edges, onPathFound }) =>
                     {node?.code || nodeId}
                   </span>
                   {index < foundPath.length - 1 && (
-                    <span style={{ color: 'rgba(255, 255, 255, 0.5)' }}>→</span>
+                    <span style={{ color: '#9ca3af' }}>→</span>
                   )}
                 </React.Fragment>
               )
             })}
           </div>
-          <div style={{ marginTop: '8px', fontSize: '12px', color: 'rgba(255, 255, 255, 0.6)' }}>
+          <div style={{ marginTop: '8px', fontSize: '12px', color: '#6b7280' }}>
             路径长度：{foundPath.length - 1} 步
           </div>
         </div>

@@ -16,7 +16,9 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     return (
       <div className="fixed inset-0 flex items-center justify-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm z-50">
         <div className="text-center">
-          <Spin size={size} tip={tip} />
+          <Spin size={size} tip={tip}>
+            <div style={{ minHeight: 100 }} />
+          </Spin>
         </div>
       </div>
     )
@@ -24,7 +26,9 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   return (
     <div className="flex items-center justify-center h-64">
-      <Spin size={size} tip={tip} />
+      <Spin size={size} tip={tip}>
+        <div style={{ minHeight: 100 }} />
+      </Spin>
     </div>
   )
 }

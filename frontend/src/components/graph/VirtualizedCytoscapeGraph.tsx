@@ -172,7 +172,7 @@ const VirtualizedCytoscapeGraph: React.FC<VirtualizedCytoscapeGraphProps> = ({
               'border-color': '#FFD700'
             }
           }
-        ],
+        ] as any,
         minZoom: 0.1,
         maxZoom: 2,
         wheelSensitivity: 0.15,
@@ -199,6 +199,7 @@ const VirtualizedCytoscapeGraph: React.FC<VirtualizedCytoscapeGraphProps> = ({
     const elements: any[] = []
 
     // 添加可见节点 - Neo4j风格
+    // 注意：Cytoscape 要求 id 必须是字符串类型
     visibleNodes.forEach(node => {
       const level = node.level || 1
       const size = level === 1 ? 60 : level === 2 ? 50 : level === 3 ? 45 : 40
@@ -206,7 +207,7 @@ const VirtualizedCytoscapeGraph: React.FC<VirtualizedCytoscapeGraphProps> = ({
 
       elements.push({
         data: {
-          id: node.id,
+          id: String(node.id),
           label: node.name || node.code,
           code: node.code,
           category: node.category,
@@ -220,12 +221,13 @@ const VirtualizedCytoscapeGraph: React.FC<VirtualizedCytoscapeGraphProps> = ({
     })
 
     // 添加可见边
+    // 注意：Cytoscape 要求 id、source、target 必须是字符串类型
     visibleEdges.forEach(edge => {
       elements.push({
         data: {
-          id: edge.id,
-          source: edge.source,
-          target: edge.target
+          id: String(edge.id),
+          source: String(edge.source),
+          target: String(edge.target)
         }
       })
     })

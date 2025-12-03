@@ -196,7 +196,9 @@ const Analytics: React.FC = () => {
   if (loading) {
     return (
       <div className="p-6 flex items-center justify-center" style={{ minHeight: '400px' }}>
-        <Spin size="large" tip="加载分析数据中..." />
+        <Spin size="large" tip="加载分析数据中...">
+          <div style={{ minHeight: 100 }} />
+        </Spin>
       </div>
     )
   }
@@ -315,18 +317,23 @@ const Analytics: React.FC = () => {
             }
             className="linear-panel h-96"
           >
-            <ReactECharts
-              ref={categoryChartRef}
-              option={getCategoryPieOption()}
-              style={{ height: '350px', width: '100%' }}
-              opts={{ renderer: 'svg' }}
-            />
+            {overview && (
+              <ReactECharts
+                key="category-pie"
+                ref={categoryChartRef}
+                option={getCategoryPieOption()}
+                style={{ height: '350px', width: '100%' }}
+                opts={{ renderer: 'svg' }}
+                notMerge={true}
+                lazyUpdate={true}
+              />
+            )}
           </Card>
         </Col>
 
         <Col xs={24} lg={12}>
-          <Card 
-            title="层级统计" 
+          <Card
+            title="层级统计"
             extra={
               <Space>
                 <BarChartOutlined />
@@ -340,18 +347,23 @@ const Analytics: React.FC = () => {
             }
             className="linear-panel h-96"
           >
-            <ReactECharts
-              ref={levelChartRef}
-              option={getLevelBarOption()}
-              style={{ height: '350px', width: '100%' }}
-              opts={{ renderer: 'svg' }}
-            />
+            {overview && (
+              <ReactECharts
+                key="level-bar"
+                ref={levelChartRef}
+                option={getLevelBarOption()}
+                style={{ height: '350px', width: '100%' }}
+                opts={{ renderer: 'svg' }}
+                notMerge={true}
+                lazyUpdate={true}
+              />
+            )}
           </Card>
         </Col>
 
         <Col xs={24}>
-          <Card 
-            title="层级分类分布" 
+          <Card
+            title="层级分类分布"
             extra={
               <Space>
                 <LineChartOutlined />
@@ -365,12 +377,17 @@ const Analytics: React.FC = () => {
             }
             className="linear-panel h-96"
           >
-            <ReactECharts
-              ref={levelCategoryChartRef}
-              option={getLevelCategoryStackedOption()}
-              style={{ height: '350px', width: '100%' }}
-              opts={{ renderer: 'svg' }}
-            />
+            {overview && (
+              <ReactECharts
+                key="level-category-stacked"
+                ref={levelCategoryChartRef}
+                option={getLevelCategoryStackedOption()}
+                style={{ height: '350px', width: '100%' }}
+                opts={{ renderer: 'svg' }}
+                notMerge={true}
+                lazyUpdate={true}
+              />
+            )}
           </Card>
         </Col>
       </Row>
