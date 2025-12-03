@@ -100,47 +100,47 @@ const DataMetrics: React.FC<DataMetricsProps> = ({ nodes, edges }) => {
     return {
       backgroundColor: 'transparent',
       textStyle: {
-        color: '#ffffff'
+        color: '#1f2937'
       },
       tooltip: {
         trigger: 'axis',
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        borderColor: 'rgba(255, 255, 255, 0.2)',
+        backgroundColor: '#ffffff',
+        borderColor: '#e5e7eb',
         textStyle: {
-          color: '#ffffff'
+          color: '#1f2937'
         }
       },
       legend: {
         data: ['层级分布', '类别分布'],
         textStyle: {
-          color: '#ffffff'
+          color: '#1f2937'
         }
       },
       xAxis: {
         type: 'category',
         data: levelData.map((item: any) => `L${item.level}`),
         axisLabel: {
-          color: '#ffffff'
+          color: '#6b7280'
         },
         axisLine: {
           lineStyle: {
-            color: 'rgba(255, 255, 255, 0.2)'
+            color: '#e5e7eb'
           }
         }
       },
       yAxis: {
         type: 'value',
         axisLabel: {
-          color: '#ffffff'
+          color: '#6b7280'
         },
         axisLine: {
           lineStyle: {
-            color: 'rgba(255, 255, 255, 0.2)'
+            color: '#e5e7eb'
           }
         },
         splitLine: {
           lineStyle: {
-            color: 'rgba(255, 255, 255, 0.1)'
+            color: '#f3f4f6'
           }
         }
       },
@@ -182,42 +182,42 @@ const DataMetrics: React.FC<DataMetricsProps> = ({ nodes, edges }) => {
     return {
       backgroundColor: 'transparent',
       textStyle: {
-        color: '#ffffff'
+        color: '#1f2937'
       },
       tooltip: {
         trigger: 'item',
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        borderColor: 'rgba(255, 255, 255, 0.2)',
+        backgroundColor: '#ffffff',
+        borderColor: '#e5e7eb',
         textStyle: {
-          color: '#ffffff'
+          color: '#1f2937'
         }
       },
       xAxis: {
         type: 'category',
         data: bins.slice(0, -1).map((b, i) => `${b}-${bins[i + 1]}`),
         axisLabel: {
-          color: '#ffffff',
+          color: '#6b7280',
           rotate: 45
         },
         axisLine: {
           lineStyle: {
-            color: 'rgba(255, 255, 255, 0.2)'
+            color: '#e5e7eb'
           }
         }
       },
       yAxis: {
         type: 'value',
         axisLabel: {
-          color: '#ffffff'
+          color: '#6b7280'
         },
         axisLine: {
           lineStyle: {
-            color: 'rgba(255, 255, 255, 0.2)'
+            color: '#e5e7eb'
           }
         },
         splitLine: {
           lineStyle: {
-            color: 'rgba(255, 255, 255, 0.1)'
+            color: '#f3f4f6'
           }
         }
       },
@@ -234,7 +234,7 @@ const DataMetrics: React.FC<DataMetricsProps> = ({ nodes, edges }) => {
           label: {
             show: true,
             position: 'top',
-            color: '#ffffff'
+            color: '#1f2937'
           }
         }
       ]
@@ -250,7 +250,7 @@ const DataMetrics: React.FC<DataMetricsProps> = ({ nodes, edges }) => {
             <h4>图谱统计指标</h4>
           </div>
         </header>
-        <div style={{ textAlign: 'center', padding: '40px', color: 'rgba(255, 255, 255, 0.6)' }}>
+        <div style={{ textAlign: 'center', padding: '40px', color: '#6b7280' }}>
           加载中...
         </div>
       </div>
@@ -316,8 +316,8 @@ const DataMetrics: React.FC<DataMetricsProps> = ({ nodes, edges }) => {
 
       <div style={{ marginBottom: 24 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
-          <span style={{ color: 'rgba(255, 255, 255, 0.9)' }}>图谱密度</span>
-          <span style={{ color: 'rgba(255, 255, 255, 0.7)' }}>{density.toFixed(2)}%</span>
+          <span style={{ color: '#1f2937' }}>图谱密度</span>
+          <span style={{ color: '#6b7280' }}>{density.toFixed(2)}%</span>
         </div>
         <Progress
           percent={Math.min(density, 100)}
@@ -331,27 +331,37 @@ const DataMetrics: React.FC<DataMetricsProps> = ({ nodes, edges }) => {
 
       <Row gutter={16} style={{ marginBottom: 24 }}>
         <Col span={12}>
-          <div style={{ background: 'rgba(0, 0, 0, 0.2)', borderRadius: 12, padding: 16 }}>
-            <h5 style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: 12 }}>层级分布</h5>
-            <ReactECharts
-              option={getDistributionChartOption()}
-              style={{ height: '250px' }}
-            />
+          <div style={{ background: '#f9fafb', borderRadius: 12, padding: 16, border: '1px solid #e5e7eb' }}>
+            <h5 style={{ color: '#1f2937', marginBottom: 12 }}>层级分布</h5>
+            {metrics && (
+              <ReactECharts
+                key="distribution-chart"
+                option={getDistributionChartOption()}
+                style={{ height: '250px' }}
+                notMerge={true}
+                lazyUpdate={true}
+              />
+            )}
           </div>
         </Col>
         <Col span={12}>
-          <div style={{ background: 'rgba(0, 0, 0, 0.2)', borderRadius: 12, padding: 16 }}>
-            <h5 style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: 12 }}>连接度分布</h5>
-            <ReactECharts
-              option={getConnectionDistributionOption()}
-              style={{ height: '250px' }}
-            />
+          <div style={{ background: '#f9fafb', borderRadius: 12, padding: 16, border: '1px solid #e5e7eb' }}>
+            <h5 style={{ color: '#1f2937', marginBottom: 12 }}>连接度分布</h5>
+            {metrics && (
+              <ReactECharts
+                key="connection-chart"
+                option={getConnectionDistributionOption()}
+                style={{ height: '250px' }}
+                notMerge={true}
+                lazyUpdate={true}
+              />
+            )}
           </div>
         </Col>
       </Row>
 
       <div>
-        <h5 style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: 12 }}>类别统计</h5>
+        <h5 style={{ color: '#1f2937', marginBottom: 12 }}>类别统计</h5>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
           {metrics.dimensions?.byCategory?.map((item: any) => {
             const percentage = ((item.count / totalNodes) * 100).toFixed(1)

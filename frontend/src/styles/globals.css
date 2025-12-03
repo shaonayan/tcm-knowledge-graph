@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* 临时禁用 Tailwind 测试白屏问题 */
+/* @tailwind base; */
+/* @tailwind components; */
+/* @tailwind utilities; */
 
 /* CSS Reset - 确保一致的基础样式 */
 *, *::before, *::after {
@@ -23,8 +24,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: transparent !important;
-  color: var(--text-primary);
+  /* 白色主题背景 */
+  background: #f5f5f5 !important;
+  color: #1f2937;
   letter-spacing: -0.01em;
   overflow-x: hidden;
   min-height: 100vh;
@@ -33,19 +35,9 @@ body {
 html,
 /* 已在CSS Reset部分定义body样式 */
 
+/* 白色主题下禁用深色网格背景 */
 body::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    radial-gradient(rgba(255, 255, 255, 0.18) 1px, transparent 1.2px),
-    radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1.5px);
-  background-size: 140px 140px, 90px 90px;
-  background-position: 0 0, 40px 60px;
-  opacity: 0.25;
-  mix-blend-mode: soft-light;
-  z-index: -2;
+  display: none;
 }
 
 /* 娓愬彉鑳屾櫙鍔ㄧ敾锛堝鐢ㄦ柟妗堬級 */
@@ -220,25 +212,25 @@ body::after {
 
 /* 涓撲笟閰嶈壊鏂规 - 鐜颁唬浼橀泤椋庢牸 */
 :root {
-  --primary-color: #6366f1;
-  --primary-hover: #818cf8;
-  --primary-light: #eef2ff;
-  --secondary-color: #8b5cf6;
-  --secondary-hover: #a78bfa;
-  --accent-color: #ec4899;
-  --success-color: #10b981;
-  --warning-color: #f59e0b;
-  --error-color: #ef4444;
-  --info-color: #3b82f6;
-  --text-primary: #ffffff;
-  --text-secondary: rgba(255, 255, 255, 0.8);
-  --text-tertiary: rgba(255, 255, 255, 0.6);
+  --primary-color: #52c41a;
+  --primary-hover: #73d13d;
+  --primary-light: #f6ffed;
+  --secondary-color: #667eea;
+  --secondary-hover: #818cf8;
+  --accent-color: #764ba2;
+  --success-color: #52c41a;
+  --warning-color: #faad14;
+  --error-color: #ff4d4f;
+  --info-color: #1890ff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --text-tertiary: #9ca3af;
   --border-color: #e5e7eb;
   --bg-primary: #ffffff;
   --bg-secondary: #f9fafb;
   --bg-tertiary: #f3f4f6;
-  --gradient-primary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
-  --gradient-soft: linear-gradient(135deg, #eef2ff 0%, #f3e8ff 100%);
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-soft: linear-gradient(135deg, #f6ffed 0%, #e6f7ff 100%);
   --gradient-card-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --gradient-card-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
   --gradient-card-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -4240,5 +4232,348 @@ a:hover {
   .linear-panel {
     padding: 16px;
   }
+}
+
+/* ============================================
+   最终强制覆盖样式 - 修复白屏问题
+   ============================================ */
+/* ============================================
+   白色主题覆盖样式
+   ============================================ */
+
+html, body {
+  background: #f5f5f5 !important;
+  min-height: 100vh !important;
+  color: #1f2937 !important;
+}
+
+#root {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* 侧边栏白色主题 */
+.linear-sidebar {
+  background: #ffffff !important;
+  border-right: 1px solid #e5e7eb !important;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+.linear-sidebar__brand {
+  color: #1f2937 !important;
+}
+
+.linear-sidebar__brand p {
+  color: #1f2937 !important;
+}
+
+.linear-sidebar__brand span {
+  color: #9ca3af !important;
+}
+
+.linear-sidebar__nav-item {
+  color: #6b7280 !important;
+}
+
+.linear-sidebar__nav-item:hover {
+  background: #f3f4f6 !important;
+  color: #1f2937 !important;
+}
+
+.linear-sidebar__nav-item.is-active {
+  background: #ecfdf5 !important;
+  color: #059669 !important;
+}
+
+.linear-sidebar__bottom {
+  color: #9ca3af !important;
+}
+
+.linear-sidebar__command {
+  background: #f9fafb !important;
+  border-color: #e5e7eb !important;
+  color: #6b7280 !important;
+}
+
+.linear-sidebar__command kbd {
+  background: #e5e7eb !important;
+  color: #374151 !important;
+}
+
+/* 顶部栏白色主题 */
+.linear-topbar {
+  background: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb !important;
+}
+
+.linear-topbar__trail {
+  color: #374151 !important;
+}
+
+.linear-topbar__status {
+  color: #6b7280 !important;
+}
+
+.linear-topbar__meta {
+  color: #6b7280 !important;
+}
+
+.linear-topbar__meta strong {
+  color: #1f2937 !important;
+}
+
+.linear-cmd-button {
+  background: #f9fafb !important;
+  border-color: #e5e7eb !important;
+  color: #6b7280 !important;
+}
+
+.linear-cmd-button kbd {
+  background: #e5e7eb !important;
+  color: #374151 !important;
+}
+
+/* 页面标题区域 - 保持渐变背景白色文字 */
+.linear-page-hero {
+  padding: 32px !important;
+  border-radius: 20px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3) !important;
+}
+
+.linear-page-hero .eyebrow {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.linear-page-hero h1 {
+  color: #ffffff !important;
+}
+
+.linear-page-hero p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.linear-page-hero__actions .ant-btn {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.linear-page-hero .linear-pill-row span {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Analytics 页面 Hero */
+.analytics-hero-card {
+  padding: 32px !important;
+  border-radius: 20px !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3) !important;
+}
+
+.analytics-hero-card .eyebrow {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.analytics-hero-card h1 {
+  color: #ffffff !important;
+}
+
+.analytics-hero-card p {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.analytics-hero-card__actions .ant-btn {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  color: #ffffff !important;
+}
+
+.analytics-meta-row span {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(255, 255, 255, 0.25) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* 统计卡片白色主题 */
+.linear-stat-card {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.linear-stat-card__icon {
+  background: #f3f4f6 !important;
+  color: #6b7280 !important;
+}
+
+.linear-stat-card p {
+  color: #9ca3af !important;
+}
+
+.linear-stat-card h3 {
+  color: #1f2937 !important;
+}
+
+.linear-stat-card span {
+  color: #9ca3af !important;
+}
+
+/* 面板白色主题 */
+.linear-panel {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+.linear-panel .eyebrow {
+  color: #9ca3af !important;
+}
+
+.linear-panel h4 {
+  color: #1f2937 !important;
+}
+
+.linear-panel header button {
+  background: #f3f4f6 !important;
+  border-color: #e5e7eb !important;
+  color: #6b7280 !important;
+}
+
+.linear-panel__progress label {
+  color: #6b7280 !important;
+}
+
+.linear-panel__progress span {
+  color: #9ca3af !important;
+}
+
+/* 操作列表白色主题 */
+.actions-list__item {
+  background: #f9fafb !important;
+  border-color: #e5e7eb !important;
+  color: #1f2937 !important;
+}
+
+.actions-list__item:hover {
+  background: #f3f4f6 !important;
+}
+
+.actions-list__icon {
+  background: #e5e7eb !important;
+  color: #6b7280 !important;
+}
+
+.actions-list__item strong {
+  color: #1f2937 !important;
+}
+
+.actions-list__item small {
+  color: #9ca3af !important;
+}
+
+.actions-list__chevron {
+  color: #9ca3af !important;
+}
+
+/* 普通区域的药丸标签 */
+.linear-pill-row span {
+  background: #f3f4f6 !important;
+  border-color: #e5e7eb !important;
+  color: #6b7280 !important;
+}
+
+/* Ant Design 组件白色主题覆盖 */
+.ant-card {
+  background: #ffffff !important;
+  border-color: #e5e7eb !important;
+}
+
+.ant-card-head {
+  background: transparent !important;
+  border-bottom-color: #e5e7eb !important;
+}
+
+.ant-card-head-title {
+  color: #1f2937 !important;
+}
+
+.ant-card-body {
+  background: transparent !important;
+  color: #1f2937 !important;
+}
+
+.ant-table-thead > tr > th {
+  background: #f9fafb !important;
+  color: #374151 !important;
+  border-bottom-color: #e5e7eb !important;
+}
+
+.ant-table-tbody > tr > td {
+  background: transparent !important;
+  color: #1f2937 !important;
+  border-bottom-color: #f3f4f6 !important;
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: #f9fafb !important;
+}
+
+.ant-statistic-title {
+  color: #6b7280 !important;
+}
+
+.ant-statistic-content-value {
+  color: #1f2937 !important;
+}
+
+.ant-select-selector {
+  background: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #1f2937 !important;
+}
+
+.ant-input {
+  background: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #1f2937 !important;
+}
+
+.ant-btn-default {
+  background: #ffffff !important;
+  border-color: #e5e7eb !important;
+  color: #374151 !important;
+}
+
+.ant-btn-default:hover {
+  background: #f9fafb !important;
+  border-color: #d1d5db !important;
+  color: #1f2937 !important;
+}
+
+.ant-progress-inner {
+  background: #e5e7eb !important;
+}
+
+.ant-spin-dot-item {
+  background-color: #52c41a !important;
+}
+
+.ant-tag {
+  background: #f3f4f6 !important;
+  border-color: #e5e7eb !important;
+  color: #374151 !important;
+}
+
+.ant-empty-description {
+  color: #6b7280 !important;
+}
+
+/* 禁用深色环境光效果 */
+.app-ambient {
+  display: none !important;
 }
 

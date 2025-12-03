@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useMemo, useRef } from 'react'
+import React, { useState, useEffect, useMemo, useRef } from 'react'
 import { Card, Slider, Button, Space, Statistic, Select, Tooltip, Switch, Modal, Descriptions, Progress, Badge } from 'antd'
 import { PlayCircleOutlined, PauseCircleOutlined, ReloadOutlined, InfoCircleOutlined, DownloadOutlined, StepForwardOutlined, StepBackwardOutlined, ZoomInOutlined, ZoomOutOutlined, CompressOutlined, FullscreenOutlined, FullscreenExitOutlined, ArrowLeftOutlined } from '@ant-design/icons'
 // 确保 graphlib 和 lodash 在 dagre 之前初始化
@@ -126,21 +126,20 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
             'text-outline-color': '#000000',
             'text-background-color': '#000000',
             'text-background-opacity': 0.8,
-            'text-background-padding': 8,
+            'text-background-padding': 8 as any,
             'text-background-shape': 'roundrectangle',
             'text-wrap': 'wrap',
-            'text-max-width': 110,
+            'text-max-width': 110 as any,
             'text-margin-y': 0,
             'overlay-opacity': 0,
-            'shadow-blur': 15,
-            'shadow-color': (ele: any) => {
+            'shadow-blur': 15 as any,
+            'shadow-color': ((ele: any) => {
               const category = ele.data('category')
               return category === '疾病类' ? 'rgba(33,150,243,0.5)' : category === '证候类' ? 'rgba(76,175,80,0.5)' : 'rgba(156,39,176,0.5)'
-            },
-            'shadow-opacity': 1,
+            }) as any,
             'shadow-offset-x': 0,
             'shadow-offset-y': 4,
-          }
+          } as any
         },
         {
           selector: 'node:selected',
@@ -150,10 +149,9 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
             'width': 135,
             'height': 135,
             'shadow-blur': 25,
-            'shadow-color': '#FFC107',
-            'shadow-opacity': 1,
+            'shadow-color': 'rgba(255, 193, 7, 1)',
             'z-index': 999,
-          }
+          } as any
         },
         {
           selector: 'node:hover',
@@ -163,10 +161,9 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
             'width': 130,
             'height': 130,
             'shadow-blur': 20,
-            'shadow-color': '#FFC107',
-            'shadow-opacity': 0.8,
+            'shadow-color': 'rgba(255, 193, 7, 0.8)',
             'z-index': 998,
-          }
+          } as any
         },
         {
           selector: 'edge',
@@ -182,7 +179,7 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
             'line-cap': 'round',
             'source-endpoint': 'outside-to-node',
             'target-endpoint': 'outside-to-node',
-          }
+          } as any
         },
         {
           selector: 'edge:selected',
@@ -192,7 +189,7 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
             'target-arrow-color': '#FFC107',
             'opacity': 1,
             'z-index': 999,
-          }
+          } as any
         },
         {
           selector: 'edge.highlighted',
@@ -203,7 +200,7 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
             'opacity': 1,
             'z-index': 999,
             'line-style': 'solid',
-          }
+          } as any
         }
       ],
       layout: {
@@ -215,7 +212,7 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
         animate: true,
         animationDuration: 600,
         animationEasing: 'ease-out',
-      },
+      } as any,
       minZoom: 0.1,
       maxZoom: 3,
       wheelSensitivity: 0.15,
@@ -319,7 +316,7 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
     })
     
     if (elementsToRemove.length > 0) {
-      cyRef.current.remove(elementsToRemove)
+      elementsToRemove.forEach(el => el.remove())
     }
 
     // 添加新可见的元素
@@ -396,7 +393,7 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
           'width': 135,
           'height': 135,
           'z-index': 999,
-        })
+        } as any)
         if (showAnimation) {
           // 添加脉冲动画
           node.animate({
@@ -429,7 +426,7 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
           'border-width': 4,
           'width': 120,
           'height': 120,
-        })
+        } as any)
       } else {
         // 未来时间点的节点：半透明
         node.style({
@@ -437,7 +434,7 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
           'border-width': 2,
           'width': 100,
           'height': 100,
-        })
+        } as any)
       }
     })
 
@@ -455,13 +452,13 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
           'width': 5,
           'line-color': '#FFC107',
           'target-arrow-color': '#FFC107',
-        })
+        } as any)
       } else {
         const targetOpacity = maxTime <= currentTime ? 0.6 : 0.1
         edge.style({
           opacity: targetOpacity,
           'width': maxTime <= currentTime ? 4 : 2,
-        })
+        } as any)
       }
     })
 
@@ -476,7 +473,7 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
       animate: showAnimation,
       animationDuration: showAnimation ? 600 : 0,
       animationEasing: 'ease-out',
-    })
+    } as any)
     
     layout.one('layoutstop', () => {
       cyRef.current?.fit(undefined, 80)
@@ -596,7 +593,7 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
     if (cyRef.current) {
       cyRef.current.animate({
         zoom: 1,
-        center: cyRef.current.center()
+        center: cyRef.current.center() as any
       }, {
         duration: 300
       })
@@ -818,19 +815,19 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
             >
               {isPlaying ? '暂停' : '播放'}
             </Button>
-            <Button 
-              icon={<StepBackwardOutlined />} 
+            <Button
+              icon={<StepBackwardOutlined />}
               onClick={handleStepBackward}
               disabled={currentTime === 0}
             >
-              上一�?
+              上一步
             </Button>
-            <Button 
-              icon={<StepForwardOutlined />} 
+            <Button
+              icon={<StepForwardOutlined />}
               onClick={handleStepForward}
               disabled={currentTime >= maxTime}
             >
-              下一�?
+              下一步
             </Button>
             <Button icon={<ReloadOutlined />} onClick={handleReset}>重置</Button>
             <Button 
@@ -968,9 +965,9 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
               />
             </Card>
             <Card size="small" style={{ textAlign: 'center', background: 'white' }}>
-              <Statistic 
-                title={`时间�?${currentTime} 新增`} 
-                value={currentStats.thisTime} 
+              <Statistic
+                title={`时间点 ${currentTime} 新增`}
+                value={currentStats.thisTime}
                 valueStyle={{ fontSize: 20, color: '#FF9800', fontWeight: 'bold' }}
               />
             </Card>

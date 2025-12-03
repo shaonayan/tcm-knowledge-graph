@@ -62,8 +62,14 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
             selector: 'node',
             style: {
               'label': 'data(label)',
-              'width': 'data(width)',
-              'height': 'data(height)',
+              'width': ((ele: any) => {
+                const level = ele.data('level') || 1
+                return level === 1 ? 120 : level === 2 ? 100 : level === 3 ? 90 : 80
+              }) as any,
+              'height': ((ele: any) => {
+                const level = ele.data('level') || 1
+                return level === 1 ? 120 : level === 2 ? 100 : level === 3 ? 90 : 80
+              }) as any,
               'background-color': (ele: any) => {
                 const category = ele.data('category')
                 if (category === '疾病类') {
@@ -79,7 +85,10 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
               'color': '#FFFFFF',  // Neo4j白色文字
               'text-outline-width': 1,
               'text-outline-color': '#000000',
-              'font-size': 'data(fontSize)',
+              'font-size': ((ele: any) => {
+                const level = ele.data('level') || 1
+                return level === 1 ? 14 : level === 2 ? 12 : 10
+              }) as any,
               'text-valign': 'center',
               'text-halign': 'center',
               'shape': 'ellipse'
@@ -180,11 +189,12 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
       )
     }
 
-    // 筛选边：只保留两端节点都存在的边
+    // 筛选边：只保留两端节点都存在的边（使用字符串比较）
+    const filteredNodeIds = new Set(filteredNodes.map(n => String(n.id)))
     const filteredEdges = edges.filter(e => {
-      const sourceNode = filteredNodes.find(n => n.id === e.source)
-      const targetNode = filteredNodes.find(n => n.id === e.target)
-      return sourceNode && targetNode
+      const sourceId = String(e.source)
+      const targetId = String(e.target)
+      return filteredNodeIds.has(sourceId) && filteredNodeIds.has(targetId)
     })
 
     console.log('✅ 数据过滤完成:', {
@@ -205,27 +215,29 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
       console.log('筛选条件:', { categoryFilter, levelFilter, codePrefixFilter })
     }
 
+    // 确保所有 id 都是字符串类型（Cytoscape 要求）
     const nodeElements = filteredNodes.map(node => ({
       data: {
-        id: node.id,
-        label: node.name || node.code,
-        code: node.code,
-        name: node.name,
-        category: node.category,
-        level: node.level,
+        id: String(node.id),
+        label: node.name || node.code || String(node.id),
+        code: node.code || '',
+        name: node.name || '',
+        category: node.category || '',
+        level: node.level || 1,
         highlighted: searchQuery && (
-          node.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          (node.code && node.code.toLowerCase().includes(searchQuery.toLowerCase())) ||
           (node.name && node.name.toLowerCase().includes(searchQuery.toLowerCase()))
         ) ? true : false
       }
     }))
-    
-    const edgeElements = filteredEdges.map(edge => ({
+
+    // 确保边的 id、source、target 都是字符串类型
+    const edgeElements = filteredEdges.map((edge, index) => ({
       data: {
-        id: edge.id,
-        source: edge.source,
-        target: edge.target,
-        type: edge.type
+        id: edge.id ? String(edge.id) : `edge-${index}-${String(edge.source)}-${String(edge.target)}`,
+        source: String(edge.source),
+        target: String(edge.target),
+        type: edge.type || ''
       }
     }))
     

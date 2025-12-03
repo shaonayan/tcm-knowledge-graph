@@ -134,7 +134,7 @@ const TernaryGraph: React.FC<TernaryGraphProps> = ({ data, onNodeClick, style })
       render: (_: any, record: Triple) => {
         const props = record.properties || {}
         const propKeys = Object.keys(props)
-        if (propKeys.length === 0) return <span style={{ color: 'rgba(255,255,255,0.5)' }}>无</span>
+        if (propKeys.length === 0) return <span style={{ color: '#9ca3af' }}>无</span>
         return (
           <div className="ternary-graph__properties">
             {propKeys.slice(0, 3).map(key => (

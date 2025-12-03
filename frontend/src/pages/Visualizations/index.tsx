@@ -171,8 +171,7 @@ export default function Visualizations() {
           <div className="linear-form-group">
             <label>或从列表选择</label>
             <Select
-            id="visualization-type-select"
-            name="visualizationType"
+              id="visualization-type-select"
               showSearch
               allowClear
               loading={loadingRoots}
@@ -186,8 +185,8 @@ export default function Visualizations() {
                   .includes(input.toLowerCase())
               }
             >
-              {rootNodes.map(node => (
-                <Option key={node.code} value={node.code} aria-label={`${node.name} - ${node.code}`}>
+              {rootNodes.map((node, index) => (
+                <Option key={`${node.code}-${index}`} value={node.code} aria-label={`${node.name} - ${node.code}`}>
                   {node.name || node.code}
                   <Tag color={node.category === DISEASE_CATEGORY ? 'blue' : 'green'} style={{ marginLeft: 8 }}>
                     {node.category}
