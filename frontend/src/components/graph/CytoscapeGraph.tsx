@@ -134,8 +134,22 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
 
     return () => {
       if (cyRef.current) {
-        cyRef.current.destroy()
-        cyRef.current = null
+        try {
+          // 检查实例是否已经被销毁
+          if (!cyRef.current.destroyed()) {
+            // 先清理所有事件监听器
+            cyRef.current.off()
+            // 移除所有元素
+            cyRef.current.elements().remove()
+            // 最后销毁实例
+            cyRef.current.destroy()
+          }
+        } catch (err) {
+          // 如果销毁过程中出错，静默处理（可能已经部分销毁）
+          console.warn('Cytoscape销毁时出错（可忽略）:', err)
+        } finally {
+          cyRef.current = null
+        }
       }
     }
   }, [])
