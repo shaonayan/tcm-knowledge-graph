@@ -186,22 +186,8 @@ const VirtualizedCytoscapeGraph: React.FC<VirtualizedCytoscapeGraphProps> = ({
 
     return () => {
       if (cyRef.current) {
-        try {
-          // 检查实例是否已经被销毁
-          if (!cyRef.current.destroyed()) {
-            // 先清理所有事件监听器
-            cyRef.current.off()
-            // 移除所有元素
-            cyRef.current.elements().remove()
-            // 最后销毁实例
-            cyRef.current.destroy()
-          }
-        } catch (err) {
-          // 如果销毁过程中出错，静默处理（可能已经部分销毁）
-          console.warn('Cytoscape销毁时出错（可忽略）:', err)
-        } finally {
-          cyRef.current = null
-        }
+        cyRef.current.destroy()
+        cyRef.current = null
       }
     }
   }, [])
@@ -213,6 +199,7 @@ const VirtualizedCytoscapeGraph: React.FC<VirtualizedCytoscapeGraphProps> = ({
     const elements: any[] = []
 
     // 添加可见节点 - Neo4j风格
+    // 注意：Cytoscape 要求 id 必须是字符串类型
     visibleNodes.forEach(node => {
       const level = node.level || 1
       const size = level === 1 ? 60 : level === 2 ? 50 : level === 3 ? 45 : 40
@@ -220,7 +207,7 @@ const VirtualizedCytoscapeGraph: React.FC<VirtualizedCytoscapeGraphProps> = ({
 
       elements.push({
         data: {
-          id: node.id,
+          id: String(node.id),
           label: node.name || node.code,
           code: node.code,
           category: node.category,
@@ -234,12 +221,13 @@ const VirtualizedCytoscapeGraph: React.FC<VirtualizedCytoscapeGraphProps> = ({
     })
 
     // 添加可见边
+    // 注意：Cytoscape 要求 id、source、target 必须是字符串类型
     visibleEdges.forEach(edge => {
       elements.push({
         data: {
-          id: edge.id,
-          source: edge.source,
-          target: edge.target
+          id: String(edge.id),
+          source: String(edge.source),
+          target: String(edge.target)
         }
       })
     })
