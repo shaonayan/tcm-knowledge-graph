@@ -51,8 +51,10 @@ const RelationshipAnalyzer: React.FC<RelationshipAnalyzerProps> = ({
   const relationshipStrength = React.useMemo(() => {
     const nodeConnections = new Map<string, number>()
     edges.forEach(edge => {
-      nodeConnections.set(edge.source, (nodeConnections.get(edge.source) || 0) + 1)
-      nodeConnections.set(edge.target, (nodeConnections.get(edge.target) || 0) + 1)
+      const sourceStr = String(edge.source)
+      const targetStr = String(edge.target)
+      nodeConnections.set(sourceStr, (nodeConnections.get(sourceStr) || 0) + 1)
+      nodeConnections.set(targetStr, (nodeConnections.get(targetStr) || 0) + 1)
     })
     return nodeConnections
   }, [edges])
@@ -68,9 +70,10 @@ const RelationshipAnalyzer: React.FC<RelationshipAnalyzerProps> = ({
       title: '源节点',
       dataIndex: 'source',
       key: 'source',
-      render: (source: string) => {
-        const node = nodes.find(n => n.id === source)
-        return node ? (node.name || node.code) : source
+      render: (source: string | number) => {
+        const sourceStr = String(source)
+        const node = nodes.find(n => String(n.id) === sourceStr)
+        return node ? (node.name || node.code || sourceStr) : sourceStr
       }
     },
     {
@@ -85,17 +88,18 @@ const RelationshipAnalyzer: React.FC<RelationshipAnalyzerProps> = ({
       title: '目标节点',
       dataIndex: 'target',
       key: 'target',
-      render: (target: string) => {
-        const node = nodes.find(n => n.id === target)
-        return node ? (node.name || node.code) : target
+      render: (target: string | number) => {
+        const targetStr = String(target)
+        const node = nodes.find(n => String(n.id) === targetStr)
+        return node ? (node.name || node.code || targetStr) : targetStr
       }
     },
     {
       title: '强度',
       key: 'strength',
       render: (_: any, record: GraphEdge) => {
-        const sourceStrength = relationshipStrength.get(record.source) || 0
-        const targetStrength = relationshipStrength.get(record.target) || 0
+        const sourceStrength = relationshipStrength.get(String(record.source)) || 0
+        const targetStrength = relationshipStrength.get(String(record.target)) || 0
         const avgStrength = (sourceStrength + targetStrength) / 2
         return (
           <Tag color={getStrengthColor(avgStrength)}>
@@ -129,21 +133,21 @@ const RelationshipAnalyzer: React.FC<RelationshipAnalyzerProps> = ({
             title="总关系数"
             value={edges.length}
             prefix={<BarChartOutlined />}
-            valueStyle={{ color: '#ffffff' }}
+            valueStyle={{ color: '#1f2937' }}
           />
         </Col>
         <Col span={8}>
           <Statistic
             title="关系类型数"
             value={relationshipTypes.length}
-            valueStyle={{ color: '#ffffff' }}
+            valueStyle={{ color: '#1f2937' }}
           />
         </Col>
         <Col span={8}>
           <Statistic
             title="平均连接度"
             value={edges.length > 0 ? (edges.length * 2 / nodes.length).toFixed(2) : 0}
-            valueStyle={{ color: '#ffffff' }}
+            valueStyle={{ color: '#1f2937' }}
           />
         </Col>
       </Row>
@@ -165,7 +169,7 @@ const RelationshipAnalyzer: React.FC<RelationshipAnalyzerProps> = ({
       </div>
 
       <div style={{ marginBottom: 16 }}>
-        <h5 style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: 12 }}>关系类型分布</h5>
+        <h5 style={{ color: '#1f2937', marginBottom: 12 }}>关系类型分布</h5>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
           {relationshipTypes.map(({ type, count }) => (
             <Tag
@@ -191,7 +195,7 @@ const RelationshipAnalyzer: React.FC<RelationshipAnalyzerProps> = ({
       <Table
         columns={columns}
         dataSource={filteredEdges}
-        rowKey="id"
+        rowKey={(record, index) => record.id ? String(record.id) : `edge-${index}-${String(record.source)}-${String(record.target)}`}
         pagination={{ pageSize: 10 }}
         size="small"
         style={{ background: 'transparent' }}

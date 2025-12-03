@@ -8,9 +8,16 @@
     <meta name="keywords" content="少纳言,中医,知识图谱,病证分类,中医教学,Neo4j" />
     <title>少纳言中医知识图谱</title>
     <style>
-      /* 加载时的占位样式 */
+      /* 透明背景 - 让 React 组件控制背景 */
+      html, body {
+        background: transparent !important;
+        min-height: 100vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
+      }
       #root {
         min-height: 100vh;
+        background: transparent;
       }
       .loading-placeholder {
         display: flex;
@@ -18,15 +25,84 @@
         justify-content: center;
         height: 100vh;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-        color: #666;
+        color: #999;
+        background: #f8b4b4;
       }
     </style>
-    <!-- 确保 React 最先加载，必须在 vendor-init 之前 -->
-    <link rel="modulepreload" crossorigin href="/assets/vendor-react-CJ-w9Dgq.js">
-    <link rel="modulepreload" crossorigin href="/assets/vendor-react-router-D5GwTgLy.js">
-    <link rel="modulepreload" crossorigin href="/assets/vendor-react-query-sS8iHlbd.js">
-    <!-- 然后加载初始化脚本 -->
-    <link rel="modulepreload" crossorigin href="/assets/vendor-init-4Pq1yIoi.js">
+    <script>
+      // Lightweight boot-time error capture to avoid silent white screens
+      (() => {
+        const showBootError = (title, message, detail) => {
+          if (document.getElementById('boot-error-overlay')) return;
+          const overlay = document.createElement('div');
+          overlay.id = 'boot-error-overlay';
+          overlay.style.position = 'fixed';
+          overlay.style.inset = '0';
+          overlay.style.background = 'rgba(10, 12, 24, 0.92)';
+          overlay.style.color = '#fff';
+          overlay.style.zIndex = '9999';
+          overlay.style.display = 'flex';
+          overlay.style.alignItems = 'center';
+          overlay.style.justifyContent = 'center';
+          overlay.style.padding = '24px';
+          overlay.style.fontFamily = "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif";
+
+          const box = document.createElement('div');
+          box.style.maxWidth = '720px';
+          box.style.width = '100%';
+          box.style.background = 'rgba(255, 255, 255, 0.06)';
+          box.style.border = '1px solid rgba(255, 255, 255, 0.15)';
+          box.style.borderRadius = '16px';
+          box.style.boxShadow = '0 24px 64px rgba(0, 0, 0, 0.45)';
+          box.style.padding = '24px';
+
+          const titleEl = document.createElement('h2');
+          titleEl.textContent = title || '应用加载失败';
+          titleEl.style.margin = '0 0 12px';
+          titleEl.style.fontSize = '20px';
+
+          const msgEl = document.createElement('div');
+          msgEl.textContent = message || '发生未知错误';
+          msgEl.style.margin = '0 0 8px';
+          msgEl.style.opacity = '0.85';
+          msgEl.style.whiteSpace = 'pre-wrap';
+          msgEl.style.wordBreak = 'break-word';
+
+          const detailEl = document.createElement('pre');
+          detailEl.textContent = detail || '';
+          detailEl.style.margin = '12px 0 0';
+          detailEl.style.padding = '12px';
+          detailEl.style.background = 'rgba(0, 0, 0, 0.35)';
+          detailEl.style.borderRadius = '12px';
+          detailEl.style.fontSize = '12px';
+          detailEl.style.maxHeight = '220px';
+          detailEl.style.overflow = 'auto';
+
+          box.appendChild(titleEl);
+          box.appendChild(msgEl);
+          if (detail) box.appendChild(detailEl);
+          overlay.appendChild(box);
+          document.body.appendChild(overlay);
+        };
+
+        window.addEventListener('error', (event) => {
+          const msg = event.error?.message || event.message || '未知错误';
+          const stack = event.error?.stack || '';
+          console.error('[Boot Error]', event.error || event.message, event.error?.stack);
+          showBootError('前端加载异常', msg, stack);
+        });
+
+        window.addEventListener('unhandledrejection', (event) => {
+          const reason = event.reason;
+          const msg = typeof reason === 'string'
+            ? reason
+            : reason?.message || '未处理的 Promise 拒绝';
+          const detail = typeof reason === 'object' ? JSON.stringify(reason, null, 2) : '';
+          console.error('[Boot Promise Rejection]', reason);
+          showBootError('数据初始化异常', msg, detail);
+        });
+      })();
+    </script>
   </head>
   <body>
     <div id="root">

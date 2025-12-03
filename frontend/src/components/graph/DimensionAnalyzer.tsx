@@ -62,21 +62,21 @@ const DimensionAnalyzer: React.FC<DimensionAnalyzerProps> = ({
     return {
       backgroundColor: 'transparent',
       textStyle: {
-        color: '#ffffff'
+        color: '#1f2937'
       },
       tooltip: {
         trigger: 'item',
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        borderColor: 'rgba(255, 255, 255, 0.2)',
+        backgroundColor: '#ffffff',
+        borderColor: '#e5e7eb',
         textStyle: {
-          color: '#ffffff'
+          color: '#1f2937'
         }
       },
       legend: {
         orient: 'vertical',
         left: 'left',
         textStyle: {
-          color: '#ffffff'
+          color: '#1f2937'
         }
       },
       series: [
@@ -87,12 +87,12 @@ const DimensionAnalyzer: React.FC<DimensionAnalyzerProps> = ({
           avoidLabelOverlap: false,
           itemStyle: {
             borderRadius: 10,
-            borderColor: '#1a1a1a',
+            borderColor: '#ffffff',
             borderWidth: 2
           },
           label: {
             show: true,
-            color: '#ffffff',
+            color: '#1f2937',
             formatter: '{b}: {c} ({d}%)'
           },
           emphasis: {
@@ -119,44 +119,44 @@ const DimensionAnalyzer: React.FC<DimensionAnalyzerProps> = ({
     return {
       backgroundColor: 'transparent',
       textStyle: {
-        color: '#ffffff'
+        color: '#1f2937'
       },
       tooltip: {
         trigger: 'axis',
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        borderColor: 'rgba(255, 255, 255, 0.2)',
+        backgroundColor: '#ffffff',
+        borderColor: '#e5e7eb',
         textStyle: {
-          color: '#ffffff'
+          color: '#1f2937'
         }
       },
       xAxis: {
         type: 'category',
-        data: data.map((item: any) => 
+        data: data.map((item: any) =>
           selectedDimension === 'category' ? item.category : `L${item.level}`
         ),
         axisLabel: {
-          color: '#ffffff',
+          color: '#6b7280',
           rotate: selectedDimension === 'category' ? 45 : 0
         },
         axisLine: {
           lineStyle: {
-            color: 'rgba(255, 255, 255, 0.2)'
+            color: '#e5e7eb'
           }
         }
       },
       yAxis: {
         type: 'value',
         axisLabel: {
-          color: '#ffffff'
+          color: '#6b7280'
         },
         axisLine: {
           lineStyle: {
-            color: 'rgba(255, 255, 255, 0.2)'
+            color: '#e5e7eb'
           }
         },
         splitLine: {
           lineStyle: {
-            color: 'rgba(255, 255, 255, 0.1)'
+            color: '#f3f4f6'
           }
         }
       },
@@ -170,7 +170,7 @@ const DimensionAnalyzer: React.FC<DimensionAnalyzerProps> = ({
           label: {
             show: true,
             position: 'top',
-            color: '#ffffff'
+            color: '#1f2937'
           }
         }
       ]
@@ -204,21 +204,21 @@ const DimensionAnalyzer: React.FC<DimensionAnalyzerProps> = ({
             title="总节点数"
             value={totalNodes}
             prefix={<BarChartOutlined />}
-            valueStyle={{ color: '#ffffff' }}
+            valueStyle={{ color: '#1f2937' }}
           />
         </Col>
         <Col span={8}>
           <Statistic
             title="类别数"
             value={categoryCount}
-            valueStyle={{ color: '#ffffff' }}
+            valueStyle={{ color: '#1f2937' }}
           />
         </Col>
         <Col span={8}>
           <Statistic
             title="层级数"
             value={levelCount}
-            valueStyle={{ color: '#ffffff' }}
+            valueStyle={{ color: '#1f2937' }}
           />
         </Col>
       </Row>
@@ -236,8 +236,8 @@ const DimensionAnalyzer: React.FC<DimensionAnalyzerProps> = ({
 
       <Row gutter={16}>
         <Col span={12}>
-          <div style={{ background: 'rgba(0, 0, 0, 0.2)', borderRadius: 12, padding: 16 }}>
-            <h5 style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: 12 }}>
+          <div style={{ background: '#f9fafb', borderRadius: 12, padding: 16, border: '1px solid #e5e7eb' }}>
+            <h5 style={{ color: '#1f2937', marginBottom: 12 }}>
               {selectedDimension === 'category' ? '类别分布' : '层级分布'}（饼图）
             </h5>
             <ReactECharts
@@ -247,8 +247,8 @@ const DimensionAnalyzer: React.FC<DimensionAnalyzerProps> = ({
           </div>
         </Col>
         <Col span={12}>
-          <div style={{ background: 'rgba(0, 0, 0, 0.2)', borderRadius: 12, padding: 16 }}>
-            <h5 style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: 12 }}>
+          <div style={{ background: '#f9fafb', borderRadius: 12, padding: 16, border: '1px solid #e5e7eb' }}>
+            <h5 style={{ color: '#1f2937', marginBottom: 12 }}>
               {selectedDimension === 'category' ? '类别分布' : '层级分布'}（柱状图）
             </h5>
             <ReactECharts
@@ -260,7 +260,7 @@ const DimensionAnalyzer: React.FC<DimensionAnalyzerProps> = ({
       </Row>
 
       <div style={{ marginTop: 20 }}>
-        <h5 style={{ color: 'rgba(255, 255, 255, 0.9)', marginBottom: 12 }}>快速筛选</h5>
+        <h5 style={{ color: '#1f2937', marginBottom: 12 }}>快速筛选</h5>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
           {selectedDimension === 'category' 
             ? (dimensionData?.byCategory || []).map((item: any) => (

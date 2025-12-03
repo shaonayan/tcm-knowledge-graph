@@ -185,7 +185,7 @@ const ChatInterface: React.FC<ChatInterfaceProps> = ({
             />
             <div className="chat-message__content">
               <Spin size="small" />
-              <span style={{ marginLeft: '8px', color: 'rgba(255, 255, 255, 0.6)' }}>
+              <span style={{ marginLeft: '8px', color: '#6b7280' }}>
                 正在思考...
               </span>
             </div>

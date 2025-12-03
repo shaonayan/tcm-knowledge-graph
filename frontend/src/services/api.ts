@@ -338,6 +338,7 @@ export interface Triple {
   predicate: string
   type: string
   confidence?: number
+  source?: string
   properties?: Record<string, any>
 }
 

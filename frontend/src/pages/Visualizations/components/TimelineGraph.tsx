@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo, useRef } from 'react'
+﻿import React, { useState, useEffect, useMemo, useRef } from 'react'
 import { Card, Slider, Button, Space, Statistic, Select, Tooltip, Switch, Modal, Descriptions, Progress, Badge } from 'antd'
 import { PlayCircleOutlined, PauseCircleOutlined, ReloadOutlined, InfoCircleOutlined, DownloadOutlined, StepForwardOutlined, StepBackwardOutlined, ZoomInOutlined, ZoomOutOutlined, CompressOutlined, FullscreenOutlined, FullscreenExitOutlined, ArrowLeftOutlined } from '@ant-design/icons'
 // 确保 graphlib 和 lodash 在 dagre 之前初始化
@@ -210,12 +210,12 @@ export const TimelineGraph: React.FC<TimelineGraphProps> = ({ data }) => {
         name: 'dagre',
         nodeSep: 100,
         edgeSep: 40,
-        rankSep: 200, // 减小层级间距，让图形更扁平
+        rankSep: 200, // 减小层级间距，让图形更扁�?
         padding: 80,
         animate: true,
         animationDuration: 600,
         animationEasing: 'ease-out',
-      } as any, // 添加类型断言解决dagre布局属性类型问题
+      },
       minZoom: 0.1,
       maxZoom: 3,
       wheelSensitivity: 0.15,
