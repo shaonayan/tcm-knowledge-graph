@@ -882,8 +882,8 @@ const Explorer: React.FC = () => {
             <div style={{ flex: 1, position: 'relative', minHeight: '500px' }}>
               {viewMode === '3d' ? (
                 <Graph3D
-                  nodes={graphData.nodes}
-                  edges={graphData.edges}
+                  nodes={graphData.nodes || []}
+                  edges={graphData.edges || []}
                   onNodeClick={handleNodeClick}
                   onNodeHover={setHoveredNode}
                   searchQuery={searchQuery}
@@ -895,8 +895,8 @@ const Explorer: React.FC = () => {
               ) : viewMode === 'force' ? (
                 <ForceGraph
                   ref={forceGraphRef}
-                  nodes={graphData.nodes}
-                  edges={graphData.edges}
+                  nodes={graphData.nodes || []}
+                  edges={graphData.edges || []}
                   onNodeClick={handleNodeClick}
                   onNodeDoubleClick={handleNodeDoubleClick}
                   onNodeHover={setHoveredNode}
@@ -906,10 +906,10 @@ const Explorer: React.FC = () => {
                   codePrefixFilter={codePrefixFilter}
                   style={{ width: '100%', height: '100%', minHeight: '600px' }}
                 />
-              ) : graphData.nodes.length > 200 ? (
+              ) : (graphData.nodes?.length || 0) > 200 ? (
                 <VirtualizedCytoscapeGraph
-                  nodes={graphData.nodes}
-                  edges={graphData.edges}
+                  nodes={graphData.nodes || []}
+                  edges={graphData.edges || []}
                   layout={layout}
                   onNodeClick={handleNodeClick}
                   onNodeDoubleClick={handleNodeDoubleClick}
@@ -924,8 +924,8 @@ const Explorer: React.FC = () => {
               ) : (
                 <CytoscapeGraph
                   ref={graphRef}
-                  nodes={graphData.nodes}
-                  edges={graphData.edges}
+                  nodes={graphData.nodes || []}
+                  edges={graphData.edges || []}
                   layout={layout}
                   onNodeClick={handleNodeClick}
                   onNodeDoubleClick={handleNodeDoubleClick}
