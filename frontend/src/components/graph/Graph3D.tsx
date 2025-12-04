@@ -204,7 +204,7 @@ const GraphScene: React.FC<{
       <pointLight position={[10, 10, 10]} intensity={1} />
       <pointLight position={[-10, -10, -10]} intensity={0.5} />
 
-      {filteredEdges.map(edge => {
+      {filteredEdges.map((edge, index) => {
         const sourcePos = nodePositions.get(edge.source)
         const targetPos = nodePositions.get(edge.target)
         if (!sourcePos || !targetPos) return null
@@ -214,7 +214,7 @@ const GraphScene: React.FC<{
 
         return (
           <GraphEdge3D
-            key={edge.id}
+            key={`edge-${edge.source}-${edge.target}-${index}`}
             edge={edge}
             sourcePos={sourcePos}
             targetPos={targetPos}
@@ -224,13 +224,13 @@ const GraphScene: React.FC<{
         )
       })}
 
-      {filteredNodes.map(node => {
+      {filteredNodes.map((node, index) => {
         const position = nodePositions.get(node.id)
         if (!position) return null
 
         return (
           <GraphNode3D
-            key={node.id}
+            key={node.code || `node-${index}`}
             node={node}
             position={position}
             onClick={() => onNodeClick?.(node)}

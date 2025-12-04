@@ -1,5 +1,48 @@
-import neo4j, { Driver, Session } from 'neo4j-driver'
+import neo4j, { Driver, Session, Integer } from 'neo4j-driver'
 import { logger } from '@utils/logger.js'
+
+/**
+ * 将 Neo4j Integer 转换为普通 JavaScript 数字
+ */
+export function toNumber(value: any): number {
+  if (value === null || value === undefined) {
+    return 0
+  }
+  if (neo4j.isInt(value)) {
+    return value.toNumber()
+  }
+  if (typeof value === 'object' && 'low' in value && 'high' in value) {
+    // Neo4j Integer 对象格式 {low, high}
+    return Integer.fromValue(value).toNumber()
+  }
+  return Number(value) || 0
+}
+
+/**
+ * 递归处理对象中的 Neo4j Integer
+ */
+function convertNeo4jIntegers(obj: any): any {
+  if (obj === null || obj === undefined) {
+    return obj
+  }
+  if (neo4j.isInt(obj)) {
+    return obj.toNumber()
+  }
+  if (typeof obj === 'object' && 'low' in obj && 'high' in obj) {
+    return Integer.fromValue(obj).toNumber()
+  }
+  if (Array.isArray(obj)) {
+    return obj.map(item => convertNeo4jIntegers(item))
+  }
+  if (typeof obj === 'object') {
+    const result: any = {}
+    for (const key in obj) {
+      result[key] = convertNeo4jIntegers(obj[key])
+    }
+    return result
+  }
+  return obj
+}
 
 class Neo4jService {
   private driver: Driver | null = null
@@ -530,17 +573,17 @@ class Neo4jService {
       const result = await session.run(query, params)
       const record = result.records[0]
       
-      // 去重节点
+      // 去重节点并转换 Neo4j Integer
       const nodesMap = new Map()
       record.get('nodes').forEach((node: any) => {
         if (!nodesMap.has(node.id)) {
-          nodesMap.set(node.id, node)
+          nodesMap.set(node.id, convertNeo4jIntegers(node))
         }
       })
-      
+
       return {
         nodes: Array.from(nodesMap.values()),
-        edges: record.get('edges')
+        edges: convertNeo4jIntegers(record.get('edges'))
       }
     } catch (error) {
       logger.error('获取二元图谱失败:', error)
@@ -586,18 +629,18 @@ class Neo4jService {
       `, { limit: neo4j.int(limit) })
       
       const record = result.records[0]
-      
-      // 去重节点
+
+      // 去重节点并转换 Neo4j Integer
       const nodesMap = new Map()
       record.get('nodes').forEach((node: any) => {
         if (!nodesMap.has(node.id)) {
-          nodesMap.set(node.id, node)
+          nodesMap.set(node.id, convertNeo4jIntegers(node))
         }
       })
-      
+
       return {
         nodes: Array.from(nodesMap.values()),
-        triples: record.get('triples')
+        triples: convertNeo4jIntegers(record.get('triples'))
       }
     } catch (error) {
       logger.error('获取三元图谱失败:', error)

@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useImperativeHandle, forwardRef, useCallback 
 import * as d3 from 'd3'
 import { GraphNode, GraphEdge } from '@/services/api'
 
+// 扩展 GraphNode 类型以包含 D3 力导向图所需的属性
+type SimulationNode = GraphNode & d3.SimulationNodeDatum
+
 export interface ForceGraphRef {
   zoomIn: () => void
   zoomOut: () => void
@@ -47,6 +50,7 @@ const ForceGraph = forwardRef<ForceGraphRef, ForceGraphProps>(({
   const zoomRef = useRef<d3.ZoomBehavior<SVGSVGElement, unknown> | null>(null)
   const transformRef = useRef<d3.ZoomTransform>(d3.zoomIdentity)
   const highlightedNodesRef = useRef<Set<string>>(new Set())
+  const updateGraphRef = useRef<(() => void) | null>(null)
 
   // 节点颜色映射
   const getNodeColor = (category: string) => {
@@ -62,6 +66,89 @@ const ForceGraph = forwardRef<ForceGraphRef, ForceGraphProps>(({
     if (level === 3) return 8
     return 6
   }
+
+  // 获取容器尺寸
+  const getContainerSize = useCallback(() => {
+    const container = containerRef.current
+    return {
+      width: width || container?.clientWidth || 800,
+      height: height || container?.clientHeight || 600
+    }
+  }, [width, height])
+
+  // 暴露方法给父组件
+  useImperativeHandle(ref, () => ({
+    zoomIn: () => {
+      if (zoomRef.current && svgRef.current) {
+        transformRef.current = transformRef.current.scale(1.2)
+        d3.select(svgRef.current).call(zoomRef.current.transform, transformRef.current)
+      }
+    },
+    zoomOut: () => {
+      if (zoomRef.current && svgRef.current) {
+        transformRef.current = transformRef.current.scale(0.8)
+        d3.select(svgRef.current).call(zoomRef.current.transform, transformRef.current)
+      }
+    },
+    resetZoom: () => {
+      if (zoomRef.current && svgRef.current) {
+        transformRef.current = d3.zoomIdentity
+        d3.select(svgRef.current).call(zoomRef.current.transform, transformRef.current)
+      }
+    },
+    fit: () => {
+      if (svgRef.current) {
+        const gElement = d3.select(svgRef.current).select('g')
+        if (gElement.node()) {
+          const { width: containerWidth, height: containerHeight } = getContainerSize()
+          const bounds = (gElement.node() as SVGGElement).getBBox()
+          const fullWidth = containerWidth
+          const fullHeight = containerHeight
+          const bWidth = bounds.width
+          const bHeight = bounds.height
+          const midX = bounds.x + bWidth / 2
+          const midY = bounds.y + bHeight / 2
+          const scale = 0.9 / Math.max(bWidth / fullWidth, bHeight / fullHeight)
+          const translate = [fullWidth / 2 - scale * midX, fullHeight / 2 - scale * midY]
+
+          transformRef.current = d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
+          d3.select(svgRef.current).call(zoomRef.current!.transform, transformRef.current)
+        }
+      }
+    },
+    exportPNG: (filename = 'graph.png') => {
+      if (svgRef.current) {
+        const svgData = new XMLSerializer().serializeToString(svgRef.current)
+        const canvas = document.createElement('canvas')
+        const ctx = canvas.getContext('2d')
+        const img = new Image()
+        img.onload = () => {
+          canvas.width = img.width
+          canvas.height = img.height
+          ctx?.drawImage(img, 0, 0)
+          canvas.toBlob((blob) => {
+            if (blob) {
+              const url = URL.createObjectURL(blob)
+              const link = document.createElement('a')
+              link.download = filename
+              link.href = url
+              link.click()
+              URL.revokeObjectURL(url)
+            }
+          })
+        }
+        img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)))
+      }
+    },
+    highlightPath: (nodeIds: string[]) => {
+      highlightedNodesRef.current = new Set(nodeIds)
+      if (updateGraphRef.current) updateGraphRef.current()
+    },
+    clearHighlight: () => {
+      highlightedNodesRef.current.clear()
+      if (updateGraphRef.current) updateGraphRef.current()
+    }
+  }), [getContainerSize])
 
   // 初始化D3力导向图
   useEffect(() => {
@@ -170,7 +257,7 @@ const ForceGraph = forwardRef<ForceGraphRef, ForceGraphProps>(({
         .data(filteredNodes)
         .enter().append('g')
         .attr('class', 'node')
-        .call(d3.drag<SVGGElement, GraphNode>()
+        .call(d3.drag<SVGGElement, SimulationNode>()
           .on('start', dragstarted)
           .on('drag', dragged)
           .on('end', dragended))
@@ -265,18 +352,18 @@ const ForceGraph = forwardRef<ForceGraphRef, ForceGraphProps>(({
     }
 
     // 拖拽函数
-    function dragstarted(event: d3.D3DragEvent<SVGGElement, GraphNode, GraphNode>) {
+    function dragstarted(event: d3.D3DragEvent<SVGGElement, SimulationNode, SimulationNode>) {
       if (!event.active && simulationRef.current) simulationRef.current.alphaTarget(0.3).restart()
       event.subject.fx = event.subject.x
       event.subject.fy = event.subject.y
     }
 
-    function dragged(event: d3.D3DragEvent<SVGGElement, GraphNode, GraphNode>) {
+    function dragged(event: d3.D3DragEvent<SVGGElement, SimulationNode, SimulationNode>) {
       event.subject.fx = event.x
       event.subject.fy = event.y
     }
 
-    function dragended(event: d3.D3DragEvent<SVGGElement, GraphNode, GraphNode>) {
+    function dragended(event: d3.D3DragEvent<SVGGElement, SimulationNode, SimulationNode>) {
       if (!event.active && simulationRef.current) simulationRef.current.alphaTarget(0)
       event.subject.fx = null
       event.subject.fy = null
@@ -285,78 +372,8 @@ const ForceGraph = forwardRef<ForceGraphRef, ForceGraphProps>(({
     // 初始更新
     updateGraph()
 
-    // 暴露方法
-    useImperativeHandle(ref, () => ({
-      zoomIn: () => {
-        if (zoomRef.current && svgRef.current) {
-          transformRef.current = transformRef.current.scale(1.2)
-          d3.select(svgRef.current).call(zoomRef.current.transform, transformRef.current)
-        }
-      },
-      zoomOut: () => {
-        if (zoomRef.current && svgRef.current) {
-          transformRef.current = transformRef.current.scale(0.8)
-          d3.select(svgRef.current).call(zoomRef.current.transform, transformRef.current)
-        }
-      },
-      resetZoom: () => {
-        if (zoomRef.current && svgRef.current) {
-          transformRef.current = d3.zoomIdentity
-          d3.select(svgRef.current).call(zoomRef.current.transform, transformRef.current)
-        }
-      },
-      fit: () => {
-        if (svgRef.current) {
-          const gElement = d3.select(svgRef.current).select('g')
-          if (gElement.node()) {
-            const bounds = (gElement.node() as SVGGElement).getBBox()
-            const fullWidth = containerWidth
-            const fullHeight = containerHeight
-            const width = bounds.width
-            const height = bounds.height
-            const midX = bounds.x + width / 2
-            const midY = bounds.y + height / 2
-            const scale = 0.9 / Math.max(width / fullWidth, height / fullHeight)
-            const translate = [fullWidth / 2 - scale * midX, fullHeight / 2 - scale * midY]
-
-            transformRef.current = d3.zoomIdentity.translate(translate[0], translate[1]).scale(scale)
-            d3.select(svgRef.current).call(zoomRef.current!.transform, transformRef.current)
-          }
-        }
-      },
-      exportPNG: (filename = 'graph.png') => {
-        if (svgRef.current) {
-          const svgData = new XMLSerializer().serializeToString(svgRef.current)
-          const canvas = document.createElement('canvas')
-          const ctx = canvas.getContext('2d')
-          const img = new Image()
-          img.onload = () => {
-            canvas.width = img.width
-            canvas.height = img.height
-            ctx?.drawImage(img, 0, 0)
-            canvas.toBlob((blob) => {
-              if (blob) {
-                const url = URL.createObjectURL(blob)
-                const link = document.createElement('a')
-                link.download = filename
-                link.href = url
-                link.click()
-                URL.revokeObjectURL(url)
-              }
-            })
-          }
-          img.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)))
-        }
-      },
-      highlightPath: (nodeIds: string[]) => {
-        highlightedNodesRef.current = new Set(nodeIds)
-        updateGraph()
-      },
-      clearHighlight: () => {
-        highlightedNodesRef.current.clear()
-        updateGraph()
-      }
-    }), [nodes, edges, searchQuery, categoryFilter, levelFilter, codePrefixFilter])
+    // 保存 updateGraph 引用供外部调用
+    updateGraphRef.current = updateGraph
 
     // 响应数据变化
     updateGraph()
