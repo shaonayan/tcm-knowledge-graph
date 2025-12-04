@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公网部署诊断工具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        .content {
+            padding: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #667eea;
+        }
+        .section h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+        .input-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        .result.success {
+            background: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+            display: block;
+        }
+        .result.error {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            display: block;
+        }
+        .result.warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            display: block;
+        }
+        .result.info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            color: #0c5460;
+            display: block;
+        }
+        .check-item {
+            padding: 10px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .check-item .icon {
+            font-size: 20px;
+        }
+        .check-item .text {
+            flex: 1;
+        }
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin-top: 10px;
+        }
+        .step {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+        .step h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        .step ol {
+            margin-left: 20px;
+        }
+        .step li {
+            margin: 5px 0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 公网部署诊断工具</h1>
+            <p>帮助您快速诊断和修复公网部署问题</p>
+        </div>
+        <div class="content">
+            <!-- 步骤1：检查前端 -->
+            <div class="section">
+                <h2>步骤1：检查前端部署</h2>
+                <div class="input-group">
+                    <label>前端地址（Vercel地址）：</label>
+                    <input type="text" id="frontendUrl" placeholder="https://your-project.vercel.app">
+                </div>
+                <button class="btn" onclick="checkFrontend()">检查前端</button>
+                <div id="frontendResult" class="result"></div>
+            </div>
+
+            <!-- 步骤2：检查后端 -->
+            <div class="section">
+                <h2>步骤2：检查后端部署</h2>
+                <div class="input-group">
+                    <label>后端地址（Railway地址）：</label>
+                    <input type="text" id="backendUrl" placeholder="https://your-project.up.railway.app">
+                </div>
+                <button class="btn" onclick="checkBackend()">检查后端</button>
+                <div id="backendResult" class="result"></div>
+            </div>
+
+            <!-- 步骤3：检查API连接 -->
+            <div class="section">
+                <h2>步骤3：检查API连接</h2>
+                <div class="input-group">
+                    <label>API基础地址：</label>
+                    <input type="text" id="apiUrl" placeholder="https://your-backend.up.railway.app/api">
+                </div>
+                <button class="btn" onclick="checkAPI()">检查API</button>
+                <div id="apiResult" class="result"></div>
+            </div>
+
+            <!-- 步骤4：环境变量配置指南 -->
+            <div class="section">
+                <h2>步骤4：环境变量配置指南</h2>
+                <div id="envGuide"></div>
+                <button class="btn" onclick="generateEnvGuide()">生成配置指南</button>
+            </div>
+
+            <!-- 常见问题 -->
+            <div class="section">
+                <h2>📚 常见问题解决方案</h2>
+                <div class="step">
+                    <h3>问题1：前端显示空白页面</h3>
+                    <ol>
+                        <li>检查Vercel部署日志，确认构建成功</li>
+                        <li>确认 <code>vercel.json</code> 配置正确</li>
+                        <li>清除浏览器缓存后重试</li>
+                    </ol>
+                </div>
+                <div class="step">
+                    <h3>问题2：API请求返回404</h3>
+                    <ol>
+                        <li>确认 <code>VITE_API_URL</code> 环境变量已设置</li>
+                        <li>确认环境变量值格式正确（以 <code>/api</code> 结尾）</li>
+                        <li><strong>重要：</strong>环境变量更改后必须重新部署前端</li>
+                    </ol>
+                </div>
+                <div class="step">
+                    <h3>问题3：CORS错误</h3>
+                    <ol>
+                        <li>在后端添加 <code>FRONTEND_URL</code> 环境变量</li>
+                        <li>确认后端CORS配置包含前端地址</li>
+                        <li>重新部署后端服务</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function checkFrontend() {
+            const url = document.getElementById('frontendUrl').value.trim();
+            const resultDiv = document.getElementById('frontendResult');
+            
+            if (!url) {
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = '❌ 请输入前端地址';
+                return;
+            }
+
+            resultDiv.className = 'result info';
+            resultDiv.innerHTML = '⏳ 正在检查前端...';
+
+            try {
+                const response = await fetch(url, { method: 'HEAD', mode: 'no-cors' });
+                resultDiv.className = 'result success';
+                resultDiv.innerHTML = `
+                    ✅ 前端可以访问<br>
+                    <strong>地址：</strong> ${url}<br>
+                    <strong>下一步：</strong> 检查环境变量配置
+                `;
+            } catch (error) {
+                // 由于CORS限制，即使成功也可能报错
+                resultDiv.className = 'result warning';
+                resultDiv.innerHTML = `
+                    ⚠️ 无法直接检测（CORS限制）<br>
+                    <strong>建议：</strong> 在浏览器中手动访问 ${url}<br>
+                    <strong>检查：</strong> 按F12打开开发者工具，查看Console标签
+                `;
+            }
+        }
+
+        async function checkBackend() {
+            const url = document.getElementById('backendUrl').value.trim();
+            const resultDiv = document.getElementById('backendResult');
+            
+            if (!url) {
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = '❌ 请输入后端地址';
+                return;
+            }
+
+            resultDiv.className = 'result info';
+            resultDiv.innerHTML = '⏳ 正在检查后端...';
+
+            try {
+                const healthUrl = url.endsWith('/') ? url + 'health' : url + '/health';
+                const response = await fetch(healthUrl);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.className = 'result success';
+                    resultDiv.innerHTML = `
+                        ✅ 后端服务正常运行<br>
+                        <strong>状态：</strong> ${data.status || 'OK'}<br>
+                        <strong>数据库：</strong> ${data.database || '未知'}<br>
+                        <strong>环境：</strong> ${data.environment || '未知'}
+                    `;
+                } else {
+                    resultDiv.className = 'result warning';
+                    resultDiv.innerHTML = `
+                        ⚠️ 后端响应异常<br>
+                        <strong>状态码：</strong> ${response.status}<br>
+                        <strong>建议：</strong> 检查后端部署日志
+                    `;
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `
+                    ❌ 无法连接到后端<br>
+                    <strong>错误：</strong> ${error.message}<br>
+                    <strong>可能原因：</strong><br>
+                    • 后端服务未运行<br>
+                    • 后端地址错误<br>
+                    • 网络连接问题
+                `;
+            }
+        }
+
+        async function checkAPI() {
+            const url = document.getElementById('apiUrl').value.trim();
+            const resultDiv = document.getElementById('apiResult');
+            
+            if (!url) {
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = '❌ 请输入API地址';
+                return;
+            }
+
+            resultDiv.className = 'result info';
+            resultDiv.innerHTML = '⏳ 正在检查API连接...';
+
+            try {
+                const statsUrl = url.endsWith('/') ? url + 'stats' : url + '/stats';
+                const response = await fetch(statsUrl);
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    resultDiv.className = 'result success';
+                    resultDiv.innerHTML = `
+                        ✅ API连接成功<br>
+                        <strong>API地址：</strong> ${url}<br>
+                        <strong>响应：</strong> ${data.success ? '成功' : '失败'}<br>
+                        <strong>下一步：</strong> 在前端配置此API地址
+                    `;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.innerHTML = `
+                        ❌ API请求失败<br>
+                        <strong>状态码：</strong> ${response.status}<br>
+                        <strong>可能原因：</strong><br>
+                        • API路径错误<br>
+                        • 后端路由配置问题<br>
+                        • 数据库未连接
+                    `;
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.innerHTML = `
+                    ❌ 无法连接到API<br>
+                    <strong>错误：</strong> ${error.message}<br>
+                    <strong>检查清单：</strong><br>
+                    • 确认后端已部署并运行<br>
+                    • 确认API地址格式正确（以 /api 结尾）<br>
+                    • 检查CORS配置
+                `;
+            }
+        }
+
+        function generateEnvGuide() {
+            const frontendUrl = document.getElementById('frontendUrl').value.trim();
+            const backendUrl = document.getElementById('backendUrl').value.trim();
+            const guideDiv = document.getElementById('envGuide');
+
+            if (!frontendUrl || !backendUrl) {
+                guideDiv.innerHTML = '<div class="result error">❌ 请先填写前端和后端地址</div>';
+                return;
+            }
+
+            const apiUrl = backendUrl.endsWith('/') ? backendUrl + 'api' : backendUrl + '/api';
+
+            guideDiv.innerHTML = `
+                <div class="result info">
+                    <h3>📝 Vercel环境变量配置</h3>
+                    <div class="step">
+                        <strong>步骤：</strong>
+                        <ol>
+                            <li>访问 <a href="https://vercel.com/dashboard" target="_blank">Vercel Dashboard</a></li>
+                            <li>选择您的前端项目</li>
+                            <li>进入 Settings → Environment Variables</li>
+                            <li>添加以下环境变量：</li>
+                        </ol>
+                    </div>
+                    <div class="code-block">
+Name: VITE_API_URL
+Value: ${apiUrl}
+                    </div>
+                    <div class="step">
+                        <strong>重要提示：</strong>
+                        <ul>
+                            <li>变量名必须是 <code>VITE_API_URL</code>（注意VITE前缀）</li>
+                            <li>值必须以 <code>/api</code> 结尾</li>
+                            <li>必须选择所有环境（Production, Preview, Development）</li>
+                            <li><strong>保存后必须重新部署前端才能生效！</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="result info" style="margin-top: 15px;">
+                    <h3>📝 Railway环境变量配置</h3>
+                    <div class="step">
+                        <strong>步骤：</strong>
+                        <ol>
+                            <li>访问 <a href="https://railway.app/dashboard" target="_blank">Railway Dashboard</a></li>
+                            <li>选择您的后端项目</li>
+                            <li>进入 Variables 标签</li>
+                            <li>添加或更新以下环境变量：</li>
+                        </ol>
+                    </div>
+                    <div class="code-block">
+FRONTEND_URL=${frontendUrl}
+CORS_ORIGIN=${frontendUrl}
+                    </div>
+                    <div class="step">
+                        <strong>提示：</strong>
+                        <ul>
+                            <li>Railway会自动检测环境变量更改并重新部署</li>
+                            <li>确保 <code>FRONTEND_URL</code> 与您的前端地址完全一致</li>
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
+

@@ -333,6 +333,10 @@ const DataMetrics: React.FC<DataMetricsProps> = ({ nodes, edges }) => {
         <Col span={12}>
           <div style={{ background: '#f9fafb', borderRadius: 12, padding: 16, border: '1px solid #e5e7eb' }}>
             <h5 style={{ color: '#1f2937', marginBottom: 12 }}>层级分布</h5>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ecf3fee3d2b50893fcef4d715df41038311736e
             {metrics && (
               <ReactECharts
                 key="distribution-chart"
@@ -342,11 +346,24 @@ const DataMetrics: React.FC<DataMetricsProps> = ({ nodes, edges }) => {
                 lazyUpdate={true}
               />
             )}
+<<<<<<< HEAD
+=======
+=======
+            <ReactECharts
+              option={getDistributionChartOption()}
+              style={{ height: '250px' }}
+            />
+>>>>>>> bea0ea5744b991c5f0cc33cf84294f798942fdb5
+>>>>>>> 1ecf3fee3d2b50893fcef4d715df41038311736e
           </div>
         </Col>
         <Col span={12}>
           <div style={{ background: '#f9fafb', borderRadius: 12, padding: 16, border: '1px solid #e5e7eb' }}>
             <h5 style={{ color: '#1f2937', marginBottom: 12 }}>连接度分布</h5>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1ecf3fee3d2b50893fcef4d715df41038311736e
             {metrics && (
               <ReactECharts
                 key="connection-chart"
@@ -356,6 +373,15 @@ const DataMetrics: React.FC<DataMetricsProps> = ({ nodes, edges }) => {
                 lazyUpdate={true}
               />
             )}
+<<<<<<< HEAD
+=======
+=======
+            <ReactECharts
+              option={getConnectionDistributionOption()}
+              style={{ height: '250px' }}
+            />
+>>>>>>> bea0ea5744b991c5f0cc33cf84294f798942fdb5
+>>>>>>> 1ecf3fee3d2b50893fcef4d715df41038311736e
           </div>
         </Col>
       </Row>
