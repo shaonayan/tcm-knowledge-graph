@@ -141,5 +141,30 @@ router.get('/ternary', async (req: Request, res: Response) => {
   }
 })
 
+/**
+ * 获取链式关系知识图谱（疾病→穴位→经络→症状→方剂→中药材）
+ */
+router.get('/chain', async (req: Request, res: Response) => {
+  try {
+    const diseaseCode = req.query.diseaseCode as string | undefined
+    const limit = parseInt(req.query.limit as string) || 200
+    const data = await neo4jService.getChainGraph(diseaseCode, limit)
+    return res.json({
+      success: true,
+      nodes: data.nodes,
+      edges: data.edges,
+      nodeCount: data.nodeCount,
+      edgeCount: data.edgeCount
+    })
+  } catch (error) {
+    logger.error('获取链式关系图谱失败:', error)
+    return res.status(500).json({
+      success: false,
+      error: '获取链式关系图谱失败',
+      message: error instanceof Error ? error.message : 'Unknown error'
+    })
+  }
+})
+
 export default router
 

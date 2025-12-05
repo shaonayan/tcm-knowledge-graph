@@ -143,42 +143,22 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
 
     return () => {
       if (cyRef.current) {
-        try {
-          // 检查实例是否已经被销毁
-          if (!cyRef.current.destroyed()) {
-            // 先清理所有事件监听器
-            cyRef.current.off()
-            // 移除所有元素
-            cyRef.current.elements().remove()
-            // 最后销毁实例
-            cyRef.current.destroy()
-          }
-        } catch (err) {
-          // 如果销毁过程中出错，静默处理（可能已经部分销毁）
-          console.warn('Cytoscape销毁时出错（可忽略）:', err)
-        } finally {
-          cyRef.current = null
-        }
+        cyRef.current.destroy()
+        cyRef.current = null
       }
     }
   }, [])
 
   useEffect(() => {
     console.log('Cytoscape实例状态:', cyRef.current ? '已初始化' : '未初始化')
-    console.log('传入的节点数:', nodes?.length || 0)
-    console.log('传入的边数:', edges?.length || 0)
+    console.log('传入的节点数:', nodes.length)
+    console.log('传入的边数:', edges.length)
     console.log('布局:', layout)
     console.log('搜索查询:', searchQuery)
     console.log('筛选条件:', { categoryFilter, levelFilter, codePrefixFilter })
     
     if (!cyRef.current) {
       console.error('❌ Cytoscape实例未准备好')
-      return
-    }
-
-    // 检查 nodes 和 edges 是否为 null 或 undefined
-    if (!nodes || !edges) {
-      console.warn('⚠️ 数据未准备好，nodes 或 edges 为 null/undefined')
       return
     }
 
@@ -577,12 +557,6 @@ const CytoscapeGraph = forwardRef<CytoscapeGraphRef, CytoscapeGraphProps>(({
       if (timeoutIdRef.current) {
         clearTimeout(timeoutIdRef.current)
         timeoutIdRef.current = null
-      }
-      
-      // 检查 Cytoscape 实例是否仍然有效
-      if (!cyRef.current || cyRef.current.destroyed()) {
-        console.warn('Cytoscape 实例已销毁，跳过节点动画')
-        return
       }
       
       // 布局完成后，动画显示新节点（弹动效果：从中心弹入）

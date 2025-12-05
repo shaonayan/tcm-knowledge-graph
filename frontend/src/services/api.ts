@@ -368,6 +368,32 @@ export async function getTernaryGraph(limit: number = 1000): Promise<TernaryGrap
   }
 }
 
+/**
+ * 获取链式关系知识图谱（疾病→穴位→经络→症状→方剂→中药材）
+ */
+export async function getChainGraph(diseaseCode?: string, limit: number = 200): Promise<GraphData> {
+  try {
+    let url = `${API_BASE_URL}/graph/chain?limit=${limit}`
+    if (diseaseCode) {
+      url += `&diseaseCode=${encodeURIComponent(diseaseCode)}`
+    }
+    const response = await fetchWithRetry(url)
+    const data = await response.json()
+    if (data.success) {
+      return {
+        nodes: data.nodes || [],
+        edges: data.edges || [],
+        nodeCount: data.nodeCount || 0,
+        edgeCount: data.edgeCount || 0
+      }
+    }
+    throw new Error(data.error || '获取链式关系图谱失败')
+  } catch (error) {
+    console.error('获取链式关系图谱失败:', error)
+    throw error
+  }
+}
+
 // 获取图谱数据
 export const getGraphData = async (
   rootCode?: string,

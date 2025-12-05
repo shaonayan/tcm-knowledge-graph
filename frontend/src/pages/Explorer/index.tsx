@@ -26,7 +26,7 @@ import {
   ClearOutlined,
   DownOutlined
 } from '@ant-design/icons'
-import { expandNode, getRootNodes, searchNodes, getUnaryGraph, getBinaryGraph, getTernaryGraph, type GraphData, type RootNode, type GraphNode, type TernaryGraphData } from '@/services/api'
+import { expandNode, getRootNodes, searchNodes, getUnaryGraph, getBinaryGraph, getTernaryGraph, getChainGraph, type GraphData, type RootNode, type GraphNode, type TernaryGraphData } from '@/services/api'
 import { LoadingSpinner } from '@/components/common/Loading'
 import CytoscapeGraph, { type CytoscapeGraphRef } from '@/components/graph/CytoscapeGraph'
 import VirtualizedCytoscapeGraph from '@/components/graph/VirtualizedCytoscapeGraph'
@@ -43,18 +43,20 @@ import { getModulePreferences, saveModulePreferences } from '@/utils/preferences
 
 const { Option } = Select
 
-type GraphType = 'unary' | 'binary' | 'ternary'
+type GraphType = 'unary' | 'binary' | 'ternary' | 'chain'
 
 const GRAPH_TYPE_OPTIONS: Array<{ key: GraphType; label: string; hint: string }> = [
   { key: 'unary', label: '一元图谱', hint: '实体集合速览' },
   { key: 'binary', label: '二元图谱', hint: '实体 + 关系' },
-  { key: 'ternary', label: '三元图谱', hint: '实体 + 关系 + 属性' }
+  { key: 'ternary', label: '三元图谱', hint: '实体 + 关系 + 属性' },
+  { key: 'chain', label: '链式关系图谱', hint: '疾病→穴位→经络→症状→方剂→中药材' }
 ]
 
 const GRAPH_TYPE_LABELS: Record<GraphType, string> = {
   unary: '一元图谱',
   binary: '二元图谱',
-  ternary: '三元图谱'
+  ternary: '三元图谱',
+  chain: '链式关系图谱'
 }
 
 const Explorer: React.FC = () => {
@@ -83,23 +85,13 @@ const Explorer: React.FC = () => {
   const [highlightedPath, setHighlightedPath] = useState<string[]>([])
   const graphRef = useRef<CytoscapeGraphRef>(null)
   const forceGraphRef = useRef<ForceGraphRef>(null)
-  const isMountedRef = useRef(true)
-
-  // 组件卸载时标记
-  useEffect(() => {
-    return () => {
-      isMountedRef.current = false
-    }
-  }, [])
 
   // 加载根节点列表
   useEffect(() => {
     const fetchRootNodes = async () => {
       try {
         const roots = await getRootNodes()
-        if (isMountedRef.current) {
-          setRootNodes(roots)
-        }
+        setRootNodes(roots)
       } catch (err) {
         console.error('加载根节点失败:', err)
       }
@@ -127,7 +119,7 @@ const Explorer: React.FC = () => {
   }), [graphType, handleGraphTypeChange])
 
   useEffect(() => {
-    if (graphType === 'binary' && !rootCode && rootNodes.length > 0) {
+    if ((graphType === 'binary' || graphType === 'chain') && !rootCode && rootNodes.length > 0) {
       const preferred = explorerPrefs.defaultRootCode
         ? rootNodes.find(node => node.code === explorerPrefs.defaultRootCode)
         : undefined
@@ -139,10 +131,6 @@ const Explorer: React.FC = () => {
   // 加载图谱数据
   const loadGraph = useCallback(async (code?: string) => {
     console.log('📥 开始加载图谱数据', { graphType, code, depth, limit })
-    
-    // 检查组件是否已卸载
-    if (!isMountedRef.current) return
-    
     setLoading(true)
     setError(null)
     setSelectedNode(null)
@@ -150,39 +138,36 @@ const Explorer: React.FC = () => {
     try {
       if (graphType === 'unary') {
         const nodes = await getUnaryGraph(limit * 10)
-        if (isMountedRef.current) {
-          setUnaryNodes(nodes)
-          setGraphData(null)
-          setTernaryData(null)
-          message.success(`加载成功：${nodes.length} 个实体`)
-        }
+        setUnaryNodes(nodes)
+        setGraphData(null)
+        setTernaryData(null)
+        message.success(`加载成功：${nodes.length} 个实体`)
       } else if (graphType === 'ternary') {
         const data = await getTernaryGraph(limit * 10)
-        if (isMountedRef.current) {
-          setTernaryData(data)
-          setGraphData(null)
-          setUnaryNodes([])
-          message.success(`加载成功：${data.nodeCount} 个节点，${data.tripleCount} 个三元组`)
-        }
+        setTernaryData(data)
+        setGraphData(null)
+        setUnaryNodes([])
+        message.success(`加载成功：${data.nodeCount} 个节点，${data.tripleCount} 个三元组`)
+      } else if (graphType === 'chain') {
+        const data = await getChainGraph(code, limit)
+        setGraphData(data)
+        setUnaryNodes([])
+        setTernaryData(null)
+        message.success(`加载成功：${data.nodeCount} 个节点，${data.edgeCount} 条边`)
       } else {
         const data = await getBinaryGraph(code, depth, limit)
-        if (isMountedRef.current) {
-          setGraphData(data)
-          setUnaryNodes([])
-          setTernaryData(null)
-          message.success(`加载成功：${data.nodeCount} 个节点，${data.edgeCount} 条边`)
-        }
+        setGraphData(data)
+        setUnaryNodes([])
+        setTernaryData(null)
+        message.success(`加载成功：${data.nodeCount} 个节点，${data.edgeCount} 条边`)
       }
     } catch (err) {
-      if (!isMountedRef.current) return
       const errorMessage = err instanceof Error ? err.message : '加载图谱数据失败'
       console.error('❌ 图谱数据加载失败:', err)
       setError(errorMessage)
       message.error(errorMessage)
     } finally {
-      if (isMountedRef.current) {
-        setLoading(false)
-      }
+      setLoading(false)
     }
   }, [depth, limit, graphType])
 
@@ -198,15 +183,11 @@ const Explorer: React.FC = () => {
 
   // 展开节点
   const expandNodeData = useCallback(async (node: GraphNode) => {
-    if (!isMountedRef.current) return
-    
     setLoading(true)
     setError(null)
 
     try {
       const data = await expandNode(node.code, 1, 50)
-      
-      if (!isMountedRef.current) return
       
       // 合并到现有图谱数据
       if (graphData) {
@@ -229,15 +210,12 @@ const Explorer: React.FC = () => {
         message.success(`加载成功：${data.nodeCount} 个节点`)
       }
     } catch (err) {
-      if (!isMountedRef.current) return
       const errorMessage = err instanceof Error ? err.message : '展开节点失败'
       setError(errorMessage)
       message.error(errorMessage)
       console.error('展开节点失败:', err)
     } finally {
-      if (isMountedRef.current) {
-        setLoading(false)
-      }
+      setLoading(false)
     }
   }, [graphData])
 
@@ -327,15 +305,11 @@ const Explorer: React.FC = () => {
       return
     }
 
-    if (!isMountedRef.current) return
-
     setLoading(true)
     setError(null)
 
     try {
       const result = await searchNodes(term, undefined, 20)
-      
-      if (!isMountedRef.current) return
       
       if (result.data.length === 0) {
         message.info(`未找到与"${term}"相关的节点`)
@@ -351,15 +325,12 @@ const Explorer: React.FC = () => {
         }
       }
     } catch (err) {
-      if (!isMountedRef.current) return
       const errorMessage = err instanceof Error ? err.message : '搜索失败'
       setError(errorMessage)
       message.error(errorMessage)
       console.error('搜索失败:', err)
     } finally {
-      if (isMountedRef.current) {
-        setLoading(false)
-      }
+      setLoading(false)
     }
   }, [graphType])
 
@@ -394,10 +365,10 @@ const Explorer: React.FC = () => {
             <DownOutlined />
           </button>
         </Dropdown>
-        {graphType === 'binary' && (
+        {(graphType === 'binary' || graphType === 'chain') && (
           <>
             <span>当前根节点：{rootCode || '未选择'}</span>
-            <span>深度：{depth}</span>
+            {graphType === 'binary' && <span>深度：{depth}</span>}
             <span>节点限制：{limit}</span>
             <span>已加载节点：{graphData?.nodeCount ?? '-'}</span>
           </>
@@ -494,12 +465,12 @@ const Explorer: React.FC = () => {
             <Button icon={<ClearOutlined />} onClick={resetAll} type="text" size="small" aria-label="重置所有参数并清空图谱" />
           </Tooltip>
         </header>
-        {graphType === 'binary' && (
+        {(graphType === 'binary' || graphType === 'chain') && (
           <div className="linear-form-group">
-            <label htmlFor="root-node-select">根节点选择</label>
+            <label htmlFor="root-node-select">{graphType === 'chain' ? '疾病节点选择' : '根节点选择'}</label>
             <Select
               id="root-node-select"
-              placeholder="选择根节点"
+              placeholder={graphType === 'chain' ? '选择疾病节点' : '选择根节点'}
               style={{ width: '100%' }}
               size="large"
               value={rootCode}
@@ -821,6 +792,161 @@ const Explorer: React.FC = () => {
               </Empty>
             </div>
           )
+        ) : graphType === 'chain' ? (
+          !graphData ? (
+            <div className="flex items-center justify-center h-full">
+              <Empty
+                description='请选择疾病节点并点击"加载图谱"按钮开始可视化链式关系'
+                image={Empty.PRESENTED_IMAGE_SIMPLE}
+              >
+                <Button
+                  type="primary"
+                  size="large"
+                  icon={<NodeIndexOutlined />}
+                  onClick={() => loadGraph(rootCode)}
+                  loading={loading}
+                >
+                  加载链式关系图谱
+                </Button>
+              </Empty>
+            </div>
+          ) : (
+            <div className="h-full flex flex-col">
+              {/* 统计信息栏 */}
+              <div className="flex gap-8 items-center mb-5 pb-4 border-b" style={{
+                borderColor: 'rgba(0, 0, 0, 0.06)'
+              }}>
+                <Statistic 
+                  title="节点数量" 
+                  value={graphData.nodeCount} 
+                  prefix={<NodeIndexOutlined />}
+                  valueStyle={{ color: '#1890ff', fontSize: '18px' }}
+                />
+                <Statistic 
+                  title="关系数量" 
+                  value={graphData.edgeCount} 
+                  prefix={<NodeIndexOutlined />}
+                  valueStyle={{ color: '#52c41a', fontSize: '18px' }}
+                />
+                <Statistic 
+                  title="关系链" 
+                  value="疾病→穴位→经络→症状→方剂→中药材"
+                  valueStyle={{ fontSize: '14px' }}
+                />
+              </div>
+
+              {/* 图谱可视化容器 */}
+              <div style={{ flex: 1, position: 'relative', minHeight: '500px' }}>
+                {viewMode === '3d' ? (
+                  <Graph3D
+                    nodes={graphData.nodes}
+                    edges={graphData.edges}
+                    onNodeClick={handleNodeClick}
+                    onNodeHover={setHoveredNode}
+                    searchQuery={searchQuery}
+                    categoryFilter={categoryFilter}
+                    levelFilter={levelFilter}
+                    codePrefixFilter={codePrefixFilter}
+                    style={{ width: '100%', height: '100%', minHeight: '600px' }}
+                  />
+                ) : viewMode === 'force' ? (
+                  <ForceGraph
+                    ref={forceGraphRef}
+                    nodes={graphData.nodes}
+                    edges={graphData.edges}
+                    onNodeClick={handleNodeClick}
+                    onNodeDoubleClick={handleNodeDoubleClick}
+                    onNodeHover={setHoveredNode}
+                    searchQuery={searchQuery}
+                    categoryFilter={categoryFilter}
+                    levelFilter={levelFilter}
+                    codePrefixFilter={codePrefixFilter}
+                    style={{ width: '100%', height: '100%', minHeight: '600px' }}
+                  />
+                ) : graphData.nodes.length > 200 ? (
+                  <VirtualizedCytoscapeGraph
+                    nodes={graphData.nodes}
+                    edges={graphData.edges}
+                    layout={layout}
+                    onNodeClick={handleNodeClick}
+                    onNodeDoubleClick={handleNodeDoubleClick}
+                    searchQuery={searchQuery}
+                    categoryFilter={categoryFilter}
+                    levelFilter={levelFilter}
+                    codePrefixFilter={codePrefixFilter}
+                    style={{ width: '100%', height: '100%' }}
+                    virtualRenderThreshold={200}
+                    visibleRange={150}
+                  />
+                ) : (
+                  <CytoscapeGraph
+                    ref={graphRef}
+                    nodes={graphData.nodes}
+                    edges={graphData.edges}
+                    layout={layout}
+                    onNodeClick={handleNodeClick}
+                    onNodeDoubleClick={handleNodeDoubleClick}
+                    searchQuery={searchQuery}
+                    categoryFilter={categoryFilter}
+                    levelFilter={levelFilter}
+                    codePrefixFilter={codePrefixFilter}
+                    style={{ width: '100%', height: '100%' }}
+                  />
+                )}
+                
+                {/* 选中节点信息卡片 */}
+                {selectedNode && (
+                  <div className="absolute top-6 right-6 z-10 max-w-xs" style={{
+                    background: 'rgba(255, 255, 255, 0.8)',
+                    backdropFilter: 'saturate(180%) blur(20px)',
+                    WebkitBackdropFilter: 'saturate(180%) blur(20px)',
+                    padding: '20px',
+                    borderRadius: '20px',
+                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.12), 0 1px 0 rgba(255, 255, 255, 0.8) inset',
+                    border: '1px solid rgba(255, 255, 255, 0.8)'
+                  }}>
+                    <div className="text-sm">
+                      <div className="font-bold text-base mb-4 text-gray-900" style={{
+                        letterSpacing: '-0.01em'
+                      }}>选中节点信息</div>
+                      <div className="space-y-2 mb-4">
+                        <div><span className="text-gray-500 text-xs">代码：</span><span className="font-mono text-gray-900 ml-2">{selectedNode.code}</span></div>
+                        <div><span className="text-gray-500 text-xs">名称：</span><span className="text-gray-900 ml-2">{selectedNode.name}</span></div>
+                        <div><span className="text-gray-500 text-xs">类别：</span><span className="text-gray-900 ml-2">{selectedNode.category}</span></div>
+                        <div><span className="text-gray-500 text-xs">层级：</span><span className="text-gray-900 ml-2">L{selectedNode.level}</span></div>
+                      </div>
+                      <div className="flex gap-2">
+                        <Button
+                          size="small"
+                          type="primary"
+                          onClick={() => navigate(`/nodes/${selectedNode.code}`)}
+                          block
+                          style={{
+                            borderRadius: '10px',
+                            fontWeight: 500
+                          }}
+                        >
+                          查看详情
+                        </Button>
+                        <Button
+                          size="small"
+                          onClick={() => expandNodeData(selectedNode)}
+                          loading={loading}
+                          block
+                          style={{
+                            borderRadius: '10px',
+                            fontWeight: 500
+                          }}
+                        >
+                          展开节点
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          )
         ) : !graphData ? (
           <div className="flex items-center justify-center h-full">
             <Empty
@@ -882,8 +1008,8 @@ const Explorer: React.FC = () => {
             <div style={{ flex: 1, position: 'relative', minHeight: '500px' }}>
               {viewMode === '3d' ? (
                 <Graph3D
-                  nodes={graphData.nodes || []}
-                  edges={graphData.edges || []}
+                  nodes={graphData.nodes}
+                  edges={graphData.edges}
                   onNodeClick={handleNodeClick}
                   onNodeHover={setHoveredNode}
                   searchQuery={searchQuery}
@@ -895,8 +1021,8 @@ const Explorer: React.FC = () => {
               ) : viewMode === 'force' ? (
                 <ForceGraph
                   ref={forceGraphRef}
-                  nodes={graphData.nodes || []}
-                  edges={graphData.edges || []}
+                  nodes={graphData.nodes}
+                  edges={graphData.edges}
                   onNodeClick={handleNodeClick}
                   onNodeDoubleClick={handleNodeDoubleClick}
                   onNodeHover={setHoveredNode}
@@ -906,10 +1032,10 @@ const Explorer: React.FC = () => {
                   codePrefixFilter={codePrefixFilter}
                   style={{ width: '100%', height: '100%', minHeight: '600px' }}
                 />
-              ) : (graphData.nodes?.length || 0) > 200 ? (
+              ) : graphData.nodes.length > 200 ? (
                 <VirtualizedCytoscapeGraph
-                  nodes={graphData.nodes || []}
-                  edges={graphData.edges || []}
+                  nodes={graphData.nodes}
+                  edges={graphData.edges}
                   layout={layout}
                   onNodeClick={handleNodeClick}
                   onNodeDoubleClick={handleNodeDoubleClick}
@@ -924,8 +1050,8 @@ const Explorer: React.FC = () => {
               ) : (
                 <CytoscapeGraph
                   ref={graphRef}
-                  nodes={graphData.nodes || []}
-                  edges={graphData.edges || []}
+                  nodes={graphData.nodes}
+                  edges={graphData.edges}
                   layout={layout}
                   onNodeClick={handleNodeClick}
                   onNodeDoubleClick={handleNodeDoubleClick}
