@@ -661,41 +661,26 @@ class Neo4jService {
       const params: any = { limit: neo4j.int(limit) }
 
       if (diseaseCode) {
-        // 从指定疾病开始查询链式关系（优化版本：查找所有相关节点）
+        // 从指定疾病开始查询链式关系（修复版本：使用正确的Cypher语法）
         params.diseaseCode = diseaseCode
         cypher = `
-          // 匹配疾病节点
+          // 匹配疾病节点并查找所有相关节点（最多3层深度）
           MATCH (disease {code: $diseaseCode})
-          
-          // 查找疾病直接相关的所有节点（不限类别）
-          OPTIONAL MATCH (disease)-[r1]->(related1)
-          
-          // 查找这些相关节点的邻居（穴位、经络、症状、方剂、中药材）
-          OPTIONAL MATCH (related1)-[r2]->(related2)
-          WHERE related2.category IN ['穴位', '经络', '症状', '方剂', '中药材', '中药', '疾病类', '证候类']
-          
-          // 继续查找下一层
-          OPTIONAL MATCH (related2)-[r3]->(related3)
-          WHERE related3.category IN ['穴位', '经络', '症状', '方剂', '中药材', '中药', '疾病类', '证候类']
-          
-          // 再查找一层
-          OPTIONAL MATCH (related3)-[r4]->(related4)
-          WHERE related4.category IN ['穴位', '经络', '症状', '方剂', '中药材', '中药', '疾病类', '证候类']
+          MATCH path = (disease)-[*1..3]-(related)
+          WHERE related.category IN ['穴位', '经络', '症状', '方剂', '中药材', '中药', '疾病类', '证候类']
+             OR related.category IS NULL
           
           // 收集所有节点
-          WITH disease, 
-               collect(DISTINCT related1) + 
-               collect(DISTINCT related2) + 
-               collect(DISTINCT related3) + 
-               collect(DISTINCT related4) as allRelatedNodes
+          WITH collect(DISTINCT disease) + collect(DISTINCT related) as allNodes,
+               relationships(path) as pathRels
           
           // 展开所有节点
-          UNWIND [disease] + allRelatedNodes as node
+          UNWIND allNodes as node
           WHERE node IS NOT NULL
           
-          // 获取所有相关边
-          OPTIONAL MATCH (node)-[r]->(connected)
-          WHERE connected IN [disease] + allRelatedNodes
+          // 获取节点之间的所有边
+          MATCH (node)-[r]->(connected)
+          WHERE connected IN allNodes AND node <> connected
           
           // 收集节点和边
           WITH collect(DISTINCT {
@@ -712,14 +697,12 @@ class Neo4jService {
             type: COALESCE(type(r), '相关')
           }) as edges
           
-          WHERE size(nodes) > 0
-          
           RETURN nodes,
                  [e IN edges WHERE e.source IS NOT NULL AND e.target IS NOT NULL] as edges
           LIMIT $limit
         `
       } else {
-        // 查询所有链式关系（优化版本：查找所有相关节点）
+        // 查询所有链式关系（修复版本：使用正确的Cypher语法）
         cypher = `
           // 查找所有疾病节点
           MATCH (disease)
@@ -727,23 +710,22 @@ class Neo4jService {
           WITH disease
           LIMIT 20
           
-          // 查找疾病相关的所有节点（不限关系类型）
-          OPTIONAL MATCH path = (disease)-[*1..3]-(related)
+          // 查找疾病相关的所有节点（最多3层深度）
+          MATCH path = (disease)-[*1..3]-(related)
           WHERE related.category IN ['穴位', '经络', '症状', '方剂', '中药材', '中药', '疾病类', '证候类']
-            OR related.category IS NULL
+             OR related.category IS NULL
           
-          // 收集所有节点和边
-          WITH disease, 
-               collect(DISTINCT related) as relatedNodes,
+          // 收集所有节点
+          WITH collect(DISTINCT disease) + collect(DISTINCT related) as allNodes,
                relationships(path) as pathRels
           
           // 展开所有节点
-          UNWIND [disease] + relatedNodes as node
+          UNWIND allNodes as node
           WHERE node IS NOT NULL
           
           // 获取节点之间的所有边
-          OPTIONAL MATCH (node)-[r]->(connected)
-          WHERE connected IN [disease] + relatedNodes
+          MATCH (node)-[r]->(connected)
+          WHERE connected IN allNodes AND node <> connected
           
           // 收集节点和边
           WITH collect(DISTINCT {
@@ -759,8 +741,6 @@ class Neo4jService {
             target: endNode(r).code,
             type: COALESCE(type(r), '相关')
           }) as edges
-          
-          WHERE size(nodes) > 0
           
           RETURN nodes,
                  [e IN edges WHERE e.source IS NOT NULL AND e.target IS NOT NULL] as edges
