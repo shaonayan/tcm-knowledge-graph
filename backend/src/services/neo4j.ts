@@ -652,6 +652,7 @@ class Neo4jService {
 
   /**
    * 获取链式关系知识图谱（疾病→穴位→经络→症状→方剂→中药材）
+   * 优化版本：更灵活地查找相关节点，不要求完整链
    */
   async getChainGraph(diseaseCode?: string, limit: number = 200) {
     const session = this.getSession()
@@ -660,54 +661,43 @@ class Neo4jService {
       const params: any = { limit: neo4j.int(limit) }
 
       if (diseaseCode) {
-        // 从指定疾病开始查询链式关系
+        // 从指定疾病开始查询链式关系（优化版本：查找所有相关节点）
         params.diseaseCode = diseaseCode
         cypher = `
           // 匹配疾病节点
           MATCH (disease {code: $diseaseCode})
-          WHERE disease.category = '疾病类' OR disease.category CONTAINS '疾病'
           
-          // 查找疾病相关的所有节点（通过任意关系）
-          OPTIONAL MATCH path1 = (disease)-[*1..2]->(n1)
-          WHERE n1.category = '穴位' OR n1.category CONTAINS '穴位'
+          // 查找疾病直接相关的所有节点（不限类别）
+          OPTIONAL MATCH (disease)-[r1]->(related1)
           
-          // 查找穴位相关的经络
-          OPTIONAL MATCH path2 = (n1)-[*1..2]->(n2)
-          WHERE n2.category = '经络' OR n2.category CONTAINS '经络'
+          // 查找这些相关节点的邻居（穴位、经络、症状、方剂、中药材）
+          OPTIONAL MATCH (related1)-[r2]->(related2)
+          WHERE related2.category IN ['穴位', '经络', '症状', '方剂', '中药材', '中药', '疾病类', '证候类']
           
-          // 查找经络相关的症状
-          OPTIONAL MATCH path3 = (n2)-[*1..2]->(n3)
-          WHERE n3.category = '症状' OR n3.category CONTAINS '症状'
+          // 继续查找下一层
+          OPTIONAL MATCH (related2)-[r3]->(related3)
+          WHERE related3.category IN ['穴位', '经络', '症状', '方剂', '中药材', '中药', '疾病类', '证候类']
           
-          // 查找症状相关的方剂
-          OPTIONAL MATCH path4 = (n3)-[*1..2]->(n4)
-          WHERE n4.category = '方剂' OR n4.category CONTAINS '方剂'
+          // 再查找一层
+          OPTIONAL MATCH (related3)-[r4]->(related4)
+          WHERE related4.category IN ['穴位', '经络', '症状', '方剂', '中药材', '中药', '疾病类', '证候类']
           
-          // 查找方剂相关的中药材
-          OPTIONAL MATCH path5 = (n4)-[*1..2]->(n5)
-          WHERE n5.category = '中药材' OR n5.category CONTAINS '中药材' OR n5.category = '中药'
-          
-          // 收集所有节点和边
+          // 收集所有节点
           WITH disease, 
-               collect(DISTINCT n1) as acupoints,
-               collect(DISTINCT n2) as meridians,
-               collect(DISTINCT n3) as symptoms,
-               collect(DISTINCT n4) as formulas,
-               collect(DISTINCT n5) as herbs,
-               relationships(path1) as rels1,
-               relationships(path2) as rels2,
-               relationships(path3) as rels3,
-               relationships(path4) as rels4,
-               relationships(path5) as rels5
+               collect(DISTINCT related1) + 
+               collect(DISTINCT related2) + 
+               collect(DISTINCT related3) + 
+               collect(DISTINCT related4) as allRelatedNodes
           
-          // 构建节点列表
-          WITH [disease] + acupoints + meridians + symptoms + formulas + herbs as allNodes,
-               rels1, rels2, rels3, rels4, rels5
-          
-          UNWIND allNodes as node
+          // 展开所有节点
+          UNWIND [disease] + allRelatedNodes as node
           WHERE node IS NOT NULL
           
-          // 构建边列表
+          // 获取所有相关边
+          OPTIONAL MATCH (node)-[r]->(connected)
+          WHERE connected IN [disease] + allRelatedNodes
+          
+          // 收集节点和边
           WITH collect(DISTINCT {
             id: node.code,
             code: node.code,
@@ -715,132 +705,65 @@ class Neo4jService {
             category: node.category,
             level: COALESCE(node.classificationLevel, node.level, 1)
           }) as nodes,
-          rels1, rels2, rels3, rels4, rels5, disease
+          collect(DISTINCT {
+            id: id(r),
+            source: startNode(r).code,
+            target: endNode(r).code,
+            type: COALESCE(type(r), '相关')
+          }) as edges
           
-          // 提取边信息
-          WITH nodes, disease,
-               [r IN rels1 WHERE r IS NOT NULL | {source: startNode(r).code, target: endNode(r).code, type: type(r)}] +
-               [r IN rels2 WHERE r IS NOT NULL | {source: startNode(r).code, target: endNode(r).code, type: type(r)}] +
-               [r IN rels3 WHERE r IS NOT NULL | {source: startNode(r).code, target: endNode(r).code, type: type(r)}] +
-               [r IN rels4 WHERE r IS NOT NULL | {source: startNode(r).code, target: endNode(r).code, type: type(r)}] +
-               [r IN rels5 WHERE r IS NOT NULL | {source: startNode(r).code, target: endNode(r).code, type: type(r)}] as allRels
-          
-          UNWIND allRels as rel
-          WHERE rel.source IS NOT NULL AND rel.target IS NOT NULL
+          WHERE size(nodes) > 0
           
           RETURN nodes,
-                 collect(DISTINCT {
-                   id: rel.source + '-' + rel.target,
-                   source: rel.source,
-                   target: rel.target,
-                   type: COALESCE(rel.type, '相关')
-                 }) as edges
+                 [e IN edges WHERE e.source IS NOT NULL AND e.target IS NOT NULL] as edges
           LIMIT $limit
         `
       } else {
-        // 查询所有链式关系（简化版本：查找所有相关节点）
+        // 查询所有链式关系（优化版本：查找所有相关节点）
         cypher = `
           // 查找所有疾病节点
           MATCH (disease)
           WHERE disease.category = '疾病类' OR disease.category CONTAINS '疾病'
           WITH disease
-          LIMIT 50
+          LIMIT 20
           
-          // 查找疾病相关的穴位
-          OPTIONAL MATCH (disease)-[r1]->(acupoint)
-          WHERE acupoint.category = '穴位' OR acupoint.category CONTAINS '穴位'
+          // 查找疾病相关的所有节点（不限关系类型）
+          OPTIONAL MATCH path = (disease)-[*1..3]-(related)
+          WHERE related.category IN ['穴位', '经络', '症状', '方剂', '中药材', '中药', '疾病类', '证候类']
+            OR related.category IS NULL
           
-          // 查找穴位相关的经络
-          OPTIONAL MATCH (acupoint)-[r2]->(meridian)
-          WHERE meridian.category = '经络' OR meridian.category CONTAINS '经络'
+          // 收集所有节点和边
+          WITH disease, 
+               collect(DISTINCT related) as relatedNodes,
+               relationships(path) as pathRels
           
-          // 查找经络相关的症状
-          OPTIONAL MATCH (meridian)-[r3]->(symptom)
-          WHERE symptom.category = '症状' OR symptom.category CONTAINS '症状'
+          // 展开所有节点
+          UNWIND [disease] + relatedNodes as node
+          WHERE node IS NOT NULL
           
-          // 查找症状相关的方剂
-          OPTIONAL MATCH (symptom)-[r4]->(formula)
-          WHERE formula.category = '方剂' OR formula.category CONTAINS '方剂'
+          // 获取节点之间的所有边
+          OPTIONAL MATCH (node)-[r]->(connected)
+          WHERE connected IN [disease] + relatedNodes
           
-          // 查找方剂相关的中药材
-          OPTIONAL MATCH (formula)-[r5]->(herb)
-          WHERE herb.category = '中药材' OR herb.category CONTAINS '中药材' OR herb.category = '中药'
+          // 收集节点和边
+          WITH collect(DISTINCT {
+            id: node.code,
+            code: node.code,
+            name: COALESCE(node.name, node.mainTerm, node.节点名称, node.显示名称),
+            category: node.category,
+            level: COALESCE(node.classificationLevel, node.level, 1)
+          }) as nodes,
+          collect(DISTINCT {
+            id: id(r),
+            source: startNode(r).code,
+            target: endNode(r).code,
+            type: COALESCE(type(r), '相关')
+          }) as edges
           
-          WITH disease, acupoint, meridian, symptom, formula, herb, r1, r2, r3, r4, r5
+          WHERE size(nodes) > 0
           
-          RETURN 
-            collect(DISTINCT {
-              id: disease.code,
-              code: disease.code,
-              name: COALESCE(disease.name, disease.mainTerm, disease.节点名称, disease.显示名称),
-              category: disease.category,
-              level: COALESCE(disease.classificationLevel, disease.level, 1)
-            }) + 
-            collect(DISTINCT {
-              id: acupoint.code,
-              code: acupoint.code,
-              name: COALESCE(acupoint.name, acupoint.mainTerm, acupoint.节点名称, acupoint.显示名称),
-              category: acupoint.category,
-              level: COALESCE(acupoint.classificationLevel, acupoint.level, 1)
-            }) +
-            collect(DISTINCT {
-              id: meridian.code,
-              code: meridian.code,
-              name: COALESCE(meridian.name, meridian.mainTerm, meridian.节点名称, meridian.显示名称),
-              category: meridian.category,
-              level: COALESCE(meridian.classificationLevel, meridian.level, 1)
-            }) +
-            collect(DISTINCT {
-              id: symptom.code,
-              code: symptom.code,
-              name: COALESCE(symptom.name, symptom.mainTerm, symptom.节点名称, symptom.显示名称),
-              category: symptom.category,
-              level: COALESCE(symptom.classificationLevel, symptom.level, 1)
-            }) +
-            collect(DISTINCT {
-              id: formula.code,
-              code: formula.code,
-              name: COALESCE(formula.name, formula.mainTerm, formula.节点名称, formula.显示名称),
-              category: formula.category,
-              level: COALESCE(formula.classificationLevel, formula.level, 1)
-            }) +
-            collect(DISTINCT {
-              id: herb.code,
-              code: herb.code,
-              name: COALESCE(herb.name, herb.mainTerm, herb.节点名称, herb.显示名称),
-              category: herb.category,
-              level: COALESCE(herb.classificationLevel, herb.level, 1)
-            }) as nodes,
-            collect(DISTINCT {
-              id: id(r1),
-              source: disease.code,
-              target: acupoint.code,
-              type: COALESCE(type(r1), '对应')
-            }) +
-            collect(DISTINCT {
-              id: id(r2),
-              source: acupoint.code,
-              target: meridian.code,
-              type: COALESCE(type(r2), '属于')
-            }) +
-            collect(DISTINCT {
-              id: id(r3),
-              source: meridian.code,
-              target: symptom.code,
-              type: COALESCE(type(r3), '对应')
-            }) +
-            collect(DISTINCT {
-              id: id(r4),
-              source: symptom.code,
-              target: formula.code,
-              type: COALESCE(type(r4), '对应')
-            }) +
-            collect(DISTINCT {
-              id: id(r5),
-              source: formula.code,
-              target: herb.code,
-              type: COALESCE(type(r5), '包含')
-            }) as edges
+          RETURN nodes,
+                 [e IN edges WHERE e.source IS NOT NULL AND e.target IS NOT NULL] as edges
           LIMIT $limit
         `
       }
