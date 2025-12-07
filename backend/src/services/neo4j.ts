@@ -52,9 +52,17 @@ class Neo4jService {
     try {
       logger.info('🔌 连接Neo4j数据库...')
       
-      const NEO4J_URI = process.env.NEO4J_URI || 'neo4j+s://f36358f7.databases.neo4j.io'
-      const NEO4J_USER = process.env.NEO4J_USER || 'neo4j'
-      const NEO4J_PASSWORD = process.env.NEO4J_PASSWORD || 'RWXciE-YrfUELz2i36U_0L80MFD0gpYtEHroztDJb_U'
+      // 从环境变量读取配置（不再使用硬编码默认值）
+      // 支持 NEO4J_USER 和 NEO4J_USERNAME 两种变量名
+      const NEO4J_URI = process.env.NEO4J_URI
+      const NEO4J_USER = process.env.NEO4J_USER || process.env.NEO4J_USERNAME
+      const NEO4J_PASSWORD = process.env.NEO4J_PASSWORD
+
+      if (!NEO4J_URI || !NEO4J_USER || !NEO4J_PASSWORD) {
+        logger.error('❌ Neo4j配置缺失：请设置 NEO4J_URI, NEO4J_USER/NEO4J_USERNAME, NEO4J_PASSWORD 环境变量')
+        this.connected = false
+        return false
+      }
 
       this.driver = neo4j.driver(
         NEO4J_URI,

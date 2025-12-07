@@ -2,7 +2,7 @@ import neo4j, { Driver, Session } from "neo4j-driver"
 import { logger } from "../utils/logger.js"
 
 const NEO4J_URI = process.env.NEO4J_URI || ""
-const NEO4J_USER = process.env.NEO4J_USER || ""
+const NEO4J_USER = process.env.NEO4J_USER || process.env.NEO4J_USERNAME || ""
 const NEO4J_PASSWORD = process.env.NEO4J_PASSWORD || ""
 
 let isConnected = false
