@@ -1,0 +1,1416 @@
+分类号：R74 单位代码：10752
+密 级：公开 学 号：20220120590
+宁夏医科大学
+硕士专业学位论文
+重症肌无力及其合并其他自身免疫性疾病
+的临床特征分析
+Clinical Feature Analysis of Myasthenia Gravis and Its Coexistence
+with Other Autoimmune Diseases
+学 位 申 请 人： 周婧
+指 导 教 师： 王振海 教授
+申请学位门类级别： 临床医学
+专 业 名 称： 神经病学
+研 究 方 向： 神经系统免疫性疾病
+所 在 学 院： 第一临床医学院
+论 文 完 成 日 期： 二〇二五年三月
+宁夏医科大学研究生院
+Ningxia Medical University
+Thesis for Application of Master’s
+Specialized Degree
+Clinical Feature Analysis of Myasthenia Gravis and Its
+Coexistence with Other Autoimmune Diseases
+Student’s Name: Zhou Jing
+Supervisor: Wang Zhenhai Professor
+Subject Category: Clinical Medicine
+Major: Neurology
+Specialty: Immune disease of the nervous system
+College: First Clinical Medical College
+Completion Date: March, 2025
+宁夏医科大学硕士学位论文 中文摘要
+重症肌无力及其合并其他自身免疫性疾病的临床特征分析
+摘要
+目的：本研究旨在归纳总结重症肌无力（Myasthenia gravis, MG）患者及 MG合并
+其他自身免疫性疾病（Autoimmune diseases, ADs）患者的临床特征，探究 ADs 的存在对
+MG 的影响。强化临床对 MG 及其合并其他 ADs 的认识，有助于 MG 亚组分类的精准
+化治疗，并为MG 及其合并其他ADs 的诊断提供临床借鉴。
+方法：本研究为回顾性研究，收集 2018 年 1 月至 2024 年 11 月于宁夏医科大学总
+医院神经内科确诊为 MG的162例住院患者的资料，包括患者年龄、性别、发病年龄、
+首发症状、肌无力危象发生情况、胸部计算机断层扫描结果、吸烟史、饮酒史及是否合
+并高血压、糖尿病、冠心病和其他自身免疫性疾病等，归纳总结 MG 患者的临床特征。
+同时，根据是否合并 ADs 分为合并 ADs 的 MG 组（简称 MG-AD 组）和单纯 MG 组，
+其中MG-AD组根据是否为自身免疫性甲状腺疾病（Autoimmune thyroid diseases, AITD）
+分为合并AITD的 MG 组（简称MG-AITD 组）和合并其他ADs 的MG组（简称MG-
+OAD 组），分析四组 MG 患者在发病年龄、性别、临床分型、MG 危象、炎症指标、
+胸腺情况、MGFA 分型、发病季节及抗体分布方面的差异。
+结果：1.MG 患者的发病年龄高峰季节为春季；首发症状最易累及眼外肌，其次为
+四肢肌，呼吸肌受累最少见；首发症状累及不同肌肉构成比在性别中无统计学意义（P
+＞0.05）；早发型 MG胸腺异常显著高于晚发型 MG（P＜0.05）。
+2. 43.6%的MG 患者双重抗体或三重抗体阳性，AChR Ab+Titin Ab+RyR Ab 三重抗
+体阳性组MG患者的胸腺瘤发生率比 AChR Ab 阳性组与AChR Ab+Titin Ab 双重抗体阳
+性组高（P＜0.05），同时胸腺异常率比 AChR Ab+Titin Ab 双重抗体阳性组高（P＜0.05）。
+3. 单纯 MG 患者 123例（76.4%），合并 ADs 的 MG 患者 38 例（23.6%），其中
+合并 AITD 的 MG 患者 24 例（14.9%），合并 OAD 的 MG 患者 14 例（8.7%）；合并
+ADs 的MG患者中，AITD最多见，其次为银屑病。
+I
+宁夏医科大学硕士学位论文 中文摘要
+4.与单纯 MG 组患者相比，MG-AD 组患者女性多见、胸腺增生发生率高，具有统
+计学差异（P＜0.05）；MG-AD组患者以 AChR Ab 为主，而单纯 MG组则AChR Ab与
+AChR Ab合并其他抗体呈现近似分布特征，差异具有统计学意义（P＜0.05）。
+5.MG-AITD组患者的胸腺增生发生率显著高于单纯 MG组（P＜0.05）。两组在发
+病年龄、性别、临床分型、MG危象、炎症指标、MGFA分型、发病季节及抗体分布上，
+差异均无统计学意义（P＞0.05）。
+6.MG-OAD组患者的胸腺增生及胸腺退化异常的发生率比单纯MG组高（P＜0.05）。
+MGFA分型方面，单纯 MG组患者以I型为主，而 MG-OAD组患者 IIb、IIIa型更多见，
+两组MGFA分型构成比差异具有统计学意义（P＜0.05）。
+7.MG-AITD组患者以 I 型、IIa型为主，而 MG-OAD组患者 IIb型、IIIa型更多见，
+两组 MGFA 分型构成比差异具有统计学意义（P＜0.05）。MG-AITD 组患者的 AD 与
+MG 同时发生，而 MG-OAD 组患者的 AD 发生 MG 之后，组间 AD 发生顺序差异具有
+统计学意义（P＜0.05）。
+结论：1.三重抗体阳性的 MG患者发生胸腺瘤的可能性更大。
+2.合并ADs的MG患者更易发生胸腺增生；合并AITD的MG患者可能比合并OAD
+的MG患者症状更轻。
+3.合并AITD的 MG患者往往在诊断 MG的同时发现AITD，而合并 OAD的MG患
+者的ADs往往发生在MG之后，因此确诊MG后需定期复查，警惕其他ADs共存可能。
+关键词 重症肌无力，自身免疫性疾病，自身免疫性甲状腺疾病
+II
+宁夏医科大学硕士学位论文 英文摘要
+Clinical Feature Analysis of Myasthenia Gravis and Its
+Coexistence with Other Autoimmune Diseases
+ABSTRACT
+Objective: The aim of this study is to summarize the clinical characteristics of patients
+with myasthenia gravis (MG) and those with MG in conjunction with other autoimmune
+diseases (ADs). Additionally, we seek to explore the impact of ADs on MG. Enhancing our
+clinical understanding of MG and its association with other ADs will facilitate accurate
+treatment strategies for different subgroups of MG, thereby providing valuable clinical insights
+for diagnosing both MG and its co-occurrence with other ADs.
+Methods: This study is a retrospective analysis that collected data from 162 hospitalized
+patients diagnosed with Myasthenia Gravis in the Department of Neurology at Ningxia Medical
+University General Hospital between January 2018 and November 2024. The collected
+information includes patient age, gender, age of onset, initial symptoms, occurrence of
+myasthenic crisis, results from chest computed tomography scans, smoking history, alcohol
+consumption history, and the presence of comorbidities such as hypertension, diabetes mellitus,
+coronary heart disease, and other autoimmune diseases. The aim is to summarize the clinical
+characteristics of MG patients. Furthermore, based on the presence or absence of concomitant
+ADs, participants were categorized into two groups: those with autoimmune disease (MG-AD
+group) and those without (MG-only group). Among the MG-AD group specifically identified
+were patients who had autoimmune thyroid disease (AITD), forming a subgroup designated as
+MG-AITD; while others constituted another subgroup referred to as MG-OAD. Differences in
+age at onset, sex distribution, clinical classification types including myasthenic crises
+III
+宁夏医科大学硕士学位论文 英文摘要
+occurrence rates; inflammatory indices; thymus involvement; Myasthenia Gravis Foundation
+America (MGFA) classification; seasonal patterns related to onset; and antibody profiles were
+analyzed across these groups.
+Results 1. The peak season for the onset of MG was found to be spring; the most common
+initial symptom involved ocular muscles followed by limb muscles; respiratory muscle
+involvement was least frequent. There were no statistically significant differences in the
+distribution of initial symptoms among different genders (P > 0.05). Early-onset MG showed a
+significantly higher rate of thymic abnormalities compared to late-onset MG (P < 0.05).
+2. Among the patients studied, 43.6% tested positive for double or triple antibodies.
+Patients who were positive for AChR Ab + Titin Ab + RyR Ab had a higher incidence rate of
+thymoma compared to those who were only AChR Ab positive or those with dual positivity for
+AChR Ab + Titin Ab (P < 0.05). Additionally, this group exhibited a higher rate of thymic
+abnormalities than those with dual positivity for AChR Ab + Titin Ab (P < 0.05).
+3. Of the total cohort analyzed, there were 123 cases (76.4%) classified as pure MG and
+38 cases (23.6%) identified as MG associated with autoimmune diseases (ADs), including 24
+cases (14.9%) with autoimmune thyroid disease (AITD) and 14 cases (8.7%) with other
+autoimmune disorders (OAD). Among patients with ADs accompanying their MG diagnosis,
+AITD was most prevalent followed by psoriasis.
+4. Compared to patients in the pure MG group, those in the MG-AD group had a higher
+proportion of females and an increased incidence rate of thymic hyperplasia; these differences
+reached statistical significance (P < 0.05). In terms of antibody profiles within these groups:
+while AChR Ab predominated in the MG-AD group; both AChR Ab alone and combinations
+involving other antibodies displayed similar distribution patterns within the pure MG cohort—
+this difference also achieved statistical significance (P < 0.05).
+IV
+宁夏医科大学硕士学位论文 英文摘要
+5. The incidence of thymic hyperplasia in patients with MG-AITD was significantly higher
+than that in the pure MG group (P < 0.05). There were no statistically significant differences
+between the two groups regarding age of onset, gender, clinical classification, MG crisis,
+inflammatory markers, MGFA classification, season of onset, and antibody distribution (P >
+0.05).
+6. The occurrence rates of thymic hyperplasia and abnormal thymic degeneration in
+patients with MG-OAD were higher than those in the pure MG group (P < 0.05). In terms of
+MGFA classification, type I predominated among patients in the pure MG group; conversely,
+types IIb and IIIa were more prevalent among patients in the MG-OAD group. The difference
+in composition ratios for the two groups' MGFA classifications was statistically significant (P
+< 0.05).
+7. Patients in the MG-AITD group primarily presented with types I and IIa, while those in
+the MG-OAD group exhibited a greater prevalence of types IIb and IIIa; this difference in
+composition ratios for their respective MGFA classifications was statistically significant (P <
+0.05). Additionally, patients within the AITD-MG cohort experienced autoimmune diseases
+concurrently with myasthenia gravis, whereas those within the OAD-MG cohort typically
+developed autoimmune diseases after being diagnosed with myasthenia gravis; thus indicating
+a statistically significant difference concerning disease progression order between these groups
+(P < 0.05).
+Conclusion 1. Myasthenia gravis patients with triple antibody positive are more likely to
+develop thymoma.
+2. MG patients with ADs are more likely to develop thymic hyperplasia; Patients with MG
+combined with AITD may have mild symptoms than patients with MG combined with OAD.
+3. Patients suffering from both AITD and myasthenia gravis often discover their AITD
+diagnosis simultaneously upon receiving their myasthenia gravis diagnosis; on the other hand,
+V
+宁夏医科大学硕士学位论文 英文摘要
+those presenting OAD alongside myasthenia gravis generally develop their autoimmune
+conditions subsequent to their initial diagnosis—therefore necessitating regular follow-up
+examinations post-diagnosis to monitor potential coexistence of additional autoimmune
+disorders.
+KEYWORDS Myasthenia gravis, Autoimmune disease, Autoimmune thyroid disease
+VI
+宁夏医科大学硕士学位论文 符号说明
+符号说明
+英文缩写 英文全称 中文全称
+MG Myasthenia gravis 重症肌无力
+OMG Ocular Myasthenia gravis 眼肌型重症肌无力
+GMG Generalized Myasthenia gravis 全身型重症肌无力
+MGFA the MG Foundation of America criteria 美国重症肌无力基金会
+ADs Autoimmune diseases 自身免疫性疾病
+AITD Autoimmune thyroid disease 自身免疫性甲状腺疾病
+AChR Ab Acetylcholine receptor antibody 乙酰胆碱受体抗体
+Muscle-specific receptor tyrosine 肌肉特异性受体酪氨酸
+MuSK Ab
+kinase antibody 激酶抗体
+Low-density lipoprotein
+低密度脂蛋白受体
+LRP4 Ab receptor-related protein 4
+相关蛋白 4抗体
+kinase antibody
+titin Ab titin antibody 连接素抗体
+RyR Ab RyR antibody 兰尼碱抗体
+VII
+目 录
+前言 ............................................................................................................. 1
+资料与方法 ................................................................................................. 3
+结果 ............................................................................................................. 6
+讨论 ........................................................................................................... 23
+结论 ........................................................................................................... 31
+参考文献 ................................................................................................... 32
+附录 ........................................................................................................... 37
+文献综述 重症肌无力和自身免疫性甲状腺疾病 ................................ 38
+综述参考文献 ........................................................................................ 45
+宁夏医科大学硕士学位论文 前言
+前言
+重症肌无力（Myasthenia gravis, MG）是一种由神经-肌肉接头处传递功能障碍所引
+起的自身免疫性疾病（Autoimmune diseases, ADs）[1]，主要针对突触后膜乙酰胆碱受体
+的特异性抗体的产生，导致眼外肌、延髓肌、呼吸肌和四肢近端肌等不同肌肉群容易出
+现疲劳和波动性肌无力。大多数患者最初表现为上睑下垂和复视，后逐步发展为全身性
+受累，该病可发生于任何年龄段，病程漫长且易反复发作，严重影响患者的生活质量，
+虽在一定程度上可以治疗，但随着病情进展，严重时可发生肌无力危象甚至呼吸衰竭而
+死亡[2-4]，因此及时的诊断与治疗是非常有必要的。随着免疫学检测技术的进步，MG的
+诊断率显著提高，但其临床症状和疾病进展仍存在高度异质性，目前 MG的主流指南都
+是建议根据亚组分类进行个体化精确治疗[5-7]。
+关于MG合并其他 ADs 的相关报道越来越多，有研究提出 MG 合并ADs 并不是
+偶然，有可能是因为两者存在共同的免疫病理机制，如免疫系统的失调和遗传易感性
+的影响[8]。合并其他 ADs 可能会使MG病程复杂化。研究表明与非 MG人群相比，
+MG患者发生其他 ADs 的风险增加，且患有一种 ADs 的患者患第二种疾病的风险更
+高，频率约在8.7-25% 之间[3]。一项关于 MG患者中的甲状腺疾病的系统评价和荟萃
+分析提供了可靠的证据，证明了甲状腺疾病在 MG中普遍存在，并且 MG与甲状腺自
+身免疫风险增加密切相关[9]。一项双向孟德尔随机化研究证明了 MG与AITD、系统性
+红斑狼疮、类风湿性关节炎、1型糖尿病和多发性硬化症五种 ADs 之间存在因果关
+系，同时类风湿关节炎是 MG风险的可能驱动因素[10]。据统计，MG合并的ADs 可达
+23种之多，其中包括全身性疾病，如甲状腺疾病、系统性红斑狼疮、干燥综合征等，
+包括神经系统疾病，如视神经脊髓炎、多发性硬化症、炎性肌病、吉兰巴雷综合征、
+自身免疫性脑炎等。
+与其他ADs 相比，自身免疫性甲状腺疾病（Autoimmune thyroid disease, AITD）在
+MG 中更为常见，这种共病现象在女性中更为常见[9]，而视神经脊髓炎在神经系统疾病
+中较为常见[11]。其余与重症肌无力共存的自身免疫性疾病报道较少，已发表的研究大多
+1
+宁夏医科大学硕士学位论文 前言
+为个案报道。国内有研究表明伴其他 ADs 的 MG 患者以青年女性多见，首发症状为眼
+睑下垂且以双侧同时受累为主，伴胸腺增生的可能性大[12]。还有不少研究表明合并 AITD
+的MG临床表现往往比较轻[8, 13, 14]，且对肌无力危象的敏感性较低，不太容易发生肌无
+力危象[11]。而一项针对 MG 合并吉兰巴雷综合征的临床特征的研究表明 15 例患者中有
+4例发生胸腺瘤或胸腺切除术，有 2例死亡[15]；似乎合并神经系统疾病的 MG患者的病
+程更严重，这表明合并不同疾病的 MG的临床表现并不一致，可能与不同疾病的致病机
+制有关。
+综上所述，MG 的病程是否会因其他 ADs 的发展而变得复杂尚不可知，其关于合并
+症的临床特征、预后、治疗等方面的管理尚在探索阶段，缺乏系统性研究。MG与其他
+AD 之间必然有着千丝万缕的联系。这一现象背后的原因目前还不得而知待我们继续去
+探索。
+2
+宁夏医科大学硕士学位论文 资料与方法
+资料与方法
+1. 研究对象
+收集 2018 年 1 月至 2024 年 11 月于宁夏医科大学总医院神经内科确诊为重症肌无
+力的住院患者的临床资料。
+1.1 重症肌无力诊断标准（参照 2020 中国免疫学会神经免疫分会中国重症肌无力诊断
+和治疗指南[16]）
+（1）临床特征：全身骨骼肌均可受累，表现为波动性无力和易疲劳性，症状呈“晨轻
+暮重”，活动后加重，休息后可减轻。
+（2）辅助检查：
+①药理学检查：新斯的明试验阳性；
+②电生理检查：重复神经电刺激（RNS）示低频重复电刺激后肌肉动作电位波幅第
+5波比第1波递减 10%以上为阳性，称为波幅递减；
+③血清抗体检测：患者血清检测抗体阳性，包括乙酰胆碱受体抗体（Acetylcholine
+receptor antibody, AChR Ab）、肌肉特异性受体酪氨酸激酶抗体（Muscle-specific receptor
+tyrosine kinase antibody, MuSK Ab）、低密度脂蛋白受体相关蛋白 4抗体（Muscle-specific
+receptor tyrosine kinase antibody, LRP4 Ab）、连接素抗体（Titin antibody）和 兰尼碱抗
+体（RyR antibody）。
+MG患者在具有临床特征的基础上，满足药理学检查、电生理检查及血清抗体检测
+三项中任意一项即可确诊，同时需排除其他疾病。
+1.2 纳入标准
+①符合重症肌无力诊断标准；
+②年龄≥18岁；
+③患者临床资料完整；
+④多次住院的患者选取最早的住院病历收集资料。
+1.3 排除标准
+3
+宁夏医科大学硕士学位论文 资料与方法
+①年龄＜18岁；
+②患者临床资料缺失；
+③合并的自身免疫性疾病诊断不明确；
+④合并三种及以上诊断明确的自身免疫性疾病。
+2.研究方法
+2.1资料收集
+（1）一般资料：包括患者年龄、性别、发病年龄、首发症状、肌无力危象发生情况、
+胸部计算机断层扫描、吸烟史、饮酒史及是否合并高血压、糖尿病、冠心病和其他自身
+免疫性疾病。
+（2）甲状腺功能：促甲状腺激素（TSH）、游离三碘甲状腺原氨酸(FT3)、游离甲状腺
+素(FT4)、三碘甲状腺原氨酸(T3)、甲状腺素(T4)、抗甲状腺过氧化物酶（TPO）抗体、
+甲状腺球蛋白（TG）抗体。
+（3）自身免疫性相关抗体：类风湿因子（RF）、抗链球菌溶血素 O（ASO）、抗环瓜
+氨酸肽抗体（CCP）、抗角蛋白抗体（AKA）、可提取性核蛋白（ENA-AbSm、ENA-
+AbU1RNP、ENA-AbSSA（52）、ENA-AbSSA（60）、ENA-AbSSB、ENA-AbSCL-70、
+ENA-AbJ0-1、ENA-Rib）、抗核抗体（HEp2-ANA）、抗中性粒细胞胞浆抗体谱（PANCA、
+CANCA、ANCA-MPO、ANCA-PRO3、GBM）。
+（4）全血细胞计数：白细胞、中性粒细胞、淋巴细胞、单核细胞与血小板计数；计算
+出以下炎症指标：中性粒细胞与淋巴细胞比值 （NLR） 、血小板与淋巴细胞比值 （PLR）、
+淋巴细胞与单核细胞比值 （LMR） 和全身免疫炎症指数 （SII）。注：SII计算方法:
+（血小板×中性粒细胞） /淋巴细胞加[17]。
+（5）抗体检测结果：部分患者在住院期间进行了血清的 MG 自身抗体检测，包括 AChR、
+MuSK、LRP4、Titin 和 RyR Ab五项抗体。MG 自身抗体检测由第三方公司（宁夏金域
+医学检验所）完成，采用基于细胞转染的间接免疫荧光法 cell-based assay（CBA）原理
+半定量检测患者血清中的特异抗体。如果抗体滴度为 ≥1:10，则患者被定义为抗体阳
+性。进行 CBA实验的研究人员对临床诊断不知情。抗体检测结果在病历中记录。
+4
+宁夏医科大学硕士学位论文 资料与方法
+（6）MGFA分型：采用美国重症肌无力基金会（the MG Foundation of America criteria，
+MGFA）[18]对MG 患者的严重程度进行分型，分别为 I型、IIa型、IIb型、IIIa型、IIIb
+型、IVa 型、IVb 型、V 型。按照患者入院时体格检查分型，具体内容及参考标准见附
+录1。
+（7）其他自身免疫性疾病的确诊：部分患者合并的其他自身免疫性疾病的诊断基于临
+床特征及实验室检查结果，并请相关疾病科室医师确诊。另一部分患者的诊断根据临床
+特征、院外检查结果及诊断证明确诊。
+2.2 分组
+本研究将MG患者进行以下分组：
+（1）单纯MG组：符合 MG诊断标准，但未合并任何其他 ADs；
+（2）MG-AD组：合并其他 ADs 的MG患者；
+（3）MG-TIAD 组：合并其他 ADs 的 MG 患者，且该 ADs 符合 AITD 的诊断标准，
+AITD 包括： Graves 病（Graves’disease, GD）、桥本甲状腺炎（Hashimoto thyroiditis,
+HT）；
+（4）MG-OAD组：合并其他 ADs 的MG患者，该 ADs 不包括 AITD。
+2.3 统计分析
+数据分析采用 SPSS 27.0 软件。计量资料以均数±标准差表示，计数资料以频数和
+率（%）表示。正态分布的计量资料两组间差异比较采用独立样本 t 检验，非正态分布
+的计量资料两组间差异比较采用 Mann-Whitney U 检验。计数资料组间比较采用卡方检
+验，当N≥40且T≥5 时，用Pearson卡方检验；当 N≥40且1≤T≤5时，用连续性校
+正卡方检验；当 N＜40 或 T＜1 时，用 Fisher 确切概率法。Bonferroni 检验等。多组间
+比较行×列表中有 1/5 格子以上的 1≤T≤5或 1 个格子的 T＜1 时，用 Fisher 确切概率
+法，如Ｐ<0.05，可进一步用 Bonferroni 检验明确具体组别。以Ｐ<0.05 为差异有统计学
+意义。
+5
+宁夏医科大学硕士学位论文 结果
+结果
+1. MG 患者
+收集 2018 年 1 月-2024 年 11 月于宁夏医科大学总医院神经内科确诊为重症肌无力
+的住院患者共162 例。
+1.1 MG 患者一般资料
+MG 患者中，女性 71 例，男性 91 例，女性：男性=0.78:1。年龄最小为 18 岁，最
+大为 85 岁，平均发病年龄 52.11±14.47 岁，女性发病年龄 52.24±15.26 岁，男性发病
+年龄52.79±13.86 岁，男性、女性MG患者的发病年龄之间无统计学差异（P=0.500）。
+统计130例MG 患者的发病季节，其中春季多见（34.6%），冬季少见（18.5%），详见
+图1-1。
+冬
+18% 春
+35%
+秋
+24%
+夏
+23%
+春 夏 秋 冬
+图1-1 MG 患者发病季节分布
+1.2 MG 患者临床特点
+1.2.1 首发症状
+MG 患者根据首发症状不同，分为眼肌型 MG（ocular MG, OMG）和全身型 MG
+（generalized MG, GMG）两类，OMG患者 125 例（77.2%），GMG患者37例（22.8%）,
+性别在OMG、GMG患者中无统计学差异（P=0.071）。统计患者首发症状累及的肌肉，
+详见表 1-1，眼外肌最易受累（77.2%），其次为四肢肌（11.1%），呼吸肌受累最少见
+6
+宁夏医科大学硕士学位论文 结果
+（1.2%），男、女 MG 患者首发症状累及肌肉构成比无统计学差异（P=0.236）。同时
+统计了所有MG患者住院首日的临床分型，OMG患者60例（37.0%），GMG患者102
+例（63.0%），已有 65例OMG患者转化为 GMG患者。
+表1-1 MG 患者首发症状
+首发症状 N（%） 男性（n=91） 女性（n=71）
+OMG 125（77.2%） 75（82.4%） 50（70.4%）
+眼外肌 125（77.2%） 75（82.4%） 50（70.4%）
+GMG 37（22.8%） 16（17.6%） 21（29.6%）
+咽喉肌 14（8.6%） 6（6.6%） 8（11.3%）
+颈肌 3（1.9%） 2（2.2%） 1（1.4%）
+呼吸肌 2（1.2%） 0（0%） 2（2.8%）
+四肢肌 18（11.1%） 8（8.8%） 10（14.1%）
+1.2.2 血清抗体结果
+MG血清自身抗体检测，包括 AChR Ab、MuSK Ab、LRP4 Ab、Titin Ab和 RyR Ab
+五项。108 例患者有 MG 血清抗体结果，94 例患者抗体阳性，其中 AChR Ab 阳性最多
+见（46.3%），其次为 AChR Ab+Titin Ab（18.5%）。有43.6%的患者双重抗体或三重抗
+体阳性，发现AChR Ab+Titin Ab+RyR Ab 三重抗体阳性 14例，AChR Ab+Titin Ab+ MuSK
+Ab三重抗体阳性1 例，详见表1-2。
+表1-2 MG 患者血清抗体结果
+抗体 N（%）
+AChR Ab 50（46.3%）
+AChR Ab+Titin Ab 20（18.5%）
+AChR Ab+Titin Ab+RyR Ab 14（13.0%）
+AChR Ab+MuSK Ab 3（2.8%）
+AChR Ab+RyR Ab 2（1.9%）
+7
+宁夏医科大学硕士学位论文 结果
+AChR Ab+LRP4 Ab 1（0.9%）
+AChR Ab+MuSK Ab+Titin Ab 1（0.9%）
+MuSK Ab 1（0.9%）
+Titin Ab 1（0.9%）
+RyR Ab 1（0.9%）
+阴性 14（13%）
+1.2.3 胸腺情况
+所有患者均已完善胸部 CT或MRI检查，49例患者出现胸腺异常（30.2%），其中
+胸腺瘤 37 例（22.8%），胸腺增生 10 例（6.2%），胸腺退化异常 2 例（1.2%）。统计
+早发型MG与晚发型 MG的胸腺情况，早发型 MG胸腺异常显著高于晚发型 MG（P＜
+0.001），两组患者之间胸腺异常占比有统计学差异（P=0.003），详见表 1-3。统计 MG
+患者不同抗体的胸腺情况，AChR Ab+Titin Ab+RyR Ab 三重抗体阳性组的胸腺瘤发生率
+显著高于AChR Ab 组与AChR Ab+Titin Ab 组（P=0.003）；同时胸腺异常率高于 AChR
+Ab+Titin Ab组（P=0.017），见表1-4。
+表1-3 MG 患者胸腺情况
+胸腺情况 N（%） 早发型MG 晚发型MG
+正常 113（69.8%） 44（57.1%） 69（81.2%）
+异常 49（30.2%） 33（42.9%） 16（18.8%）
+胸腺瘤 37（22.8%） 23（29.9%） 14（16.4%）
+胸腺增生 10（6.2%） 8（10.4%） 2（2.4%）
+胸腺退化异常 2（1.2%） 2（2.6%） 0（0%）
+8
+宁夏医科大学硕士学位论文 结果
+表1-4 MG患者不同抗体胸腺情况
+胸腺情况 AChR AChR +Titin AChR +Titin +RyR P值
+胸腺正常 32（64.0%） 15（75.0%） 4（28.6%）
+胸腺异常 18（36.0%） 5（25.0%）b 10（71.4%）a 0.017
+胸腺瘤 9（18.0%）a 5（25.0%）a 9（64.3 %）b 0.003
+注：多组间比较P<0.05的基础上，两组以“a”“b” 标记时，P<0.05。
+1.2.4 肌无力危象
+本研究有23例患者出现肌无力危象（14.2%），其中男性12 例，女性 11例。统计
+不同抗体MG发生肌无力危象的情况，排除 5例未完善MG血清抗体检测，其中 AChR
+Ab 患者有 9 例发生肌无力危象，AChR Ab+Titin Ab+RyR Ab 患者中有 5 例，AChR
+Ab+Titin Ab患者中有 2例，AChR Ab+MuSK Ab 与抗体阴性患者中各发生 1例，AChR
+Ab、AChR Ab+Titin Ab 与AChR Ab+Titin Ab+RyR Ab 三组之间肌无力危象发生率无统
+计学差异（P=0.204），见表 1-5。
+本研究中 23 例患者出现肌无力危象，胸腺正常的 MG 患者 12 例（10.6%），胸腺
+瘤的患者11例（29.7%），两组间肌无力危象发生率有统计学差异（P=0.005），见表 1-
+6及图1-2。
+表1-5 MG患者不同抗体肌无力危象情况
+肌无力危象 AChR AChR +Titin AChR +Titin +RyR
+有 9（18.0%） 2（10.0%） 5（35.7%）
+无 41（82.0%） 18（90.0%） 9（64.3%）
+9
+宁夏医科大学硕士学位论文 结果
+表1-6 MG患者胸腺异常伴肌无力危象情况
+胸腺情况 有肌无力危象 无肌无力危象 P值（X2值）
+正常 12（10.6%%） 101（89.4%）
+胸腺异常 11（22.4%） 38（77.6%） 0.048（3.926）
+胸腺瘤 11（29.7%） 26（70.3%） 0.005（7.841）
+120
+100
+80
+60
+40
+20
+0
+正常 胸腺异常 胸腺瘤
+有肌无力危象 无肌无力危象
+图1-2 早发型MG与晚发型 MG患者胸腺情况
+1.2.5 常见危险因素及合并症
+本研究统计了 162例患者的吸烟史和饮酒史等危险因素，是否合并高血压、糖尿病
+和冠心病等常见疾病。39 例患者有吸烟史（24.1%），18 例患者有饮酒史（11.1%），
+59例患者合并高血压（36.4%），23例患者合并 2型糖尿病（14.2%），16例患者合并
+冠心病（9.9%），其中合并高血压最为常见。男性、女性之间，早发型 MG与晚发型MG
+患者之间的常见危险因素及合并症之间并无统计学意义（P＞0.05）。
+2. MG 合并其他自身免疫性疾病
+161 例 MG 患者中合并其他 ADs 的有 38 例（23.6%），AITD 最多见（14.9%），
+其次为银屑病（1.9%）；AITD中桥本甲状腺炎最多（11.2%），其中还有结缔组织病 2
+例，炎性肌病2例，类风湿关节炎 2例，1 例干燥综合征、1例视神经脊髓炎、1例吉兰
+10
+宁夏医科大学硕士学位论文 结果
+巴雷综合征、1 例扁平苔藓和 1 例纯红细胞再障性贫血；还有 1 例患者同时合并两种
+ADs：结缔组织病和桥本甲状腺炎（由于 MG合并2种ADs 例数较少，后期研究排除该
+例患者），详见表 2-1。
+根据是否合并ADs，将患者分为单纯MG组和MG-AD组，根据ADs是否为AITD，
+将MG-AD组再分为 MG-AITD组和MG-OAD组。各组ADs 发病率见图 2-1，单纯MG
+患者123例（76.4%），合并 ADs 的MG患者38例（23.6%），其中合并 AITD的 MG
+患者24例（14.9%），合并OAD的MG患者 14例（8.7%）。
+表2-1 MG患者合并其他自身免疫性疾病
+合并ADs情况 N（%）
+未合并ADs 123（76.4%）
+合并ADs 38（23.6%）
+桥本甲状腺炎 18（11.2%）
+甲状腺功能减退症 4（2.5%）
+银屑病 3（1.9%）
+甲状腺功能亢进症 2（1.2%）
+结缔组织病 2（1.2%）
+炎性肌病 2（1.2%）
+类风湿性关节炎 2（1.2%）
+干燥综合征 1（0.6%）
+视神经性脊髓炎 1（0.6%）
+吉兰巴雷综合征 1（0.6%）
+扁平苔藓 1（0.6%）
+纯红细胞再障性贫血 1（0.6%）
+11
+宁夏医科大学硕士学位论文 结果
+单纯MG组 MG-AITD组 MG-OAD组
+9%
+76% 24%
+15%
+图2-1 MG患者合并 ADs分组情况
+2.1 单纯 MG 组与 MG-AD组患者特点比较
+未合并ADs 的单纯 MG患者有123例，合并了 ADs 的MG-AD 组患者有 38例；两
+组患者中有107例记录 MG血清抗体结果，有 129例患者记录了发病季节。
+与单纯 MG 组患者相比，MG-AD 组患者女性占比高，差异具有统计学意义（P＜
+0.05）；比较胸腺异常分布情况，MG-AD组患者的胸腺增生发生率比单纯 MG组高（P
+＜0.05）。两组患者在发病年龄、临床分型、MG 危象、炎症指标、MGFA 分型及发病
+季节上，差异均无统计学意义（P＞0.05），详见表 2-2、2-3。
+比较两组抗体分布，发现 MG-AD 组患者中以 AChR Ab 多见，而单纯 MG 组则
+AChR Ab与AChR Ab 合并其他抗体分布相当，差异具有统计学意义（P＜0.05），见表
+2-4及图2-2。
+表2-2单纯MG组与 MG-AD组患者特点比较
+单纯MG（n=123） MG-AD（n=45） P值（t/X2值）
+发病年龄 52.94±14.17 48.71±14.65 0.112（1.597）
+年龄分组
+早发型 56（45.5%） 21（55.3%） 0.294（1.103）
+晚发型 67（54.5%） 17（44.7%）
+性别
+12
+宁夏医科大学硕士学位论文 结果
+男 75（61.0%） 16（42.1%） 0.040（4.207）
+女 48（39.0%） 22（57.9%）
+临床分型
+OMG 43（35.0%） 17（44.7%） 0.276（1.187）
+GMG 80（65.0%） 21（55.3%）
+胸腺情况
+胸腺正常 89（72.4%） 23（60.5%） 0.03（8.128）
+胸腺瘤 29（23.6%） 8（21.1）
+胸腺增生 4（3.3%）a 6（15.8%）b
+胸腺退化异常 1（0.8%） 1（2.6%）
+MG危象
+有 16（13.0%） 7（18.4%） 0.405（0.695）
+无 107（87.0%） 31（81.6%）
+炎症指标
+NLR 3.86±6.77 3.32±3.79 0.642（0.466）
+PLR 158.82±109.54 158.24±98.89 0.977（0.029）
+LMR 3.85±1.72 4.15±1.70 0.355（0.928）
+SII 85.06±110.47 78.51±97.13 0.329（0.975）
+WBC 7.33±3.527 7.09±2.655 0.951（0.062）
+MGFA
+I型 43（35.0%） 11（28.9%） 0.333（7.671）
+IIa型 19（15.4%） 8（21.1%）
+IIb型 30（24.4%） 5（13.2%）
+IIIa型 12（9.8%） 6（15.8%）
+IIIb型 10（8.1%） 5（13.2%）
+13
+宁夏医科大学硕士学位论文 结果
+IVa型 0（0%） 1（2.6%）
+IVb型 6（4.9%） 1（2.6%）
+V型 3（2.4%） 1（2.6%）
+注：多组间比较P<0.05的基础上，两组以“a”“b” 标记时，P<0.05。
+表2-3单纯MG组与MG-AD组患者季节分布比较
+季节 单纯MG（n=103） MG-AD（n=26） P值（X2值）
+春 37（35.9%） 8（30.8%） 0.831（1.034）
+夏 23（22.3%） 7（26.9%）
+秋 25（24.3%） 5（19.2%）
+冬 18（17.5%） 6（23.1%）
+表2-4单纯MG组与MG-AD组患者抗体分布比较
+单纯MG（n=82） MG-AD（n=25） P值（X2值）
+AChR Ab 33（40.2%） 17（68.0%） 0.048（5.870）
+AChR Ab合并其他抗体 35（42.75） 5（20.0%）
+非AChR Ab 14（17.1%） 3（12.0%）
+MG-AD
+AChR Ab
+AChR Ab合并其他抗体
+非AChR Ab
+单纯MG
+0% 20% 40% 60% 80% 100%
+图2-2 单纯MG组与 MG-AD组患者抗体分布
+2.2 单纯MG组与 MG-AITD组患者临床特点比较
+14
+宁夏医科大学硕士学位论文 结果
+合并 ADs 的 MG 患者有 38 例，其中有 24 例合并 AITD；两组患者中有 98 例记录
+MG血清抗体结果，有 122例患者记录了发病季节。
+MG-AITD 组患者的胸腺增生发生率比单纯 MG 组高，差异具有统计学意义（P＜
+0.05）。两组患者在发病年龄、性别、临床分型、MG 危象、炎症指标、MGFA 分型、
+发病季节及抗体分布上，差异均无统计学意义（P＞0.05），详见表 2-5、2-6、2-7。
+表 2-5单纯MG组与MG-AITD组患者临床特点比较
+单纯MG（n=123） MG-AITD（n=24） P值（t/X2值）
+发病年龄 52.94±14.17 49.33±15.68 0.264（1.122）
+年龄分组
+早发型 56（45.5%） 12（50.0%） 0.688（0.162）
+晚发型 67（54.5%） 12（50.0%）
+性别
+男 75（61.0%） 11（45.8%） 0.168（1.897）
+女 48（39.0%） 13（54.2%）
+临床分型
+OMG 43（35.0%） 11（45.8%） 0.312（1.022）
+GMG 80（65.0%） 13（54.2%）
+胸腺情况
+胸腺正常 89（72.4%） 17（70.8%） 0.049（6.887）
+胸腺瘤 29（23.6%） 3（12.5%）
+胸腺增生 4（3.3%）a 4（16.7%）b
+胸腺退化不良 1（0.8%） 0（0.0%）
+MG危象
+有 16（13.0%） 3（12.5%） 0.946（0.005）
+无 107（87.0%） 21（87.5%）
+15
+宁夏医科大学硕士学位论文 结果
+炎症指标
+NLR 3.86±6.77 3.35±3.95 0.727（0.350）
+PLR 158.82±109.54 153.86±86.69 0.835（0.209）
+LMR 3.85±1.72 4.18±1.47 0.382（0.877）
+SII 85.06±110.47 60.91±22.67 0.195（1.294）
+WBC 7.33±3.53 6.98±2.65 0.828（0.217）
+MGFA
+I型 43（35.0%） 11（45.8%） 0.151（8.565）
+IIa型 19（15.4%） 7（29.2%）
+IIb型 30（24.4%） 1（4.2%）
+IIIa型 12（9.8%） 2（8.3%）
+IIIb型 10（8.1%） 3（12.5%）
+IVa型 0（0%） 0（0%）
+IVb型 6（4.9%） 0（0%）
+V型 3（2.4%） 0（0%）
+注：多组间比较P<0.05的基础上，两组以“a”“b” 标记时，P<0.05。
+表 2-6单纯MG组与MG-AITD组患者季节分布比较
+季节 单纯MG（n=103） MG-AITD（n=19） P值（X2值）
+春 37（35.9%） 6（31.6%） 0.754（1.369）
+夏 23（22.3%） 6（31.6%）
+秋 25（24.3%） 3（15.8%）
+冬 18（17.5%） 4（21.1%）
+16
+宁夏医科大学硕士学位论文 结果
+表 2-7单纯MG组与MG-AITD组患者抗体分布比较
+单纯MG（n=82） MG-AITD（n=16） P值（X2值）
+AChR Ab 33（40.2%） 10（62.6%） 0.164（3.571）
+AChR Ab合并其他抗体 35（42.75） 3（18.7%）
+非AChR Ab 14（17.1%） 3（18.7%）
+2.3 单纯MG组与 MG-OAD组患者临床特点比较
+除去 24 例合并 AITD 的 MG 患者，合并其他 ADs 的 MG 患者有 14 例；两组患者
+中有91例记录了MG 血清抗体结果，有110 例患者记录了发病季节。
+MG-OAD 组患者的胸腺增生及胸腺退化不良的发生率比单纯 MG 组高，差异具有
+统计学意义（P＜0.05）。MGFA分型方面，单纯 MG组患者I型多见，而 MG-OAD组
+患者以IIb、IIIa型多见，两组在 MGFA不同分型构成比方面具有统计学意义（P＜0.05），
+见图2-3。两组患者在发病年龄、性别、临床分型、MG危象、炎症指标、发病季节及抗
+体分布上，差异均无统计学意义（P＞0.05），详见表 2-8、2-9、2-10。
+表 2-8单纯MG组与MG-OAD组患者临床特点比较
+单纯MG（n=123） MG-OAD（n=14） P值（t/X2值）
+发病年龄 52.94±14.17 47.64±13.17 0.184（1.335）
+年龄分组
+早发型 56（45.5%） 9（64.3%） 0.183（1.774）
+晚发型 67（54.5%） 5（35.7%）
+性别
+男 75（61.0%） 5（35.7%） 0.069（3.301）
+女 48（39.0%） 9（64.3%）
+临床分型
+OMG 43（35.0%） 6（42.9%） 0.559（0.341）
+GMG 80（65.0%） 8（57.1%）
+17
+宁夏医科大学硕士学位论文 结果
+胸腺情况
+胸腺正常 89（72.4%）a 6（42.9%）b 0.026（8.969）
+胸腺瘤 29（23.6%） 5（35.7%）
+胸腺增生 4（3.3%）a 2（14.3%）b
+胸腺退化不良 1（0.8%）a 1（7.1%）b
+MG危象
+有 16（13.0%） 4（28.6%） 0.245（1.353）
+无 107（87.0%） 10（71.4%）
+炎症指标
+NLR 3.86±6.77 3.26±3.67 0.915（0.107）
+PLR 158.82±109.54 165.74±120.18 1.000（0.000）
+LMR 3.85±1.72 4.09±2.10 0.709（0.373）
+SII 85.06±110.47 108.66±156.18 0.989（0.014）
+WBC 7.33±3.527 7.27±2.761 0.685（0.405）
+MGFA
+I型 43（35.0%） 0（0%） 0.003（18.368）
+IIa型 19（15.4%） 1（7.1%）
+IIb型 30（24.4%） 4（28.6%）
+IIIa型 12（9.8%） 4（28.6%）
+IIIb型 10（8.1%） 2（14.3%）
+IVa型 0（0%） 1（7.1%）
+IVb型 6（4.9%） 1（7.1%）
+V型 3（2.4%） 1（7.1%）
+注：多组间比较P<0.05的基础上，两组以“a”“b” 标记时，P<0.05。
+18
+宁夏医科大学硕士学位论文 结果
+表 2-9单纯MG组与MG-OAD组患者季节分布比较
+季节 单纯MG（n=103） MG-OAD（n=7） P值（X2值）
+春 37（35.9%） 2（28.6%） 0.864（1.094）
+夏 23（22.3%） 1（14.3%）
+秋 25（24.3%） 2（28.6%）
+冬 18（17.5%） 2（28.6%）
+表 2-10单纯MG组与 MG-OAD组患者抗体分布比较
+单纯MG（n=82） MG-OAD（n=9） P值（X2值）
+AChR Ab 33（40.2%） 7（77.8%） 0.119（4.022）
+AChR Ab合并其他抗体 35（42.75） 2（22.2%）
+非AChR Ab 14（17.1%） 0（0%）
+MG-OAD组
+I型
+II型
+III型
+IV型
+单纯MG组 V型
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+图2-3 单纯MG组与MG-OAD组患者MGFA分型构成比
+2.4 MG-AITD组与 MG-OAD组患者临床特点比较
+24 例合并 AITD 的 MG 患者与 14 例合并除 AITD 的其他 ADs 的 MG 患者相比较，
+有26例患者记录了发病季节；MGFA分型方面，MG-AITD组患者 I型、IIa型多见，而
+MG-OAD组患者以 IIb 型、IIIa型多见，两组在 MGFA不同分型构成比方面具有统计学
+意义（P＜0.05），见图 2-4。两组患者均合并 AD，比较 ADs 与 MG 发生的先后顺序，
+发现 MG-AITD 组患者的 ADs 与 MG 同时发生，而 MG-OAD 组患者的 ADs 发生 MG
+19
+宁夏医科大学硕士学位论文 结果
+之后，具有统计学意义（P＜0.05）。
+两组患者在发病年龄、性别、临床分型、胸腺异常分布情况、MG危象、炎症指标
+及发病季节上，差异均无统计学意义（P＞0.05），详见表 2-11、2-12。
+表 2-11 MG-AITD组与 MG-OAD组患者临床特点比较
+MG-AITD（n=24） MG-OAD（n=14） P值（t/X2值）
+发病年龄 49.33±15.68 47.64±13.17 0.737（0.339）
+年龄分组
+早发型 12（50.0%） 9（64.3%） 0.506（-）
+晚发型 12（50.0%） 5（35.7%）
+性别
+男 11（45.8%） 5（35.7%） 0.541（0.374）
+女 13（54.2%） 9（64.3%）
+临床分型
+OMG 11（45.8%） 6（42.9%） 1.000（0.000）
+GMG 13（54.2%） 8（57.1%）
+胸腺情况
+胸腺正常 17（70.8%） 6（42.9%） 0.154（4.964）
+胸腺瘤 3（12.5%） 5（35.7%）
+胸腺增生 4（16.7%） 2（14.3%）
+胸腺退化不良 0（0.0%） 1（7.1%）
+MG危象
+有 3（12.5%） 4（28.6%） 0.387（-）
+无 21（87.5%） 10（71.4%）
+炎症指标
+NLR 3.35±3.95 3.26±3.67 0.904（0.121）
+20
+宁夏医科大学硕士学位论文 结果
+PLR 153.86±86.69 165.74±120.18 0.904（0.121）
+LMR 4.18±1.47 4.09±2.10 0.874（0.159）
+SII 60.91±22.67 108.66±156.18 0.928（0.091）
+WBC 6.98±2.65 7.27±2.761 0.525（0.636）
+MGFA
+I型 11（45.8%） 0（0%） ＜0.01（20.076）
+IIa型 7（29.2%） 1（7.1%）
+IIb型 1（4.2%） 4（28.6%）
+IIIa型 2（8.3%） 4（28.6%）
+IIIb型 3（12.5%） 2（14.3%）
+IVa型 0（0%） 1（7.1%）
+IVb型 0（0%） 1（7.1%）
+V型 0（0%） 1（7.1%）
+AD发生时间
+AD先，MG后 5（20.8%） 3（21.4%） 0.027（6.888）
+AD与MG同时 16（66.7%）a 4（28.6%）b
+MG先，AD后 3（12.5%）a 7（50.0%）b
+注：多组间比较P<0.05的基础上，两组以“a”“b” 标记时，P<0.05。
+表 2-12 MG-AITD组与 MG-OAD组患者季节分布比较
+季节 MG-AITD（n=19） MG-OAD（n=7） P值（X2值）
+春 6（31.6%） 2（28.6%） 0.392（4.265）
+夏 6（31.6%） 1（14.3%）
+秋 3（15.8%） 2（28.6%）
+冬 4（21.1%） 2（28.6%）
+21
+宁夏医科大学硕士学位论文 结果
+MG-OAD组
+I型
+II型
+III型
+IV型
+MG-AITD组 V型
+0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100%
+图2-4 MG-AITD组与 MG-OAD组患者MGFA分型构成比
+22
+宁夏医科大学硕士学位论文 讨论
+讨论
+1．MG 患者特点
+MG是一种罕见的神经系统疾病，全球患病率为每 100万人 150- 250例, 估计年发
+病率为每100万人 8-10 例/年[19]。年龄、性别、遗传和地理位置等因素会影响其患病率
+和发病率[20]。早发型患者中，女性占该群体的 60%，而在晚发型患者中，老年男性明显
+占主导地位[19]，因此这是一种老年男性和年轻女性的疾病。
+1.1 MG 患者一般资料
+MG可发生于任何年龄段，病程漫长且易反复发作，根据患者首次发病年龄在 50岁
+前或后将 MG 分为早发型 MG 和晚发型 MG，一项 MG 的流行病学研究纳入了 14 项研
+究分析年龄和性别的特异性发病率，发现所有研究都在60至80 岁之间达到峰值，其中
+老年男性明显占主导地位；而女性占 20-40 岁群体的 60% [4, 19]。2020 版的中国 MG 指
+南指出 30-50 岁呈发病双峰[16]，本研究中患者平均发病年龄为 50 岁左右，符合既往研
+究，但性别之间的发病年龄并无统计学差异，应进一步扩大样本量。
+某些疾病可能与特定的环境、温度有关，如春季和秋季易发生过敏，而夏季则容易
+出现胃肠道问题，冬季呼吸道传染疾病则显著增加。有学者发现 MG 患者的发病高峰在
+夏末和冬末[21]，较高或较低的环境温度都可能与 MG的发病相关，本研究中患者的发病
+季节多在春季，由于宁夏医科大学总医院处于中国西北地区，春季昼夜温差大，与既往
+研究基本一致。环境因素在 MG的发病中可能起到重要作用，目前关于季节性对 MG发
+病率的影响尚不清楚，有待进一步研究。
+1.2 MG 患者临床特点
+1.2.1 首发症状
+MG 患者临床表现主要为肌肉波动性无力，休息后好转，活动后加剧[2]，大多数患
+者往往以眼睑下垂为首发症状就诊，也有部分患者以出现咀嚼困难、构音障碍、吞咽困
+难、饮水呛咳、声音嘶哑、抬头困难、呼吸困难、抬臂及梳头不能、上楼困难等症状就
+诊，这些患者最先累及的肌肉分别为咀嚼肌、咽喉肌、颈肌、呼吸肌、四肢肌肉等肌肉。
+23
+宁夏医科大学硕士学位论文 讨论
+本研究中 77.2%的患者最先累及眼外肌，这与既往研究一致[1]，其次为四肢肌，首发症
+状累及呼吸肌的患者最少见，一篇关于重症监护病房 MG患者的特征的研究表明，呼吸
+肌无力不常发生，因其可危及生命，往往需要重症监护和呼吸支持[22]。多数眼肌型 MG
+患者往往会进展为全身型 MG患者，通常在 1-2年内容易转化[23]，本研究并未进行预后
+随访，但部分患者出现症状至就诊期间已完成 OMG至 GMG的转化，因此确诊 MG后
+应定期随诊，如出现其他症状应考虑病情进展。
+1.2.2 血清抗体结果
+MG根据临床特征、发病年龄、抗体类型和胸腺病理进行亚组分类，亚组之间的差
+异有助于个体化治疗[5]，其中 MG 自身抗体检测是诊断和实施个体化治疗的重要环节。
+近年来，人们对 MG的认识逐渐加深，随着 MG抗体检测技术的提升及经济水平的
+提高，越来越多的人们对抗体检测的认可度增加，本研究中有 66.6%的患者有MG血清
+抗体结果，既往研究表明 5-10%的患者无法检测到已知抗体，这些患者被归类为血清阴
+性MG；本研究中有 13%的MG患者抗体阴性，与该观点基本一致。AChR Ab、MuSK
+Ab、Titin Ab、RyR Ab 及LRP4 Ab五项抗体中最常见的是 AChR Ab，与既往研究一致[1,
+2, 16, 20]。许多研究包括个案报道中出现双重抗体或者三重抗体阳性的例子逐渐增多，本
+研究中有43.6%的患者双重抗体或三重抗体阳性，从侧面证实抗体重叠的 MG患者正在
+变多，这种变化的具体原因尚未得到研究，目前多重抗体阳性的 MG 大多为个案报道，
+多重抗体阳性的MG 患者是否会更加重MG病程有待未来进一步验证。
+1.2.3 胸腺情况
+MG是一种由自身免疫反应引起的疾病，而胸腺作为重要的淋巴器官，与人体免疫
+密切相关，高达10%至15%的MG患者患有胸腺瘤，30%至45%的胸腺瘤患者患有MG，
+胸腺瘤是来源于胸腺上皮细胞的罕见肿瘤，手术切除是主要的治疗方法，但仍存在复发
+分险[24, 25]。临床上有时无法通过肉眼或症状来判断患者的胸腺情况，这也是 MG患者通
+常建议完善胸部影像学检查的原因。本研究中所有患者均已完善胸部影像学检查，30.2%
+的患者出现胸腺异常，大多数患者是因确诊 MG后完善影像学检查发现胸腺瘤或其他胸
+腺异常，少部分患者是因体检先发现胸腺瘤，后期出现波动性肌肉无力等症状确诊MG。
+24
+宁夏医科大学硕士学位论文 讨论
+本研究发现早发型 MG 患者发生胸腺异常较晚发型 MG 高，与既往研究一致[26]。
+血清AChRAb阳性的MG与胸腺瘤或胸腺增生有关[24, 25]，横纹肌抗体（Titin Ab、RYR
+Ab等）可能有助于胸腺瘤性 MG的诊断，从而及时发现胸腺病变[27, 28]；年轻MG患者
+中出现Titin 或者RyR抗体强烈提示胸腺瘤的存在，而其缺乏则可能排除胸腺瘤[29]，胸
+腺瘤患者的治疗往往因需要治疗肿瘤而变得复杂。本次研究发现，AChR+Titin+RYR-MG
+组胸腺异常率高于AChR+Titin-MG组和AChR Ab组，同时胸腺异常率比AChR Ab+Titin
+Ab组高，多重抗体阳性的 MG患者完善胸部计算机断层扫描(CT)或磁共振成像（MRI）
+这一行为或有必要成为强制性行为，以排除胸腺瘤或者胸腺异常。
+1.2.4 肌无力危象
+尽管 MG 管理的诊断和治疗取得了进展，但患肌无力危象的患者仍然有死亡的风
+险。本研究有14.2%的患者出现肌无力危象，由于例数太少，所以暂时排除本研究。一
+项回顾性观察性队列研究发现MG诊断时的疾病严重程度（定量 MG 评分或MGFA）、
+胸腺瘤和MuSK Ab 的存在是肌无力危象或疾病恶化的独立预测因子[30]。本研究合并胸
+腺瘤的 MG 患者比未合并胸腺瘤的 MG 患者更容易发生肌无力危象，证实了这一观点。
+MG 患者胸腺切除术后肌无力危象的危险因素的一项 Meta 分析表明手术后肌无力危象
+病史、胸腺瘤、全身性 MG、延髓症状和伴随并发症是术后肌无力危象的危险因素[31]。
+在本研究中，有 35.7%的AChR Ab+Titin Ab+RyR Ab 三重抗体阳性患者出现肌无力
+危象，在各抗体分组中占比最高，但并无统计学差异，可能需要扩大样本量进一步研究。
+1.2.5 危险因素及合并症
+吸烟被证明会导致或加剧 ADs，一项前瞻性横断面研究证明 OMG患者症状严重程
+度与吸烟存在关联，戒烟或可改善MG患者症状及生活质量[32]，本研究统计了患者的吸
+烟史及饮酒史，大部分患者并无吸烟史或饮酒史，可能与患者大多数为女性与老年人有
+关。
+层出不穷的新型药物的开发对MG的治疗逐渐得到成效，MG 患者的预期寿命较以
+往增长，其合并症的数量也在不断增加[33]。有研究中提出 2型糖尿病与 MG的后续风险
+密切相关，且在女性及晚发型 MG患者中更为普遍[34]，还有研究发现晚发型 MG中2型
+25
+宁夏医科大学硕士学位论文 讨论
+糖尿病和心血管疾病的发生率更高[35, 36]。一项关于 MG患者心脏受累的系统综述得出年
+龄、胸腺瘤和抗横纹肌抗体的存在是 MG患者心肌病的危险因素[37]。一项回顾性队列研
+究对胸腺切除术后的 MG患者进行了约 9 年的随访，发现全身性 MG及合并症MG患
+者的预后比单独 MG 患者差[38]。因此除了备受关注的 ADs 外，本研究中统计了高血压、
+冠心病和2型糖尿病等常见合并症，其中 36.4%的患者合并高血压，所占比例最高，但
+年龄、性别分组与常见合并症之间并无统计学意义。
+2．MG 合并 ADs患者临床特点
+MG合并ADs 的相关报道越来越多，逐渐引起了人们的关注，不同国家的研究群
+体报告的MG患者合并 ADs 的患病率不同:挪威人群22.9%，丹麦人群 9.4%，中国人
+群11.6%，日本人群 19.7%[14, 39-41]，据统计，MG合并的ADs 可达 23种之多[3]，其合
+并症在各研究中发病率各不同，尚未统一，待更大型的研究统一确定。本研究中有
+23.6%的MG患者合并 ADs，与既往研究基本一致，其中合并的 ADs 可达10种，包括
+桥本甲状腺炎、甲状腺功能减退症、甲状腺功能亢进症、银屑病、结缔组织病、炎性
+肌病、类风湿关节炎、干燥综合征、视神经脊髓炎、吉兰巴雷综合征、扁平苔藓、纯
+红细胞再障性贫血等等疾病。其中最多见的是 AITD，这在多数研究中达成了一致[9]；
+其次为银屑病，神经系统自身免疫性合并症较少见，临床上多为个案报道。部分 MG
+患者甚至合并两种或者三种 ADs，但本研究中只有 1例患者同时合并结缔组织病和桥
+本甲状腺炎，由于例数太少，所以暂时排除本研究。
+2.1 单纯 MG 组与 MG-AD组患者特点比较
+与单纯 MG 患者相比，合并 ADs 的 MG 患者女性更多见，这与既往研究中提到的
+MG患者伴随ADs 的发生率高于一般人群，女性风险显著的观点一致[11]。尽管瑞典的一
+项基于人群的 MG 研究表明年轻患者中出现 ADs 的频率高于预期，尤其女性，但本研
+究的早发型和晚发型 MG 患者合并 ADs 并未发现统计学意义，可能是样本量过小的原
+因，后期需要更多研究进一步扩大样本量证实该观点。
+大多数自身免疫性合并症与 AChR-MG有关，迄今为止，与 MuSK-MG相关的ADs
+很少见报道，其他抗体则更少见。本研究中单纯 MG与MG-AD患者的抗体均 AChR Ab
+26
+宁夏医科大学硕士学位论文 讨论
+多见，但近年来双重抗体或三重抗体阳性 MG 患者逐渐增多，所以本文统计了两组中
+AChR Ab合并其他抗体的例数，再次分组，发现单纯 MG组中AChR Ab 合并其他抗体
+与单纯AChR Ab分布基本相当，而 MG-AD 组多抗体阳性患者并不多见。除此之外，本
+研究发现合并 ADs 的 MG 患者发生胸腺增生的可能性更大，这可能与合并 ADs 的 MG
+患者以AChR Ab更多有关，而单纯 MG患者 AChR Ab与AChR Ab 合并其他抗体分布
+相似这一发现有关，虽 AChR Ab 合并其他抗体也属于 AChR Ab 一类，但多抗体阳性
+MG可能会更严重，且本研究得出了多抗体阳性的患者发生胸腺瘤的可能性更大，而胸
+腺瘤患者症状更严重，预后更差，且不可切除的胸腺瘤患者往往表现为严重的 MG[24]，
+所以多抗体阳性MG 值得更多研究明确其临床特征。
+虽然MG的病因尚不清楚，但炎症被认为是 MG发病机制的关键组成部分，在MG
+的微环境中，炎症因子表达异常，从而增强 B 细胞活化并促进自身抗体的产生，精确监
+测炎症活动对于 MG 的治疗策略至关重要[17]。最新研究提出炎症成分或可成为 MG 严
+重程度的生物标志物，部分临床研究数据表明 NLR、PLR、LMR和SII等炎症指标与自
+身免疫疾病有明确关联，如一些关于风湿性疾病的纵向研究表明，抗炎治疗后 PLR 降
+低；NLR 可用作首先发现视神经脊髓炎谱系疾病的预后指标[17, 42, 43]。所以炎症指标可能
+会为临床医生提供有价值的信息，这反映在白细胞、中性粒细胞、淋巴细胞、单核细胞
+与血小板计数的变化上。本研究将 NLR、PLR、LMR 和 SII 这些炎症指标也纳入统计，
+两组之间分析后并未发现统计学意义，可能炎症指标在正常人群与 MG 患者间有差异，
+MG与MG-AD人群之间差异并不显著。
+2.2 单纯 MG 组与 MG-AITD组患者临床特点比较
+甲状腺疾病作为与 MG 相关的最常见的系统 ADs 之一，聚焦于 MG 与 AITD 的研
+究较多。既往研究 MG合并甲状腺疾病的患病率并不统一，据报道，两者共存的比率在
+5%到 14%之间[13]，一项关于 MG 与甲状腺疾病的系统评价与荟萃分析表明，MG 患者
+甲状腺自身免疫患病率的汇总估计值为10.1%[9] 。本研究合并AITD的MG患者为14.9%，
+与既往报道一致。有研究指出，在患者身上可以发现具有 ADs 特征性的自身抗体，而不
+存在任何ADs 的临床表现，在收集数据时存在这种现象的患者并不少见，但因导致 ADs
+27
+宁夏医科大学硕士学位论文 讨论
+特征性抗体异常的可能原因很多，如炎症等原因，后期再次复查指标患者可能会恢复正
+常，且大部分患者并未出现症状，所以本研究 MG-AD组并未纳入 ADs特征性抗体异常
+的患者。
+不少研究表明合并 AITD的MG临床表现往往比较轻[8, 13, 14]，且对肌无力危象的敏
+感性较低，不太容易发生肌无力危象[11]。评估与其他 ADs 相关的 MG 的临床特征的一
+项研究表明，MG 伴 AITD 的患者年轻、症状轻，且胸腺异常的频率较低[3]。本研究中
+单纯MG组与MG-AITD组两组间比较，只发现 MG-AITD组患者的胸腺增生发生率比
+单纯MG组高，在发病年龄、性别、临床分型、MG危象、炎症指标、MGFA分型、发
+病季节及抗体分布等方面，两组之间均未发现统计学意义，可能是由于样本量较小，出
+现结果偏倚，具体原因有待进一步研究。
+此外，临床中发现一种现象，即部分 MG患者没有出现 AITD相对应的症状，但血
+清中出现甲状腺抗体阳性，可能这些患者体内有针对甲状腺的免疫功能异常。理论上，
+某种抗体产生的速度和数量以及对靶组织的破坏都达到一定程度时才会出现临床症状，
+这可能是 MG 合并甲状腺抗体阳性者检出抗体却未诊断的原因[44]。因此在临床实践中，
+积极的筛查常规甲状腺功能和甲状腺超声检查对患者是有益的。
+2.3 单纯 MG 组与 MG-OAD组患者临床特点比较
+本研究有3例银屑病，2例结缔组织病，2例炎性肌病，2例类风湿关节炎，其余合
+并症均只发现1例，在既往文献中，AITD在MG的合并症中较为常见，其他 ADs 合并
+MG 在多数研究为个案报道或文献回顾分析，尤其神经性 ADs 更为少见，因病例较少，
+本研究将非 AITD 的其他 ADs 合并分析。本研究中 MG 合并银屑病较多，但既往报道
+中MG合并银屑病并不多见，这可能是一种偶然现象。
+一项针对 MG 合并吉兰巴雷综合征的临床特征的研究表明 15 例患者中有 4 例发生
+胸腺瘤或胸腺切除术[15]；MG合并炎性肌病的相关性研究中，一半以上的患者行胸腺瘤
+切除手术，说明MG 合并炎性肌病的患者多伴有胸腺瘤[45]；63%MG 合并视神经脊髓炎
+的患者接受了胸腺切除术[11]，胸腺病理评估表明其中大部分患者为胸腺增生；以上研究
+均说明了 MG-OAD 组的患者可能胸腺异常比单纯 MG 组更多，主要为胸腺增生和胸腺
+28
+宁夏医科大学硕士学位论文 讨论
+瘤。本研究发现MG-OAD组患者的胸腺增生及胸腺退化异常的发生率比单纯MG组高，
+差异具有统计学意义，有待进一步研究。
+既往文献均表明伴胸腺异常的 MG患者可能症状更严重，预后更差[24]，分析两组患
+者的MGFA分型分布，单纯 MG组患者I型多见，而 MG-OAD组患者以 IIb、IIIa型多
+见，两组在MGFA 不同分型构成比方面具有统计学意义。说明 MG-OAD组患者可能症
+状更严重，预后可能也相对较差；之前提到伴 AITD 的 MG 患者可能症状更轻，现在
+MG-OAD组却出现相反结果，目前暂无文献支持这一观点，未来有待扩大样本量进一步
+证实。
+2.4 MG-AITD组与 MG-OAD组患者临床特点比较
+一项针对 16 例视神经脊髓炎和 MG 同时存在的多中心研究发现 MG 先于视神经脊
+髓炎[46]；有研究统计了既往文献中共 70例 MG并发视神经脊髓炎的患者，发现 70%的
+患者 MG 先发生，随后发生视神经脊髓炎；共 15 例 MG 并发自身免疫性脑炎的患者，
+发现 53%的患者 MG 发作在前；而干燥综合征在 MG 前或后发作均有可能[11]；一项关
+于 MG 合并吉兰巴雷综合征的报道发现 3 例患者均在 MG 的基础上发生了吉兰巴雷综
+合征[47]；有文献报道了MG与银屑病之间的关联，6例患者中银屑病仅2例先于MG[48]；
+而在本研究中统计了两组患者 ADs 与 MG 发生的先后时间，发现 MG-AITD 组患者的
+ADs 与MG同时发生，而 MG-OAD组患者的 ADs 发生MG之后，具有统计学意义，与
+既往大部分报道一致，但目前大多数研究均为个案报道、系统评价或荟萃分析，关于 MG
+合并具体ADs 目前并无大样本研究，有待验证该结论的准确性。
+两组MG患者均伴有 ADs，既往研究表明 MG伴AITD的患者年轻、症状轻，且胸
+腺异常的频率较低，而 MG伴神经系统疾病的临床病程较严重[3]；针对 MG合并吉兰巴
+雷综合征的临床特征的一项研究表明 15 例患者中有 4 例发生胸腺瘤或胸腺切除术，有
+2例死亡[47]，间接证实了这一观点。虽两组之间肌无力危象的发生率并无显著差异，但
+本研究分析了两组关于 MGFA 分型的分布，发现 MG-AITD 组患者 I 型、IIa 型多见，
+而 MG-OAD 组患者以 IIb 型、IIIa 型多见，两组在 MGFA 不同分型构成比方面具有统
+计学意义，说明合并 OAD 的 MG 可能症状更严重或进展更快，或者 MG-OAD 组患者
+29
+宁夏医科大学硕士学位论文 讨论
+在首发症状方面比 MG-AITD组患者更严重，有待更多研究进一步验证。另外，两组患
+者在发病年龄、性别、临床分型、胸腺异常分布情况、MG危象、炎症指标及发病季节
+等方面上，均不存在显著差异。
+3. 不足与展望
+本研究探讨了 MG 合并其他 ADs 的临床特征，但由于是一项回顾性研究，受限于
+单中心数据，合并症的样本量较少，尤其是罕见的合并症，本研究将少见的 ADs 合并分
+析可能会导致偏倚；且数据依赖于病历记录，可能导致关键指标，如症状、评分等出现
+偏差；此外，缺乏对合并症患者的远期结局的追踪，且未评估合并 ADs 的 MG 在药物
+的使用方面是否不同。后期可开展大型前瞻性队列进一步研究，纳入不同人种人群，分
+析地域性差异对共病率的影响，同时通过孟德尔随机化研究区分因果关系，也可评估MG
+与 ADs 共存对患者生活质量的多维度影响，该领域空白较大，有待更多研究进一步验
+证。
+30
+宁夏医科大学硕士学位论文 结论
+结论
+1.三重抗体阳性的 MG患者发生胸腺瘤的可能性更大。
+2.合并ADs的MG患者更易发生胸腺增生；合并AITD的MG患者可能比合并OAD
+的MG患者症状更轻。
+3.合并AITD的 MG患者往往在诊断 MG的同时发现AITD，而合并 OAD的MG患
+者的ADs往往发生在MG之后，因此确诊MG后需定期复查，警惕其他ADs共存可能。
+31
+宁夏医科大学硕士学位论文 参考文献
+参考文献
+[1] Gilhus N E, Longo D L. Myasthenia Gravis [J]. New England Journal of Medicine, 2016,
+375(26): 2570-81.
+[2] Gilhus N E, Tzartos S, Evoli A, et al. Myasthenia gravis [J]. Nat Rev Dis Primers, 2019,
+5(1): 30.
+[3] Tamer S, Gokce Gunes H N, Gokcal E, et al. Coexistence of autoimmune diseases and
+autoantibodies in patients with myasthenia gravis [J]. Neurol India, 2016, 64(1): 45-9.
+[4] Amin S, Aung M, Gandhi F R, et al. Myasthenia Gravis and its Association With Thyroid
+Diseases [J]. Cureus, 2020, 12(9): e10248.
+[5] Gilhus N E, Verschuuren J J. Myasthenia gravis: subgroup classification and therapeutic
+strategies [J]. The Lancet Neurology, 2015, 14(10): 1023-36.
+[6] Sanders D B, Wolfe G I, Benatar M, et al. International consensus guidance for
+management of myasthenia gravis: Executive summary [J]. Neurology, 2016, 87(4): 419-25.
+[7] Evoli A, Batocchi A P, Tonali P. A practical guide to the recognition and management of
+myasthenia gravis [J]. Drugs, 1996, 52(5): 662-70.
+[8] Lopomo A, Berrih-Aknin S. Autoimmune Thyroiditis and Myasthenia Gravis [J]. Front
+Endocrinol (Lausanne), 2017, 8: 169.
+[9] Song R-h, Yao Q-m, Wang B, et al. Thyroid disorders in patients with myasthenia gravis:
+A systematic review and meta-analysis [J]. Autoimmunity Reviews, 2019, 18(10).
+[10] Li K, Ouyang Y, Yang H. Myasthenia gravis and five autoimmune diseases: a bidirectional
+Mendelian randomization study [J]. Neurol Sci, 2024, 45(4): 1699-706.
+[11] Zhu Y, Wang B, Hao Y, et al. Clinical features of myasthenia gravis with neurological and
+systemic autoimmune diseases [J]. Front Immunol, 2023, 14: 1223322.
+[12] 谭长涛. 26 例伴其他自身免疫性疾病重症肌无力的临床特点[J]. 中国医药指南,2018,
+16(32): 80.
+32
+宁夏医科大学硕士学位论文 参考文献
+[13] Kubiszewska J, Szyluk B, Szczudlik P, et al. Prevalence and impact of autoimmune thyroid
+disease on myasthenia gravis course [J]. Brain Behav, 2016, 6(10): e00537.
+[14] Shi J, Huan X, Zhou L, et al. Comorbid Autoimmune Diseases in Patients With Myasthenia
+Gravis: A Retrospective Cross-Sectional Study of a Chinese Cohort [J]. Front Neurol, 2021, 12:
+790941.
+[15] Yuan J, Zhang J, Zhang B, et al. The clinical features of patients concurrent with Guillain-
+Barre syndrome and myasthenia gravis [J]. Neurosciences (Riyadh), 2018, 23(1): 66-70.
+[16] 常婷. 中国重症肌无力诊断和治疗指南(2020 版) [J].中国神经免疫学和神经病学杂
+志,2021, 28(01): 1-12.
+[17] Huang X, Xu M, Wang Y, et al. The systemic inflammation markers as possible indices for
+predicting respiratory failure and outcome in patients with myasthenia gravis [J]. Ann Clin
+Transl Neurol, 2023, 10(1): 98-110.
+[18] Jaretzki A, 3rd, Barohn R J, Ernstoff R M, et al. Myasthenia gravis: recommendations for
+clinical research standards. Task Force of the Medical Scientific Advisory Board of the
+Myasthenia Gravis Foundation of America [J]. Neurology, 2000, 55(1): 16-23.
+[19] Carr A S, Cardwell C R, McCarron P O, et al. A systematic review of population based
+epidemiological studies in Myasthenia Gravis [J]. BMC Neurol, 2010, 10: 46.
+[20] Jaiswal S, Shrivastava T. Advances in Understanding and Managing Myasthenia Gravis:
+Current Trends and Future Directions [J]. Cureus, 2024, 16(4): e59104.
+[21] Melamed R D, Khiabanian H, Rabadan R. Data-driven discovery of seasonally linked
+diseases from an Electronic Health Records system [J]. BMC Bioinformatics, 2014, 15 Suppl
+6(Suppl 6): S3.
+[22] Al-Bassam W, Kubicki M, Bailey M, et al. Characteristics, incidence, and outcome of
+patients admitted to the intensive care unit with myasthenia gravis [J]. J Crit Care, 2018, 45:
+90-4.
+[23] Hehir M K, Silvestri N J. Generalized Myasthenia Gravis: Classification, Clinical
+33
+宁夏医科大学硕士学位论文 参考文献
+Presentation, Natural History, and Epidemiology [J]. Neurol Clin, 2018, 36(2): 253-60.
+[24] Alvarez-Velasco R, Gutierrez-Gutierrez G, Trujillo J C, et al. Clinical characteristics and
+outcomes of thymoma-associated myasthenia gravis [J]. Eur J Neurol, 2021, 28(6): 2083-91.
+[25] Wang Y, Qi G, Yang Y, et al. Clinical features of thymoma with and without myasthenia
+gravis [J]. Pak J Med Sci, 2024, 40(7): 1384-90.
+[26] Cron M A, Maillard S, Villegas J, et al. Thymus involvement in early-onset myasthenia
+gravis [J]. Ann N Y Acad Sci, 2018, 1412(1): 137-45.
+[27] Meriggioli M N, Sanders D B. Muscle autoantibodies in myasthenia gravis: beyond
+diagnosis? [J]. Expert Rev Clin Immunol, 2012, 8(5): 427-38.
+[28] Randhawa J S, Kim L S, Aguilar C, et al. Atypical Seropositive Striated Muscle Antibody
+Myasthenia Gravis Presentation with Metastatic B1 Thymoma: A Rare Case [J]. Cureus, 2023,
+15(2): e35221.
+[29] Suzuki S, Utsugisawa K, Nagane Y, et al. Three Types of Striational Antibodies in
+Myasthenia Gravis [J]. Autoimmune Diseases, 2011, 2011: 1-7.
+[30] Nelke C, Stascheit F, Eckert C, et al. Independent risk factors for myasthenic crisis and
+disease exacerbation in a retrospective cohort of myasthenia gravis patients [J]. J
+Neuroinflammation, 2022, 19(1): 89.
+[31] Geng Y, Zhang H, Wang Y. Risk factors of myasthenia crisis after thymectomy among
+myasthenia gravis patients: A meta-analysis [J]. Medicine (Baltimore), 2020, 99(1): e18622.
+[32] Gratton S M, Herro A M, Feuer W J, et al. Cigarette Smoking and Activities of Daily Living
+in Ocular Myasthenia Gravis [J]. J Neuroophthalmol, 2016, 36(1): 37-40.
+[33] Croitoru C G, Pavel-Tanasa M, Cuciureanu D I, et al. Autoimmune and Non-Autoimmune
+Comorbidities in Myasthenic Patients of East-European Descent: A Case-Control Study [J]. J
+Clin Med, 2024, 13(8).
+[34] Liu Y D, Tang F, Li X L, et al. Type 2 diabetes mellitus as a possible risk factor for
+myasthenia gravis: a case-control study [J]. Front Neurol, 2023, 14: 1125842.
+34
+宁夏医科大学硕士学位论文 参考文献
+[35] Misra U K, Kalita J, Singh V K, et al. A study of comorbidities in myasthenia gravis [J].
+Acta Neurol Belg, 2020, 120(1): 59-64.
+[36] Pasqualin F, Guidoni S V, Ermani M, et al. Outcome measures and treatment effectiveness
+in late onset myasthenia gravis [J]. Neurol Res Pract, 2020, 2: 45.
+[37] Shivamurthy P, Parker M W. Cardiac manifestations of myasthenia gravis: A systematic
+review [J]. IJC Metabolic & Endocrine, 2014, 5: 3-6.
+[38] Laakso S M, Myllynen C, Strbian D, et al. Comorbidities worsen the prognosis of
+generalized myasthenia gravis post-thymectomy [J]. J Neurol Sci, 2021, 427: 117549.
+[39] Christensen P B, Jensen T S, Tsiropoulos I, et al. Associated autoimmune diseases in
+myasthenia gravis. A population-based study [J]. Acta Neurol Scand, 1995, 91(3): 192-5.
+[40] Thorlacius S, Aarli J A, Riise T, et al. Associated disorders in myasthenia gravis:
+autoimmune diseases and their relation to thymectomy [J]. Acta Neurol Scand, 1989, 80(4):
+290-5.
+[41] Kanazawa M, Shimohata T, Tanaka K, et al. Clinical features of patients with myasthenia
+gravis associated with autoimmune diseases [J]. Eur J Neurol, 2007, 14(12): 1403-4.
+[42] Huang S, Wang Y, Zhu J, et al. Systemic Inflammatory Response Index, a Potential
+Inflammatory Biomarker in Disease Severity of Myasthenia Gravis: A Pilot Retrospective
+Study [J]. J Inflamm Res, 2024, 17: 2563-74.
+[43] Huda R. Inflammation and autoimmune myasthenia gravis [J]. Front Immunol, 2023, 14:
+1110499.
+[44] 姬文珍. 重症肌无力与甲状腺异常的相关性 [D], 2008.
+[45] 蒋云, 侯世芳, 张华, 等. 胸腺瘤相关重症肌无力合并炎性肌病三例报道并文献复习
+[J].中国神经免疫学和神经病学杂志,2024, 31(01): 1-7.
+[46] Leite M I, Coutinho E, Lana-Peixoto M, et al. Myasthenia gravis and neuromyelitis optica
+spectrum disorder [J]. Neurology, 2012, 78(20): 1601-7.
+[47] Cao Y, Gui M, Ji S, et al. Guillain-Barre syndrome associated with myasthenia gravis:
+35
+宁夏医科大学硕士学位论文 参考文献
+Three cases report and a literature review [J]. Medicine (Baltimore), 2019, 98(47): e18104.
+[48] El Sayed F, Kabbani M. Psoriasis and Myasthenia Gravis: A Common Th-17 Pathway [J].
+Cureus, 2022, 14(3): e23090.
+36
+宁夏医科大学硕士学位论文 附录
+附录
+附录1重症肌无力基金会(MGFA)临床分型
+分型 临床表现
+I型 眼肌无力，可伴闭眼无力，其他肌群肌力正常
+II型 除眼肌外的其他肌群轻度无力，可伴眼肌无力
+IIa型 主要累及四肢肌或（和）躯干肌，可有较轻的咽喉肌受累
+IIb型 主要累及咽喉肌或（和）呼吸肌，可有轻度或相同的四肢肌或（和）躯干肌
+受累
+III型 除眼肌外的其他肌群中度无力，可伴有任何程度的眼肌无力
+IIIa型 主要累及四肢肌或（和）躯干肌，可有较轻的咽喉肌受累
+IIIb型 主要累及咽喉肌或（和）呼吸肌，可有轻度或相同的四肢肌或（和）躯干肌
+受累
+IV型 除眼肌外的其他肌群重度无力，可伴有任何程度的眼肌无力
+IVa型 主要累及四肢肌或（和）躯干肌，可有较轻的咽喉肌受累
+IVb型 主要累及咽喉肌或（和）呼吸肌，可有轻度或相同的四肢肌或（和）躯干肌
+受累
+V型 气管插管，伴或不伴机械通气（除外术后常规使用）；仅鼻饲而不进行气管
+插管的病例为Ⅳb型
+注：MGFA:美国重症肌无力基金会
+37
+宁夏医科大学硕士学位论文 文献综述
+文献综述
+重症肌无力和自身免疫性甲状腺疾病
+【摘要】重症肌无力(Myasthenia gravis, MG)是一种慢性自身免疫性神经系统疾病，
+病程漫长且反复发作，及时诊断与避免其进展性加重对 MG患者至关重要。越来越多研
+究表明MG易与各种其他自身免疫性疾病共存，其中最常见的是自身免疫性甲状腺疾病
+(Autoimmune thyroid disease, AITD)。合并症可能使疾病管理复杂化，干扰诊疗，增加 MG
+患者的疾病负担，因此确定 MG患者的合并症非常重要。目前，MG 的病程是否会因其
+他自身免疫性疾病的发展而变得复杂尚不可知，其合并症管理方面仍在探索阶段。本文
+旨在总结MG与AITD 共存的流行病学、临床特点、免疫病理机制及防治措施，以协助
+对此类患者进行早期诊断和管理。
+【关键词】重症肌无力；自身免疫性甲状腺疾病；甲状腺功能异常；自身免疫系统
+疾病
+重症肌无力（Myasthenia gravis, MG）是一种神经-肌肉接头信号传递障碍的获得性
+自身免疫性疾病，该病的主要表现是肌肉无力，长时间的重复使用肌肉会使肌肉无力加
+剧[1, 2]。MG发病率范围很广，每年每 100 万人中就有4.1-30例不等[3]，近年来该发病率
+逐渐上升[4]，我国 MG发病率约为0.68/10 万，其中 70-74岁患者为高发人群[1]。有研究
+提出MG与其他自身免疫性疾病（Autoimmune diseases, ADs）共存可能不是偶然[5, 6]，
+随着MG合并其他ADs的个案报道逐渐增多，这种共存现象逐渐引起人们的广泛关注。
+自身免疫性甲状腺疾病（Autoimmune thyroid disease, AITD）是由于免疫系统失调导
+致对甲状腺的免疫攻击而引起的由 T细胞介导的器官特异性自身免疫性疾病。包括三种
+主要疾病：Graves 病（Graves’disease, GD）、桥本甲状腺炎（Hashimoto thyroiditis, HT）
+和抗甲状腺抗体阳性的甲状腺功能正常患者，前两者分别以甲状腺功能亢进和甲状腺功
+能低下为临床特征[6-8]。作为MG最常见的自身免疫性合并症[6, 9, 10]，在本综述中，我们
+总结了MG与AITD的流行病学、临床表现、免疫病理机制及防治措施。
+38
+宁夏医科大学硕士学位论文 文献综述
+1.流行病学
+MG是一种罕见的神经系统疾病，全球患病率为每 100万人 150- 250例, 估计年发
+病率为每100万人 8-10 例/年[11]。年龄、性别、遗传和地理位置等因素会影响其患病率
+和发病率[12],一项针对神经系统疾病的终生患病率的研究结果显示MG发病率范围很广，
+从每 100 万人 4.1 例到 30 例/年不等[3]。但在过去七十年全球范围内 MG 发病率均有所
+增加[4]，据估计，1915年MG患病率为1/200,000,至1969年发现 AChR 抗体后，MG患
+病率上升至 1/17,000[13]。这种增加主要发生在晚发型 MG 患者中[14-17]，2016-2018 年中
+国进行了一项大型研究，包括 59,243 例患者，用于评估中国所有年龄组 MG 患者的发
+病率和死亡率，其中 70-74岁年龄组发病率最高[18]。目前尚不清楚该现象是一种生物现
+象，还是受到疾病诊断改善、患者就医意识增强、抗体测定的技术提升及人类寿命增长
+的影响[14-17, 19]。MG 发病年龄在 20-40岁之间，女性占该群体的 60%，而在晚发型患者
+中，老年男性明显占主导地位[11]，因此，这是一种老年男性和年轻女性的疾病[20]。
+AITD 是器官特异性自身免疫性疾病，以产生自身甲状腺抗体和淋巴细胞浸润甲状
+腺为特征。该病患病人群近年来不断增加，其患病率在普通人群中为 2%-5%，性别之间
+存在显著差异，女性(5%-15%)明显高于男性(1-5%)[21-23]。地理区域、种族及年龄均导致
+其患病率和发病率存在差异，有研究发现其发病率随着季节变化而变化，表现出春季高
+发的特点[24]。抗甲状腺抗体阳性而无症状的亚临床 AITD的比例也在升高[25]，抗甲状腺
+抗体的频率随着年龄的增长而增加，在 45 至55岁之间达到峰值[7]。
+MG患者中共存自身免疫性疾病的频率为 13%，女性和抗乙酰胆碱受体血清阳性患
+者中多见[26]，在所有自身免疫性疾病中，AITD最常见于MG[7, 9, 20, 26-28]，据报道，两者
+共存的比率在5%到 14%之间[29]。GD和HT 发病率分别为7%和 3%[26, 30]。MG 患甲状
+腺疾病的患病率和风险高于普通人群[20]，一项荟萃分析表明 MG 患者甲状腺自身免疫
+发生率的汇总估计值为 10.1%，抗甲状腺抗体阳性患者患病率最高，其次是 GD、HT[9]。
+Chou 等人发现 MG 患者诊断时甲状腺疾病的患病率为 18.4%，在排除已有的甲状腺疾
+病后，MG患者合并甲状腺疾病的发生率为 8.7%，与对照组相比，MG患者患甲状腺疾
+病的风险增加了2.36 倍，预先存在的甲状腺疾病的患病率更高[20]。此外，MG亚组之间
+39
+宁夏医科大学硕士学位论文 文献综述
+的 AITD 不同。早发型患者的 AITD 发生率远高于晚发型患者，AChR-MG 共病的频率
+高于 MuSK-MG 和 LRP4-MG[6, 28]，眼肌型 MG 较全身型 MG 多见[6, 31]。尽管甲状腺疾
+病在MG患者中相对常见，影响约 10%的患者，但反之则不然，GD 患者的MG患病率
+仅为 0.14%[32]。
+2.临床特点
+MG临床表现具有极大异质性，通常根据抗体类型、症状、发病年龄和胸腺病理进
+行分组[2]。全身骨骼肌均可受累，包括面肌、咀嚼肌、咽喉肌、颈肌、呼吸肌、四肢肌
+肉等，出现眼睑闭合无力、鼓腮漏气、鼻唇沟变浅、咀嚼困难、构音障碍、吞咽困难、
+饮水呛咳、声音嘶哑、抬头困难、呼吸困难、抬臂及梳头不能、上楼梯困难等症状[1]。
+肌肉表现为波动性无力和易疲劳性，症状呈“晨轻暮重”，活动后加重，休息后可减轻。
+最初，80%以上的 MG 患者会出现与眼部受累相关的症状[12, 33]，在眼肌症状出现２年内
+容易向全身型转化，累及到其他肌群。亚裔人群２年自然转化率为 23%-31%，低于西方
+人群（50-80%）[1]。部分患者短期内可能迅速进展，出现肌无力危象。
+GD 与 HT 两者具有相似的自身免疫机制，但临床表现存在显著差异[34]，GD 主要
+为甲状腺功能亢进表现，患者可能出现心悸、怕热、多汗、体重减轻、手颤、焦虑等症
+状[35]，25%-50%的患者出现 Graves 眼病，表现为突眼、眼睑退缩、复视等[36]。而HT主
+要为甲状腺功能减退表现，可能出现乏力、畏寒、体重增加、便秘、皮肤干燥、记忆力
+减退等症状[37]。
+Graves 眼病与眼肌型 MG 因眼部表现的相似性经常使临床医生难以区分，眼肌型
+MG是指局限于眼肌（上睑提肌和眼外肌）导致上睑下垂和复视的患者，眼轮匝肌不同
+程度地无力。在甲状腺眼病中，上睑下垂很少见;通常存在内斜视（眼睛向内偏斜）和下
+斜视（眼睛向下偏斜），因为引起受限的肌肉是内直肌和下直肌。因此，上睑下垂和外
+斜视（眼睛向外偏斜）提示甲状腺眼病患者可能存在 MG[19]。
+McEachern和 Parnell 于1948年报道 MG和GD的临床表现之间存在“see-saw”联
+系，即 MG 症状加重时，GD 症状好转，反之亦然。后一些临床医生研究发现“反 see-
+saw”联系，当 GD 患者症状加重时，会出现 MG 症状。还有研究并未发现 MG 与 GD
+40
+宁夏医科大学硕士学位论文 文献综述
+之间有确切关系，现两者之间的关系仍然模糊且多变[32, 38-40]。
+许多研究表明 MG共存AITD往往具有较轻的临床表现[28, 29, 41]，且对肌无力危象的
+敏感性较低，不太容易发生肌无力危象[6]。评估与其他自身免疫性疾病相关的 MG的临
+床特征的一项研究表明，MG 和 AITD 患者的临床特征具有早发性、轻度临床表现，胸
+腺异常的频率较低[41]。
+当MG与AITD共存时，如果 MG症状较轻或仅累及眼外肌时，容易被遗漏或误认
+为是GD，上睑下垂在 GD中并不常见，如果存在，应警惕共存的可能[32]。还有部分MG
+患者没有出现AITD相应的症状，但血清中出现甲状腺抗体阳性，可能这些患者体内有
+针对甲状腺的免疫功能异常。理论上，某种抗体产生的速度和数量以及对靶组织的破坏
+都达到一定程度时才会出现临床症状，这可能是 MG合并甲状腺抗体阳性者检出抗体却
+未诊断的原因[42]。因此在临床实践中，积极的筛查常规甲状腺功能和甲状腺超声检查对
+患者是有益的。
+3.免疫病理机制
+MG与AITD均属于器官特异性自身免疫性疾病，两者共存率显著高于普通人群[20]，
+提示可能存在共同的免疫病理机制，例如抗体具有明显致病作用的器官特异性，免疫系
+统的失调和遗传易感性的影响。
+遗传易感性在 MG与AITD的发病中均扮演重要角色，不同的基因与 AITD和 MG
+以及特异性自身抗体的存在有关。全基因组关联研究证实了MG与人类白细胞抗原(HLA)
+基因的联系[43]。MG 患者中，HLA-DR3 等位基因频率显著增高，HLA-DR3 抗原被发现
+同时与 GD 有关[6, 9, 44, 45]。HLA 对于呈递外源抗原以供 CD4+T 辅助细胞识别至关重要
+[7]。HLA基因是两者共有的关键遗传风险位点。
+参与T细胞活化和调节的非HLA基因，如蛋白酪氨酸磷酸酶非受体型22（PTPN22）、
+细胞毒性T淋巴细胞抗原-4（CTLA4），也被证实与 AITD和MG 相关[6, 46]。CTLA-4是
+一种在T细胞上表达的共刺激分子，通过与抗原提呈细胞（APC）上的 B7分子结合来
+下调T细胞活化；此外，还可以限制 APC 和T细胞之间的接触，从而减少 T细胞活化
+[47, 48]。PTPN22基因编码淋巴酪氨酸磷酸酶（LYP）蛋白，而 LYP 是T细胞受体信号转
+41
+宁夏医科大学硕士学位论文 文献综述
+导的强大负调节分子[46]。
+此外，在AITD和MG 中，易感因素不仅包括遗传背景，还包括性激素的潜在作用。
+在自身免疫性疾病中，女性患者总是占大多数，目前已经提出了许多假说来解释这种性
+别偏差：男性和女性细胞因子和激素产生的差异，和/或免疫反应程度的差异，女性往往
+更强烈，导致免疫后抗体产生和细胞介导的免疫力更高[46]。在雌性中，两条 X染色体中
+的一条在胚胎早期阶段失活,同一 X 染色体的失活发生在 80%以上的细胞中，可能导致
+对X连锁抗原的免疫耐受缺陷，从而导致自身免疫[7]。研究表明在 HT或GD女性的血
+液和甲状腺组织中观察到胎儿微嵌合体。在怀孕期间，怀孕早期母体调节性T细胞（Treg）
+的产生可能导致循环中的抗甲状腺抗体减少，维持对胎儿同种异体抗原的耐受状态，以
+避免胎儿排斥反应。出生后，抗甲状腺抗体反弹并短暂增加。胎儿细胞在母体组织中的
+持续存在导致胎儿微嵌合体[7]。相反，在 MG中，以 50 岁前发病年龄为特征的早发型
+在女性中比男性更常见。不同的研究表明，雌激素在 MG中起重要作用，因为雌激素受
+体在胸腺上皮细胞和胸腺细胞上表达[7]。
+尽管遗传易感性可能解释发病机制，但遗传风险本身很低;然而，病毒感染等环境因
+素可能通过表观遗传修饰或分子模拟机制发生协同作用，增加易感性。病毒感染过程中
+产生的细胞因子干扰素-α可诱发甲状腺炎，也被怀疑参与了 MG 的发生。人类嗜 T 淋
+巴细胞 I 型病毒，与 MG 和 GD 均有关，单纯疱疹病毒糖蛋白 286-293 肽段，与人类
+AChR160-167肽段相似，提示其可能参与了 MG的免疫启动过程[42]。
+此外，甲状腺疾病和 MG 均涉及 T 细胞免疫介导的炎症细胞机制，如 Th1 和 Th17
+细胞[49]。Th1 细胞及其细胞因子通过产生致病性的补体依赖性抗 AChR 抗体。在 AITD
+中，甲状腺中募集的 Th1细胞刺激甲状腺细胞分泌趋化因子 CXCL10，导致扩增反馈回
+路，这可能会使自身免疫过程永久化[7]。而 Th17 淋巴细胞分化增加，Th17 细胞因子合
+成增强，主要发生在 HT中[7]。
+合并AITD的 MG常常为眼肌型，眼肌型 MG 的甲状腺功能异常率较高，可能机制
+是：在共同的遗传背景下，通过相似的免疫病理机制，针对神经肌肉突触后膜、甲状腺
+和眼组织等共有的自身抗原的免疫交叉反应。眼肌型 MG 和甲状腺功能正常的 Graves
+42
+宁夏医科大学硕士学位论文 文献综述
+病眼肌瘫痪患者，都有 AChR 抗体、TSH（促甲状腺激素）受体抗体浓度低的特点[42]。
+4.治疗及预后
+MG和AITD都与免疫系统缺陷有关，但两者治疗方法不同。
+早期MG的治疗目标是降低死亡率，现如今随着靶向药物的出现，MG的治疗目标
+变为达到疾病症状和治疗副作用均最小化的“双达标”状态。因此 MG的主流指南都是
+建议根据亚组分类进行个体化精确治疗[50-52]。溴吡斯的明是治疗所有 MG亚组症状的首
+选药物，对于病情轻微且经药物对症治疗几乎完全缓解的患者，不建议使用其他药物治
+疗；大多数MG患者需要免疫抑制药物来达到完全或近乎完全的身体功能和高质量的生
+活的治疗目标，泼尼松或强的松联合硫唑嘌呤是一线治疗，甲氨蝶呤、环孢素和他克莫
+司是可选的继发性免疫抑制药物；利妥昔单抗是治疗重症肌无力的潜在有效方法，这种
+单克隆抗体特异性结合 B 淋巴细胞上的 CD20 表面抗原，因此在抗体介导的疾病如重症
+肌无力中应该是有效的[33]。对于胸腺异常（如胸腺瘤）的患者，手术切除胸腺可以减轻
+症状，胸腺是免疫系统的一部分，其异常可能导致自体免疫反应[20]。如果病情快速进展、
+出现危及生命的情况，需要给予静脉注射免疫球蛋白与血浆置换以缓解病情。
+在甲状腺疾病中，疗法旨在调节甲状腺激素水平。HT 或甲状腺功能减退症的首选
+治疗方法是甲状腺激素替代治疗,该药物通常终生口服；对无临床症状和甲状腺功能正常
+的 HT 患者，一般不需处理[53]。当甲状腺肿大时，建议对 GD 患者进行甲状腺消融术；
+在HT中存在明确的甲状腺结节时，建议进行甲状腺消融术[7]。
+两种疾病治疗之间的“see-saw”关系已在上文中提及，即治疗一种病可能 使另一
+种恶化。由于报道病例数量较少、个体存在差异性，对结果可靠性造成影响，目前更多
+研究认为MG与AITD 呈正相关，仍有待进一步验证。
+研究发现，甲状腺抗体升高的眼肌型患者向全身型转化的时间较长，说明合并 AITD
+的眼肌型MG患者对激素等治疗手段反应比较敏感，短期预后相对较好[31]。还有研究指
+出，患有 GD 的 MG 患者的治疗结果与无自身免疫性疾病患者的治疗结果无显著差异
+[30]。且两病共存的患者临床表现较轻，但需要更多更全面的研究来进一步证实。更重要
+的是，甲状腺疾病与 MG的密切联系表明，筛查甲状腺疾病包括甲状腺自身抗体和甲状
+43
+宁夏医科大学硕士学位论文 文献综述
+腺功能对 MG 患者至关重要，因为甲状腺功能障碍的治疗相对于 MG 的治疗相对简单，
+MG病例中甲状腺功能减退的激素替代治疗受益匪浅，几乎没有副作用（005），需要多
+学科合作，定期检测与随访，注意药物副作用，避免诱发因素。
+综上所述，随着临床不断深入研究，免疫遗传学不断推陈出新，我们将进一步明确
+MG 与 AITD 共存的病因和发病基础，探索治疗 MG 合并症的新路径。MG 与 AITD 的
+患病率在报告的系列论文中存在差异，可能是由于识别甲状腺疾病的方法不同、样本量
+不同或研究人群不同。尽管部分研究表明两病共存的特点为早发性、较轻的临床症状，
+仍有待进一步研究。目前基于人群的研究显示，MG患者中已有甲状腺疾病的患病率较
+高，MG诊断后随访期间甲状腺疾病的累积概率高于普通人群。目前的研究结果支持在
+诊断和随访期间积极筛查 MG患者的甲状腺合并症，以便早期诊断和早期干预。需要更
+多的研究来阐明 MG 与甲状腺疾病之间的这种关联特点，评估和管理 MG 患者的潜在
+合并症。
+44
+宁夏医科大学硕士学位论文 综述参考文献
+综述参考文献
+[1] 常婷. 中国重症肌无力诊断和治疗指南(2020 版) [J]. 中国神经免疫学和神经病学杂
+志,2021, 28(01): 1-12.
+[2] Gilhus N E, Tzartos S, Evoli A, et al. Myasthenia gravis [J]. Nat Rev Dis Primers, 2019,
+5(1): 30.
+[3] MacDonald B K, Cockerell O C, Sander J W, et al. The incidence and lifetime prevalence
+of neurological disorders in a prospective community-based study in the UK [J]. Brain, 2000,
+123 ( Pt 4): 665-76.
+[4] Dresser L, Wlodarski R, Rezania K, et al. Myasthenia Gravis: Epidemiology,
+Pathophysiology and Clinical Manifestations [J]. J Clin Med, 2021, 10(11).
+[5] Gilhus N E, Nacu A, Andersen J B, et al. Myasthenia gravis and risks for comorbidity [J].
+Eur J Neurol, 2015, 22(1): 17-23.
+[6] Zhu Y, Wang B, Hao Y, et al. Clinical features of myasthenia gravis with neurological and
+systemic autoimmune diseases [J]. Front Immunol, 2023, 14: 1223322.
+[7] Lopomo A, Berrih-Aknin S. Autoimmune Thyroiditis and Myasthenia Gravis [J]. Front
+Endocrinol (Lausanne), 2017, 8: 169.
+[8] Antonelli A, Ferrari S M, Corrado A, et al. Autoimmune thyroid disorders [J]. Autoimmun
+Rev, 2015, 14(2): 174-80.
+[9] Song R-h, Yao Q-m, Wang B, et al. Thyroid disorders in patients with myasthenia gravis:
+A systematic review and meta-analysis [J]. Autoimmunity Reviews, 2019, 18(10).
+[10] Claytor B, Li Y. Challenges in diagnosing coexisting ocular myasthenia gravis and thyroid
+eye disease [J]. Muscle Nerve, 2021, 63(5): 631-9.
+[11] Carr A S, Cardwell C R, McCarron P O, et al. A systematic review of population based
+epidemiological studies in Myasthenia Gravis [J]. BMC Neurol, 2010, 10: 46.
+[12] Jaiswal S, Shrivastava T. Advances in Understanding and Managing Myasthenia Gravis:
+45
+宁夏医科大学硕士学位论文 综述参考文献
+Current Trends and Future Directions [J]. Cureus, 2024, 16(4): e59104.
+[13]Grob D, Brunner N, Namba T, et al. Lifetime course of myasthenia gravis [J]. Muscle Nerve,
+2008, 37(2): 141-9.
+[14] Aarli J A. Myasthenia gravis in the elderly: Is it different? [J]. Ann N Y Acad Sci, 2008,
+1132: 238-43.
+[15] Pedersen E G, Hallas J, Hansen K, et al. Late-onset myasthenia not on the increase: a
+nationwide register study in Denmark, 1996-2009 [J]. Eur J Neurol, 2013, 20(2): 309-14.
+[16] Aragones J M, Bolibar I, Bonfill X, et al. Myasthenia gravis: a higher than expected
+incidence in the elderly [J]. Neurology, 2003, 60(6): 1024-6.
+[17] Matsui N, Nakane S, Nakagawa Y, et al. Increasing incidence of elderly onset patients with
+myasthenia gravis in a local area of Japan [J]. J Neurol Neurosurg Psychiatry, 2009, 80(10):
+1168-71.
+[18] Chen J, Tian D C, Zhang C, et al. Incidence, mortality, and economic burden of myasthenia
+gravis in China: A nationwide population-based study [J]. Lancet Reg Health West Pac, 2020,
+5: 100063.
+[19] Deymeer F. Myasthenia gravis: MuSK MG, late-onset MG and ocular MG [J]. Acta Myol,
+2020, 39(4): 345-52.
+[20] Amin S, Aung M, Gandhi F R, et al. Myasthenia Gravis and its Association With Thyroid
+Diseases [J]. Cureus, 2020, 12(9): e10248.
+[21] Petranovic Ovcaricek P, Gorges R, Giovanella L. Autoimmune Thyroid Diseases [J]. Semin
+Nucl Med, 2024, 54(2): 219-36.
+[22] Hollowell J G, Staehling N W, Flanders W D, et al. Serum TSH, T(4), and thyroid
+antibodies in the United States population (1988 to 1994): National Health and Nutrition
+Examination Survey (NHANES III) [J]. J Clin Endocrinol Metab, 2002, 87(2): 489-99.
+[23] McLeod D S, Cooper D S. The incidence and prevalence of thyroid autoimmunity [J].
+Endocrine, 2012, 42(2): 252-65.
+46
+宁夏医科大学硕士学位论文 综述参考文献
+[24] 戴庆, 蒋琳, 刘超, 等. 自身免疫性甲状腺疾病与季节变化的关系[J]. 江苏医
+药,2014, 40(03): 313-6.
+[25] Pearce S H, Leech N J. Toward precise forecasting of autoimmune endocrinopathy [J]. J
+Clin Endocrinol Metab, 2004, 89(2): 544-7.
+[26]Mao Z F, Yang L X, Mo X A, et al. Frequency of autoimmune diseases in myasthenia gravis:
+a systematic review [J]. Int J Neurosci, 2011, 121(3): 121-9.
+[27] Wang Y, Wang K, Lu J, et al. Association of Myasthenia Gravis With Autoimmune Thyroid
+Disease: A Bidirectional Mendelian Randomization Study [J]. Brain Behav, 2025, 15(1):
+e70235.
+[28] Shi J, Huan X, Zhou L, et al. Comorbid Autoimmune Diseases in Patients With Myasthenia
+Gravis: A Retrospective Cross-Sectional Study of a Chinese Cohort [J]. Front Neurol, 2021, 12:
+790941.
+[29] Kubiszewska J, Szyluk B, Szczudlik P, et al. Prevalence and impact of autoimmune thyroid
+disease on myasthenia gravis course [J]. Brain Behav, 2016, 6(10): e00537.
+[30] Kanazawa M, Shimohata T, Tanaka K, et al. Clinical features of patients with myasthenia
+gravis associated with autoimmune diseases [J]. Eur J Neurol, 2007, 14(12): 1403-4.
+[31] 孟超, 景筠, 李然, 等. 重症肌无力伴甲状腺病变的临床分析及预后[J]. 中华医学会
+第十八次全国神经病学学术会议, 中国四川成都, F, 2015 [C].
+[32] Ohno M, Hamada N, Yamakawa J, et al. Myasthenia gravis associated with Graves' disease
+in Japan [J]. Jpn J Med, 1987, 26(1): 2-6.
+[33] Gilhus N E, Longo D L. Myasthenia Gravis [J]. New England Journal of Medicine, 2016,
+375(26): 2570-81.
+[34] Stathatos N, Daniels G H. Autoimmune thyroid disease [J]. Curr Opin Rheumatol, 2012,
+24(1): 70-5.
+[35] De Leo S, Lee S Y, Braverman L E. Hyperthyroidism [J]. Lancet, 2016, 388(10047): 906-
+18.
+47
+宁夏医科大学硕士学位论文 综述参考文献
+[36] Bartalena L, Kahaly G J, Baldeschi L, et al. The 2021 European Group on Graves'
+orbitopathy (EUGOGO) clinical practice guidelines for the medical management of Graves'
+orbitopathy [J]. Eur J Endocrinol, 2021, 185(4): G43-G67.
+[37] Chaker L, Bianco A C, Jonklaas J, et al. Hypothyroidism [J]. Lancet, 2017, 390(10101):
+1550-62.
+[38] 姬文珍, 杨丽, 何伯永. 重症肌无力与甲状腺疾病共患的研究[J]. 临床荟萃,2009,
+24(02): 182-4.
+[39] Sekiguchi Y, Hara Y, Takahashi M, et al. Reverse 'see-saw' relationship between Graves'
+disease and myasthenia gravis; clinical and immunological studies [J]. J Med Dent Sci, 2005,
+52(1): 43-50.
+[40] Mallikarjuna S K, Velayutham S S, Sowmini P R, et al. See-Saw Relationship and its
+Reversal after Immunotherapy in a Case of Graves' Disease with Coexisting Myasthenia Gravis
+[J]. J Neurosci Rural Pract, 2019, 10(1): 136-8.
+[41] Tamer S, Gokce Gunes H N, Gokcal E, et al. Coexistence of autoimmune diseases and
+autoantibodies in patients with myasthenia gravis [J]. Neurol India, 2016, 64(1): 45-9.
+[42] 姬文珍. 重症肌无力与甲状腺异常的相关性 [D], 2008.
+[43] Evoli A. Myasthenia gravis: new developments in research and treatment [J]. Curr Opin
+Neurol, 2017, 30(5): 464-70.
+[44] Jacobson E M, Huber A, Tomer Y. The HLA gene complex in thyroid autoimmunity: From
+epidemiology to etiology [J]. Journal of Autoimmunity, 2008, 30(1-2): 58-62.
+[45] Toth C, McDonald D, Oger J, et al. Acetylcholine receptor antibodies in myasthenia gravis
+are associated with greater risk of diabetes and thyroid disease [J]. Acta Neurol Scand, 2006,
+114(2): 124-32.
+[46] Tomer Y. Mechanisms of autoimmune thyroid diseases: from genetics to epigenetics [J].
+Annu Rev Pathol, 2014, 9: 147-56.
+[47] Tomer Y. Unraveling the genetic susceptibility to autoimmune thyroid diseases: CTLA-4
+48
+宁夏医科大学硕士学位论文 综述参考文献
+takes the stage [J]. Thyroid, 2001, 11(2): 167-9.
+[48] Rudd C E, Taylor A, Schneider H. CD28 and CTLA-4 coreceptor expression and signal
+transduction [J]. Immunol Rev, 2009, 229(1): 12-26.
+[49] Chou C C, Huang M H, Lan W C, et al. Prevalence and risk of thyroid diseases in
+myasthenia gravis [J]. Acta Neurol Scand, 2020, 142(3): 239-47.
+[50] Gilhus N E, Verschuuren J J. Myasthenia gravis: subgroup classification and therapeutic
+strategies [J]. The Lancet Neurology, 2015, 14(10): 1023-36.
+[51] Sanders D B, Wolfe G I, Benatar M, et al. International consensus guidance for
+management of myasthenia gravis: Executive summary [J]. Neurology, 2016, 87(4): 419-25.
+[52] Evoli A, Batocchi A P, Tonali P. A practical guide to the recognition and management of
+myasthenia gravis [J]. Drugs, 1996, 52(5): 662-70.
+[53] 张铮, 郑旭琴, 杨涛. 自身免疫性甲状腺疾病临床研究进展[J]. 药品评价,2016,
+13(01): 9-13.
+49
+宁夏医科大学硕士学位论文 开题、中期及学位论文答辩委员组成
+开题、中期及学位论文答辩委员组成
+1、开题报告专家小组成员
+序号 姓名 职称/导师类型 工作单位 担任职务
+1 王振海 教授/博导 宁夏医科大学总医院 组长
+2 陈桂生 教授/硕导 宁夏医科大学总医院 委员
+3 张庆 教授/博导 宁夏医科大学总医院 委员
+4 李海宁 主任医师/硕导 宁夏医科大学总医院 委员
+5 杨笑 教授/硕导 宁夏医科大学总医院 委员
+2、中期考核组成员
+序号 姓名 职称/导师类型 工作单位 担任职务
+1 王振海 教授/博导 宁夏医科大学总医院 组长
+2 杨平 教授/硕导 宁夏医科大学总医院 委员
+3 李海宁 主任医师/硕导 宁夏医科大学总医院 委员
+4 刘强 主任医师/硕导 宁夏医科大学总医院 委员
+3、学位论文答辩委员会成员
+序号 姓名 职称/导师类型 工作单位 担任职务
+1 谢鹏 教授/博导 宁夏医科大学总医院 主席
+2 李海宁 教授/硕导 宁夏医科大学总医院 委员
+3 马斌武 教授/硕导 宁夏医科大学总医院 委员
+4 侯晓霖 主任医师/硕导 宁夏医科大学总医院 委员
+5 成江 主任医师/硕导 宁夏医科大学总医院心脑血 委员
+管医院
+53

@@ -1,0 +1,235 @@
+·122· 研 究 进 展
+Western Journal of Traditional Chinese Medicine,2025 Vol.38 No.6
+DOI：10.12174/j.issn.2096-9600.2025.06.23
+儿童哮喘共患病及其发病机制研究进展
+∗
+沈世平，薛 征
+△
+上海中医药大学附属市中医医院，上海 200071
+［摘 要］ 对儿童哮喘与其他系统疾病的联系及可能作用机制进行综述，指出哮喘与上呼吸道常见疾病
+关联机制主要有呼吸方式转变、鼻肺反射、鼻后滴漏三种科学假说；变应原致敏可能是哮喘与神经精神系统
+疾病之间的关联机制；哮喘与胃食管反流病关系密切，二者相互影响；且哮喘与特应性皮炎等疾病密切相关。
+［关键词］ 哮喘；共患病现象；机制；儿童
+［中图分类号］ R256.12 ［文献标识码］ A ［文章编号］ 2096-9600（2025）06-0122-04
+Research Progress on Comorbidities in Childhood Asthma and Its Pathogenesis
+SHEN Shiping, XUE Zheng△
+Shanghai Municipal Hospital of Traditional Chinese Medicine, Shanghai 200071, China
+AAbbssttrraacctt The article summarizes the connections between childhood asthma and the diseases of other
+systems, and the potential mechanism, and there are three scientific hypotheses about the association mechanism
+between asthma and common upper respiratory diseases: the changes of respiratory mode, nasal lung reflex and
+postnasal drip; allergen sensitization may be the mechanism linking asthma and neuropsychiatric disorders; asthma
+is closely related to gastroesophageal reflux disease (GERD), both interacting; meanwhile, there is a close
+correlation of asthma with atopic dermatitis.
+KKeeyywwoorrddss asthma; comorbidity; mechanism; children
+支气管哮喘简称哮喘，是一种易反复发作的 一种疾病发生；3）两种毫不相关的疾病同时发生。
+慢性炎症呼吸道疾病，发病多以儿童为主要人群， 临床上共患病的概念主要用于研究精神病学领域
+其临床表现为反复发作的喘息、咳嗽、气促、胸闷， 的“一人多病”现象［5］。本研究所探讨的哮喘共患
+甚则出现不能平卧等危急症状［1］。流行病学调查 病指哮喘患者“一人多病”现象。
+显示，我国儿童支气管哮喘的患病率呈逐年上升 2 儿童哮喘共患病的现状及其机制
+趋势，总体控制水平不理想，哮喘长期反复发作会 2.1 哮喘与上呼吸道共病 早在2001年，世界
+影响患儿生长发育、身心健康及社会适应能 卫生组织就明确提出变应性鼻炎和哮喘是“同一
+力［2-3］。许多哮喘共患病可能与哮喘有关，并影响 气道，同一种疾病”的观点［6］。过敏性鼻炎的病灶
+其临床表现及疾病的管理和控制。多数哮喘患儿 位于呼吸道上部区域，临床症状多表现为鼻塞、喷
+共患1种以上疾病，常见的共患疾病包括过敏性 嚏，而哮喘的病灶位于呼吸道下部区域，主要表现
+鼻炎、睡眠障碍、注意缺陷多动障碍、胃食管反流 为气道炎症、高反应性及气流受限所致喘息、气急
+病、肥胖症、特应性皮炎等，涵盖了呼吸系统、神经 胸闷和咳嗽等。虽然二者病灶位置处于呼吸道的
+精神系统、消化系统疾病及其他躯体疾病［4］。提 不同区域，且临床症状呈明显差异，但致病的危险
+高哮喘的控制率对哮喘及其共病的防治尤为重 因素一致［7］。研究结果亦表明多数患者联合发
+要。现就儿童哮喘与其共患病的相互影响，围绕 病，超过85%的哮喘患者同时患有过敏性鼻炎［8］。
+流行病学、危险因素及作用机制等展开综述，旨在 流行病学研究证实，儿童发生过敏性鼻炎是导致
+评估哮喘病情严重程度和综合干预，为临床诊治 儿童期哮喘甚至迁延到成人哮喘的独立危险因
+提供参考。 素，同时也会增加儿童期再次发生哮喘的概率［9］。
+1 共患病概念 慢性鼻窦炎（chronic rhinosinusitis，CRS）
+共患病也称共病、同病或合病，是指患者同时 是上呼吸道的常见疾病之一。儿童CRS病因尚未
+患有难分主次、缺乏必然因果关联的两种及两种 明确，由于症状多为非特异性，且儿童期频发上呼
+以上疾病，分别达到各自疾病的诊断标准。共患 吸道感染、腺样体肥大和变应性鼻炎等，使儿童
+病包括三种情况：1）一个潜在的共同病因导致了 CRS诊断易于混淆［10］。我国CRS在哮喘、过敏性鼻
+两种或两种以上不同疾病；2）一种疾病导致另外 炎以及非过敏性鼻炎患者中的患病率明显高于普
+研 究 进 展 ·123·
+2025年第38卷第6期
+通人群［11］。研究表明，哮喘的严重程度与CRS影 病情控制不佳有关，病情控制良好的支气管哮喘
+像学严重程度以及鼻息肉的患病率有关，不同严 儿童发生焦虑症、抑郁症和自卑症的风险降低［21］。
+重程度哮喘患者阿司匹林不耐受、哮喘以及鼻息 通过改善支气管哮喘儿童父母的心理弹性，不仅
+肉三联征的发生率无统计学意义［12］。此外，CRS 能改善父母的心理功能障碍，还能改善支气管哮
+的患病率也随哮喘的严重程度加重而增加［13］。 喘儿童的日间及夜间症状，降低支气管扩张剂的
+哮喘与过敏性鼻炎、慢性鼻窦炎之所以紧密 使用剂量［22］。
+联系，其根本在于呼吸道在解剖结构和生理功能 目前，哮喘与神经精神系统疾病之间的关联
+上的延续，且共同发病主要与接触过敏原后IgE 机制尚未明确。从现有研究结果分析，两者在致
+释放并介导的I型变态反应有关［14］。关于哮喘与 病因素方面高度吻合，在诸多危险因素中，变应原
+上呼吸道常见疾病之间具体的关联机制，目前被 致敏极其重要［23］。其可能是通过神经免疫途径发
+广泛接受的有“呼吸方式的转变”“鼻肺反射”“鼻 挥作用，在血脑屏障尚未发育完全之期，变应原致
+后滴漏”三种科学假说［15］。1）呼吸方式的转变：过 敏诱导产生的免疫炎症因子增加，并通过不成熟
+敏性鼻炎、鼻窦炎的患者在接触过敏源后，鼻黏膜 的血脑屏障影响相关大脑回路，激发大脑回路中
+迅速肿胀、鼻甲肥大、鼻分泌物潴留等使鼻部气道 神经免疫机制，使之产生情绪和行为控制的改
+直径降低，无法从鼻道提供充足氧气，患者被迫由 变［24］。另有研究认为，情绪障碍在哮喘与ADHD的
+鼻呼吸为主向口呼吸转变。随着呼吸方式的转 共病中具有桥梁作用，这可能是哮喘、情绪障碍的
+变，各类过敏源可以避开鼻黏膜屏障而直达下呼 儿童长期处于慢性应激状态，交感神经、下丘脑-
+吸道，最终诱发哮喘。2）鼻肺反射：人体的鼻黏膜 垂体-肾上腺轴等发生神经-内分泌及神经免疫的
+与肺-支气管黏膜之间可能存在一定的神经纤维 失调，导致前额叶皮质的神经化学底物改变甚至
+联系，这种联系以三叉神经与迷走神经联络，因此 出现前额叶的上下环路功能障碍，从而导致ADHD
+在鼻腔发生过敏性改变后，支气管的敏感性也随 发生；而情绪应激是哮喘发作和加重的触发因素，
+之增强以诱发哮喘，反之，肺部吸入致敏原也会引 焦虑、抑郁均可促使过度通气、呼吸肌疲劳，加剧
+起过敏性鼻炎、鼻窦炎等。3）鼻后滴漏：过敏性鼻 哮喘过程［25］。此外，母孕期烟草暴露及情绪障碍、
+炎及鼻窦炎患者鼻腔所分泌的炎性物质可经鼻后 儿童缺铁性贫血等均是哮喘与神经精神系统疾病
+孔和咽部直接进入下呼吸道，使气管与支气管的 共病的潜在危险因素［26］。
+反应性上升造成哮喘。 2.3 哮喘与消化系统共患病 胃食管反流病
+2.2 哮喘与神经精神系统共病 研究证实，哮喘 （gastresophageal refluxdisease，GERD）是指胃
+与儿童最常见的神经发育障碍性疾病——注意缺 和十二指肠的内容物反流后进入食道而引发反
+陷多动障碍（attention deficit and hyperac‐ 酸、烧心和胸骨后疼痛等一系列的临床症状，并出
+tivity disorder，ADHD）关系密切［16-17］。哮喘不 现反流性食管炎以及咽喉、气道等食道临近组织
+仅增加ADHD的患病风险，甚至会加重ADHD患者的 损害的一种疾病［27］。早在1912年Willism Osler
+核心症状。MOGENSEN等［18］发现哮喘和ADHD冲动 即发现GERD和支气管哮喘有很大相关性，认为胃
+型具有相关性，患哮喘的儿童随着年龄的增长出 食管反流会直接刺激支气管或经过神经反射机制
+现ADHD多动症状的风险翻倍。此外，同时患有哮 间接引发支气管哮喘，故有“胃性哮喘”之称。流
+喘和ADHD的儿童在临床表现出更多的躯体化和 行病学调查结果显示，儿童哮喘并发GERD的患病
+情感内化症状［19］。同样，ADHD也会增加哮喘的患 率显著增加［28-29］，GERD是诱发和加重哮喘的主要
+病率。由于ADHD患儿常伴随对立违抗障碍，哮喘 因素。GERD哮喘共病患者较一般人群有更明显
+与ADHD共患儿的哮喘治疗控制水平远不及非共 且严重的GERD相关症状。50%～80%的哮喘患者
+患儿，这可能与共患儿的服药依从性不佳有关。 报告有 GERD症状［30］，其中大部分患有沉默的
+精神系统疾病包括抑郁、焦虑、失眠等情感障 GERD，即未表现典型的临床症状，如胃灼热［31］。由
+碍，这些均是哮喘的常见并发症，在支气管哮喘的 此可见，哮喘与GERD关系密切，二者相互影响。
+发生发展过程中不容小觑。研究发现，学龄前儿 一方面胃食管反流会通过反流、神经反射、气道高
+童支气管哮喘合并情感障碍的发病率较高，达到 反应和炎症等机制导致支气管哮喘症状加重；另
+8.5%［20］。与普通青少年相比，患有哮喘的少年共 一方面支气管哮喘患者由于长期应用解痉平喘类
+患焦虑症和抑郁症的患病率几乎高出两倍。另有 药物、肺通气功能障碍以及自主神经功能失调会
+研究发现，支气管哮喘儿童并发情感障碍可能与 进一步加重患者胃食管反流症状。这表明可能会
+·124· 研 究 进 展
+Western Journal of Traditional Chinese Medicine,2025 Vol.38 No.6
+出现一个恶性循环，即哮喘和用于哮喘治疗的药 对哮喘共患疾病的筛查手段和指南，以帮助早期
+物可能会增加GERD，而GERD可能又会引发哮喘症 发现和治疗共患病；对已经建立的哮喘与几种疾
+状［32］。 病之间的双向关联，可以通过共同的潜在机制和
+2.4 哮喘与共患其他躯体疾病 肥胖已成为当 风险因素来解释，以充分了解这些共同的机制，提
+今全球共同面临的公共卫生问题，研究证实肥胖 供新的治疗目标和预防措施，哮喘才可以获得更
+会增加儿童哮喘的风险和发病率，是哮喘控制不 好的控制。
+良的重要因素之一［33］。SCHOLTENS等［34］研究发 参考文献
+现，高体重指数与哮喘的高患病率呈显著相关性。 ［1］ FERRANTE G，LA GRUTTA S.The burden of pediatric
+asthma［J］.Front Pediatr，2018，6：186.
+哮喘也会影响躯体肥胖化，运动诱发的哮喘可能
+［2］ 沙莉，刘传合，邵明军，等.中国城市儿童哮喘诊治状况十
+导致患儿不得不避免一些体育活动，从而导致患
+年对比［J］.中华儿科杂志，2016，54（3）：182-186.
+儿体质量增加，陷入恶性循环［35］。两者共病因素 ［3］ 史梦迪，杨阳，司秀影，等.基于分消走泄法调节湿热体质治
+复杂多样，首先是氧化应激机制，在支气管哮喘 疗儿童变态反应性疾病［J］.西部中医药，2024，37（4）：
+中，多种细胞成分（如嗜酸性粒细胞、中性粒细胞、 37-41.
+［4］ BOULET L P，BOULAY M .Asthma-related comorbidi-
+肥大细胞等）在接触病毒和过敏原时产生活性氧， È
+ties［J］.Expert Rev Respir Med，2011，5（3）：377-393.
+同时释放出过氧化氢和超氧化物等多种活性物质
+［5］ 郭家燕.脑性瘫痪儿童共患病的临床研究［D］.广州：广州
+以促进氧化应激，最终导致气道平滑肌收缩。肥 中医药大学，2014.
+胖引起的全身氧化应激会导致更严重的气道炎症 ［6］ BOUSQUET J，VAN CAUWENBERGE P，KHALTAEV N.Allergic
+和对类固醇治疗的抵抗［36］。其次，肥胖会诱发具 rhinitis and its impact on asthma［J］.J Allergy
+Clin Immunol，2001，108（5）：147-334.
+有抗炎作用的M2型巨噬细胞向具有促炎作用的
+［7］ 马婷婷，王学艳，潘磊.过敏性哮喘合并鼻炎患者危险因素
+M1型巨噬细胞转化，导致低水平的全身性炎症反
+的Logistic回归分析［J］.医学与哲学，2017，38（2）：53-56.
+应，引起哮喘发病［37］。第三，在脂肪细胞因子方 ［8］ AMARAL R，FONSECA J A，JACINTO T，et al.Having con-
+面，其分泌的脂联素、瘦素对呼吸功能的影响尤为 comitant asthma phenotypes is common and indepen-
+明显，肥胖青少年中较高的瘦素会进一步加重患 dently relates to poor lung function in NHANES
+2007-2012［J］.Clin Transl Allergy，2018，8：13.
+者胃食管反流症状［38］。这表明可能会出现一个恶
+［9］ 王菲，陈若希，程雷.儿童过敏性鼻炎与支气管哮喘［J］.
+性循环，即哮喘和用于哮喘治疗的药物可能会增
+中华临床免疫和变态反应杂志，2011，5（2）：120-123.
+加GERD，而GERD可能又会引发哮喘症状。 ［10］ DEMIRDAG Y Y，RAMADAN H H.Direct measurement of
+特应性皮炎（atopic dermatitis，AD）是儿童 upper airway inflammation in children with chronic
+期最常见的一种慢性、复发性的炎症性皮肤病。 rhinosinusitis：implications for asthma［J］. Curr
+Opin Allergy Clin Immunol，2016，16（1）：18-23.
+除皮肤损害外，AD患儿常并发哮喘、过敏性鼻炎
+［11］ 郑铭，青卉，娄鸿飞，等.中国主要城市鼻-鼻窦炎患病率调
+等过敏性疾病。研究显示，轻度AD患儿中20%会
+查［J］.中国耳鼻咽喉头颈外科，2017，24（4）：185-190.
+发生哮喘，而重度AD患儿超50%会发生哮喘，AD ［12］ LIN D C，CHANDRA R K，TAN B K，et al.Association between
+发病早、病程持续的患儿发生哮喘的风险更高［39］。 severity of asthma and degree of chronic rhinosinus-
+从相关研究中可将两者共病的机制归纳为：致敏 itis［J］.Am J Rhinol Allergy，2011，25（4）：205-208.
+［13］ MICHELETTO C，VISCONTI M，TREVISAN F，et al.The
+原接触皮肤诱发AD后，Th2细胞因子表达水平升
+prevalence of nasal polyps and the corresponding
+高，而Th1类细胞因子表达水平降低，即机体Th2/
+urinary LTE4 levels in severe compared to mild
+Th1失衡处于致敏状态；当气道上皮黏膜再次接 and moderate asthma［J］.Eur Ann Allergy Clin Immu-
+触致敏原时将发生气道炎症与AD共病［40］。由于 nol，2010，42（3）：120-124.
+过敏原皮肤致敏往往先于气道，故有学者提出在 ［14］ 陈希，郭梓君，郑佩燕，等.哮喘并过敏性鼻炎儿童血清总
+IgE、外周血嗜酸性粒细胞、过敏原致敏程度与呼出气一氧
+婴幼儿期对皮肤进行保湿干预可有效预防特应性
+化氮间的关系［J］.实用医学杂志，2017，3（15）：2501-2505.
+皮炎，阻止支气管哮喘的发生［41］。
+［15］ TOGIAS A.Rhinitis and asthma：evidence for respi-
+3 小结 ratory system integration［J］.J Allergy Clin Immu-
+哮喘共患病在儿童期发生率较高，加重了儿 nol，2003，111（6）：1171-1183.
+童及其家庭的身心负担。因此，临床积极筛查哮 ［16］ VALDERAS J M，STARFIELD B，SIBBALD B，et al.Defin-
+ing comorbidity：implications for understanding
+喘儿童至关重要，特别是那些控制不佳的哮喘儿
+health and health services［J］.Ann Fam Med，2009，
+童，是否存在过敏性鼻炎、特应性皮炎、情绪障碍、
+7（4）：357-363.
+超重以及胃食管反流等。目前迫切需要有效且针 ［17］ WANG L J，YU Y H，FU M L，et al.Attention defici-
+研 究 进 展 ·125·
+2025年第38卷第6期
+thyperactivity disorder is associated with aller- sease and asthma：a systematic review［J］.Gut，2007，
+gic symptoms and low levels of hemoglobin and se- 56（12）：1654-1664.
+rotonin［J］.Sci Rep，2018，8（1）：10229. ［31］ HARDING S M，GUZZO M R，RICHTER J E.The prevalence
+［18］ MOGENSEN N，LARSSON H，LUNDHOLM C，et al.Associa- of gastroesophageal reflux in asthma patients
+tion between childhood asthma and ADHD symptoms without reflux symptoms［J］.Am J Respir Crit Care
+in adolescence：a prospective population-based twin Med，2000，162（1）：34-39.
+study［J］.Allergy，2011，66（9）：1224-1230. ［32］ HARDING S M.Acid reflux and asthma［J］.Curr Opin
+［19］ LIN Y T，CHEN Y C，GAU S S F，et al.Associations be- Pulm Med，2003，9（1）：42-45.
+tween allergic diseases and attention deficit hy- ［33］ CASTRO-RODRGUEZ J A，HOLBERG C J，MORGAN W J，et al.
+Í
+peractivity/oppositional defiant disorders in chil- Increased incidence of asthmalike symptoms in girls
+dren［J］.Pediatr Res，2016，80（4）：480-485. who become overweight or obese during the school
+［20］ EDVINSSON SOLLANDER S，FABIAN H，SARKADI A，et al. years［J］.Am J Respir Crit Care Med，2001，163（6）：
+Asthma and allergies correlate with mental health 1344-1349.
+problems in preschool children［J］.Acta Paediatr， ［34］ SCHOLTENS S，WIJGA A H，SEIDELL J C，et al.Overweight
+2021，110（5）：1601-1609. and changes in weight status during childhood in
+［21］ LETITRE S L，DE GROOT E P，DRAAISMA E，et al.Anxi- relation to asthma symptoms at 8 years of age［J］.J
+ety，depression and self-esteem in children with Allergy Clin Immunol，2009，123（6）：1312-1318.
+well-controlled asthma：case-control study［J］.Arch ［35］ KOPEL S J，KLEIN R B.Childhood asthma and obesity［J］.
+Dis Child，2014，99（8）：744-748. Med Health R I，2008，91（6）：161-164.
+［22］ MORILLO-VANEGAS D，SANCHEZ-SALCEDO P，SEBASTI N ［36］ WOOD L G，GARG M L，SMART J M，et al.Manipulating
+Á
+ARI O A F.Relationship between pediatric asthma antioxidant intake in asthma：a randomized con-
+Ñ
+and psychosocial status of caregivers［J］.Respir trolled trial［J］.Am J Clin Nutr，2012，96（3）：534-543.
+Med，2020，174：106187. ［37］ SCOTT H A，GIBSON P G，GARG M L，et al.Sex hormones
+［23］ JIANG X，SHEN C，DAI Y，et al.Early food allergy and systemic inflammation are modulators of the
+and respiratory allergy symptoms and attention- obeseasthma phenotype［J］.Allergy，2016，71（7）：1037-
+deficit/hyperactivity disorder in Chinese chil- 1047.
+dren：a cross-sectional study［J］.Pediatr Allergy ［38］ HUANG F，DEL-RO-NAVARRO B E，TORRES-ALC NTARA S，
+Í Á
+Immunol，2018，29（4）：402-409. et al.Adipokines，asymmetrical dimethylarginine，
+［24］ ZHOU R Y，WANG J J，SUN J C，et al.Attention deficit and pulmonary function in adolescents with asthma
+hyperactivity disorder may be a highly inflamma- and obesity［J］.J Asthma，2017，54（2）：153-161.
+tion and immune-associated disease（Review）［J］.Mol ［39］ HAN H，ROAN F，ZIEGLER S F.The atopic March：cur-
+Med Rep，2017，16（4）：5071-5077. rent insights into skin barrier dysfunction and
+［25］ MARCOS-VIDAL L，MARTNEZ-GARCA M，PRETUS C，et al. epithelial cell-derived cytokines［J］.Immunol Rev，
+Í Í
+Local functional connectivity suggests functional 2017，278（1）：116-130.
+immaturity in children with attention-deficit/hy- ［40］ DECKERS J，SICHIEN D，PLANTINGA M，et al.Epicutane-
+peractivity disorder［J］.Hum Brain Mapp，2018，39（6）： ous sensitization to house dust mite allergen re-
+2442-2454. quires interferon regulatory factor 4-dependent
+［26］ 陈智荷，刘烨，王若兰，等.支气管哮喘患儿并神经精神共 dermal dendritic cells［J］.J Allergy Clin Immunol，
+患病母亲孕期环境和饮食危险因素［J］.中华实用儿科临 2017，140（5）：1364-1377.
+床杂志，2019，34（9）：675-679. ［41］ DHARMAGE S C，LOWE A J，MATHESON M C，et al.Atopic
+［27］ VAKIL N，VAN ZANTEN S V，KAHRILAS P，et al.The Mon- dermatitis and the atopic march revisited［J］.Al-
+treal definition and classification of gastro- lergy，2014，69（1）：17-27.
+esophageal reflux disease：a global，evidence-based
+consensus paper［J］.Z Gastroenterol，2007，45（11）：
+收稿日期：2024-12-15
+1125-1140.
+*基金项目：国家自然科学基金面上项目（82074488）。
+［28］ TOLIA V，VANDENPLAS Y.Systematic review：the extra-
+作者简介：沈世平（1996—），女，硕士学位，医师。研究方向：
+oesophageal symptoms of gastro-oesophageal reflux
+小儿肺系、脑系疾病。
+disease in children［J］.Aliment Pharmacol Ther，2009，
+通讯作者：薛征（1969—），女，博士学位，主任医师。研究
+29（3）：258-272. △
+方向：小儿肺系、脑系疾病。Email：xz695@163.com。
+［29］ KHOSHOO V，MOHNOT S，HAYDEL R Jr，et al.Bronchial
+hyperreactivity in non-atopic children with asth-
+ma and reflux：effect of anti-reflux treatment［J］.
+Pediatr Pulmonol，2009，44（11）：1070-1074.
+［30］ HAVEMANN B D，HENDERSON C A，EL-SERAG H B.The asso-
+ciation between gastro-oesophageal reflux di-

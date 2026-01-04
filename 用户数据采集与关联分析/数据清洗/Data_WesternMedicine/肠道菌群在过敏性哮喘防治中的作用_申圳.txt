@@ -1,0 +1,405 @@
+306 中国医药生物技术 2025年6月第20卷第3期 Chin Med Biotechnol, June 2025, Vol. 20, No. 3
+综述
+· ·
+DOI: 10.3969/j.issn.1673-713X.2025.03.008
+肠道菌群在过敏性哮喘防治中的作用
+申圳，郭慧慧，郭运丹，杨丽敏，高天乐，韩燕星
+【摘要】 过敏性哮喘是一种常见的疾病，严重影响患者的健康和日常生活。目前，治疗过敏性哮喘的主要手段
+是通过吸入激素类药物来控制其症状。近年来，随着对“肠-肺轴”的深入研究，人们逐渐认识到肠道微生物在肺
+部免疫功能调节中扮演着关键的角色。本文综述了肠道菌群对过敏性哮喘进展的影响，并深入探讨了益生菌及其
+代谢产物在过敏性哮喘治疗中的应用潜力和发展前景，希望为后续研究提供有益参考，以期推动过敏性哮喘临床
+治疗的进步。
+【关键词】 过敏性哮喘； 肠-肺轴； 肠道菌群； 益生菌
+中图分类号：R37 文献标识码：A
+文章编号：1673-713X（2025）03-0306-07
+The role of gut microbiota in allergic asthma
+【Abstract】 Allergic asthma is a common condition that has a significant impact on the daily lives and overall
+well-being of patients. The current standard of care primarily involves the use of inhaled hormone medications to
+alleviate symptoms. However, recent research has shifted its focus towards understanding the immune system's role in the
+development of asthma pathogenesis, highlighting the crucial influence of intestinal microorganisms within the "gut-lung
+axis". This article delves into the intricate mechanisms by which intestinal flora regulates allergic asthma, including its
+effects on the intestinal barrier, involvement in inflammatory processes within the intestinal mucosal immune system, and
+modulation of immune cells. Furthermore, a comprehensive review of current clinical research on probiotics and bacterial
+lysates is presented, aiming to provide valuable insights and impetus for future investigations into the treatment and
+management of allergic asthma.
+【Key words】 allergic asthma; gut-lung axis; intestinal flora; probiotic
+过敏，也被称为超敏反应，是由于机体在接触到特定的 括细菌、真菌、病毒等，其中细菌是最主要的成员，包括厚
+过敏原后，其体液或细胞免疫机制发生紊乱所引发的一种反 壁菌门、拟杆菌门、变形菌门、放线菌门等[3]。肠道菌群是
+应。这种紊乱导致免疫系统错误地攻击某些无害物质，进而 一个庞大且复杂的生态系统，在人体内发挥着不可或缺的作
+干扰了特定组织器官的正常功能，从而引发一系列病症，这 用。它不仅辅助营养物质的消化吸收，维持肠道的稳态，还
+些病症统称为过敏性疾病。近年来，随着经济的持续发展和 参与调节免疫系统，帮助机体有效对抗病原微生物和外来有
+生活环境的不断变化，全球范围内过敏性疾病的发病率呈现 害物质。因此，肠道菌群与人体健康之间存在密切联系[4]。
+出持续上升的趋势。据世界变态反应组织对全球 30 个国家 近年来，肠道菌群的研究领域已超越了单纯的细菌分
+的过敏性疾病进行的流行病学调查的结果显示，约有 22% 类，更深入地探索了菌群与多种疾病之间的内在联系，以及
+的人口患有不同类型的过敏性疾病[1]。2003 年世界卫生组 关键菌群代谢物如何影响疾病的进展。本文的研究重点将聚
+织将过敏性疾病列为 21 世纪需要重点关注的三大疾病之 焦于肠道菌群在过敏性哮喘中的作用，旨在探讨“肠-肺轴”
+一，这些疾病包括但不限于过敏性哮喘、过敏性鼻炎、过敏 在肺部疾病发生发展中的潜在机制，从而为相关的科学研究
+性湿疹、过敏性紫癜、食物过敏以及药物过敏等。这些病症 提供有价值的参考和启示。
+对全球公共卫生构成了严峻挑战[2]。其中，过敏性哮喘发作
+引起的死亡人数高达 25 万，死亡率达 5%，不仅直接威胁 基金项目：国家自然科学基金（82374061）；中国医学科学院医学与健
+患者的生命健康，还给他们带来了巨大的身体和心理压力， 康科技创新工程（2022-I2M-1-016）；北京市科技新星计划（202304
+84467）
+从而严重影响了他们的生活质量。目前，过敏性哮喘治疗方
+作者单位：100050 北京，中国医学科学院北京协和医学院药物研究所
+法主要包括吸入性糖皮质激素、支气管扩张剂和免疫疗法。
+天然药物活性物质与功能国家重点实验室（申圳、郭慧慧、郭运丹、高
+然而，这些治疗方法存在一定的局限性和副作用，难以满足 天乐、韩燕星）；312088 绍兴，浙江震元制药有限公司（杨丽敏）
+所有患者的需求。 通信作者：杨丽敏，Email：ylm@zypharm.com；韩燕星，Email：
+肠道菌群是指分布在人类肠道内的各种微生物群落，包 hanyanxing@imm.ac.cn
+收稿日期：2024-07-01
+中国医药生物技术 2025年6月第20卷第3期 Chin Med Biotechnol, June 2025, Vol. 20, No. 3 307
+1 肠道菌群在过敏性哮喘中的作用机制 表 1 过敏性哮喘相关菌群
+1.1 肠-肺轴 名称 功能总结 文献
+“肠-肺轴”是一个近年来备受关注的概念，它揭示了 拟杆菌 有助于调节免疫系统，减少过敏性炎症 [8]
+肠道菌群与肺部健康之间的紧密关联。这个概念涵盖了胃肠 梭菌 产生短链脂肪酸，增强肠道屏障功能，调节免 [9]
+疫系统
+道系统与呼吸系统之间的免疫调控串扰，以及胃肠道菌群代
+粪肠球菌 产生短链脂肪酸，抗炎症，增强免疫系统功能 [10]
+谢物对肺部健康的影响。另外，胃肠道菌群与肺部菌群之间
+普雷沃菌 影响免疫系统发育，潜在减少过敏反应 [11]
+还存在交叉影响，胃肠道菌群的构成和功能状态同样会对肺 韦荣氏球菌 与宿主免疫系统互动，潜在影响过敏性疾病的 [12]
+部健康产生显著影响[5]。 发病机制
+胃肠道与呼吸道黏膜内的淋巴组织同属于黏膜免疫系 双歧杆菌属 产生短链脂肪酸，具有抗炎症作用，调节免疫 [13]
+系统功能
+统，在人体防御屏障中起着关键作用，是“肠-肺轴”得以
+优杆菌 产生短链脂肪酸，增强肠道屏障功能，调节免 [14]
+存在和发挥功能的生理基础[6]。免疫球蛋白 A（IgA）是构
+疫系统
+成黏膜屏障的主要抗体，能够有效地阻挡有害共生菌和病原 埃希氏菌 调节免疫反应，减少过敏症状 [15]
+体穿过黏膜上皮屏障，并中和有害菌群产生的毒素。当哮喘 粪球菌 产生短链脂肪酸，调节免疫系统，减少过敏 [16]
+病状显现时，IgA 在肠道微生物群落的失衡和黏膜屏障功能 反应
+乳球菌 促进肠道健康，调节免疫系统，减少过敏反应 [17]
+异常之间起到了关键的“桥梁”作用。IgA 的这种中介作用
+丁酸单胞菌 产生短链脂肪酸，维护肠道屏障功能并抑制 [18]
+揭示了肠道与肺部之间的紧密联系，以及它们在应对外界威
+炎症
+胁时的协同工作的重要性。 丁酸弧菌 参与肠道健康和免疫调节，可能影响过敏性疾 [19]
+“肠-肺”在过敏性哮喘中的关键作用已经得到了科学 病的发展
+验证。据研究报道，3 个月大的哮喘患儿粪便中，毛螺菌属、 普氏栖粪杆菌 产生短链脂肪酸，参与肠道免疫调节，维持肠 [20]
+道稳态，抑制炎症反应
+韦荣氏球菌属和粪杆菌属等特定菌群的丰度明显较低，而当
+这些菌群被用于灌胃哮喘动物模型时，它们能够显著减轻小
+健康肠道菌群定植在肠黏膜上 8 天后，无菌的肠上皮细胞
+鼠的气道炎症[7]；当粪便里的链球菌属和拟杆菌属丰度增
+的更新水平才恢复至正常[25-26]。
+加，双歧杆菌和瘤胃球菌丰度减少时，患者在触发因素的作
+研究发现，拟杆菌属、双歧杆菌、瘤胃球菌等肠道微生
+用下，更易患上过敏性哮喘[7]。此外我们还总结了近年来报
+物在日常代谢过程中可以产生乙酸、丙酸、异丁酸、丁酸、
+道的与过敏性哮喘具有强关联作用的部分肠道菌群（表 1），
+异戊酸、戊酸、己酸等短链脂肪酸，短链脂肪酸可以通过调
+这些发现不仅证实了肠道微生物与哮喘之间的紧密联系，也
+节肌球蛋白轻链激酶、细胞骨架蛋白和肌动蛋白之间的相互
+为开发新的哮喘治疗方法提供了潜在的途径，即通过调节肠
+作用，促进肠上皮细胞的紧密连接，减少肠道壁对外部物质
+道微生物群落来减轻哮喘症状。
+的渗透[27]。同时，短链脂肪酸也能够调节结肠上皮细胞的
+1.2 肠道菌群影响肠屏障的功能
+生长和分化[28]，从而维护肠屏障的完整性，强化防御机制。
+肠道屏障作为一种有效的保护机制，是生物负熵能力中
+综上，通过调节肠道菌群来维护肠道黏膜的稳态，能够起到
+适应力的体现，有助于生物体维持其内部环境的稳定和有序
+治疗过敏性哮喘的作用。
+状态[21]。肠道四大屏障包括黏膜屏障、黏液屏障、免疫屏
+1.3 肠道菌群对免疫系统的影响
+障和微生物屏障。黏膜屏障是肠道中最为重要的天然防线，
+肠道菌群能够通过调节 T 细胞亚群（如 Treg 细胞和
+主要由紧密排列的上皮细胞构成，形成了一个坚固的物理屏
+Th 细胞），以及产生抗炎性代谢产物，来调节全身和局部
+障。这一屏障的存在，能够有效地阻止病原微生物和有害物
+的免疫反应进而起到治疗过敏性哮喘的作用。调节性 T 细
+质的侵入，从而保护肠道免受外界威胁的损害。上皮细胞之
+胞（Treg）是免疫系统中的一种重要细胞类型，普遍具有免
+间的紧密连接以及分泌的黏液层，共同增强了黏膜屏障的防
+疫耐受和免疫抑制的作用，能够抑制其他免疫细胞的活化和
+御功能。当肠道的黏膜屏障受到损伤时，肠道的通透性会增
+炎症反应的发生[29]。哮喘病患者 Treg 细胞的数量和功能明
+加，进而打破人体与肠道微生物之间的平衡状态。这种情况
+显下降，这导致免疫系统的平衡被打破，炎症反应加剧。因
+下，部分细菌或其释放的内毒素会更容易侵入全身血液循环
+此，通过提升 Treg 细胞的数量或增强其功能，可能抑制过
+系统。这些有害物质一旦进入血液，就可能引发一系列的全
+度的免疫反应，并减少炎症的发生，从而减轻哮喘症状。同
+身性过敏性疾病，如哮喘、湿疹等。因此，维护肠道黏膜屏
+时，哮喘病患者中 T 细胞亚群的平衡被破坏，辅助性 T 细
+障的完整性对于预防和治疗过敏性哮喘至关重要。
+胞中 Th1/Th2 细胞的比例失调[30]。在正常情况下，Th1 细
+肠道菌群在维持肠上皮细胞的正常更新过程中发挥着
+胞主要产生 IFN-γ 等细胞因子，参与细胞免疫和迟发性超
+至关重要的作用。有研究人员将无菌动物与普通动物相比，
+敏性炎症反应，因此 Th1 细胞在免疫应答中表现出一定的
+结果显示，无菌动物由于缺乏肠道微生物群，其肠道形态、
+炎症促进作用；而 Th2 细胞主要产生 IL-4、IL-5 和 IL-13
+结构和细胞更新特性均受到明显损害。具体表现为肠道总面
+等细胞因子，这些细胞因子通常与过敏反应相关，可以促进
+积减少，回肠绒毛变短，肠隐窝缩小等[22-24]。当采取措施将
+308 中国医药生物技术 2025年6月第20卷第3期 Chin Med Biotechnol, June 2025, Vol. 20, No. 3
+B 细胞增殖和抗体产生，以及嗜酸性粒细胞的活化和分化。 链脂肪酸生成的降低，进而阻碍了免疫调节和抗炎反应的产
+在哮喘病患者中，Th2 细胞的数量明显增加，而 Th1 细胞 生。另外，肠道菌群失衡可能导致肠道屏障功能受损，增加
+相对减少，导致免疫球蛋白 E 介导的炎症反应的加剧，增 肠道通透性，使炎症因子和过敏原更容易进入血液循环，进
+加气道高反应性。调节免疫系统中 Th1/Th2 细胞的平衡， 而加剧哮喘症状。
+可以减轻炎症反应，缓解哮喘症状。鼠李糖杆菌是一种有助
+于提高肠道微生物群丰度和多样性的菌群，是肠道微生物群 2 过敏性哮喘的新疗法
+中的主要益生菌属，也参与调节人体免疫系统的成熟和功 2.1 补充益生菌
+能。鼠李糖杆菌通过影响脾脏细胞和淋巴结中 CD3+ T 细胞 多项临床试验表明，补充特定的益生菌（如双歧杆菌和
+的比例，提高 CD4+ 细胞中 Th1 型细胞因子 IFN-γ 表达， 乳酸菌）能够改善哮喘症状，减少炎症反应。一项 Meta 分
+以及上调 IL-17 的表达来调节各级免疫器官中的 Treg 细 析研究提示，在产前或婴儿期补充益生菌，可有效降低新生
+胞比例，并发挥免疫调节作用[18]。研究发现，口服这类菌 儿罹患过敏性哮喘的风险，并显著降低免疫球蛋白 E（IgE）
+可以促进肠道上皮细胞分泌转化生长因子-β（TGF-β）并激 水平[34]。另一项研究显示，对 4 ~ 10 岁特应性哮喘患儿进
+活 Treg 细胞群，诱导产生关键的抗炎分子，从而减轻过敏 行为期 3 个月的益生菌（包括嗜酸乳杆菌、双歧杆菌、德
+性疾病的症状[31]。 氏乳杆菌保加利亚种）治疗后，与安慰剂组相比，益生菌治
+1.4 肠道菌群与过敏性哮喘的关联 疗组的患儿肺功能得到显著改善。同时，这些患儿的哮喘急
+多项研究表明，过敏性哮喘患者的肠道菌群多样性显著 性发作次数减少，且哮喘治疗中所需的支气管扩张药用量也
+降低，且特定有益菌（例如双歧杆菌和乳酸菌）数量的减少 相对降低[35]。类似研究进一步指出，对 6 ~ 18 岁的哮喘儿
+与疾病严重程度呈现出密切的相关性。当肠道微生态失调 童进行为期 3 个月的副干酪乳杆菌、发酵乳杆菌或两者联
+时，免疫系统的功能可能会受到损害，使其无法有效地终止 合的胶囊治疗，结果显示这些干预措施能够增加呼气峰流
+炎症反应。这种免疫失衡状态可能导致趋化因子 CXCL1 速，降低血清中的 IgE 水平，从而减轻哮喘的严重程度并
+的表达下调，促进肥大细胞进入循环系统[32]。肥大细胞从 改善哮喘症状。特别值得一提的是，当两种菌株联合使用时，
+肠道进入全身循环后会激活系统性炎症反应，并增加 IL-3 其治疗效果最为显著[36]。一项针对哮喘儿童进行的为期
+和 IL-4 的产生，诱导 Th2 细胞的增多和活化，进一步加 8 周的随机试验显示，在常规治疗基础上加用副干酪乳杆菌
+重哮喘的病症，如气道炎症、气道高反应性和黏液分泌增多 后，哮喘儿童的症状显著减轻，并且他们的肺功能也有了明
+等。此外，肠道微生物所表达的毛样结构蛋白在免疫调节方 显改善[36]。另一项 Meta 分析在对特定菌株进行亚组分析
+面发挥着重要作用。其能够有效地抑制 Th 细胞的活化， 后提示，出生后补充鼠李糖乳杆菌可能对哮喘的预防具有更
+从而减少过度的免疫反应。这种抑制作用有助于防止免疫系 为显著的效果。这一发现强调了选择合适的益生菌菌株以及
+统的过度反应，维护免疫稳态。同时，这些毛样结构蛋白还 适宜的时间点进行补充对于哮喘预防的重要性[37]。
+能通过影响 Treg 细胞的功能，进一步促进肠道免疫功能的 Henrick 等[38]研究发现，双歧杆菌 EVC001 可调控
+成熟和完善[33]。当肠道菌群处于失调状态时，肠道内微生 T 细胞的极化，促进 Th1 和 Treg 细胞的生成，抑制 Th2
+物产生的内毒素会促使肠道巨噬细胞分泌一系列炎症因子， 和 Th17 介导的炎症反应。婴儿补充双歧杆菌能够改善生
+包括肿瘤坏死因子 α（TNF-α）、IL-1 和 IL-6 等。这些炎 命早期的免疫功能障碍，对维持免疫稳态具有重要意义。近
+症因子的释放进一步激活下游的炎症通路，从而加剧炎症反 年来，多项实验结果也表明口服乳酸杆菌、双歧杆菌等益生
+应。在特定情况下，这种炎症反应促使肠道中的免疫细胞通 菌可减轻过敏性哮喘小鼠的气道高反应和气道炎症等症状，
+过循环系统（血液、淋巴）迁移到呼吸道，对呼吸道的免疫 对过敏性哮喘具有较好的治疗效果[39-41]。Raftis 等[42]发现，
+环境产生影响，并有可能触发或加剧过敏性哮喘的症状。研 口服双歧杆菌 MRx0004 可促进激素抵抗型哮喘小鼠体内
+究显示，过敏性哮喘患者肠道菌群的组成与健康人群显著不 的 Treg 细胞生成。这种益生菌还能抑制树突状细胞的抗原
+同，前者的肠道菌群多样性通常较低。这意味着这些患者的 提呈能力、降低过敏原特异性 T 细胞的反应，以及减少中
+肠道微生物多样性和丰度降低，可能导致肠道微生态系统的 性粒细胞和嗜酸粒细胞在肺部的浸润，因此具有潜在的哮喘
+稳定性和功能受到损害。同时，特定菌群的减少与哮喘症状 防治作用。
+的恶化存在关联。具体而言，诸如双歧杆菌和乳酸杆菌等乳 2.2 调整饮食结构
+酸菌，这类对维持肠道健康和免疫系统平衡有益的有益菌， 调整饮食结构作为治疗过敏性哮喘的策略，正日益受到
+在过敏性哮喘患者体内的数量往往呈现减少的趋势。相反， 研究的支持。该方法不仅着眼于症状的缓解，更注重从根本
+某些潜在致病菌，例如产气荚膜梭菌和肠杆菌科细菌，在过 上调节机体的免疫反应和改善整体健康状况。研究表明，饮
+敏性哮喘患者中的数量则通常有所增加，而这些细菌的代谢 食在调节免疫系统功能和肠道微生物群中起着关键作用，从
+产物有可能诱发或加剧炎症反应。短链脂肪酸（如乙酸、丙 而影响过敏性哮喘的发作和严重程度。某些食物具有天然
+酸、丁酸）是肠道菌群发酵膳食纤维的产物，具有抗炎和免 的抗炎作用，例如富含 ω-3 脂肪酸的鱼类、亚麻籽和核桃，
+疫调节作用。在过敏性哮喘患者中，有益菌的减少导致了短 以及富含抗氧化剂的水果和蔬菜。这些食物能够减少体内的
+中国医药生物技术 2025年6月第20卷第3期 Chin Med Biotechnol, June 2025, Vol. 20, No. 3 309
+炎症反应，降低哮喘发作的频率和严重程度[30]。饮食中的 在减少哮喘发作和提高患者生活质量方面的潜力[50]。
+纤维和益生元（如菊粉和果寡糖）可以促进有益肠道菌群的 2.4 粪菌移植
+生长，这些有益菌群通过其代谢产物（如短链脂肪酸）对免 粪菌移植（fecal microbiota transplantation，FMT）是一
+疫系统产生积极影响，从而减少哮喘症状。采用特定的饮食 种将健康供体的肠道菌群移植到患者肠道中的方法，以恢复
+结构，如低过敏原饮食，可以有效减少个体暴露于常见食物 或重建患者肠道微生物群的平衡。这种方法最早用于治疗难
+过敏原的机会，从而降低机体的过敏反应风险[43]。 治性艰难梭菌感染，并取得了显著疗效。近年来，随着研究
+通过调整饮食结构，比如补充膳食纤维，可以显著改变 的持续深入，FMT 在多种疾病中的应用逐渐增多，尤其在
+肠道菌群的组成，从而影响过敏性哮喘的进程[44]。膳食纤 免疫失调相关疾病的治疗中展现出显著效果。在治疗过敏性
+维素存在于水果、蔬菜、坚果、种子和全谷类中，根据其在 哮喘领域，FMT 也展现出了广阔的应用前景和显著的治疗
+水中的溶解性可分为不溶性和可溶性纤维素。观察性研究发 效果。FMT 通过引入健康供体的肠道菌群，能够迅速重建
+现膳食纤维素的摄入对改善气道炎症、肺功能和哮喘控制有 患者肠道微生物的平衡，增加肠道菌群的多样性。这种平衡
+一定积极作用。补充膳食纤维可以有效降低血清中的 IL-5、 的恢复有助于减轻肠道炎症，进而减少系统性炎症反应，包
+FeNO 水平，并减少痰中的嗜酸性粒细胞数量，进而降低气 括气道炎症。健康的肠道菌群可以增强肠道屏障的功能，减
+道阻力，显著改善肺功能和哮喘控制情况。此外，摄入可溶 少肠道通透性，防止有害物质进入血液，从而减轻免疫系统
+性纤维素能够促进体内益生菌的增殖，有助于清除病原菌， 的过度反应。此外，肠道微生物通过其特有的代谢产物（例
+并对肠道菌群微生态肠屏障的修复和免疫系统的平衡具有 如短链脂肪酸）和表面抗原，可直接或间接地调控宿主的免
+深远意义。此外在肠道菌群的分解作用下，食物中的膳食纤 疫系统，不仅促进抗炎性细胞因子的生成，还抑制促炎性细
+维可以产生丰富的短链脂肪酸。这些短链脂肪酸能够通过激 胞因子的释放，这些作用共同助力减少过敏性哮喘的发作。
+活 G 蛋白偶联受体和抑制组蛋白去乙酰化酶来调节免疫 Herbst 等[51]观察到，与来自特定无病原体环境（SPF）且被
+系统，进而发挥对哮喘的保护作用。研究结果显示，高纤维 共生微生物定植的小鼠相比，GF 小鼠（未接触任何致病或
+饮食对改善哮喘症状具有积极作用。这是因为高纤维饮食能 非致病微生物）中卵清蛋白诱发的 2 型呼吸道炎症和呼吸
+够显著提高肠道内短链脂肪酸的含量，而这些具有显著抗炎 道过敏反应要强烈得多。此外，当 GF小鼠与 SPF 小鼠共
+功效的脂肪酸则能有效调节免疫系统[45-47]。实验中，哮喘小 同饲养 3 周后，SPF 小鼠的肠道菌成功定植在 GF 小鼠肠
+鼠在接受高纤维饮食后，其气道炎症显著减轻，肺功能得到 道中，这使得 GF 小鼠原本过度的过敏性炎症降低至与
+明显改善。 SPF 小鼠相当的水平。这一现象表明，肠道在被健康的共
+因此，调整饮食结构在过敏性哮喘的管理中展现出了 生微生物重新定植后，能够对呼吸道提供显著的保护作用。
+巨大的潜力。具体而言，通过增加抗炎食物、高纤维食物以 这不仅为过敏性哮喘的临床治疗开辟了新的路径，也进一步
+及益生菌的摄入，同时严格避免过敏原，并补充必要的维生 凸显了肠道菌群在过敏性哮喘治疗中的不可或缺的地位。
+素和矿物质，可以有效减轻哮喘症状，进而提升患者的生活 2.5 天然产物
+质量。 随着中医药现代化的不断推进，越来越多的天然药物进
+2.3 细菌裂解物 入人们的视野，近年来天然产物调节肠道菌群，治疗过敏性
+呼吸道感染可能是诱发哮喘的重要前提，因此在治疗过 哮喘的报道也层出不穷。众多天然产物因其成分复杂且入血
+敏性哮喘反复发作时，进行非特异性免疫调节以预防呼吸道 量较少，其治疗作用机制多样化，难以明确阐述。然而，深
+感染显得尤为重要。细菌裂解物不仅能直接作用于宿主的免 入研究这些天然产物与肠道菌群的相互作用，为探索其抗病
+疫系统，提升其抗炎反应能力，还能通过调整肠道微生物群 机制提供了全新的视角和思路。
+来改善宿主的肠道免疫环境。与补充益生菌相比，这种方法 黄芩是唇形科黄芩属多年生草本植物，其以根入药，有
+具有时间短暂的优势，从而提高了患者的依从性。OM-85 清热燥湿、泻火解毒、宣降肺气、化痰定喘等功效。有研究
+（Broncho-Vaxom®）是由 8 种呼吸道病原体的 21 种细菌 显示，黄芪能够减轻哮喘患者气道炎症症状，具有调控气道
+菌株碱裂解而成的药物，是一种非特异性免疫调节剂。最近 重塑以及免疫调节功能，在“玉屏风散”“平喘固本
+一项回顾性研究结果显示，200 名小于 6 岁、有反复呼吸 汤”“六君子汤加味”等组方中都体现了中药黄芪的应
+道感染病史的儿童在 2 年内接受 OM-85 治疗，患者复发 用[52]。黄芪中的黄芪多糖对肠道菌群的构成具有重要调节
+及新发呼吸道感染频率、喘息发作频率以及抗生素使用量均 作用。研究发现，黄芪多糖具有抑制 Th2 细胞增加的作用，
+明显降低[48]。在过敏性气道疾病的小鼠模型研究中发现， 能够有效调节 Th1/Th2 平衡，抑制炎症因子的释放，调节
+口服 OM-85 能够激活肠道中的树突状细胞。这种激活作 神经内分泌免疫，进而降低气道高反应性[53-54]。梁金花等[55]
+用进一步诱导了 Treg 细胞向肺转运，从而减少了肺部炎 通过动物实验发现黄芪多糖可以促进大鼠体内双歧杆菌、乳
+症和气道高反应性[49]。类似地，通过舌下途径给予年龄在 酸杆菌的生长，并降低肠球菌和肠杆菌在体内的含量。在体
+6 ~ 16 岁之间的过敏性哮喘儿童多价细菌溶解物片剂 外实验中，黄芪多糖对大肠杆菌、沙门氏菌、金黄色葡萄球
+（PMBL®），可以显著减少急性哮喘发作的次数，显示了其 菌 3 株致病菌有抑制作用[56]。这些研究结果充分揭示了黄
+310 中国医药生物技术 2025年6月第20卷第3期 Chin Med Biotechnol, June 2025, Vol. 20, No. 3
+芪多糖可以通过调节肠道菌群，来发挥其治疗过敏性哮喘的 参考文献
+作用机制。 [1] Wang J, Zhou Y, Zhang H, et al. Pathogenesis of allergic diseases and
+迷迭香酸是一种水溶性的天然酚酸类化合物，广泛存在 implications for therapeutic interventions[J]. Signal Transduct Target
+Ther, 2023, 8(1):138.
+于唇形科、紫草科等多种植物中。迷迭香酸是一种天然抗氧
+[2] Christiansen SC, Zuraw BL. Treatment of hypertension in patients
+化剂，具有较强的抗氧化活性，有助于防止自由基造成的细
+with asthma[J]. New England J Med, 2019, 381:1046-1057.
+胞受损，与此同时，它也具有抗炎、抗菌、抗病毒、抗肿瘤
+[3] Cui L, Morris A, Ghedin E. The human mycobiome in health and
+的活性。研究发现，注射迷迭香酸可明显减少过敏性哮喘小 disease[J]. Genome Med, 2013, 5(7):63.
+鼠肺泡灌洗液中的细胞总数和嗜酸性粒细胞数目，显著抑制 [4] Erdogan A, Rao SS. Small intestinal fungal overgrowth[J]. Curr
+Gastroenterol Rep, 2015, 17(4):16.
+肺组织和肺泡灌洗液中 ROS 的产生，同时升高超氧化物歧
+[5] Guo HH, Han YX, Rong XJ, et al. Alleviation of allergic asthma by
+化酶和谷胱甘肽过氧化物酶的水平，有效改善小鼠肺组织的
+rosmarinic acid via gut-lung axis[J]. Phytomedicine, 2024, 126:
+病理变化[57]。在我们过去的研究中，迷迭香酸展现出了其
+155470.
+独特的能力，即通过调节肠道菌群，如另枝菌属、副拟杆菌、 [6] Dang AT, Marsland BJ. Microbes, metabolites, and the gut–lung
+理研菌属等，促进短链脂肪酸的产生及转运，同时增强肠上 axis[J]. Mucosal Immunol, 2019, 12:843-850.
+[7] Arrieta MC, Stiemsma LT, Dimitriu PA, et al. Early infancy microbial
+皮细胞的紧密连接，维护肠屏障功能，并有效减少五羟色胺
+and metabolic alterations affect risk of childhood asthma[J]. Sci Transl
+和脂多糖进入血液，从而显著改善哮喘小鼠的病症[18]。
+Med, 2015, 7(307):307ra152.
+[8] Abdel-Aziz MI, Thorsen J, Hashimoto S, et al. Oropharyngeal
+3 总结与展望 microbiota clusters in children with asthma or wheeze associate
+哮喘治疗的核心目标是最大限度地减轻症状、保障患者 with allergy, blood transcriptomic immune pathways, and exacerbation
+risk[J]. Am J Respir Crit Care Med, 2023, 208(2):142-154.
+的正常活动能力，并防止肺功能的进一步恶化。目前，临床
+[9] Arrieta MC, Arévalo A, Stiemsma L, et al. Associations between
+上广泛采用的一线药物主要包括抗炎药物和支气管扩张剂，
+infant fungal and bacterial dysbiosis and childhood atopic wheeze in a
+其中吸入皮质类固醇是首选的治疗方案。然而，这种治疗方 nonindustrialized setting[J]. J Allergy Clin Immunol, 2018, 142(2):
+法要求患者终身用药，不仅可能伴随一系列副作用，而且并 424-434, e10.
+未从根本上解决哮喘的发病机制。因此，寻求新的治疗策略 [10] Arrieta MC, Stiemsma LT, Dimitriu PA, et al. Early infancy microbial
+and metabolic alterations affect risk of childhood asthma[J]. Sci Transl
+显得尤为重要。
+Med, 2015, 7(307):307ra152.
+在研究调节肠道菌群以治疗过敏性哮喘的过程中，观察
+[11] Bisgaard H, Li N, Bonnelykke K, et al. Reduced diversity of the
+到肠道微生物对免疫系统的显著调控作用及其潜在的治疗 intestinal microbiota during infancy is associated with increased risk
+效果。然而，该领域仍存在诸多科学问题和技术瓶颈亟待克 of allergic disease at school age[J]. J Allergy Clin Immunol, 2011,
+服。目前，多数研究主要聚焦于揭示肠道菌群与哮喘之间的 128(3):646-652, e1-e5.
+[12] De Filippo C, Cavalieri D, Di Paola M, et al. Impact of diet in shaping
+相关性，而关于两者因果关系的直接证据仍相对有限。此外，
+gut microbiota revealed by a comparative study in children from
+肠道菌群的复杂性和个体间的差异性也为研究和实际应用
+Europe and rural Africa[J]. Proc Natl Acad Sci U S A, 2010, 107(33):
+带来了更大的挑战。因此，开发标准化的菌群调节技术、制 14691-14966.
+订个性化的治疗方案，以及长期评估其安全性和有效性，都 [13] Hilty M, Burke C, Pedro H, et al. Disordered microbial communities
+是当前亟需解决的关键问题。 in asthmatic airways[J]. PLoS One, 2010, 5(1):e8578.
+[14] Jangi S, Gandhi R, Cox LM, et al. Alterations of the human gut
+随着高通量测序技术和代谢组学分析的不断发展，有望
+microbiome in multiple sclerosis[J]. Nat Commun, 2016, 7:12015.
+在未来更深入地理解肠道菌群与过敏性哮喘之间的复杂关
+[15] Lee J, D’aigle J, Atadja L, et al. Gut microbiota-derived short-chain
+系，这将为开发新型微生物疗法提供更加坚实的理论基础。 fatty acids promote poststroke recovery in aged mice[J]. Circ Res,
+同时，借助人工智能和大数据分析的辅助，可能实现更精准 2020, 127(4):453-465.
+[16] Lynch SV, Wood RA, Boushey H, et al. Effects of early-life exposure
+的个性化治疗策略，进一步提升疗效并减少副作用。
+to allergens and bacteria on recurrent wheeze and atopy in urban
+总之，调节肠道菌群作为治疗过敏性哮喘的一种潜在方
+children[J]. J Allergy Clin Immunol, 2014, 134(3):593-601, e12.
+法，展现出了广阔的发展前景，值得持续关注和深入研究。
+[17] Ridaura VK, Faith JJ, Rey FE, et al. Gut microbiota from twins
+本文深入探讨了肠道菌群在过敏性哮喘发病过程中可能扮 discordant for obesity modulate metabolism in mice[J]. Science, 2013,
+演的角色及其相关机制，旨在为基础研究和药物研发提供新 341(6150):1241214.
+[18] Sokol H, Pigneur B, Watterlot L, et al. Faecalibacterium prausnitzii is
+的启示和思路，以期从根本上改善哮喘患者的健康状况和生
+an anti-inflammatory commensal bacterium identified by gut
+活质量。
+microbiota analysis of Crohn disease patients[J]. Proc Natl Acad Sci
+U S A, 2008, 105(43):16731-16736.
+[19] Stiemsma LT, Michels KB. The role of the microbiome in the
+developmental origins of health and disease[J]. Pediatrics, 2018,
+141(4):e20172437.
+中国医药生物技术 2025年6月第20卷第3期 Chin Med Biotechnol, June 2025, Vol. 20, No. 3 311
+[20] West CE, Renz H, Jenmalm MC, et al. The gut microbiota and Lactobacillus rhamnosus and corticosteroid in reducing airway
+inflammatory noncommunicable diseases: associations and potentials inflammation in a mouse asthma model[J]. J Microbiol Immunol
+for gut microbiota therapies[J]. J Allergy Clin Immunol, 2015, 135(1): Infect, 2022, 55(4):766-776.
+3-13, quiz 14. [40] Wang W, Luo X, Zhang Q, et al. Bifidobacterium infantis relieves
+[21] Gao TL, Guo HH, Jiang JD. Neg-entropy mechanism as a target for allergic asthma in mice by regulating Th1/Th2[J]. Med Sci Monit,
+natural medicines[J]. Engineering, 2024, 38(7):11-12. 2020, 26:e920583.
+[22] Abrams GD, Bauer H, Sprinz H. Influence of the normal flora on [41] Wu CT, Lin FH, Lee YT, et al. Effect of Lactobacillus rhamnosus GG
+mucosal morphology and cellular renewal in the ileum. A comparison immunopathologic changes in chronic mouse asthma model[J].
+of germ-free and conventional mice[J]. Lab Invest, 1963, 12:355-364. J Microbiol Immunol Infect, 2019, 52(6):911-919.
+[23] Gordon HA, Bruckner-Kardoss E. Effect of normal microbial flora on [42] Raftis EJ, Delday MI, Cowie P, et al. Bifidobacterium breve MRx0004
+intestinal surface area[J]. Am J Physiol, 1961, 201:175-178. protects against airway inflammation in a severe asthma model by
+[24] Smith K, McCoy KD, Macpherson AJ. Use of axenic animals in suppressing both neutrophil and eosinophil lung infiltration[J]. Sci
+studying the adaptation of mammals to their commensal intestinal Rep, 2018, 8(1):12024.
+microbiota[J]. Semin Immunol, 2007, 19(2):59-69. [43] Williams EJ, Berthon BS, Stoodley I, et al. Nutrition in asthma[J].
+[25] Khoury KA, Floch MH, Hersh T. Small intestinal mucosal cell Semin Respir Crit Care Med, 2022, 43(5):646-661.
+proliferation and bacterial flora in the conventionalization of the [44] Chatzi L, Apostolaki G, Bibakis I, et al. Protective effect of fruits,
+germfree mouse[J]. J Exp Med, 1969, 130(3):659-670. vegetables and the Mediterranean diet on asthma and allergies among
+[26] Maslowski KM, Vieira AT, Ng A, et al. Regulation of inflammatory children in Crete[J]. Thorax, 2007, 62(8):677-683.
+responses by gut microbiota and chemoattractant receptor GPR43[J]. [45] Natesan S. The effect of dietary fiber on asthma through cytokine
+Nature, 2009, 461(7268):1282-1286. production[J]. Int J High Sch Res, 2022, 4(5):73.
+[27] Capaldo CT, Nusrat A. Cytokine regulation of tight junctions[J]. [46] Tan JK, Macia L, Mackay CR. Dietary fiber and SCFAs in the
+Biochim Biophys Acta, 2009, 1788(4):864-871. regulation of mucosal immunity[J]. J Allergy Clin Immunol, 2023,
+[28] O'keefe SJ. Nutrition and colonic health: the critical role of the 151(2):361-370.
+microbiota[J]. Curr Opin Gastroenterol, 2008, 24(1):51-58. [47] Verstegen RE, Kostadinova AI, Merenciana Z, et al. Dietary fibers:
+[29] Abell GC, Cooke CM, Bennett CN, et al. Phylotypes related to effects, underlying mechanisms and possible role in allergic asthma
+Ruminococcus bromii are abundant in the large bowel of humans and management[J]. Nutrients, 2021, 13(11):4153.
+increase in response to a diet high in resistant starch[J]. FEMS [48] Esposito S, Bianchini S, Polinori I, et al. Impact of OM-85 given
+Microbiol Ecol, 2008, 66(3):505-515. during two consecutive years to children with a history of recurrent
+[30] van Beveren GJ, Said H, van Houten MA, et al. The respiratory respiratory tract infections: a retrospective study[J]. Int J Environ Res
+microbiome in childhood asthma[J]. J Allergy Clin Immunol, 2023, Public Health, 2019, 16(6):1065.
+152(6):1352-1367. [49] Navarro S, Cossalter G, Chiavaroli C, et al. The oral administration of
+[31] Shi CW, Cheng MY, Yang X, et al. Probiotic Lactobacillus rhamnosus bacterial extracts prevents asthma via the recruitment of regulatory T
+GG promotes mouse gut microbiota diversity and T cell cells to the airways[J]. Mucosal Immunol, 2011, 4(1):53-65.
+differentiation[J]. Front Microbiol, 2020, 11:607735. [50] Emeryk A, Bartkowiak-Emeryk M, Raus Z, et al. Mechanical bacterial
+[32] Kunii J, Takahashi K, Kasakura K, et al. Commensal bacteria promote lysate administration prevents exacerbation in allergic asthmatic
+migration of mast cells into the intestine[J]. Immunobiology, 2011, children-The EOLIA study[J]. Pediatr Allergy Immunol, 2018, 29(4):
+216(6):692-697. 394-401.
+[33] Sokol CL, Chu N-Q, Yu S, et al. Basophils function as [51] Herbst T, Sichelstiel A, Schär C, et al. Dysregulation of allergic
+antigen-presenting cells for an allergen-induced T helper type 2 airway inflammation in the absence of microbial colonization[J]. Am
+response[J]. Nat Immunol, 2009, 10(7):713-720. J Respir Crit Care Med, 2011, 184(2):198-205.
+[34] Elazab N, Mendy A, Gasana J, et al. Probiotic administration in early [52] Zhu P, Yang C, Li ZG. Research progress of Astragalus membranaceus
+life, atopy, and asthma: a meta-analysis of clinical trials[J]. Pediatrics, in the treatment of bronchial asthma[J]. Asia Pac Traditional Med,
+2013, 132(3):e666-e676. 2017, 13(12):59-61. (in Chinese)
+[35] Hufnagl K, Pali-Schöll I, Roth-Walter F, et al. Dysbiosis of the gut 朱盼, 杨程, 李泽庚. 黄芪治疗支气管哮喘研究进展[J]. 亚太传统
+and lung microbiome has a role in asthma[J]. Semin Immunopathol, 医药, 2017, 13(12):59-61.
+2020, 42(1):75-93. [53] Li JF. Astragalus membranaceus acupoint injection of sports fatigue
+[36] Huang CF, Chie WC, Wang IJ. Efficacy of Lactobacillus administration rats HPA axis and cytokines[D]. Beijing : Beijing Sport University,
+in school-age children with asthma: a randomized, placebo-controlled 2016. (in Chinese)
+trial[J]. Nutrients, 2018, 10(11):1678. 李君芳. 黄芪穴位注射对运动型疲劳大鼠HPA轴及细胞因子的影
+[37] Du X, Wang L, Wu S, et al. Efficacy of probiotic supplementary 响[D]. 北京: 北京体育大学, 2016.
+therapy for asthma, allergic rhinitis, and wheeze: a meta-analysis of [54] Ling H, Zhao X. The research progress of mechanism of astragalus
+randomized controlled trials[J]. Allergy Asthma Proc, 2019, 40(4): polysaccharides treatment of asthma and prospects[J]. J Zhejiang Chin
+250-260. Med Univ, 2016, 40(1):72-74. (in Chinese)
+[38] Henrick BM, Rodriguez L, Lakshmikanth T, et al. Bifidobacteria- 凌昊, 赵霞. 黄芪多糖治疗哮喘的机制研究进展及展望[J]. 浙江中
+mediated immune system imprinting early in life[J]. Cell, 2021, 医药大学学报, 2016, 40(1):72-74.
+184(15):3884-3898, e11. [55] Liang JH, Zheng KW, Sun LQ. Explore the regulative action of
+[39] Voo PY, Wu CT, Sun HL, et al. Effect of combination treatment with astragalus polysaccharide for intestinal dysbacteriosis in ulcerative
+312 中国医药生物技术 2025年6月第20卷第3期 Chin Med Biotechnol, June 2025, Vol. 20, No. 3
+colitis rat models[J]. Stud Trace Elements Health, 2013, 30(2):1-3. (in 李树鹏, 郝艳霜, 陈福星, 等. 黄芪多糖和 2 株益生菌体外抑菌作
+Chinese) 用研究[J]. 河南农业科学, 2007, (4):86-88.
+梁金花, 郑科文, 孙立群. 探讨中药黄芪多糖对溃疡性结肠炎大鼠 [57] Liang ZM, Liao XG, Wen XM, et al. Protective effect of rosarinic acid
+肠道菌群失调的调整作用[J]. 微量元素与健康研究, 2013, 30(2): on oxidative lung injury in asthmatic mice[J]. China Anim Husbandry
+1-3. Vet Med, 2017, 44(12):3650-3655. (in Chinese)
+[56] Li SP, Hao YS, Chen FX, et al. Antimicrobial activity of astragalus 梁正敏, 廖晓光, 文雪梅, 等. 迷迭香酸对哮喘小鼠氧化性肺损伤
+polysaccharides and lactobacillus, B.cereus in vitro[J]. J Henan Agric 的保护作用[J]. 中国畜牧兽医, 2017, 44(12):3650-3655.
+Sci, 2007, (4):86-88. (in Chinese)
+学术活动预告
+· ·
+第十三届中国医药生物技术论坛
+暨首届中国医药生物大会首轮通知
+为响应国家创新驱动发展战略，加速医药生物技术成果转化与国际协同共享，切实发展新质生产力，中国医药生物技术
+协会联合海西医学联盟、温州医科大学等机构，将于 2025 年 10 月在温州举办第十三届中国医药生物技术论坛。会议以“创
+新驱动 智领未来——构建新药研发新质生产力，加速生物技术成果转化，打造生物医药产业生态圈”为主题，以“新药创
+制”和“成果释放”为核心，围绕细胞和基因治疗产品、生长因子、抗体、溶瘤病毒等创新药物的开发及 AI 赋能新药研
+发、合成生物技术、微组织与类器官技术、体外诊断技术、生物制药工程技术等前沿技术设置专题研讨，会议将采用主题报
+告、专题互动、展览展示、项目路演、圆桌对话等多种形式，诚邀全球同仁共商技术转化路径，共建国际合作生态！
+论坛主题：创新驱动 智领未来——构建新药研发新质生产力，加速生物技术成果转化，打造生物医药产业生态圈
+论坛时间：2025 年 10 月下旬
+论坛地点：浙江省温州市（详细时间地点请见第二轮通知）
+论坛对象：国内外从事医药生物技术研究开发、生产、管理和临床应用的专家学者、企业家、政府部门领导；中国医药
+生物技术协会会员；生物医药相关园区领导等。
+论坛内容：1．主论坛：拟邀院士专家、有关部委司局或行业协会负责同志，围绕我国医药生物技术发展政策，医药生
+物技术重点领域、热门领域、前沿技术发展动态、趋势等方向作主旨报告。
+2．专题分论坛：聚焦医药生物技术科技前沿，行业发展热点，拟举办十余场以干细胞与再生医学药物、免
+疫细胞药物、基因治疗药物、溶瘤病毒药物、抗体药物、生长因子类药物为主题的新药创制分论坛；以
+AI 赋能新药研发、合成生物技术、微组织与类器官技术、体外诊断技术、生物制药工程技术等为主题
+的前沿技术进展与转化分论坛；以临床前研究、临床研究、临床应用为主题的临床相关分论坛。
+3．项目转化与展览展示：面向科研院所及协会会员企业征集最新科研成果、可转化交易成果、投融资需求；
+邀请国家自然科学基金项目团队、创新创业大赛优胜企业/团队，大会期间进行集中项目路演及展览展示，
+并邀请投资机构参与，促进合作交流。
+会议详情及报名请登录中国医药生物技术协会网站 http://www.cmba.org.cn/admin/index.php?m=content&c=index&a=
+show&catid=30&id=129 查阅。

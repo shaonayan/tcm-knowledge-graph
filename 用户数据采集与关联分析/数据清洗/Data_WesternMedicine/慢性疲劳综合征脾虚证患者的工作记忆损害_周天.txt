@@ -1,0 +1,546 @@
+第二十七卷 第十一期
+2025 ★Vol. 27 No.11
+慢性疲劳综合征脾虚证患者的工作记忆损害＊
+周 天 ，，，张云河 ，吴子遥 ，，冯思同 ，，宁艳哲 ，，贾竑晓 ，＊＊
+1 2 3 4 1 2 1 2 1 2 1 2
+（ 首都医科大学附属北京安定医院 国家精神疾病医学中心 国家精神心理疾病临床医学研究中心 精神疾病诊断
+1.
+与治疗北京市重点实验室 北京 ； 首都医科大学 人脑保护高精尖创新中心 北京 ；
+100088 2. 100069
+首都医科大学附属北京康复医院 北京 ； 赤峰市精神病防治院 赤峰 ）
+3. 100144 4. 024006
+摘 要：目的 基于斯滕伯格工作记忆任务（ ， ），探讨慢性疲劳综合
+Sternberg working memory task SWMT
+征（ ， ）脾虚证患者的工作记忆功能特征，并分析其与临床症状的相关性。方法
+Chronic fatigue syndrome CFS
+年 月至 年 月于医院门诊和高校招募慢性疲劳综合征脾虚证的受试者 例。根据年龄、性别和
+2022 9 2025 6 31
+受教育年限纳入 例健康对照受试者。对纳入的所有受试者进行 测试，并分析两组差异，对 组
+31 SWMT CFS
+反应时（ ， ）与个体力量清单（ ， ）、健康状况调查简表（
+Reaction time RT Checklist individual strength CIS 36-Item
+， ）、疲劳量表（ ， ）结果进行相关性分析及中介效应分析。
+short-form health survey SF-36 Fatigue scale-14 FS-14
+结果 随着记忆负荷增加，所有受试者 延长； 组在基础反应任务和 位数字任务中的 显著长于健
+RT CFS 6 RT
+康对照组（P ），位数字任务 中位数较高，虽然P ，但效应量提示临床意义（r ）；正确率两组
+<0.05 3 RT >0.05 =0.36
+受试者无明显差异；相关性分析发现， 患者 位数字任务 与 量表总分及各维度均正相关，位数
+CFS 3 RT CIS 6
+字任务 与 的健康变化维度呈显著正相关（r ，P ）； 及 直接损害 中社会
+RT SF-36 =0.396 =0.027 CIS FS-14 SF-36
+功能，但工作记忆未发挥中介作用。结论 脾虚证患者存在特异性工作记忆损伤模式，信息处理速度
+CFS
+减慢，且工作记忆障碍与主观疲劳症状密切相关，提示其可能有独立神经病理基础。研究结果支持“脾藏
+意”理论在 脾虚证认知功能障碍中的临床意义，为 的中医辨证与现代认知神经科学研究提供了新
+CFS CFS
+的结合点。
+关键词：慢性疲劳综合征 脾虚证 工作记忆 脾藏意
+中图分类号 文献标识码
+DOI: 10.11842/wst.20250720006 CSTR: 32150.14.wst.20250720006 : R256.2 :A
+慢性疲劳综合征（ ， ） 中医理论认为“脾为后天之本”，脾虚则气血生化
+Chronic fatigue syndrome CFS
+以持续 个月以上的不明原因疲劳为核心，伴认知障 不足，肌肉失养则疲劳、运动后疲劳不缓解；脾不升清
+6
+碍、睡眠不解乏与疼痛 ，其中认知障碍是常见且致残 则脑髓失充，引发脑雾 、记忆力及注意力下降、直立
+[1] [7]
+的特点之一，工作记忆（ ， ）缺陷显 不耐受、头痛，脾虚不能运化水湿加重睡眠不解乏症
+Working memory WM
+著影响日常生活及工作能力 。近五年研究表明， 状，《临证指南医案》有“脾阳不运，湿浊中阻，清阳不
+[2]
+CFS
+患者的 损伤主要表现为信息处理速度减慢，而非 升，脑失所养，故神疲嗜睡，醒后不解”的论述。综上，
+WM
+单纯记忆容量下降 ，其神经机制涉及脑血流变异、 的病机与“脾虚为本，五脏失衡为标”密不可分 ，
+[3-4] [8]
+CFS
+前额叶功能低下及独立于抑郁的神经病理。然而，尚 临床以健脾方药同步改善疲劳与认知，反证“脾虚为
+缺精细范式阐明其认知策略缺陷 。 本”。《灵枢·本神论》提到，“脾藏营，营舍意”“所以任
+[5-6] [9]
+收稿日期：
+2025-07-20
+修回日期：
+2025-07-24
+＊ 国家自然科学基金委员会面上项目（ ）：基于“脾藏意”的脾气虚证所致工作记忆异常的神经机制研究，负责人：贾竑晓。
+82174311
+＊＊ 通讯作者：贾竑晓（ ： ），教授，主任医师，主要研究方向：中医“五神藏”理论认知神经科学内涵及精神科临床
+ORCID 0000-0002-4924-1388
+应用。
+3148 〔 Modernization of Traditional Chinese Medicine and Materia Medica-World Science and Technology 〕
+世界科学技术 中医药现代化 中医五神藏理论认知神经科学内涵研究
+- ★
+物者谓之心，心有所忆谓之意，意之所存谓之志，因志 根据《脾虚证中医诊疗专家共识意见 》 的亚健
+[20]
+(2017)
+而存变谓之思，因思而远慕谓之虑，因虑而处物谓之 康脾气虚证积分表，对 脾气虚证受试者症状进行
+CFS
+智” [10]，提示“脾意”主司信息暂存，与现代 概念高 综合评估。主症包括：倦怠乏力、大便溏稀、食欲减
+WM
+度吻合 [11-12]。脾虚所致神经 内分泌 免疫失调及递质 退、食后腹胀；次症包括：神疲懒言、脘腹隐痛（遇劳则
+- -
+代谢紊乱，为“脾藏意”提供了神经生理依据 [13-15]。 加重）、口淡不渴、面色萎黄、排便无力。舌脉为：舌淡
+斯 滕 伯 格 工 作 记 忆 任 务（ 或伴齿痕、苔薄白；脉弱无力。舌脉象必备并加上主
+Sternberg working
+， ）通过分级记忆负荷精确解析编 症和次症各 项，或舌脉象必备并加主症 项、次症
+memory task SWMT 2 1
+码、保持与提取阶段的反应时与准确率 [16]，已用于抑 项可诊断。
+3
+郁、帕金森患者等群体 [17-18]。但 领域仍属空白，本 纳入标准： 符合慢性疲劳综合征及脾虚证诊
+CFS ①
+研究首次以 探查 脾虚患者的 特征，并 断； 右利手； 年龄 岁； 文化程度为高中及
+SWMT CFS WM ② ③ 18-45 ④
+验证“脾藏意”理论的认知神经基础，为中医辨证与现 以上； 近两周未服用治疗性药物； 简易韦氏智商
+⑤ ⑥
+代认知科学搭建跨学科桥梁。 测试得分 ； 无家族神经或精神系统遗传病史。
+>80 ⑦
+排除标准： 患有器质性疾病或精神疾病； 不
+1 资料与方法 ① ②
+能理解或不能配合检查及随访者； 妊娠期、哺乳期
+③
+研究对象 女性； 头磁共振检查发现严重解剖结构异常或病变
+1.1 ④
+研究对象来源于 年 月至 年 月医院 者； 汉密尔顿抑郁量表（ 项） 分，汉密尔顿焦虑
+2022 9 2025 6 ⑤ 24 ≥8
+门诊和高校招募的慢性疲劳综合征脾虚证受试者 量表 分。
+≥8
+例。据年龄、性别和受教育年限相匹配 例健康对 1.2.2 健康对照组
+31 31
+照受试者。慢性疲劳综合征组和健康对照组的人口 纳入标准： 右利手； 年龄在 至 岁之间；
+① ② 18 45
+学资料见表 。本研究已获得首都医科大学附属北京 文化程度为高中及以上 简易韦氏智商测试得分
+1 ③ ;④ >
+安定医院伦理委员会的批准，批件号：（ ）科研第 ； 无器质性疾病或显著功能性疾病，且健康状态
+2022 80 ⑤
+（ ）号。研究过程中，所有参与者均已充分了解研究 简单评估问卷（
+89 Health evaluating questionnaire H20
+内容、目的、可能遇到的风险和权益，并自愿签署知情 ， ）得分 分 [21] 无家族神经或精神系统
+V2009 H20 ≥80 ;⑥
+同意书。 遗传病史； 近两个月内未使用任何兴奋性药物。
+⑦
+研究方法 排除标准： 存在精神或神经系统功能障碍相关
+1.2 ①
+1.2.1 纳入和排除标准 疾病； 无法配合完成本研究的受试者； 妊娠期、哺
+② ③
+为确保研究质量，由 名具有副主任医师职称及 乳期女性。
+2
+以上的医师对纳入的慢性疲劳综合征脾虚证受试者
+1.3 SWMT
+进行评估。 1.3.1 测试方法
+诊断标准：依据美国疾病控制中心 年的诊断 采用分级记忆集负载设计（n 、、位数字）系统
+1994 =1 3 6
+标准，患者具有经临床评估的、无法解释的、持续或反 评估工作记忆功能。测试流程分为三阶段：记忆集编
+复出现的慢性疲劳，该疲劳症状是新出现的或有明确 码阶段以视觉序列呈现阿拉伯数字，被试按键判断是
+的开始（非终身的），不是持续劳累引起的，休息后不 否匹配，精确记录探测出现至响应的反应时（
+Reaction
+能充分缓解，并已导致先前的职业、教育、社会或个人 ， ）。关键设计为负载分级（n 测知觉动作基
+time RT =1
+活动水平明显下降。同时出现 个以下症状，所有这 础，n 测基础工作记忆容量，n 挑战容量极限） [22]。
+≥4 =3 =6
+些症状在疾病持续或再发期间持续或复发了 个或更 1.3.2 测试过程
+6
+多连续月，并且不能先于疲劳出现： 过度劳累后疲 被试双手分别配给专门的按键，左手 ，右手
+① YES
+劳持续超过 ； 不能解乏的睡眠； 严重的短期记 ，用于任务的完成。整个 持续 。
+24 h ② ③ NO SWMT 12 min 58 s
+忆或注意力集中障碍； 一种新的类型、模式或严重 首先黑色屏幕中会出现一个 的白色十字定位符，
+④ 10 s
+程度的头痛； 肌肉痛； 无关节红肿的多关节疼痛； 促使被试冷静下来并将注意力转到任务操作中，其后
+⑤ ⑥
+咽喉痛； 颈部或腋下淋巴结压痛 。脾虚证诊断 出现 个持续 的刺激模块，每一个刺激模块包括
+[19]
+⑦ ⑧ 12 64 s
+〔 Modernization of Traditional Chinese Medicine and Materia Medica-World Science and Technology 〕 3149
+第二十七卷 第十一期
+2025 ★Vol. 27 No.11
+一个持续 的对照任务和一个持续 的实验任
+32 s 32 s
+务。对照实验（ ）试次，首先出现“ ”号，持续时
+Control *
+间为 ，紧接着“ ”号消失（持续 ），最后屏幕中会
+3 s * 7 s
+出现“ ”或者“ ”的字样，被试根据出现的字样来
+YES NO
+按键。实验任务试次，屏幕中首先会出现 、或 位
+1 3 6
+数字（ 、 、 ，出现在屏幕中间），持续时间
+one three six-digit
+为 ，接着数字消失（持续 ），最后屏幕中会出现新
+3 s 7 s
+的一个数字，被试需要判断这个数字是不是刚才出现
+的那个数字，如果是按左键，如果不是按右键。
+SWMT 图1 斯滕伯格工作记忆任务示意图[23]
+示意图详情见图 。
+1 Fig. 1 Sternberg working memory task[23]
+1.3.3 测试指标
+：记录探测刺激呈现至正确按键的时间，反映 表1 慢性疲劳综合征受试者和健康对照组受试者基本
+RT
+资料情况
+工作记忆检索效率，其延长提示信息扫描速度下降。
+Table 1 Basic demographic and clinical characteristics
+正确率（ ， ）：计算正确响应试次的占
+Accuracy ACC of CFS subjects and healthy controls
+比（ ），评估工作记忆存储精度。
+% 总计
+统计学方法 类别 CFS HCs P 2
+1.4 n n n t/Z/χ
+使用 软件进行数据统计分析。对于符 ( =62) ( =31) ( =31)
+SPSS 27.0 年龄
+27(24,30) 27(25,34) 26(24,27.5) 0.11 2.58
+合正态分布的计量资料，采用均数 标准差（x s）表示， 男 （
+± ˉ± 性别 18(29) 7 22.6) 11(35.5)
+组间的均值比较使用独立样本t检验。不符合正态分 /n(%) 女 0.26 1.25
+44(71) 24(77.4) 20(64.5)
+布的计量资料，采用“中位数（四分位数）” 教育
+18(16,20) 18(16,19) 18(17,20.5) 0.15 2.028
+[M(P25,P75)]
+表示，组间中位数比较使用非参数检验。计数资料采
+表2 慢性疲劳综合征受试者和健康对照组受试者的
+用频数（构成比）进行统计描述，组间比较使用 检验
+χ2 反应时比较
+或秩和检验。对 反应时与各量表积分表进行
+Table 2 Comparison of RT between CFS subjects and
+SWMT
+相关性分析，正态分布的数据采用 相关分析， healthy controls
+Pearson
+非正态分布的数据采用 秩相关分析，以P
+n n n P t
+Spearman < Variable Total ( =62) CFS ( =31) HCs ( =31) /Z
+为差异具有统计学意义。采用 法检验中
+0.05 Bootstrap Control 919.7±161.7 963.6±155.1 875.8±158.5 0.031 4.862
+介效应。
+1-digit 1016.8±212.1 1058.7±182.5 974.9±233.5 0.121 2.476
+1060.9 1126.5 1004.8
+2 结果 3-digit 0.098 2.737
+(940.5,1217.7) (1000.2,1346.6) (913.1,1188.9)
+慢性疲劳综合征脾虚证受试者和健康对照组受 6-digit 1264.5±256.7 1329.1±232.5 1199.9±267 0.047 4.125
+2.1
+试者的临床资料比较 慢性疲劳综合征脾虚证受试者和健康对照组斯
+2.2
+本研究纳入 例慢性疲劳综合征脾虚证受试者， 滕伯格工作记忆功能比较
+31
+年龄 岁 平均年龄 岁 ，受教育年限 应用斯滕伯格工作记忆范式评估两组受试者的
+21-39 [ 27(25,34) ] 14-
+年 平均受教育年限 年 ，男性 例 工作记忆功能。应用秩和检验比较 、、位数字任
+24 [ 18(16,19) ] 7 1 3 6
+（ ），女性 例（ ）。纳入健康对照受试者 务 ，结果显示更大记忆负荷对应更长的反应时间
+22.6% 24 77.4% RT
+例，年龄 岁 平均年龄 岁 ，受教育 （P ）。比较 组和 组斯滕伯格工作记忆
+31 21-36 [ 26(24,27.5) ] >0.05 CFS HCs
+年限 年 平均受教育年限 年 ，男性 功能，在正确率方面两组无明显统计学差异。 组
+12-23 [ 18(17,20.5) ] CFS
+例（ ），女性 例（ ），经两组组间比较， 的基础（ ）、位数字任务反应时较健康对照组
+11 35.5% 20 64.5% Control 6
+慢性疲劳综合征受试者和健康对照组受试者在年龄、 受试者明显延长，位数字反应时中位数较 组高，
+3 HCs
+受教育年限和性别方面无明显统计学差异（P ）， 虽未达 P 阈值，但效应量提示临床意义（r
+>0.05 <0.05 =
+见表 。 ），见表 。
+1 0.36 2
+3150 〔 Modernization of Traditional Chinese Medicine and Materia Medica-World Science and Technology 〕
+世界科学技术 中医药现代化 中医五神藏理论认知神经科学内涵研究
+- ★
+慢性疲劳综合征脾虚证受试者的反应时与 健康变化的评分为 （x s，n ），位数字
+2.3 SF- 1.9±0.7 ˉ± =31 6
+、 、 量表的相关性 高认知负荷任务的反应时仅与 量表的健康变化
+36 CIS FS-14 SF-36
+受试者 的 与 位数字反应时的 维度呈正相关（r ，P ），表明受试者主观健
+CFS SWMT Control 1 p=0.396 =0.027
+反应时健康状况调查简表（ 康状态的动态变化与高负荷认知表现存在统计学关
+The MOS 36-item short-
+， ）、个体力量清单（ 联（图 、图 ）。
+form health survey SF-36 Checklist 2 3
+， ）、疲劳量表（ ， 脾虚证证候积分与反应时及 、 、
+individual strength CIS Fatigue Scale-14 2.4 SF-36 CIS FS-14
+）量表的总分与各维度分均未发现统计学关联。 量表的相关性
+FS-14
+量表总分及子项分的中位数 分别 脾虚证证候积分有三个缺失值（n ），中位数
+CIS M(P25,P75) =28
+是：总分 ，疲劳 ，注意力 ， 为 ，与 及 、、位数字反应
+93(46,137) 41(18,56) 24(10,35) M(P25,P75) 16(7,24) control 1 3 6
+动机 ，体力 。 位数字基础认知负荷 时均不相关，但与 总分及疲劳、注意力、动机子项
+15(8,26) 15(7,21) 3 CIS
+任务的反应时与 量表全量表（总分 子项）广泛相 分均相关（图 ），与 总分相关（图 ），与
+CIS +4 4 SF-36 5 FS-14
+关，与 、 量表评分未发现统计学关联。 量表及子项评分未发现统计学关联。
+FS-14 SF-36
+图2 CIS各子项及总分3-digit反应时的Spearman相关性（n=31）
+Fig. 2 Spearman correlations between CIS subscale scores/total score and 3-digit reaction time (n=31)
+〔 Modernization of Traditional Chinese Medicine and Materia Medica-World Science and Technology 〕 3151
+第二十七卷 第十一期
+2025 ★Vol. 27 No.11
+个体力量清单评分对社会功能的损害及工作记
+2.5
+忆中介机制的影响
+采用 法（重复抽样 次）检验工作记
+Bootstrap 5000
+忆反应时（ ）在个体力量清单（ ， 评分）与社会功
+M X CIS
+能（ ， 评分）间的中介效应。控制变量包括
+Y SF-36
+年龄、性别、受教育年限。
+结果显示，个体力量清单对社会功能的总效应显
+著（ ， ， ，
+c=-5.56103 SE=0.8746 95%CI[-7.5586,-4.1238]
+P ），表明 量表评分每增加 单位，社会功能
+图3 健康变化维度评分与6-digit反应时的Pearson相关性 <0.001 CIS 1
+（n=31） 评分显著降低 个单位。控制工作记忆反应时后，
+5.57
+Fig. 3 Pearson correlation between health change dimension 个体力量评分的直接效应仍高度显著（ ，
+c′=-5.5641
+score and 6-digit reaction time (n=31) ， ，P ），占总
+SE=0.8742 95%CI[-7.5656,-4.1514] <0.001
+图4 脾虚证证候积分与CIS总分及子项的Spearman相关性（n=28）
+Fig. 4 Spearman correlation between the syndrome score of spleen deficiency and the total score and sub-items of CIS (n=28)
+3152 〔 Modernization of Traditional Chinese Medicine and Materia Medica-World Science and Technology 〕
+世界科学技术 中医药现代化 中医五神藏理论认知神经科学内涵研究
+- ★
+表4 疲劳症状对社会功能的损害及工作记忆反应时的
+中介效应（n=31）
+Table 4 The impairment of social functioning by fa⁃
+tigue symptoms and the mediating effect of working
+memory reaction time (n=31)
+标准误
+效应 效应值 P
+(β) Bootstrap 95% CI
+(S.E.)
+中介效应
+(ab) 0.2046 2.2907 [-3.6310, 5.7180] 0.886
+直接效应
+(c′) -36.3834 12.0821 [-65.3630, -19.4877] 0.002
+总效应
+(c) -36.1788 11.4059 [-64.5374, -19.7817] <0.001
+图5 脾虚证证候积分与SF-36总分的Spearman相关性
+（n=28）
+Fig. 5 Spearman correlation between the syndrome score of
+spleen deficiency and the total score of SF-36 (n=28)
+图7 疲劳量表评分对社会功能的总效应模型
+表3 个体力量清单对社会功能的损害及工作记忆
+Fig. 7 Total effect model of FS-14 on social functioning
+反应时的中介效应（n=31）
+Table 3 Detrimental impact of checklist individual
+加 单位，社会功能评分平均下降 分。控制斯
+1 36.1788
+strength on social functioning and the mediating effect
+滕伯格工作记忆反应时后， 的直接效应仍显著
+of working memory reaction time (n=31) FS-14
+为 负（ ， ，
+c′ =-36.3834 SE=12.0821 95%CI[-65.363,
+效应 效应值 标准误 P
+(β) (S.E.) Bootstrap 95% CI ，P ），占总效应约 （表 ）。斯滕
+中介效应 -19.4877] =0.002 100% 3
+(ab) 0.0307 0.3001 [-0.6267, 0.5744] 0.846 伯格反应时的中介效应不显著（ ，
+直接效应 β=0.2046 95%CI
+(c′) -5.641 0.8742 [-7.5656, -4.1514] <0.001 ， ，P ），拒绝工作记忆速度的中
+总效应
+[-3.6310 5.7180] =0.886
+(c) -5.6103 0.8746 [-7.5586, -4.1238] <0.001
+介假设（表 ）。综上，疲劳症状对社会功能的损害主
+4
+要通过直接路径实现，认知反应时未发挥中介作
+用（图 ）。
+7
+图6 个体力量评分对社会功能的总效应模型 3 讨论
+Fig. 6 Total effect model of checklist individual strength on
+social functioning 本研究采用 探究工作记忆负荷与反应时
+SWMT
+的关联性、 脾虚证患者特异性损伤模式及其与临
+效应的约 （表 ），提示个体力量评分对社会功能 CFS
+100% 3 床症状的关联。
+的损害主要不通过工作记忆速度传递。间接效应
+本研究首次采用 评估 脾虚证患者的工
+SWMT CFS
+（ ）不显著（ ， ，
+ab β=0.0307 SE=0.3001 Bootstrap 95%CI 作记忆功能，发现随着记忆负荷增加（ ），
+1→3→6-digit
+，P ），中介效应占比（ ）仅
+所有受试者的 显著延长（秩和检验P ），符合
+[-0.6267,0.5744] =0.846 ab/c
+RT <0.05
+，拒绝工作记忆反应时的中介作用假设，个体
+斯滕伯格范式的经典理论 ，尤其在高负荷（ ）
+-0.55% [24]
+6-digit
+力量清单评分损害社会功能，效应显著（图 ）。
+下比健康对照平均延迟 （P ），而正确率无
+6
+129 ms <0.05
+疲劳症状对社会功能的损害及工作记忆中介机
+差异。该结果与 等 在青少年 样本中使用
+2.6 [4]
+Josev CFS
+制的影响
+计算机化认知测试电池观察到 延长但准
+Cogstate RT
+采用 法（重复抽样 次）检验工作记 确率正常的结果一致。而 等 使用 实
+Bootstrap 5000 Caseras [25] n-back
+忆反应时在疲劳症状（ ， 评分）与社会功能（ ， 验测量工作记忆功能发现，随着认知负荷上升，两组
+X FS-14 Y
+社会功能维度）间的中介效应。控制变量包括 均变慢，但组间差异不显著，值得注意的是，在本研
+SF-36 RT
+年龄、性别、受教育年限。 究中 任务虽未达显著差异，但效应量r 已
+3-digit =0.36
+结果显示， 疲劳量表评分对社会功能的总 接近中等，也提示低 中等负荷下即可出现临床可辨
+FS-14 -
+效应显著（ ，P ），表明疲劳程度每增 的加工延迟。研究结果提示 患者信息加工速度
+c=-36.1788 <0.001 CFS
+〔 Modernization of Traditional Chinese Medicine and Materia Medica-World Science and Technology 〕 3153
+第二十七卷 第十一期
+2025 ★Vol. 27 No.11
+减慢，与既往使用 测试 、 测试 工作记忆障碍的本质是信息处理速度减慢，
+[26]
+Stroop Dobbs and Rule CFS
+等 工作记忆任务研究的 患者加工速度减慢而非 这一现象与中医“脾虚则运化无力，清阳不升”的病机
+[3]
+CFS
+容量下降的结论一致。 延长提示 患者可能通 高度一致。脾虚则气血生化乏源，脑失所养，认知资
+RT CFS
+过延长信息处理时间维持准确性，符合“认知补偿”理 源调动受限，导致基础认知处理效率下降，其核心病
+论 。神经影像学证据表明， 患者前额叶皮层及 机为脾失健运导致气血亏虚或湿浊内阻，进而出现脑
+[27]
+CFS
+后扣带回代谢异常，导致神经资源调用效率下降，需 髓失养致信息处理速度减慢。本研究虽未观察到脾
+更多时间完成高认知需求任务 。 位数字高认知负 虚证候积分与工作记忆反应时的直接相关，但却呈现
+[28]
+6
+荷任务（超工作记忆容量）依赖反应性控制策略（检索 脾虚 主观疲劳 工作记忆相关性，脾虚证候积分与
+- -
+而非维持），而 患者在此模式下表现更差，提示疲 总分及其疲劳、注意力、动机子项显著正相关，
+CFS CIS CIS
+劳导致认知功能障碍 ，既往证据进一步揭示， 患 各维度又与工作记忆反应时正相关，提示脾虚虽然不
+[17]
+CFS
+者下丘脑 垂体 肾上腺轴失调及神经炎症可损害前 直接损害工作记忆，但疲劳本身作为一种“认知负
+- -
+额叶功能，影响高负荷下的认知控制 。 位数字任 荷”，会占用前额叶资源，脾虚可以通过机体对疲劳的
+[29]
+3
+务 与 总分及子项均相关。此关联表明， 患 耐受性下降、放大疲劳感知间接导致认知资源耗竭，
+RT CIS CFS
+者的主观疲劳感可能源于基础认知处理效率下降，进 符合现代神经科学研究结果 和“脾主意”强调的“脾
+[31]
+而放大日常疲劳感知。高负荷任务（ 位）与 健 虚 气血生化不足 疲劳 脑失所养 脾主意功能
+6 SF-36 → → → →
+康变化正相关。健康变化维度评估患者对自身健康 失常”的现代转译。将中医“脾藏意”理论与现代认知
+状态动态变化的主观感知， 任务需处理较长数 神经科学相结合，不仅有助于深化对 工作记忆障
+6-digit CFS
+字序列，属于高认知负荷（依赖工作记忆与持续注意 碍机制的理解，也为中医辨证施治提供了现代科学依
+力），二者相关（r ）表明健康波动会影响高负荷 据。未来研究可进一步探索脾虚证与特定认知域损
+=0.396
+任务的执行效率， 延长反映的认知处理速度下降， 伤之间的关联，并评估中医干预对认知功能的改善
+RT
+直接损害日常活动执行效率，进而被患者内感受网络 作用。
+（后岛叶 前扣带回）整合为健康状态恶化的主观体 综上，本研究揭示了 脾虚证患者工作记忆缺
+- CFS
+验 。直接效应主导证实个体力量清单评分、疲劳症 陷本质是信息处理速度减慢，而非单纯记忆容量不
+[30]
+状无需通过工作记忆即可直接降低社会功能，暗示信 足，尤其在高负荷任务中更为明显，与既往研究结果
+息处理速度的减慢并非影响社会功能的核心中介，可 相符。这些发现表明 存在独立的神经病理基础，
+CFS
+能的原因是单一反应时任务无法捕捉社会功能所需 支持中医“脾藏意”理论。将中医辨证与认知科学整
+的整合认知能力，未来需结合多维度认知评估与纵向 合，或可为 的精准辨证与个体化干预提供跨学科
+CFS
+设计深入探索其机制，也提示临床康复方案中干预应 路径，最终改善患者认知功能与生活质量。
+优先针对症状管理（如疲劳），而非单纯认知训练。 利益冲突 本文不存在任何利益冲突。
+[ ]
+参考文献 2
+1 Nacul L, Authier F J, Scheibenbogen C, et al. European network on 4 Josev E K, Malpas C B, Seal M L, et al. Resting-state functional
+myalgic encephalomyelitis/chronic fatigue syndrome (EUROMENE): connectivity, cognition, and fatigue in response to cognitive exertion: A
+Expert consensus on the diagnosis, service provision, and care of novel study in adolescents with chronic fatigue syndrome[J]. Brain
+people with ME/CFS in Europe[J]. Medicina (Kaunas), 2021, 57(5):510. Imaging Behav, 2020, 14(5):1815-1830.
+2 Herman M E. How pandemics reshape our brain: common links and 5 Boissoneault J, Letzen J, Robinson M, et al. Cerebral blood flow and
+targets between long-haul COVID-19, myalgic encephalomyelitis/ heart rate variability predict fatigue severity in patients with chronic
+chronic fatigue syndrome (ME/CFS), oxidative stress, and fatigue syndrome[J]. Brain Imaging Behav, 2019, 13(3):789-797.
+neurodegeneration[J]. Neuroprotection, 2025:nep3.70007. 6 Morris G, Berk M, Puri B K. A comparison of neuroimaging
+3 Dobbs B M, Dobbs A R, Kiss I. Working memory deficits associated abnormalities in multiple sclerosis, major depression and chronic
+with chronic fatigue syndrome[J]. J Int Neuropsychol Soc, 2001, 7(3): fatigue syndrome (myalgic encephalomyelitis): Is there a common
+285-293. cause?[J]. Mol Neurobiol, 2018, 55(4):3592-3609.
+3154 〔 Modernization of Traditional Chinese Medicine and Materia Medica-World Science and Technology 〕
+世界科学技术 中医药现代化 中医五神藏理论认知神经科学内涵研究
+- ★
+7 Ning Y Z, Wu F Z, Xue S, et al. Enhanced functional connectivity of 19 Fukuda K, Straus S E, Hickie I, et al. The chronic fatigue syndrome: A
+the default mode network (DMN) in patients with spleen deficiency comprehensive approach to its definition and study[J]. Ann Intern Med,
+syndrome: A resting-state fMRI study[J]. Medicine, 2019, 98(5): 1994, 121(12):953-959.
+张声生 胡玲 李茹柳 等 脾虚证中医诊疗专家共识意见 中医
+e14372. 20 , , , . [J].
+陈佳 黄运旋 陈兴华 慢性疲劳综合征免疫功能紊乱 脾虚 本质 杂志
+8 , , . " " , 2017, 58(17):1525-1530.
+的探讨与思考 时珍国医国药 朱红红 张志枫 陈晓 等 健康状态简单评估问卷 的设计与评
+[J]. , 2021, (9):2233-2235. 21 , , , . H2O
+谢梅华 吴虹 曾文莉 补中益气汤为主治疗慢性疲劳综合征临床 价 第四次全国中西医结合诊断学术研讨会论文集
+9 , , . [C]. . 2010:
+观察 中医药临床杂志
+[J]. , 2004, 16(2):113-114. 153-156.
+郭霭春 黄帝内经灵枢白话解 中国中医药出版社
+10 . [M]. , 2022:71-73. 22 Tang R, Bugg J M, Snijder J P, et al. The dual mechanisms of cognitive
+于迎 宁艳哲 贾竑晓 等“脾藏意主思”的现代心理学内涵 中
+11 , , , . [J]. control (DMCC) project: Validation of an online behavioral task battery
+国中医基础医学杂志
+, 2018, 24(7):890-893. [J]. Q J Exp Psychol (Hove), 2023, 76(7):1457-1480.
+Yu Y, Ning Y Z, Jia H X, et al. Modern psychology connotation of 23 Cui J, Tkachenko O, Gogel H, et al. Microstructure of frontoparietal
+spleen in storing idea and in charge of thought[J]. Journal of Basic connections predicts individual resistance to sleep deprivation[J].
+Chinese Medicine, 2018, 24(7):890-893. Neuroimage, 2015, 106:123-133.
+吴子遥 冯思同 贾竑晓 等 亚健康脾气虚证与注意网络功能异常
+12 , , , . 24 Sternberg S. High-speed scanning in human memory[J]. Science,
+的关系 首都医科大学学报
+[J]. , 2025, 46(1):125-129. 1966, 153(3736):652-654.
+Wu Z Y, Feng S T, Jia H X, et al. The relationship between sub- 25 Caseras X, Mataix-Cols D, Giampietro V, et al. Probing the working
+healthy individuals with spleen qi deficiency syndrome and attention memory system in chronic fatigue syndrome: A functional magnetic
+network dysfunction[J]. Journal of Capital Medical University, 2025, 46 resonance imaging study using the n-back task[J]. Psychosom Med,
+(1):125-129. 2006, 68(6):947-955.
+13 Wang X, Wu M, Lai X, et al. Network pharmacology to uncover the 26 Robinson L J, Gallagher P, Watson S, et al. Impairments in cognitive
+biological basis of spleen qi deficiency syndrome and herbal treatment performance in chronic fatigue syndrome are common, not related to
+[J]. Oxid Med Cell Longev, 2020, 2020:1-20. co-morbid depression but do associate with autonomic dysfunction[J].
+14 Bellafard A, Namvar G, Kao J C, et al. Volatile working memory Plos One, 2019, 14(2):e0210394.
+representations crystallize with practice[J]. Nature, 2024, 629(8014): 27 Badarin A A, Antipov V M, Grubov V V, et al. Brain compensatory
+109-1117. mechanisms during the prolonged cognitive task: fNIRS and eye-
+张坤漓 吕咪 王凤云 等 基于肠道菌群的脾虚证研究述评 世
+15 , , , . [J]. tracking study[J]. IEEE Trans Cogn Dev Syst, 2024, 17(2):303-314.
+界科学技术 中医药现代化
+- , 2024, 26(3):628-633. 28 Wang B, Zhang X, Lu P, et al. Impact of tai chi therapy on fatigue and
+Zhang K L, Lyu M, Wang F Y, et al. A review of studies on spleen cognitive function in individuals with chronic fatigue syndrome:
+deficiency syndrome based on intestinal microflora[J]. Modernization of protocol for a pilot randomized controlled trial[J]. JMIR Res Protoc,
+Traditional Chinese Medicine and Materia Medica-World Science and 2025, 14:e65958.
+Technology, 2024, 26(3):628-633. 29 Zhang Y D, Wang L N. Research progress in the treatment of chronic
+16 Ahmadi M, Michalka S W, Najafabadi M A, et al. EEG, pupil dilations, fatigue syndrome through interventions targeting the hypothalamus-
+and other physiological measures of working memory load in the pituitary-adrenal axis[J]. Front Endocrinol (Lausanne), 2024, 15:1373748.
+sternberg task[J]. Multimodal Technologies and Interaction, 2024, 30 Koban L, Gianaros P J, Kober H, et al. The self in context: Brain
+8(4):34. systems linking mental and physical health[J]. Nat Rev Neurosci, 2021,
+17 Braver T S, Kizhner A, Tang R, et al. The dual mechanisms of cognitive 22(5):309-322.
+黄俊飞 郭凯峰 蒋军，等 精神疲劳及其神经机制 心理学进展
+control project[J]. J Cogn Neurosci, 2021, 33(9):1990-2015. 31 , , . [J]. ,
+18 Lee B, Young C B, Cai W, et al. Dopaminergic modulation and dosage 2024, 14(3):383-392.
+effects on brain state dynamics and working memory component Huang J K, Guo K F, Jiang J, et al. Mental fatigue and its neural
+’
+processes in Parkinson s disease[J]. Nat Commun, 2025, 16(1):2433. mechanisms[J]. Advances in Psychology, 2024, 14(3):383-392.
+Work Memory Impairment in Patients with Chronic Fatigue Syndrome and Spleen Deficiency
+ZHOU Tian1,2,3， ZHANG Yunhe4， WU Ziyao1,2， FENG Sitong1,2， NING Yanzhe1,2， JIA Hongxiao1,2
+(1. Beijing Key Laboratory of Mental Disorders, National Clinical Research Center for Mental Disorders &
+〔 Modernization of Traditional Chinese Medicine and Materia Medica-World Science and Technology 〕 3155
+第二十七卷 第十一期
+2025 ★Vol. 27 No.11
+National Center for Mental Disorders, Beijing Anding Hospital, Capital Medical University, Beijing 100088,
+China；2. Advanced Innovation Center for Human Brain Protection, Capital Medical University,
+Beijing 100069, China；3. Beijing Rehabilitation Hospital of Capital Medical University, Beijing 100144,
+China；4. Chifeng Psychiatric Hospital, Chifeng 024006, China)
+Abstract:
+Objective To characterize working memory performance in patients with chronic fatigue syndrome (CFS)
+and spleen-deficiency syndrome and to examine its associations with clinical symptoms by Sternberg working memory
+task (SWMT). Methods 31 CFS patients meeting both CDC-1994 criteria and consensus criteria for spleen-deficiency
+pattern were recruited from outpatient clinics and universities from September 2022 and June 2025. 31 healthy controls
+were also recruited based on age, sex, and education. All subjects completed the SWMT. Group differences were
+analyzed. Within the CFS cohort, reaction time (RT) was correlated with scores on the checklist individual strength (CIS),
+36-item short-form health survey (sf-36), and fatigue scale-14 (FS-14). Mediation was examined. Results RT
+lengthened with increasing memory load in both groups. CFS patients displayed slower RTs than controls in the baseline
+P P r
+and 6-digit set ( <0.05). The 3-digit RT difference, though not significant ( >0.05), yielded a medium effect size ( =
+0.36). Accuracy did not differ between two groups. Among CFS patients, 3-digit RT correlated positively with CIS total
+r P
+and the 4 sub-scale scores. 6-digit RT correlated with the SF-36 health-transition dimension ( =0.396, =0.027). CIS
+and FS-14 scores directly impaired SF-36 social functioning without working-memory mediating. Conclusion CFS
+patients with spleen-deficiency exhibit slowed processing speed rather than capacity loss. The close link between
+working-memory slowing and fatigue suggests a distinct neural basis. These results support the traditional concept "the
+spleen stores Yi" and integrate TCM pattern differentiation with modern cognitive neuroscience in CFS.
+Keywords:
+Chronic fatigue syndrome, Spleen deficiency syndrome, Working memory, Spleen storing Yi
+（责任编辑：李青）
+3156 〔 Modernization of Traditional Chinese Medicine and Materia Medica-World Science and Technology 〕

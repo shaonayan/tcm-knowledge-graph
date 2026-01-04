@@ -1,0 +1,321 @@
+心脑血管病防治2025年2月第25卷第2期 Cardio-Cerebrovasc Dis Prev Treat,February 2025,Vol.25,No.2 · 1 ·
+述 评
+自主神经功能和内脏功能稳态对衰弱的
+影响及干预策略
+王日旺 丁荣晶
+专家简介：丁荣晶，教授，医学博士后，主任医师，心脏康复学科带头
+人，康复医学科副主任，硕士研究生导师，梅奥医学中心心脏康复高级访问
+学者。中国康复学会心血管预防与康复专业委员会候任主任委员。中华医学
+会心血管病学分会心脏康复学组委员，中国老年保健协会人文·科技·健康
+分会主任委员。中国康复医学会康复心理学专业委员会副主任委员，中华医
+学会心身医学分会委员兼双心学组组长，CDQI国家标准化心脏康复中心认
+证项目秘书长，国家健康科普专家库成员。获中国康复医学会科技进步一等
+奖和二等奖2项，中华医学会科技进步三等奖1项。我国心脏康复二级预防
+指南、双心医学、运动治疗、药物治疗、戒烟干预治疗、家庭心脏康复等专
+家共识执笔专家。
+自主神经功能紊乱是指调节内脏和腺体功能的 控制，通过交感和副交感神经系统两部分的共同作用，
+交感和副交感神经系统之间的平衡失匹配，导致自 调节和控制身体的内脏器官生理功能，保持心血管、
+主神经功能紊乱，引发躯体化障碍、体位性心动过 呼吸、消化等系统的功能稳态。
+速、直立性低血压、全身乏力、消化不良、出汗异常、 在心血管系统调节中，交感神经激活，释放去
+体温调节障碍等一系列症状。研究表明，随着年龄 甲肾上腺素，作用于心肌β1受体，导致心率上升和
+的增长，机体基础交感神经活动增加，血浆去甲肾 心肌收缩力增强，即正性肌力作用，同时通过血管平
+上腺素水平上升，交感神经和副交感神经系统的反 滑肌α1受体介导，引起血管收缩和血压升高。相反，
+应性降低[1]。糖尿病、神经系统退行性变以及降压药、
+副交感神经刺激迷走神经，释放乙酰胆碱，作用于心
+阿片类止痛药和抗抑郁药物的使用，均是自主神经 肌M2受体，导致心率降低和心肌收缩力减低[4]，两
+功能紊乱的诱导因素[2]。机体长期处于自主神经失衡
+者共同作用维持血流动力学稳定。
+状态，导致生理调节功能衰退，机体维持稳态的能
+在呼吸系统调节中，交感神经通过β2受体介导
+力进行性削弱，跌倒、残疾、各脏器功能下降、心
+支气管平滑肌松弛，引起气道扩张，同时刺激呼吸中
+血管不良预后及早死风险等不良健康结局的风险显
+枢兴奋，引发呼吸频率和潮气量增加，增加机体在应
+著增加，这也是机体发生衰弱的本质和结果[3]。因此，
+激或运动状态下的氧气供给。相反，副交感神经通过
+理解自主神经功能紊乱与内脏功能的关系以及对衰
+乙酰胆碱作用于支气管平滑肌的M3受体，引起气道
+弱的影响和干预措施，对维持机体内脏功能稳态和
+收缩，在安静或休息时可减少能量消耗，同时刺激气
+心血管健康至关重要。
+道黏液的分泌，增加呼吸道的湿润度，保护呼吸道上
+1 自主神经系统（autonomic nervous system, ANS） 皮。两者共同作用维持呼吸功能的稳定。
+与内脏功能失稳态 在消化系统调节中，交感神经通过去甲肾上腺素
+抑制胃肠道的运动，减少胃液、胰液及肠液的分泌，
+ANS是神经系统的重要部分，不受人的意识所
+并抑制胃肠蠕动，同时引发腹腔内血管的收缩，减少
+消化系统的血流量，从而保证机体在应激状态下心脏
+DOI:10.3969/j.issn.1009-816x.2025.02.001
+和脑部的血液供应；副交感神经通过乙酰胆碱促进胃
+基金项目：中央高水平医院临床科研专项项目（2023-PUMCH-E-005）
+肠道的蠕动和腺体分泌，同时引发腹腔内血管舒张，
+作者单位：100000 北京，中国医学科学院北京协和医院心血
+增加消化系统的血流供应，促进营养物质的消化和吸
+管科
+收[5]。两者共同作用维持消化功能的稳定。
+通信作者：丁荣晶，Email：drj2003@vip.163.com
+· 2 · 心脑血管病防治2025年2月第25卷第2期 Cardio-Cerebrovasc Dis Prev Treat,February 2025,Vol.25,No.2
+2 自主神经功能紊乱、内脏功能失稳态与衰弱的关系 负面情绪和精神压力加重ANS失调，形成恶性循环。
+ANS 失调还可通过下丘脑-皮质-肾上腺轴导致褪黑
+2.1 血管功能失调与衰弱 交感神经系统的过度激
+素分泌紊乱、昼夜变化减弱、胰岛素抵抗、脂质代谢
+活会导致心率和血压异常升高，增加动脉硬化等心血
+异常，伴随睡眠障碍、高血糖和高血脂以及神经系统
+管事件的风险。这种持续性的高交感活性还会导致心
+退行性变化。这些变化进一步损害了个体在面对外界
+脏的过度负荷，增加心力衰竭的风险。另一方面，副
+应激时维持体内平衡的能力。
+交感神经功能减弱会使身体在经历疾病、手术等应激
+后的恢复能力下降，无法有效地降低心率和血压。这 3 自主神经功能紊乱和内脏功能失稳态的评估
+种心血管调节的失衡会加速衰弱的进展，显著增加心
+自主神经功能紊乱表现为多系统的功能障碍，导
+血管事件如心肌梗死、心力衰竭的发生率[6]。老年心
+致患者适应性降低和生理功能退化，进而导致衰弱的
+血管疾病患者衰弱的发生率为10%~60%，而心力衰
+发生发展。识别这些内脏功能失稳态表现，有助于早
+竭患者的衰弱发生率更高，达到74%。心力衰竭和衰
+期识别自主神经功能紊乱，并进行早期干预，防止衰
+弱之间的双向关系导致恶性循环：机体为了恢复心输
+弱进一步加重。
+出量导致心脏交感神经过度活跃，给已经遭受生理储
+3.1 心血管自主神经功能紊乱与评估
+备减少的心脏增加过重负荷。而衰弱导致心脏自主神
+3.1.1 体位性心动过速 衰弱患者常因交感神经过度
+经功能受损，使其无法维持血流动力学稳态，进一步 激活而在站起后出现持续性的窦性心动过速[9]。这种
+损害心脏功能，从而加剧心力衰竭[7]。
+心率异常通过24 h或10 min卧立位心电图监测心率
+2.2 能量代谢失衡与肌肉功能恶化和衰弱 交感神
+变化来评估。通常将卧位转为立位10 min内心率增
+经系统的过度激活会增加基础代谢率，在长时间的应
+加超过30次/min定义为体位性心动过速。同时，通
+激状态下，高消耗极易导致机体能量储备耗竭。同时，
+过心率变异性（heart rate variability, HRV）评估有助
+代谢紊乱影响肌肉的蛋白质合成，导致肌肉质量和力
+于了解个体的自主神经功能情况。HRV 的时域指标
+量整体下降，即肌肉衰减综合征（肌少症）。肌肉功 全部窦性心搏RR间期的标准差（standard deviation of
+能的恶化直接加重了衰弱程度，从而影响患者的生活 all sinus heart beat RR intervals, SDNN）较高，表明交感
+质量。 迷走神经平衡，ANS 适应性良好。SDNN降低提示
+2.3 免疫功能的抑制和慢性炎症与衰弱 交感神经 ANS 控制异常，SDNN低于50 ms提示心血管预后不
+系统的过度激活通过下丘脑-皮质-肾上腺轴引起皮 良[10]。Varadhan等[11]指出，衰弱患者的HRV时域指
+质醇释放增加，抑制机体免疫系统功能，削弱机体对 标SDNN、窦性RR间期均值的标准差和频域指标总
+感染的抵抗力。此外，ANS失调常伴有慢性低度炎 功率、极低频功率、低频功率和低频/高频较正常人
+症的发生。这种慢性炎症状态与衰弱密切相关，包括 均降低。
+炎症介质[如C反应蛋白、白细胞介素-6 和白细胞 3.1.2 直立性低血压 直立性低血压在衰弱患者中
+（包括巨噬细胞和中性粒细胞等）]水平升高。慢性炎 较为常见，表现为站立时血压降低超过20/10 mmHg，
+症不仅会加速肌肉衰退，还会损害多个系统器官的功 伴随头晕、眼前发黑甚至晕厥。这通常是由于交感神
+能，导致衰弱的进一步加重[8]。这种炎症状态还会通
+经反应不足致血管收缩功能下降或肌肉减少收缩力减
+过引发代谢和神经内分泌系统的变化，进一步影响身 弱所致[12]。通过直立倾斜试验评估直立性低血压的
+体的整体稳态。 严重程度，有助于预测体位性低血压风险并制定干预
+2.4 消化功能障碍和营养不良与衰弱 交感神经激 措施[13]。此外，神经退行性变可导致神经源性体位
+活和副交感神经功能减退会导致胃肠蠕动减慢、消化 性低血压的发生，通过直立倾斜试验、HRV和心血管
+液分泌减少，进而引发食欲不振、消化不良和营养吸 自主神经功能测试有助于判断患者的体位性低血压病因。
+收不良。机体营养供给不足合并基础代谢率高，能量 3.1.3 心血管应激耐受性下降 随着自主神经功能紊
+得不到及时补充，肌肉质量进一步减少，从而加重衰 乱的进展，心血管系统对急性应激的耐受性下降，表
+弱程度。 现为血压和心率难以维持稳定。这不仅增加了心血管
+2.5 神经、精神、心理功能的紊乱与衰弱 ANS 失 事件的发生风险，还可能延长术后恢复时间。通过心
+调还会影响心理健康，增加抑郁和焦虑的风险。异常 肺运动试验观察运动后1 min心率与血压恢复情况，
+心理状态不仅与衰弱状态的发生密切相关，还会通过 或利用24 h动态血压和动态心电图及HRV监测，了
+心脑血管病防治2025年2月第25卷第2期 Cardio-Cerebrovasc Dis Prev Treat,February 2025,Vol.25,No.2 · 3 ·
+解机体在不同状态时血压、心率的变化，有助于评估 主神经功能失调，进一步导致衰弱和直立不耐受。综
+心血管系统的调节能力和稳态[14-15]。 合医院医务人员利用抑郁筛查量表[患者健康问卷-9
+3.2 能量代谢紊乱与肌肉功能表现及评估 项（Patient Health Questionnaire-9, PHQ-9）]、广泛性焦
+3.2.1 持续疲劳感 持续疲劳感且难以通过休息快速 虑障碍量表[广泛性焦虑障碍量表-7项（generalized
+恢复是衰弱患者的典型症状，通常与能量代谢障碍、 anxiety disorder-7, GAD-7）]等自评量表评估心理健康
+自主神经功能失调及慢性炎症状态有关[16]。通过使 状态，可早期识别潜在的精神心理问题及时进行心理
+用疲劳评分量表（如疲劳严重度量表）评估疲劳的程 干预，有助于降低衰弱的发生[19]。
+度，可以早期识别机体衰弱状态，结合HRV、脏器 3.5.2 认知功能下降 自主神经功能紊乱的患者可表
+功能等其他生物标志物分析，可以在更早期进行针对 现为认知功能下降，衰弱患者可能出现注意力不集中、
+性干预。 记忆力减退等“脑雾”现象。可采用蒙特利尔认知评
+3.2.2 肌少症 患者的能量代谢紊乱，日常活动减 估量表和简易智能精神状态量表评估认知功能，及时
+少，肌肉质量和力量显著下降，导致肌少症和衰弱。 干预，降低患者的认知功能下降风险[20]。
+通过双能X线吸收法测量肌肉质量，结合握力器和 3.5.3 躯体化症状 自主神经功能紊乱可导致多个内
+10-RM哑铃等评估肌肉力量，并测量肢体维度以判断 脏器官功能失调，表现为多脏器不适的临床症状，通
+肌肉萎缩的情况，从而综合评估肌少症的严重程度。 过复合自主神经症状评分-31量表和躯体化自评量
+对于功能活动受限和衰弱情况可通过简易机体功能评 表[患者健康问卷-躯体症状群量表（Patient Health
+估量表和Fried衰弱表型进行评估[17]。早期识别和干
+Questionnaire-15, PHQ-15）]识别躯体化症状及严重程
+预肌少症对于延缓衰弱的进展至关重要。 度，可及时控制自主神经功能紊乱[21-22]。
+3.2.3 体重减轻和体脂率增加 显著的体重减轻是衰 3.5.4 睡眠障碍 自主神经功能紊乱常伴随睡眠障
+弱的常见表现之一，常伴有营养不良和体脂率增加、 碍，加剧患者的焦虑抑郁情绪，进而导致自主神经功
+肌肉含量下降。定期测量体重并进行身体成分分析， 能紊乱和睡眠障碍加重，进而导致日间困倦和疲惫感、
+有助于评估体重变化和营养状况，结合膳食干预和运 日常活动减少和肌肉无力。可采用匹兹堡睡眠质量指
+动干预，可以有效改善患者的营养状态，增强其抗病 数量表进行睡眠质量评估。
+能力和生活质量。
+4 自主神经功能紊乱、内脏失稳态合并衰弱的干预
+3.3 消化系统功能紊乱与评估
+思路
+3.3.1 食欲不振与营养不良 迷走神经功能下降使胃
+肠蠕动减慢、消化液分泌减少，导致食欲下降、营 自主神经功能紊乱对衰弱患者的康复构成了多方
+养不良和衰弱风险增加。使用饮食习惯调查问卷和 面的阻碍。由于心率异常、血压不稳和体力下降，患
+Mini-营养评估等工具评估营养状态，有助于早期识 者往往难以耐受康复训练，导致康复过程缓慢，甚至
+别患者的营养不良和进行早期干预[18]。 引发晕厥或跌倒等不良事件发生。其次，消化不良使
+3.3.2 便秘或腹泻 便秘或腹泻是胃肠道功能紊乱的 得患者难以通过饮食获得足够的营养支持，进而影响
+常见表现，便秘可能由交感神经功能亢进导致肠蠕动 体力恢复。同时，体温调节失调、睡眠障碍和营养不
+减慢，腹泻则可能由副交感神经过度活跃引起。可使 良导致患者处于慢性疲劳状态，免疫功能受到抑制，
+用肠道健康问卷和Bristol大便形状评分进行评估。 易感染疾病，进一步延缓康复进程。此外，心理压力
+3.4 体温调节紊乱与评估 和焦虑可能导致患者对康复失去信心，降低治疗和康
+3.4.1 体温波动 自主神经功能紊乱可影响下丘脑体 复训练的积极性。针对此类患者的干预策略，可以引
+温调节中枢，体温调节功能失调表现为体温异常波动， 入心脏康复“五大处方”的概念，即药物处方、营养
+如发热或畏寒。使用连续体温监测评估体温调节能力。 处方、运动处方、心理处方和戒烟处方。
+3.4.2 出汗异常 交感神经系统失调可导致皮肤汗腺 4.1 营养处方 通过不同营养成分、饮食模式和行
+分泌异常，表现为过度出汗或无汗症。可使用定量排 为方式的调整，可以促进交感神经与副交感神经的平
+汗轴突反射试验评估皮肤出汗功能，也可以通过皮肤 衡。首先，碳水化合物、蛋白质和脂肪等营养成分直
+交感反应来判断机体的自主神经功能状态。 接影响ANS的功能。（1）鼓励低糖饮食：高血糖指
+3.5 神经、精神、心理障碍与评估 数（glycemic index, GI）的碳水化合物会迅速升高血糖
+3.5.1 抑郁和焦虑 抑郁和焦虑情绪可诱发或加重自 水平，刺激胰岛素大量分泌，诱发交感神经兴奋。相反，
+· 4 · 心脑血管病防治2025年2月第25卷第2期 Cardio-Cerebrovasc Dis Prev Treat,February 2025,Vol.25,No.2
+低GI食物则能缓慢释放能量，减少交感神经系统的 特的影响，可以通过运动调节交感神经和副交感神经
+负担[23]。（2）鼓励高蛋白摄入：蛋白质中色氨酸有助 的活动，进而改善整体健康。
+于提升5-羟色胺水平。这种神经递质与情绪稳定和 接近无氧阈的有氧运动（如快走、骑功率车），
+副交感神经活动密切相关，能缓解焦虑、促进放松， 通过调节交感和副交感神经活动，在不提高交感神经
+减少交感神经的过度兴奋。（3）减少饱和脂肪和反式 张力的前提下，促进血液循环，提升代谢功能和心肺
+脂肪摄入：饱和脂肪和反式脂肪摄入过多会导致交感 耐力。无氧阈附近的有氧运动能够增加HRV，提升
+神经系统的过度活跃，增加心血管疾病的风险。而不 心脏自主神经调节能力，使心脏在应激状态受到副交
+饱和脂肪酸（如ω-3脂肪酸）则具有抗炎和神经保护 感神经更好的控制，有快速恢复心率和血压的能力，
+作用，维持ANS的稳定。（4）补充B族维生素和矿 减少心血管疾病的风险[27]。
+物质镁：它们在能量代谢和神经递质合成中起重要作 力量训练（如举重、抗阻训练）可在短期内激活
+用，缺乏时可能导致焦虑、抑郁和增加应激反应[24]。 交感神经，从而提高警觉性和肌肉反应能力。随着力
+其次，不同的饮食模式对ANS也有不同的影响。 量训练的持续，副交感神经的活动在非运动时增强，
+地中海饮食因富含水果、蔬菜、全谷物和健康脂肪， 有助于身体的恢复和放松[28]。
+能够降低炎症和氧化应激，增强副交感神经的功能。 高强度间歇训练（high-intensity interval training, HIIT）
+低碳水化合物饮食在短期内可能增加交感神经活动， 为短时间的高强度有氧运动与低强度有氧运动的结
+表现为心率加快和代谢率升高，但长期来看通过稳定 合，对交感神经和副交感神经的调节能力有显著影响。
+血糖水平和减少胰岛素波动，有助于增强副交感神经 HIIT不仅能激活交感神经，还能通过快速恢复促进副
+功能[25]。最后，改善饮食行为也不应被忽视。规律 交感神经的增强，改善心脏的自我调节能力[29]。
+进食有助于维持血糖稳定，减少交感神经波动，而不 站桩、八段锦、太极拳等中医传统功法强调身心
+规律或过快进食会增加交感神经负担，导致消化不良。 结合，通过慢节奏的动作、深呼吸和冥想，显著增强
+正念饮食通过慢食和细嚼，降低进食时的压力反应， 副交感神经活动，减少交感神经的过度兴奋。
+增强副交感神经活动，促进消化和吸收。社交饮食则 不同形式的运动通过各自的机制调节ANS功能，
+通过与家人或朋友的愉快用餐体验，增强副交感神经 有氧运动通过调节交感和副交感神经活动，力量训练
+功能，改善消化和整体健康。相反，压力环境下进食 和HIIT增强交感神经的应激反应与恢复能力，瑜伽
+会激活交感神经，导致消化和代谢问题[26]。 和太极则主要通过增强副交感神经促进放松[30-31]。结
+4.2 药物处方 通过调整药物来影响ANS的活性， 合多种运动形式，有助于全面调节ANS功能，提升
+是常见且有效的干预手段，可以帮助缓解症状并恢复 整体健康水平。
+身体的正常生理功能。（1）β受体阻滞剂是常用于调 4.4 心理处方 心理干预通过减轻心理压力、促进
+节交感神经系统过度兴奋的药物。通过阻断心脏和血 情绪调节和增强正念意识，显著改善ANS功能，平
+管中的β受体，减少交感神经的作用，从而降低心率 衡交感神经和副交感神经的活动。
+和血压，改善患者的心理状态和生理症状。（2）抗胆 认知行为疗法（cognitive behavioral therapy, CBT）
+碱药物主要用于抑制副交感神经系统的过度活跃。通 是常用于治疗焦虑和抑郁的心理干预方法。CBT通过
+过阻断乙酰胆碱与受体的结合，抑制副交感神经的活 改变负性思维和行为模式，减少对压力的敏感性，从
+动，从而缓解胃肠道症状。（3）抗焦虑和抗抑郁药物 而降低交感神经的过度活跃[32]。长期CBT干预能起
+通过调节大脑中神经递质的平衡，改善患者的焦虑、 到显著增强副交感神经的作用，表现为HRV的增加，
+抑郁情绪，促进ANS的稳定和恢复。此外，慎重使 进而改善心脏健康和整体生理稳定性[33]。
+用减少血管内容量（利尿剂）、诱导血管扩张（西地 冥想和正念训练是通过集中注意力和培养对当下
+那非、硝酸盐）或阻断神经血管接头处去甲肾上腺素 的觉察，减少焦虑和压力，增强副交感神经的活动，
+释放/活性（α受体阻滞剂、中枢作用的α2受体激动 降低交感神经的兴奋性。研究表明，长期冥想者通常
+剂和三环类抗抑郁药）等药物，有助于防止老年自主 具有更高的HRV，表明他们的ANS功能更为平衡，
+神经功能障碍患者的病情加重，甚至减轻症状。鉴于 能够更有效地应对压力和恢复平静[34]。
+药物对神经的副作用，鼓励临床医生审查和调整药物 压力管理技巧，如深呼吸练习、渐进性肌肉放松
+治疗，并考虑优先进行非药物干预。 和自我暗示，也对ANS功能有积极影响[35]。深呼吸
+4.3 运动处方 不同的运动形式对ANS功能有着独 训练通过延长呼气时间，直接激活副交感神经，降低
+心脑血管病防治2025年2月第25卷第2期 Cardio-Cerebrovasc Dis Prev Treat,February 2025,Vol.25,No.2 · 5 ·
+心率和血压，促进身体放松。渐进性肌肉放松通过系 响，涉及心血管、能量代谢、消化系统等多个生理
+统地放松肌肉群，减少交感神经的过度活动，缓解压 功能的调节。ANS功能紊乱不仅加速了衰弱的进程，
+力相关的生理反应。社会支持和情感表达通过减少孤 还显著降低了患者的生活质量和康复进程。因此，识
+独感和提高情绪稳定性，间接改善ANS功能。良好 别和理解ANS功能在内脏失稳态和衰弱中的作用至
+的社会支持网络能增强副交感神经的活动，降低交感 关重要。早期干预是改善自主神经功能紊乱和衰弱患
+神经的紧张状态，使其在压力中更容易保持镇定。 者生活质量的关键。通过及时识别ANS功能紊乱并
+4.5 戒烟处方 戒烟对ANS功能有显著的积极影响。 采取综合的个体化干预措施，可以有效延缓衰弱的进
+吸烟会导致交感神经系统过度活跃，表现为心率加快、 展，提升患者的身体和心理健康，减少并发症的发生。
+血压升高和应激反应增强[36]。尼古丁通过刺激肾上
+参考文献
+腺素释放，进一步激活交感神经，增加心血管疾病的
+[1] Esler MD, Turner AG, Kaye DM, et al. Aging effects on human
+风险。戒烟后，这种交感神经的过度兴奋逐渐减弱，
+sympathetic neuronal function[J]. Am J Physiol, 1995, 268(1 Pt
+副交感神经功能得以恢复和平衡。随着时间的推移，
+2):R278-285.
+心率和血压趋于正常，HRV增加，表明副交感神经 [2] Spallone V. Update on the impact, diagnosis and management of
+活动增强，身体更能应对压力并促进心血管健康[37]。 cardiovascular autonomic neuropathy in diabetes: What is defined,
+what is new, and what is unmet[J]. Diabetes Metab J, 2019, 43(1):3-
+戒烟处方如尼古丁替代疗法、安非他酮和伐尼克兰，
+30.
+通过减少尼古丁依赖和戒断症状，帮助平衡交感神经 [3] Veronese N, Custodero C, Cella A, et al. Prevalence of
+与副交感神经的活动，降低与交感神经过度活跃相关 multidimensional frailty and pre-frailty in older people in different
+settings: A systematic review and meta-analysis[J]. Ageing Res Rev,
+的健康风险，显著改善整体生理和心理健康。
+2021, 72:101498.
+5 未来研究方向 [4] Eisenhofer G, Esler MD, Meredith IT, et al. Sympathetic nervous
+function in human heart as assessed by cardiac spillovers of
+5.1 加强对ANS功能及内脏功能稳态与衰弱关系的 dihydroxyphenylglycol and norepinephrine[J]. Circulation, 1992,
+基础研究 深入研究ANS功能及内脏功能稳态与衰 85(5):1775-1785.
+[5] Rafanelli M, Walsh K, Hamdan MH, et al. Autonomic dysfunction:
+弱状态之间的相互作用机制，是未来的重要研究方向。
+Diagnosis and management[J]. Handb Clin Neurol, 2019, 167:123-
+特别是探索ANS在不同衰弱阶段的角色，了解交感
+137.
+神经与副交感神经的动态平衡如何影响衰弱的发生和 [6] Parvaneh S, Howe CL, Toosizadeh N, et al. Regulation of cardiac
+发展，将有助于制定更加精准的诊断和治疗策略。 autonomic nervous system control across frailty statuses: A systematic
+review[J]. Gerontology, 2015, 62(1):3-15.
+5.2 探索新的生物标志物和评估工具 当前的生物
+[7] Thayer JF, Yamamoto SS, Brosschot JF. The relationship of
+标志物（HRV参数）和评估工具（老年人综合评估 autonomic imbalance, heart rate variability and cardiovascular disease
+的衰弱指数模型、Fried、简易机体功能评估量表）在 risk factors[J]. Int J Cardiol, 2010, 141(2):122-131.
+[8] Ye Y, Noche RB, Szejko N, et al. A genome-wide association study of
+识别和评估ANS功能紊乱、内脏功能失稳态和衰弱
+frailty identifies significant genetic correlation with neuropsychiatric,
+方面还存在一定的局限性。未来的研究应着重开发更
+cardiovascular, and inflammation pathways[J]. Geroscience, 2023,
+为敏感和特异的生物标志物，结合先进的评估工具， 45(4):2511-2523.
+如多模态成像技术和数字健康监测设备，以便更全面 [9] Freeman R, Wieling W, Axelrod FB, et al. Consensus statement on the
+definition of orthostatic hypotension, neurally mediated syncope and
+地评估ANS功能、内脏功能稳态及其对衰弱的影响。
+the postural tachycardia syndrome[J]. Clin Auton Res, 2011, 21(2):69-
+5.3 研究个体化干预方案的长远效果 虽然个体化
+72.
+干预在改善ANS功能和缓解自主神经功能紊乱、恢 [10] Yang Z, Liu H, Meng F, et al. The analysis of circadian rhythm
+复内脏功能稳态和衰弱方面显示出了潜力，但其长期 of heart rate variability in patients with drug-resistant epilepsy[J].
+Epilepsy Res, 2018, 146:151-159.
+效果尚需进一步验证。未来研究应关注这些干预措施
+[11] Varadhan R, Chaves PH, Lipsitz LA, et al. Frailty and impaired
+在不同人群中的长期疗效，探索个体化方案如何在不 cardiac autonomic control: new insights from principal components
+同时期优化患者的康复和健康管理，同时评估其在现 aggregation of traditional heart rate variability indices[J]. J Gerontol A
+Biol Sci Med Sci, 2009, 64(6):682-687.
+实生活中的可行性和成本效益。
+[12] Mol A, Reijnierse EM, Bui Hoang PTS, et al. Orthostatic hypotension
+6 结论 and physical functioning in older adults: A systematic review and
+meta-analysis[J]. Ageing Res Rev, 2018, 48:122-144.
+ANS功能和内脏失稳态对衰弱状态有着重大影 [13] Liguori I, Russo G, Coscia V, et al. Orthostatic hypotension in the
+· 6 · 心脑血管病防治2025年2月第25卷第2期 Cardio-Cerebrovasc Dis Prev Treat,February 2025,Vol.25,No.2
+elderly: A Marker of clinical frailty[J]? J Am Med Dir Assoc, 2018, [26] Costa J, Moreira A, Moreira P, et al. Effects of weight changes in the
+19(9):779-785. autonomic nervous system: A systematic review and meta-analysis[J].
+[14] Molina GE, Fontana KE, Porto LG, et al. Post-exercise heart-rate Clin Nutr, 2019, 38(1):110-126.
+recovery correlates to resting heart-rate variability in healthy men[J]. [27] Daniłowicz-Szymanowicz L, Figura-Chmielewska M, Ratkowski
+Clin Auton Res, 2016, 26(6):415-421. W, et al. Effect of various forms of physical training on the
+[15] Ribeiro ASF, Zerolo BE, López-Espuela F, et al. Cardiac system autonomic nervous system activity in patients with acute myocardial
+during the aging process[J]. Aging Dis, 2023, 14(4):1105-1122. infarction[J]. Kardiol Pol, 2013,71(6):558-565.
+[16] Beaudart C, McCloskey E, Bruyère O,et al. Sarcopenia in daily [28] Guerra ZF, Peçanha T, Moreira DN, et al. Effects of load and type
+practice: assessment and management[J]. BMC Geriatr, 2016, of physical training on resting and postexercise cardiac autonomic
+16(1):170. control[J]. Clin Physiol Funct Imaging, 2014, 34(2):114-120.
+[17] Soysal P, Stubbs B, Lucato P, et al. Inflammation and frailty in the [29] Pearson MJ, Smart NA. Exercise therapy and autonomic function in
+elderly: A systematic review and meta-analysis[J]. Ageing Res Rev, heart failure patients: a systematic review and meta-analysis[J]. Heart
+2016, 31:1-8. Fail Rev, 2018, 23(1):91-108.
+[18] Kocyigit SE, Ates Bulut E, Aydin AE, et al. The relationship between [30] Saeidi M, Ravanbod R. Effects of resistance added on aerobic training
+cognitive frailty, physical frailty and malnutrition in Turkish older on autonomic function in cardiac patients[J]. Anatol J Cardiol, 2022,
+adults[J]. Nutrition, 2024, 126:112504. 26(2):80-89.
+[19] Lett HS, Blumenthal JA, Babyak MA, et al. Depression as a risk [31] Bellenger CR, Fuller JT, Thomson RL, et al. Monitoring athletic
+factor for coronary artery disease: evidence, mechanisms, and training status through autonomic heart rate regulation: A systematic
+treatment[J]. Psychosom Med, 2004, 66(3):305-315. review and meta-analysis[J]. Sports Med, 2016, 46(10):1461-1486.
+[20] Ståhlberg M, Fedorowski A. Cardiovascular autonomic abnormalities [32] Raz S, Lahad M. Physiological indicators of emotional arousal related
+in patients with post-acute sequelae of COVID-19: Don't miss that to ANS activity in response to associative cards for psychotherapeutic
+target[J]! Can J Cardiol, 2023, 39(6):776-778. PTSD treatment[J]. Front Psychiatry, 2022, 13:933692.
+[21] Eldokla AM, Mohamed-Hussein AA, Fouad AM, et al. Prevalence [33] Diveky T, Prasko J, Kamaradova D, et al. Comparison of heart rate
+and patterns of symptoms of dysautonomia in patients with long- variability in patients with panic disorder during cognitive behavioral
+COVID syndrome: a cross-sectional study[J]. 2022, 9(6):778-785. therapy program[J]. Psychiatr Danub, 2013, 25(1):62-67.
+[22] Larsen NW, Stiles LE, Shaik R, et al. Characterization of autonomic [34] Tang YY, Ma Y, Fan Y, et al. Central and autonomic nervous system
+symptom burden in long COVID: A global survey of 2,314 adults[J]. interaction is altered by short-term meditation[J]. Proc Natl Acad Sci
+Front Neurol, 2022, 13:1012668. U S A, 2009, 106(22):8865-8870.
+[23] Laugero KD, Keim NL. A diet pattern characterized by sugar- [35] van Reedt Dortland AK, Vreeburg SA, Giltay EJ, et al. The impact of
+sweetened beverages is associated with lower decision-making stress systems and lifestyle on dyslipidemia and obesity in anxiety and
+performance in the iowa gambling task, elevated stress exposure, and depression[J]. Psychoneuroendocrinology, 2013, 38(2):209-218.
+altered autonomic nervous system reactivity in men and women[J]. [36] Menshov VA, Trofimov AV, Zagurskaya AV, et al. Influence of
+Nutrients, 2023, 15(18):3930. nicotine from diverse delivery tools on the autonomic nervous and
+[24] Kocyigit SE, Ates Bulut E Assoc Professor, Aydin AE, et al. hormonal systems[J]. Biomedicines, 2022, 10(1):121.
+Improvement of nutritional status enhances cognitive and physical [37] Richards JM, Stipelman BA, Bornovalova MA, et al. Biological
+functions in older adults with orthostatic hypotension[J]. Nutrition, mechanisms underlying the relationship between stress and smoking:
+2021, 90:111261. state of the science and directions for future work[J]. Biol Psychol,
+[25] Dostal T, Plews DJ, Hofmann P, et al. Effects of a 12-week very- 2011, 88(1):1-12.
+low carbohydrate high-fat diet on maximal aerobic capacity, high- （收稿日期：2024-12-24）
+intensity intermittent exercise, and cardiac autonomic regulation: （本文编辑：林雪怡）
+Non-randomized parallel-group study[J]. Front Physiol, 2019, 10:912.

@@ -1,0 +1,399 @@
+第25卷 第2期 辽 宁 中 医 药 大 学 学 报 Vol. 25 No. 2
+2023 年 2 月 JOURNAL OF LIAONING UNIVERSITY OF TCM Feb .，2023
+DOI：10.13194/j.issn.1673-842x.2023.02.019
+全国名中医治疗慢性肾炎“症-证-药”规律分析
+谭丹妮1，喻嵘1，2，谭艳1，史留阳1，肖凡1，刘秀1，2，向琴1
+（1.湖南中医药大学，湖南 长沙 410208；2.中医方证研究转化医学湖南省重点实验室，湖南 长沙 410208）
+摘要：目的 基于数据挖掘技术从“症-证-药”角度探究全国名中医治疗慢性肾炎的证治用药规律，为中医药
+治疗慢性肾炎提供依据。方法 以名老中医的姓名和“慢性肾炎”为检索词，以作者和题名为检索字段，以中国知网
+数据库、万方数据库、中国生物医学数据库、维普期刊上已公开发表的文献为基础，收集各位名中医大家治疗慢性肾
+炎的医案，建立文献数据库，运用频数统计、关联规则分析和聚类分析等数据挖掘方法分析慢性肾炎的症状、证候及
+用药规律。结果 四诊频次统计症状以腰酸、乏力、腰痛为主；舌象多见淡舌、淡红舌、黯舌；舌苔多见腻苔、黄苔、薄
+白苔；脉象多见细脉、沉脉；证型以下焦湿热证、脾肾两虚证、肾阴虚证、脾气虚证、脾肾阳虚证为主，病位证素以肾、
+脾为主，病性证素以阳虚、气虚以及湿热为主；治法以清热利湿、益气滋阴、温补肾阳、健脾利水为主。治疗慢性肾炎
+涉及中药267味，用药功效以利水渗湿为最，其次为利水消肿、清热解毒、健脾等；用药频次最高的为茯苓，其次为黄
+芪、泽泻、白术、山药、党参、甘草、白茅根等。症状聚类以阳虚证与气虚证症状为主，药物聚类主要以补气方、补肾阴
+方及活血方组合为主。结论 在研究纳入的143例医案症状-证型-治法-用药规律中，慢性肾炎以气虚、阳虚症状
+多见，但用药多以利水为主而并非补肾药，体现了从“肾主水”论治慢性肾炎的特点。
+关键词：全国名中医；慢性肾炎；症-证-药；数据挖掘
+中图分类号：R287 文献标志码：A 文章编号：1673-842X (2023) 02- 0088- 07
+Analysis of“Symptoms-Syndromes-Medicine”Laws of Famous
+Chinese Medicines in Treating Chronic Nephritis
+TAN Danni1，YU Rong1，2，TAN Yan1，SHI Liuyang1，XIAO Fan1，LIU Xiu1，2，XIANG Qin1
+（1.Hunan University of Traditional Chinese Medicine，Changsha 410208，Hunan，China；2.Hunan Key
+Laboratory of TCM Prescription and Syndromes Translational Medicine，Changsha 410208，Hunan，China）
+Abstract：Objective Based on data mining technology from the“symptoms-syndromes-medicine”
+point of view to explore the national famous traditional Chinese medicine treatment of chronic nephritis
+medication rule，provide the basis for traditional Chinese medicine treatment of chronic nephritis.
+Methods With the name of famous TCM doctors and“chronic nephritis”as the search term，the author
+and title as the search field，and based on the published literature in CNKI database，WanFang database，
+Chinese biomedical database and VIP journals，the medical records of each TCM doctor in the treatment
+of chronic nephritis were collected，and the literature database was established. Frequency statistics，
+association rule analysis and cluster analysis were used to analyze the symptoms，syndromes and medication
+rules of chronic nephritis. Results The statistical symptoms of four diagnostic frequency were mainly lumbar
+acid，fatigue and low back pain. Tongue was common pale tongue，pale red tongue，dark tongue；tongue
+moss common greasy moss，yellow moss，thin white moss；pulse was more common fine veins，deep veins；
+the following syndromes were mainly syndrome of dampness-heat due to energizer，syndrome of deficiency of
+both spleen and kidney，syndrome of kidney Yin deficiency，syndrome of spleen Qi deficiency and syndrome
+of Yang deficiency of spleen and kidney. The syndrome elements of disease location were mainly kidney and
+spleen. The syndrome elements of disease nature were mainly syndrome of Yang deficiency，Qi deficiency
+and dampness-heat. The main treatment methods were clearing heat and removing dampness，tonifying Qi
+and nourishing Yin，warming kidney Yang，invigorating spleen and removing water. The treatment of chronic
+nephritis involves 267 kinds of traditional Chinese medicine，and the efficacy of water and dampness was the
+most，followed by water and swelling，heat and detoxification，and spleen. The highest frequency of drug use
+was Fulin（g Poria），followed by Huangq（i Astragali Radix），Zexi（e Alismatis Rhizoma），Baizhu（Atractylodis
+Macrocephalae Rhizoma），Shanyao（Dioscoreae Rhizoma），Dangshen（Codonopsis Radix），Gancao
+（Glycyrrhizae Radix Et Rhizoma）and Baimaogen（Imperatae Rhizoma），etc. Symptom clusters were
+mainly Yang deficiency syndrome and Qi deficiency syndrome，and drug clusters were mainly composed of
+tonifying Qi，tonifying kidney Yin and activating blood. Conclusion In the 143 cases included in this study，
+the symptoms of chronic nephritis are mainly Qi deficiency and Yang deficiency，but the medication is
+mainly based on diuresis rather than tonifying kidney medicine，which reflects the characteristics of treating
+chronic nephritis from“kidney controls water metabolism”.
+Keywords：national famous traditional Chinese physician；chronic nephritis；symptoms-syndromes-
+medicine；data mining method
+基金项目：国家重点研发计划资助项目（2018YFC1704300）
+作者简介：谭丹妮（1996-），女，重庆人，硕士在读，研究方向：仲景杂病证治及经方应用基础研究。
+通讯作者：喻嵘（1969-），女，湖南长沙人，教授，博士，研究方向：糖尿病及其并发症的中医药防治研究。
+88
+25卷 辽 宁 中 医 药 大 学 学 报
+慢性肾炎（chronic nephritis）属慢性肾小球 方药数据进行分析，将数据导入古今医案云平台
+肾炎，临床以水肿、高血压、蛋白尿、血尿和肾功能 （V1.2.4），按照软件要求执行标准化。标准词来源
+损害为基本表现，其病情迁延，病变缓慢进展，可 于《中医药学主题词表》[6]、《中医临床诊疗术语》[7]，
+伴有不同程度肾功能减退。25%~50%的慢性肾 中药主要参照全国高等中医药院校“十三五”规划
+炎患者在确诊后20年内可发展为终末期肾脏病， 教材《中药学》，将标准化后的数据加入分析池，进
+其发病率与地区和种族有关，其中亚洲慢性肾炎 行相应数据分析，包括基本信息统计、四诊统计、证
+发病率占肾小球疾病60%[1-2]。目前西医治疗慢 候统计、药物频次分析、聚类分析等。
+性肾炎疗程较长，主要使用皮质类固醇、免疫抑制 2 结果
+剂、血管紧张素转换酶抑制剂以及环磷酰胺等，然 2.1 慢性肾炎患者基本信息统计
+而长期使用这些药物存在潜在不良反应[3]。中医 统计结果显示：本研究共纳入病案143例，其中
+治疗慢性肾炎历史久长，其可归属于中医学“水 男83例，占比58.04%，女60例，占比41.96%；年龄跨
+肿”“淋证”“尿浊”“癃闭”“关格”等疾病范畴。 度为5~70岁，以20~49岁人群居多，具体见表1。
+现代中医大家遵从“法乎古而衡于今”的原则，在 表1 慢性肾炎患者年龄分布
+前人经验基础上，据今时之人体质、环境等特点， 年龄/岁 频次/次 百分比/%
+对慢性肾炎辨证而新治，有诸多值得学习与借鉴 0~10 4 2.80
+之处。章太炎老先生说：“中医之成绩，医案最著， 10~19 16 11.19
+欲求前人之经验心得，医案最有线索可寻”[4]。因 20~29 35 24.48
+30~39 36 25.17
+而，向医学名家学习，采众家之长，融会贯通，甚为
+40~49 38 26.57
+重要。本研究拟将国医大师及全国名老中医诊疗
+50~59 11 7.69
+慢性肾炎的相关文献加以归纳整理，运用现代化 60~69 2 1.40
+数据挖掘技术进行分析，总结其症状、证候及用药 70~79 1 0.70
+规律，以期能为临床诊疗慢性肾炎及其处方用药 2.2 慢性肾炎患者四诊信息统计
+提供借鉴。 统计结果显示：排名前十的症状为腰酸、乏力、
+1 资料与方法 腰痛、尿少、纳呆、下肢轻度浮肿、浮肿、神疲、尿黄
+1.1 资料来源 褐，具体见图1；舌象统计多见淡舌、淡红舌、黯舌；
+本研究所选医案均为1949年以来各国医大师 舌苔多见腻苔、黄苔、薄白苔、白苔等，具体见表2；
+及全国名老中医力作，以国家中医药管理局认定 脉象多见细脉、沉脉、弦细、滑脉；四诊综合高频信
+的第1~3批国医大师以及首批全国名中医学术经 息为脉沉细，腰酸，舌红，苔白，乏力，腰痛，尿少等，
+验工作者与指导者的临床医案为研究对象；以每 具体见图2、图3、表3。
+位医者姓名和“慢性肾炎”为检索词，作者和题名
+为检索字段；以中国知网、万方数据库、中国生物
+医学数据库、维普期刊上已公开发表的文献为基
+础；检索1984—2020年所有相关文献，得到医案
+及处方187例（首）；选择符合纳入标准医案及处方
+143例（首），建立全国名中医治疗慢性肾炎经验文
+献数据库。
+1.2 文献纳入标准
+①慢性肾炎诊断明确；②医案、方药、辨证分型
+等记录完整；③疗效判断为有效；④多次复诊，则取
+其首诊处方纳入。
+1.3 文献排除标准
+①科普类文章；②重复发表或出版的文献，仅
+取1篇；③重复出现的医案或处方，仅取1首。 图1 慢性肾炎患者症状频次分布
+1.4 数据规范
+根据计算机检索内容，将原始资料数据采取双
+人录入方法逐项录入EXCEL 2016软件，建立名中
+医治疗慢性肾炎医案数据库。参照全国高等中医药
+院校“十三五”规划教材《中药学》[5]对中药名称进
+行规范化处理，防止异名同药，如“土元”规范为“土
+鳖虫”；“元胡”“玄胡”规范为“延胡索”；“寸冬”规
+范为“麦冬”；“丹皮”规范为“牡丹皮”；“仙灵脾”
+规范为“淫羊藿”；“枣皮”规范为“山茱萸”；“苡米”
+规范为“薏苡仁”；“广香”规范为“木香”；“云苓”
+规范为“茯苓”等。
+1.5 数据录入与统计学处理
+对符合纳入标准的143例医案症状、证候以及 图2 慢性肾炎患者脉象分布
+89
+辽 宁 中 医 药 大 学 学 报 25卷
+2.3 慢性肾炎患者证候-治法信息统计
+统计结果显示：证型以下焦湿热证、脾肾两虚
+证、肾阴虚证、脾气虚证、脾肾阳虚证为主，具体见表
+4；病位证素以肾、脾二脏为主；病性证素以阳虚、气
+虚以及湿热为主，具体见表5；治法以清热利湿、益
+气滋阴、温补肾阳、健脾利水为主，具体见表4。
+2.4 慢性肾炎患者用药-功效统计
+统计结果显示：本研究共纳入病案143例，涉及
+中药267味，总用药频次为1911次，其中茯苓为用药
+频次最高的单味中药，其次为黄芪、泽泻、白术、山
+药、党参、甘草、白茅根等；用药功效频次最高的为
+利水渗湿，其次为利水消肿、清热解毒、健脾等，具体
+图3 慢性肾炎患者高频四诊信息分布 见表6。
+表2 慢性肾炎患者舌象频次分布
+舌象 频次/次 百分比/% 舌苔 频次/次 百分比/%
+舌红 45 31.47 苔白 36 25.17
+舌淡 36 25.17 苔黄 29 20.28
+舌淡红 17 11.19 苔薄白 29 20.28
+舌黯 13 9.09 苔薄 28 19.58
+舌胖大 12 8.39 苔腻 23 16.08
+舌有齿痕 9 6.29 苔厚 8 5.59
+舌有瘀点 4 2.80 苔滑 8 5.59
+舌紫 3 2.10 苔根腻 4 2.80
+舌嫩 3 2.10 苔少 4 2.80
+表3 慢性肾炎患者脉象及四诊综合频次分布
+脉象 频次/次 百分比/% 四诊 频次/次 百分比/%
+脉细 67 42.42 脉细 67 42.42
+脉沉 60 41.96 脉沉 60 41.96
+脉弦 30 20.98 腰酸 56 39.16
+脉滑 20 13.99 舌红 45 31.47
+脉数 15 10.49 乏力 41 28.67
+脉虚 7 4.90 苔白 36 25.17
+脉弱 7 4.90 舌淡 36 25.17
+脉涩 6 4.20 腰痛 33 23.08
+脉濡 5 3.50 尿少 33 23.08
+脉浮 3 2.10 脉弦 30 20.98
+脉迟 3 2.10 苔黄 29 20.28
+脉实 2 1.40 苔薄白 29 20.28
+脉缓 2 1.40 纳呆 29 20.28
+脉大 1 0.70 下肢轻度浮肿 28 19.58
+脉短 1 0.70 颜面浮肿 26 18.18
+表4 慢性肾炎患者证候-治法频次分布
+证候 频次/次 百分比/% 治法 频次/次 百分比/%
+下焦湿热证 28 19.58 清热利湿 23 16.08
+脾肾两虚证 26 18.18 益气滋阴 19 13.29
+肾阴虚证 21 14.69 温补肾阳 14 9.80
+脾气虚证 16 11.19 健脾利水 12 10.61
+脾肾阳虚证 13 9.09 温补脾肾 12 10.61
+脾肾气虚证 9 6.29 滋补肾阴 12 10.61
+气阴两虚证 9 6.29 利水消肿 9 6.29
+脾肾阳虚水停证 6 4.20 健脾渗湿 9 6.29
+肾阳虚证 6 4.20 温阳利水 8 5.60
+血瘀水停证 6 4.20 化瘀利水 8 5.60
+瘀血阻络证 6 4.20 凉血止血 6 4.20
+肾气不固证 6 4.20 补脾益气 6 4.20
+表5 慢性肾炎患者证素（病性-病位）频次分布
+证素-病位 频次/次 百分比/% 证素-病性 频次/次 百分比/%
+肾 117 46.25 阳虚 74 29.25
+脾 107 42.29 气虚 68 26.88
+下焦 33 13.04 热 50 19.76
+肝 14 5.53 湿 48 17.39
+肺 9 3.56 血瘀 26 10.28
+胃脘 5 1.98 水停 25 9.88
+精 4 1.58 气滞 8 3.16
+膀胱 3 1.19 血虚 5 1.98
+90
+25卷 辽 宁 中 医 药 大 学 学 报
+表6 治疗慢性肾炎中药-中药功效频次分布
+中药 频次/次 百分比/% 功效 频次/次 百分比/%
+茯苓 98 68.53 利水渗湿 156 8.16
+黄芪 83 58.04 利水消肿 134 7.01
+白术 58 40.56 清热解毒 127 6.65
+山药 56 39.16 健脾 101 5.29
+党参 48 33.57 宁心 98 5.13
+甘草 46 32.17 清热凉血 93 4.87
+白茅根 43 30.07 生津养血 89 4.66
+地黄 41 28.67 补气升阳 87 4.55
+山茱萸 39 27.27 行滞通痹 83 4.34
+车前子 32 22.38 凉血止血 83 4.34
+益母草 32 22.38 利尿通淋 83 4.34
+薏苡仁 32 22.38 滋补肝肾 80 4.19
+2.5 慢性肾炎患者证候-治法-中药关联规则分析
+证候-中药关联规则分析结果显示：设置置信
+度≥0.6，支持度≥0.06，得到证候-中药组合，具
+体见图4；设置置信度≥0.6，支持度≥0.07，得到证
+候-中药组合，具体见图5。治法-中药关联规则分
+析结果显示：设置置信度≥0.6，支持度≥0.06，得
+到治法-中药组合，具体见图6；设置置信度≥0.6，
+支持度≥0.07，得到治法-中药组合，具体见图7。
+图6 慢性肾炎患者治法-中药关联
+分析（置信度≥0.6，支持度≥0.06）
+图4 慢性肾炎患者证候-中药关联
+分析（置信度≥0.6，支持度≥0.06）
+图7 慢性肾炎患者治法-中药关联
+分析（置信度≥0.6，支持度≥0.07）
+2.6 慢性肾炎患者症状及用药聚类分析
+聚类分析结果显示：对慢性肾炎患者症状排列
+前15进行聚类分析，得到4个聚类组合，具体见图
+8；对治疗慢性肾炎患者排列前15的中药进行聚类
+分析，得到3聚类组合，具体见图9。
+2.7 医家治法及代表方
+代表性医家及其代表方与治法列举见表7，由
+于多数医家以自拟方为主，因此只罗列有明确方名
+图5 慢性肾炎患者证候-中药关联
+分析（置信度≥0.6，支持度≥0.07） 的医家及其治法。
+91
+辽 宁 中 医 药 大 学 学 报 25卷
+图8 慢性肾炎患者症状聚类分析 图9 治疗慢性肾炎患者中药聚类分析
+表7 医家治法及代表方
+医家 代表方 治法
+管竞环 一半汤加减/小蓟饮子加减/四君子汤合二至丸加减 益气养阴，清热解毒/清热利湿，凉血止血/补气健脾，清热利湿
+姚树锦 芪薏四君子汤加味 健脾利湿，益气活血
+刘渡舟 猪苓汤加味 滋肾阴，清湿热
+张琪 参芪地黄汤加减 补肾填精，健脾益气
+张琪 升阳益胃汤加减 升阳健脾利湿
+李寿山 清化益肾汤加减 益气化瘀，淡渗利水
+杜雨茂 二至丸加味 滋阴补肾，清热凉血
+姜春华 猪苓汤加生地黄方 滋养肾阴
+叶传蕙 二至丸合知柏地黄丸加减/三仁汤合玉屏风散加减 滋肾清利/泻热利水，化瘀祛风，畅三焦气机
+徐嵩年 固肾方加减 滋阴补肾固涩
+3 讨论 岳全书·卷二十二·肿胀》曰：“凡水肿等证，乃脾
+慢性肾炎可归属于中医学“水肿”“血淋”“淋证” 肺肾三脏相干之病。盖水为至阴，故其本在肾；水
+“癃闭”等疾病范畴，其症状描述始见于《素问·水 化于气，故其标在肺；水惟畏土，故其制在脾”[12]，浮
+热穴论篇》[8]，曰：“肾者，胃之关也，关门不利，故聚 肿非一脏之因也；《万病回春·水肿》云：“上则喘
+水而从其类也，上下溢于皮肤，故为胕肿，胕肿者，聚 咳气急，下则足膝浮肿”[13]。因此，下肢浮肿是水湿
+水而生病也”；“夫水之病，皆有肾病所为，肾虚则水 停于下的主要表现。排名前列的舌脉有虚有实，有
+流散经络”[9]（《诸病源候论·卷二十一·水肿病 寒有热，临床辨证通常以舌脉证并参，有舍脉从证与
+诸候》），“诸淋者，由肾虚膀胱热故也。膀胱与肾为 舍证从脉的特点，故本文在此不一一探讨。
+表里，俱主水”[9]（《诸病源候论·卷十四·淋病诸 慢性肾炎患者证型分布以下焦湿热证、脾肾两
+候》），明确指出肾虚与水肿、淋证的联系。 虚证、肾阴虚证、脾气虚证、脾肾阳虚证为主；病位
+本研究对符合纳入标准的143例医案慢性肾炎 证素以肾、脾为主；病性证素以阳虚、气虚以及湿热
+患者基本信息统计，其中男83例，占比58.04%，女 为主；治法以清热利湿、益气滋阴、温补肾阳、健脾
+60例，占比41.96%，男性多于女性。流行病学研究 利水为主。肾中寓藏元阴元阳，从阳则开，从阴则
+结果显示，慢性肾炎患病率男性远高于女性[10]。在 阖，肾之开阖有赖于肾气推动；若肾气虚弱，开阖失
+一项大样本研究调查中，原发性肾小球肾炎患者平 司，水液气化功能障碍，可见浮肿、小便不利等症状。
+均年龄为（51.3±14.2）岁，继发性肾炎患者平均年 《景岳全书·卷二十二·肿胀》：“经曰：膀胱者，州
+龄为（55.2±15.8）岁[11]，与本研究医案人群分布以 都之官，津液藏焉，气化则能出矣。夫所谓气化者，
+20~49岁为主的结果相接近。然而，本研究涉及医 即肾中之气也，即阴中之火也；阴中无阳，则气不能
+案仅143例，样本数较少，发病年龄仅供参考。 化，所以水道不通，溢而为肿”[12]，肾主命门之火，是
+四诊信息统计结果中，症状以腰酸、乏力、腰 气化作用原动力，命门火衰，气不化水，水液停聚，则
+痛、尿少、纳呆、下肢轻度浮肿为主；舌象以淡舌、淡 会造成水肿。《素问·至真要大论篇》云：“诸湿肿
+红舌、黯舌为主；舌苔以腻苔、黄苔、薄白苔为主；脉 满，皆属于脾”[8]，脾为湿困，运化失职，可出现纳呆、
+象以细脉、沉脉、弦脉为主。排名前列的四诊综合信 浮肿等症。脾气主升，脾升则精微得以上升；脾气
+息为脉沉细，腰酸，舌红，苔白，乏力，腰痛，尿少。众 不升，则精微不能正常输布、归藏而外泄，慢性肾炎
+所周知，腰酸、腰痛是一种自觉症状。中医认为，腰 患者最常见症状蛋白尿则为精微外泄的表现。《素
+部内藏两肾，《素问·脉要精微论篇》[8]云：“腰者， 问·宣明五气篇》曰：“下焦溢为水”[8]，三焦受命门
+肾之府，转摇不能，肾将惫矣”，指的即是肾虚可引起 之火气化，气化无权，则可产生浮肿、小便不利等症；
+腰痛。乏力乃气虚可见症，且诸脏气虚皆可见。尿 若是湿热之邪蕴结下焦，可影响“分清别浊”功能，
+液为人体水液代谢过程的最终排泄产物，其生成与 引起尿频、尿急、小便浑浊甚至血尿等症。阳虚为
+肺、脾、肾三脏功能关系密切。肺气的通调，脾气的 慢性肾炎患者主要病性因素，张景岳认为“水之与
+转输，肾气的开阖，任何一环功能障碍，均可导致尿 气虽为同类，但阳旺则气化，而水即为精，阳衰则气
+少。纳呆为脾虚之见症，脾虚不运，纳食欠佳。《景 不化，而精即为水……水不能化因气之虚，岂非阴中
+92
+25卷 辽 宁 中 医 药 大 学 学 报
+无阳乎，此水肿之病所以多属阳虚也”。气虚推动无 茯苓；设置置信度≥ 0.6，支持度≥ 0.07，得到治
+力，则水液停聚而成水肿、小便不利等症；气虚卫外 法-中药组合：益气滋阴-黄芪；健脾利水-茯苓、
+无力，则外邪易侵，正如《素问·评热病论篇》所论： 清热利湿-茯苓。在证候-治法-中药关联规则结
+“邪之所凑，其气必虚”[8]，感受外邪为肾脏病发病与 果中，茯苓均为核心药物，不仅适用于脾气虚证、下
+复发的主要因素，譬如风邪外袭，肺气失宣可致风水 焦湿热证、脾肾两虚证、肾阴虚证等多个证型，且在
+泛溢；阳气不足，防御不够，则可造成肾炎反复、病 治法上与清热利湿、健脾利水、补益脾肾等多个治
+情恶化等情况。慢性肾炎的治法则是符合证型分布 法相关，进一步佐证茯苓在慢性肾炎治疗上使用的
+进行的对应治疗，如针对下焦湿热证则用清热利湿 广泛性。
+法，中医最典型的特点即在于此，在辨证的基础上采 对慢性肾炎症状进行聚类分析，得到4个聚类
+取与之相应的治则治法，进而选方用药。 组合，聚1类：面色苍白、纳呆、浮肿、尿少、神疲、畏
+本研究治疗慢性肾炎涉及中药267味，其中单 寒；聚2类：头晕、乏力、腰酸、下肢轻度浮肿；聚3
+味中药用药频次最多的为茯苓，其次为黄芪、泽泻、 类：口干、腰痛、尿黄褐；聚4类：颜面浮肿、蛋白尿；
+白术、山药、党参、甘草、白茅根等，用药功效以利水 对治疗慢性肾炎高频药物进行系统聚类分析，得到
+渗湿、利水消肿为主。茯苓性味甘淡，甘则能补，淡 3个聚类组合，聚1类：益母草、丹参；聚2类：山药、
+则能渗，既可祛邪，又可扶正，利水而不伤正气，为利 地黄、山茱萸、牡丹皮、白茅根；聚3类：党参、白术、
+水消肿之要药，现代药理学研究表明茯苓的利尿作 茯苓、甘草、黄芪、泽泻、薏苡仁、车前子。症状聚1
+用可能与茯苓素是醛固酮受体拮抗剂有关[14]。黄芪 类为阳虚型慢性肾炎可见症，症状聚2类为气虚型
+既能补益脾气以治本，又能利水消肿治其标，为气虚 慢性肾炎可见症，症状聚3类为热证，症状聚4类为
+水肿之要药。此外，黄芪主要成分黄芪甲苷能够抑 脾肾虚损，固摄失司者可见症。药物聚1类为益母
+制肾小球系膜细胞增殖和细胞外基质增加[15]。泽 草、丹参，益母草既能利水消肿，又能活血化瘀，丹参
+泻归肾、膀胱经，《本草新编·卷三》云：“泽泻善泻 主入血分，为治疗血瘀证的要药，此二味结合可用于
+肾中邪火，泻邪火，所以补真水也”[16]，若慢性肾炎 血瘀证型慢性肾炎。药物聚2类的山药、地黄、山茱
+患者表现为肾阴不足，相火偏旺，宜选用泽泻，养肾 萸、牡丹皮、白茅根为六味地黄丸加减方，六味地黄
+阴，泻相火。白术被黄宫绣誉为“脾脏补气第一要 丸是治疗诸多疾病肾阴虚证用方，慢性肾炎也属其
+药”[17]，具有燥湿利水之效。山药为肺、脾、肾气阴 列。药物聚3类党参、白术、茯苓、甘草、黄芪、泽泻、
+双补之佳品，药理学研究[18]显示山药具有促进肾小 薏苡仁、车前子为四君子汤加大补气之黄芪合上有
+管细胞再生修复与重建的作用。党参可补脾肺之气， 利尿功效的泽泻、薏苡仁、车前子组合，可用于气虚
+能够改善肾缺血-再灌注损伤，具有保护肾功能的 型慢性肾炎而引发的水肿之症。
+作用[19-20]。甘草有“国老”之称，《本经疏证·第二 本研究通过结合中医辨证论治理论与数据挖
+卷》论：“非甘草之主病多，乃诸方必合甘草，始能曲 掘技术，对符合纳入标准的143例慢性肾炎患者医
+当病情也”[16]，在治疗慢性肾炎处方中尤其是对于 案的症状、舌脉、证型、证素、治法、用药等数据进行
+气虚证者，较多使用甘草，其中主要药理成分甘草酸 频数频次分析，对证型-治法-用药进行关联规则
+苷能抑制肾小管上皮细胞凋亡和炎症反应，对肾脏 分析，对症状和用药进行聚类分析，总结出慢性肾炎
+功能进行保护[21]。白茅根性味甘寒，具有清热利尿 “症-证-药”规律：病性因素以阳虚、气虚、湿热为
+之效，《医学衷中参西录·第二卷》云：“白茅根善 主，治疗以肾为中心，治法以利水渗湿、补肾清热为
+利小便淋涩作疼、因热小便短少、腹胀身肿”[22]，药 主，常用的中药有茯苓、黄芪、泽泻、白术等。在临床
+理学研究显示白茅根具有增加肾滤过率、肾循环血 诊治慢性肾炎时可以详参上法，同时佐以西药治疗，
+量的作用[23]。慢性肾炎的用药功效以利水渗湿、利 既能缓解临床症状，又可防止病情恶化，期冀能为慢
+水消肿为主，符合由脾肾虚损所产生的水液停聚之 性肾炎的治疗提供新思路与新方法。◆
+象的治疗。 参考文献
+对慢性肾炎患者证候-中药关联规则进行分 [ 1 ] CHANG S，LI X K. The Role of Immune Modulation in
+Pathogenesis of IgA Nephropathy[ J ] . Front Med（Lausanne），
+析，设置置信度≥0.6，支持度≥0.06，得到证候-
+2020，7 ( 1 )：92.
+中药组合：茯苓-脾气虚证、茯苓-下焦湿热证、茯 [ 2 ] ZHU L，ZHANG H. The Genetics of IgA Nephropathy：An
+苓-脾肾两虚证、茯苓-肾阴虚证、茯苓-脾肾阳 Overview from China[ J ] . Kidney Dis（Basel），2015，1 ( 1 )：
+27-32.
+虚证；黄芪-脾气虚证、黄芪-脾肾两虚证、黄芪-
+[ 3 ] BOUDVILLE N，KANELLIS J. KHA-CARI commentary on the
+气阴两虚证；白术-脾肾两虚证；附子-脾肾阳虚 KDIGO clinical practice guideline on the evaluation and care of
+证；泽泻-脾气虚证；设置置信度≥0.6，支持度≥ living kidney donors[ J ] . Nephrology（Carlton），2020，25 ( 1 )：
+96-98.
+0.07，得到证候-中药组合：茯苓-脾气虚证、茯
+[ 4 ] 谭元生，周德生. 新编中医手册[ M ] . 长沙：湖南科学技术出
+苓-下焦湿热证、茯苓-脾肾两虚证、茯苓-肾阴虚 版社，2017.
+证；黄芪-脾气虚证、黄芪-脾肾两虚证；白术-脾 [ 5 ] 周祯祥，唐德才. 中药学[ M ] .2版.北京：中国中医药出版社，
+2016.
+肾两虚证。对慢性肾炎治法-中药进行关联规则
+[ 6 ] 吴兰成. 中国中医药学主题词表[ M ] .3版. 北京：中医古籍出
+分析，设置置信度≥0.6，支持度≥0.06，得到治法-
+版社，2005.
+中药组合：滋补肾阴-牡丹皮、滋补肾阴-地黄、滋 [ 7 ] 国家市场监督管理总局，国家标准化管理委员会. 中医临床
+补肾阴-泽泻；健脾利水-茯苓、健脾利水-泽泻、 诊疗术语（修订版）[ S ] . 北京：中国标准出版社，2021.
+[ 8 ] 王冰. 黄帝内经·素问[ M ] . 戴铭，张淑贤，点校.南宁：广西
+健脾利水-白术；补益脾肾-黄芪、补益脾肾-茯
+科学技术出版社，2016：20.
+苓；益气滋阴-黄芪；清热利湿-茯苓、温补脾肾- [ 9 ] 巢元方. 诸病源候论[ M ] . 黄作阵，点校.沈阳：辽宁科学技术
+93
+第25卷 第2期 辽 宁 中 医 药 大 学 学 报 Vol. 25 No. 2
+2023 年 2 月 JOURNAL OF LIAONING UNIVERSITY OF TCM Feb .，2023
+DOI：10.13194/j.issn.1673-842x.2023.02.020
+麸炒法历史沿革与现代研究进展
+王凡一，高如汐，郑威，单国顺，贾天柱
+（辽宁中医药大学药学院，辽宁 大连 116600）
+摘要：麸炒是一种传统的中药炮制工艺，以其价廉、便捷和有效的优点沿用至今。中药经麸炒可发挥增强疗效、
+缓和药性以及赋色等作用，从而保证饮片的质量和临床疗效。为了更好地发挥麸炒法的作用，文章通过查阅本草典
+籍中有关麦麸及麸炒法的记载，理清了麦麸及麸炒法的历史沿革；并采用中国知网（CNKI）、维普、万方等检索工具
+对麦麸的化学成分、药理作用、质量标准以及麸炒法的炮制工艺及对饮片化学成分和药理作用影响的情况进行了检
+索，理清了辅料麦麸及麸炒法近现代研究的基本情况。文章既可为麸炒法的相关研究提供文献支撑，也能为后续的
+相关实验研究提供理论依据。
+关键词：麦麸；麸炒法；历史沿革；化学成分；药理作用；质量标准
+中图分类号：R283.3 文献标志码：A 文章编号：1673-842X (2023) 02- 0094- 08
+Historical Evolution and Modern Research of Stir-baking with Wheat Bran
+WANG Fanyi，GAO Ruxi，ZHENG Wei，SHAN Guoshun，JIA Tianzhu
+（College of Pharmacy，Liaoning University of Traditional Chinese
+Medicine，Dalian 116600，Liaoning，China）
+Abstract：Stir-fry with wheat bran is a traditional Chinese medicine（TCM）processing technology. It
+has the extremely glorious history in our country cause of the advantages of cheap，convenient and effective.
+The TCM stir-fry with wheat bran could enhance the curative effect，alleviate the medicinal properties and
+enrich the color which could ensure the quality and clinical efficacy in TCM. In this paper，the records of
+wheat bran and stir-fry with wheat bran in herbal classics was organize and summary which clear explanation
+the history of wheat bran and stir-fry with wheat bran. The literature search tools of CNKI，CQVIP，
+WanFang were used to retrieve the chemical composition，pharmacological action，quality standard of wheat
+bran and processing technology，the effect of TCM in chemical composition and pharmacological action by
+stir-fry with wheat bran. It could clarify the basic situation of the research on wheat bran and stir-fry with
+wheat bran in modern times. The above research is conducive to the development of stir-fry with wheat bran.
+Therefore，this paper could not only provide the literature support for relevant research on stir-fry with wheat
+bran，but also provide evidence for subsequent relevant experimental research.
+Keywords：wheat bran；stir-frying with wheat bran；historical evolution；chemical composition；
+pharmacological action；quality standard
+麸炒是将麦麸与净制或切制后的药物拌炒达 物与蜜麸拌炒）、酒麸炒（药物用酒拌润后与麦麸拌
+到一定程度的炮制方法。按照麦麸的使用情况不 炒）及盐麸炒（药物用盐水拌润后与麦麸拌炒）等方
+同，又可分为净麸炒（药物与麦麸拌炒）、蜜麸炒（药 法[1]。目前，2020版《中华人民共和国药典》[2]中使
+基金项目：国家自然科学基金项目（81803726）；辽宁省自然科学基金项目（20170540596，20180540012）；辽宁中医药大学中医脏象理论及应用
+教育部重点实验室开放基金项目（zyzχ2010）
+作者简介：王凡一（1998-），女，辽宁抚顺人，硕士在读，研究方向：中药炮制工艺及质量标准。
+通讯作者：单国顺（1984-），男，副教授，硕士研究生导师、博士，研究方向：中药炮制原理及质量标准提升研究。
+出版社，1997：76-107. 京：中国中医药出版社，2008.
+[ 10 ] SETHI S，DE VRIESE AS，Fervenza FC. Acute [ 17 ] 黄宫绣. 本草求真[ M ] . 北京：中国中医药出版社，2008.
+glomerulonephritis[ J ] . Lancet，2022，399 ( 10335 )： [ 18 ] 彭啸宇，石峥，梁晨，等. 山药多糖对大鼠脑缺血再灌注损伤
+1646-1663. 的保护作用[ J ] . 中药药理与临床，2019，35 ( 2 )：60-63.
+[ 11 ] WETMORE JB，GUO H，LIU J，et al. The incidence， [ 19 ] LI Z，ZHU L，ZHANG H，et al. Protective effect of a
+prevalence，and outcomes of glomerulonephritis derived from polysaccharide from stem of Codonopsis pilosula against renal
+a large retrospective analysis[ J ] . Kidney Int，2016，90 ( 4 )： ischemia/reperfusion injury in rats[ J ] . Carbohydr Polym，2012，
+853-860. 90 ( 4 )：1739-1743.
+[ 12 ] 张景岳. 景岳全书[ M ] . 李玉清，步瑞兰，点校.北京：中国医 [ 20 ] UZ E，KARATAS OF，METE E，et al. The effect of dietary
+药科技出版社，2011. ginger（Zingiber officinals Rosc）on renal ischemia/reperfusion
+[ 13 ] 龚廷贤. 万病回春[ M ] . 朱广仁，点校.天津：天津科学技术 injury in rat kidneys[ J ] . Ren Fail，2009，31 ( 4 )：251-260.
+出版社，1993. [ 21 ] 韩崇明，张莹莹，徐兆龙. 对比剂诱导巨噬细胞来源外泌体
+[ 14 ] 邓刚民，许津. 茯苓素：一种潜在的醛固酮拮抗剂[ J ] . 中国 对肾小管上皮细胞的作用及甘草酸苷的干预效应[ J ] . 天津
+抗生素杂志，1992 ( 1 )：34-37. 医药，2020，48 ( 12 )：1153-1158.
+[ 15 ] 梁文林，李军，金光明，等. 黄芪甲苷对系膜增生性肾小球肾 [ 22 ] 张锡纯. 医学衷中参西录[ M ] . 太原：山西科学技术出版社，
+炎小鼠肾功能及血清IL-1β和IL-17的影响[ J ] . 基础医学 2010.
+与临床，2020，40 ( 12 )：1666-1670. [ 23 ] 时银英，白玉昊，兰志琼. 白茅根降压茶治疗原发性高血压
+[ 16 ] 陈士铎. 本草新编·中医经典文库[ M ] . 柳长华，点校 北 的实验研究[ J ] . 陕西中医学院学报，2008，31 ( 6 )：57-58.
+94

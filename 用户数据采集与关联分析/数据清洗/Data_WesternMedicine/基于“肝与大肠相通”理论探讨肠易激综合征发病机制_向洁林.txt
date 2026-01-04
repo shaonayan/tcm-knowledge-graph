@@ -1,0 +1,524 @@
+新中医 年 月第 卷第 期
+2025 11 57 21
+· ·
+138 NEW CHINESE MEDICINE November 2025 Vol.57 No.21
+基于“肝与大肠相通”理论探讨肠易激综合征发病机制
+向洁林1，2，何苏美3，曾江涛1，2
+1. 广州中医药大学，广东 广州 510006
+2. 广州中医药大学茂名医院，广东 茂名 525000
+3. 茂名市电白区林头镇中心卫生院，广东 茂名 525000
+［摘要］肠易激综合征（ ）作为最常见的功能性胃肠道疾病之一，表现为腹痛反复发作、排便习惯改变
+IBS
+及可能的精神心理异常。目前认为其主要涉及肠 脑轴的互动异常及其导致的胃肠动力紊乱、免疫屏障受损及
+-
+肠道通透性改变，心理因素是诱发和加剧 症状的关键因素。本文基于中医“肝与大肠相通”理论，探讨中
+IBS
+医的肝 大肠互动机制在中医病机与现代医学发病机制中的作用，以期为认识 的疾病本质提供借鉴。
+- IBS
+［关键词］肠易激综合征；肝与大肠相通；肠 脑轴；发病机制
+-
+［中图分类号］R256.3 ［文献标志码］A ［文章编号］0256-7415（2025）21-0138-07
+DOI：10.13457/j.cnki.jncm.2025.21.025
+Exploration on Pathogenesis of Irritable Bowel Syndrome Based on Theory of "Liver
+and Large Intestine Being Interconnected"
+XIANG Jielin1，2，HE Sumei3，ZENG Jiangtao1，2
+， ， ；
+1. Guangzhou University of Chinese Medicine Guangzhou Guangdong 510006 China 2. Maoming Hospital of Guangzhou University of
+， ， ； ，
+Chinese Medicine Maoming Guangdong 525000 China 3. Central Health Center of Lintou Town of Dianbai District of Maoming
+，
+MaomingGuangdong525000 China
+Abstract： （ ）， ，
+Irritable bowel syndrome IBS as one of the most common functional gastrointestinal disorders is
+， ，
+characterized by recurrent abdominal pain changes in bowel habits and possible mental and psychological
+，
+abnormalities. It is currently believed that IBS mainly involves abnormal interaction of the gut-brain axis which leads
+， ，
+to gastrointestinal motility disorders impaired immune barrier and changes in intestinal permeability. Psychological
+（ ）
+factorsarekeyfactorsthatinduceandaggravateIBSsymptoms.BasedonthetraditionalChinesemedicine TCM theory
+，
+of "liver and large intestine being interconnected" this paper explores the role of the liver-large intestine interaction
+，
+mechanism in TCM pathogenesis and modern medical pathogenesis in order to provide a reference for understanding
+thenatureofIBS.
+Keywords： ； ； ；
+Irritable bowel syndrome Liver and large intestine being interconnected Gut-brain axis
+Pathogenesis
+肠易激综合征（ ）是一组以持续存在或间歇发 解释症状的形态学或生化指标改变的功能性胃肠疾
+IBS
+作的腹痛伴排便习惯或大便形状改变为特征而无可 病。 的全球发病率约 ，因其症状的反复性对
+IBS 11%
+［收稿日期］
+［修回日期］2025-05-21
+［基金项目］2第02五5-批08全-国31中医临床优秀人才研修项目资助（国中医药人教函〔 〕） 号）；茂名市科技计划项目（ ）；茂名市潘茂名中医
+药“优才计划”项目（茂卫中医函〔 〕 号） 2022 1 2021112
+［作者简介］向洁林（ ），女，硕士研究生，2住02院2 医20师， ： 。
+［通信作者］曾江涛（1998-），男，教授，主任中医师， E-：mail yrllswan@163.co。m
+1974- E-mail zjtzy001@aliyun.com
+新中医 年 月第 卷第 期
+2025 11 57 21
+· ·
+NEW CHINESE MEDICINE November 2025 Vol.57 No.21 139
+患者个人生活质量、医疗保健服务和社会经济成本 能性胃肠病：罗马 》（后简称罗马 标准）强调
+Ⅳ Ⅳ IBS
+造成严重影响 。 定义的反复腹痛，并制定了新的症状频率标准：在
+[1]
+的病因病机复杂，涉及脑 肠互动异常、消 过去 个月内平均每周发作至少 天与排便相关的腹
+IBS - 3 1
+化道动力紊乱、肠道黏膜免疫屏障受损、精神心理 痛，发作伴随排便频率或形状的改变，病程至少超
+因素等诸多机制，关于 发病机制的讨论成为研究 过 个月 。若患者无腹痛症状则不能诊断为 。中
+[9]
+IBS 6 IBS
+的热点问题。中医学认为 与腹痛、便秘、泄泻有 医概念里腹痛是肝病的重要症状及特点之一。《黄帝
+IBS
+高度相关性 ，虽病位在肠，却责之于肝，受到肝主 内经》中即有“肝病者，两胁下痛引少腹”（《素
+[2]
+疏泄及情志的始动影响，临床上从肝论治取得了较 问·脏气法时论篇》）“肝木受邪……两胁满且痛
+好的疗效。本文基于“肝与大肠相通”理论，为 引少腹”（《素问·气交变大论篇》）的相关描述，
+IBS
+的症状学表现提出病机阐释，并探讨 中医病机与 提示肝病、肝木受邪可引起腹痛症状。张锡纯先生
+IBS
+现代医学发病机制相契合之处。 在《医学衷中参西录》有“肝病善作疼”的表述，
+1 “肝与大肠相通”的中医理论内涵 阐释了肝失于条达，脏腑气机失和而引起疼痛的病
+“肝与大肠相通”是一种脏腑之间相别通的关 机：“肝为厥阴，中见少阳，其性刚果，其气条
+系，是脏与腑在相表里的关系之外的另一种对应关 达……拂其条达之性，恒至激发其刚果之性而近于
+系，相关理论最早可追溯至《孙思邈五脏旁通明鉴 横恣……而其横恣所及，能排挤诸脏腑之气致失其
+图》，称“五脏旁通”。明李梴在《医学入门》中对 和，故善作疼也。”
+[3]
+脏腑别通理论作出具体诠释并明确提出“肝与大肠相 2.1.2 肝肠相通，痛秘并作，或痛泻复作 定义
+IBS
+通”。清唐宗海汇通中西医道，从解剖关系、五行关 下的腹痛与排便相关，伴随排便习惯的改变，提示
+[4]
+系、病理关系层面对“肝与大肠相通”理论做出了详 了 的腹痛作为肠道来源的主要表现。肝与大肠相
+IBS
+细注解，认为大肠病可由肝论治：“肝内膈膜……后 通，肝气的疏泄失司，可引起腹痛伴随各种排便异
+连大肠……厥阴肝脉，又外绕行肛门。大肠传导，全 常。或可发为腹痛与便秘并作，如清吴谦《医宗金
+赖肝疏泄之力。以理论，则为金木交合……故所以 鉴》云：“肝自郁则失其条达之性……故便难两胠痛
+肝病宜疏通大肠，以行其郁结也。大肠病如痢症、肠 也。”或可发为痛泻复作，如《医方考》所载刘草窗
+风、秘结、便毒等症，皆宜平肝和血润肠，以助其疏 痛泻要方所治之痛泻。江西名中医张海峰先生对痛
+泄也。”现代医家陈英杰以“肝寄腑于大肠”论进一 泻分析透彻，认为痛泻要方的配伍重点在抑木：“本
+[5]
+步解释了“肝与大肠相通”的病机 ，认为与肝相表 方主证有腹痛泄泻，痛则欲便，便则痛减，肠鸣脉
+[6]
+里的胆腑藏而不泄，故肝寄腑大肠输泄降浊；大肠 弦，一派肝气横逆、乘克脾土的症状，但并无虚
+的传导降浊，以肝之条达疏泄为前提；同时，肝脏 象。” 由此考虑痛泻之重点仍责之于肝，发病与精神
+[10]
+的正常疏泄，亦需以肠腑功能的通顺作为支撑。 情志关系密切，肝气郁而不伸故痛，郁甚则痛甚，
+2 “肝与大肠相通”理论与IBS具有症状相关性 郁极则从大肠夺路而出故见便泄，泄则肝气暂疏，
+的诊断依赖于特征性症状的识别和排除其他 故泻后腹痛暂缓，移时大肠壅满，复郁而再痛，痛
+IBS
+器质性疾病。确定主要症状（便秘型 、腹泻型 而再泻，痛泻交替。这一过程是 症状的生动具象
+IBS IBS IBS
+或混合型 ）在选择诊断性检查和治疗中起着重要 化，亦是肝与大肠相通的实证。
+IBS
+作用。所有 患者共有的核心症状即慢性、复发性 2.2 排便习惯异常 根据罗马 标准 ， 依据不
+[9]
+IBS Ⅳ IBS
+的腹痛及排便习惯异常。除了核心胃肠道症状外， 同的排便习惯及粪便性状可分为便秘型 （ ）、
+IBS IBS-C
+还和精神合并症及躯体合并症相关 。因此，本 腹泻型 （ ）、混合型 （ ，常同时出
+[7-8]
+IBS IBS IBS-D IBS IBS-M
+段将从“肝与大肠相通”视角为包括腹痛、排便习 现松散粪与干硬粪，每种粪便形状出现＞ ）及无
+25%
+惯改变（便秘、腹泻或便秘与腹泻交替）与精神合并 特定排便习惯占主导的不定型 （ ）。
+IBS IBS-U
+症在内的 主要症状学表现提供中医病机阐释。 2.2.1 便秘
+IBS
+2.1 腹痛 2.2.1.1 肝肠相通，肝郁肠滞 肝郁失疏，大肠传
+2.1.1 肝病善作疼 年修订后的诊断标准《功 导失司，则糟粕内停。肝郁先始于气，肝气郁结，
+2016
+新中医 年 月第 卷第 期
+2025 11 57 21
+· ·
+140 NEW CHINESE MEDICINE November 2025 Vol.57 No.21
+难以为大便传导糟粕疏泄气机，令便难，如清唐容 七情内伤，致肝木之气郁滞，肝郁抑阳，阳郁化风，
+川《金匮要略浅注补正》所言：“肝主疏泄大便，肝 疏泄过极，扰动肠腑；或肝气过旺，横逆克侮，脾
+气既逆则不疏泄，故大便难。” 运失常，肝阴失于水谷精微所生气血之濡养而生风
+2.2.1.2 肝郁化火，肠燥津枯 若肝气郁而化火， 扰肠；或肝郁化火伤阴，或久泄伤阴，而成肝风。
+则有伤阴之举，使肠燥津枯。肝体阴用阳，藏阴贮 风居肠腑，形无定处，因而痛泻之痛处不固定，泄
+血，而内寄相火；肝条达则顺其生生不息之机，情 秘发作无定。
+志抑郁或嗔怒太过，病于肝则相火由少变壮，郁极 2.3 精神心理症状
+而成肝火。肝得阴则化刚为柔，而遂条达之性；肠 2.3.1 七情致肝为病，肝病魂扰 患者可同时伴
+IBS
+得阴而能传化畅通；肝火伤阴，则令津液竭燥，糟 有精神心理异常，包括抑郁、焦虑及躯体化障碍等
+粕内结，壅塞不通也。浙江省名中医林真寿教授临 不同形式的症状表现 。七情本身可致肝受损发为
+[12-13]
+床以一贯煎加减疏肝泄热治疗肝郁化火型 ，患者 神志病。《灵枢·本神》曰：“随神往来谓之魂……
+IBS
+胁腹痛及便秘症状改善显著 。 肝藏血，血舍魂。”肝魂辅助心神，调控人的高级精
+[11]
+2.2.2 泄泻 神心理活动，与人的思维、想象、潜意识、情感、
+2.2.2.1 肝肠相通，肝郁肠泄 肝气郁结，疏泄不 意志等心理活动密切相关。魂藏于肝，魂为人的天
+及可致肠泄。唐宗海《血证论》载：“木之性主于疏 生阳气，阳气主升发，若肝气被抑，阳魂升发无力，
+泄，食气入胃，全赖肝木之气疏泄之，而水谷乃化， 无助神用，则发为抑郁；肝火旺盛扰动肝魂或肝血
+设肝之清阳不升，则不能疏泄水谷，渗泻满之证在 不足、魂失摄纳而上扰心神，神魂相博，妄念数起，
+所难免。”若肝气不足，疏泄不及，则脾升胃降失 则可出现反复洗手、计数、整理、思虑无法自控的
+助，肠腑亦失于约束和调运而继发泄泻。临床多见 强迫症状。肝气郁结，化火耗伤阴血，血不舍神，
+于女性 患者，情志抑郁，肝气不畅，泄泻难愈。 心神不宁，肝魂不安，则见焦虑；若肝郁聚湿生痰，
+IBS
+2.2.2.2 肝肠相通，肝横肠泄 木疏过极，肝气横 气滞痰阻交阻于胸，则见胸部闷堵不舒，及咽中梗
+逆亦致肠泄。若精神上经受刺激，肝气疏泄太过， 梗似有物塞、吞咽难下、咯吐不出等症，即焦虑的
+则易上冲、横逆、下窜，其中肝横可使肠泄。 躯体化症状。
+如 《类证治裁》 言“肝木性升散……郁则经气 2.3.2 肝与大肠相通，肠病肝郁 患者的心理共
+IBS
+逆……为暴怒胁痛……为飧泻……皆肝气横决也”。 病常继发于肠道功能障碍。有证据表明，有 的
+50%
+肝气横逆而作泻者，痛泻者有之，如前文所述；怒 心理障碍患者中，胃肠症状首先出现，随后才出现
+泄者有之，肝在志为怒，而《类经·情志九气》载： 新的情绪障碍 。肝与大肠相通，大肠通泄降浊阴
+[14-15]
+“怒动于肝，则气逆而上……肝木乘脾，故为飧泻。” 功能失司，会反过来影响肝用阳而疏泄调畅情志的
+2.2.3 泄秘交替复作 功能失司、肝藏血而舍魂的作用失司，进一步导致
+肝肠相通，肝郁生风，风居肠腑，泄秘复作。《医 上述的精神心理症状。有研究者基于大型人群队列
+原·内伤大要论》中“七情伤神……肝脾肺之气亦 数据前瞻性地探讨了便秘与抑郁的关系，结果显示
+因之郁结……大便作燥，不燥则泻”的表述则提示 便秘成为抑郁的独立风险因素，为肠病肝郁的中医
+由七情伤肝引起的排便习惯改变并非仅导向便秘或 机制提供了实证依据 。
+[16]
+泄泻其中一端，“不燥则泄”指出了便秘与泄泻交替 3 “肝与大肠相通”理论与IBS“肠-脑轴”（GBA）
+出现的症状表现，符合 及 的特征。 互动异常机制相契合
+IBS-M IBS-U
+症状具有反复发作、变化多端的特性，此间 的病理生理机制错综复杂且尚未完全阐明，
+IBS IBS
+所论泄秘交替与前文之痛泻复作均与风邪善行数变 但目前考虑 的互动异常为核心机制 。 是
+[17]
+GBA GBA
+的特性相通。风可致泄，《素问·风论》中即有“久 肠道和中枢神经系统之间的双向调节系统，通过内
+风入中，则为肠风飧泄”之记述。叶天士《临证指 分泌、体液、代谢和免疫介导的信号通路扩展其功
+南医案·泄泻》则认为泄泻可责之于肝风：“厥阴肝 能，关键构成包括肠神经系统（ ）和外周的肠壁、
+ENS
+风振动内起，久病而为飧泻。”盖由风气通于肝，若 中枢神经系统（ ）和下丘脑 垂体 肾上腺（ ）
+CNS - - HPA
+新中医 年 月第 卷第 期
+2025 11 57 21
+· ·
+NEW CHINESE MEDICINE November 2025 Vol.57 No.21 141
+轴 。正常生理条件下，“肠 脑轴”使肠道和大脑 （ ）等抑制性胃肠肽类激素 ，在急慢性应激
+[18-20] [26-27]
+- CGRP
+之间形成互动关系，使大脑能够调节食物摄入、消 下发生水平改变，对结肠肠道动力产生影响。
+化、肠道感觉和排便等肠道功能，而肠道亦对神经 肝主疏泄，影响胃之通降，从消化道动力层面
+系统方面产生相互作用，对情绪、认知和心理健康 影响 的发病。《杂病源流犀烛》云“嗳气嘈杂吞
+IBS
+造成显著影响 。病理状态下，肠 脑轴失调，影 酸恶心……胃司纳食，主乎通降……皆由肝气冲逆，
+[21-22]
+-
+响胃肠道系统的运动、感觉、自主神经和分泌功能， 阻胃之降也”，既揭示了肝疏胃降的病机，亦为解释
+从而影响肠道动力、内脏敏感性、肠道黏膜免疫反 作为消化道动力障碍疾病与胃食管反流病、功能
+IBS
+应、肠道通透性和肠道微生物群的组成，导致 的 性消化不良等疾病重叠提供了思路。肝郁导致大肠传
+IBS
+发病。 导失司，与现代医学中脑肠肽（如 、 ）调控胃肠
+5-HT SS
+值得注意的是，中医“肝与大肠相通”理论亦 动力机制密切相关。生物学研究证明，与正常大鼠
+强调肝与肠之间的双向调节关系。中医所论之肝， 相比，肝郁证大鼠的血浆 含量升高，胃肠蠕动减
+SS
+不是一个简单的解剖学概念，而是现代医学多种系 少，消化道动力明显受抑制 ，而疏肝方剂加味逍
+[28-30]
+统部分功能的集中，与神经、内分泌、免疫、消化、 遥散可以调节 等相关的脑肠肽水平，改善肠 脑互
+SS -
+生殖系统均产生联系。现代肝藏象的基础研究认为， 动，促进肠道蠕动 。痛泻药方可以作用于 模型
+[31]
+IBS
+肝脏的生理病理特点与大脑皮层功能及自主神经系 下丘脑、结肠组织中脑肠肽 、解痉多肽（ ）的
+5-HT SP
+统密切相关，肝主疏泄的调节中枢为动机和情绪中 含量表达以调节肠道运动，既能负向调节激惹的肠
+枢大脑边缘系统 ，以微生物 肠 脑轴（ ）为代 道运动，又能正向调节受抑制的肠道运动 。这些研
+[23] [32]
+- - MGBA
+表的神经 内分泌 免疫网络和 轴是其重要的作 究均证实了疏肝法调节肠道动力的科学性，亦印证
+- - HPA
+用途径 [24]。肝主疏泄功能不仅涵盖气机调畅，还涉及 了“肝与大肠相通”与 在影响胃肠动力机制的
+GBA
+情志调节 [25]，这与 中中枢神经系统对肠道功能 相关性。
+GBA
+的调控高度契合。例如，肝失疏泄导致的情志抑郁 3.2 “肝与大肠相通”与肠黏膜免疫屏障破坏 肠
+或焦虑，可通过 轴激活加重肠道炎症反应，而 黏膜免疫屏障损伤是 的重要病理特征。肠道黏膜
+HPA IBS
+肠道菌群失调又可以经过迷走神经反馈至中枢，进 表面的生理结构和广泛分布在黏膜内的免疫细胞共
+一步影响情绪。中医肝的疏泄功能与现代医学中大 同构成黏膜屏障，保护机体内环境防止病原体侵袭，
+脑边缘系统对动机和情绪的调控、神经 内分泌 免 保持对多种有益共生肠道微生物的耐受状态，在维
+- -
+疫网络的调控存在功能重叠，均为“肝与大肠相通” 持机体正常防御功能上起重要作用 。“肠 脑”互动
+[33]
+-
+理论框架与“脑 肠”互动的相通性提供了基础。 中，急性应激或慢性压力通过促肾上腺皮质激素释
+-
+综上可知， 通过神经、内分泌和免疫通路 放激素（ ）介导的肥大细胞激活增加肠道通透
+GBA CRH
+实现肠道与中枢神经系统的双向调控，其功能紊乱 性 ，损害黏膜屏障对管腔细菌的防御，引起肠道炎
+[34]
+可导致胃肠动力异常、肠道屏障损伤及焦虑抑郁等 症，导致 的发病。
+IBS
+精神共病。以下将通过“肝与大肠相通”理论与 肝主卫气，影响肠道免疫屏障。唐宗海《血证
+机制相结合，为理解 的复杂病机做进一步 论》言：“木之性主于疏泄，食气入胃，全赖肝木之
+GBA IBS
+阐释。 气以疏泄之，而水谷乃化。”此处的疏泄涵盖了肝敷
+3.1 “肝与大肠相通”与消化道动力异常 消化道动 布阳和之气的功能，使水谷精微物质剽悍的部分
+力异常是 发病的重要机制。 多表现为肠道 “卫气”得以正常运行及发挥其司腠理开合、抵抗邪
+IBS IBS-D
+运动功能加速， 表现为肠道运动功能延迟。与 气的作用。故《灵枢·师传》云：“肝者主为将，使
+IBS-C
+脑肠肽相关的肠 脑互动在 动力异常中发挥作用。 之候外。”说明肝有保卫机体、抵御外侵的功能，而
+- IBS
+脑肠肽是消化道与 之间调节胃肠运动、分泌吸 这一功能是通过肝主疏泄敷布卫气实现的。若肝失
+CNS
+收与情绪的一种具有神经递质和激素双重功能的多 疏泄则卫气循行受阻，正如《金匮要略·水气病脉
+肽，包括胃泌素（ ）、 羟色胺（ ）等兴奋型 证并治》所言“弦则卫气不行”。黏膜屏障免疫功能
+GAS 5- 5-HT
+胃肠肽类激素和生长抑素（ ）、降钙素基因相关肽 与卫气抵御外邪、保卫机体作用有相似性，黏膜免
+SS
+新中医 年 月第 卷第 期
+2025 11 57 21
+· ·
+142 NEW CHINESE MEDICINE November 2025 Vol.57 No.21
+疫屏障的损伤则与卫气不行、卫外失司相关 。有 的心理应激反应所引起的 轴功能紊乱，调肝是
+[35-37]
+HPA
+学者观察疏肝方剂痛泻要方可以通过活化 调节 临床的基本治法。
+AhR
+产生白细胞介素（ ） ，改善 患者 以疏肝为主要作用的中药复方可以基于肝 大肠
+ILC3 IL-22 IL-22 IBS-D -
+肠黏膜屏障 ，另有学者证实痛泻要方加减能作用于 的互动框架同时对胃肠道症状及精神心理症状作出
+[38]
+患者的免疫炎性指标（ 、 ）和肠黏膜通 改善。除了调节脑肠肽改善胃肠蠕动，逍遥散还可
+IBS-D IL-10 IL-1β
+透性指标 乳酸（ ）、二氨氧化酶（ ），调节 以通过调节肠道菌群抑制结肠内炎症异常激活干预
+[D D-LA DAO ]
+黏膜免疫炎性因子的释放，改善肠黏膜免疫屏障 。 抑郁小鼠的焦虑和抑郁样行为 。蔡婷婷 经生物信
+[39] [52] [53]
+上述研究进一步支持了“肝与大肠相通”与 在 息学及系统药理分析，发现四逆散的有效成分对
+GBA IBS
+影响肠道黏膜免疫中的相关性。 的治疗具有多靶点协同调控作用，涉及以
+ADRA2A
+3.3 “肝与大肠相通”与精神心理因素 患者常 和 为代表的精神心理通路和以 、
+IBS HTR2A F2RL1 IL-1β
+伴焦虑、抑郁等精神共病，现代医学将其归因于肠 和 为代表的免疫炎性模块。陈河霖 以慢性
+[54]
+- TRPV1
+脑轴的双向紊乱。与健康对照者相比， 患者的心 不可预测性应激诱导小鼠 轴亢进、海马负反馈
+IBS HPA
+理障碍患病率更高 ，而抗焦虑、抗抑郁治疗对部分 回路受损、色氨酸代谢及结肠菌群紊乱，并证实痛
+[40]
+患者症状均有显著的治疗作用 [41]，提示精神心理 泻药方可以改善应激诱导产生上述影响造成的结肠
+IBS
+因素在 发病中的作用。 是精神心理因素引起 屏障损伤及抑郁样行为。这表明，中医“调肝以安
+IBS GBA
+发病的神经解剖学及神经生理学基础。在动物模 魂”与现代医学“调节神经递质以平衡肠 脑互动”
+IBS -
+型和人类研究中，应激作用于“脑 肠互动”引起肠 在干预策略上殊途同归，共同指向 心身共治的整
+- IBS
+道改变（包括但不限于胃肠道运动的改变、内脏敏感 合模式。
+性增加 [42]、肠道通透性增加 [43-45]、肠道免疫应答的改 4 小结
+变 [46） ] ，从而影响 的发病。相反，肠道菌群的改 综上，中医“肝与大肠相通”理论可为 的腹
+IBS IBS
+变可以通过 反过来影响 的功能 [47]，包括情 痛、排便习惯异常及精神心理症状作出病机诠释，
+GBA CNS
+绪、学习和记忆，诱发、加重抑郁症、焦虑障碍等 与 的症状具有高度相关性。中医的肝不是一个简
+IBS
+精神疾病 [48]。肠道免疫激活 [49]和肿瘤坏死因子 单的解剖学概念，是兼具疏泄、藏魂特点的多能脏
+-α
+（ ）水平升高 [50]与焦虑和抑郁有关，而阻断 器，与现代医学中大脑的部分功能相似，使“肝与
+TNF-α TNF-α
+可能会逆转这种肠 脑改变，提示在某些情况下， 大肠相通”理论与“脑 肠”互动机制相契合。在
+- IBS -
+中的情绪障碍可能由肠道炎症引起。 的发病机制中，肝疏泄失常造成的胃肠动力障
+IBS
+中医则认为“肝郁魂扰”是情志异常的核心病 碍、肝主卫气失司引起的肠黏膜免疫屏障破坏，证
+机，肝失疏泄可致魂不守舍，引发神志不宁。情志
+明了“肝与大肠相通”在 发病机制中起到重要作
+IBS
+因素是始动因素，通过肝主疏泄的“通路”影响
+用。同时，逍遥散、痛泻药方、四逆散等疏肝代表
+“肝与大肠相通”的互动关系导致 发病。首先七
+方剂体现出了对肠道症状及精神合并症的双重调节。
+IBS
+情致肝为病，如怒为肝志，其气刚暴，因怒而气血
+中医药以“肝与大肠相通”为媒介实现了对 的治
+IBS
+逆乱，而使肝失去疏泄条达之用；如恐则气下，因
+疗，亦符合“肝与大肠相通”与 的中医理论内
+IBS
+恐而气怯，气怯则下行，因而使肝的升发受到抑制；
+涵。因此，“肝 大肠”的互动异常导致 发病存在
+- IBS
+如思则气结，气结则肝气内郁，而使疏泄不利；继
+一定的科学内涵。“肝与大肠相通”理论不仅深化了
+而使肝主疏泄及其调畅气机促脾运胃降、敷布卫气
+对 本质的认识，也为开发兼具症状缓解与心神调
+IBS
+以卫肠道屏障的作用异常，引起 的胃肠道表现。
+节的疗法提供了依据，今后可对其机制进行更深入
+IBS
+近年来对肝脏象研究所得出的结论认为，肝是调节
+的研究，为防治 提供新思路。
+IBS
+心理应激的核心 ，情志异常能引起大脑皮层的功能
+[51]
+改变与神经 内分泌 免疫功能失调，而 轴是其
+［参考文献］
+- - HPA
+主要调节途径之一，肝主疏泄的中枢神经生物学机
+， ． ：
+[1] BLACKCJ FORDAC Globalburdenofirritablebowelsyndrome
+制在整体上与 调节轴相关。对于情志活动异常 ， ．
+HPA trends predictions and risk factors[J] Nat Rev Gastroenterol
+新中医 年 月第 卷第 期
+2025 11 57 21
+· ·
+NEW CHINESE MEDICINE November 2025 Vol.57 No.21 143
+， ， （）： ．
+Hepatol 2020 17 8 473-486 the central nervous system in normal gastrointestinal function and
+卞立群，黄绍刚，魏玮，等．肠易激综合征中医诊疗专家共识 ． ， ， （）： ．
+[2] disease[J] Gastroenterology 2009 136 6 2003-2014
+（ ） ．中医杂志， ， （ ）： ． ， ． ：
+2024 [J] 2024 65 18 1948-1956 [20] TAITC SAYUKGS TheBrain-Gut-MicrobiotalAxis Aframework
+刘小斌，邱仕君，郑洪，等．邓铁涛“五脏相关”理论研究 ．
+[3] [J] for understanding functional GI illness and their therapeutic
+中国中医基础医学杂志， ， （）： ． ． ， ， （）： ．
+2008 14 1 20-22 interventions[J] EurJInternMed 2021 84 7 1-9
+李梴．医学入门 ．北京：中国中医药出版社， ： ． ． ：
+[4] [M] 1995 72 [21] APPLETON J The Gut-Brain Axis Influence of Microbiota on
+唐容川．唐容川医学全书 ．王咪咪，李林，主编．北京：中国 ． （ ）， ， （）：
+[5] [M] MoodandMentalHealth[J] IntegrMed Encinitas 2018 17 4
+中医药出版社， ： ． ．
+1999 55 28-32
+陈英杰．“肝与大肠相通”探析 ．中医研究， ， （ ）： ， ， ， ． ，
+[6] [J] 2007 20 11 [22] TOADER C DOBRIN N COSTEA D et al Mind Mood and
+． ． ，
+3-8 Microbiota-Gut-BrainAxisinPsychiatricDisorders[J] IntJMolSci
+， ， ， ． ， ， （）： ．
+[7] LACKNERJM MACX KEEFERL etal Type ratherthan 2024 25 6 3340
+， 岳广欣，陈家旭，王竹风．肝主疏泄的生理学基础探讨 ．北京
+number ofmentaland physicalcomorbidities increases the severity [23] [J]
+． 中医药大学学报， ， （）： ．
+of symptoms in patients with irritable bowel syndrome[J] Clin 2005 28 2 1-4
+， ， （）： ． 肖开慧，任翼，徐帅，等．“肝主疏泄”的现代生物学阐释 ．
+GastroenterolHepatol 2013 11 9 1147-1157 [24] [J]
+， ， ． 世界中医药， ， （ ）： ．
+[8] WHITEHEADWE PALSSONO JONESKR Systematicreview 2022 17 24 3519-3523
+： 于宁，张银柱，车轶文，等．“肝主疏泄”概念的演进 ．中国
+of the comorbidity of irritable bowel syndrome with other disorders [25] [J]
+． ， ， 中医基础医学杂志， ， （）： ， ．
+what are the causes and implications?[J] Gastroenterology 2002 2014 20 1 9-10 22
+（）： ． ， ， ， ． ，
+122 4 1140-1156 [26] O'MAHONY S M CLARKE G BORRE Y E et al Serotonin
+．罗马 功能性胃肠病肠 脑互动异常：第 卷 ． ．
+[9] DROSSMANDA Ⅳ - 1 [M] tryptophanmetabolismandthebrain-gut-microbiomeaxis[J] Behav
+中文翻译版．北京：科学出版社， ： ． ， ， ： ．
+2016 89-225 BrainRes 2015 277 32-48
+张小萍．张海峰 ．北京：中国中医药出版社， ： ． ．
+[10] [M] 2008 318 [27] CROWELL M D Role of serotonin in the pathophysiology of the
+汪晓奕，林真寿．林真寿教授从肝脾肾论治肠易激综合征 ．吉 ． ， ， （）：
+[11] [J] irritablebowelsyndrome[J] BrJPharmacol 2004 141 8 1285-
+林中医药， ， （ ）： ． ．
+2013 33 11 1091-1092 1293
+钱家鸣，张澍田．消化内科学 ．北京：人民卫生出版社， 聂丹丽，陈嘉屿，崔大江，等．胃动灵对肝郁脾虚大鼠模型胃肠
+[12] [M] [28]
+： ． 运动影响的实验研究 ．陕西中医， ， （）： ．
+2021 211 [J] 2000 21 6 283-284
+， ， ． 陈泽奇，陈国林，胡随瑜，等．肝气郁结证辅助实验诊断指标的
+[13] STAUDACHER H M MIKOCKA-WALUS A FORD A C [29]
+： 初步研究 ．中国现代医学杂志， ， （ ）： ．
+Common mental disorders in irritable bowel syndrome [J] 2001 11 12 8-9
+， ， 陈芝芸，严茂祥，项柏康．肝郁证大鼠血及结肠组织胃肠激素变
+pathophysiology management and considerations for future [30]
+． ， ， 化的研究 ．中医杂志， ， （）： ．
+randomisedcontrolledtrials[J] LancetGastroenterolHepatol 2021 [J] 2003 44 2 131-132
+（）： ． 于林，吴升伟，禤正正，等．加味逍遥散对胃肠功能失调的抑郁
+6 5 401-410 [31]
+， ， ， ． 大鼠脑肠肽 、 表达的影响 ．时珍国医国药， ，
+[14] KOLOSKI N A JONES M KALANTAR J et al The brain-gut SS GAS [J] 2017 28
+： （）： ．
+pathwayinfunctionalgastrointestinaldisordersisbidirectional a12- 6 1290-1292
+． ， ， （）： 叶虹玉．痛泻要方对 模型肠运动作用与脑—肠轴调控关系的
+yearprospectivepopulation-basedstudy[J] Gut 2012 619 1284- [32] IBS
+． 研究 ．哈尔滨：黑龙江中医药大学， ．
+1290 [D] 2015
+， ， ． ， ， ， ．
+[15] KOLOSKI N A JONES M TALLEY N J Evidence that [33] HANNINGN EDWINSONAL CEULEERSH etal Intestinal
+： ．
+independentgut-to-brain and brain-to-gutpathways operate in the barrierdysfunctioninirritablebowelsyndrome asystematicreview[J]
+： ， ， ： ．
+irritable bowel syndrome and functional dyspepsia a 1-year TherapAdvGastroenterol 2021 14 1-31
+． ， ， ．
+population-based prospective study[J] Aliment Pharmacol Ther [34] VANUYTSEL T VAN WANROOY S Psychological stress and
+， （）： ．
+2016 44 6 592-600 corticotropin-releasing hormone increase intestinal permeability in
+， ， ， ． ． ， ，
+[16] YUN Q WANG S CHEN S et al Constipation preceding humans by a mast cell-dependent mechanism[J] Gut 2014 63
+： ． ． （）： ．
+depression apopulation-basedcohortstudy[J] EClinicalMedicine 8 1293-1299
+， ： ． 许朝进，席孝贤，贺新怀．卫气与黏膜免疫相关性辨识 ．中医
+2024 67 102371 [35] [J]
+， ， ， ． 药学刊， ， （）： ．
+[17] SHAIKH S D SUN N CANAKIS A et al Irritable Bowel 2005 23 1 120-123
+： ． 刘洋，李昕蓉，陈晴，等．卫气与变应性鼻炎黏膜免疫机制的相
+Syndrome and the Gut Microbiome A Comprehensive Review[J] J [36]
+， ， （）： ． 关性探讨 ．中华中医药杂志， ， （）： ．
+ClinMed 2023 12 7 2558 [J] 2014 29 5 1530-1533
+， ． ． 张伊伊．从“肝者，捍也”理论探析肝主疏泄对卫外功能的影响 ．
+[18] FICHNA J STORR M A Brain-GutInteractionsinIBS[J] Front [37] [D]
+， ， ： ． 成都：成都中医药大学， ： ．
+Pharmacol 2012 3 127 2023 14
+． 何莹．基于“肠黏膜免疫屏障 肠道菌群”下的中药治疗
+[19] BERCIK C P The relationship between intestinal microbiota and [38] - IBS-D
+新中医 年 月第 卷第 期
+2025 11 57 21
+· ·
+144 NEW CHINESE MEDICINE November 2025 Vol.57 No.21
+作用机制研究 ．北京：北京中医药大学， ： ． ．
+[D] 2019 134 187-192
+张坤漓．基于 途径研究痛泻要方对 肠黏膜 ， ．
+[39] AhR/ILC3/IL-22 IBS-D [47] MAYEREA HSIAOEY TheGutandItsMicrobiomeasRelated
+屏障的作用机制 ．北京：中国中医科学院， ： ． ：
+[D] 2024 126 toCentralNervousSystemFunctioningandPsychologicalWell-being
+， ， ， ． ， ．
+[40] LADABAUM U BOYD E ZHAO W K et al Diagnosis Introduction to the Special Issue of Psychosomatic Medicine[J]
+， ， ， （）： ．
+comorbidities and management of irritable bowel syndrome in PsychosomMed 2017 79 8 844-846
+． ， ， ， ． ，
+patients in a large health maintenance organization[J] Clin [48] TOADER C DOBRIN N COSTEA D et al Mind Mood and
+， ， （）： ． — ．
+GastroenterolHepatol 2012 10 7 37-45 Microbiota Gut-BrainAxisinPsychiatricDisorders[J] International
+， ， ， ． ， ， （）： ．
+[41] FORD A C LACY B E HARRIS L A et al Effect of JournalofMolecularSciences 2024 25 6 3340
+， ， ， ．
+Antidepressants and Psychological Therapies in Irritable Bowel [49] LIEBREGTST ADAMB BREDACKC etal Immuneactivation
+： ． ． ， ，
+Syndrome An Updated Systematic Review and Meta-Analysis[J] inpatientswithirritablebowelsyndrome[J] Gastroenterology 2007
+， ， （）： ． （）： ．
+AmJGastroenterol 2019 114 1 21-39 132 3 913-920
+， ， ， ． ， ， ， ．
+[42] BARBARA G WANG B STANGHELLINI V et al Mast cell- [50] GRAYMA CHAOCY STAUDACHERHM etal Anti-TNF
+dependentexcitationofvisceral-nociceptivesensoryneuronsinirritable alpha therapy in IBD alters brain activity reflecting visceral sensory
+． ， ， （）： ． ． ， ， （）：
+bowelsyndrome[J] Gastroenterology 2007 132 1 26-37 functionandcognitive-affectivebiases[J] PLoSOne 2018 13 3
+， ， ， ． ．
+[43] HASLER W L GRABAUSKAS G SINGH P et al Mast cell e0193542
+严灿，邓中炎，吴伟康，等．从心理应激理论研究中医肝主疏泄
+mediation of visceral sensation and permeability in irritable bowel [51]
+． ， ， （）： 脏象本质 ．中医杂志， ， （）： ．
+syndrome[J] NeurogastroenterolMotil 2022 34 7 e14339. [J] 2001 42 1 8-10
+． ． 李晓娟，白晓晖，李娜，等．逍遥散对慢性束缚应激抑郁模型大
+[44] BARBARAG Mucosalbarrierdefectsinirritablebowelsyndrome [52]
+Who left the door open?[J]． Am J Gastroenterol， 2006， 101（ 6）： 鼠 JAK/STAT信号通路的影响 [J]．中华中医药杂志， 2016， 31
+（）： ．
+． 5 1700-1704
+1295-1298
+蔡婷婷．四逆散有效成分对肠易激综合征疾病网络的协同调控研
+， ， ． [53]
+[45] GAREAU M G SILVA M A PERDUE M H Pathophysiological
+究 ．南京：南京师范大学， ．
+． ， [D] 2021
+mechanisms of stress-induced intestinal damage[J] Curr Mol Med
+陈河霖．痛泻要方多糖对肝郁脾虚小鼠的保护作用及其机制研
+，（）： ． [54]
+2008 8 4 274-281
+究 ．雅安：四川农业大学， ．
+， ． ： [D] 2023
+[46] CRYAN J F O'MAHONY S M The microbiome-gut-brain axis
+［责任编辑：郭雨驰，蒋维超（英文）］
+． ， ， （）：
+fromboweltobehavior[J] NeurogastroenterolMotil 2011 23 3

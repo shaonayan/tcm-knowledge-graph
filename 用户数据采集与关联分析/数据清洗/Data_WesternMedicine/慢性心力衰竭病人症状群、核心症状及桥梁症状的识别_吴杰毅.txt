@@ -1,0 +1,295 @@
+· 3640· CHINESE GENERAL PRACTICE NURSING October 2025 Vol.23 No.19
+·论 著·
+慢 性 心 力 衰 竭 病 人 症 状 群 、核 心 症 状
+及桥梁症状的识别
+吴杰毅，于 淼，丘爱华，叶增杰，周 丹，刘小布，陈恩妮
+Identification of symptom clusters，core symptoms，and bridge symptoms in patients with chronic
+heart failure
+WU Jieyi，YU Miao，QIU Aihua，YE Zengjie，ZHOU Dan，LIU Xiaobu，CHEN Enn（i Longhua People′s Hospital，Shenzhen
+）
+518000 China
+Abstract Objective:To identify the symptom clusters of patients with chronic heart failure( CHF) and construct a symptom network to
+explore the core symptoms and bridge symptoms. Methods:A total of 342 CHF patients who visited a tertiary grade A level Chinese
+medicine hospital from September 2022 to December 2023 were selected as the research subjects by using a convenience sampling method.The
+( )
+general information questionnaire and the Chinese version of the Memorial Symptom Assessment Scale⁃Heart Failure MSAS⁃HF were used
+to investigate the patients.Exploratory factor analysis was used to extract the symptom clusters.The concurrent symptom network was
+constructed using R software,and the centrality index was calculated.Results:Five symptom clusters were extracted by exploratory factor
+analysis:the sickness symptom cluster,the sleep⁃digestion symptom cluster,the dyspnea symptom cluster,the mental and psychological symptom
+( )
+cluster,and the peripheral congestion symptom cluster.The top three symptoms of node strength centrality are sweating rs=1.918 ,waking up
+( ) ( )
+from sleep at night rs=1.167 ,and difficulty concentrating rs=0.099 .The top three symptoms of bridge strength centrality are waking up
+from sleep at night ( rbs=4.418) ,abdominal distension ( rbs=4.183) ,and easy sleepiness ( rbs=4.093) .Conclusions:The core symptom of
+CHF patients is sweating,and waking up from sleep at night,abdominal distension and easy sleepiness play a major bridging role between
+symptom clusters.Medical staff should develop precise intervention plans based on relevant target symptoms to improve the efficiency of
+symptom management.
+Keywords chronic heart failure,CHF; symptom cluster; core symptoms; bridge symptoms; symptom network
+摘要 目的：识别慢性心力衰竭（CHF）病人的症状群，并构建症状网络以探索其中的核心症状和桥梁症状。方法：采用便利抽样法，选
+取2022年9月—2023年12月就诊于某三级甲等中医院的342例CHF病人作为研究对象。采用一般资料调查表、中文版Memorial心
+力衰竭症状评估量表对病人进行调查。症状群的提取采用探索性因子分析，采用R软件构建同期症状网络，并计算中心性指标。结果：探
+索性因子分析提取出5个症状群，分别是病感症状群、睡眠⁃消化症状群、呼吸困难症状群、精神心理症状群和外周淤血症状群。节点强
+度中心性排名前3位的症状是出汗（r s=1.918）、夜间睡眠憋醒（r s=1.167）、很难集中注意力（r s=0.099）。桥梁强度中心性排名前3位的
+症状是夜间睡眠憋醒（r bs=4.418）、腹胀（r bs=4.183）、易困（r bs=4.093）。结论：CHF病人的核心症状是出汗，夜间睡眠憋醒、腹胀和易困
+在症状群之间起着主要桥梁作用；医护人员应根据相关靶点症状，制订精准干预方案，以提高症状管理效率。
+关键词 慢性心力衰竭；症状群；核心症状；桥梁症状；症状网络
+doi： 10.12104/j.issn.1674-4748.2025.19.007
+慢性心力衰竭（ chronic heart failure，CHF）是一组 由心脏结构和/或功能异常引起的临床综合征。研究
+显示，我国CHF标准化患病率约为1.1%，发病率为
+275/10万，1年内粗死亡率为16.9%，年平均住院3.3
+基金项目 广东省中医药健康服务与产业发展研究中心重点项目，编 人次，呈现出高患病率、高发病率、高死亡率、高再入院
+号：2022ZDA03；广州市哲学社科规划课题，编号：2023GZGJ62；广东省 等特点［1⁃3］。CHF病人平均承受着十余种症状的困
+科技创新战略专项资金（大学生科技创新培育）项目，编号：pdjh2023b0130； 扰［4］，如呼吸短促、入睡困难等，且症状之间存在交互
+深圳市龙华区医学会医学科研专项课题，编号：2024LHMA19；深圳市 效应［5］。症状网络（ network）能够克服传统
+symptom
+医疗卫生三名工程项目，编号：SZZYSM202106006。
+的症状群提取分析在识别症状相互关系间的局限性，
+作者简介 吴杰毅，护士，硕士，单位：518000，深圳市龙华区人民医院；
+通过定量分析网络动力学指标，客观反映复杂症状中
+于淼单位：广州中医药大学；丘爱华单位：深圳市中西医结合医院；叶增
+的内部关系，揭示核心/桥梁症状等症状管理的重要靶
+杰单位：广州医科大学；周丹、陈恩妮（通讯作者）单位：广州中医药大学
+点［6］，在心血管领域得到了初步运用。既往CHF症状
+第一附属医院；刘小布单位：深圳市龙华区人民医院。
+网络文献缺乏对症状群及其靶点的整体认识［5，7］。因
+引用信息 吴杰毅，于淼，丘爱华，等.慢性心力衰竭病人症状群、核心
+症状及桥梁症状的识别［J］.全科护理，2025，23（19）：3640⁃3645. 此，本研究拟通过调查CHF病人的症状发生情况，识
+全科护理 2025 年 10 月第 23 卷第 19 期 · 3641·
+别其症状群、核心症状及桥梁症状，为医护人员制订精 写。调查问卷均在现场回收，问卷内容在结束后再次
+准症状管理方案提供理论参考。 向病人进行核实。本研究共发放问卷363份并全部回
+1 对象与方法 收，因病人病情变化、情绪不佳等原因未全部完成问卷
+1.1 研究对象 填写者 21 份。最终有效问卷为 342 份，有效率为
+采用方便抽样法，选取2022年9月—2023年12月 94.21%。
+广州中医药大学第一附属医院心血管内科的CHF住 1.3 统计学方法
+院病人作为研究对象。纳入标准：1）符合《中国心力衰
+使用SPSS 25.0和R 4.2.0软件进行统计分析。符
+竭诊断和治疗指南2018》［8］诊断标准，经心血管内科主 合正态分布的定量资料采用均数±标准差（x±s）描
+治以上级别医生诊断为CHF；2）纽约心脏协会（
+New 述，不符合正态分布的定量资料，采用中位数和四分位
+Association，NYHA）心功能分级Ⅱ~Ⅳ
+York Heart 数［M（P ，P ）］描述；定性资料采用例数、百分比（ %）
+25 75
+级；3）年龄≥18岁；4）有基本沟通能力；5）知情同意，
+表示。既往症状群研究指出，以症状严重程度所提取
+自愿参与本研究。排除标准：1）合并恶性肿瘤、重度肝
+的症状群模型适配度更好［13］。本研究参照相关文献
+肾疾病、其他严重器官功能障碍或传染病活动期；2）心
+［4，14］，采用探索性因子分析中的主成分分析结合最
+脏移植术后；3）住院期间死亡；4）有精神障碍史。根据
+大方差正交旋转法，对发生率≥25%的症状严重程度
+粗略样本量估算原则，样本数应至少为变量数的5~10
+得分进行症状群提取：根据 Kaiser⁃Meyer⁃Olkin
+倍［9］。本研究纳入32种症状进行评估，考虑20%的样
+（ KMO）值和Barlett球形检验评价变量间的相关性，
+本流失，所需样本量应为192~384例。结合Constantin
+KMO值为0~1，越接近于1则表示相关性越强，一般
+等［10］意见，当症状网络由20个或更少的节点组成时，
+要求>0.70，Barlett球形检验中P<0.05则表示差异有
+250~350例样本通常足以捕捉节点间的关系。本研究
+统计学意义；依据特征值>1、总方差解释率≥50%作
+最终纳入19个症状进行网络分析，最小样本量应为
+为症状群数目标准［15］；依据因子载荷≥0.40以及临
+250例，最终获得有效样本342例。本研究已通过广州
+床理论，确定群内症状构成，每一症状群内的症状
+中医药大学第一附属医院医学伦理委员会伦理审查
+数≥2种。
+（ K⁃2023⁃046）。
+症状网络方面，采用 R⁃packageq graph，通过
+1.2 研究方法
+EBICgalsso函数和Spearman相关性分析构建症状网
+1.2.1 调查工具
+络，并计算中心性指标。通过最小绝对值收敛和选择
+1）一般资料调查表：由研究者自行设计，包括人口
+算子删除个别角度较弱的边线，获得一个兼具简洁度
+社会学资料（年龄、性别、文化程度、婚姻状况、居住地、
+和可解释性的网络结构；采用Fruchterman⁃Reingold算
+吸烟史、饮酒史）和疾病相关资料［CHF病因、是否为
+法和spring布局，将中心性指标最强的症状置于网络
+首诊心力衰竭（ HF）、NYHA心功能分级、左心室射血
+的中央位置，并使特征相似的症状位置更为紧密。网
+分数］，疾病相关资料从电子病历系统或咨询主治医生
+络中的节点代表症状，边线代表症状间的相关性，边线
+获得。2）中文版 Memorial心力衰竭症状评估量表
+的粗细、颜色反映相关性的强度和性质（正负）。中心
+（ Memorial Symptom Assessment Scale⁃Heart Failure，
+性指标包含强度中心性（ strength）紧密度中心性
+MSAS⁃HF）。由美国学者Zambroskic等［11］编制、郭金
+（ closenenss）、中介中心性（ betweenness）、桥梁强度中
+玉等［12］汉化修订，包含生理症状、心理症状和心力衰
+心性（ strength）、桥梁紧密度中心性（
+竭症状3个维度32个条目。MSAS⁃HF从症状有无、 bridge bridge
+closeness）和桥梁中介中心性（ betweenness）。
+发生频率（ Likert 4级评分，“很少”到“几乎一直持 bridge
+其中，（桥梁）强度中心性是最具说服力的指标，其数值
+续”）、严重程度（ Likert 4级评分，“轻微”到“非常严
+重”）和困扰程度（ Likert 5级评分，“一点没有”到“非常 越大说明该症状是症状网络中的（桥梁）核心症状［16］。
+严重”） 4个方面综合评估CHF病人最近7 d的症状。 采用R⁃package bootnet进行网络结构的精确性和稳定
+在本研究中，MSAS⁃HF的Cronbach′s α系数为0.860。 性分析。通过Bootstrap法对边线的95%置信区间、边
+1.2.2 资料收集方法 线差异性和节点差异性进行非参数估计，以P<0.05
+首先，对2名研究人员进行课题目的、内容和调查 为差异有统计学意义；通过计算相关稳定性系数
+方法的培训，培训合格后方可进行资料收集。在受试 （ Correlation Stability Coefficient，CS系数）来评价症状
+者入院第2天、第3天，由调查员采用统一的规范指导 中 心 性 指 标 的 稳 定 性 ，CS 系 数 >0.25 认 为 可
+语向其说明，征得其知情同意后，由病人自行填写；对 接受［15⁃16］。
+于不能自行填写者，由调查员根据病人的作答代为填 2 结果
+· 3642· CHINESE GENERAL PRACTICE NURSING October 2025 Vol.23 No.19
+2.1 病人一般资料 腿或胳膊水肿（ 56.14%）、夜间睡眠憋醒（ 49.12%）、平
+本研究共纳入 342 例 CHF 病人：年龄 22~97 躺时呼吸困难（ 47.66%）、排尿异常（ 46.49%）、口干
+（ 69.25±15.03）岁。其中，男204例，女138例；文化程 （ 41.52%）、心 悸（ 38.60%）、很 难 集 中 注 意 力
+度：小学及以下174例，初中89例，高中/技校/中专50 （ 38.30%）、感觉紧张（ 37.72%）、头晕（ 36.84%）、饮食
+例，专科及以上29例；已婚270例，未婚13例，丧偶50 味道改变（ 30.12%）、出汗（ 29.24%）、手脚麻木感
+例，离异9例；农村101例，城镇241例；从未吸烟269 （ 28.07%）、腹胀（ 26.61%）。症状严重程度得分居前3
+例，现在吸烟34例，既往吸烟39例；从未饮酒315例， 位的是睡眠困难［2.00（ 0.00，3.00）］分、气短［2.00
+现在饮酒13例，既往饮酒14例；病因为冠心病116例， （ 2.00，2.00）］分、没劲/没精神［2.00（ 2.00，2.00）］分。
+高血压92例，瓣膜性心脏病51例，风湿性心脏病12 对发生率≥25%的20个症状进行探索性因子分析。
+例，心肌病40例，其他31例；首次诊断为CHF有135 经检验，KMO值为0.836，Barlett球形检验对应的P<
+例，非首次诊断207例；心功能Ⅱ级95例，Ⅲ级123例， 0.001，说明观测变量适合进行探索性因子分析。共提
+Ⅳ级124例；左心室射血分数≤40%为116例，41%~ 取 5 个特征值≥1 的公因子，累计方差解释率为
+49%为59例，≥50%为167例。 55.241%，其中，因咳嗽的因子载荷<0.40，故剔除。5
+2.2 CHF病人症状发生情况及症状群的提取 个公因子分别命名为病感症状群（因子1）、睡眠⁃消化
+发生率≥25%的症状有气短（ 89.47%）、没劲/没 症状群（因子2）、呼吸困难症状群（因子3）、精神心理
+精神（ 78.07%）、忧虑（ 67.25%）、睡眠困难（ 66.96%）、 症状群（因子4）、外周淤血症状群（因子5）。CHF病人
+食欲缺乏（ 60.53%）、咳嗽（ 58.19%）、易困（ 57.02%）、 症状群的探索性因子分析结果见表1。
+表1 CHF病人症状群探索性因子分析结果（n=342）
+症状 因子1 因子2 因子3 因子4 因子5
+出汗 0.788
+口干 0.678
+心悸 0.674
+手脚麻木感 0.674
+头晕 0.663
+很难集中注意力 0.531
+饮食味道改变 0.502
+感觉紧张 0.494
+排尿异常 0.405
+睡眠困难 0.786
+食欲缺乏 0.716
+易困 0.697
+平躺时呼吸困难 0.816
+夜间睡眠憋醒 0.728
+气短 0.675
+咳嗽 0.383
+忧虑 0.711
+没劲/没精神 0.669
+腿或胳膊水肿 0.697
+腹胀 0.527
+初始特征值 5.467 1.747 1.576 1.169 1.090
+旋转后特征值 3.970 2.254 2.121 1.515 1.188
+累计方差贡献率( %)
+19.852 31.122 41.727 49.303 55.241
+Cronbach′s α系数 0.826 0.711 0.761 0.356 0.363
+2.3 CHF病人症状网络分析 相关性程度居前3位症状是夜间睡眠憋醒⁃平躺时呼
+2.3.1 网络估计 吸困难（r=0.652）、易困⁃睡眠困难（r=0.427）、口干⁃出
+对表1中的19个症状进行网络分析，结果见图1。 汗（r=0.317）。
+全科护理 2025 年 10 月第 23 卷第 19 期 · 3643·
+图1 CHF病人的症状网络结构图（n=342）
+（M1很难集中注意力；M2感觉紧张；M3口干；M4易困；M5手脚麻木感；M6睡眠困难；M7腹胀；
+M8排尿异常；M9心悸；M10没劲/没精神；M11夜间睡眠憋醒；M12气短；M13出汗；M14忧虑；
+M15食欲缺乏；M16头晕；M17饮食味道改变；M18腿或胳膊水肿；M19平躺时呼吸困难）
+2.3.2 中心性指标估计 1.918）、夜间睡眠憋醒（r s=1.167）、很难集中注意力（r s=
+对症状群中的19个症状进行中心性指标估计，结果 0.099）；桥梁强度中心性（r bs）排名前3位的症状是夜间睡
+见图2。症状强度中心性（r s）排名前3位的症状是出汗（r 眠憋醒（r bs=4.418）、腹胀（r bs=4.183）、易困（r bs=4.093）。
+s=
+图2 CHF病人症状网络的中心性指标估计（n=342）
+（a为症状强度中心性；b为桥梁强度中心性）
+2.3.3 网络精确性和稳定性检验 点稳定性检验见图4，强度中心性CS系数为0.44，说
+边缘精确性检验结果见图3。不同边缘权重的 明指标结果较为稳定。
+95%置信区间基本重合，表示该网络精确性较好。节
+图3 CHF病人症状网络的边缘精确性检验（n=342）
+· 3644· CHINESE GENERAL PRACTICE NURSING October 2025 Vol.23 No.19
+图4 CHF病人症状网络的节点稳定性检验（n=342）
+3 讨论 小汗腺分泌汗液，此外RASS过度激活也会加重人体
+CHF病人症状可归纳为5个症状群。本研究结果 的水钠潴留，从而导致病人出汗增多。Paradigm⁃hf研
+显示，CHF病人症状群可归纳为病感、睡眠⁃消化、呼 究结果表明，在非卧床HF病人中，淤血症状/体征与生
+吸困难、精神心理和外周淤血5个症状群。症状群的 存质量、HF再入院和死亡率密切相关（均P<0.001），
+种类及其包含的症状与既往文献［4，17］大致相似。但在 这也是病人频繁再入院的常见原因［23］。Aronson等［24］
+以往研究［18］中，精神心理症状群多由忧虑、感觉紧张、 通过开发一种能够提高病人出汗率的新型装置，使液
+哀伤感等症状组成，与本研究存在差异，这可能是由于 体排出和体重减轻程度达到具备临床意义的水平，但
+年龄等样本特征的不同所造成的。本研究中342例 由于样本量少、缺乏对照、结局测量精准性等不足，所
+CHF病人的年龄为（ 69.25±15.03）岁，且超过60%既 得结论仍需进一步审查。今后医护人员及相关学者应
+往已诊断为CHF。韦学萍等［19］发现，老年CHF病人 重点开发基于核心症状的管理方案，或有助于精准缓
+在长期患病过程中，逐渐由负性疾病认知转向积极方 解病人的总体症状负担，提高其生存质量。
+向，平淡地看待疾病、老化与死亡的问题。因此，相较 夜间睡眠憋醒、腹胀和易困是连接CHF病人症状
+于中青年、新诊断CHF病人，其精神心理症状具有独 群的桥梁症状。图2（ b）显示，夜间睡眠憋醒的桥梁强
+特性。虽然各研究之间由于样本特征、测量工具、提取 度中心性（r bs=4.418）位列第1位，其次是腹胀和易困，
+方法等不同存在结果的差异［20］，但症状群的总体类别 说明夜间睡眠憋醒、腹胀和易困是CHF病人症状网络
+及其症状构成相对稳定。结果表明，CHF病人复杂症 中的主要桥梁症状。HF病人处于心功能不足的状
+状背后的聚集性，提示医护人员应加强对症状群的监 态，当进入急性失代偿期，心输出量急剧减少［22］，进而
+测与管理，从而在降低医疗照护负担的同时，提升干预 导致体循环、肺循环淤血，外周灌注不足，出现夜间睡
+的精准度与有效性。 眠憋醒、腹胀和易困等症状。王泽泉［18］发现，夜间睡
+出汗是CHF病人的核心症状。核心症状被认为 眠憋醒的困扰度高于其严重程度，而睡眠不佳可能会
+是网络结构中最重要的症状“靶点”，可影响其他症状 加重胃肠道症状和负性情绪［5，25］，引发其他症状群的
+的发生发展［21］。由图2（ a）可知，出汗的强度中心性（r s= 出现。一项大型队列研究表明，不良睡眠模式会增加
+1.918）居于首位，说明该症状是CHF病人症状网络中 CHF的发病风险［26］。因此，针对夜间睡眠憋醒、腹胀
+的核心症状。与Wang等［5，7］结果不同的原因，可能是 和易困等桥梁症状的靶点式干预，有望能够弱化乃至
+在于测量工具以及病人年龄分布特征等方面的差异。 中断其桥梁作用，降低CHF病人症状群之间的触发效
+肾素⁃血管紧张素⁃醛固酮系统（ renin⁃angiotensin⁃ 应，改善病人的预后结局。
+aldosterone system，RASS）与交感神经系统的慢性激 综上所述，本研究通过横断面调查发现CHF病人
+活等神经激素理论目前被认为是驱动HF进展的重要 存在5个症状群：病感症状群、睡眠⁃消化症状群、呼吸
+机制［22］。当HF急性发作时，交感神经系统兴奋，刺激 困难症状群、精神心理症状群和外周淤血症状群。网
+全科护理 2025 年 10 月第 23 卷第 19 期 · 3645·
+络分析结果显示，出汗是核心症状，夜间睡眠憋醒、腹 ［12］ 郭金玉,吕蓉,张健,等.中文版Memorial心力衰竭症状评估量
+表的信效度评定[J].中华护理杂志,2014,49(12):1448⁃1452.
+胀和易困是主要的桥梁症状。医护人员今后可通过完
+［13］ KIM E,JAHAN T,AOUIZERATB E,et al.Differences in symptom
+善随访体系、提升出院准备度、创新出汗率监测及干预
+clusters identified using occurrence rates versus symptom severity
+方式等方面，对相关靶点症状进行管理，并动态评估症
+ratings in patients at the end of radiation therapy[J].Cancer Nursing,
+状群、网络结构及核心/桥梁症状中心性指标的变化趋 2009,32(6):429⁃436.
+势，以切实提高症状管理效率。但本研究为单中心、横 ［14］ 杨贝贝,郑战战,吴圣佳,等.慢性稳定性心力衰竭患者症状群分
+类的研究[J].中国护理管理,2018,18(2):185⁃191.
+断面研究，无法进行确切的因果推断，且忽略了症状表
+［15］ 王孟成,刘拓.心理与行为定量研究手册[M].重庆:重庆大学出
+观层面的生物学特征。未来可融合病人报告结局与生
+版社,2023.
+物标志物等主客观指标，通过动态网络、多层网络等方 ［16］ 朱政,余骏雯,杨中方,等.症状同期网络的分析方法介绍及R软
+法，获得更具代表性的症状网络结果，并探索其内在关 件实现[J].护士进修杂志,2023,38(24):2235⁃2239.
+联和潜在机制。 ［17］ KOLECKT A,TOPAZ M,TATONETTIN P,et al.Characterizing
+shared and distinct symptom clusters in common chronic conditions
+参考文献：
+through natural language processing of nursing notes[J].Researchin
+［1］ FENG J Y,ZHANG Y H,ZHANG J.Epidemiology and burden of heart
+Nursing & Health,2021,44(6):906⁃919.
+failure in Asia[J].JACC:Asia,2024,4(4):249⁃264.
+［18］ 王泽泉.心力衰竭住院患者的症状群和生活质量[D].长春:吉林
+［2］ WANG H,CHAI K,DUM H,et al.Prevalence and incidence of heart
+大学,2018.
+failure among urban patients in China:a national population⁃based
+［19］ 韦学萍,范西真,方媛,等.终末期心力衰竭患者疾病体验的质性
+analysis[J].Circulation Heart Failure,2021,14(10):e008406. 研究[J].中华全科医学,2022,20(4):620⁃622.
+［3］ CAIA P,ZHENGC Y,QIUJ Y,et al.Prevalence of heart failure stages
+［20］ QIU C,YUD S,SONG D,et al.The prognostic impact of symptom
+in the general population and implications for heart failure prevention:
+clusters in patients with heart failure:a systematic review and meta⁃
+reports from the China Hypertension Survey 2012⁃15[J].European analysis[J].Journal of Advanced Nursing,2022,78(9):2713⁃2730.
+Journal of Preventive Cardiology,2023,30(13):1391⁃1400. ［21］ ZHU Z,WEN H,YANGZ F,et al.Evolving symptom networks
+［4］ 申文佳.慢性稳定性心力衰竭患者症状群与生活质量间作用模型
+in relation to HIV⁃positive duration among people living with HIV:a
+的研究[D].郑州:郑州大学,2020.
+network analysis[J].International Journal of Infectious Diseases,2021,
+［5］ WANGY Q,XUX Y,LVQ Y,et al.Network analysis of symptoms,
+108:503⁃509.
+physiological,psychological and environmental risk factors based on ［22］ MARYAM,VARGHESET P,B T.Unraveling the complex pathophysiology
+unpleasant symptom theory in patients with chronic heart failure[J].
+of heart failure:insights into the role of renin⁃angiotensin⁃aldosterone
+International Journal of Nursing Practice,2024,30(2):e13246. system (RAAS) and sympathetic nervous system (SNS)[J].Current
+［6］ ZHU Z,XINGW J,HU Y,et al.Paradigm shift:Moving from symptom Problems in Cardiology,2024,49(4):102411.
+clusters to symptom networks[J].Asia⁃Pacific Journal of Oncology ［23］ SELVARAJ S,CLAGGETT B,POZZI A,et al.Prognostic implications of
+Nursing,2022,9(1):5⁃6.
+congestion on physical examination among contemporary patients
+［7］ 张爽琦,郑改改,王宇,等.中青年心力衰竭患者同期症状网络分
+with heart failure and reduced ejection fraction:paradigm⁃HF[J].
+析[J].军事护理,2024,41(8):69⁃73. Circulation,2019,140(17):1369⁃1379.
+［8］ 中华医学会心血管病学分会心力衰竭学组,中国医师协会心力衰 ［24］ ARONSON D,NITZAN Y,PETCHERSKI S,et al.Enhancing sweat
+竭专业委员会,中华心血管病杂志编辑委员会.中国心力衰竭诊
+rate using a novel device for the treatment of congestion in heart failure
+断和治疗指南2018[J].中华心血管病杂志,2018,46(10):760⁃789. [J].Circulation Heart Failure,2023,16(1):e009787.
+［9］ 倪平,陈京立,刘娜.护理研究中量性研究的样本量估计[J].中华 ［25］ VERNIA F,DI RUSCIO M,CICCONE A,et al.Sleep disorders
+护理杂志,2010,45(4):378⁃380.
+related to nutrition and digestive diseases:a neglected clinical condition
+［10］ CONSTANTIN M,CRAMER A O.Sample size recommendations [J].Int J Med Sci.2021,18(3):593⁃603.
+for estimating cross⁃sectional network models[D].Tilburg:Tilburg ［26］ ZHANGJ Y,CHEN L,ZHANGS Y,et al.Associations of sleep patterns
+University,2020. with dynamic trajectory of cardiovascular multimorbidity and mortality:
+［11］ ZAMBROSKIC H,MOSERD K,BHAT G,et al.Impact of symptom amultistate analysis of a large cohort[J].Journal of the American Heart
+prevalence and symptom burden on quality of life in patients with Association,2023,12(19):e029463.
+heart failure[J].European Journal of Cardiovascular Nursing,2005, （收稿日期：2025⁃03⁃25；修回日期：2025⁃08⁃02）
+4(3):198⁃206. （本文编辑 郭海瑞）

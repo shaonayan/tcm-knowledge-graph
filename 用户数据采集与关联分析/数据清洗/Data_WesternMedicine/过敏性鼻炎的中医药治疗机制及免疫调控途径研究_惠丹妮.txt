@@ -1,0 +1,789 @@
+新新医医学学 22002255年年77月月第第5566卷卷第第77期期
+706
+DOI： - -
+··综综述述·· 10.12464/j.issn.02539802.20250060
+过敏性鼻炎的中医药治疗机制及免疫调控途径研究
+惠丹妮，黄文绘，毋莹，韩梦洁，陈璇羽，薛亚娟
+（延安大学延安医学院，陕西 延安 ）
+716000
+【摘要】 过敏性鼻炎（ ）是一种由免疫球蛋白 （ ）介导的Ⅰ型超敏反应，涉及多种免疫细胞和炎症因子。
+AR E IgE
+西医治疗在缓解 症状方面具有一定成效，但其局限性促使越来越多的研究将目光转向中医药治疗。中医认为，
+AR AR
+的发生与肺、脾、肾功能失调有关，治疗原则包括扶正祛邪、清热解毒以及调和阴阳等。研究表明，中医药通过调
+节辅助性 细胞（ ） 平衡、增强调节性 细胞的功能、抑制 介导的过敏反应、减少炎症细胞浸润及调控
+T Th 1/Th2 T IgE
+- 、 和 等信号通路，发挥其免疫调节和抗炎作用。中医药在 治疗中的多靶点作用机制为症状
+NF κB MAPK JAK/STAT AR
+改善和复发预防提供了有效的治疗策略。文章综述了中医药在治疗 中的作用机制及相关研究进展，旨在进一步优
+AR
+化其临床应用价值。
+【关键词】 过敏性鼻炎；中医药治疗；免疫调控；信号通路
+Study on the therapeutic mechanism of traditional Chinese medicine and immune regulation pathway of
+allergic rhinitis
+HUI Danni， HUANG Wenhui， WU Ying， HAN Mengjie， CHEN Xuanyu， XUE Yajuan
+（Yan’ an Medical College， Yan’ an University， Yan’ an 716000， China）
+Corresponding author: XUE Yajuan， E-mail: xllshirley@163.com
+【Abstract】 （ ） Ⅰ （ ），
+Allergic rhinitis AR is a type hypersensitivity reaction mediated by immunoglobulin E IgE involving multiple
+ff ，
+immune cells and inflammatory factors. Western medicine has achieved certain e ects in alleviating AR symptoms but its limitations
+（ ） ，
+have led more and more studies to focus on traditional Chinese medicine TCM treatment. According to TCM theory the occurrence of
+， ’ ，
+AR is related to the dysfunction of the lung spleen and kidney. The treatment principles include strengthening the body s resistance
+， ，
+eliminating pathogenic factors clearing heat and detoxifying and harmonizing Yin and Yang. Studies have shown that Chinese
+- ff （ ） ，
+medicine exerts its immunomodulatory and antiinflammatory e ects by regulating the balance of T helper cells Th 1/Th2 enhancing
+， - ， fi ，
+the function of regulatory T cells inhibiting IgE mediated allergic reactions reducing inflammatory cell in ltration and regulating
+- ， -
+NFκB MAPK and JAK/STAT signaling pathways. The multitarget mechanism of Chinese medicine in the treatment of AR provides
+ff
+an e ective therapeutic strategy for symptom improvement and recurrence prevention. This article reviews the mechanism of action and
+，
+related research progress of TCM in the treatment of AR aiming to further optimize its clinical application value.
+【Key words】 ； ； ；
+Allergic rhinitis Traditional Chinese medicine treatment Immune regulation Signaling pathway
+过敏性鼻炎（ ， ）是一种由 变导致过敏性疾病的发生率逐年上升［ 2］。尽管西医
+allergic rhinitis AR
+免疫球蛋白 （ ， ）介导的免 治疗方法如抗组胺药和鼻用激素在短期内能缓解
+E immunoglobulin E IgE
+疫反应，属于Ⅰ型超敏反应，涉及多种免疫细胞 症状，但由于其局限性（如免疫功能调节不足和
+及炎症因子。其主要临床表现包括鼻塞、打喷嚏、 长期使用的不良反应），促使中医药治疗逐渐成为
+流涕、鼻痒等症状，严重影响患者生活质量［ 1］。近 治疗的替代方案。
+AR
+年来，全球 的患病率呈持续上升趋势，尤其在 中医学认为，个人的体质是由先天禀赋与后
+AR
+城市化程度较高的地区，环境污染和生活方式改 天因素共同决定的，不同的生活方式和环境因素
+收稿日期： - -
+20250224
+基金项目：陕西省科技厅重点研发计划项目（ - ）；陕西省卫生健康科研基金项目（ ）；延安大学 年研究生教育
+2021SF264 2022D035 2025
+创新计划项目（ ）
+YKY2025012
+作者简介：惠丹妮，硕士研究生，研究方向：肿瘤与寄生虫相关性研究、感染性分子疾病检测， - ；薛亚娟，
+Email: 1742425446@qq.com
+通信作者，副教授，硕士生导师，研究方向：肿瘤与寄生虫相关性研究、感染性分子疾病检测， -
+E mail: xllshirley@163.com
+22002255年年77月月第第5566卷卷第第77期期 新新医医学学
+707
+对人体的阴阳、气血以及脏腑功能等诸多方面都 前列腺素 和白三烯等炎症介质，从而引发典型
+D2
+有着极为深远的影响，而 的发生与肺、脾、肾 的过敏性症状［ 8- 10］。这一过程并非仅局限于 介
+AR IgE
+三脏功能失调密切相关，其病机核心包括外邪侵 导的免疫反应。近年来的研究显示， 的发病过
+AR
+袭、肺气虚弱、脾失健运等［ 3- 4］。基于清热解毒、 程还涉及多个免疫细胞亚群之间的复杂相互作用。
+健脾益气等治法的中药方剂，不仅在缓解症状方 例如，过敏状态下， 失衡在 中尤为显
+Th1/Th2 AR
+面表现出显著疗效，在降低复发率方面也具有一 著， 过度活化会导致持续的炎症反应，而
+Th2 Th1
+定优势。 的活性受到抑制则削弱了机体抗病毒、抗感染的
+目前已有多篇文献聚焦于中医药对 的治疗 能力。此外， 和 细胞在维持免疫稳态中
+AR Treg Th17
+作用机制，如从调节辅助性 细胞（ ， 的作用也越来越受到关注。据报道，过敏性哮喘
+T T helper cell
+） 平衡、影响 表达水平、调控局部炎 患者存在内源性 细胞缺陷，这表明被破坏的
+Th 1/Th2 IgE Treg
+症反应等方面展开讨论，但整体上仍存在一些不 细胞介导的免疫调节可能在气道过敏性炎症
+Treg
+足［ 5- 7］。一是大多数研究对中医药干预 的作用 中起重要作用［ 11］。研究还显示，环境因素，尤其
+AR
+机制缺乏系统整合，未能全面反映其多靶点、多 是空气污染，对 的症状有着显著影响。其中，
+AR
+路径的调控特点；二是对于中药如何通过调控具 细颗粒物（ ）和臭氧等能够通过促进炎症细胞
+PM2.5
+体信号通路发挥免疫调控作用的论述相对较少； 的募集和活化，显著加重 的症状。这些空气污
+AR
+三是缺乏对中药干预免疫细胞亚群，如调节性 染物通过诱导氧化应激，激活 - 等信号通路，
+T NF κB
+细胞（ ， ）、 等变化的深 进一步放大了炎症反应，加剧 的病理进程［ 12］。
+regulatory T cell Treg Th17 AR
+入总结与归纳。因此，本文从现代免疫学角度出
+发，系统综述了中医药在治疗 中的免疫调控 2 中医药对过敏性鼻炎的辨证论治
+AR
+机制与信号通路调控作用，结合近年来国内外相
+关研究进展以及最新分子生物学研究成果，系统 扶扶正正祛祛邪邪
+22..11
+梳理中药调控免疫微环境的作用机制，特别是对 中医理论认为， 的根本病因在于正气不
+AR
+核因子- 信号传导通路（ - ， 足，外邪（如风、寒、湿等）侵袭肺系，导致鼻
+κB nuclear factor kappaB
+- ）、丝裂原活化蛋白激酶（ - 窍不通。因此，治疗的关键在于扶正祛邪，调和
+NF κB mitogen activated
+， ）、 激酶（ - 体内外的平衡［ 13- 14］。在众多中药方剂中，玉屏风散
+protein kinase MAPK Janus janus kinase
+， ） 信号转导及转录激活因 是应用最为广泛的方剂之一。该方剂由黄芪、白
+signal transducer JAK /
+子（ ， 术、防风三味药组成，具有益气固表、祛风止汗
+signal transducer and activator of transcription
+）三大炎症信号通路的整合性分析，从机制 的作用，主要用于治疗因气虚导致的表虚自汗症，
+STAT
+深度与研究广度两个维度探讨中医药治疗 的理 同时也常用于预防和治疗过敏性疾病［ 15］。现代药
+AR
+论创新性与临床价值，旨在为中医药治疗 提供 理研究显示，玉屏风散中的主要成分黄芪具有显
+AR
+更为系统、科学的理论支撑。 著的免疫调节作用，能够通过调节 平衡，
+Th1/Th2
+促进 细胞的功能恢复，从而减轻过敏反应；
+Treg
+1 过敏性鼻炎的病理机制 而防风具有抗炎、抗过敏作用，能够抑制肥大细
+胞脱颗粒，抑制炎症因子如 - 、肿瘤坏死因子-
+IL 6 α
+在 的发病机制中， 介导的Ⅰ型超敏反 （ - ， - ）的分泌［ 16］。这
+AR IgE tumor necrosis factor alpha TNF α
+应是其核心病理过程。当患者首次接触过敏原时， 种多靶点、多机制的调节方式，使得玉屏风散在
+免疫系统被过度激活。此过程中，抗原呈递细胞 防治中具有良好的疗效。
+AR
+（如树突状细胞（ ， ）捕获过敏原 清清热热解解毒毒
+dendritic cells DCs 22..22
+并将其呈递给 细胞，从而激活 。激活的 在 急性发作期，清热解毒类中药方剂在临
+T Th2 Th2 AR
+释放包括白细胞介素（ ， ）- 、 - 和 床应用中广泛用于缓解相关症状。经典方剂如苍
+interleukin IL 4 IL 5
+- 在内的多种细胞因子，进一步刺激 细胞分 耳子散和辛夷清肺饮通过疏风散寒、清热解毒的
+IL 13 B
+泌 。 通过高亲和力受体 ε 结合在肥大 功效，能够有效减轻鼻塞、流涕、鼻痒等主要临
+IgE IgE Fc RI
+细胞和嗜碱性粒细胞表面。当机体再次暴露于相 床症状［ 17］。现代研究显示，苍耳子中的活性成分
+同的过敏原时，肥大细胞迅速脱颗粒，释放组胺、 苍耳素具有显著的抗炎和抗过敏活性。苍耳素的
+新新医医学学 22002255年年77月月第第5566卷卷第第77期期
+708
+作用机制包括抑制 介导的肥大细胞脱颗粒反 中药通过调节 平衡表现出显著的治疗
+IgE Th1/Th2
+应，减少组胺的释放，从而抑制过敏反应的发生， 潜力。研究表明，许多中药方剂如玉屏风散、小
+缓解相关临床症状［ 18］。此外，其他清热解毒类中 青龙汤等，通过增强 活性，提高 - -
+Th1 IFN γ/IL 4
+药方剂如黄连解毒汤和龙胆泻肝汤也被广泛用于 的比值，同时抑制 的过度活化，减少 - 、
+Th2 IL 4
+治疗 ，并在缓解鼻腔干燥、黄涕等症状方面展 - 、 - 的分泌，最终恢复 的动态平
+AR IL 5 IL 13 Th1/Th2
+现出良好的疗效。黄连解毒汤由黄连、黄芩、黄 衡［ 29- 30］。
+柏和栀子等药材组成，其主要功效包括清热解毒 抑抑制制 介介导导的的过过敏敏反反应应
+33..22 IIggEE
+与泻火解表［ 19］。药理学研究显示，该方剂能够通 介导的免疫反应是 发病的关键机制之
+IgE AR
+过抑制鼻腔局部炎症因子（如 - 、 - ）的 一［ 31］。在过敏反应中，抗原通过 与肥大细胞
+TNF α IL 1β IgE
+表达，减少局部炎症反应，从而显著缓解鼻炎症 及嗜碱性粒细胞表面的高亲和力受体（ -
+high affinity
+状［ 20］。龙胆泻肝汤主要用于湿热蕴结型 ，具 ， ε ）结合，触发这些细胞脱颗粒，
+AR IgE receptor Fc RI
+有清热泻火、祛湿解毒的作用［ 21］。现代研究显示， 释放组胺、白三烯及其他炎症介质，从而引发鼻
+该方剂通过抑制关键炎症因子（如 - 、 - ） 炎的典型症状。此外， 还与这些细胞表面的低
+IL 6 TNF α IgE
+的产生，改善鼻腔黏膜的免疫环境，从而有效减 亲和力受体（ ）相互作用，在调节 介导
+CD23 IgE
+少 的发生次数及复发风险［ 22］。 的免疫反应中同样具有重要作用［ 32］。许多中药在
+AR
+调调和和阴阴阳阳 调节 相关信号通路方面表现出显著疗效。中药
+22..33 IgE
+孙桥熔等［ 23］认为， 的慢性发作及高复发 赤芍能够通过调节 ε 信号通路、 相关
+AR IgE/Fc RI Mas
+率与机体的阴阳失调密切相关。因此，从中医理 的 蛋白偶联受体（ - -
+G Mas related G protein coupled
+论角度出发，调和阴阳、改善体质是治疗 的核 ， ）及其下游信号转导机制，
+AR receptors MRGPRB3
+心策略。临床中常使用调节气血阴阳的中药方剂， 抑制 型过敏反应。紫苏则通过负调节蛋白激酶
+I
+如六味地黄丸和右归丸，以滋阴补阳，增强患者 （ ， ）磷酸化及抑制细胞内
+B protein kinase B Akt
+体质，从而改善 的症状。 2+流入，从而减少 驱动的超敏反应发生［ 33- 34］。
+AR Ca IgE
+六味地黄丸由熟地黄、山茱萸、山药、泽泻、 这些研究揭示了中药在抑制 介导的过敏反应中
+IgE
+茯苓、丹皮六味药物组成，具有滋阴补肾的功效。 的作用机制，为中药在 治疗中的应用奠定了理
+AR
+该方通过改善免疫功能，抑制过敏反应，能够有效 论基础。
+缓解 症状［ 24］。右归丸则具有温补肾阳、益精血 增增强强 的的功功能能
+AR 33..33 TTrreegg
+的作用，适用于阳虚体质的 患者。研究显示， 是 + 细胞的重要亚群，在负性免
+AR Treg CD4 T
+右归丸通过增强机体免疫功能，减少肺部炎症和 疫调节中发挥关键作用，特别是在维持免疫耐
+嗜酸性粒细胞浸润，增强机体对过敏原的耐受性， 受和抑制过度免疫反应方面［ 35- 36］。 细胞通过
+Treg
+从而降低过敏反应的发生，减少炎症反应［ 25］。 分泌抑制性细胞因子 - 和转化生长因子-
+IL 10 β1
+（ - ， - ），有效
+transforming growth factor beta 1 TGF β1
+3 中医药对过敏性鼻炎的免疫调节 减轻过敏性炎症反应并抑制炎症细胞的浸润［ 37］。
+然而， 患者常存在 细胞功能不足的现象，
+AR Treg
+调调节节 平平衡衡 导致 细胞介导的免疫反应过度活跃，从而使
+33..11 TThh11//TThh22 Th2
+的核心病理机制包括先天免疫和适应性免 症状加剧。
+AR
+疫的失衡，其中 平衡的紊乱是其主要免疫 中药治疗在增强 细胞功能和增加其数量
+Th1/Th2 Treg
+学特征［ 26- 27］。在 患者中， 的过度活化导致 方面显示出良好的疗效。 细胞的标志性分子
+AR Th2 Treg
+大量 - 、 - 和 - 的分泌，进一步诱导 包括 （ - 链）和转录因子叉头框 蛋
+IL 4 IL 5 IL 13 IgE CD25 IL 2Rα P3
+过度产生、嗜酸性粒细胞活化和炎症反应加剧［ 7］。 白（ ， ），后者是 功能维
+forkhead box P3 Foxp3 Treg
+与此同时， 分泌的 - 相对减少，而 - 持和分化的核心调控因子［ 38］。在过敏性炎症状态
+Th1 IFN γ IFN γ
+等细胞因子在抑制 反应和维持免疫平衡中发 下， 细胞的数量和功能往往下降，导致免疫
+Th2 Treg
+挥重要作用［ 28］。因此，恢复 平衡被认为是 耐受能力下降。中药可通过上调 表达、增强
+Th1/Th2 Foxp3
+治疗 的重要手段之一。 - 通路活性，以及激活 - 信号
+AR IL 2/STAT5 TGF β/Smad
+22002255年年77月月第第5566卷卷第第77期期 新新医医学学
+709
+通路，促进 细胞的增殖和功能恢复［ 39］。例如， 5 中医药治疗过敏性鼻炎的相关
+Treg
+甘遂半夏汤和扶正抑瘤颗粒等中药方剂通过调节
+分子通路
+细胞的功能可改善免疫平衡，有效抑制过敏
+Treg
+反应。同时，一些中药还可以直接下调 相关
+-- 信信号号通通路路
+Treg
+55..11 NNFF κκBB
+免疫调节因子（如 - 和 - ）的分泌，从
+- 信号通路在炎症和免疫反应的调控中具
+TGF β1 IL 10
+NF κB
+而进一步抑制过度的免疫反应［ 40］。这些研究为中
+有核心作用，其激活是产生多种炎症因子的重要
+药在调节免疫耐受和过敏性疾病治疗中的应用提
+机制之一［ 50］。 - 家族主要包括 、 、
+NF κB p50 p52 p65
+供了新的视角。
+（ ）、 和 - ，其中经典的 - 信号通
+RelA RelB c Rel NF κB
+路主要由 和 的异二聚体介导。该通路的
+4 中医药对过敏性鼻炎的抗炎机制 p50 p65
+激活可诱导多种促炎因子（如 - 、 - 、 - ）
+IL 6 IL 8 TNF α
+的过度表达，进而加剧局部炎症反应［ 51］。
+抑抑制制炎炎症症因因子子的的产产生生
+44..11 中药在调控 - 信号通路方面表现出显
+的炎症病理机制涉及多种免疫细胞和炎症 NF κB
+AR 著疗效。例如，桂枝麻黄汤、葛根芩连汤和泽气
+因子。嗜酸性粒细胞、肥大细胞等免疫细胞在炎
+汤通过抑制 - 信号通路的活化，显著减少促
+症反应中起重要作用，同时炎症因子（如 - 、 NF κB
+TNF α 炎因子的释放，从而缓解 的典型症状［ 52］。此
+- 和 - ）通过活化鼻黏膜中的免疫细胞进一 AR
+IL 1β IL 6 外， 型免疫反应主要由胸腺基质淋巴生成素
+步加剧局部炎症反应和鼻黏膜的水肿，从而引发 Th2
+（ ， ）诱导，而
+典型症状［ 41- 43］。其中， - 通过诱导 - 和 - thymic stromal lymphopoietin TSLP
+IL 6 IL 1 TNF α - 则与先天免疫反应密切相关［ 53］。玉屏风散能
+的产生形成炎症级联反应，推动炎症进程［ 44］。 IL 33
+够在炎症早期调节 和 - 及其靶细胞的活
+研究表明，中药在干预炎症因子信号通路方 TSLP IL 33
+性，缓解过敏炎症反应，而中药单体成分如甘草
+面具有显著疗效。例如，中药通过调节 - 及
+TNF α 素和伪麻黄碱也通过抑制 - 信号通路降低
+其受体（ ）、 - 及其受体（ - ）的信号 NF κB IgE
+通路，抑T 制N 促FR 炎细I 胞L 1 因子的分泌，IL 同1 时R 水平，从而减轻过敏反应［ 54］。
+增强机体
+信信号号通通路路
+对炎症的内在调控能力［ 42- 45］。此外，中药复方如玉
+55..22 MMAAPPKK
+信号通路在细胞炎症反应和增殖过
+屏风散、小青龙汤等也表现出通过多靶点作用抑 MAPK
+程中起重要作用，主要由细胞外信号调节激酶
+制炎症反应的潜力。这些研究结果显示，中药可
+（ - ， ）、 -
+以有效减轻鼻黏膜的炎症负担。
+extracellular signal regulated kinase ERK c Jun
+末端激酶（ - - ， ）和
+减减少少炎炎症症细细胞胞的的浸浸润润
+N c Jun N terminal kinase JNK p38
+44..22 通路构成［ 55］。其中， 在免疫受体下
+患者的鼻黏膜中通常可观察到大量嗜酸性
+MAPK ERK1/2
+AR
+游具有重要作用，通过引发炎症相关基因的表达
+粒细胞、 淋巴细胞和肥大细胞的浸润，这些炎症
+T
+来应对感染以及细胞或组织损伤［ 56］。 信号通
+细胞通过释放组胺、白三烯等炎症介质，引发鼻
+JNK
+路最初被认为是转录因子 - 的调节因子，又称
+黏膜充血、水肿等症状。 - 被认为是嗜酸性粒细
+c Jun
+IL 5
+应激激活蛋白激酶（ - ，
+胞增殖、分化和激活的重要调控因子，而嗜酸性
+stress activated protein kinase
+粒细胞趋化因子（ ， ）信号通路，可通过生长因子、紫外线照射
+eosinophil chemotactic cytokine SAPK
+），通过吸引嗜酸性粒细胞迁移至鼻腔黏膜 和病毒感染等外源性应激激活［ 57］。 信号通路作
+Eotaxin p38
+炎症部位，加剧局部炎症反应［ 46］。 为 SAPK的一个分支，通过小分子鸟苷酸三磷酸酶
+中药在减少炎症细胞浸润方面展现出良好效 （ ，小 酶）和多级激酶级联传递
+small GTPase GTP
+果。研究发现，虫草多糖和丹酚酸 能够通过下 信号，在免疫反应和细胞存活调控中发挥关键作
+B
+调 - 的表达，抑制嗜酸性粒细胞的激活和增殖； 用［ 58］。
+IL 5
+甘草中的黄酮类化合物则通过抑制 的分泌， 研究显示，中药通过调控 信号通路可
+Eotaxin MAPK
+阻止嗜酸性粒细胞向炎症部位的聚集［ 47- 49］，通过多 显著减少炎症因子的表达。例如，姜黄素和厚朴
+靶点的联合调控，这些中药成分在缓解鼻腔炎症 酚通过调控 信号通路抑制促炎反应［ 59］；
+p38 MAPK
+反应、减轻鼻黏膜充血和水肿方面具有显著效果， 千金藤素能够通过抑制 和 通路
+p38 MAPK ERK1/2
+为 的中药治疗提供了重要的理论依据。 的磷酸化水平减轻炎症［ 60］；淫羊藿苷则通过抑制
+AR
+新新医医学学 22002255年年77月月第第5566卷卷第第77期期
+710
+信号通路，减少炎症因子的表达发挥抗炎作 、 等关键信号通路，进一步减少
+JNK MAPK JAK/STAT
+用，从而有效缓解 症状［ 61］。这些中药成分为基 炎症因子的表达，减轻局部和全身炎症反应。这
+AR
+于 信号通路的治疗策略提供了重要的理论 些作用机制为中药治疗 的有效性和安全性提供
+MAPK AR
+依据。 了重要的科学依据。
+信信号号通通路路 近年来，临床研究证实，诸如玉屏风散、苍
+55..33 JJAAKK//SSTTAATT
+信号通路是调控细胞生长、分化和 耳子散等中药方剂能够显著改善 症状，降低复
+JAK/STAT AR
+免疫反应的关键分子网络。 家族包括 、 发率，并具有较高的安全性［ 66］。一些多中心随机
+JAK JAK1
+、 和酪氨酸激酶 （ ， 对照研究进一步证实，中药在长期治疗中不仅能
+JAK2 JAK3 2 tyrosine kinase 2
+）； 家族则涵盖了从 到 控制症状，还能通过改善患者体质，达到标本兼
+TYK2 STAT STAT1 STAT6
+等多个亚型。 信号通路通过调节细胞因 治的效果［ 67］。中药与现代西药的联合治疗也显示
+JAK/STAT
+子和生长因子的信号传递参与免疫功能，例如 - 出协同优势，既能快速缓解症状，又能通过免疫
+IL 4
+和 - 通过 通路促进 型免疫反应， 调节降低西药的不良反应，为 的综合治疗提供
+IL 13 JAK/STAT Th2 AR
+而 - 和 - 通过激活 和 信号促 了新的方向［ 68］。
+IL 6 IFN γ JAK1 JAK2
+进炎症反应， 则通过诱导 磷酸化进一 尽管已有大量的研究证实中医药在 治疗
+TNF STAT3 AR
+步增强该通路的活性［ 62- 63］。中药在调控 中的潜力，但其临床应用仍面临诸多挑战。为提
+JAK/STAT
+信号通路中展现出良好的潜力。例如，六味地黄 升中医药治疗 的创新性和实用性，未来的研
+AR
+丸通过抑制 - 、 - 等促炎因子的分泌，从 究需要进一步探索中药的分子机制，尤其是中药
+IL 5 IL 13
+而减轻鼻黏膜炎症和水肿，有效缓解 症状［ 64］。 在免疫调节通路中的作用。通过现代生物技术手
+AR
+此外，传统药方小青龙汤通过 途径调 段，如单细胞 测序、基因编辑技术等，深入
+JAK/STAT RNA
+节Ⅱ型先天性淋巴样细胞，从而改善卵清蛋白 揭示中药的作用机制，特别是在免疫细胞亚群调
+（ ， ）诱导的 中的Ⅱ型炎症反应。 控和免疫微环境改善方面的潜力。此外，未来的
+ovalbumin OVA AR
+当小青龙汤与玉屏风散联合使用时，下调了鼻腔 研究也可以着重探索如何基于中医理论筛选和开
+和肺组织中的 、 - 、 和 - 发新的中药复方或单体药物用于 的治疗。特别
+JAK2 p JAK2 STAT1 p STAT1 AR
+的表达，从而有效减轻 的炎症症状［ 64- 65］。 是在基于现代科学技术的精准药物研发方面，如
+AR
+这些作用机制为中药在免疫调节领域的应用提供 何将中药的多靶点作用优势与现代药理学相结合，
+了重要的理论依据。 开发出针对不同免疫亚型患者的个性化治疗方案，
+是一个值得进一步探索的方向。中药与现代西药
+6 结语与展望 的联合治疗模式也展现出一定的优势，特别是在
+快速缓解症状的同时，通过免疫调节降低西药的
+是一种主要由 介导的慢性炎症性疾病， 不良反应，从而为 的综合治疗提供了新的可
+AR IgE AR
+其发病机制复杂，涉及多种免疫失调和炎症反应。 能。从临床转化的角度来看，未来需要更多地开
+目前，西医治疗以抗组胺药和鼻用激素为主，虽 展多中心、大样本的随机对照临床试验，以验证
+然在症状缓解方面效果显著，但在长期调控免疫 中药治疗 的安全性与有效性。此外，如何结合
+AR
+平衡和降低复发风险方面存在局限性，且可能伴 现代医学的标准化治疗方式和中医药的个性化治
+随不良反应。相较之下，中医强调整体理念，认 疗原则，将是推动中医药治疗 普及的重要一
+AR
+为 的发生与肺、脾、肾三脏功能失调密切相 步。标准化中医药治疗方案的研发与实施，尤其
+AR
+关，提出扶正祛邪、清热解毒和调和阴阳的治疗 是如何确保其疗效与安全性，将为今后中医药在
+原则，从病因和体质调节入手，在 系统性治疗 过敏性疾病中的应用提供坚实的基础。
+AR
+中展现出独特的优势。 随着现代生物技术的快速发展，未来有望通
+中医药治疗 具有多靶点、多机制的作用特 过精准的药物研发和治疗策略，将中医药在 中
+AR AR
+点，通过调节 平衡、增强 功能、抑 的治疗潜力进一步发挥。结合基因组学、蛋白质
+Th1/Th2 Treg
+制 介导的过敏反应、减少炎症因子产生以及 组学等前沿技术，更深入地了解中药的作用机制，
+IgE
+抑制炎症细胞浸润等途径，显著改善免疫失调状 并为中药在免疫调节中的应用提供理论依据。未
+态。此外，研究还显示，中药通过调控 - 、 来，除了现有的中药方剂，还应着眼于新药的开
+NF κB
+22002255年年77月月第第5566卷卷第第77期期 新新医医学学
+711
+发，尤其是在开发中药单体或复方药物时，应结
+constitution and traditional Chinese medicine syndrome distribution
+［］
+合分子靶向治疗和个性化医疗理念，提供更加精 in patients with allergic rhinitis complicated with asthma J . J
+， ， （ ）： - ： -
+准、高效的治疗方案。同时，为了进一步提高中 New Med 2024 55 10 810817. DOI 10.3969/j.issn.0253
+药治疗 的临床应用价值，未来的研究应关注中 9802.2024.10.008.
+［］ ， ， ，
+AR 5 ZHANG W ZHOU Q CHEN X et al. Exploring potential
+药在免疫调节、抗炎、抗过敏反应等方面的临床
+pharmacological mechanisms of Yiqi Tuomin Decoction in the
+证据积累，通过高质量的大规模临床试验来验证
+treatment of allergic rhinitis utilizing network pharmacology
+- ：
+其疗效。与此同时，基于中医理论与现代科学的 prediction and molecular dockingbased strategies experimental
+［ ］ （ ）， ， （ ）： -
+结合，中药治疗 的新途径将为患者提供更加安 research J . Ann Med Surg Lond 2023 85 6 2662
+AR ：
+全、个性化的治疗选择。 2676. DOI 10.1097/MS9.0000000000000804.
+［］ ， （ ）
+6 CHAN H H L NG T. Traditional Chinese medicine TCM and
+虽然中医药在治疗 中展现出显著疗效，但 ［ ］ ， ， （ ）：
+AR allergic diseases J . Curr Allergy Asthma Rep 2020 20 11
+其安全性问题亦应受到重视。目前研究显示，部 ： - - -
+67. DOI 10.1007/s11882020009599.
+［］ ， ， ， -
+分中药存在肝肾毒性或过敏风险，尤其是含有马 7 SHAO Y Y ZHOU Y M HU M et al. The anti allergic
+兜铃酸类成分的中药［ 69］。临床观察发现，部分复 rhinitis effect of traditional Chinese medicine of Shenqi by
+方中药会发生不良反应，主要表现为轻微胃肠不 regulating mast cell degranulation and Th1/Th2 cytokine
+［ ］ ， ， （ ）： ：
+balance J . Molecules 2017 22 3 504. DOI 10.3390/
+适或皮肤过敏。此外，个体体质差异和中药的长
+molecules22030504.
+期使用亦可能影响安全性。因此，建议在中药使 ［］ ， ， ，
+8 ZHOU X YU W LYU S C et al. A positive feedback loop
+［］
+用过程中加强药物代谢动力学研究与临床监测机 reinforces the allergic immune response in human peanut allergy J .
+， ， （ ）： ：
+制，推动中药治疗向“安全、有效、可控”的方向 J Exp Med 2021 218 7 e20201793. DOI 10.1084/jem.
+20201793.
+发展，为 患者提供更可靠的治疗保障。
+［］
+AR 9 GOETZL E J. Th2 cells in rapid immune responses and protective
+［ ］ ， ， （ ）：
+avoidance reactions J . FASEB J 2024 38 4 e23485.
+利益冲突声明：本研究未受到企业、公司等 ：
+DOI 10.1096/fj.202302584RR.
+［ ］ ， ， ，
+第三方资助，不存在潜在利益冲突。 10 NGUYEN S M T RUPPRECHT C P HAQUE A et al.
+： ，
+Mechanisms governing anaphylaxis inflammatory cells
+， ［ ］
+mediators endothelial gap junctions and beyond J . Int J Mol
+参参 考考 文文 献献
+， ， （ ）： ：
+Sci 2021 22 15 7785. DOI 10.3390/ijms22157785.
+［ ］ ， ， ， -
+11 XU W LAN Q CHEN M et al. Adoptive transfer of inducedTreg
+［］ ， ， ， ［］
+1 JIN L TAN S FAN K et al. Research progress of hydrogen cells effectively attenuates murine airway allergic inflammation J .
+［ ］ ， ， ： ， ，（ ）： ：
+on chronic nasal inflammation J . J Inflamm Res 2023 16 PLoS One 2012 7 7 e40314. DOI 10.1371/journal.pone.
+- ：
+21492157. DOI 10.2147/JIR.S413179. 0040314.
+［］ 贺雨，刘爱平 环境污染物与儿童过敏性疾病相关性的研 ［ ］ ， ， ，
+2 . 12 PIAO C H FAN Y NGUYEN T V et al. PM2.5 exacerbates
+究进展［ ］中山大学学报（医学科学版）， ， （ ）：
+J . 2025 46 2 oxidative stress and inflammatory response through the Nrf2/
+- ： - （ ） -κ -
+257265. DOI 10.13471/j.cnki.j.sun.yatsen.univ med.sci . NF B signaling pathway in OVA induced allergic rhinitis
+［ ］ ， ， （ ）： ：
+2025.0209. mouse model J . Int J Mol Sci 2021 22 15 8173. DOI
+，
+HE Y LIU A P. Research progress on the correlation between 10.3390/ijms22158173.
+［ ］ ［ ］ 管灵聪，熊俊 过敏性鼻炎中医病因病机的研究进展［ ］
+environmental pollutants and allergic diseases in children J . J 13 . J .
+（ ）， ，（ ）： - ： 江西中医药， ， （ ）： -
+Sun Yat Sen Univ Med Sci 2025 46 2 257265. DOI 2023 54 7 7275.
+- （ ） ，
+10.13471/j.cnki.j.sun.yatsen.univ med.sci .2025.0209. GUAN L C XIONG J. Research progress on etiology and
+［］ 霍金，周劲草，韩颖，等 吴中朝针灸背俞功能带治疗变应 ［］
+3 . pathogenesis of allergic rhinitis in traditional Chinese medicine J .
+性鼻炎经验撷要［ ］中国针灸， ， （ ）： - ， ， （ ）： -
+J . 2024 44 2 191194. Jiangxi J Tradit Chin Med 2023 54 7 7275.
+： - - ［ ］ 李文诗，孙家乐，王琳 中医“扶正祛邪”治则及其在免疫
+DOI 10.13703/j.02552930.20230528k0003. 14 .
+， ， ， ’ 性疾病治疗中的应用［ ］世界中医药， ， （ ）：
+HUO J ZHOU J HAN Y et al. WU Zhongchao s experience J . 2024 19 17
+- - ： -
+in treatment of allergic rhinitis by acupuncturemoxibustion at 26762680. DOI 10.3969/j.issn.16737202.2024.17.022.
+“ - - ”［ ］ ， ， “
+band like function zone of back shu points J . Zhongguo LI W S SUN J L WANG L. Treatment principle of strengthening
+， ， （ ）： - ： - ”
+Zhen Jiu 2024 44 2 191 194. DOI 10.13703/j.0255 healthy qi to eliminate pathogens and its application in treatment
+- ［］ ， ， （ ）：
+2930.20230528k0003. of immunological diseases J . World Chin Med 2024 19 17
+［］ 张晋韬，李跃，杨钦泰，等 过敏性鼻炎合并哮喘患者的体 - ： -
+4 . 26762680. DOI 10.3969/j.issn.16737202.2024.17.022.
+质及中医证型分布特点［ ］新医学， ， （ ）： - ［ ］ 李鹏飞，丘琴，覃春萍，等 玉屏风散的研究进展及质量标
+J . 2024 55 10 810 15 .
+： - 志物预测分析［ ］中华中医药学刊， ， （ ）： -
+817. DOI 10.3969/j.issn.02539802.2024.10.008. J . 2024 42 4 101
+， ， ， ： -
+ZHANG J T LI Y YANG Q T et al. Characteristics of 107. DOI 10.13193/j.issn.16737717.2024.04.022.
+新新医医学学 22002255年年77月月第第5566卷卷第第77期期
+712
+， ， ， ， ’
+LI P F QIU Q QIN C P et al. Research progress of Yupingfeng SUN Q R YAN D N. Professor Yan Daonan s experience in
+（玉屏风散） ［ ］ ， ，
+Powder and predictive analysis on quality markers treating allergic rhinitis J . Jilin J Tradit Chin Med 2011
+（ - ）［ ］ ， ， （ ）： （ ）： - ：
+Qmarker J . Chin Arch Tradit Chin Med 2024 42 4 31 4 286287. DOI 10.13463/j.cnki.jlzyy.2011.04.006.
+- ： - ［ ］ 王颖颖，郭凯波 六味地黄丸（汤）拆方研究进展［ ］浙
+101107. DOI 10.13193/j.issn.16737717.2024.04.022. 24 . J .
+［ ］ 刘宇欣，张佳琪，王思琦，等 玉屏风散化学成分及药理作 江中西医结合杂志， ， （ ）： - ：
+16 . 2017 27 4 349352. DOI 10.3969/
+用研究进展［ ］生物化工， ， （ ）： - ， -
+J . 2024 10 3 179183 194. j.issn.10054561.2017.04.035.
+， ， ， ，
+LIU Y X ZHANG J Q WANG S Q et al. Research progress in WANG Y Y GUO K B. Research progress on disassembly of
+（ ）［ ］
+chemical components and pharmacological effects of Yupingfeng Liuwei Dihuang pills soups J . Zhejiang J Integr Tradit
+［ ］ ， ， （ ）： - ， ， ， （ ）： - ：
+Powder J . Biol Chem Eng 2024 10 3 179183 194. Chin West Med 2017 27 4 349 352. DOI 10.3969/
+［ ］ 戴启刚，李涛，钱香，等 中医药防治儿童变应性鼻炎策 -
+17 . j.issn.10054561.2017.04.035.
+略［ ］南京中医药大学学报， ， （ ）： - ： ［ ］ ， ， ， - -
+J . 2024 40 3 223228. DOI 25 HSU W H LIN L J LU C K et al. Effect of you Gui
+- -
+10.14148/j.issn.16720482.2024.0223. Wan on house dust mite induced mouse allergic asthma via
+， ， ， ［］
+DAI Q G LI T QIAN X et al. Strategies for preventing and regulating amino acid metabolic disorder and gut dysbiosis J .
+［ ］ ， ， （ ）： ：
+treating allergic rhinitis in children with Chinese medicine J . J Biomolecules 2021 11 6 812. DOI 10.3390/biom11060812.
+， ， （ ）： - ： ［ ］ ， ［ ］
+Nanjing Univ Tradit Chin Med 2024 40 3 223228. DOI 26 EIFAN A O DURHAM S R. Pathogenesis of rhinitis J . Clin
+- ， ， （ ）： - ：
+10.14148/j.issn.16720482.2024.0223. Exp Allergy 2016 46 9 11391151. DOI 10.1111/cea.
+［ ］ 魏凤翔，董晓宜，王红丽，等 苍耳子散治疗过敏性鼻炎的
+18 . 12780.
+研究进展［ ］西部中医药， ， （ ）： - ： ［ ］ ， ， ，
+J . 2025 38 1 110113. DOI 27 KE X CHEN Z WANG X et al. Quercetin improves the
+-
+10.12174/j.issn.20969600.2025.01.21. imbalance of Th1/Th2 cells and Treg/Th17 cells to attenuate
+， ， ， ［ ］ ， ， （ ）：
+WEI F X DONG X Y WANG H L et al. Research progress of allergic rhinitis J . Autoimmunity 2023 56 1 2189133.
+［ ］ ：
+Cangerzi Powder in the treatment of allergic rhinitis J . West DOI 10.1080/08916934.2023.2189133.
+， ， （ ）： - ： ［ ］ ， ， ， -
+J Tradit Chin Med 2025 38 1 110113. DOI 10.12174/ 28 ZHOU Y CHEN B FU Y et al. Cangai volatile oil alleviates
+-
+j.issn.20969600.2025.01.21. nasal inflammation via Th1/Th2 cell imbalance regulation
+［ ］ 张婷，宋厚盼，林也，等 黄连解毒汤之“清热解毒”药效与 - ［ ］
+19 . in a rat model of ovalbumin induced allergic rhinitis J .
+作用机制研究进展［ ］中华中医药学刊， ， （ ）： ， ， ： ：
+J . 2020 38 11 Front Pharmacol 2024 15 1332036. DOI 10.3389/fphar.
+- ： -
+135139. DOI 10.13193/j.issn.16737717.2020.11.034. 2024.1332036.
+， ， ， ［ ］ ， ， ，
+ZHANG T SONG H P LIN Y et al. Research advances 29 YAN J DENG N WANG Q et al. Xiaoqinglong decoction
+-
+on pharmacological effects and mechanisms underlying heat reduces dendritic cell differentiation and regulates the Th1/
+［ ］ ［ ］
+clearing and detoxifying effect of Huanglian Jiedu decoction J . Th2 balance in a mouse model of allergic asthma J . J Tradit
+， ， （ ）： - ： ， ， （ ）： - ：
+Chin Arch Tradit Chin Med 2020 38 11 135139. DOI Chin Med Sci 2020 7 2 133 140. DOI 10.1016/
+-
+10.13193/j.issn.16737717.2020.11.034. j.jtcms.2020.03.005.
+［ ］ ， ， ， - - ［ ］ 顾珺，沈朝斌，陆磊，等 玉屏风散对过敏性鼻炎动物模型
+20 CHEN Y XIAN Y LAI Z et al. Antiinflammatory and anti 30 .
+- - - 的 影响［ ］中成药， ， （ ）： -
+allergic effects and underlying mechanisms of HuangLianJie Th1/Th2 J . 2006 28 8 11631166.
+： ［ ］ ， ， ，
+Du extract Implication for atopic dermatitis treatment J . GU J SHEN C B LU L et al. Effects of Yupingfeng Powder on
+， ， ： - ： ［ ］
+J Ethnopharmacol 2016 185 41 52. DOI 10.1016/j.jep. Th1/Th2 balanace in murine model of allergic rhinitis J . Chin
+， ， （ ）： -
+2016.03.028. Tradit Pat Med 2006 28 8 11631166.
+［ ］ 周春巧，文君，陈宇 龙胆泻肝汤的药理作用及其临床应 ［ ］ ， ， ， ：
+21 . 31 AKDIS C A AKDIS M BOYD S D et al. Allergy Mechanistic
+用研究进展［ ］临床合理用药杂志， ， （ ）： - ［ ］
+J . 2018 11 33 180 insights into new methods of prevention and therapy J . Sci
+： - ， ， （ ）： ：
+181. DOI 10.15887/j.cnki.131389/r.2018.33.090. Transl Med 2023 15 679 eadd2563. DOI 10.1126/
+， ，
+ZHOU C Q WEN J CHEN Y. Research progress on scitranslmed.add2563.
+［ ］ ， ， ：
+pharmacological action and clinical application of Longdan Xiegan 32 LING X J WEI J F ZHU Y. Aiming to IgE Drug development
+［］ ， ， （ ）： ［ ］ ， ， ：
+decoction J . Chin J Clin Ration Drug Use 2018 11 33 in allergic diseases J . Int Immunopharmacol 2023 121
+- ： - ：
+180181. DOI 10.15887/j.cnki.131389/r.2018.33.090. 110495. DOI 10.1016/j.intimp.2023.110495.
+［ ］ 张泽鑫，黄志凯，曾慕煌，等 龙胆泻肝汤方的药理研究进 ［ ］ ， ， ，
+22 . 33 ZHAO Y LI X CHU J et al. Inhibitory effect of paeoniflorin
+展［ ］国医论坛， ， （ ）： - ： - -
+J . 2018 33 4 6770. DOI 10.13913/j.cnki. on IgEdependent and IgEindependent mast cell degranulation
+- ［ ］ ， ， （ ）： -
+411110/r.2018.04.034. in vitro and vivo J . Food Funct 2021 12 16 74487468.
+， ， ， ：
+ZHANG Z X HUANG Z K ZENG M H et al. Progress in DOI 10.1039/d1fo01421h.
+［ ］ ［ ］ ， ， ，
+pharmacological research of Longdan Xiegan decoction J . 34 KAMEI R FUJIMURA T MATSUDA M et al. A flavanone
+， ， （ ）： - ： （ ）
+Forum Tradit Chin Med 2018 33 4 6770. DOI 10.13913/ derivative from the Asian medicinal herb Perilla frutescens
+- -
+j.cnki.411110/r.2018.04.034. potently suppresses IgEmediated immediate hypersensitivity
+［ ］ 孙桥熔，严道南 严道南教授治疗变应性鼻炎经验介绍［ ］ ［ ］ ， ， （ ）：
+23 . J . reactions J . Biochem Biophys Res Commun 2017 483 1
+吉林中医药， ， （ ）： - ： - ：
+2011 31 4 286287. DOI 10.13463/j.cnki. 674679. DOI 10.1016/j.bbrc.2016.12.083.
+［ ］ ， ， ，
+jlzyy.2011.04.006. 35 CHEN B J ZHAO J W ZHANG D H et al. Immunotherapy of
+22002255年年77月月第第5566卷卷第第77期期 新新医医学学
+713
+［ ］ ， -
+cancer by targeting regulatory T cells J . Int Immunopharmacol flavonoids inhibit eotaxin 1 secretion by human fetal lung
+， ： ： ［ ］ ， ， （ ）：
+2022 104 108469. DOI 10.1016/j.intimp.2021.108469. fibroblasts in vitro J . J Agric Food Chem 2009 57 3
+［ ］ ， ， - ：
+36 YANG L FU J ZHOU Y. Research progress in atopic 820825. DOI 10.1021/jf802601j.
+［ ］ ， ， ： ： ［ ］ ， ， ，
+March J . Front Immunol 2020 11 1907. DOI 10.3389/ 48 GUAN Y ZHU J P SHEN J et al. Salvianolic acid B
+fimmu.2020.01907. improves airway hyperresponsiveness by inhibiting MUC5AC
+［ ］ ， ， ， ［ ］
+37 GOUVEIA A C C BRAGA F G MOTA M et al. Enhanced overproduction associated with Erk1/2/P38 signaling J . Eur
+- -γ ， ， ： - ：
+expression of PDL1 and IFN on dendritic cells is associated J Pharmacol 2018 824 30 39. DOI 10.1016/j.ejphar.
+- ［ ］ ， ， ：
+with BCGinduced Th2 inhibition J . Cytokine 2017 99 2018.01.050.
+- ： ［ ］ ， ，
+163172. DOI 10.1016/j.cyto.2017.09.005. 49 ZHENG Y LI L CAI T. Cordyceps polysaccharide ameliorates
+［ ］ ， ， ， - -
+38 ZHANG H DAI D HU Q et al. Bach2 attenuates IL 2R airway inflammation in an ovalbumin induced mouse model
+［ ］ -β ［ ］
+signaling to control Treg homeostasis and Tfr development J . of asthma via TGF 1/Smad signaling pathway J . Respir
+， ， （ ）： ： ， ， ： ：
+Cell Rep 2021 35 6 109096. DOI 10.1016/j.celrep. Physiol Neurobiol 2020 276 103412. DOI 10.1016/j.resp.
+2021.109096. 2020.103412.
+［ ］ ， ， ， ［ ］ ， ， ， -κ
+39 XIAO S YANG Y MIAO W et al. Activation of the STAT5 50 YU H LIN L ZHANG Z et al. Targeting NF B pathway for
+： ［ ］
+signaling pathway by Yiqi Jiedu formula induces regulatory the therapy of diseases mechanism and clinical study J . Signal
+- ， ， （ ）： ：
+T cell mediated alleviation of corneal immunopathological Transduct Target Ther 2020 5 1 209. DOI 10.1038/
+［ ］ - - -
+damage in mice with recurrent herpes simplex keratitis J . s41392020003126.
+， ， ： ： ［ ］ ， ， ，
+Front Pharmacol 2021 12 790787. DOI 10.3389/fphar. 51 XIE Y YU Y ZHAO L et al. Specific cytokine profiles
+：
+2021.790787. predict the severity of influenza a pneumonia a prospectively
+［ ］ ， ， ， ［ ］ ， ， ：
+40 WEN R HUANG X LONG J et al. Advances in traditional multicenter pilot study J . Biomed Res Int 2021 2021
+：
+Chinese herbal medicine and their pharmacodynamic 9533044. DOI 10.1155/2021/9533044.
+： ［ ］ ［ ］ ， ， ，
+mechanisms in cancer immunoregulation a narrative review J . 52 ZHANG L YE X LIU Y et al. Research progress on the
+， ， （ ）： - ：
+Transl Cancer Res 2024 13 2 11661187. DOI 10.21037/ effect of traditional Chinese medicine on the activation of
+- - - -κ
+tcr231983. PRRsmediated NF B signaling pathway to inhibit influenza
+［ ］ ， ， ， ［ ］ ， ， ： ：
+41 KEE J Y JEON Y D KIM D S et al. Korean Red Ginseng pneumonia J . Front Pharmacol 2023 14 1132388. DOI
+-
+improves atopic dermatitis like skin lesions by suppressing 10.3389/fphar.2023.1132388.
+in vivo ［ ］ ， ， -
+expression of proinflammatory cytokines and chemokines 53 LUO H LIN Y GUAN Y. Traditional Chinese medicine Ze
+［ ］ ， ， （ ）： - ： -
+and in vitro J . J Ginseng Res 2017 41 2 134143. DOI QiTang formula reduces inflammation in mice with asthma by
+-κ ［ ］
+10.1016/j.jgr.2016.02.003. inhibiting PI3K/AKT/NF B signaling pathway J . Cell Mol Biol
+［ ］ ， ， ， （ - - ）， ， （ ）： - ：
+42 ZHAI X YAN Z ZHAO J et al. Muscone ameliorates Noisylegrand 2024 70 8 170174. DOI 10.14715/
+-
+ovariectomyinduced bone loss and receptor activator of nuclear cmb/2024.70.8.24.
+-κ - ［ ］ 丁福岩，周梦琪，隋克毅 中医药调控 -κ 信号通路治疗
+factor b ligandinduced osteoclastogenesis by suppressing TNF 54 . NF B
+- - ［ ］ 特应性皮炎研究进展［ ］中医学报， ， （ ）： -
+receptorassociated factor 6mediated signaling pathways J . J . 2025 40 6 1273
+， ， ： ： ： -
+Front Pharmacol 2020 11 348. DOI 10.3389/fphar.2020. 1280. DOI 10.16368/j.issn.16748999.2025.06.205.
+， ， ，
+00348. DING F Y ZHOU M Q SUI K Y et al. Research progress
+［ ］ ， ， ， -κ
+43 LI Y LI Z X XIE C Y et al. Gegen Qinlian decoction enhances of traditional Chinese medicine regulating NF B signaling
+［ ］
+immunity and protects intestinal barrier function in colorectal pathway in the treatment of atopic dermatitis J . Acta Chin
+［ ］ ， ， ， （ ）： - ： -
+cancer patients via gut microbiota J . World J Gastroenterol Med 2025 40 6 12731280.DOI 10.16368/j.issn.1674
+， （ ）： - ：
+2020 26 48 76337651. DOI 10.3748/wjg.v26.i48.7633. 8999.2025.06.205.
+［ ］ ， ， ， ［ ］ ， ， ，
+44 DU H HOU X GUO Y et al. Classic mechanisms and 55 HUANG S ZHANG Y SHU H et al. Advances of the MAPK
+- ［ ］
+experimental models for the antiinflammatory effect of traditional pathway in the treatment of spinal cord injury J . CNS Neurosci
+［ ］ ， ，（ ）： ， ， （ ）： ：
+Chinese medicine J . Animal Model Exp Med 2022 5 2 Ther 2024 30 6 e14807. DOI 10.1111/cns.14807.
+- ： ［ ］ ， ，
+108119. DOI 10.1002/ame2.12224. 56 LUCAS R M LUO L STOW J L. ERK1/2 in immune signalling
+［ ］ ， ， ， ［ ］ ， ， （ ）： - ：
+45 MAO D TIAN X Y MAO D et al. A polysaccharide extract J . Biochem Soc Trans 2022 50 5 1341 1352. DOI
+- -κ
+from the medicinal plant Maidong inhibits the IKK NF B 10.1042/BST20220271.
+- β- ［ ］ ， ， ，
+pathway and IL1 induced islet inflammation and increases 57 YAN H HE L LV D et al. The role of the dysregulated JNK
+［ ］ ， ， （ ）： -
+insulin secretion J . J Biol Chem 2020 295 36 12573 signaling pathway in the pathogenesis of human diseases and its
+： ： ［ ］
+12587. DOI 10.1074/jbc.RA120.014357. potential therapeutic strategies a comprehensive review J .
+［ ］ ， ， ， - ， ， （ ）： ：
+46 LUO J CHEN W LIU W et al. IL 5 antagonism reverses Biomolecules 2024 14 2 243. DOI 10.3390/biom14020243.
+［ ］ ， -
+priming and activation of eosinophils in severe eosinophilic 58 WHITMARSH A J DAVIS R J. Role of mitogen activated
+［ ］ ， ， （ ）： - ： ［ ］ ， ，
+asthma J . Mucosal Immunol 2024 17 4 524536. DOI protein kinase kinase 4 in cancer J . Oncogene 2007
+（ ）： - ：
+10.1016/j.mucimm.2024.03.005. 26 22 31723184. DOI 10.1038/sj.onc.1210410.
+［ ］ ， ， ， ［ ］ 秦竹，王超，李岩 探讨氧化应激与变应性鼻炎发病机制的
+47 JAYAPRAKASAM B DODDAGA S WANG R et al. Licorice 59 .
+新新医医学学 22002255年年77月月第第5566卷卷第第77期期
+714
+相关性及中药防治策略［ ］辽宁中医药大学学报， ， -
+J . 2024 tang ameliorates OVA induced allergic rhinitis by inhibiting
+（ ）： - ： - - ［ ］
+26 5 213220. DOI 10.13194/j.issn.1673842x.2024.05.040. ILC2s through the IL 33/ST2 and JAK/STAT pathways J .
+， ， ， ， ： ：
+QIN Z WANG C LI Y. Exploration of the correlation between Phytomedicine 2023 119 155012. DOI 10.1016/j.phymed.
+oxidative stress and the pathogenesis of allergic rhinitis and 2023.155012.
+［ ］ 王博龙，吴春兴，易增兴，等 基于数据挖掘探讨中医药治
+the prevention and treatment strategies of traditional Chinese 66 .
+［ ］ ， ， （ ）： 疗鼻窦炎的用药规律［ ］中国中药杂志， ， （ ）：
+medicine J . J Liaoning Univ Tradit Chin Med 2024 26 5 J . 2022 47 4
+- ： - - ：
+213220. DOI 10.13194/j.issn.1673842x.2024.05.040. 11141119. DOI 10.19540/j.cnki.cjcmm.20210902.502.
+［ ］ ， ， ， ， ， ，
+60 SHI L WANG S ZHANG S et al. Research progress on WANG B L WU C X YI Z X et al. Formulation regularity of
+pharmacological effects and mechanisms of cepharanthine and its traditional Chinese medicine in treatment of sinusitis based on
+［ ］ ， ， ［ ］ ， ， （ ）：
+derivatives J . Naunyn Schmiedebergs Arch Pharmacol 2023 data mining J . Zhongguo Zhong Yao Za Zhi 2022 47 4
+（ ）： - ： - - - - ：
+396 11 28432860. DOI 10.1007/s0021002302537y. 11141119. DOI 10.19540/j.cnki.cjcmm.20210902.502.
+［ ］ ， ， - ［ ］ ， ， ，
+61 BI Z ZHANG W YAN X. Anti inflammatory and 67 YUE J HAO D LIU S et al. Research progress of traditional
+［ ］ ［ ］
+immunoregulatory effects of icariin and icaritin J . Biomed Chinese medicine in the treatment of allergic rhinitis J .
+， ， ： ： ， ， （ ）： ：
+Pharmacother 2022 151 113180. DOI 10.1016/j.biopha. Heliyon 2024 10 7 e29262. DOI 10.1016/j.heliyon.2024.
+2022.113180. e29262.
+［ ］ ， ， ， ［ ］ ， ， ，
+62 DUETSCH G ILLIG T LOESGEN S et al. STAT6 as an 68 AGRAWAL V K PATEL S PETARE A U et al. Improving
+： - ， ：
+asthma candidate gene polymorphismscreening association the quality of life in the management of allergic rhinitis new
+- ［ ］ ［ ］ ， ，
+and haplotype analysis in a Caucasian sibpair study J . Hum perspective on cetirizine J . J Assoc Physicians India 2022
+， ， （ ）： - ： （ ）： - ： - -
+Mol Genet 2002 11 6 613 621. DOI 10.1093/hmg/ 70 6 1112. DOI 10.5005/japi110010026.
+［ ］ 田婧卓，刘素彦，高月，等 论含马兜铃酸中药的风险评估、
+11.6.613. 69 .
+［ ］ ， ， ， ： 安全用药与科学监管：马兜铃酸种类不同毒性各异，检控
+63 HU X LI J FU M et al. The JAK/STAT signaling pathway
+［ ］ ， ， 马兜铃酸ⅠⅡ是关键［］中国中药杂志， ， （ ）：
+from bench to clinic J . Signal Transduct Target Ther 2021 / J . 2022 47 14
+（ ）： ： - - - - ：
+6 1 402. DOI 10.1038/s41392021007911. 36933700. DOI 10.19540/j.cnki.cjcmm.20220520.401.
+［ ］ ， ， ， ， ， ， ，
+64 WANG R XIAO Z SHI X et al. Xiaoqinglong decoction TIAN J Z LIU S Y GAO Y et al. Risk assessment safe
+combined with Yupingfeng powder alleviates combined allergic medication and scientific supervision of traditional Chinese
+- - ：
+rhinitis and asthma syndrome by regulating the JAK2STAT1MHC medicine containing aristolochic acids toxicity is different among
+［］ ，
+II signaling pathway to suppress B lymphocyte activation J . J aristolochic acids and detection and control of aristolochic acid
+， ， ： ： ⅠⅡ ［］ ， ， （ ）：
+Ethnopharmacol 2025 348 119789. DOI 10.1016/j.jep.2025. / is critical J . Zhongguo Zhong Yao Za Zhi 2022 47 14
+- ：
+119789. 36933700. DOI 10.19540/j.cnki.cjcmm.20220520.401.
+［ ］ ， ， ， - - - （责任编辑：江玉霞 洪悦民）
+65 ZHANG J J HE X C ZHOU M et al. Xiao qing long

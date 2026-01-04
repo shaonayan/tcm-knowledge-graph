@@ -1,0 +1,3941 @@
+{
+  "file_type": "chinese",
+  "total_count": 787,
+  "triples": [
+    {
+      "head": "人参",
+      "relation": "功效",
+      "tail": "气血不足"
+    },
+    {
+      "head": "人参",
+      "relation": "功效",
+      "tail": "痰湿"
+    },
+    {
+      "head": "人参",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "人参",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "人参",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "人参",
+      "relation": "功效",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "人参",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "人参",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "人参",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "出汗"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "恶心"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "腹泻"
+    },
+    {
+      "head": "人参",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "人参",
+      "relation": "配伍",
+      "tail": "人参"
+    },
+    {
+      "head": "人参",
+      "relation": "配伍",
+      "tail": "甘草"
+    },
+    {
+      "head": "人参",
+      "relation": "配伍",
+      "tail": "白术"
+    },
+    {
+      "head": "党参",
+      "relation": "功效",
+      "tail": "气血不足"
+    },
+    {
+      "head": "党参",
+      "relation": "功效",
+      "tail": "痰湿"
+    },
+    {
+      "head": "党参",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "党参",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "党参",
+      "relation": "功效",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "党参",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "党参",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "党参",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "党参",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "党参",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "党参",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "党参",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "党参",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "党参",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "党参",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "党参",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "党参",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "党参",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "主治",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "主治",
+      "tail": "肝炎"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "主治",
+      "tail": "肾炎"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "主治",
+      "tail": "高血压"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "人参"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "党参"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "半夏"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "川芎"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "当归"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "枸杞"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "柴胡"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "甘草"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "白术"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "白芍"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "茯苓"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "黄芩"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "黄芪"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "包含",
+      "tail": "黄连"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "治疗",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "六味地黄丸",
+      "relation": "治疗",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "半夏",
+      "relation": "功效",
+      "tail": "痰湿"
+    },
+    {
+      "head": "半夏",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "半夏",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "半夏",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "恶心"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "腹泻"
+    },
+    {
+      "head": "半夏",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "半夏",
+      "relation": "配伍",
+      "tail": "半夏"
+    },
+    {
+      "head": "半夏",
+      "relation": "配伍",
+      "tail": "黄芩"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "主治",
+      "tail": "肝炎"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "主治",
+      "tail": "肠炎"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "主治",
+      "tail": "胃炎"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "主治",
+      "tail": "贫血"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "人参"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "党参"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "半夏"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "川芎"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "当归"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "柴胡"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "甘草"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "白术"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "白芍"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "茯苓"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "包含",
+      "tail": "黄芪"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "治疗",
+      "tail": "痰湿"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "治疗",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "治疗",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "四君子汤",
+      "relation": "治疗",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "头孢",
+      "relation": "治疗",
+      "tail": "肺炎"
+    },
+    {
+      "head": "头孢",
+      "relation": "缓解",
+      "tail": "出汗"
+    },
+    {
+      "head": "头孢",
+      "relation": "缓解",
+      "tail": "发热"
+    },
+    {
+      "head": "头孢",
+      "relation": "缓解",
+      "tail": "呕吐"
+    },
+    {
+      "head": "头孢",
+      "relation": "缓解",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "头孢",
+      "relation": "缓解",
+      "tail": "恶心"
+    },
+    {
+      "head": "头孢",
+      "relation": "缓解",
+      "tail": "疼痛"
+    },
+    {
+      "head": "奥美拉唑",
+      "relation": "治疗",
+      "tail": "肺炎"
+    },
+    {
+      "head": "奥美拉唑",
+      "relation": "缓解",
+      "tail": "便秘"
+    },
+    {
+      "head": "奥美拉唑",
+      "relation": "缓解",
+      "tail": "恶心"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "主治",
+      "tail": "肝炎"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "主治",
+      "tail": "肺炎"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "主治",
+      "tail": "胃炎"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "包含",
+      "tail": "人参"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "包含",
+      "tail": "半夏"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "包含",
+      "tail": "当归"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "包含",
+      "tail": "柴胡"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "包含",
+      "tail": "甘草"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "包含",
+      "tail": "白术"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "包含",
+      "tail": "白芍"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "包含",
+      "tail": "茯苓"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "包含",
+      "tail": "黄芩"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "包含",
+      "tail": "黄连"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "治疗",
+      "tail": "气血不足"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "治疗",
+      "tail": "痰湿"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "治疗",
+      "tail": "肝郁"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "治疗",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "小柴胡汤",
+      "relation": "治疗",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "川芎",
+      "relation": "功效",
+      "tail": "气血不足"
+    },
+    {
+      "head": "川芎",
+      "relation": "功效",
+      "tail": "痰湿"
+    },
+    {
+      "head": "川芎",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "川芎",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "川芎",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "川芎",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "川芎",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "川芎",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "川芎",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "川芎",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "川芎",
+      "relation": "治疗",
+      "tail": "恶心"
+    },
+    {
+      "head": "川芎",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "川芎",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "川芎",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "布洛芬",
+      "relation": "缓解",
+      "tail": "乏力"
+    },
+    {
+      "head": "布洛芬",
+      "relation": "缓解",
+      "tail": "发热"
+    },
+    {
+      "head": "布洛芬",
+      "relation": "缓解",
+      "tail": "头晕"
+    },
+    {
+      "head": "布洛芬",
+      "relation": "缓解",
+      "tail": "疼痛"
+    },
+    {
+      "head": "当归",
+      "relation": "功效",
+      "tail": "气血不足"
+    },
+    {
+      "head": "当归",
+      "relation": "功效",
+      "tail": "痰湿"
+    },
+    {
+      "head": "当归",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "当归",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "当归",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "当归",
+      "relation": "功效",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "当归",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "当归",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "当归",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "当归",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "当归",
+      "relation": "配伍",
+      "tail": "当归"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "头晕"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "心悸"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "胸闷"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "心律不齐",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "发热"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "头晕"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "心悸"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "胸闷"
+    },
+    {
+      "head": "心脏病",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "枸杞",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "枸杞",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "枸杞",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "枸杞",
+      "relation": "功效",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "枸杞",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "枸杞",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "枸杞",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "枸杞",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "枸杞",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "枸杞",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "枸杞",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "枸杞",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "枸杞",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "枸杞",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "枸杞",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "枸杞",
+      "relation": "配伍",
+      "tail": "当归"
+    },
+    {
+      "head": "柴胡",
+      "relation": "功效",
+      "tail": "痰湿"
+    },
+    {
+      "head": "柴胡",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "柴胡",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "柴胡",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "柴胡",
+      "relation": "功效",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "柴胡",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "柴胡",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "恶心"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "柴胡",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "柴胡",
+      "relation": "配伍",
+      "tail": "川芎"
+    },
+    {
+      "head": "柴胡",
+      "relation": "配伍",
+      "tail": "柴胡"
+    },
+    {
+      "head": "柴胡",
+      "relation": "配伍",
+      "tail": "黄芪"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "主治",
+      "tail": "心律不齐"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "主治",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "主治",
+      "tail": "肠炎"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "主治",
+      "tail": "胃炎"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "人参"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "半夏"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "当归"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "柴胡"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "甘草"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "白术"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "白芍"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "茯苓"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "黄芩"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "黄芪"
+    },
+    {
+      "head": "桂枝汤",
+      "relation": "包含",
+      "tail": "黄连"
+    },
+    {
+      "head": "气血不足",
+      "relation": "对应",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "气血不足",
+      "relation": "对应",
+      "tail": "胃炎"
+    },
+    {
+      "head": "气血不足",
+      "relation": "对应",
+      "tail": "贫血"
+    },
+    {
+      "head": "气血不足",
+      "relation": "症候表现",
+      "tail": "乏力"
+    },
+    {
+      "head": "气血不足",
+      "relation": "症候表现",
+      "tail": "便秘"
+    },
+    {
+      "head": "气血不足",
+      "relation": "症候表现",
+      "tail": "发热"
+    },
+    {
+      "head": "气血不足",
+      "relation": "症候表现",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "气血不足",
+      "relation": "症候表现",
+      "tail": "失眠"
+    },
+    {
+      "head": "气血不足",
+      "relation": "症候表现",
+      "tail": "头晕"
+    },
+    {
+      "head": "气血不足",
+      "relation": "症候表现",
+      "tail": "心悸"
+    },
+    {
+      "head": "气血不足",
+      "relation": "症候表现",
+      "tail": "疼痛"
+    },
+    {
+      "head": "气血不足",
+      "relation": "症候表现",
+      "tail": "腹泻"
+    },
+    {
+      "head": "气血不足",
+      "relation": "症候表现",
+      "tail": "腹胀"
+    },
+    {
+      "head": "氯霉素",
+      "relation": "成分",
+      "tail": "人参"
+    },
+    {
+      "head": "氯霉素",
+      "relation": "治疗",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "氯霉素",
+      "relation": "治疗",
+      "tail": "肺炎"
+    },
+    {
+      "head": "氯霉素",
+      "relation": "治疗",
+      "tail": "贫血"
+    },
+    {
+      "head": "氯霉素",
+      "relation": "缓解",
+      "tail": "呕吐"
+    },
+    {
+      "head": "氯霉素",
+      "relation": "缓解",
+      "tail": "腹胀"
+    },
+    {
+      "head": "甘草",
+      "relation": "功效",
+      "tail": "气血不足"
+    },
+    {
+      "head": "甘草",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "甘草",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "甘草",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "甘草",
+      "relation": "功效",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "甘草",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "腹泻"
+    },
+    {
+      "head": "甘草",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "甘草",
+      "relation": "配伍",
+      "tail": "甘草"
+    },
+    {
+      "head": "痰湿",
+      "relation": "对应",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "痰湿",
+      "relation": "对应",
+      "tail": "肝炎"
+    },
+    {
+      "head": "痰湿",
+      "relation": "对应",
+      "tail": "肺炎"
+    },
+    {
+      "head": "痰湿",
+      "relation": "对应",
+      "tail": "高血压"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "乏力"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "便秘"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "发热"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "呕吐"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "失眠"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "头晕"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "心悸"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "恶心"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "疼痛"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "胸闷"
+    },
+    {
+      "head": "痰湿",
+      "relation": "症候表现",
+      "tail": "腹胀"
+    },
+    {
+      "head": "白术",
+      "relation": "功效",
+      "tail": "气血不足"
+    },
+    {
+      "head": "白术",
+      "relation": "功效",
+      "tail": "痰湿"
+    },
+    {
+      "head": "白术",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "白术",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "白术",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "白术",
+      "relation": "功效",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "白术",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "白术",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "白术",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "恶心"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "腹泻"
+    },
+    {
+      "head": "白术",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "白术",
+      "relation": "配伍",
+      "tail": "当归"
+    },
+    {
+      "head": "白术",
+      "relation": "配伍",
+      "tail": "白术"
+    },
+    {
+      "head": "白术",
+      "relation": "配伍",
+      "tail": "黄芩"
+    },
+    {
+      "head": "白芍",
+      "relation": "功效",
+      "tail": "气血不足"
+    },
+    {
+      "head": "白芍",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "白芍",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "白芍",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "白芍",
+      "relation": "功效",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "白芍",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "白芍",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "白芍",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "恶心"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "腹泻"
+    },
+    {
+      "head": "白芍",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "白芍",
+      "relation": "配伍",
+      "tail": "柴胡"
+    },
+    {
+      "head": "白芍",
+      "relation": "配伍",
+      "tail": "白芍"
+    },
+    {
+      "head": "白芍",
+      "relation": "配伍",
+      "tail": "茯苓"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "并发症",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "并发症",
+      "tail": "高血压"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "出汗"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "发热"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "头晕"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "心悸"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "胸闷"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "糖尿病",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "肝炎",
+      "relation": "并发症",
+      "tail": "肝炎"
+    },
+    {
+      "head": "肝炎",
+      "relation": "并发症",
+      "tail": "肺炎"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "发热"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "头晕"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "心悸"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "胸闷"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "肝炎",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "肝病",
+      "relation": "并发症",
+      "tail": "肝炎"
+    },
+    {
+      "head": "肝病",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "肝病",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "肝病",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "肝病",
+      "relation": "表现为",
+      "tail": "头晕"
+    },
+    {
+      "head": "肝病",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "肝病",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "肝郁",
+      "relation": "对应",
+      "tail": "肝炎"
+    },
+    {
+      "head": "肝郁",
+      "relation": "对应",
+      "tail": "肝病"
+    },
+    {
+      "head": "肝郁",
+      "relation": "对应",
+      "tail": "胃炎"
+    },
+    {
+      "head": "肝郁",
+      "relation": "对应",
+      "tail": "高血压"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "乏力"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "便秘"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "发热"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "呕吐"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "失眠"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "头晕"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "心悸"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "恶心"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "疼痛"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "胸闷"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "腹泻"
+    },
+    {
+      "head": "肝郁",
+      "relation": "症候表现",
+      "tail": "腹胀"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "发热"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "心悸"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "胸闷"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "肠炎",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "肺炎",
+      "relation": "并发症",
+      "tail": "肺炎"
+    },
+    {
+      "head": "肺炎",
+      "relation": "并发症",
+      "tail": "贫血"
+    },
+    {
+      "head": "肺炎",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "肺炎",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "肺炎",
+      "relation": "表现为",
+      "tail": "发热"
+    },
+    {
+      "head": "肺炎",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "肺炎",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "肺炎",
+      "relation": "表现为",
+      "tail": "头晕"
+    },
+    {
+      "head": "肺炎",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "肺炎",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "肺炎",
+      "relation": "表现为",
+      "tail": "胸闷"
+    },
+    {
+      "head": "肺炎",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "肾炎",
+      "relation": "并发症",
+      "tail": "肾炎"
+    },
+    {
+      "head": "肾炎",
+      "relation": "并发症",
+      "tail": "贫血"
+    },
+    {
+      "head": "肾炎",
+      "relation": "并发症",
+      "tail": "高血压"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "发热"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "胸闷"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "肾炎",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "对应",
+      "tail": "心脏病"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "对应",
+      "tail": "肠炎"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "对应",
+      "tail": "肾炎"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "对应",
+      "tail": "贫血"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "对应",
+      "tail": "高血压"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "乏力"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "便秘"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "发热"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "呕吐"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "失眠"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "头晕"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "心悸"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "疼痛"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "胸闷"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "腹泻"
+    },
+    {
+      "head": "肾阳虚",
+      "relation": "症候表现",
+      "tail": "腹胀"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "对应",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "对应",
+      "tail": "肝炎"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "对应",
+      "tail": "肝病"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "对应",
+      "tail": "肾炎"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "对应",
+      "tail": "贫血"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "对应",
+      "tail": "高血压"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "症候表现",
+      "tail": "乏力"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "症候表现",
+      "tail": "便秘"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "症候表现",
+      "tail": "发热"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "症候表现",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "症候表现",
+      "tail": "失眠"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "症候表现",
+      "tail": "头晕"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "症候表现",
+      "tail": "心悸"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "症候表现",
+      "tail": "疼痛"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "症候表现",
+      "tail": "胸闷"
+    },
+    {
+      "head": "肾阴虚",
+      "relation": "症候表现",
+      "tail": "腹胀"
+    },
+    {
+      "head": "胃溃疡",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "胃溃疡",
+      "relation": "表现为",
+      "tail": "发热"
+    },
+    {
+      "head": "胃溃疡",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "胃溃疡",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "胃溃疡",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "胃溃疡",
+      "relation": "表现为",
+      "tail": "心悸"
+    },
+    {
+      "head": "胃溃疡",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "胃溃疡",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "胃溃疡",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "胃炎",
+      "relation": "并发症",
+      "tail": "胃炎"
+    },
+    {
+      "head": "胃炎",
+      "relation": "并发症",
+      "tail": "贫血"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "出汗"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "发热"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "头晕"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "胸闷"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "胃炎",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "胃病",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "胃病",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "胃病",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "胃病",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "胃病",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "胃病",
+      "relation": "表现为",
+      "tail": "心悸"
+    },
+    {
+      "head": "胃病",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "胃病",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "胃病",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "胃病",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "对应",
+      "tail": "肺炎"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "对应",
+      "tail": "胃炎"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "乏力"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "便秘"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "发热"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "失眠"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "头晕"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "心悸"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "恶心"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "疼痛"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "腹泻"
+    },
+    {
+      "head": "脾气虚",
+      "relation": "症候表现",
+      "tail": "腹胀"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "对应",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "对应",
+      "tail": "肝炎"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "对应",
+      "tail": "肠炎"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "对应",
+      "tail": "肺炎"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "对应",
+      "tail": "胃溃疡"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "对应",
+      "tail": "胃炎"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "对应",
+      "tail": "贫血"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "乏力"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "便秘"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "发热"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "呕吐"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "失眠"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "头晕"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "心悸"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "恶心"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "疼痛"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "胸闷"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "腹泻"
+    },
+    {
+      "head": "脾胃虚弱",
+      "relation": "症候表现",
+      "tail": "腹胀"
+    },
+    {
+      "head": "茯苓",
+      "relation": "功效",
+      "tail": "气血不足"
+    },
+    {
+      "head": "茯苓",
+      "relation": "功效",
+      "tail": "痰湿"
+    },
+    {
+      "head": "茯苓",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "茯苓",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "茯苓",
+      "relation": "功效",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "茯苓",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "茯苓",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "茯苓",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "恶心"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "腹泻"
+    },
+    {
+      "head": "茯苓",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "茯苓",
+      "relation": "配伍",
+      "tail": "半夏"
+    },
+    {
+      "head": "茯苓",
+      "relation": "配伍",
+      "tail": "白术"
+    },
+    {
+      "head": "茯苓",
+      "relation": "配伍",
+      "tail": "茯苓"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "主治",
+      "tail": "肠炎"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "主治",
+      "tail": "肺炎"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "主治",
+      "tail": "高血压"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "人参"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "半夏"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "川芎"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "当归"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "柴胡"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "甘草"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "白术"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "白芍"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "茯苓"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "黄芩"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "黄芪"
+    },
+    {
+      "head": "葛根汤",
+      "relation": "包含",
+      "tail": "黄连"
+    },
+    {
+      "head": "血瘀",
+      "relation": "对应",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "血瘀",
+      "relation": "对应",
+      "tail": "肝炎"
+    },
+    {
+      "head": "血瘀",
+      "relation": "对应",
+      "tail": "肝病"
+    },
+    {
+      "head": "血瘀",
+      "relation": "对应",
+      "tail": "肾炎"
+    },
+    {
+      "head": "血瘀",
+      "relation": "对应",
+      "tail": "胃炎"
+    },
+    {
+      "head": "血瘀",
+      "relation": "对应",
+      "tail": "胃病"
+    },
+    {
+      "head": "血瘀",
+      "relation": "对应",
+      "tail": "贫血"
+    },
+    {
+      "head": "血瘀",
+      "relation": "对应",
+      "tail": "高血压"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "乏力"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "便秘"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "发热"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "呕吐"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "失眠"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "头晕"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "心悸"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "恶心"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "疼痛"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "胸闷"
+    },
+    {
+      "head": "血瘀",
+      "relation": "症候表现",
+      "tail": "腹胀"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "主治",
+      "tail": "肝炎"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "主治",
+      "tail": "肠炎"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "主治",
+      "tail": "胃病"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "主治",
+      "tail": "贫血"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "人参"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "党参"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "半夏"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "川芎"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "当归"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "枸杞"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "柴胡"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "甘草"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "白术"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "白芍"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "茯苓"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "黄芩"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "黄芪"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "包含",
+      "tail": "黄连"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "治疗",
+      "tail": "气血不足"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "治疗",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "补中益气汤",
+      "relation": "治疗",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "贫血",
+      "relation": "并发症",
+      "tail": "贫血"
+    },
+    {
+      "head": "贫血",
+      "relation": "并发症",
+      "tail": "高血压"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "出汗"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "发热"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "头晕"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "心悸"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "胸闷"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "贫血",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "主治",
+      "tail": "肝炎"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "主治",
+      "tail": "胃炎"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "人参"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "党参"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "半夏"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "川芎"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "当归"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "柴胡"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "甘草"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "白术"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "白芍"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "茯苓"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "黄芩"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "包含",
+      "tail": "黄连"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "治疗",
+      "tail": "肝郁"
+    },
+    {
+      "head": "逍遥散",
+      "relation": "治疗",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "对应",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "对应",
+      "tail": "胃病"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "对应",
+      "tail": "贫血"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "症候表现",
+      "tail": "乏力"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "症候表现",
+      "tail": "便秘"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "症候表现",
+      "tail": "发热"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "症候表现",
+      "tail": "呕吐"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "症候表现",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "症候表现",
+      "tail": "失眠"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "症候表现",
+      "tail": "头晕"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "症候表现",
+      "tail": "心悸"
+    },
+    {
+      "head": "阴虚火旺",
+      "relation": "症候表现",
+      "tail": "疼痛"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "成分",
+      "tail": "党参"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "成分",
+      "tail": "川芎"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "成分",
+      "tail": "柴胡"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "治疗",
+      "tail": "心脏病"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "治疗",
+      "tail": "肝炎"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "治疗",
+      "tail": "胃溃疡"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "治疗",
+      "tail": "贫血"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "治疗",
+      "tail": "高血压"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "缓解",
+      "tail": "乏力"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "缓解",
+      "tail": "出汗"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "缓解",
+      "tail": "发热"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "缓解",
+      "tail": "头晕"
+    },
+    {
+      "head": "阿司匹林",
+      "relation": "缓解",
+      "tail": "疼痛"
+    },
+    {
+      "head": "阿莫西林",
+      "relation": "治疗",
+      "tail": "心脏病"
+    },
+    {
+      "head": "阿莫西林",
+      "relation": "缓解",
+      "tail": "发热"
+    },
+    {
+      "head": "阿莫西林",
+      "relation": "缓解",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "阿莫西林",
+      "relation": "缓解",
+      "tail": "疼痛"
+    },
+    {
+      "head": "青霉素",
+      "relation": "成分",
+      "tail": "黄连"
+    },
+    {
+      "head": "青霉素",
+      "relation": "治疗",
+      "tail": "心脏病"
+    },
+    {
+      "head": "青霉素",
+      "relation": "治疗",
+      "tail": "肺炎"
+    },
+    {
+      "head": "青霉素",
+      "relation": "缓解",
+      "tail": "发热"
+    },
+    {
+      "head": "青霉素",
+      "relation": "缓解",
+      "tail": "呕吐"
+    },
+    {
+      "head": "青霉素",
+      "relation": "缓解",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "青霉素",
+      "relation": "缓解",
+      "tail": "恶心"
+    },
+    {
+      "head": "青霉素",
+      "relation": "缓解",
+      "tail": "疼痛"
+    },
+    {
+      "head": "高血压",
+      "relation": "并发症",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "高血压",
+      "relation": "并发症",
+      "tail": "贫血"
+    },
+    {
+      "head": "高血压",
+      "relation": "并发症",
+      "tail": "高血压"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "乏力"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "便秘"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "发热"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "呕吐"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "失眠"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "头晕"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "心悸"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "恶心"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "疼痛"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "胸闷"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "腹泻"
+    },
+    {
+      "head": "高血压",
+      "relation": "表现为",
+      "tail": "腹胀"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "主治",
+      "tail": "糖尿病"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "主治",
+      "tail": "肺炎"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "包含",
+      "tail": "人参"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "包含",
+      "tail": "半夏"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "包含",
+      "tail": "川芎"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "包含",
+      "tail": "柴胡"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "包含",
+      "tail": "甘草"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "包含",
+      "tail": "白术"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "包含",
+      "tail": "茯苓"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "包含",
+      "tail": "黄芩"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "包含",
+      "tail": "黄连"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "治疗",
+      "tail": "痰湿"
+    },
+    {
+      "head": "麻黄汤",
+      "relation": "治疗",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "黄芩",
+      "relation": "功效",
+      "tail": "痰湿"
+    },
+    {
+      "head": "黄芩",
+      "relation": "功效",
+      "tail": "肝火旺盛"
+    },
+    {
+      "head": "黄芩",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "黄芩",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "黄芩",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "黄芩",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "黄芩",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "黄芩",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "黄芩",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "黄芩",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "黄芩",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "黄芩",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "黄芩",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "黄芩",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "黄芩",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "黄芩",
+      "relation": "治疗",
+      "tail": "腹泻"
+    },
+    {
+      "head": "黄芩",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "黄芩",
+      "relation": "配伍",
+      "tail": "半夏"
+    },
+    {
+      "head": "黄芩",
+      "relation": "配伍",
+      "tail": "茯苓"
+    },
+    {
+      "head": "黄芩",
+      "relation": "配伍",
+      "tail": "黄芩"
+    },
+    {
+      "head": "黄芩",
+      "relation": "配伍",
+      "tail": "黄芪"
+    },
+    {
+      "head": "黄芩",
+      "relation": "配伍",
+      "tail": "黄连"
+    },
+    {
+      "head": "黄芪",
+      "relation": "功效",
+      "tail": "气血不足"
+    },
+    {
+      "head": "黄芪",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "黄芪",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "黄芪",
+      "relation": "功效",
+      "tail": "脾气虚"
+    },
+    {
+      "head": "黄芪",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "黄芪",
+      "relation": "功效",
+      "tail": "血瘀"
+    },
+    {
+      "head": "黄芪",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "出汗"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "黄芪",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "黄芪",
+      "relation": "配伍",
+      "tail": "人参"
+    },
+    {
+      "head": "黄芪",
+      "relation": "配伍",
+      "tail": "党参"
+    },
+    {
+      "head": "黄芪",
+      "relation": "配伍",
+      "tail": "当归"
+    },
+    {
+      "head": "黄芪",
+      "relation": "配伍",
+      "tail": "黄芪"
+    },
+    {
+      "head": "黄连",
+      "relation": "功效",
+      "tail": "痰湿"
+    },
+    {
+      "head": "黄连",
+      "relation": "功效",
+      "tail": "肝郁"
+    },
+    {
+      "head": "黄连",
+      "relation": "功效",
+      "tail": "肾阳虚"
+    },
+    {
+      "head": "黄连",
+      "relation": "功效",
+      "tail": "肾阴虚"
+    },
+    {
+      "head": "黄连",
+      "relation": "功效",
+      "tail": "脾胃虚弱"
+    },
+    {
+      "head": "黄连",
+      "relation": "功效",
+      "tail": "阴虚火旺"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "乏力"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "便秘"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "发热"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "呕吐"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "咳嗽"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "失眠"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "头晕"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "心悸"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "恶心"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "疼痛"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "胸闷"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "腹泻"
+    },
+    {
+      "head": "黄连",
+      "relation": "治疗",
+      "tail": "腹胀"
+    },
+    {
+      "head": "黄连",
+      "relation": "配伍",
+      "tail": "半夏"
+    },
+    {
+      "head": "黄连",
+      "relation": "配伍",
+      "tail": "甘草"
+    },
+    {
+      "head": "黄连",
+      "relation": "配伍",
+      "tail": "白芍"
+    },
+    {
+      "head": "黄连",
+      "relation": "配伍",
+      "tail": "黄芩"
+    },
+    {
+      "head": "黄连",
+      "relation": "配伍",
+      "tail": "黄连"
+    }
+  ]
+}
